@@ -1,0 +1,38 @@
+{
+  "name": "hpnofp-ebook",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:epub": "./build.sh"
+  },
+  "keywords": [],
+  "contributors": [
+    {
+      "name": "Matthew Schocke"
+    },
+    {
+      "name": "Peach Wookiee"
+    },
+    {
+      "name": "Worfe"
+    },
+    {
+      "name": "IntermittentlyRupert",
+      "url": "https://github.com/IntermittentlyRupert"
+    },
+    {
+      "name": "ThrawnCA",
+      "url": "https://github.com/ThrawnCA"
+    },
+    {
+      "name": "der-perko",
+      "url": "https://github.com/der-perko"
+    },
+    {
+      "name": "Luke Schierer",
+      "email": "luke@schierer.org"
+    }
+  ]
+}
