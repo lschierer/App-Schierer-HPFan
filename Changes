@@ -1,0 +1,6 @@
+Revision history for Perl extension App::Schierer::HPFan.
+
+0.01  Fri Aug  1 13:39:34 2025
+	- original version; created by h2xs 1.23 with options
+		-AX App::Schierer::HPFan
+
