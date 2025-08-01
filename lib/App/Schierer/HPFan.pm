@@ -1,4 +1,4 @@
-use 5.42.0;
+use v5.42.0;
 use utf8::all;
 use experimental qw(class);
 use File::FindLib 'lib';
@@ -7,7 +7,7 @@ require Mojo::Home;
 require App::Schierer::HPFan::Logger::Config;
 
 package App::Schierer::HPFan {
-  use Mojo::Base 'Mojolicious', -signatures;
+  use Mojo::Base 'Mojolicious', -strict, -signatures;
   use Carp;
   our $VERSION = 'v0.00.1';
 
@@ -15,14 +15,15 @@ package App::Schierer::HPFan {
   sub startup ($self) {
 
     # Load configuration from config file
-    my $config = $self->plugin('NotYAMLConfig');
+    my $config  = $self->plugin('NotYAMLConfig');
     my $distDir = Mojo::File::Share::dist_dir('App::Schierer::HPFan');
-    my $mode         = $self->mode;
+    my $mode    = $self->mode;
 
     # Configure the application
     $self->secrets($config->{secrets});
+    $self->plugin('DefaultHelpers');
 
-    my $lc = App::Schierer::HPFan::Logger::Config->new();
+    my $lc = App::Schierer::HPFan::Logger::Config->new('App-Schierer-HPFan');
     my $log4perl_logger = $lc->init($mode);
     $self->log->handle(undef);    # Disable default Mojo logger
     $self->log->level('debug');
@@ -34,11 +35,30 @@ package App::Schierer::HPFan {
     );
     $self->log->info("Mojolicious Logging initialized");
 
-    # Router
-    my $r = $self->routes;
+    # Set namespaces
+    push @{ $self->routes->namespaces },  'App::Schierer::HPFan::Controller';
+    push @{ $self->plugins->namespaces }, 'App::Schierer::HPFan::Plugins';
+    push @{ $self->plugins->namespaces }, 'App::Schierer::HPFan::Controller';
+    push @{ $self->preload_namespaces },  'App::Schierer::HPFan::Controller';
 
-    # Normal route to controller
-    $r->get('/')->to('Example#welcome');
+    # Register infrastructure plugins in specific order
+
+    # First Plugins that provide helpers but do not define routes
+    # Markdown
+    $self->plugin('App::Schierer::HPFan::Plugins::Markdown');
+    # Navigation
+    $self->plugin('App::Schierer::HPFan::Plugins::Navigation');
+
+    # Then Controller Plugins
+    $self->plugin(
+      'Module::Loader' => {
+        plugin_namespaces => ['App::Schierer::HPFan::Controller']
+      }
+    );
+
+    # Last the Static Pages
+    #$self->plugin('App::Schierer::HPFan::Plugins::StaticPages')
+    #  ;    # Register last for lowest priority
   }
 
 }

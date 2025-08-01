@@ -1,7 +1,6 @@
 #!/usr/bin/env perl
-use 5.42.0;
+use v5.42.0;
 use utf8::all;
-
 
 use Mojo::File qw(curfile);
 use lib curfile->dirname->sibling('lib')->to_string;
