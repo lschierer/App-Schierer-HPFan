@@ -18,6 +18,10 @@ Unless otherwise noted here, you should be able to get
 everything necessary between the ```mise install``` and the
 ```./Build installdeps``` steps.
 
+### Additional Dependencies
+
+* You will need [graphviz], which is used to generate some of the svg files.
+
 ## COPYRIGHT AND LICENCE
 
 Copyright (C) 2003-2025 by Luke Schierer
@@ -27,3 +31,4 @@ Luke's HP Fan Site © 2023-2025 by Luke Schierer is licensed under CC BY-NC 4.0
 ---
 
 [mise]: https://mise.jdx.dev/
+[graphviz]: https://graphviz.org/

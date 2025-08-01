@@ -1,0 +1,12 @@
+#!/usr/bin/env perl
+use 5.42.0;
+use utf8::all;
+
+
+use Mojo::File qw(curfile);
+use lib curfile->dirname->sibling('lib')->to_string;
+use Mojolicious::Commands;
+require App::Schierer::HPFan;
+
+# Start command line interface for application
+Mojolicious::Commands->start_app('App::Schierer::HPFan');
