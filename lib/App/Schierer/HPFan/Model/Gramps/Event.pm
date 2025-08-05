@@ -17,7 +17,7 @@ class App::Schierer::HPFan::Model::Gramps::Event :
   field $place_ref     : reader : param = undef;    # handle reference to place
   field $cause         : reader : param = undef;
   field $description   : reader : param = undef;
-  field $attributes    : param = [];       # unused, for future growth
+  field $attributes    : param = [];                # unused, for future growth
   field $note_refs     : param = [];
   field $citation_refs : param = [];
   field $obj_refs      : param = [];

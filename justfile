@@ -6,3 +6,6 @@ tidy:
 
 css:
   pnpm build:css
+
+quickdev:
+  morbo -w templates -w share -w public -w lib ./bin/app_schierer_hpfan prefork

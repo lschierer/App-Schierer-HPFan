@@ -4,19 +4,19 @@ use experimental qw(class);
 class App::Schierer::HPFan::Model::Gramps::Family {
   use Carp;
 
-  field $id             :reader : param = undef;
-  field $handle         :reader : param;
-  field $priv           :reader : param = 0;
-  field $change         :reader : param;
-  field $rel_type       :reader : param = undef;  # relationship type
-  field $father_ref     :reader : param = undef;  # handle reference
-  field $mother_ref     :reader : param = undef;  # handle reference
-  field $event_refs     : param = [];
-  field $child_refs     : param = [];     # array of hashrefs with hlink, mrel, frel
-  field $attributes     : param = [];
-  field $note_refs      : param = [];
-  field $citation_refs  : param = [];
-  field $tag_refs       : param = [];
+  field $id            : reader : param = undef;
+  field $handle        : reader : param;
+  field $priv          : reader : param = 0;
+  field $change        : reader : param;
+  field $rel_type      : reader : param = undef;    # relationship type
+  field $father_ref    : reader : param = undef;    # handle reference
+  field $mother_ref    : reader : param = undef;    # handle reference
+  field $event_refs    : param = [];
+  field $child_refs    : param = [];  # array of hashrefs with hlink, mrel, frel
+  field $attributes    : param = [];
+  field $note_refs     : param = [];
+  field $citation_refs : param = [];
+  field $tag_refs      : param = [];
 
   ADJUST {
     croak "handle is required"           unless defined $handle;
@@ -30,7 +30,6 @@ class App::Schierer::HPFan::Model::Gramps::Family {
       }
     }
   }
-
 
   method event_refs()    { [@$event_refs] }
   method child_refs()    { [@$child_refs] }

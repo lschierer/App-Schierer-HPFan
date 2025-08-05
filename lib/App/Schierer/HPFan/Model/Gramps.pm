@@ -20,10 +20,10 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
 
   field $gramps_export : param;
 
-  field $tags   : reader = {};
-  field $events : reader = {};
-  field $people : reader = {};
-  field $families :reader = {};
+  field $tags     : reader = {};
+  field $events   : reader = {};
+  field $people   : reader = {};
+  field $families : reader = {};
 
   ADJUST {
     # Do not assume we are passed a Path::Tiny object;
@@ -33,11 +33,24 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     }
   }
 
+  method find_person_by_handle ($handle) {
+    return $people->{$handle};
+  }
+
+  method find_person_by_id ($id) {
+    foreach my $person (values %{$people}) {
+      if ($person->id =~ /$id/i) {
+        return $person;
+      }
+    }
+    return undef;
+  }
+
   method import_from_xml {
 
     $self->logger->debug("loading from " . $gramps_export->canonpath);
     my $dom = XML::LibXML->load_xml(location => $gramps_export->canonpath);
-    my $d = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
+    my $d   = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
 
     # Register the namespace
     my $xc = XML::LibXML::XPathContext->new($dom);
@@ -108,36 +121,38 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
 
     foreach my $xPerson ($xc->findnodes('//g:people/g:person')) {
       my $handle = $xPerson->getAttribute('handle');
-      if($handle){
-        my $id = $xPerson->getAttribute('id');
+      if ($handle) {
+        my $id     = $xPerson->getAttribute('id');
         my $change = $xPerson->getAttribute('change');
         my $gender = $xc->findvalue('./g:gender', $xPerson) // 'U';
         $gender =~ s/^\s+|\s+$//g;
 
         my @names;
         foreach my $xName ($xc->findnodes('./g:name', $xPerson)) {
-          my $type = $xName->getAttribute('type');
+          my $type  = $xName->getAttribute('type');
           my $first = $xc->findvalue('./g:first', $xName);
-          my $call = $xc->findvalue('./g:call', $xName);
+          my $call  = $xc->findvalue('./g:call',  $xName);
           my $title = $xc->findvalue('./g:title', $xName);
-          my $nick = $xc->findvalue('./g:nick', $xName);
+          my $nick  = $xc->findvalue('./g:nick',  $xName);
           my @surnames;
-          foreach my $xSN ($xc->findnodes('./g:surname', $xName)){
+          foreach my $xSN ($xc->findnodes('./g:surname', $xName)) {
             my $derivation = $xSN->getAttribute('derivation') // 'Unknown';
             $derivation =~ s/^\s+|\s+$//g;
             my $value = $xSN->to_literal();
-            push @surnames, App::Schierer::HPFan::Model::Gramps::Surname->new(
-              value       => $value,
-              derivation  => $derivation,
-              prim          => scalar @surnames ? 0 : 1,
-            );
+            push @surnames,
+              App::Schierer::HPFan::Model::Gramps::Surname->new(
+              value      => $value,
+              derivation => $derivation,
+              prim       => scalar @surnames ? 0 : 1,
+              );
           }
           my @citationref;
           foreach my $cr ($xc->findnodes('./g:citationref/@hlink', $xName)) {
             push @citationref, $cr->to_literal;
           }
           my $alt = $xName->getAttribute('alt') // 0;
-          push @names, App::Schierer::HPFan::Model::Gramps::Name->new(
+          push @names,
+            App::Schierer::HPFan::Model::Gramps::Name->new(
             type          => $type,
             first         => $first,
             call          => $call,
@@ -147,7 +162,7 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
             citation_refs => \@citationref,
             date          => $d->import_gramps_date($xName, $xc),
             alt           => $alt,
-          );
+            );
         }
 
         my @citationref;
@@ -206,12 +221,12 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
 
     foreach my $xFamily ($xc->findnodes('//g:families/g:family')) {
       my $handle = $xFamily->getAttribute('handle');
-      if($handle){
-        my $type = $xc->findvalue('./g:rel/@type', $xFamily);
+      if ($handle) {
+        my $type   = $xc->findvalue('./g:rel/@type',     $xFamily);
         my $father = $xc->findvalue('./g:father/@hlink', $xFamily);
         my $mother = $xc->findvalue('./g:mother/@hlink', $xFamily);
         my $change = $xFamily->getAttribute('change');
-        my $id = $xFamily->getAttribute('id');
+        my $id     = $xFamily->getAttribute('id');
 
         my @childref;
         foreach my $cr ($xc->findnodes('./g:childref', $xFamily)) {
@@ -220,10 +235,11 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
           foreach my $chl ($xc->findnodes('./citationref/@hlink')) {
             push @ccr, $chl->to_literal();
           }
-          push @childref, {
+          push @childref,
+            {
             hlink         => $hlink,
             citation_refs => \@ccr,
-          };
+            };
         }
 
         my @eventref;
@@ -261,7 +277,8 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
         );
       }
     }
-    $self->logger->info(sprintf('imported %s families.', scalar keys %{$families}));
+    $self->logger->info(
+      sprintf('imported %s families.', scalar keys %{$families}));
   }
 
 }

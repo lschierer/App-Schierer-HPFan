@@ -1,0 +1,32 @@
+% my $iconName = 'tdesign:user-unknown';
+% my $iconClass = 'icon1';
+% if($person->gender eq 'M') { $iconName = 'ion-male'; $iconClass = 'color-male'; }
+% if($person->gender eq 'F') { $iconName = 'ion-female'; $iconClass = 'color-female'; }
+%
+
+
+<link rel="stylesheet" href="/css/gramps.css" />
+
+<div class="gramps-individual spectrum-Typography">
+  <div class=" CardContainer " role="figure">
+    <div class=" CardAsset ">
+      <iconify-icon
+        aria-hidden="true" role="img"
+        icon="<%= $iconName %>" class="<%= $iconClass %>"
+        height="none"
+        width="none"
+      ></iconify-icon>
+    </div>
+
+    <div class=" CardBody ">
+      <div class=" Card-header ">
+        <div class=" Card-title ">
+          <span class="spectrum-Heading spectrum-Heading--serif spectrum-Heading--sizeL spectrum-Heading--heavy">
+            <%= $printName %>
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

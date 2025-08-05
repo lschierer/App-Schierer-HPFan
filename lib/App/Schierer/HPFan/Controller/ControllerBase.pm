@@ -5,6 +5,7 @@ use File::FindLib 'lib';
 require Data::Printer;
 require Mojolicious::Controller;
 require Mojolicious::Plugin;
+require App::Schierer::HPFan::Model::Gramps;
 use namespace::clean;
 
 package App::Schierer::HPFan::Controller::ControllerBase {
@@ -34,6 +35,25 @@ package App::Schierer::HPFan::Controller::ControllerBase {
         $c->reply->static('images/favicon.svg');
       }
     );
+
+    my $gramps_export =
+      $app->config('distDir')->child('potter_universe.gramps');
+    my $gramps =
+      App::Schierer::HPFan::Model::Gramps->new(gramps_export => $gramps_export,
+      );
+
+    $app->hook(
+      before_server_start => sub {
+        state $initialized = do {
+          $logger->info("⚙️  Running gramps import...");
+          $gramps->import_from_xml();
+          $logger->info("✅ gramps import completed.");
+          $app->plugins->emit(gramps_initialized => $gramps);
+          1;
+        };
+      }
+    );
+    $app->helper(gramps => sub { return $gramps });
 
     $routes->get('/health')->to(
       cb => sub($c) {
