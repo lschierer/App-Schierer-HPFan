@@ -18,6 +18,7 @@ package App::Schierer::HPFan {
     my $config  = $self->plugin('NotYAMLConfig');
     my $distDir = Mojo::File::Share::dist_dir('App::Schierer::HPFan');
     my $mode    = $self->mode;
+    $self->config(distDir => $distDir);
 
     # Configure the application
     $self->secrets($config->{secrets});
@@ -57,8 +58,8 @@ package App::Schierer::HPFan {
     );
 
     # Last the Static Pages
-    #$self->plugin('App::Schierer::HPFan::Plugins::StaticPages')
-    #  ;    # Register last for lowest priority
+    $self->plugin('App::Schierer::HPFan::Plugins::StaticPages');
+    # Register last for lowest priority
   }
 
 }

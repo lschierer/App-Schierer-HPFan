@@ -111,6 +111,14 @@ package App::Schierer::HPFan::Plugins::Markdown {
 
     # Only set layout if not already set
     my $layout = $parsedFile->{front_matter}->{layout} // 'default';
+
+    # splash is not actually a layout, it indicates there is no sidebar.
+    if ($layout =~ /splash/i) {
+      $c->stash(sidebar => 0);
+      $layout = 'default';
+      $c->stash(layout => 'default');
+    }
+
     $c->stash(layout => $layout) unless exists $c->stash->{layout};
     $logger->debug("layout is " . $c->stash('layout'));
 

@@ -21,6 +21,7 @@ everything necessary between the ```mise install``` and the
 ### Additional Dependencies
 
 * You will need [graphviz], which is used to generate some of the svg files.
+* You will need libxml2, which is used to parse the Gramps export.
 
 ## COPYRIGHT AND LICENCE
 
