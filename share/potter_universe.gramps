@@ -3,7 +3,7 @@
 "http://gramps-project.org/xml/1.7.1/grampsxml.dtd">
 <database xmlns="http://gramps-project.org/xml/1.7.1/">
   <header>
-    <created date="2025-08-04" version="5.1.5"/>
+    <created date="2025-08-05" version="5.1.5"/>
     <researcher>
       <resname>Luke Schierer</resname>
       <resemail>luke@schierer.org</resemail>
@@ -1875,11 +1875,17 @@
       <tagref hlink="_ed62c39607a2cb2656c75897b21"/>
       <tagref hlink="_ed5f283475c2bd8d650cc02c9c8"/>
     </person>
-    <person handle="_ed5a381872d753c1e9978733220" change="1734908709" id="I0064">
+    <person handle="_ed5a381872d753c1e9978733220" change="1754452351" id="I0064">
       <gender>M</gender>
       <name type="Birth Name">
         <first>Ronald Bilius</first>
-        <surname>Weasley</surname>
+        <call>Ronald</call>
+        <surname derivation="Given">Weasley</surname>
+      </name>
+      <name alt="1" type="Also Known As">
+        <first>Ronald Bilius</first>
+        <call>Ronald</call>
+        <surname derivation="Given">Weasley</surname>
         <nick>Ron</nick>
       </name>
       <eventref hlink="_ed5a395ae8b4c8548c00185d176" role="Primary"/>
@@ -1982,12 +1988,11 @@
       <tagref hlink="_fc7661372771a27d787e7af40a0"/>
       <tagref hlink="_fc7662c4a8a4caed3917d45b5f"/>
     </person>
-    <person handle="_ed5a438fc6e622fa800d4c4693a" change="1734908709" id="I0071">
+    <person handle="_ed5a438fc6e622fa800d4c4693a" change="1754452452" id="I0071">
       <gender>M</gender>
-      <name type="Birth Name">
+      <name type="Unknown">
         <first>Fred</first>
-        <surname>Weasley</surname>
-        <nick>Fred</nick>
+        <surname derivation="Given">Weasley</surname>
       </name>
       <eventref hlink="_ed5a44db84255b640a8b0fc5690" role="Primary"/>
       <eventref hlink="_ed5a451814c5bb80c063526b359" role="Primary"/>
@@ -1999,11 +2004,11 @@
       <tagref hlink="_fc7661372771a27d787e7af40a0"/>
       <tagref hlink="_fc7662c4a8a4caed3917d45b5f"/>
     </person>
-    <person handle="_ed5a45616611eb7a2744c3448cb" change="1734908709" id="I0072">
+    <person handle="_ed5a45616611eb7a2744c3448cb" change="1754452464" id="I0072">
       <gender>M</gender>
       <name type="Birth Name">
         <first>George</first>
-        <surname>Weasley</surname>
+        <surname derivation="Given">Weasley</surname>
       </name>
       <eventref hlink="_ed5a46301ad506f0b2777f4daba" role="Primary"/>
       <eventref hlink="_ed99a0b350642067a21bb1689" role="Primary"/>
@@ -2014,10 +2019,16 @@
       <tagref hlink="_fc7661372771a27d787e7af40a0"/>
       <tagref hlink="_fc7662c4a8a4caed3917d45b5f"/>
     </person>
-    <person handle="_ed5a4690cc78c850b3c61d2b4e" change="1734908763" id="I0073">
+    <person handle="_ed5a4690cc78c850b3c61d2b4e" change="1754452414" id="I0073">
       <gender>M</gender>
       <name type="Birth Name">
         <first>William Arthur</first>
+        <call>William</call>
+        <surname derivation="Given">Weasley</surname>
+      </name>
+      <name alt="1" type="Also Known As">
+        <first>William Arthur</first>
+        <call>William</call>
         <surname>Weasley</surname>
         <nick>Bill</nick>
       </name>
@@ -2228,11 +2239,11 @@
       <childof hlink="_ed595330126209cb17ddc6e549d"/>
       <citationref hlink="_ed59398a9c92811e304558645aa"/>
     </person>
-    <person handle="_ed5c4ca2d3b5a40e9f0405ee3d3" change="1734908763" id="I0095">
+    <person handle="_ed5c4ca2d3b5a40e9f0405ee3d3" change="1754452492" id="I0095">
       <gender>M</gender>
-      <name type="Birth Name">
+      <name type="Unknown">
         <first>Charlie</first>
-        <surname>Weasley</surname>
+        <surname derivation="Given">Weasley</surname>
       </name>
       <eventref hlink="_ed5c4d3f5a3673e164696713371" role="Primary"/>
       <eventref hlink="_ed999c30e1f69cae425102eea5" role="Primary"/>
@@ -3232,9 +3243,14 @@
       <parentin hlink="_ed63c040e04744b7778faabf4df"/>
       <citationref hlink="_ed63bf5fa6f47ee9da21056aa17"/>
     </person>
-    <person handle="_ed65c4983c814d5df333de2729e" change="1744170855" id="I0190">
+    <person handle="_ed65c4983c814d5df333de2729e" change="1754452703" id="I0190">
       <gender>M</gender>
-      <name type="Also Known As">
+      <name type="Unknown">
+        <first>Linfred</first>
+        <call>Linfred</call>
+        <surname prefix="of" derivation="Location">Stinchcombe</surname>
+      </name>
+      <name alt="1" type="Also Known As">
         <first>Linfred</first>
         <call>Linfred</call>
         <surname prefix="of" derivation="Location">Stinchcombe</surname>
@@ -4535,12 +4551,11 @@
       </name>
       <eventref hlink="_f6db8d3a6d3167703e85003d625" role="Primary"/>
     </person>
-    <person handle="_fc7669bc43073c1ad08793e5fa6" change="1734909516" id="I0319">
+    <person handle="_fc7669bc43073c1ad08793e5fa6" change="1754452543" id="I0319">
       <gender>F</gender>
-      <name type="Birth Name">
-        <call>Katie</call>
+      <name type="Unknown">
+        <first>Katie</first>
         <surname derivation="Given">Bell</surname>
-        <nick>Katie</nick>
       </name>
       <eventref hlink="_f6db8d3a6d3167703e85003d625" role="Primary"/>
       <tagref hlink="_fc7662c4a8a4caed3917d45b5f"/>
@@ -7220,12 +7235,12 @@ Rowling, J.K.. Harry Potter and the Order of the Phoenix (Harry Potter, Book 5) 
       <text>Started Hogwarts in 1995</text>
     </note>
     <note handle="_ed5f39a36021397dcbfd0dbfba4" change="1631207779" id="N0017" type="Source text">
-      <text>Barry Ryan, the Irish International Keeper,
+      <text>Barry Ryan, the Irish International Keeper, 
 
 Rowling, J.K.. Harry Potter and the Order of the Phoenix (Harry Potter, Book 5) (Kindle Locations 5866-5867). Pottermore Limited. Kindle Edition. </text>
     </note>
     <note handle="_ed5f42574d4d90aca96beb1fcc" change="1631208691" id="N0018" type="Source text">
-      <text>HEADMISTRESS OF HOGWARTS SCHOOL OF WITCHCRAFT AND WIZARDRY, 1741–1768
+      <text>HEADMISTRESS OF HOGWARTS SCHOOL OF WITCHCRAFT AND WIZARDRY, 1741–1768 
 
 Rowling, J.K.. Harry Potter and the Order of the Phoenix (Harry Potter, Book 5) (Kindle Location 7121). Pottermore Limited. Kindle Edition. </text>
     </note>
@@ -7243,7 +7258,7 @@ Rowling, J.K.. Harry Potter and the Order of the Phoenix (Harry Potter, Book 5) 
       <text>Based on the speculation on the source page, this relationship makes the most sense. </text>
     </note>
     <note handle="_eddd052b67a190f6d3272a4823d" change="1634584564" id="N0022" type="Family Note">
-      <text>Listing this as a Civil Union as it appears the magical world recognises this as a marriage, but
+      <text>Listing this as a Civil Union as it appears the magical world recognises this as a marriage, but 
 1) if she was under the Imperius Curse, her concent was fatally impaired
 2) it is unclear her husband was in fact deceased prior to this union. In fact, it is strongly implied he was not. </text>
     </note>
@@ -7254,17 +7269,17 @@ Rowling, J.K.. Harry Potter and the Order of the Phoenix (Harry Potter, Book 5) 
       <text>Assuming there are *more* British Lestranges in what seems to be a predominately French family stretches probability. </text>
     </note>
     <note handle="_eed52bf164d4c60257e88fae22e" change="1641245829" id="N0025" type="Citation">
-      <text>Diggory was a fifth year and a lot bigger than Harry.
+      <text>Diggory was a fifth year and a lot bigger than Harry. 
 
 Rowling, J.K.. Harry Potter and the Prisoner of Azkaban (Harry Potter, Book 3) (p. 174). Pottermore Limited. American Kindle Edition. </text>
     </note>
     <note handle="_eed52f6adbb58ce57d7ad4c8c28" change="1641246193" id="N0026" type="Citation">
-      <text>“This is Amos Diggory, everyone,” said Mr. Weasley. “He works for the Department for the Regulation and Control of Magical Creatures. And I think you know his son, Cedric?”
+      <text>“This is Amos Diggory, everyone,” said Mr. Weasley. “He works for the Department for the Regulation and Control of Magical Creatures. And I think you know his son, Cedric?” 
 
 Rowling, J.K.. Harry Potter and the Goblet of Fire (Book 4) (Kindle Locations 1151-1152). Pottermore Limited. Kindle Edition. </text>
     </note>
     <note handle="_eed53467df33945f1301bcac90a" change="1641246716" id="N0027" type="Citation">
-      <text>“The third and final task will take place at dusk on the twenty-fourth of June,”
+      <text>“The third and final task will take place at dusk on the twenty-fourth of June,” 
 
 Rowling, J.K.. Harry Potter and the Goblet of Fire (Book 4) (Kindle Locations 7585-7586). Pottermore Limited. Kindle Edition. </text>
     </note>
@@ -7281,7 +7296,7 @@ Rowling, J.K.. Short Stories from Hogwarts of Heroism, Hardship and Dangerous Ho
     <note handle="_eed7cc0e11dc36cda6ce5bf339" change="1641316305" id="N0030" type="Citation">
       <text>The couple eloped, to the fury of both sets of parents.
 
-Rowling, J.K.. Short Stories from Hogwarts of Heroism, Hardship and Dangerous Hobbies (Kindle Single) (Pottermore Presents) (p. 7). Pottermore Publishing. Kindle Edition.
+Rowling, J.K.. Short Stories from Hogwarts of Heroism, Hardship and Dangerous Hobbies (Kindle Single) (Pottermore Presents) (p. 7). Pottermore Publishing. Kindle Edition. 
 
 The birth of the young couple’s first child, Minerva, proved both a joy and a crisis. Missing her family, and the magical community she had given up for love, Isobel insisted on naming her newborn daughter after her own grandmother, an immensely talented witch.
 
