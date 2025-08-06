@@ -62,6 +62,11 @@
   --mod-table-row-background-color: var(--surface-1);
   --mod-table-row-text-color: var(--text-1);
   --mod-button-border-color-default: var(--surface-2);
+  --mod-treeview-heading-color: var(--text-1);
+  --mod-treeview-item-text-color: var(--text-1);
+  --mod-treeview-item-text-color-focus: var(--text-1);
+  --mod-treeview-item-text-color-hover: var(--text-1);
+  --mod-treeview-item-text-color-selected: var(--text-1);
 }
 
 html {
