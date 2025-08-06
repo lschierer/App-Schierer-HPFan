@@ -1,4 +1,8 @@
-### On Adults in General
+---
+title: Adults Across the Represented Population
+author: Luke Schierer
+---
+## On Adults in General
 
 One of the challenges I have noticed across children's and young adult's
 literature is how to deal with adults. If you have a set of adults who are both
