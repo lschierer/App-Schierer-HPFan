@@ -15,29 +15,4 @@
     </ul>
   </div>
 </div>
-<script type="module">
-  document.querySelectorAll('.spectrum-TreeView-item').forEach(item => {
-    const childList = item.querySelector(':scope > .spectrum-TreeView');
-    if (childList) {
-        // Find the wrapper div and the actual link
-        const linkWrapper = item.querySelector('.spectrum-TreeView-itemLink');
-        const actualLink = linkWrapper.querySelector('a');
-
-        // Create the toggle indicator
-        const indicator = document.createElement('span');
-        indicator.className = 'tree-toggle';
-        indicator.innerHTML = '▼';
-        indicator.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            item.classList.toggle('is-collapsed');
-            childList.classList.toggle('is-opened');
-            indicator.innerHTML = item.classList.contains('is-collapsed') ? '▶' : '▼';
-        });
-
-        // Insert the indicator inside the wrapper div, before the actual link
-        linkWrapper.insertBefore(indicator, actualLink);
-    }
-});
-
-</script>
+<script type="module" src="/js/lib/family/member-list.js"></script>

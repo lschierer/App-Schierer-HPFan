@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "build:css": "rimraf ./public/css ; mkdir -p ./public/css/ ; tsx ./scripts/build-css.ts ./public/css/"
+    "build:css": "rimraf ./public/css ; mkdir -p ./public/css/ ; tsx ./scripts/build-css.ts ./public/css/",
+    "build:ts": "tsc -p ./tsconfig.build.json && tsx ./scripts/build-ts.ts"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.2",

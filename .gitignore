@@ -4,3 +4,7 @@ MYMETA.*
 _build
 node_modules
 public/css
+blib
+public/tsconfig.build.tsbuildinfo
+public/types
+public/js

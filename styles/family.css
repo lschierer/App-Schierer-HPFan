@@ -7,6 +7,15 @@
   --mod-heading-margin-start: 0px;
 }
 
+div.family-tree li {
+  /* stylelint-disable-next-line custom-property-pattern */
+  --mod-treeview-font-size: var(--spectrum-Body--sizeM);
+  /* stylelint-disable-next-line custom-property-pattern */
+  --mod-treeview-line-height: var(--spectrum-Body--sizeM);
+  /* stylelint-disable-next-line custom-property-pattern */
+  --mod-icon-inline-size: var(--spectrum-Body--sizeS);
+}
+
 .color-female {
   color: var(--color-female);
 }
@@ -23,25 +32,12 @@ iconify-icon.color-male {
   color: var(--color-male);
 }
 
+iconify-icon.spectrum-Icon.tree-toggle {
+  padding-block: 0;
+}
+
 iconify-icon {
-  display: block;
-  height: 100%;
+  display: inline-block;
+  height: var(--mod-icon-inline-size);
   box-sizing: border-box;
-}
-
-.spectrum-TreeView-itemLink {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.tree-toggle {
-  cursor: pointer;
-  user-select: none;
-  font-size: 0.8em;
-  flex-shrink: 0; /* Prevent the toggle from shrinking */
-}
-
-.spectrum-TreeView-item.is-collapsed > .spectrum-TreeView {
-  display: none;
 }
