@@ -2,31 +2,126 @@
 % my $iconClass = 'icon1';
 % if($person->gender eq 'M') { $iconName = 'ion-male'; $iconClass = 'color-male'; }
 % if($person->gender eq 'F') { $iconName = 'ion-female'; $iconClass = 'color-female'; }
-%
-
+% my @families = @{ gramps->find_families_as_parent($person) };
+% my @childof = @{ gramps->find_families_as_child($person) };
+% my $staticContent = stash('staticContent') // undef;
 
 <link rel="stylesheet" href="/css/gramps.css" />
 
-<div class="gramps-individual spectrum-Typography">
-  <div class=" CardContainer " role="figure">
-    <div class=" CardAsset ">
-      <iconify-icon
-        aria-hidden="true" role="img"
-        icon="<%= $iconName %>" class="<%= $iconClass %>"
-        height="none"
-        width="none"
-      ></iconify-icon>
-    </div>
-
-    <div class=" CardBody ">
-      <div class=" Card-header ">
-        <div class=" Card-title ">
-          <span class="spectrum-Heading spectrum-Heading--serif spectrum-Heading--sizeL spectrum-Heading--heavy">
-            <%= $printName %>
-          </span>
-        </div>
+<div class="basic-info spectrum-Card spectrum-Card--horizontal" id="<%= $person->id %>" role="figure">
+  <div class="spectrum-Card-preview">
+    <iconify-icon icon="<%= $iconName %>" class="<%= $iconClass %>" width="none"></iconify-icon>
+  </div>
+  <div class="spectrum-Card-body">
+    <div class="spectrum-Card-header">
+      <div class="spectrum-Card-title">
+        Basic Information
       </div>
     </div>
-
+    <div class="spectrum-Card-content">
+      <div class="spectrum-Card-description">
+        <!-- there are <%= scalar @{ $events } %> events -->
+        <ul class="bio">
+          <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
+            <strong>ID</strong>: <%= $person->id %>
+          </li>
+          <% foreach my $event (@{ $events }) { %>
+            <!-- <%= $event ? ref $event : 'undefined event'; %> -->
+            <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
+            <strong><%= $event->type %></strong>: <%= $event->date ? gramps->date_parser->format_date($event->date) : 'Unknown' %>
+            </li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
+<% if (scalar @families or scalar @childof) { %>
+    <h2 class="spectrum-Heading spectrum-Heading--serif spectrum-Heading--heavy spectrum-Heading--sizeXL">Families</h2>
+    <% if (scalar @families) { %>
+        <h3 class="spectrum-Heading spectrum-Heading--serif spectrum-Heading--heavy spectrum-Heading--sizeL">Married</h3>
+        <ul>
+        <% foreach my $f (@families) { %>
+          <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
+            <% my $spouse = gramps->find_spouse($person, $f); %>
+            <strong>Spouse</strong>:
+              <% if ($spouse) { %>
+                <a href="<%= link_target_for_person($spouse) %>" class="spectrum-Link spectrum-Link--primary">
+                  <%= defined($spouse) ? $spouse->display_name() : 'Unknown' %>
+                </a>
+              <% }  else { %>
+                Unknown
+              <% } %>
+          </li>
+          <% if(scalar @{$f->child_refs() }) { %>
+            <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
+              <strong>Children</strong>:
+              <ul>
+              <% foreach my $cr (@{$f->child_refs() }) { %>
+                  <% my $child = gramps->find_person_by_handle($cr->{handle}); %>
+                  <% if($child) { %>
+                    <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
+                      <a href="<%= link_target_for_person($child) %>" class="spectrum-Link spectrum-Link--primary">
+                        <%= $child->display_name(); %>
+                      </a>
+                    </li>
+                  <% } else { %>
+                    <!-- no child for <%= Data::Printer::np($cr) %> -->
+                  <% } %>
+              <% } %>
+              </ul>
+            </li>
+          <% } %>
+        <% } %>
+        </ul>
+    <% } %>
+    <% if (scalar @childof) { %>
+        <h3 class="spectrum-Heading spectrum-Heading--serif spectrum-Heading--heavy spectrum-Heading--sizeL">Parents</h3>
+        <ul>
+          <% foreach my $f (@childof) { %>
+            <% my $childref; %>
+            <% foreach my $cr ( @{ $f->child_refs() } ) { %>
+              <% if ($cr->{handle} eq $person->handle ) { %>
+                <% $childref = $cr; last; %>
+              <% } %>
+            <% } %>
+            <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
+              <strong>Family</strong>: <%= $f->rel_type ? $f->rel_type : 'Unknown' %>
+              <ul>
+                <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
+                  <% my $father = gramps->find_person_by_handle($f->father_ref); %>
+                  <strong><%= $childref->{father_rel} ? $childref->{father_rel} . ' ' : '' %>Father</strong>:
+                  <% if($father) { %>
+                    <% my $fatherLink = link_target_for_person($father); %>
+                    <a href="<%= $fatherLink %>" class="spectrum-Link spectrum-Link--primary">
+                      <%= $father->display_name() %>
+                    </a>
+                  <% } else { %>
+                    Unknown
+                  <% } %>
+                </li>
+                <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
+                  <% my $mother = gramps->find_person_by_handle($f->mother_ref); %>
+                  <strong><%= $childref->{mother_rel} ? $childref->{mother_rel} . ' ' : '' %>Mother</strong>:
+                  <% if($mother) { %>
+                    <% my $motherLink = link_target_for_person($mother); %>
+                    <a href="<%= $motherLink %>" class="spectrum-Link spectrum-Link--primary">
+                      <%= $mother->display_name() %>
+                    </a>
+                  <% } else { %>
+                    Unknown
+                  <% } %>
+                </li>
+              </ul>
+            </li>
+          <% } %>
+        </ul>
+    <% } %>
+<% } %>
+<div class="timeline-card">
+  <%== $chart %>
+</div>
+<hr role="separator" class="spectrum-Divider spectrum-Divider--sizeM" />
+<% if($staticContent) { %>
+  <%== $staticContent %>
+<% } %>

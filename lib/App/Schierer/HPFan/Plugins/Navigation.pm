@@ -34,7 +34,7 @@ package App::Schierer::HPFan::Plugins::Navigation {
 
     $app->helper(
       get_existing_navigation_items => sub {
-        return \%nav_items_by_path;
+        return \%raw_paths;
       }
     );
 
@@ -65,6 +65,7 @@ package App::Schierer::HPFan::Plugins::Navigation {
   }
 
   sub _generate_navigation($c, $current_path = undef, $detached = 0) {
+    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     $current_path //= $c->req->url->path->to_string;
 
     my $ul = HTML::Element->new(
@@ -74,7 +75,7 @@ package App::Schierer::HPFan::Plugins::Navigation {
     );
 
     $c->app->build_nav_level($ul, \%nav_items_by_path, $current_path, '');
-
+    $logger->info('current routes are: ' . join('; ', keys %raw_paths));
     return $ul->as_HTML;
   }
 
@@ -100,6 +101,7 @@ package App::Schierer::HPFan::Plugins::Navigation {
         # Keep the children from the placeholder, merge in the real content
         $new_item->{children} = $existing->{children} if $existing->{children};
         $level->{$path} = $new_item;
+        $raw_paths{$path}++;
       }
       # Handle order precedence for real items
       elsif (!$existing->{_is_placeholder} && !$new_item->{_is_placeholder}) {
@@ -109,12 +111,14 @@ package App::Schierer::HPFan::Plugins::Navigation {
             $new_item->{children} = $existing->{children}
               if $existing->{children};
             $level->{$path} = $new_item;
+            $raw_paths{$path}++;
           }
         }
         elsif (exists $new_item->{order}) {
           $new_item->{children} = $existing->{children}
             if $existing->{children};
           $level->{$path} = $new_item;
+          $raw_paths{$path}++;
         }
       }
       # If new item is placeholder but existing is real, keep existing
@@ -122,6 +126,7 @@ package App::Schierer::HPFan::Plugins::Navigation {
     else {
       # New item
       $level->{$path} = $new_item;
+      $raw_paths{$path}++;
     }
   }
 
@@ -137,6 +142,7 @@ package App::Schierer::HPFan::Plugins::Navigation {
       if ($i == $#segments) {
         # This is the final segment - the actual item being added
         _merge_or_add_item($current_level, $current_path, $item);
+        $raw_paths{$current_path}++ unless $item->{'_is_placeholder'};
       }
       else {
         # This is an intermediate parent - create placeholder if needed

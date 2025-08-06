@@ -2,15 +2,21 @@ use v5.42;
 use utf8::all;
 use experimental qw(class);
 
-class App::Schierer::HPFan::Model::Gramps::Name {
+class App::Schierer::HPFan::Model::Gramps::Name :
+  isa(App::Schierer::HPFan::Logger) {
   use Carp;
   use App::Schierer::HPFan::Model::Gramps::Surname;
+  use overload
+    '""'       => \&to_string,
+    '.'        => \&to_string,
+    'bool'     => sub { $_[0]->_isTrue() },
+    'fallback' => 0;
 
   field $alt        : reader : param = 0;
   field $type       : reader : param = "Birth Name";
   field $priv       : reader : param = 0;
   field $sort       : reader : param = undef;
-  field $display    : reader : param = undef;
+  field $display    : param = undef;
   field $first      : reader : param = undef;
   field $call       : reader : param = undef;
   field $surnames   : param = [];
@@ -48,7 +54,19 @@ class App::Schierer::HPFan::Model::Gramps::Name {
     return @$surnames ? $surnames->[0] : undef;
   }
 
-  method to_string() {
+  method display {
+    return $display if $display;
+    my @parts;
+    push @parts, $first  if $first;
+    push @parts, $call   if ($call and not $first);
+    push @parts, "$nick" if ($nick and not $first);
+    if (not scalar @parts) {
+      push @parts, 'Unknown';
+    }
+    return join(' ', @parts);
+  }
+
+  method to_string {
     my @parts;
 
     push @parts, $title if $title;

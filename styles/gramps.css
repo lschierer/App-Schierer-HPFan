@@ -1,0 +1,64 @@
+@import url("@spectrum-css/typography");
+@import url("@spectrum-css/card");
+
+:root {
+  --color-male: var(--spectrum-green-900);
+  --color-female: var(--spectrum-purple-900);
+  --timeline-height: 47vh;
+  --mod-heading-margin-start: 0px;
+}
+
+.timeline-card {
+  margin: 1px 0;
+  min-width: 1vw;
+  width: auto;
+  max-width: 100%;
+  height: calc(var(--timeline-height) + 2em);
+  border-style: solid;
+  border-color: var(--spectrum-blue-400);
+  border-radius: 4px;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+svg .color-male {
+  color: var(--color-male);
+  stroke: var(--color-male);
+  fill-opacity: 0;
+}
+
+svg .color-female {
+  color: var(--color-female);
+  stroke: var(--color-female);
+  fill-opacity: 0;
+}
+
+svg .family-node.junction {
+  color: var(--spectrum-blue-400);
+  stroke: var(--spectrum-blue-400);
+  fill-opacity: 0;
+}
+
+div.basic-info {
+  max-height: 10vh;
+}
+
+iconify-icon.color-female {
+  color: var(--color-female);
+}
+
+iconify-icon.color-male {
+  color: var(--color-male);
+}
+
+iconify-icon {
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+ul.bio {
+  padding-left: 2em;
+
+  --mod-body-margin-end: 1px;
+}

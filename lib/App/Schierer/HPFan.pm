@@ -5,6 +5,7 @@ use File::FindLib 'lib';
 require Mojo::File::Share;
 require Mojo::Home;
 require App::Schierer::HPFan::Logger::Config;
+require App::Schierer::HPFan::Controller::ControllerBase;
 
 package App::Schierer::HPFan {
   use Mojo::Base 'Mojolicious', -strict, -signatures;

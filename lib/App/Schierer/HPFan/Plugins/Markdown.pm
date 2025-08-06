@@ -6,6 +6,7 @@ use Mojo::File;
 use Path::Iterator::Rule;
 require Pandoc;
 require Data::Printer;
+require Scalar::Util;
 require YAML::PP;
 require Mojo::DOM58;
 use namespace::autoclean;
@@ -14,6 +15,10 @@ package App::Schierer::HPFan::Plugins::Markdown {
   use Mojo::Base 'Mojolicious::Plugin', -strict, -signatures;
   use Carp;
 
+  my $customCommonMark = join('+',
+    qw(commonmark alerts attributes autolink_bare_uris footnotes implicit_header_references pipe_tables raw_html rebase_relative_paths smart gfm_auto_identifiers)
+  );
+
   sub register ($self, $app, $config) {
     my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     $logger->info(sprintf('initializing %s.', __PACKAGE__));
@@ -21,16 +26,38 @@ package App::Schierer::HPFan::Plugins::Markdown {
     # Add helper method for rendering markdown files
     $app->helper(
       render_markdown_file => sub ($c, $file_path, $opts = {}) {
+        $logger->debug(
+          'render_markdown_file requested by $c ' . Scalar::Util::blessed($c));
         $logger->debug("render_markdown_file requested for '$file_path'");
         return $self->_render_markdown_file($c, $file_path, $opts);
       }
     );
+
+    $app->helper(render_markdown_snippet => \&_render_markdown_snippet);
+    $app->helper(spectrum_formatting     => \&SpectrumFormatting);
 
     $app->helper(
       parse_markdown_frontmatter => sub ($c, $file_path) {
         return $self->_parse_markdown_frontmatter($file_path);
       }
     );
+  }
+
+  sub _render_markdown_snippet ($self, $snippet) {
+    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
+    if (not defined $snippet or length($snippet) == 0) {
+      $logger->warn('snippet must be present!!');
+      return '';
+    }
+
+    my $parser       = Pandoc->new();
+    my $html_content = $parser->convert(
+      $customCommonMark => 'html',
+      $snippet
+    );
+    $html_content = $self->app->spectrum_formatting($html_content);
+    $logger->debug("html_content for snippet is $html_content");
+    return $html_content;
   }
 
   sub _parse_markdown_frontmatter ($self, $file_path) {
@@ -87,6 +114,8 @@ package App::Schierer::HPFan::Plugins::Markdown {
       $opts = {};
     }
     my $logger = Log::Log4perl->get_logger(__PACKAGE__);
+    $logger->debug("stash at start of _render_markdown_file has keys "
+        . join(", ", keys %{ $c->stash() }));
 
     unless ($file_path && $file_path->isa('Mojo::File')) {
       $logger->error("file_path must be a 'Mojo::File' not "
@@ -129,10 +158,8 @@ package App::Schierer::HPFan::Plugins::Markdown {
       "Template paths: " . join(", ", @{ $c->app->renderer->paths }));
     $logger->debug("Looking for template: $template.html.ep");
 
-    my $parser           = Pandoc->new();
-    my $customCommonMark = join('+',
-      qw(commonmark alerts attributes autolink_bare_uris footnotes implicit_header_references pipe_tables raw_html rebase_relative_paths smart gfm_auto_identifiers)
-    );
+    my $parser = Pandoc->new();
+
     my $html_content = $parser->convert(
       $customCommonMark => 'html',
       $parsedFile->{content}

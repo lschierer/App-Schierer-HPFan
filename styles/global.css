@@ -48,6 +48,7 @@
   --mod-button-content-color-default: var(--text-3);
   --mod-divider-background-color: var(--text-1);
   --mod-body-font-color: var(--text-1);
+  --mod-splitview-content-color: var(--text-1);
   --mod-heading-font-color: var(--text-1);
   --mod-splitview-background-color: var(--surface-1);
   --mod-table-header-background-color-scrollable: var(--text-1);
@@ -86,9 +87,10 @@ body {
 body.with-sidebar {
   display: grid;
   grid-template:
-    "header header" var(--header-height)
-    "content content" 1fr
-    "footer footer" var(--footer-height);
+    "header" var(--header-height)
+    "title" var(--header-height)
+    "content" 1fr
+    "footer" var(--footer-height);
 }
 
 /* 3. Layout regions */
@@ -97,6 +99,17 @@ header {
   grid-area: header;
   width: 100vw;
   height: var(--header-height);
+}
+
+div.title-section {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  grid-area: title;
+
+  & h1 {
+    margin: var(--size-5);
+  }
 }
 
 footer {

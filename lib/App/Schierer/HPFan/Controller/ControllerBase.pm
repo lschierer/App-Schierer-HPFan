@@ -42,18 +42,17 @@ package App::Schierer::HPFan::Controller::ControllerBase {
       App::Schierer::HPFan::Model::Gramps->new(gramps_export => $gramps_export,
       );
 
-    $app->hook(
-      before_server_start => sub {
-        state $initialized = do {
-          $logger->info("⚙️  Running gramps import...");
-          $gramps->import_from_xml();
-          $logger->info("✅ gramps import completed.");
-          $app->plugins->emit(gramps_initialized => $gramps);
-          1;
-        };
-      }
-    );
-    $app->helper(gramps => sub { return $gramps });
+    state $initialized = do {
+      $logger->info("⚙️  Running gramps import...");
+      $gramps->import_from_xml();
+      $logger->info("✅ gramps import completed.");
+
+      $app->helper(gramps => sub { return $gramps });
+
+      $app->plugins->emit(gramps_initialized => $gramps);
+      $app->config(gramps_initialized => 1);
+      1;
+    };
 
     $routes->get('/health')->to(
       cb => sub($c) {

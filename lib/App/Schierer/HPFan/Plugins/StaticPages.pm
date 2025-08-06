@@ -58,7 +58,7 @@ package App::Schierer::HPFan::Plugins::StaticPages {
       my $relative_path = $file_path->to_rel($pages_dir);
       my $route_path    = $self->file_path_to_route($relative_path);
       $logger->debug(
-        "Registering static route: $route_path for file: $relative_path");
+        "Considering static route: $route_path for file: $relative_path");
 
       my $parsedFile = $app->parse_markdown_frontmatter($file_path);
       if ($parsedFile) {
@@ -69,10 +69,11 @@ package App::Schierer::HPFan::Plugins::StaticPages {
         $logger->debug(sprintf('comparing against %s existing nav entries.',
           scalar keys %$existing_nav));
         foreach my $existing_path (keys %$existing_nav) {
-          if (lc($existing_path) eq $normalized_route) {
+          if (fc($existing_path) eq fc($normalized_route)) {
             $has_conflict = 1;
             $logger->debug(sprintf(
-'Skipping static page navigation for "%s" - conflicts with existing "%s"',
+              'Skipping static page navigation for "%s"'
+                . ' - conflicts with existing "%s"',
               $route_path, $existing_path,
             ));
             last;
@@ -81,7 +82,7 @@ package App::Schierer::HPFan::Plugins::StaticPages {
 
         unless ($has_conflict) {
           $logger->debug(
-            sprintf('"%s" has no conflicts, pushing to added_routes',
+            sprintf('Registering "%s" as static route, no conflicts present',
               $route_path)
           );
           push @added_routes,

@@ -32,6 +32,14 @@ class App::Schierer::HPFan::Logger {
     return {};
   }
 
+  method _isTrue {
+    return
+         defined($self)
+      && ref($self)
+      && blessed($self)
+      && blessed($self) eq __CLASS__;
+  }
+
   # Method for JSON serialization
   # a base TO_JSON implementation is necessary for Data::Printer
   # to work on child classes.

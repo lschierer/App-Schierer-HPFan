@@ -53,6 +53,32 @@ class App::Schierer::HPFan::Model::Gramps::Event :
     my $desc = @parts ? join(" ", @parts) : "Unknown event";
     return sprintf("Event[%s]: %s", $handle, $desc);
   }
+
+  method to_hash {
+    return {
+      id            => $id,
+      handle        => $handle,
+      change        => $change,
+      type          => $type,
+      date          => $date,
+      place_ref     => $place_ref,
+      cause         => $cause,
+      description   => $description,
+      attributes    => [$attributes->@*],
+      note_refs     => [$note_refs->@*],
+      citation_refs => [$citation_refs->@*],
+      obj_refs      => [$obj_refs->@*],
+      tag_refs      => [$tag_refs->@*],
+    };
+  }
+
+  method TO_JSON {
+    my $json =
+      JSON::PP->new->utf8->pretty->allow_blessed(1)
+      ->convert_blessed(1)
+      ->encode($self->to_hash());
+    return $json;
+  }
 }
 
 1;

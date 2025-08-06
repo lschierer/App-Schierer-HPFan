@@ -27,6 +27,11 @@
   <body class=" <%= $classes %>">
     <%= include 'partials/global_header' %>
     <% if ($sidebar ) { %>
+      <div class="title-section">
+        <h1 class="spectrum-Heading spectrum-Heading--sizeXXL">
+          <%= $title %>
+        </h1>
+      </div>
       <div class=" spectrum-SplitView spectrum-SplitView--horizontal ">
         <div id="nav" class="spectrum-SplitView-pane">
           <div class="spectrum-Site-sideBar">
@@ -41,9 +46,7 @@
     <% } %>
 
     <main >
-      <h1 class="spectrum-Heading spectrum-Heading--sizeXXL">
-        <%= title %>
-      </h1>
+
       <%= content %>
     </main>
 

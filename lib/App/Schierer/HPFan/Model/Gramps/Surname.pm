@@ -25,6 +25,14 @@ class App::Schierer::HPFan::Model::Gramps::Surname {
     }
   }
 
+  method display_name {
+    my @parts;
+    push @parts, $prefix    if $prefix;
+    push @parts, $connector if $connector;
+    push @parts, $value;
+    return join(' ', @parts);
+  }
+
   method to_string() {
     my @parts;
 

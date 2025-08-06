@@ -1,0 +1,35 @@
+<li class="spectrum-TreeView-item is-open">
+  <div class="spectrum-TreeView-itemLink">
+    <% my $gender = $node->{person}->gender; %>
+    <% my $genderClass = $gender eq 'M' ? 'color-male' : $gender eq 'F' ? 'color-female' : ''; %>
+    <a class="<%= $genderClass %> spectrum-Link--secondary spectrum-Link--quiet"
+      href="<%= link_target_for_person($node->{person}); %>"
+      class="spectrum-TreeView-itemLink">
+      <span class="spectrum-TreeView-itemLabel">
+        <%= $node->{person}->display_name %>
+        (
+        <% if (my $birth = gramps->get_birth_date($node->{person})) { %>
+            <span class="birth-year"><%= gramps->date_parser->format_date($birth) %></span>
+        <% } else { %>
+          Unknown
+        <% } %>
+          —
+        <% if (my $death = gramps->get_death_date($node->{person})) { %>
+          <span class="death-year"><%= gramps->date_parser->format_date($death) %></span>
+        <% } else { %>
+          Unknown
+        <% } %>
+        )
+      </span>
+    </a>
+  </div>
+
+  <% if (@{$node->{children}}) { %>
+    <ul class="spectrum-TreeView spectrum-TreeView--sizeM is-opened">
+      <% foreach my $child (@{$node->{children}}) { %>
+          %= include 'family/tree_node', node => $child, level => $level + 1
+      <% } %>
+    </ul>
+  <% } %>
+
+</li>

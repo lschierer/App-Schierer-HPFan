@@ -22,6 +22,7 @@ my $build = Module::Build->new(
     'Git::Repository'                => '0',
     'Git::Repository::Log'           => '0',
     'Git::Repository::Log::Iterator' => '0',
+    'GraphViz'                       => '0',
     'HTML::Entities'                 => '0',
     'HTML::TreeBuilder'              => '0',
     'JSON::PP'                       => '0',

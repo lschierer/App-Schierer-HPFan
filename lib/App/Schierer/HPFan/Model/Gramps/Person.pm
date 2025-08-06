@@ -42,13 +42,13 @@ class App::Schierer::HPFan::Model::Gramps::Person :
     }
   }
 
-  method names()          { [@$names] }            # Return copy
+  method names()          { [@$names] }               # Return copy
   method event_refs()     { [@$event_refs] }
   method addresses()      { [@$addresses] }
   method attributes()     { [@$attributes] }
   method urls()           { [@$urls] }
   method child_of_refs()  { [@$child_of_refs] }
-  method parent_in_refs() { [@$parent_in_refs] }
+  method parent_in_refs() { [$parent_in_refs->@*] }
   method person_refs()    { [@$person_refs] }
   method note_refs()      { [@$note_refs] }
   method citation_refs()  { [@$citation_refs] }
@@ -60,6 +60,28 @@ class App::Schierer::HPFan::Model::Gramps::Person :
       return $name unless $name->alt;
     }
     return @$names ? $names->[0] : undef;
+  }
+
+  method display_name() {
+    my $name = $self->primary_name();
+    $self->logger->debug(sprintf(
+      'picked name "%s" as primary for "%s"', $name, $self->id));
+    my $last;
+    foreach my $sn (@{ $name->surnames }) {
+      if ($sn->prim) {
+        $last = $sn;
+        last;
+      }
+    }
+    if (not defined $last && scalar @{ $name->surnames }) {
+      $last = $name->surnames->[0];
+    }
+    return sprintf('%s %s %s %s',
+      $name->display,
+      $last->prefix ? $last->prefix : '',
+      $last->value  ? $last->value  : 'Unknown',
+      $name->suffix ? $name->suffix : '',
+    );
   }
 
   method to_string() {

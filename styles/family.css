@@ -1,0 +1,47 @@
+@import url("@spectrum-css/typography");
+@import url("@spectrum-css/card");
+
+:root {
+  --color-male: var(--spectrum-green-900);
+  --color-female: var(--spectrum-purple-900);
+  --mod-heading-margin-start: 0px;
+}
+
+.color-female {
+  color: var(--color-female);
+}
+
+.color-male {
+  color: var(--color-male);
+}
+
+iconify-icon.color-female {
+  color: var(--color-female);
+}
+
+iconify-icon.color-male {
+  color: var(--color-male);
+}
+
+iconify-icon {
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.spectrum-TreeView-itemLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tree-toggle {
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.8em;
+  flex-shrink: 0; /* Prevent the toggle from shrinking */
+}
+
+.spectrum-TreeView-item.is-collapsed > .spectrum-TreeView {
+  display: none;
+}

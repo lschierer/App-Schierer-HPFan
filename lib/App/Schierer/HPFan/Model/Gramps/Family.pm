@@ -25,8 +25,8 @@ class App::Schierer::HPFan::Model::Gramps::Family {
     # Validate child_refs structure
     if (@$child_refs) {
       for my $child_ref (@$child_refs) {
-        croak "child_refs must be hashrefs with hlink"
-          unless ref($child_ref) eq 'HASH' && exists $child_ref->{hlink};
+        croak "child_refs must be hashrefs with handle"
+          unless ref($child_ref) eq 'HASH' && exists $child_ref->{handle};
       }
     }
   }
