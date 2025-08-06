@@ -25,8 +25,8 @@ async function main() {
   }
 
   // Find all TypeScript files
-  const entryPoints = await glob(path.join(process.cwd(), "./ts/**/*.ts"), {
-    ignore: ["node_modules/**", "public/**", "**/*.d.ts", "build.js"],
+  const entryPoints = await glob(path.join(process.cwd(), "./lib/**/*.ts"), {
+    ignore: ["node_modules/**", "public/**", "**/*.d.ts", "./scripts/*.ts"],
     cwd: __dirname,
   });
 
@@ -35,7 +35,7 @@ async function main() {
   await build({
     entryPoints,
     outdir: "public/js",
-    outbase: "./ts",
+    outbase: "./",
     bundle: true,
     splitting: false,
     platform: "browser",
