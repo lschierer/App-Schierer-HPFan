@@ -72,7 +72,7 @@ inorganic materials in pens, but flows into one's writing when using a
 quill,[^230804] there is no canonical basis for this line of thought;
 it is pure speculation.
 
-[parchment]: ../Parchment_and_Paper/
+[parchment]: Parchment_and_Paper/
 [McGonagall]: /Harrypedia/people/McGonagall/Minerva/
 [Dip pen]: https://en.wikipedia.org/wiki/Dip_pen
 
@@ -87,49 +87,49 @@ it is pure speculation.
 
 [^230804]: citation needed.
 
-[^200819-1]:
+[^200819-1]: 
     AndrewWolfe. _[The Ghost of Privet Drive](https://archiveofourown.org/works/21500365)_
     [Archive of Our Own](https://archiveofourown.org) Last Updated 202008-14. Last Viewed 2020-08-19.
 
-[^200816-3]:
+[^200816-3]: 
     Sinyk. _[Angry Harry and the Seven](https://www.fanfiction.net/s/9750991)_
     [FanFiction](https://www.fanfiction.net/). Last Updated 2013-10-22. Last Viewed
     2020-08-16.
 
 [Ink brush]: https://en.wikipedia.org/wiki/Ink_brush
 
-[^231004-2]:
+[^231004-2]: 
     [Wikipedia](https://en.wikipedia.org/).
     "[Ink brush]" Last Edited: 2023-07-11. Last Viewed: 2023-10-04.
 
-[^200816-4]:
+[^200816-4]: 
     [Wikipedia](https://en.wikipedia.org/).
     "[Dip pen]" Last Edited 2020-07-24. Last Viewed 2020-08-16
 
-[^200816-5]:
+[^200816-5]: 
     [Wikipedia](https://en.wikipedia.org/).
     "[Dip pen]" Last Edited 2020-07-24. Last
     Viewed 2020-08-16
 
-[^200816-6]:
+[^200816-6]: 
     [Wikipedia](https://en.wikipedia.org/).
     "[Dip pen]" Last Edited 2020-07-24. Last
     Viewed 2020-08-16
 
-[^200816-7]:
+[^200816-7]: 
     ©Paper Sizes. "[The History Of Paper](https://www.papersizes.org/paper-history-overview.htm)"
     [International Paper Sizes and Formats](https://www.papersizes.org/) Last viewed 2020-08-16.
 
-[^200816-8]:
+[^200816-8]: 
     ©Paper Sizes. "[The History Of Paper](https://www.papersizes.org/paper-history-overview.htm)"
     [International Paper Sizes and Formats](https://www.papersizes.org/) Last viewed
     2020-08-16.
 
-[^200816-9]:
+[^200816-9]: 
     Reginmund. "[The Rise and Fall of Parchment](http://www.allempires.com/article/index.php?q=parchment)"
     [All Empires Online History Community](http://www.allempires.com/) 2007-01-10. Last Viewed 2020-08-16.
 
-[^200816-10]:
+[^200816-10]: 
     Reginmund. "[The Rise and Fall of Parchment](http://www.allempires.com/article/index.php?q=parchment)"
     [All Empires Online History Community](http://www.allempires.com/) 2007-01-10.
     Last Viewed 2020-08-16.

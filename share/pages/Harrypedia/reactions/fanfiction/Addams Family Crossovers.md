@@ -23,7 +23,7 @@ really rather have nothing to do with, some are very well done and
 quite amusing. They also bring into sharp focus the fact that Mrs.
 Rowling's original work lacks any solidity to its moral framework.
 
-[^240910-1]:
+[^240910-1]: 
     [Wikipedia](https://wikipedia.org) has a synopsis of
     the various iterations of the family in the article "[The Addams
     Family](https://.wikipedia.org/wiki/The_Addams_Family)".

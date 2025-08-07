@@ -52,7 +52,7 @@ shapes his actions much as the one that Macbeth hears shapes his actions.
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>
 [Harry]: </Harrypedia/people/Potter/Harry James/>
 [Harry's]: </Harrypedia/people/Potter/Harry James/>
-[Dumbledore]: ../
+[Dumbledore]: ./
 
 In the fan fiction work _[The Sound of Silence][BW95TSS1]_ [Dumbledore][]
 states:
@@ -200,7 +200,7 @@ complicated nature of the thorny problem to confuse the listener.
 [Malfoys]: /Harrypedia/people/Malfoy/
 [Dursleys]: /Harrypedia/people/Dursley/
 [abusive environment]: /Harrypedia/people/Dursley/
-[AD1]: ../
+[AD1]: ./
 [Ginny]: </Harrypedia/people/Weasley/Ginevra Molly/>
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean/>
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>
@@ -220,14 +220,14 @@ complicated nature of the thorny problem to confuse the listener.
 
 [BMJ]: http://www.bmj.com/thebmj
 
-[^221129-3]:
+[^221129-3]: 
     Mrs. J. K. Rowling.
     "[The Potter Family](https://www.rowlingindex.org/work/pmpfam/)"
     [The J.K. Rowling Index](https://www.rowlingindex.org). 2015-09-22.
 
 [^221129-2]: Several fan fiction works have used this, but I cannot recall them right now.
 
-[^20210913-1]:
+[^20210913-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows]_
     Page 298.
@@ -239,76 +239,76 @@ complicated nature of the thorny problem to confuse the listener.
 [Harry Potter and the Goblet of Fire]: https://www.goodreads.com/book/show/6.Harry_Potter_and_the_Goblet_of_Fire
 [Harry Potter and the Order of the Phoenix]: https://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix
 
-[^210912-13]:
+[^210912-13]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix]_
     Locations 3683-3685.
     © 2005 Pottermore Limited. American Kindle Edition.
 
-[^210912-12]:
+[^210912-12]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Goblet of Fire]_
     Locations 4792-4793.
     © 2003 Pottermore Limited. American Kindle Edition.
 
-[^210912-11]:
+[^210912-11]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Chamber of Secrets]_
     Kindle Location 2509.
     © 1999 Pottermore Limited. American Kindle Edition.
 
-[^210912-10]:
+[^210912-10]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Sorcerer's Stone]_
     Pages 244-245.
     © 1998 Pottermore Limited. American Kindle Edition.
 
-[^210912-9]:
+[^210912-9]: 
     Mrs. J. K. Rowling.
     "[PotterCast Interviews J.K. Rowling, part one.](http://www.accio-quote.org/articles/2007/1217-pottercast-anelli.html)"
     2007-12-17. [Accio Quote](http://www.accio-quote.org).
     I have chosen to quote Mrs. Rowling to substantiate this rather than something she's had Dumbledore say because I feel this puts it even more beyond doubt than anything else I could do. I am essentially saying that Dumbledore's deductions, intuitions, whatever you chose to attribute it to, would end up agreeing with the author's own opinion on the subject.
 
-[^210912-1]:
+[^210912-1]: 
     cambangst.
     _[After Destiny](https://fanfictalk.com/archive/viewstory.php?sid=721)_
     Published: 2017-03-13. Updated: 2021-07-17.
 
-[^221129-5]:
+[^221129-5]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix]_
     Kindle Location 12222-12223.
     Pottermore Limited © 2005. American Kindle Edition.
 
-[^210912-2]:
+[^210912-2]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix]_
     Kindle Location 12222-12223.
     Pottermore Limited © 2005. American Kindle Edition.
 
-[^210912-3]:
+[^210912-3]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix]_
     Kindle Location 12249-12251.
     Pottermore Limited © 2005. American Kindle Edition.
 
-[^210912-4]:
+[^210912-4]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix]_
     Kindle Location 12226-12230.
     Pottermore Limited © 2005. American Kindle Edition.
 
-[^210912-5]:
+[^210912-5]: 
     Mrs. J. K. Rowling.
     "[F.A.Q.: About the Books](https://www.rowlingindex.org/work/faq1web/)"
     Publication date: 2004-05-15 to 2007-12-21.
 
-[^210912-6]:
+[^210912-6]: 
     Mrs. J. K. Rowling.
     "[The Leaky Cauldron and Mugglenet interview Joanne Kathleen Rowling: Part Three](http://www.accio-quote.org/articles/2005/0705-tlc_mugglenet-anelli-3.htm)"
     2005-07-05. [Accio Quote](http://www.accio-quote.org/)
 
-[^210912-7]:
+[^210912-7]: 
     birdwoman95.
     _[The Sound Of Silence](https://www.fanfiction.net/s/12175260)_
     2016-10-03.

@@ -40,7 +40,7 @@ package App::Schierer::HPFan::Plugins::StaticPages {
         order => $static_entry->{file}->{order},
       });
     }
-
+    $app->config(after_static => 1);
   }
 
   sub build_routes ($self, $app) {

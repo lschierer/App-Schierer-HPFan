@@ -14,7 +14,7 @@ Charm, though there is apparently a curse version of this.
 
 Makes things shrink, and reverses [Engorgio][].
 
-[Engorgio]: ../engorgio/
+[Engorgio]: engorgio/
 
 ## Found in
 

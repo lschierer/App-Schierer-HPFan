@@ -40,7 +40,7 @@ On a side note, while [Lockhart] was a memory-stealing fraud,[^240411-7] the sto
 
 [^210513-5]: citation needed
 
-[^240411-1]:
+[^240411-1]: 
     [A.D.A.M., Inc.](https://www.adam.com/).
     _[A.D.A.M. Medical Encyclopedia]_,  
     Johns Creek, Georgia (USA). © 1997-2024.
@@ -49,36 +49,36 @@ On a side note, while [Lockhart] was a memory-stealing fraud,[^240411-7] the sto
 
 [A.D.A.M. Medical Encyclopedia]: https://medlineplus.gov/encyclopedia.html
 
-[^240411-2]:
+[^240411-2]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince]_
     ©2006 Bloomsbury Publishing PLC. pages 510-512.
 
-[^240411-3]:
+[^240411-3]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince]_
     ©2006 Bloomsbury Publishing PLC. page 512.
 
 [Harry Potter and the Half-Blood Prince]: https://www.librarything.com/work/1133624
 
-[^240411-4]:
+[^240411-4]: 
     Mrs. J. K. Rowling.
     "[Werewolves](https://www.rowlingindex.org/work/pmww/)"
     [The J.K. Rowling Index]. Originally Published 2013-07-31.
 
 [The J.K. Rowling Index]: https://www.rowlingindex.org/
 
-[^240411-5]:
+[^240411-5]: 
     [Jennifer Louten](https://pubmed.ncbi.nlm.nih.gov/?term=Louten%20J%5BAuthor%5D).
     "[Virus Transmission and Epidemiology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7148619/)"
     Essential Human Virology. 2016:71–92. doi: 10.1016/B978-0-12-800947-5.00005-3. Epub 2016-05-06. PMCID: PMC7148619.
 
-[^240411-7]:
+[^240411-7]: 
     Mrs. J. K. Rowling.
     "[Gilderoy Lockhart](https://www.rowlingindex.org/work/pmgl/)"
     [The J.K. Rowling Index]. Originally Published 2013-10-03.
 
-[^240411-8]:
+[^240411-8]: 
     [Jeconais](https://jeconais.fanficauthors.net/)
     _[This Means War](https://jeconais.fanficauthors.net/This_Means_War/)_
     "[9 - Harry Potter's Day Off](https://jeconais.fanficauthors.net/This_Means_War/9__Harry_Potters_Day_Off/)" Originally Published: 2005-05-06.

@@ -1,4 +1,3 @@
-### Analysis
 
 ### timeline Speculation
 
@@ -17,12 +16,12 @@
   years prior to the interview, not that the the house elf _formed_ the memory
   ten years prior. Note, this actually puts Dumbledore in a really poor light.
 
-[^210810-8]:
+[^210810-8]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince](https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince)_
     page 365. © 2005 American Kindle Edition.
 
-[^210810-6]:
+[^210810-6]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince](https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince)_
     page 366. © 2005 American Kindle Edition.
@@ -35,7 +34,7 @@
 
 [^200813-1]: Mrs. J. K. Rowling. _Harry Potter and the Deathly Hallows_ (p. 135). Pottermore Publishing. American Kindle Edition.
 
-[^210810-7]:
+[^210810-7]: 
     See my notes on [History][H1], compute from when [Riddle][TMR1] graduated
     Hogwarts to the earliest Dumbledore could be headmaster and yet be winter
     _after_ [Remus][RL1] is bitten.
@@ -74,13 +73,13 @@ commitment to [Utilitarian][IEPU2] philosophy. Dumbledore may have had to learn 
 live with the "price of [his] shame,"[^210912-8] but I cannot find anywhere that
 says he actually came to believe his moral reasoning had been flawed.
 
-[^221221-6]:
+[^221221-6]: 
     Mrs. J. K. Rowling. _[Harry Potter and the Deathly Hallows][]_
     Pottermore Publishing Limited. American Kindle Edition. Page 243.
 
 [Harry Potter and the Deathly Hallows]: https://www.librarything.com/work/3577382/book/225886820
 
-[^221221-7]:
+[^221221-7]: 
     Mrs. J. K. Rowling. _[Harry Potter and the Deathly Hallows][]_
     Pottermore Publishing Limited. American Kindle Edition. Page 173.
 
@@ -98,7 +97,7 @@ actual age relative to himself. As he grows older, this is exacerbated Many
 of the adult decision makers he now works with were once his students, not his
 peers, far less ever adults over him.
 
-[^221221-8]:
+[^221221-8]: 
     Mrs. J. K. Rowling. _[Harry Potter and the Deathly Hallows][]_
     Pottermore Publishing Limited. American Kindle Edition. Pages 191-192.
 
@@ -157,12 +156,12 @@ Dumbledore are. In no particular order:
 [Harry]: </Harrypedia/people/Potter/Harry James/>
 [DMH1]: /Harrypedia/magic/dark/Horcruxes/
 
-[^220916-1]:
+[^220916-1]: 
     Mrs. J. K. Rowling.
     _[Short Stories from Hogwarts of Power, Politics and Pesky Poltergeists…](https://www.librarything.com/work/18275514)_
     © 2016 Pottermore Publishing American Kindle Edition. page 34.
 
-[^220916-2]:
+[^220916-2]: 
     Mrs. J. K. Rowling.
     _[Short Stories from Hogwarts of Power, Politics and Pesky Poltergeists…](https://www.librarything.com/work/18275514)_
     © 2016 Pottermore Publishing American Kindle Edition. page 34.
@@ -262,7 +261,7 @@ unable to assist [Sirius][SB3] in exonerating himself. Is this just a convenient
 excuse to prevent [Sirius][SB3] from being able to adopt [Harry]?
 
 [GG]: /Harrypedia/people/Grindelwald/Gellert/
-[Ariana]: ../Ariana/
+[Ariana]: Ariana/
 [RBW]: </Harrypedia/people/Weasley/Ronald Bilius/>
 [MM]: /Harrypedia/people/McGonagall/Minerva/
 [PS]: /Harrypedia/people/Sprout/Pomona/
@@ -275,7 +274,7 @@ excuse to prevent [Sirius][SB3] from being able to adopt [Harry]?
 [SB3]: </Harrypedia/people/Black/Sirius III/>
 [SS]: /Harrypedia/people/Snape/Severus/
 
-[^220916-2]:
+[^220916-2]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Goblet of Fire](https://www.librarything.com/work/113)_
     © 2003 Pottermore Publishing American Kindle Edition. Locations 8831-8833.
@@ -383,25 +382,25 @@ whole [Riddle][TMR1] situation [reeks][ADdwr].
 
 [IEPU2]: https://iep.utm.edu/util-a-r/
 
-[^211022-4]:
+[^211022-4]: 
     Mrs. J. K. Rowling.
     "[Barnes and Noble & Yahoo! chat with J.K.
     Rowling](http://www.accio-quote.org/articles/2000/1000-livechat-barnesnoble.html)"
     [Accio-Quote](http://www.accio-quote.org) 2000-10-20.
 
-[^210914-2]:
+[^210914-2]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Chamber of
     Secrets](https://www.goodreads.com/book/show/15881.Harry_Potter_and_the_Chamber_of_Secrets)_
     p. 207. Pottermore Limited. American Kindle Edition.
 
-[^221220-8]:
+[^221220-8]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows](https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows)_
     Page 296.
     Pottermore Limited © 2007. American Kindle Edition.
 
-[^210912-8]:
+[^210912-8]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows](https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows)_
     Page 296.
@@ -413,25 +412,25 @@ whole [Riddle][TMR1] situation [reeks][ADdwr].
 
 [^210915-1]: I am not the first to note this. find citations.
 
-[^210915-2]:
+[^210915-2]: 
     PadyandMoony.
     _[Overdue Protection](https://www.fanfiction.net/s/7434492)_
     [Chapter 4](https://www.fanfiction.net/s/7434492/4/Overdue-Protection)
     Published: 2011-10-03. Updated: 2011-11-05.
 
-[^210914-4]:
+[^210914-4]: 
     Mr. Stephen Nathanson.
     "[Act and Rule Utilitarianism](https://iep.utm.edu/util-a-r/)"
     [Internet Encyclopedia of Philosophy](https://iep.utm.edu)
     https://iep.utm.edu Last Viewed: 2021-09-14
 
-[^210914-5]:
+[^210914-5]: 
     Fr. John Hardon.
     "[Double Effect](https://www.catholicculture.org/culture/library/dictionary/index.cfm?id=33215##)"
     _[Modern Catholic Dictionary](https://www.catholicculture.org/culture/library/dictionary/)_
     © Eternal Life
 
-[^210914-6]:
+[^210914-6]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the
     Phoenix](https://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix)_
@@ -549,7 +548,7 @@ least once. It was his defeat of Grindelwald that gave him the stature to
 overcome his background and gain ground in the Wizengamot, to have become
 Headmaster at all, to have become Supreme Mugwump.
 
-[^220916-3]:
+[^220916-3]: 
     I am unsure I believe Muriel and Rita about Kendra having lied
     about her blood status. If she did, I am unsure it would have worked. If
     she did not, it only supports my argument.
@@ -598,116 +597,116 @@ What about the Wizengamot? Has he really done nothing with his seat? Or has
 he played off one faction against another, manipulated people behind the
 scenes? Is his public face at all related to his private goals?
 
-[^210706-1]:
+[^210706-1]: 
     KafkaExMachina.
     _[Divination is a Wooly Subject](https://www.fanfiction.net/s/5251162)_
     Published 2009-07-26. Last Viewed: 2021-07-06.
     Others have also done this, but this one does a nicely done and brief
     synopsis of the view.
 
-[^210706-2]:
+[^210706-2]: 
     I've read this more than once, but I do not recall which
     fan fictions off hand.
 
-[^200721-1]:
+[^200721-1]: 
     DisobedienceWriter.
     _[Harry Potter's Life Lessons](https://www.fanfiction.net/s/3750393)_.
     [FanFiction](https://www.fanfiction.net/) Published 2007-08-27.
     Last Viewed 2020-07-21.
 
-[^191025-1]:
+[^191025-1]: 
     Fibinaci.
     _[Padfoot, Docteur D'Amour](https://www.fanfiction.net/s/4510080/6/Padfoot-Docteur-D-amour)_
     Chapter 6. Last viewed 2020-09-08.
 
-[^210318-7]:
+[^210318-7]: 
     In the interview
     "[Barnes and Noble & Yahoo! chat with J.K. Rowling](https://www.hp-lexicon.org/source/interviews/bn/)
     Mrs. Rowling states that Dumbledore 1) knows Snape is behaving badly and 2) purposefully allows it.
 
-[^200812-1]:
+[^200812-1]: 
     [© Parliamentary Copyright](https://www.parliament.uk/site-information/copyright-parliament/).
     "[The Speaker's roles and deputies](https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentwork/offices-and-ceremonies/overview/the-speaker/roles-and-deputies/)"
     Last Updated 2016-10. Last Viewed 2020-08-12.
 
-[^200812-2]:
+[^200812-2]: 
     Mrs. J. K. Rowling. _Harry Potter and the Deathly Hallows_
     Pottermore. American Kindle Editions. Better Citation Needed.
 
-[^200812-3]:
+[^200812-3]: 
     Mrs. J. K. Rowling. _Harry Potter and the Deathly Hallows_
     Pottermore. American Kindle Editions. Better Citation Needed.
 
-[^200812-4]:
+[^200812-4]: 
     © WIZARDING WORLD DIGITAL 2020
     "[The mysterious life and death of Ariana
     Dumbledore](https://www.wizardingworld.com/features/the-mysterious-life-and-death-of-ariana-dumbledore)"
     Published 2016-12-01. Last Viewed 2020-08-12.
 
-[^200812-5]:
+[^200812-5]: 
     https://harrypotter.fandom.com
     "[Duel between Albus Dumbledore and Gellert
     Grindelwald](https://harrypotter.fandom.com/wiki/Duel_between_Albus_Dumbledore_and_Gellert_Grindelwald)"
     Last Viewed 2020-09-08
 
-[^200812-6]:
+[^200812-6]: 
     Mrs. J. K. Rowling. _Harry Potter and the Deathly Hallows_
     Pottermore. American Kindle Editions. Better Citation Needed.
 
-[^200812-7]:
+[^200812-7]: 
     Mrs. J. K. Rowling. _Harry Potter and the Deathly Hallows_
     Pottermore. American Kindle Editions. Chapter 8.
 
-[^200812-8]:
+[^200812-8]: 
     Mrs. J. K. Rowling. _Harry Potter and the Deathly Hallows_
     Pottermore. American Kindle Editions. Better Citation Needed.
 
-[^200813-3]:
+[^200813-3]: 
     kb0. _[Air Elemental](https://www.fanfiction.net/s/11995519/)_.
     [FanFiction](https://www.fanfiction.net/). Last Updated 2016-10-29.
     Last Viewed 2020-08-13. Chapter 10.
 
-[^200720-1]:
+[^200720-1]: 
     Magi Silverwolf. _[The Greater Will](https://archiveofourown.org/works/16234799)_
     [Archive of Our Own](https://archiveofourown.org/). Published 2018-10-08.
     Last Viewed 2020-07-20.
 
-[^200720-6]:
+[^200720-6]: 
     Magi Silverwolf. _[The Greater Will](https://archiveofourown.org/works/16234799)_
     [Archive of Our Own](https://archiveofourown.org/). Published 2018-10-08.
     Last Viewed 2020-07-20.
 
-[^200720-7]:
+[^200720-7]: 
     Magi Silverwolf. _[The Greater Will](https://archiveofourown.org/works/16234799)_
     [Archive of Our Own](https://archiveofourown.org/). Published 2018-10-08.
     Last Viewed 2020-07-20.
 
-[^200720-8]:
+[^200720-8]: 
     Magi Silverwolf. _[The Greater Will](https://archiveofourown.org/works/16234799)_
     [Archive of Our Own](https://archiveofourown.org/). Published 2018-10-08.
     Last Viewed 2020-07-20.
 
-[^200720-2]:
+[^200720-2]: 
     [Wikipedia](https://en.wikipedia.org/).
     "[Warlock](https://en.wikipedia.org/wiki/Warlock)" last edited 2020-06-29.
     Last Viewed 2020-07-20.
 
-[^200720-3]:
+[^200720-3]: 
     [Wikipedia](https://en.wikipedia.org/).
     "[Witch (word)](<https://en.wikipedia.org/wiki/Witch_(word)>)"
     Last edited 2020-07-08. Last Viewed 2020-07-20.
 
-[^200720-4]:
+[^200720-4]: 
     [Wikipedia](https://en.wikipedia.org/).
     "[wizard](https://en.wiktionary.org/wiki/wizard)"
     Last edited 2020-07-08. Last viewed 2020-07-20.
 
-[^200720-5]:
+[^200720-5]: 
     [Wikipedia](https://en.wikipedia.org/).
     "[sorcerer](https://en.wiktionary.org/wiki/sorcerer)"
     Last edited 2020-07-11. Last viewed 2020-07-20.
 
-[^200624-1]:
+[^200624-1]: 
     Cooperation with evil is discussed in formal terms
     by the Seido Foundation in "Morality of Cooperation in Evil" at
     https://www.ewtn.com/catholicism/library/morality-of-cooperation-in-evil-9965
@@ -716,19 +715,19 @@ scenes? Is his public face at all related to his private goals?
     http://archphila.org/HHS/pdf/CoopEvilChart.pdf last viewed 2020-06-24,
     author unknown.
 
-[^200624-2]:
+[^200624-2]: 
     Mrs. J. K. Rowling. _Harry Potter and the Order of the
     Phoenix_ Chapter 37. Loc 12230 of 13038 American Kindle Edition.
 
-[^200624-3]:
+[^200624-3]: 
     http://archphila.org/HHS/pdf/CoopEvilChart.pdf last
     viewed 2020-06-24, author unknown.
 
-[^180702-2]:
+[^180702-2]: 
     https://musings-of-apathy.fanficauthors.net/Family_Inseparable/Chapter_9/reviews/5/#comments
     Last viewed 2018-07-02.
 
-[^190301-1]:
+[^190301-1]: 
     Ms. Richa Venkatraman.
     _["For the Greater Good:" In Defense of Albus Dumbledore](http://www.mugglenet.com/2017/08/greater-good-defense-albus-dumbledore/)_
     Published 2017-08-02. Last viewed 2019-03-01.

@@ -106,58 +106,58 @@ We seem to have:
 [Potions]: /Harrypedia/magic/potions/
 [Transfiguration]: /Harrypedia/magic/transfiguration/
 
-[^210902-3]:
+[^210902-3]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows](https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows)_
     p. 112. Pottermore Publishing. © 2007 American Kindle Edition.
 
-[^210902-4]:
+[^210902-4]: 
     Mrs. J. K. Rowling.
     "[Result of F.A.Q. Poll](https://web.archive.org/web/20060224124124/http://www.jkrowling.com:80/textonly/en/faq_poll.cfm)"
     Same page through [2012-02-04](https://web.archive.org/web/20120204062053/http://www.jkrowling.com/textonly/en/faq_poll.cfm)
 
-[^210823-6]:
+[^210823-6]: 
     Kratos1989.
     _[Head Start](https://www.fanfiction.net/s/13492410)_
     [Book 1, Chapter 10](https://www.fanfiction.net/s/13492410/11/Head-Start)
     Updated: 2021-08-23. Published: 2020-02-03. Last Viewed: 2021-08-23.
 
-[^210823-5]:
+[^210823-5]: 
     Kratos1989.
     _[Head Start](https://www.fanfiction.net/s/13492410)_
     [Book 1, Chapter 10](https://www.fanfiction.net/s/13492410/11/Head-Start)
     Updated: 2021-08-23. Published: 2020-02-03. Last Viewed: 2021-08-23.
 
-[^210820-1]:
+[^210820-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince](https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince)_
     p. 428. Pottermore Publishing. American Kindle Edition.
 
-[^210810-5]:
+[^210810-5]: 
     Mrs. J. K. Rowling.
     _[Short Stories from Hogwarts of Power, Politics and Pesky
     Poltergeists](https://www.goodreads.com/book/show/31538614-short-stories-from-hogwarts-of-power-politics-and-pesky-poltergeists)_
     p. 18. Pottermore Publishing. © 2016 American Kindle Edition.
 
-[^210709-1]:
+[^210709-1]: 
     CmptrWz.
     _[For Want of an Outfit](https://archiveofourown.org/works/28507302)_
     [Chapter 19](https://archiveofourown.org/works/28507302/chapters/76593785)
     [Archive of Our Own](https://archiveofourown.org)
     Published: 2021-01-02 Updated: 2021-07-05.
 
-[^210702-4]:
+[^210702-4]: 
     Mrs. J. K. Rowling.
     _[Short Stories from Hogwarts of Power, Politics and Pesky
     Poltergeists](https://www.goodreads.com/book/show/31538614-short-stories-from-hogwarts-of-power-politics-and-pesky-poltergeists)_
     p. 42. Pottermore Publishing. © 2016 American Kindle Edition.
 
-[^210630-5]:
+[^210630-5]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Sorcerer's Stone](https://www.goodreads.com/book/show/3.Harry_Potter_and_the_Sorcerer_s_Stone)_
     p. 137. Pottermore Limited. American Kindle Edition.
 
-[^210406-44]:
+[^210406-44]: 
     [magicscrapbook](https://magicscrapbook.tumblr.com/)
     "[‘Book of Spells’ transcript](https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript)"
     Last Viewed 2021-05-12.
@@ -202,7 +202,7 @@ eyes.[^210618-9]
       _[For Want of an Outfit](https://archiveofourown.org/works/28507302)_
       Published: 2021-01-02 Updated:2021-11-26 Last Viewed: 2021-11-29.
 
-[^210618-9]:
+[^210618-9]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Sorcerer's Stone](https://www.goodreads.com/book/show/3.Harry_Potter_and_the_Sorcerer_s_Stone)_
     p. 146. Pottermore Limited. American Kindle Edition.
@@ -261,7 +261,7 @@ The question then becomes did the Weasleys not fix his eyesight because
     need for glasses caused by eye strain, head or eye trauma, or other things
     that a muggleborn might show up in his shop with.
 
-[^221122-1]:
+[^221122-1]: 
     Scarlet*Gryphon
     *[For the Want of a Groundskeeper](https://archiveofourown.org/works/21541015)\_
     Published: 2019-11-24. Completed: 2019-11-24.
@@ -276,25 +276,25 @@ and/or relies on secondary source material, we have one solid fact: Harry's OWL
 examinations are conducted by at least one examiner who also conducted
 [Dumbledore]'s NEWTs.[^210702-1]
 
-[^210702-1]:
+[^210702-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the
     Phoenix](https://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix)_
     Kindle Location 10438. Pottermore Limited. American Kindle Edition.
 
-[^210302-4]:
+[^210302-4]: 
     kb0
     _[Fate's Mistake](https://www.fanfiction.net/s/4084005)_
     [Chapter 1](https://www.fanfiction.net/s/4084005/1/Fate-s-Mistake)
     Published: 2008-02-19. Updated: 2008-03-02.
 
-[^210302-3]:
+[^210302-3]: 
     kb0
     _[Fate's Mistake](https://www.fanfiction.net/s/4084005)_
     [Chapter 1](https://www.fanfiction.net/s/4084005/1/Fate-s-Mistake)
     Published: 2008-02-19. Updated: 2008-03-02.
 
-[^210923-1]:
+[^210923-1]: 
     - Hippothestrowl.
       _[Broken Utterly!](https://www.fanfiction.net/s/13507747)_
       [Chapter 2](https://www.fanfiction.net/s/13507747/2/Broken-Utterly)
@@ -449,7 +449,7 @@ boarding school, but Harry has at this point only lived there for about two
 months. If it already feels more like home than the only other place he ever
 remembers living, that is a remarkable lack of attachment.
 
-[^210521-2]:
+[^210521-2]: 
     Mrs. J. K. Rowling. _Harry Potter and the Sorcerer's Stone_
     p. 170. © 1998 Pottermore Limited. American Kindle Edition.
 
@@ -464,27 +464,27 @@ have read ia number of different ideas about it. See the full article on the
 
 [Trace]: /Harrypedia/magic/time/The_Trace/
 
-[^210810-4]:
+[^210810-4]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince](https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince)_
     page 307. © 2005. American Kindle Edition.
 
-[^210618-1]:
+[^210618-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Chamber of Secrets](https://www.goodreads.com/book/show/15881.Harry_Potter_and_the_Chamber_of_Secrets)_
     p. 42. Pottermore Limited. American Kindle Edition.
 
-[^210618-2]:
+[^210618-2]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Chamber of Secrets](https://www.goodreads.com/book/show/15881.Harry_Potter_and_the_Chamber_of_Secrets)_
     p. 20. Pottermore Limited. American Kindle Edition.
 
-[^210618-3]:
+[^210618-3]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix](https://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix)_
     Kindle Locations 821-823. Pottermore Limited. American Kindle Edition.
 
-[^210618-4]:
+[^210618-4]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix](https://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix)_
     Kindle Locations 760,851. Pottermore Limited. American Kindle Edition.
@@ -503,7 +503,7 @@ have read ia number of different ideas about it. See the full article on the
 
 [^210329-19]: Need Citation
 
-[^210329-12]:
+[^210329-12]: 
     [Wikipedia](https://en.wikipedia.org/)
     "[Emancipation of minors](https://en.wikipedia.org/wiki/Emancipation_of_minors)
     Last Updated: 2021-03-27. Last Viewed: 2021-03-29.
@@ -514,7 +514,7 @@ have read ia number of different ideas about it. See the full article on the
 
 [^200731-5]: Mrs. J. K. Rowling. _Harry Potter and the Order of the Phoenix_
 
-[^200731-6]:
+[^200731-6]: 
     Radaslab.
     _[Not Normal](https://www.fanfiction.net/s/7144149)_
     [Fanfiction.net](https://www.fanfiction.net/)
@@ -523,26 +523,26 @@ have read ia number of different ideas about it. See the full article on the
 
 [^200731-7]: Citation needed.
 
-[^210302-1]:
+[^210302-1]: 
     Mrs. J. K. Rowling.
     "[Illness and Disability](https://www.wizardingworld.com/writing-by-jk-rowling/illness-and-disability)"
     Originally published on Pottermore on 2015-08-10. Last Viewed 2021-03-02.
 
-[^210304-5]:
+[^210304-5]: 
     Mrs. J. K. Rowling.
     "[Uagadou](https://www.wizardingworld.com/writing-by-jk-rowling/uagadou)"
     Originally published on Pottermore on 2016-01-30. Last Viewed 2021-03-04.
 
-[^210304-6]:
+[^210304-6]: 
     Mrs. J. K. Rowling.
     "[Uagadou](https://www.wizardingworld.com/writing-by-jk-rowling/uagadou)"
     Originally published on Pottermore on 2016-01-30. Last Viewed 2021-03-04.
 
-[^210302-2]:
+[^210302-2]: 
     Mrs. J. K. Rowling. _Harry Potter and the Chamber of Secrets_
     Pottermore Limited. American Kindle Edition. Approx Location 4405 of 4470.
 
-[^210302-5]:
+[^210302-5]: 
     Sunlesswarmth. _[BrokenProphecy](https://www.fanfiction.net/s/13712386)_
     [Chapter 3](https://www.fanfiction.net/s/13712386/3/Broken-Prophecy)
     Published 2020-10-04. Updated 2020-12-01. Last Viewed 2021-03-02.

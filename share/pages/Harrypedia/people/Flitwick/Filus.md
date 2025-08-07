@@ -1,4 +1,3 @@
-### Analysis
 
 Where I end up reluctantly very critical of [Professor McGonagall][McGonagall],
 there is some slight evidence that suggests that Professor Flitwick is redeemable.
@@ -22,6 +21,6 @@ there is some slight evidence that suggests that Professor Flitwick is redeemabl
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/>
 [Sprout]: /Harrypedia/people/Sprout/Pomona/
 
-[^20210322-3]:
+[^20210322-3]: 
     Aealket.
     _[When Is It a Contract](https://www.fanfiction.net/s/7382549)_ Published 2011-09-14.

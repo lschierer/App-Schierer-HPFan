@@ -109,14 +109,14 @@ long term use.
 [Confundus]: /Harrypedia/magic/spells/confundus/
 [Confundus Charm]: /Harrypedia/magic/spells/confundus/
 
-[^20200716-1]:
+[^20200716-1]: 
     Mrs. J. K. Rowling. _Harry Potter and the Prisoner of Azkaban_
     (pp. 69-70). Pottermore Limited. American Kindle Edition.
 
-[^20200716-2]:
+[^20200716-2]: 
     Mrs. J. K. Rowling. _Harry Potter and the Half-Blood Prince_
     (p. 194). Pottermore Publishing. American Kindle Edition.
 
-[^20200716-3]:
+[^20200716-3]: 
     Mrs. J. K. Rowling. _Harry Potter and the Goblet of Fire_
     (Kindle Locations 3231-3234). Pottermore Limited. American Kindle Edition.

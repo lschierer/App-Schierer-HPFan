@@ -74,12 +74,12 @@ is true, evil has won.
 [Brumous]: https://archiveofourown.org/works/42882966
 [Occlumency]: /Harrypedia/magic/The_Mind_Arts/Occlumency/
 
-[^211020-11]:
+[^211020-11]: 
     [Harry Potter Wiki](https://harrypotter.fandom.com/wiki/)
     "[Phoenix](https://harrypotter.fandom.com/wiki/Phoenix)"
     Last Edited: 2021-10-16. Last Viewed: 2021-10-20.
 
-[^211020-10]:
+[^211020-10]: 
     [Harry Potter Wiki](https://harrypotter.fandom.com/wiki/)
     "[Poltergeist](https://harrypotter.fandom.com/wiki/Poltergeist)"
     Last Edited: 2021-08-18. Last Viewed: 2021-10-20.

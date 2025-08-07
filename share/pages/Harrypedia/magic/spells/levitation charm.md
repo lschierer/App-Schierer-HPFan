@@ -15,8 +15,8 @@ charm
 See also [Wingardium Leviosa], and [Rocket Charm], it seems to in fact be a
 category of spells.
 
-[Rocket Charm]: <../rocket charm/>
-[Wingardium Leviosa]: <../wingardium leviosa/>
+[Rocket Charm]: <rocket charm/>
+[Wingardium Leviosa]: <wingardium leviosa/>
 
 ## Found in
 

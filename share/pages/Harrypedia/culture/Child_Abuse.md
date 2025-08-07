@@ -51,7 +51,7 @@ The obvious exception to this is [Walburga], who from all accounts had no proble
 
 [Harry Potter and the Chamber of Secrets]: https://www.librarything.com/work/683408/
 
-[^240228-3]:
+[^240228-3]: 
     [PepperonyOwl](https://archiveofourown.org/users/PepperonyOwl/pseuds/PepperonyOwl)
     _[There is no escape](https://archiveofourown.org/works/41105757)_
     Published: 2022-08-17. Updated: 2023-03-04.

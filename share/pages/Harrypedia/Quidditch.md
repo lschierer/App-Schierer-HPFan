@@ -33,27 +33,27 @@ that I enjoy action movies only because I know that they are _not_ real, and
 that I would have the moral fibre to resist such temptation were people
 _actually_ hurt, history tells us that many either did not or could not.
 
-[^220628-10]:
+[^220628-10]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Philosopher's Stone](https://www.goodreads.com/book/show/3.Harry_Potter_and_the_Sorcerer_s_Stone)_
     © 1997. Pottermore Publishing. American Kindle Edition page 169.
 
-[^220628-9]:
+[^220628-9]: 
     Mrs. J. K. Rowling.
     "[[Quidditch World Cup 2014: Daily Prophet reports](https://www.rowlingindex.org/work/pmqwcdpr/)"
     Publication Date: 2014-04-12 to 2014-07-11. Last Viewed: 2022-06-28.
 
-[^220628-8]:
+[^220628-8]: 
     Mrs. J. K. Rowling and Kennilworth Whisp.
     _[Quidditch Through the Ages](https://www.goodreads.com/book/show/111450.Quidditch_Through_the_Ages)_
     © 2001. Pottermore Publishing. American Kindle Edition page 52.
 
-[^220628-7]:
+[^220628-7]: 
     Mrs. J. K. Rowling and Kennilworth Whisp.
     _[Quidditch Through the Ages](https://www.goodreads.com/book/show/111450.Quidditch_Through_the_Ages)_
     © 2001. Pottermore Publishing. American Kindle Edition page 44.
 
-[^220628-6]:
+[^220628-6]: 
     - "[Quidditch World Cup (1990 – 2014)](https://www.rowlingindex.org/work/pmq9014/)"
       Publication Date: 2014-03-21, Last Viewed: 2022-06-28.
     - "[Quidditch World Cup 2014: Daily Prophet reports](https://www.rowlingindex.org/work/pmqwcdpr/)"
@@ -128,29 +128,29 @@ the unaided eye, and _aren't_ visible in professional games.[^220713-4]
 Ultimately I think this comes down to Mrs. Rowling's statement that she is
 really bad at maths.[^220713-5]
 
-[^220713-5]:
+[^220713-5]: 
     Mrs. J. K. Rowling.
     "[F.A.Q.](https://therowlinglibrary.com/jkrowling.com/textonly/en/faq.html)"
     Last Viewed: 2022-07-13.
 
-[^220713-4]:
+[^220713-4]: 
     Ms. Natalie Wolchover.
     "[How far can the human eye see?](https://www.livescience.com/33895-human-eye.html)"
     Published: 2012-05-07. Reference the part where it says we can resolve human scale objects at about 2 miles.
 
-[^220713-3]:
+[^220713-3]: 
     gredandforgerock.
     _[Professor Potter](https://www.fanfiction.net/s/6116629)_
     Published: 2010-07-06. Updated: 2011-02-13. Last Viewed: 2022-07-13.
 
-[^220713-2]:
+[^220713-2]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Prisoner of Azkaban][HPPoA1]_
     ® 2000 Pottermore Limited. American Kindle Edition. page 51.
 
 [HPPaA1]: https://www.goodreads.com/book/show/5.Harry_Potter_and_the_Prisoner_of_Azkaban
 
-[^220713-1]:
+[^220713-1]: 
     [The Internaltional Football Association Board](https://www.theifab.com/). "[LAW 1 THE FIELD OF PLAY](https://www.theifab.com/laws/latest/the-field-of-play)"
     ® 2022.
 
@@ -158,12 +158,12 @@ really bad at maths.[^220713-5]
 
 [^220705-2]: InStat Limited. "[MASSIVE RESEARCH OF PENALTIES BY INSTAT](https://web.archive.org/web/20221207053824/https://instatsport.com/football/article/penalty_research)" [InStat](https://web.archive.org/web/20221207055946/http://instatsport.com/). Last Viewed: 2022-07-05.
 
-[^220705-3]:
+[^220705-3]: 
     Sorcerer's Muse. _[Harry-Potter-and-the-Muggle-s-Daughter](https://www.fanfiction.net/s/12273541)_
     [Chapter 13. "Sharpening the Blade"](https://www.fanfiction.net/s/12273541/13/Harry-Potter-and-the-Muggle-s-Daughter)
     Published: 2016-12-14. Updated: 2017-02-02. Last Viewed: 2022-07-05.
 
-[^220705-4]:
+[^220705-4]: 
     old-crow. _[An Inconvenient Truth](https://www.fanfiction.net/s/5084287)_
     [Chapter Seven](https://www.fanfiction.net/s/5084287/7/An-Inconvenient-Truth)
     Published: 2009-05-24. Updated: 2016-06-22. Last Viewed: 2022-07-05.

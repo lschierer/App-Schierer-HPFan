@@ -30,7 +30,7 @@ wizard,[^221019-1] simply because of two known speakers being themselves "dark
 wizards," and despite the admittedly inconclusive evidence that it is normally
 an inherited trait.
 
-[^221019-1]:
+[^221019-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Chamber of Secrets](https://www.librarything.com/work/683408/book/225886342)_
     Bloomsbury Publishing Plc. © 2004. page 199.
@@ -45,7 +45,7 @@ if you can vanish a mammal, you can vanish a human.[^210914-1] A sufficiently
 creative mind can, no doubt, find dozens of other spells from each of charms
 and transfiguration that can be used to kill someone.
 
-[^210914-1]:
+[^210914-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the
     Phoenix](https://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix)_
@@ -66,7 +66,7 @@ understand the difference.
 [Percy]: </Harrypedia/people/Weasley/Percy Ignatius/>
 [A Study of Resonance]: https://archiveofourown.org/works/38041177
 
-[^221122-6]:
+[^221122-6]: 
     mymovingfingerwrites. _[A Study of Resonance][]_
     Published: 2022-03-29. Updated: 20222-11-17.
 

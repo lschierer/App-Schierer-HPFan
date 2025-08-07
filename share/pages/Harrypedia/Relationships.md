@@ -93,7 +93,7 @@ suspect even that would add to the problems here. Either way, the
 depiction _certainly_ destroys anyone attempting to use _[Cursed Child]_
 to create one big happy Weasley-Potter-Malfoy family.
 
-[Shipping]: ../Shipping/
+[Shipping]: Shipping/
 [Astoria]: /Harrypedia/people/Greengrass/Astoria/
 
 [Draco]: </Harrypedia/people/Malfoy/Draco Lucius/>/
@@ -114,10 +114,10 @@ to create one big happy Weasley-Potter-Malfoy family.
 [Luna]: /Harrypedia/people/Lovegood/Luna/
 [Hannah Abbott]: /Harrypedia/people/Abbott/hannah//
 [Rolf Scamander]: /Harrypedia/people/Scamander/Rolf/
-[Quidditch]: ../Quidditch/
+[Quidditch]: Quidditch/
 [Malfoy]: /Harrypedia/people/Malfoy/
 [Hannah]: /Harrypedia/people/Abbott/hannah//
-[Holyhead Harpies]: ../Quidditch/
+[Holyhead Harpies]: Quidditch/
 
 [^AG]: Mrs. J. K. Rowling. "[Draco Malfoy]" 2014-12-22.
 
@@ -147,7 +147,7 @@ to create one big happy Weasley-Potter-Malfoy family.
 
 [^RWJob]: [Leaky Cauldron interview]
 
-[^NLJob]:
+[^NLJob]: 
     Mrs. J. K. Rowling. _[Harry Potter and the Deathly Hallows]_
     Page 311. Bloomsbury Publishing Plc (2011)
 
@@ -175,7 +175,7 @@ to create one big happy Weasley-Potter-Malfoy family.
 [Harry Potter and the Deathly Hallows]: https://www.librarything.com/work/3577382
 [Cursed Child]: https://www.librarything.com/work/23409259
 
-[^240403-1]:
+[^240403-1]: 
     [ERIC S.](https://www.mugglenet.com/author/eric/)
     "[The TRUTH behind the J.K. Rowling “Wonderland” interview](https://www.mugglenet.com/2014/02/the-truth-behind-the-j-k-rowling-wonderland-interview/)"
     [MuggleNet](https://www.mugglenet.com/) Published 2014-02-07. Updated: 2021-05-31. Last Viewed: 2024-04-03.

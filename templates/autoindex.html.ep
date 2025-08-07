@@ -1,0 +1,5 @@
+<%unless(defined $entries) { %>
+  <!-- No files present -->
+  <% return; %>
+<% } %>
+%= include 'partials/directory-list'

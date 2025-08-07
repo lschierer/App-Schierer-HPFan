@@ -36,18 +36,18 @@ many things that make him an incredibly ambiguous figure. It is not a great
 leap to paint him as the Dark Lord of the prophecy, who has marked [Harry],
 not physically, but metaphorically, as the one who could be his equal.[^210521-8]
 
-[Molly]: ../Prewett/Molly/
+[Molly]: Prewett/Molly/
 [Harry]: </Harrypedia/people/Potter/Harry James/>
-[Dumbledore]: <../Dumbledore/Albus Percival Wulfric Brian/>
-[Riddle]: <../Riddle/Tom Marvolo/>
+[Dumbledore]: <Dumbledore/Albus Percival Wulfric Brian/>
+[Riddle]: <Riddle/Tom Marvolo/>
 [Notes]: /Harrypedia/
 
-[^210521-8]:
+[^210521-8]: 
     This idea is not originally mine, but I do not remember which
     fan fictions I have read it in. If I come across them again, I will note
     them here.
 
-[^210521-7]:
+[^210521-7]: 
     Mrs. J. K. Rowling. _Harry Potter and the Order of the Phoenix_
     Citation needed. It is the scene after the Department of Mysteries, in his
     office.

@@ -62,17 +62,17 @@ the magical world?[^211210-1]
 [Star Wars]: https://www.starwars.com/
 [ww]: https://www.wizardingworld.com/
 
-[^211210-1]:
+[^211210-1]: 
     This comes up in other works as well, but reading
     _[Exodus](https://www.fanfiction.net/s/11460241)_ by Nigelcat1 triggered me to
     actually realise the severity of the problem.
 
-[^220715-2]:
+[^220715-2]: 
     Wands are essentially European: Mrs. J. K. Rowling.
     "[Uagadou](https://www.rowlingindex.org/work/pmuag/)"
     Published: 2016-01-31.
 
-[^211018-4]:
+[^211018-4]: 
     Documentation on the way [Star Wars](https://www.starwars.com/) has
     changed over time:
 
@@ -99,22 +99,22 @@ the magical world?[^211210-1]
       re-releases](https://en.wikipedia.org/wiki/Changes_in_Star_Wars_re-releases)"
       Last Edited: 2021-10-16.
 
-[^210228-8]:
+[^210228-8]: 
     Mrs. J. K. Rowling.
     "[The Magical Congress of the United States of America (MACUSA)](https://www.wizardingworld.com/writing-by-jk-rowling/MACUSA/)"
     Originally published on Pottermore; 2016-10-06. © WIZARDING WORLD DIGITAL 2021 https://www.wizardingworld.com/ Last Viewed 2021-02-28.
 
-[^210228-9]:
+[^210228-9]: 
     Mrs. J. K. Rowling.
     "[The Magical Congress of the United States of America (MACUSA)](https://www.wizardingworld.com/writing-by-jk-rowling/MACUSA/)"
     Originally published on Pottermore; 2016-10-06. © WIZARDING WORLD DIGITAL 2021 https://www.wizardingworld.com/ Last Viewed 2021-02-28.
 
-[^210228-10]:
+[^210228-10]: 
     Mrs. J. K. Rowling.
     "[The Magical Congress of the United States of America (MACUSA)](https://www.wizardingworld.com/writing-by-jk-rowling/MACUSA/)"
     Originally published on Pottermore; 2016-10-06. © WIZARDING WORLD DIGITAL 2021 https://www.wizardingworld.com/ Last Viewed 2021-02-28.
 
-[^210228-11]:
+[^210228-11]: 
     © 2020 The Statue of Liberty - Ellis Island Foundation, Inc. All
     Rights Reserved. "[OVERVIEW + HISTORY Ellis Island](https://www.statueofliberty.org/ellis-island/overview-history/)"
     https://www.statueofliberty.org/ Last Viewed 2021-02-28.

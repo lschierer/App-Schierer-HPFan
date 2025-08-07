@@ -168,10 +168,10 @@ profitable patent-able discoveries…
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/>/
 [wwwbrpb]: https://www.wizardingworld.com/writing-by-jk-rowling/pure-blood
 
-[^200701-2]:
+[^200701-2]: 
     Mrs. J. K. Rowling. _Harry Potter and the Order of the Phoenix_
     Kindle Locations 3027-3028. Pottermore Limited. American Kindle Edition.
 
-[^210220-1]:
+[^210220-1]: 
     Mrs. J. K. Rowling. _Harry Potter and the Order of the Phoenix_
     Kindle Location 10438. Pottermore Limited. American Kindle Edition.

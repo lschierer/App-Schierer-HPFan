@@ -14,11 +14,11 @@ Rowling is clearly building off the legend version, placed in the 11th or 12th c
 [Hogwarts]: /Harrypedia/Hogwarts/
 [Slytherin]: /Harrypedia/Hogwarts/Slytherin/
 
-[^230327-1]:
+[^230327-1]: 
     [Britannica], The Editors of Encyclopaedia.
     "[King Arthur](https://www.britannica.com/topic/King-Arthur)". Encyclopedia Britannica, 8 Mar. 2024. Accessed 27 March 2024.
 
-[^240327-2]:
+[^240327-2]: 
     [Britannica], The Editors of Encyclopaedia.
     "[Arthurian legend](https://www.britannica.com/topic/Arthurian-legend)". Encyclopedia Britannica, 7 Mar. 2024. Accessed 27 March 2024.
 

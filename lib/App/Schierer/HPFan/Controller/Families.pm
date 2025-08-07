@@ -183,10 +183,10 @@ package App::Schierer::HPFan::Controller::Families {
       # If they're a foster child to both parents, skip this family
       next if ($father_rel eq 'Foster' && $mother_rel eq 'Foster');
 
-      # Check if non-foster father is in our member list
-      # that assignment test will return falsy if $family->father_ref is undefined
-      # The parentheses around the assignment are important -
-      # without them, the precedence would be wrong
+    # Check if non-foster father is in our member list
+    # that assignment test will return falsy if $family->father_ref is undefined
+    # The parentheses around the assignment are important -
+    # without them, the precedence would be wrong
       if ($father_rel ne 'Foster' && (my $father_ref = $family->father_ref)) {
         if (exists $member_lookup->{$father_ref}) {
           return 1;

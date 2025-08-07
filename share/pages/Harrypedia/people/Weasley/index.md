@@ -76,21 +76,21 @@ birthday is correct, that does not give much space for [Charlie]'s to move.
 [Molly]: /Harrypedia/people/Prewett/Molly/
 [lexicon]: https://www.hp-lexicon.org
 
-[^20210601-3]:
+[^20210601-3]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Prisoner of Azkaban](https://www.goodreads.com/book/show/5.Harry_Potter_and_the_Prisoner_of_Azkaban)_
     Page 248, Kindle Location 3118. Pottermore Limited. American Kindle Edition. © 2000
 
-[^20210601-2]:
+[^20210601-2]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Goblet of Fire](https://www.goodreads.com/book/show/6.Harry_Potter_and_the_Goblet_of_Fire)_
     Kindle Location 9201. Pottermore Limited. American Kindle Edition. © 2003
 
-[^20200629-3]:
+[^20200629-3]: 
     Mrs. J. K. Rowling. _Harry Potter and the Prisoner of Azkaban_.
     (p. 148). Pottermore Limited. American Kindle Edition.
 
-[^20200728-1]:
+[^20200728-1]: 
     Mrs. J. K. Rowling. _Harry Potter and the Sorcerer's Stone_
     (p. 192). Pottermore Limited. American Kindle Edition.
 
@@ -108,7 +108,7 @@ birthday is correct, that does not give much space for [Charlie]'s to move.
 
 [^240101-3]: [Google Harry Potter Third Person Limited Bias](https://www.google.com/search?q=Harry+Potter+Third+Person+Limited+Bias) which has a number of forum based results, but also some interesting articles near the top.
 
-[^240401-4]:
+[^240401-4]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows]_
     better citation needed.

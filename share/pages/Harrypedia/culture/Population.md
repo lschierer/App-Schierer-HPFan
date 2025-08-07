@@ -40,7 +40,7 @@ Of course, I cannot be sure that this is what happened. It makes it hard to give
 
 [Grindelwald]: /Harrypedia/people/Grindelwald/Gellert/
 
-[^240319-6]:
+[^240319-6]: 
     [WolfgangNH]. _[The Ancient Proliferation Covenent]_
     "[Chapter 10: Ginny Starts to Heal](https://archiveofourown.org/works/38270980/chapters/96581148)"
     Published: 2022-04-09. Updated: 2023-03-05.

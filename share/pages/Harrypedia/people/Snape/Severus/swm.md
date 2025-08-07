@@ -38,7 +38,7 @@ it. So I will summarise what we know. From these two books:
 
 [Harry Potter and the Prisoner of Azkaban]: https://www.goodreads.com/book/show/5.Harry_Potter_and_the_Prisoner_of_Azkaban
 
-[^210921-5]:
+[^210921-5]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Prisoner of Azkaban]_
     Page 357. © 2000 Pottermore Limited. American Kindle Edition.
@@ -60,7 +60,7 @@ not willing to give [Snape] a chance, then he would not be there to complain.
 And yet, he is not willing to allow for either in the case of those who have
 wronged him.
 
-[^210921-6]:
+[^210921-6]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Prisoner of Azkaban]_
     p. 391. © 2000 Pottermore Limited. American Kindle Edition.
@@ -139,7 +139,7 @@ wronged him.
 
 [Harry Potter and the Order of the Phoenix]: https://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix
 
-[^210921-8]:
+[^210921-8]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix]_
     Kindle Locations 9426-9519. Pottermore Limited. American Kindle Edition.
@@ -300,17 +300,17 @@ time to paint much the same picture.
 
 [Toxic]: https://www.fanfiction.net/s/12795425/2/Toxic
 
-[^210921-10]:
+[^210921-10]: 
     I was not the first to think of this. Cite others if I refind
     them.
 
-[^210921-3]:
+[^210921-3]: 
     Some have speculated that pensieves rely on time magic. Mrs.
     Rowling, writing on the [Pottermore][RPM1] site, says it relies on not just
     conscious recall, but "every detail stored in the
     subconscious."[^210921-4]
 
-[^210921-4]:
+[^210921-4]: 
     Mrs. J. K. Rowling.
     "[Pensieve](https://www.rowlingindex.org/work/pmpens/)"
     [The J. K. Rowling Index](https://www.rowlingindex.org/)
@@ -319,22 +319,22 @@ time to paint much the same picture.
 [RPM1]: https://www.pottermore.com
 [Harry Potter and the Deathly Hallows]: https://www.librarything.com/work/3577382/book/225886820
 
-[^210921-9]:
+[^210921-9]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows]_
     p. 279. Pottermore Publishing. American Kindle Edition.
 
-[^210921-7]:
+[^210921-7]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows]_
     p. 278. Pottermore Publishing. American Kindle Edition.
 
-[^210921-1]:
+[^210921-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows]_
     pp. 309-310. Pottermore Publishing. American Kindle Edition.
 
-[^210921-2]:
+[^210921-2]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows]_
     pp. 309-310. Pottermore Publishing. American Kindle Edition.
@@ -357,7 +357,7 @@ was a mudblood. This would draw [Snape] deeper and deeper into [Riddle]'s
 atrocities and soul corrupting influence. You simply cannot be around such
 people without their evil rubbing off on you.
 
-[Riddle]: ../../../riddle/tom_marvolo/
+[Riddle]: ../../riddle/tom_marvolo/
 
 People criticising [Lily] are essentially pushing her towards missionary
 dating. It is not _precisely_ the same situation, but it is close enough.
@@ -378,7 +378,7 @@ because you actually like the _actor_ as opposed to the _character_.
 
 [Alan Rickman]: https://en.wikipedia.org/wiki/Alan_Rickman
 
-[^211220-2]:
+[^211220-2]: 
     The practice isn't condemned, you'll find only opinion articles on
     the subject.
 

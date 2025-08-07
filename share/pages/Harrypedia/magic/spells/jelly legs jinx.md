@@ -14,7 +14,7 @@ Jinx
 
 We primarily know that this spell is considered safe enough to use when teaching [Protego][].
 
-[Protego]: ../protego/
+[Protego]: protego/
 
 ## Found in
 

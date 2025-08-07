@@ -35,7 +35,7 @@ Vanish spills, stains, and other messes.
 
 </dl>
 
-[banishing]: ../banishing/
+[banishing]: banishing/
 
 [^221215-1]: This myth is exemplified in:
 

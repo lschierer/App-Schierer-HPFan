@@ -45,22 +45,22 @@ intuitive to Harry once he is told what to do in [Chapter 11][].
 [Harry]: </Harrypedia/people/Potter/Harry James/>
 [Chapter 11]: https://www.fanfiction.net/s/8820097/11/Harry-Potter-Choices
 
-[^220729-1]:
+[^220729-1]: 
     kb0.
     _[Harry Potter: Choices](https://www.fanfiction.net/s/8820097)_
     Published: 2012-12-22. Updated: 2013-04-30. Last Viewed: 2022-07-29.
 
-[^20191119-6]:
+[^20191119-6]: 
     muggledad.
     _[Partners](https://www.fanfiction.net/s/5012016/)_
     [Chapter 8](https://www.fanfiction.net/s/5012016/8/).
     Last Viewed 2025-04-08. Published: 2009-04-22. Updated: 2010-01-31.
 
-[^20191119-7]:
+[^20191119-7]: 
     muggledad.
     _[Partners](https://www.fanfiction.net/s/5012016/)_
     Last Viewed 2025-04-08. Published: 2009-04-22. Updated: 2010-01-31.
 
-[^20191119-8]:
+[^20191119-8]: 
     Mrs. J. K. Rowling. _Harry Potter and the Order of the Phoenix_.
     Better citation needed here.

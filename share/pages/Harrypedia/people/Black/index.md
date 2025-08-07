@@ -66,19 +66,19 @@ different but equally magical mechanism to the same end in [Chapter
 [FWO2]: https://archiveofourown.org/works/28507302/
 [FWOC28-1]: https://archiveofourown.org/works/28507302/chapters/78741424
 
-[^220627-1]:
+[^220627-1]: 
     CmptrWz. _[For Want of an Outfit][FWO2]_
     [Chapter 28](https://archiveofourown.org/works/28507302/chapters/78741424)
     Published: 2021-01-02. Updated: 2022-06-20. Last Viewed: 2022-06-27.
 
-[^210527-1]:
+[^210527-1]: 
     Tigerman. _[RuneMaster](https://www.fanfiction.net/s/5077573)_
     [Chapter 4](https://www.fanfiction.net/s/5077573/4/RuneMaster)
     Published: 2009-05-29. Updated: 2009-12-30. Last Viewed: 2021-05-27.
 
 [RMff1]: https://www.fanfiction.net/s/5077573
 
-[^210122-26]:
+[^210122-26]: 
     Mrs. J. K. Rowling.
     [The Noble and Most Ancient House of Black](https://i.imgur.com/GbPzUmg.jpg)
     last visited 2021-01-22. Also posted

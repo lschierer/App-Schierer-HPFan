@@ -36,11 +36,11 @@ faint means that it is still a frighteningly over-powered creature.
 [non-beings]: /Harrypedia/non-beings/
 [balance of power]: /Harrypedia/balance/
 
-[^211021-11]:
+[^211021-11]: 
     Mrs. J. K. Rowling.
     "[Boggart](https://www.rowlingindex.org/work/pmbog/)"
     Publication Date: 2012-12-20. Last Viewed: 2021-10-21.
 
-[^211021-10]:
+[^211021-10]: 
     [Wikipedia](https://en.wikipedia.org/)
     "https://en.wikipedia.org/wiki/Boggart" Last Edited: 2021-10-04.

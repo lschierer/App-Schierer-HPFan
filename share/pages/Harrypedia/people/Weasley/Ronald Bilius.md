@@ -1,4 +1,3 @@
-### Analysis
 
 When you first read the [Harry] Potter books for the first time, you
 cannot help but like Ron. In retrospect, the fact that when [Harry] tells
@@ -196,41 +195,41 @@ seem to largely stem from a fairly black and white view of the world and
 [Ginny's]: </Harrypedia/people/Weasley/Ginevra Molly/>
 [Lavender]: /Harrypedia/people/Brown/Lavender/
 
-[^240313-1]:
+[^240313-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Goblet of Fire]_
     © 2003 Pottermore Limited. American Kindle Edition
     Better Citation needed
 
-[^220901=1]:
+[^220901=1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Goblet of Fire]_
     © 2003 Pottermore Limited. American Kindle Edition Location 4318.
 
-[^221213-1]:
+[^221213-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Philosopher's Stone](https://www.librarything.com/work/5403381/book/225886281)_
     Pottermore Publishing. American Kindle Edition. page 106
 
-[^20210618-6]:
+[^20210618-6]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince](https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince)_
     p. 145. Pottermore Publishing. American Kindle Edition.
 
-[^20210618-5]:
+[^20210618-5]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince](https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince)_
     p. 86. Pottermore Publishing. American Kindle Edition.
 
-[^20200728-3]:
+[^20200728-3]: 
     Mrs. J. K. Rowling. _[Harry Potter and the Deathly Hallows][DH1]_
     (p. 156). Pottermore Publishing. American Kindle Edition.
 
-[^20200728-2]:
+[^20200728-2]: 
     Mrs. J. K. Rowling. _[Harry Potter and the Sorcerer's Stone][HPSS1]_
     (p. 104). Pottermore Limited. American Kindle Edition.
 
-[^20210504-1]:
+[^20210504-1]: 
     Ron says that the horcrux magnifies and made him focus on things
     he was _already_ thinking. So the image of Harry and Hermione kissing is not
     pure horcrux evil, but rather something the soul shard picked up out of
@@ -240,7 +239,7 @@ seem to largely stem from a fairly black and white view of the world and
 [DH1]: https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows
 [HPSS1]: https://www.goodreads.com/book/show/3.Harry_Potter_and_the_Sorcerer_s_Stone
 
-[^220714-1]:
+[^220714-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows](https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows)_
     © 2007 Pottermore Publishing. American Kindle Edition. page 129.

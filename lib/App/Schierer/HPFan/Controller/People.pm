@@ -49,10 +49,14 @@ package App::Schierer::HPFan::Controller::People {
           $last = $name->primary_surname;
         }
         my $route = sprintf('%s %s/%s %s',
-          $last->prefix ? $last->prefix  : '',
-          $last->value  ? $last->value   : 'Unknown',
-          $name         ? $name->display : $person->id,
-          $name->suffix ? $name->suffix  : '',
+          $last->prefix ? $last->prefix : '',
+          $last->value  ? $last->value  : 'Unknown',
+          $name
+          ? $name->display ne 'Unknown'
+              ? $name->display
+              : $person->id
+          : $person->id,
+          $name->suffix ? $name->suffix : '',
         );
         $route =~ s/^\s+|\s+$//g;
         $route = '/Harrypedia/people/' . $route;

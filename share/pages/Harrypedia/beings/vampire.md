@@ -21,7 +21,7 @@ left of the original person when you change?
 It seems to be implied that vampires may not be beings of pure evil.[^210513-7]
 Is this a true or false impression?
 
-[^210513-7]:
+[^210513-7]: 
     Mrs. J. K. Rowling. _Harry Potter and the Half-Blood Prince_
     Better citation needed.
 
@@ -29,22 +29,22 @@ Is this a true or false impression?
 
 [Dracula]: https://www.gutenberg.org/ebooks/345
 
-[^211115-3]:
+[^211115-3]: 
     [Harry Potter Wiki](https://harrypotter.fandom.com/wiki/)
     "[Vampire](https://harrypotter.fandom.com/wiki/Vampire)"
     Last Edited: 2021-09-17. Last Viewed: 2021-11-15.
 
-[^211115-4]:
+[^211115-4]: 
     [Harry Potter Wiki](https://harrypotter.fandom.com/wiki/)
     "[Vampire](https://harrypotter.fandom.com/wiki/Vampire)"
     Last Edited: 2021-09-17. Last Viewed: 2021-11-15.
 
-[^211115-5]:
+[^211115-5]: 
     [Harry Potter Wiki](https://harrypotter.fandom.com/wiki/)
     "[Vampire](https://harrypotter.fandom.com/wiki/Vampire)"
     Last Edited: 2021-09-17. Last Viewed: 2021-11-15.
 
-[^211115-6]:
+[^211115-6]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Half-Blood Prince_
     p. 263. Pottermore Publishing. American Kindle Edition.

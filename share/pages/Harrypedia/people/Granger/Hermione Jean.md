@@ -1,4 +1,3 @@
-### Analysis
 
 [An old post][The_Half_Blood_Prince] reminds me that it has been so long since
 I first read the Harry Potter books that I cannot really trust my memories of my
@@ -202,7 +201,7 @@ live up to. This would enhance their own insecurity (and Hermione is, in fact, _
 Hermione _is_ a very shallow female in many ways, something we see when
 we look at the the advice she gives to [Ginny] for dealing with a debilitating crush. The boy you like is not paying attention to you? Date some other guys. The cynical part of me hears this as "Make him jealous." While that approach happens to work in this case, [Harry] _does_ get jealous of [Dean], it is not a smart strategy.[^230208-2]
 
-[^230208-2]:
+[^230208-2]: 
     Ms. Davia Sills. "[Inducing Jealousy to Get Your Mate's Attention]"
     _[Psycology Today]_ 2011-11-30. This is essentially written at a
     lay-person, but it has the citations to back it up. From my perspective a
@@ -318,7 +317,7 @@ necessarily world or relationship ending consequences, but she does have to be
 called to account. When she is heartless, she has to face that she's hurt
 someone. When she's wrong, it has to be pointed out.
 
-[^221214-1]:
+[^221214-1]: 
     The author doesn't come out and say it, but old-crow suggests that
     Hermione may have contributed to the problems she faced in Primary school
     in _[Dan Granger]_. Two wrongs do not make a right, but as an adult
@@ -345,14 +344,14 @@ year, though it is anyone's guess which specific event would be one too many.
 [Hogwarts]: /Harrypedia/Hogwarts/
 [Confundus]: /Harrypedia/magic/spells/confundus/
 
-[^210818-3]:
+[^210818-3]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince](https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince)_
     Pottermore Publishing. American Kindle Edition. I do not have a specific
     page, but I doubt [Dumbledore] expected Malfoy to
     successfully bring Death Eaters into Hogwarts.
 
-[^210818-2]:
+[^210818-2]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Chamber of Secrets](https://www.goodreads.com/book/show/15881.Harry_Potter_and_the_Chamber_of_Secrets)_
     Pottermore Limited. American Kindle Edition. page citation needed.
@@ -362,7 +361,7 @@ year, though it is anyone's guess which specific event would be one too many.
     - kb0. _[Harry Potter: Air Elemental](https://www.fanfiction.net/s/11995519)_
       Pubished: 2016-06-12. Updated: 2016-10-29.
 
-[^200707-1]:
+[^200707-1]: 
     Yanna N.
     "[Veelas – What Exactly Are The Slavic Seductresses From Harry Potter?](https://www.slavorum.org/veelas-what-exactly-are-the-slavic-seductresses-from-harry-potter/)"
     [The Official Slavorum](https://www.slavorum.org/) Last Viewed 2020-07-07.
@@ -371,39 +370,39 @@ year, though it is anyone's guess which specific event would be one too many.
 
 [Samodiva]: https://en.wikipedia.org/wiki/Samodiva_(folklore)
 
-[^210324-2]:
+[^210324-2]: 
     HarnGin.
     _[HJG: The Smartest Witch of Her Age?](https://www.fanfiction.net/s/5858832)_
     Published: 2010-03-31. Last Viewed: 2021-03-24.
 
-[^200706-4]:
+[^200706-4]: 
     Ms. Vivian Onim. "[Why is Hermione never portrayed as wrong in
     the Harry Potter books? Practically everything she does is praised, and her
     flaws seem to lessen with each book until she’s basically perfect by the end,
     why is this?](https://www.quora.com/Why-is-Hermione-never-portrayed-as-wrong-in-the-Harry-Potter-books-Practically-everything-she-does-is-praised-and-her-flaws-seem-to-lessen-with-each-book-until-she-s-basically-perfect-by-the-end-why-is-this)"
     [Quora](https://www.quora.com/) 2018-08-08. Last Viewed 2020-07-06.
 
-[^200706-3]:
+[^200706-3]: 
     Ms. Vivian Onim. "[Why is Hermione never portrayed as wrong in
     the Harry Potter books? Practically everything she does is praised, and her
     flaws seem to lessen with each book until she’s basically perfect by the end,
     why is this?](https://www.quora.com/Why-is-Hermione-never-portrayed-as-wrong-in-the-Harry-Potter-books-Practically-everything-she-does-is-praised-and-her-flaws-seem-to-lessen-with-each-book-until-she-s-basically-perfect-by-the-end-why-is-this)"
     [Quora](https://www.quora.com/) 2018-08-08. Last Viewed 2020-07-06.
 
-[^240101-1]:
+[^240101-1]: 
     I actually do not think she _was_ right, why could her parents not
     have been protected the way the [Dursleys] were?
 
 [Dursleys]: /Harrypedia/people/Dursley/
 
-[^240101-2]:
+[^240101-2]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince]_
     Pottermore Limited. American Kindle Edition. page citation needed.
 
 [Harry Potter and the Half-Blood Prince]: https://www.librarything.com/work/1133624
 
-[^240417-3]:
+[^240417-3]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince]_
     Pottermore Limited. American Kindle Edition. page citation needed.

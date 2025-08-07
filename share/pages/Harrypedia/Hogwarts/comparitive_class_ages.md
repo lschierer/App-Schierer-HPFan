@@ -25,7 +25,7 @@ are in those grades. This should help with that.
 | Year 12, lower Sixth Form | 11th Grade   | 16-17     | AS-level examinations                                                                                                       |
 | Year 13, upper Sixth Form | 12 Grade     | 17-18     | A2-level examinations, both AS-levels and A2-levels count towards A-levels.                                                 |
 
-[^20210830-1]:
+[^20210830-1]: 
     "[THE BRITISH EDUCATION SYSTEM][TBES]" © Copyright The Learn
     English Network - All Rights Reserved, last viewed 2021-08-30
 

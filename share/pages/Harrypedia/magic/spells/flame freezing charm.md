@@ -14,7 +14,7 @@ Charm
 
 Referenced in the description of [Incendio][].
 
-[Incendio]: ../incendio/
+[Incendio]: incendio/
 
 ## Found in
 

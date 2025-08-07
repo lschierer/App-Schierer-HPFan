@@ -27,14 +27,14 @@ In her interviews, Mrs. Rowling says that she _intends_ that prophecy does not n
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/>/
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>/
 
-[^240417-1]:
+[^240417-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix]_
     better citation needed.
 
 [Harry Potter and the Order of the Phoenix]: https://www.librarything.com/work/115
 
-[^240417-2]:
+[^240417-2]: 
     Mrs. J. K. Rowling.
     "[The Leaky Cauldron and Mugglenet interview Joanne Kathleen Rowling: Part Three](http://www.accio-quote.org/articles/2005/0705-tlc_mugglenet-anelli-3.htm)" [The Leaky Cauldron](https://www.the-leaky-cauldron.org/) as archived on [Accio Quote](http://www.accio-quote.org/), 2005-07-16.
 

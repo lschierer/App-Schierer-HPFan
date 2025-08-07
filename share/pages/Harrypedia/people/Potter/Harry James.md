@@ -1,6 +1,5 @@
-### Analysis
 
-#### Effects of abuse
+### Effects of abuse
 
 See the [Dursleys] for some discussion on just how much and in what ways
 Harry is abused. That he is abused to at least some extent is pretty
@@ -24,11 +23,11 @@ perhaps Harry is simply really really good at hiding his reactions.[^200527-1]
 
 [Ginny]: </Harrypedia/people/Weasley/Ginevra Molly/>
 
-[^200527-1]:
+[^200527-1]: 
     ivybelle. _[Don't Touch Me](https://archiveofourown.org/works/702684)_,
     [Archive of Our Own](https://archiveofourown.org/) last viewed 2020-05-27.
 
-#### Slytherin?
+### Slytherin?
 
 The sorting is increasingly a sore point for me. A huge body of fan fiction
 authors want to put Harry in Slytherin. I know why - they are listening to the
@@ -82,14 +81,14 @@ we see in the books would make a _really really poor_ Slytherin, a fairly good
 Hufflepuff, and an uncertain Ravenclaw (depending on how much he would have been
 willing to use that "not a bad mind" mentioned above away from Ron's influence).
 
-[^200731-3]:
+[^200731-3]: 
     Mrs. J. K. Rowling et al.
     "[Anelli, Melissa, John Noe and Sue Upton.
     "PotterCast Interviews J.K. Rowling, part one." PotterCast #130, 17
     December 2007.](http://www.accio-quote.org/articles/2007/1217-pottercast-anelli.html)"
     [Accio-Quote](http://www.accio-quote.org/) Last viewed 2020-07-31.
 
-[^200602-1]:
+[^200602-1]: 
     Mrs. J. K. Rowling. _Harry Potter and the Philosopher's Stone_
     Location 1527 of 3996.
 
@@ -134,12 +133,12 @@ he so profoundly self-isolates that he doesn't even learn the names of his
 classmates. He is not really a _classmate_ to them, and so they in turn do not
 settle into distinct individuals in _his_ mind either.
 
-[^221130-2]:
+[^221130-2]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Philosopher's Stone](https://www.librarything.com/work/5403381/book/225886281)_
     Bloomsbury Pub Ltd (2004). page 131.
 
-[^221130-1]:
+[^221130-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix](https://www.librarything.com/work/115/book/225886709)_
     Bloomsbury UK (2003), Kindle Locations 4953-4954,5010-5014.
@@ -195,34 +194,34 @@ in the cupboard. Since both are speculation, we do not know which.
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>
 [SS1]: /Harrypedia/people/Snape/Severus/
 
-[^221024-4]:
+[^221024-4]: 
     The research on this is somewhat mixed, and it would take more
     work than I have time for to weed out infantile starvation versus adolescent
     starvation versus starvation during puberty, and yes the difference clearly
     matters. See the results at
     https://scholar.google.com/scholar?q=effects+of+childhood+starvation+on+height&hl=en&as_sdt=0&as_vis=1&oi=scholart
 
-[^221024-6]:
+[^221024-6]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows](https://www.librarything.com/work/3577382/book/225886820)_
     page 116. Pottermore Limited. American Kindle Edition.
 
-[^221024-5]:
+[^221024-5]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows](https://www.librarything.com/work/3577382/book/225886820)_
     page 17. Pottermore Limited. American Kindle Edition.
 
-[^221024-3]:
+[^221024-3]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix](https://www.librarything.com/work/115/book/225886709)_
     Kindle Locations 9410-9411 . Pottermore Limited. American Kindle Edition.
 
-[^221024-2]:
+[^221024-2]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Goblet of Fire](https://www.librarything.com/work/113/book/203684953)_
     Kindle Location 9936. Pottermore Limited. American Kindle Edition.
 
-[^221024-1]:
+[^221024-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Goblet of Fire](https://www.librarything.com/work/113/book/203684953)_
     Kindle Locations 11016-11017. Pottermore Limited. American Kindle Edition.
@@ -231,7 +230,7 @@ in the cupboard. Since both are speculation, we do not know which.
 
 [^200710-2]: Mrs. J. K. Rowling. _Harry Potter and the Sorcerer's Stone_ p. 208. Pottermore Limited. American Kindle Edition.
 
-[^200710-3]:
+[^200710-3]: 
     Tom Kristal.
     _[Prongs Final Prank](https://www.fanfiction.net/s/4279550/1/Prongs-Final-Prank)_
     [FanFiction by FictionPress](https://www.fanfiction.net/) Published 2008-03-26.

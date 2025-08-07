@@ -27,11 +27,11 @@ Sure there are counter examples to this, where he over rides her, but the
 relationship is either surprisingly balanced, or even more surprisingly tilted in
 her direction.
 
-[^210422-2]:
+[^210422-2]: 
     Mrs. J. K. Rowling. _Harry Potter and the Order of the Phoenix_.
     Better citation needed.
 
-[^210422-1]:
+[^210422-1]: 
     Mrs. J. K. Rowling. _Harry Potter and the Sorcerer's Stone_.
     Better citation needed.
 

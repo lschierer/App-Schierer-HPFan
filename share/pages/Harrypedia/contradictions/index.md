@@ -16,4 +16,4 @@ illogic.[^230125-1]
 
 [^230125-1]: I realise that not all examples of illogic are contradictions, but for ease of use, I am lumping the two together.
 
-[Introduction]: ../../
+[Introduction]: ../

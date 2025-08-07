@@ -28,7 +28,7 @@ Did [Slughorn], who certainly did not intend to damage himself, purposefully
 only incompletely transfigure himself? Or is Sovran's theory of sensory
 deprivation entirely uncanonical, despite its logical soundness?
 
-[^221220-3]:
+[^221220-3]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince]_
     Pottermore Publishing. American Kindle Edition. page 53.

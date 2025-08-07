@@ -27,7 +27,7 @@ causes them no problems in the wild.
 
 They are described as [non-beings][] but have bodies that can hold onto you.
 
-[non-beings]: ../../
+[non-beings]: ../
 
 ### Imponderables
 
@@ -46,45 +46,45 @@ satisfactorily explain.
 
 [Patronus]: /Harrypedia/magic/spells/patronus/
 
-[^211021-9]:
+[^211021-9]: 
     [Harry Potter Wiki](https://harrypotter.fandom.com/wiki)
     "[Dementor](https://harrypotter.fandom.com/wiki/Dementor)"
     Last Edited: 2021-10-12. Last Viewed: 2021-10-21.
 
-[^211021-8]:
+[^211021-8]: 
     [Harry Potter Wiki](https://harrypotter.fandom.com/wiki)
     "[Dementor](https://harrypotter.fandom.com/wiki/Dementor)"
     Last Edited: 2021-10-12. Last Viewed: 2021-10-21.
 
-[^211021-7]:
+[^211021-7]: 
     [Harry Potter Wiki](https://harrypotter.fandom.com/wiki)
     "[Dementor](https://harrypotter.fandom.com/wiki/Dementor)"
     Last Edited: 2021-10-12. Last Viewed: 2021-10-21.
 
 [^211020-6]: Find works that used this theory.
 
-[^211021-5]:
+[^211021-5]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Prisoner of Azkaban](https://www.goodreads.com/book/show/5.Harry_Potter_and_the_Prisoner_of_Azkaban)_
     p. 187. © 2000 Pottermore Limited. American Kindle Edition.
 
-[^211021-4]:
+[^211021-4]: 
     Mrs. J. K. Rowling.
     "[Harry Potter author fields questions from junior journalists in
     Vancouver](http://www.accio-quote.org/articles/2000/1000-canadianpress-moore.htm)"
     [Accio Quote](http://www.accio-quote.org) 2000-10-25.
 
-[^211021-3]:
+[^211021-3]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince](https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince)_
     p. 12. © 2005 Pottermore Publishing. Kindle Edition.
 
-[^211021-2]:
+[^211021-2]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows](https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows)_
     p. 106. © 2007 Pottermore Publishing. American Kindle Edition.
 
-[^211021-1]:
+[^211021-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Goblet of Fire](https://www.goodreads.com/book/show/6.Harry_Potter_and_the_Goblet_of_Fire)_
     Kindle Location 10443. © 2003 Pottermore Limited. American Kindle Edition.

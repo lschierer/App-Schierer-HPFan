@@ -93,7 +93,7 @@ things that go differently from the books.
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/>
 [Snape]: /Harrypedia/people/Snape/Severus/
 
-[^240415-1]:
+[^240415-1]: 
     [Jeconais].
     _[This Means War]_.
     "[10c - Werewolves, Goblins and Dragons, Oh My! (Part 3 of 3)](https://jeconais.fanficauthors.net/This_Means_War/10c__Werewolves_Goblins_and_Dragons_Oh_My_Part_3_of_3/)"

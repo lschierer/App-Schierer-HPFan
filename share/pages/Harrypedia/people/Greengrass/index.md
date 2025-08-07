@@ -31,7 +31,7 @@ canonical, he did get himself in trouble violating the Statute of Secrecy.
 
 [^200520-1]: [TIME](http://time.com) (unknown author). "Rowling Answers 10 Questions About Harry" published 2007-12-19. Last viewed 2020-05-20. http://content.time.com/time/specials/2007/printout/0,29239,1690753_1695388_1695569,00.html
 
-[^200701-1]:
+[^200701-1]: 
     Mrs. J. K. Rowling.
     "[Draco Malfoy](https://www.wizardingworld.com/writing-by-jk-rowling/draco-malfoy)"
     https://www.wizardingworld.com/ Last Viewed 2020-07-1.

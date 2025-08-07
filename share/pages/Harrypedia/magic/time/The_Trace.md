@@ -25,7 +25,7 @@ Things we know:
   _could_ be put back on, if it is merely _illegal_ to do so, or if it is
   _impossible_ to do so.
 
-[^221123-1]:
+[^221123-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows](https://www.librarything.com/work/3577382/book/225886820)_
     Bloomsbury Publishing Plc (2011). page 56.
@@ -72,27 +72,27 @@ more for muggle born witches and wizards rather than any real restriction. See
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean/>
 [Culture]: /Harrypedia/culture/
 
-[^210810-4]:
+[^210810-4]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince](https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince)_
     page 307. © 2005. American Kindle Edition.
 
-[^210618-1]:
+[^210618-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Chamber of Secrets](https://www.goodreads.com/book/show/15881.Harry_Potter_and_the_Chamber_of_Secrets)_
     p. 42. Pottermore Limited. American Kindle Edition.
 
-[^210618-2]:
+[^210618-2]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Chamber of Secrets](https://www.goodreads.com/book/show/15881.Harry_Potter_and_the_Chamber_of_Secrets)_
     p. 20. Pottermore Limited. American Kindle Edition.
 
-[^210618-3]:
+[^210618-3]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix](https://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix)_
     Kindle Locations 821-823. Pottermore Limited. American Kindle Edition.
 
-[^210618-4]:
+[^210618-4]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix](https://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix)_
     Kindle Locations 760,851. Pottermore Limited. American Kindle Edition.
@@ -113,7 +113,7 @@ more for muggle born witches and wizards rather than any real restriction. See
 
 [^210329-19]: Need Citation
 
-[^210329-12]:
+[^210329-12]: 
     [Wikipedia](https://en.wikipedia.org/)
     "[Emancipation of minors](https://en.wikipedia.org/wiki/Emancipation_of_minors)
     Last Updated: 2021-03-27. Last Viewed: 2021-03-29.
@@ -124,7 +124,7 @@ more for muggle born witches and wizards rather than any real restriction. See
 
 [^200731-5]: Mrs. J. K. Rowling. _Harry Potter and the Order of the Phoenix_
 
-[^200731-6]:
+[^200731-6]: 
     Radaslab.
     _[Not Normal](https://www.fanfiction.net/s/7144149)_
     [Fanfiction.net](https://www.fanfiction.net/)
@@ -133,26 +133,26 @@ more for muggle born witches and wizards rather than any real restriction. See
 
 [^200731-7]: Citation needed.
 
-[^210302-1]:
+[^210302-1]: 
     Mrs. J. K. Rowling.
     "[Illness and Disability](https://www.wizardingworld.com/writing-by-jk-rowling/illness-and-disability)"
     Originally published on Pottermore on 2015-08-10. Last Viewed 2021-03-02.
 
-[^210304-5]:
+[^210304-5]: 
     Mrs. J. K. Rowling.
     "[Uagadou](https://www.wizardingworld.com/writing-by-jk-rowling/uagadou)"
     Originally published on Pottermore on 2016-01-30. Last Viewed 2021-03-04.
 
-[^210304-6]:
+[^210304-6]: 
     Mrs. J. K. Rowling.
     "[Uagadou](https://www.wizardingworld.com/writing-by-jk-rowling/uagadou)"
     Originally published on Pottermore on 2016-01-30. Last Viewed 2021-03-04.
 
-[^210302-2]:
+[^210302-2]: 
     Mrs. J. K. Rowling. _Harry Potter and the Chamber of Secrets_
     Pottermore Limited. American Kindle Edition. Approx Location 4405 of 4470.
 
-[^210302-5]:
+[^210302-5]: 
     Sunlesswarmth. _[BrokenProphecy](https://www.fanfiction.net/s/13712386)_
     [Chapter 3](https://www.fanfiction.net/s/13712386/3/Broken-Prophecy)
     Published 2020-10-04. Updated 2020-12-01. Last Viewed 2021-03-02.

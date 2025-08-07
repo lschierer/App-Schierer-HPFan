@@ -9,7 +9,7 @@ title: Hufflepuff
   - true
   - unafraid of toil
 
-[^221221-3]:
+[^221221-3]: 
     Mrs. J. K. Rowling. _[Harry Potter and the Philosopher's Stone][]_
     Pottermore Limited. American Kindle Edition. Page 118.
 

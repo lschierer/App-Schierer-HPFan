@@ -4,13 +4,12 @@
 - [Arcturus][], [Pollux][], and [Walburga][] Black were all alive when Sirius was sent to
   Azkaban without a trial.[^210517-2]
 
-[^210517-1]:
+[^210517-1]: 
     Mrs. J. K. Rowling. _Harry Potter and the Prisoner of Azkaban_
     p. 212. © 2000 Pottermore Limited. American Kindle Edition.
 
 [^210517-2]: See my notes on the [History][] page.
 
-### Analysis
 
 ## Speculation
 
@@ -106,23 +105,23 @@ A second possibility:
 
 [Messing With Time]: https://archiveofourown.org/works/19334905
 
-[^210630-4]:
+[^210630-4]: 
     VonPelt.
     _[No Longer Alone](https://www.fanfiction.net/s/12745758)_
     [Chapter 3](https://www.fanfiction.net/s/12745758/3/No-Longer-Alone)
     Published: 2017-12-02. Updated: 2020-12-24. Last Viewed: 2021-06-30.
 
-[^210630-3]:
+[^210630-3]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Prisoner of Azkaban](https://www.goodreads.com/book/show/5.Harry_Potter_and_the_Prisoner_of_Azkaban)_
     p. 372. Pottermore Limited. American Kindle Edition.
 
-[^210630-2]:
+[^210630-2]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Prisoner of Azkaban](https://www.goodreads.com/book/show/5.Harry_Potter_and_the_Prisoner_of_Azkaban)_
     p. 371. Pottermore Limited. American Kindle Edition.
 
-[^210630-1]:
+[^210630-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Prisoner of Azkaban](https://www.goodreads.com/book/show/5.Harry_Potter_and_the_Prisoner_of_Azkaban)_
     p. 188. Pottermore Limited. American Kindle Edition.
@@ -192,12 +191,12 @@ that could mean before his curse _landed_ rather than before it was _cast_.
 
 [^210517-3]: See my notes on the [History][] page.
 
-[^221202-5]:
+[^221202-5]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Prisoner of Azkaban](https://www.librarything.com/work/2742161/book/225886376)_
     Bloomsbury Press (2004). page 363.
 
-[^221202-4]:
+[^221202-4]: 
     This line of reasoning from comes from "[Abandoning Ship][]" by
     Red Hen Publications. I am not sure how much I am convinced by it, but it
     does have a certain persuasiveness.
@@ -205,12 +204,12 @@ that could mean before his curse _landed_ rather than before it was _cast_.
 [Abandoning Ship]: https://www.redhen-publications.com/abandoning.html
 [History]: /Harrypedia/History/
 
-[^210517-4]:
+[^210517-4]: 
     Some writers have speculated that long term exposure to dementors
     would affect virility, fertility, or both. I am unaware of any cannon
     reason to believe this.
 
-[^210517-5]:
+[^210517-5]: 
     Mrs. J. K. Rowling. _Harry Potter and the Deathly Hallows_
     better citation needed.
 
@@ -227,7 +226,7 @@ of Azkaban][].
 
 [effects of Azkaban]: #effects-of-azkaban
 
-[^210519-11]:
+[^210519-11]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Order of the Phoenix_ Kindle Locations 9822-9830 of 13038.
     Pottermore Limited © 2005. American Kindle Edition.

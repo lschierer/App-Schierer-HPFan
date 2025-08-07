@@ -23,7 +23,7 @@ One thing is abundantly clear, and this quote says it perfectly.
 > become subservient. Magic makes you more, but you need to know what
 > you are, especially if you want to become something specific.[^231006-1]
 
-[^231006-1]:
+[^231006-1]: 
     [TheBeardedOne](https://archiveofourown.org/users/TheBeardedOne/pseuds/TheBeardedOne)
     _[Little Whinging Pet Shop]_ Published:2020-11-22 Updated:2022-06-14
     "[Chapter 28: Changed Fate (Part 2)](https://archiveofourown.org/works/27669059/chapters/99237300)"

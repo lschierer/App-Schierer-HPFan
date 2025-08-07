@@ -69,7 +69,7 @@ the staff reinvents it each year. In such a case, with only one student
 interested, they may have … neglected to schedule some time slots.
 It is a viable argument, but ridiculous.
 
-[^20200706-1]:
+[^20200706-1]: 
     I know Fay Dunbar is the prototypical name for a Gryffindor
     girl. See my [Notes] on [Hogwarts] for why I am using these names.
     I pretty much have to pick between using a video game
@@ -119,31 +119,31 @@ to fight.
 [Harry]: </Harrypedia/people/Potter/Harry James/>/
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean/>/
 [Ron]: </Harrypedia/people/Weasley/Ronald Bilius/>/
-[Hogwarts]: ../
-[Notes]: ../../
+[Hogwarts]: ./
+[Notes]: ../
 
-[^20200629-5]:
+[^20200629-5]: 
     Mrs. J. K. Rowling. _Harry Potter and the Prisoner
     of Azkaban_ (p. 323). Pottermore Limited. American Kindle Edition.
 
-[^20200629-6]:
+[^20200629-6]: 
     Mrs. J. K. Rowling. _Harry Potter and the Prisoner
     of Azkaban_ (pp. 101-102). Pottermore Limited. American Kindle
     Edition.
 
-[^20200629-1]:
+[^20200629-1]: 
     ChokolatteJedi.
     _[Meta about Hogwarts Class
     Schedule](https://archiveofourown.org/works/17908985?view_full_work=true)_
     https://archiveofourown.org/ Last Viewed 2020-06-29
 
-[^20210315-1]:
+[^20210315-1]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Chamber of Secrets_
     p. 46; Location 607 of 4470. Pottermore Limited. American
     Kindle Edition.
 
-[^20210315-2]:
+[^20210315-2]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Half-Blood Prince_
     Pottermore Limited. American Kindle Edition. Exact

@@ -39,7 +39,7 @@ becomes a red giant.[^211020-9] The point is that it is unacceptable that
 something that _increases_ in numbers cannot and does not also _decrease_
 in numbers.
 
-[^211020-9]:
+[^211020-9]: 
     Mr. Eric Betz.
     "[What will happen to the planets when the Sun becomes a red
     giant?](https://astronomy.com/magazine/ask-astro/2020/09/what-will-happen-to-the-planets-when-the-sun-becomes-a-red-giant)"

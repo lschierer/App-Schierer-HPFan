@@ -7,12 +7,11 @@
 [ukglc]: https://www.gov.uk/running-a-limited-company
 [PD]: /Harrypedia/people/Evans/Petunia/
 
-[^220927-1]:
+[^220927-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Sorcerer's Stone](https://www.librarything.com/work/5403381/book/225886281)_
     © 2004 Pottermore Limited. American Kindle Edition. page 1.
 
-### Analysis
 
 ### Speculation
 
@@ -27,17 +26,17 @@ admits that the house she describes is mentally modeled off "a rather small
 three bedroomed house … near Bristol."[^220927-4] This is hardly the picture
 of the company director who has everything he wants.
 
-[^220927-2]:
+[^220927-2]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Sorcerer's Stone](https://www.librarything.com/work/5403381/book/225886281)_
     © 2004 Pottermore Limited. American Kindle Edition. page 1.
 
-[^220927-3]:
+[^220927-3]: 
     Mrs. J. K. Rowling.
     "[Number Four, Privet Drive](https://www.rowlingindex.org/work/pdpm/)"
     [The J. K. Rowling Index](https://www.rowlingindex.org). 2011-08-15.
 
-[^220927-4]:
+[^220927-4]: 
     Mrs. J. K. Rowling.
     "[Number Four, Privet Drive](https://www.rowlingindex.org/work/pdpm/)"
     [The J. K. Rowling Index](https://www.rowlingindex.org). 2011-08-15.

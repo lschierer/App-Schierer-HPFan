@@ -1,4 +1,3 @@
-### Analysis
 
 There are two possible Percy Weasleys, and unfortunately we do not have the
 data to know which is the real one.

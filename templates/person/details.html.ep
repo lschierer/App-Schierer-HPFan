@@ -123,5 +123,6 @@
 </div>
 <hr role="separator" class="spectrum-Divider spectrum-Divider--sizeM" />
 <% if($staticContent) { %>
+  <h2 class="spectrum-Heading spectrum-Heading--serif spectrum-Heading--heavy spectrum-Heading--sizeXL">Analysis</h2>
   <%== $staticContent %>
 <% } %>

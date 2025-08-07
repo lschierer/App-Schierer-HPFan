@@ -1,4 +1,3 @@
-### Analysis
 
 Draco is a coward, a bully, and a very conflicted young man. Over the course of
 the last two books, he is essentially forced to face the fact that a world under
@@ -71,12 +70,12 @@ back.
 [Tied Together By A Red Ribbon]: https://www.fanfiction.net/s/5998296
 [A Re-Telling]: https://archiveofourown.org/works/4619982
 
-[^211025-3]:
+[^211025-3]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows][HPDH]_
     p. 259. Pottermore Publishing. American Kindle Edition.
 
-[^211025-2]:
+[^211025-2]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows][HPDH]_
     p. 189. Pottermore Publishing. American Kindle Edition.

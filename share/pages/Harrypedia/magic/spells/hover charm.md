@@ -13,7 +13,7 @@ Charm
 
 A variation of [Wingardium Leviosa][].
 
-[Wingardium Leviosa]: <../wingardium leviosa/>
+[Wingardium Leviosa]: <wingardium leviosa/>
 
 ## Found in
 

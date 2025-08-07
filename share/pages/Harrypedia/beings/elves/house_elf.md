@@ -40,7 +40,7 @@ harder because the _curse_ in question is lost and unrecorded by history.[^24021
 
     - [Moe64]. _[What We Do Today]_ Published: 2022-10-10. Updated: 2024-02-12.
 
-[^240219-2]:
+[^240219-2]: 
     In one extra-cannonical source she states House Elves live on
     average 200 years, while [Kreacher] is said (by her) to have lived
     over 600.

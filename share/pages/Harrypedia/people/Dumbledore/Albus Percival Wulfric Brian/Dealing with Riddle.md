@@ -118,30 +118,30 @@ hunt them down. Why, knowing that he will die, he entrusts the knowledge to
 [Hermione] and [Ron] who can help little, but not in [Lupin], [Kingsley], or
 [Moody] who might have truly helped.
 
-[^20210927-14]:
+[^20210927-14]: 
     Mrs. J. K. Rowling.
     "[F.A.Q.: About the Books](https://www.rowlingindex.org/work/faq1web/)"
     [The J.K. Rowling Index](https://www.rowlingindex.org/)
     Publication Date: 2004-05-15 to 2007-12-21. Last Viewed: 2021-09-27.
 
-[^20210927-15]:
+[^20210927-15]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince]_
     pp. 423-424. © 2005 Pottermore Publishing. American Kindle Edition.
 
 [Harry Potter and the Half-Blood Prince]: https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince
 
-[^20210927-13]:
+[^20210927-13]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince]_
     p. 425. © 2005 Pottermore Publishing. American Kindle Edition.
 
-[^20210927-12]:
+[^20210927-12]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince]_
     p. 369. © 2005 Pottermore Publishing. American Kindle Edition.
 
-[^20210927-11]:
+[^20210927-11]: 
     old-crow.
     _[An Inconvenient Truth](https://www.fanfiction.net/s/5084287)_
     [Chapter 9](https://www.fanfiction.net/s/5084287/9/An-Inconvenient-Truth)
@@ -151,24 +151,24 @@ hunt them down. Why, knowing that he will die, he entrusts the knowledge to
 
 [^20210927-10]: citation needed.
 
-[^20210927-9]:
+[^20210927-9]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Chamber of Secrets]_
     p. 312. © 1999 Pottermore Limited. American Kindle Edition.
 
 [Harry Potter and the Chamber of Secrets]: https://www.goodreads.com/book/show/15881.Harry_Potter_and_the_Chamber_of_Secrets
 
-[^20210927-8]:
+[^20210927-8]: 
     [Harry Potter Wiki](https://harrypotter.fandom.com).
     "[Myrtle Warren](https://harrypotter.fandom.com/wiki/Myrtle_Warren)"
     Last Edited: 2021-08-05. Last Viewed: 2021-09.27.
 
-[^20210927-7]:
+[^20210927-7]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince]_
     p. 301. © 2005 Pottermore Publishing. American Kindle Edition.
 
-[^20210927-5]:
+[^20210927-5]: 
     [Harry Potter Wiki](https://harrypotter.fandom.com).
     "[Tom Riddle](https://harrypotter.fandom.com/wiki/Tom_Riddle)"
     Last Edited: 2021-09-22. Last Viewed: 2021-09-27.

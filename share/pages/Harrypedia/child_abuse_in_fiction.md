@@ -20,13 +20,13 @@ And that's important to remember. This is a work of fiction, and nothing can ult
 [Kim]: https://www.gutenberg.org/ebooks/2226
 [Oliver Twist]: https://www.gutenberg.org/ebooks/730
 
-[^240319-1]:
+[^240319-1]: 
     [A.S. Akkalon](https://www.asakkalon.com/author/iamalecia/)
     "[The problem with Harry Potter and why it doesn’t matter](https://www.asakkalon.com/problem-with-harry-potter/)"
     _[A.S. Akkalon – Fantasy Author](https://www.asakkalon.com/)_
     2023-08-23
 
-[^240319-2]:
+[^240319-2]: 
     [A.S. Akkalon](https://www.asakkalon.com/author/iamalecia/)
     "[The problem with Harry Potter and why it doesn’t matter](https://www.asakkalon.com/problem-with-harry-potter/)"
     _[A.S. Akkalon – Fantasy Author](https://www.asakkalon.com/)_

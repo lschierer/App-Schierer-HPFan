@@ -1,6 +1,5 @@
-### Analysis
 
-## Overview
+### Overview
 
 Mrs. Rowling has not given us a ton of information on Molly, especially
 considering how central she is to the books in general and to the Weasley
@@ -88,12 +87,12 @@ On the other hand, it is easy to be over sensitive.
 [Red Hen Publications]: https://www.redhen-publications.com/
 [RHPMolly]: https://www.redhen-publications.com/molly.html
 
-[^221202-1]:
+[^221202-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix](https://www.librarything.com/work/115/book/225886709)_
     Bloomsbury Publishing (2003). Kindle Location 2746.
 
-[^221202-2]:
+[^221202-2]: 
     [Red Hen Publications](https://www.redhen-publications.com/who-hen.html).
     "[Molly](https://www.redhen-publications.com/molly.html)" Last viewed 2022-12-02.
 
@@ -131,7 +130,7 @@ year old readers encountering it for the first time. That being said, I have enc
 
 [Ministry]: /Harrypedia/culture/Government/
 
-[^240202-1]:
+[^240202-1]: 
     [RoseLilian].
     _[The difference a good solicitor makes]_
     [Chapter 5](https://www.fanfiction.net/s/13049901/5/The-difference-a-good-solicitor-makes)
@@ -140,7 +139,7 @@ year old readers encountering it for the first time. That being said, I have enc
 [RoseLilian]: https://www.fanfiction.net/u/8209039/RoseLilian
 [The difference a good solicitor makes]: https://www.fanfiction.net/s/13049901/
 
-[^211014-1]:
+[^211014-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Sorcerer's Stone](https://www.goodreads.com/book/show/3.Harry_Potter_and_the_Sorcerer_s_Stone)_
     page 91. © 1998 Pottermore Limited. American Kindle Edition.
@@ -214,33 +213,33 @@ influenced by the various depictions I have read.
 
 [History]: /Harrypedia/History/
 
-[^211104-1]:
+[^211104-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Goblet of Fire](https://www.goodreads.com/book/show/6.Harry_Potter_and_the_Goblet_of_Fire)_
     Kindle Locations 8189-8193. © 2003 Pottermore Limited. American Kindle Edition.
 
-[^210818-5]:
+[^210818-5]: 
     Mr. Steve VanderArk. "[Calendar of Birthdays](https://www.hp-lexicon.org/thing/calendar-of-birthdays/)"
     [The Harry Potter Lexicon](https://www.hp-lexicon.org) © 2000 – 2021.
 
 [^210818-6]: See my notes on the [Weasley Family][Weasley].
 
-[^210818-7]:
+[^210818-7]: 
     Mr. William Shakespeare.
     _[Othello, the Moor of Venice](https://www.gutenberg.org/files/1531/1531-h/1531-h.htm)_
     Act V, Scene II.
 
-[^210818-8]:
+[^210818-8]: 
     Molly's Bogart from Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix](https://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix)_
     Pottermore Limited. American Kindle Edition.
 
-[^210818-9]:
+[^210818-9]: 
     Hermione's Easter Egg from Mrs. J. K. Rowling's
     _[Harry Potter and the Goblet of Fire](https://www.goodreads.com/book/show/6.Harry_Potter_and_the_Goblet_of_Fire)_
     Pottermore Limited. American Kindle Edition. © 2003
 
-[^210818-10]:
+[^210818-10]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows](https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows)_
     Pottermore Publishing. American Kindle Edition.
@@ -259,11 +258,11 @@ bank, not as the holder of [Harry]'s key. It is only in the summer before
 fourth year that she seems to have his key, when she asks him to leave his
 school list out and then leaves a bag of his gold on his bed for him.
 
-[^221213-6]:
+[^221213-6]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Prisoner of Azkaban](https://www.librarything.com/work/2742161/book/225886376)_
     Bloomsbury UK (2004). page 50.
 
-[^240401-5]:
+[^240401-5]: 
     As I note discussing the [Weasley] family, this may be due to
     the use of third person limited and the [Harry] Perception filter.

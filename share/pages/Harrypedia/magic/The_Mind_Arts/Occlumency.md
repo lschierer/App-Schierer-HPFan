@@ -87,7 +87,7 @@ but rather [Legilimency].
 [Draco]: </Harrypedia/people/Malfoy/Draco Lucius/>
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/>
 
-[^20210922-1]:
+[^20210922-1]: 
     Mrs. J. K. Rowling. "[Draco
     Malfoy](https://www.wizardingworld.com/writing-by-jk-rowling/draco-malfoy)"
     https://www.wizardingworld.com/ Originally Pubished 2020-08-10. Last
@@ -95,13 +95,13 @@ but rather [Legilimency].
 
 [WWJKRDM1]: https://www.rowlingindex.org/work/dmpm/
 
-[^20200630-7]:
+[^20200630-7]: 
     Mrs. J. K. Rowling. "[Draco
     Malfoy](https://www.wizardingworld.com/writing-by-jk-rowling/draco-malfoy)"
     https://www.wizardingworld.com/ Originally Pubished 2020-08-10. Last
     Viewed 2020-06-30.
 
-[^20200630-4]:
+[^20200630-4]: 
     Sanjay Srivastava, Maya Tamir, Kelly M. McGonigal, Oliver P.
     John, and James J. Gross. "[The Social Costs of Emotional Suppression:
     A Prospective Study of the Transition to
@@ -114,35 +114,35 @@ but rather [Legilimency].
     International Journal of Psychophysiology 94 (2014) 100-107. Last
     Viewed 2020-06-30.
 
-[^20200630-5]:
+[^20200630-5]: 
     Lucy E Cousins. "[ARE THERE DOWNSIDES TO ALWAYS TRYING TO BE
     POSITIVE?](https://www.hcf.com.au/health-agenda/body-mind/mental-health/downsides-to-always-being-positive)
     [HCF](https://www.hcf.com.au/) 2018-02. Last Viewed 2020-06-30.
 
-[^20191119-1]:
+[^20191119-1]: 
     Mrs. J. K. Rowling.
     Quoted in "[Occlumency](https://harrypotter.fandom.com/wiki/Occlumency#Behind_the_scenes)
     Last Viewed 2019-11-19.
 
-[^20191119-2]:
+[^20191119-2]: 
     kb0. _The Grass Is Always Greener_. _[The Grass Is Always
     Greener](https://www.fanfiction.net/s/4334542/1/The-Grass-Is-Always-Greener)_
     Last Viewed 2020-09-16
 
-[^20191119-3]:
+[^20191119-3]: 
     kb0. _[The Grass Is Always
     Greener](https://www.fanfiction.net/s/4334542/1/The-Grass-Is-Always-Greener)_
     Chapter 1. Last Viewed 2020-09-16
 
-[^20191119-4]:
+[^20191119-4]: 
     kb0. _[The Grass Is Always
     Greener](https://www.fanfiction.net/s/4334542/1/The-Grass-Is-Always-Greener)_
     Chapter 1. Last Viewed 2020-09-16
 
-[^20191119-5]:
+[^20191119-5]: 
     Mrs. J. K. Rowling. _Harry Potter and the Half-Blood
     Prince_. Chapter 28. Approx Page 501 of 543. Kindle Edition.
 
-[^20191119-6]:
+[^20191119-6]: 
     Mrs. J. K. Rowling. _Harry Potter and the Half-Blood
     Prince_. Chapter 28. Approx Page 502 of 543. Kindle Edition.

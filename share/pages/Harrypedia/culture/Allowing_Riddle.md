@@ -68,10 +68,10 @@ real political power quite possibly, but within the context of some existing
 [notes]: /Harrypedia/
 [Potter Family notes]: /Harrypedia/people/Potter/
 [Salazar]: /Harrypedia/people/Slytherin/Salazar/
-[class structure]: ../Class_and_Blood/
-[blood status]: ../Class_and_Blood/
+[class structure]: Class_and_Blood/
+[blood status]: Class_and_Blood/
 
-[^211004-9]:
+[^211004-9]: 
     Mrs. J. K. Rowling.
     "[Pure-Blood](https://www.rowlingindex.org/work/pmpbl/)"
     [The J.K. Rowling Index](https://www.rowlingindex.org/)
@@ -79,7 +79,7 @@ real political power quite possibly, but within the context of some existing
 
 [^211004-8]: See the Lifespan section of my notes on [Magic].
 
-[^211004-1]:
+[^211004-1]: 
     - Mrs. J. K. Rowling.
       "[J.K. Rowling at Carnegie
       Hall](http://www.the-leaky-cauldron.org/2007/10/20/j-k-rowling-at-carnegie-hall-reveals-dumbledore-is-gay-neville-marries-hannah-abbott-and-scores-more/)"
@@ -88,7 +88,7 @@ real political power quite possibly, but within the context of some existing
       "[F.A.Q.: About the Books](https://www.rowlingindex.org/work/faq1web/)"
       2004-05-15 through 2007-12-21.
 
-[^211004-2]:
+[^211004-2]: 
     I am not the first to note this, see the Author's Note in
     Radaslab's _[Not Normal][RNN1]_ [Chapter 16: Line Continuation][RNN1_16]
     Published 2011-07-04. Updated: 2013-08-10. Last Viewed: 2021-10-04.
@@ -97,29 +97,29 @@ real political power quite possibly, but within the context of some existing
 [RNN2]: https://www.fanfiction.net/s/7144149
 [RNN1_16]: https://www.fanfiction.net/s/7144149/16/Not-Normal
 
-[^211004-3]:
+[^211004-3]: 
     Radaslab.
     _[Not Normal][RNN2]_
     Published 2011-07-04. Updated: 2013-08-10. Last Viewed: 2021-10-04.
 
-[^211004-4]:
+[^211004-4]: 
     Aaran St Vines.
     _["Great Scott, Potter, This is
     War!"](https://aaran-st-vines.fanficauthors.net/Great_Scott_Potter_This_is_War/index/)_
     Published: 2006-03-07. Updated: 2009-02-15. Last Viewed: 2021-10-04.
 
-[^211004-5]:
+[^211004-5]: 
     [Harry Potter Wiki](https://harrypotter.fandom.com/wiki)
     "[Wizengamot](https://harrypotter.fandom.com/wiki/Wizengamot)"
     Last Edited: 2021-07-13. Last Viewed: 2021-10-04.
 
-[^211004-6]:
+[^211004-6]: 
     Mrs. J. K. Rowling.
     "[The Potter Family](https://www.rowlingindex.org/work/pmpfam/)"
     [The J.K. Rowling Index](https://www.rowlingindex.org/)
     2015-09-22. Last Viewed: 2021-10-04.
 
-[^211004-7]:
+[^211004-7]: 
     Mrs. J. K. Rowling.
     "[Pure-Blood](https://www.rowlingindex.org/work/pmpbl/)"
     [The J.K. Rowling Index](https://www.rowlingindex.org/)

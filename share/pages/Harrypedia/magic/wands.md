@@ -59,7 +59,7 @@ author: Luke Schierer
     - old-crow. _[The Core Wars](https://www.fanfiction.net/s/14156962)_
       Published: 2022-11-04. Updated: 2022-12-19.
 
-[^221219-2]:
+[^221219-2]: 
     This debunked idea was a common idea among females in, possibly among others,
 
     - old-crow. _[The Core Wars](https://www.fanfiction.net/s/14156962)_
@@ -86,72 +86,72 @@ must sense something of the wizard it is bonding with…
 [the article on cores]: <https://www.rowlingindex.org/work/wcpm/ "WizardingWorld article on Wand Cores">
 [20210511-9]: https://harrypotter.fandom.com/wiki/Wand_wood
 
-[^210512-1]:
+[^210512-1]: 
     Mrs. J. K. Rowling. _Harry Potter and the Sorcerer's Stone_
     p. 82. Pottermore Limited. American Kindle Edition.
 
-[^210512-2]:
+[^210512-2]: 
     Mrs. J. K. Rowling. _Harry Potter and the Sorcerer's Stone_
     p. 220. Pottermore Limited. American Kindle Edition.
 
-[^210512-3]:
+[^210512-3]: 
     Garrick Ollivander is the purported author of all 3 Pottermore
     articles I have referenced here.
 
-[^210511-8]:
+[^210511-8]: 
     Mrs. J. K. Rowling. _Harry Potter and the Goblet of Fire_
     Kindle Locations 4642-4643. Pottermore Limited. American Kindle Edition.
 
-[^210511-7]:
+[^210511-7]: 
     Mrs. J. K. Rowling.
     "[Wands](https://web.archive.org/web/20060316221102/http://www.jkrowling.com/textonly/en/extrastuff_view.cfm?id=18)"
     Snapshot from 2006-03-16. Snapshot Viewed 2021-05-11.
 
-[^210511-6]:
+[^210511-6]: 
     Mrs. J. K. Rowling.
     "[Wands](https://web.archive.org/web/20060316221102/http://www.jkrowling.com/textonly/en/extrastuff_view.cfm?id=18)"
     Snapshot from 2006-03-16. Snapshot Viewed 2021-05-11.
 
-[^210511-5]:
+[^210511-5]: 
     Mrs. J. K. Rowling. _Harry Potter and the Sorcerer's Stone_
     p. 82. Pottermore Limited. American Kindle Edition.
 
-[^210511-4]:
+[^210511-4]: 
     Mrs. J. K. Rowling. _Short Stories from Hogwarts of Power,
     Politics, and Pesky Poltergeists_ Pottermore Publishing American Kindle
     Edition, © 2016. Page 7.
 
-[^200723-1]:
+[^200723-1]: 
     Mrs. J. K. Rowling.
     "[Wand Woods]"
     [The J.K. Rowling Index](https://www.rowlingindex.org/)
     Originally published 2015-08-10. Last Viewed 2020-07-23.
 
-[^200723-2]:
+[^200723-2]: 
     Mrs. J. K. Rowling.
     "[Wand Lengths & Flexibility]"
     [The J.K. Rowling Index](https://www.rowlingindex.org/)
     Originally published 2015-08-10. Last Viewed 2020-07-23.
 
-[^210512-5]:
+[^210512-5]: 
     Mrs. J. K. Rowling.
     "[Wand Cores]"
     [The J.K. Rowling Index](https://www.rowlingindex.org/)
     Originally published 2015-08-10. Last Viewed 2021-05-12.
 
-[^210512-4]:
+[^210512-4]: 
     Mrs. J. K. Rowling.
     "[Wand Cores]"
     [The J.K. Rowling Index](https://www.rowlingindex.org/)
     Originally published 2015-08-10. Last Viewed 2021-05-12.
 
-[^200723-3]:
+[^200723-3]: 
     Mrs. J. K. Rowling.
     "[Wand Cores]"
     [The J.K. Rowling Index](https://www.rowlingindex.org/)
     Originally published 2015-08-10. Last Viewed 2020-07-23.
 
-[^200806-5]:
+[^200806-5]: 
     Mrs. J. K. Rowling.
     "[Wand Cores]"
     [The J.K. Rowling Index](https://www.rowlingindex.org/)

@@ -47,12 +47,12 @@ the magical world that many fan fiction authors portray.
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean/>
 [Gringotts]: /Harrypedia/gringotts
 
-[^221201-1]:
+[^221201-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Chamber of Secrets](https://www.librarything.com/work/683408/book/225886342)_
     Bloomsbury Pub Ltd (2004), page 56
 
-[^221201-2]:
+[^221201-2]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix](https://www.librarything.com/work/115/book/225886709)_
     Bloomsbury Pub Ltd. (2003), page number needed.

@@ -1,8 +1,7 @@
 ---
 title: "Fan Fiction"
 author: Luke Schierer
-imports:
-  - /components/DirectoryIndex.ts type="module"
+autoindex: 1
 ---
 
 # My Harry Potter Fan Fiction
@@ -20,5 +19,3 @@ on these to completion.  I have come to realize that this is primarily an exerci
 
 [archive.org]: https://www.archive.org
 ---
-
-<directory-index directory="/FanFiction/" ></directory-index>

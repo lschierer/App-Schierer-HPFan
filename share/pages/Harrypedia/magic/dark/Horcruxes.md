@@ -58,7 +58,7 @@ and failure to act.
 
 [Bill]: </Harrypedia/people/Weasley/William Arthur/>
 
-[^210324-1]:
+[^210324-1]: 
     Adapted from Itsme66.
     _[The Mandatory Marriage Contract Fic](https://www.fanfiction.net/s/5695032)_
     [Chapter 2](https://www.fanfiction.net/s/5695032/2/The-Mandatory-Marriage-Contract-Fic)
@@ -66,45 +66,45 @@ and failure to act.
 
 [The Mandatory Marriage Contract Fic]: https://www.fanfiction.net/s/5695032
 
-[^210323-15]:
+[^210323-15]: 
     Mrs. J. K. Rowling et al.
     "[Anelli, Melissa, John Noe and Sue Upton. "PotterCast Interviews J.K. Rowling, part one." PotterCast #130, 17 December 2007.](http://www.accio-quote.org/articles/2007/1217-pottercast-anelli.html)"
     [Accio-Quote](http://www.accio-quote.org/) Last viewed 2020-07-31.
 
-[^210323-14]:
+[^210323-14]: 
     DisobedienceWriter.
     _[The Valley of the Kings Massacre](https://www.fanfiction.net/s/5998729)_
     Published 2010-05-25. Last Viewed: 2021-03-23.
 
 [TVotKM]: https://www.fanfiction.net/s/5998729
 
-[^210323-13]:
+[^210323-13]: 
     [Wikipedia](https://en.wikipedia.org/)
     "[Valley of the Kings](https://en.wikipedia.org/wiki/Valley_of_the_Kings)"
     Last Edited: 2021-03-22. Last Viewed: 2021-03-23.
 
-[^210323-12]:
+[^210323-12]: 
     Itsme66.
     _[The Mandatory Marriage Contract Fic](https://www.fanfiction.net/s/5695032)_
     [Chapter 2](https://www.fanfiction.net/s/5695032/2/The-Mandatory-Marriage-Contract-Fic)
     Last Updated: 2010-02-26. Published: 2010-01-25. Last Viewed 2021-03-23.
 
-[^210323-11]:
+[^210323-11]: 
     [Wikipedia](https://en.wikipedia.org/)
     "[Ancient Greece](https://en.wikipedia.org/wiki/Ancient_Greece)"
     Last Edited 2021-03-23. Last Viewed 2021-03-23.
 
-[^210323-10]:
+[^210323-10]: 
     Mrs. J. K. Rowling et al.
     "[Anelli, Melissa, John Noe and Sue Upton. "PotterCast Interviews J.K. Rowling, part one." PotterCast #130, 17 December 2007.](http://www.accio-quote.org/articles/2007/1217-pottercast-anelli.html)"
     [Accio-Quote](http://www.accio-quote.org/) Last viewed 2020-07-31.
 
-[^210323-9]:
+[^210323-9]: 
     [Harry Potter WIKI](https://harrypotter.fandom.com/)
     "[Herpo the Foul](https://harrypotter.fandom.com/wiki/Herpo_the_Foul)"
     Last Edited 2021-03-13. Last Viewed 2021-03-23.
 
-[^200731-1]:
+[^200731-1]: 
     Mrs. J. K. Rowling et al.
     "[Anelli, Melissa, John Noe and Sue Upton. "PotterCast Interviews J.K. Rowling, part one." PotterCast #130, 17 December 2007.](http://www.accio-quote.org/articles/2007/1217-pottercast-anelli.html)"
     [Accio-Quote](http://www.accio-quote.org/) Last viewed 2020-07-31.
@@ -148,12 +148,12 @@ has since published online do, I similarly do not recall seeing it.
       _[An Inconvenient Truth](https://www.fanfiction.net/s/5084287)_
       Published: 2009-05-24. Updated: 2016-06-22.
 
-[^210810-1]:
+[^210810-1]: 
     Maher, Michael, and Joseph Bolland. "Soul." The Catholic
     Encyclopedia. Vol. 14. New York: Robert Appleton Company, 1912.
     2021-08-10 http://www.newadvent.org/cathen/14153a.htm.
 
-[^210810-2]:
+[^210810-2]: 
     Works that posit this: \* SometimesSecretly. _[We will get
     through this](https://www.fanfiction.net/s/13773336)_
     [Chapter
@@ -169,22 +169,22 @@ attempt to persuade Harry to join him, before he starts snarling and
 threatening.[^210810-10] His followers in the latter books seem to follow
 more out of fear than out of any real expectation of gain or power.
 
-[^210810-10]:
+[^210810-10]: 
     Mrs. J. K. Rowling. _[Harry Potter and the Sorcerer's
     Stone](https://www.goodreads.com/book/show/3.Harry_Potter_and_the_Sorcerer_s_Stone)_
     page 294. Pottermore Limited. American Kindle Edition.
 
-[^210810-9]:
+[^210810-9]: 
     Mrs. J. K. Rowling. _[Harry Potter and the Chamber of
     Secrets](https://www.goodreads.com/book/show/15881.Harry_Potter_and_the_Chamber_of_Secrets)_
     page 330. Pottermore Limited. American Kindle Edition.
 
-[^210810-8]:
+[^210810-8]: 
     Mrs. J. K. Rowling. _[Harry Potter and the Chamber of
     Secrets](https://www.goodreads.com/book/show/15881.Harry_Potter_and_the_Chamber_of_Secrets)_
     page 329. Pottermore Limited. American Kindle Edition.
 
-[^210810-3]:
+[^210810-3]: 
     Mrs. J. K. Rowling. _[Harry Potter and the Half-Blood
     Prince](https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince)_
     © 2005. page 301. American Kindle Edition.
@@ -240,36 +240,36 @@ scar really fall into the "nonsense" section below.
 
 [TTR213]: http://www.siye.co.uk/viewstory.php?sid=129781&textsize=1&chapter=13
 
-[^210330-46]:
+[^210330-46]: 
     White Angel of Auralon.
     _[Champion](https://www.fanfiction.net/s/8754033)_
     [FanFiction](https://www.fanfiction.net) Originally Published:
     2012-12-01. Updated: 2013-10-27. Last Viewed: 2021-03-30.
 
-[^210311-1]:
+[^210311-1]: 
     Brennus. _[The Thorny Rose
     2](https://www.siye.co.uk/viewstory.php?sid=129781)_ [Chapter
     13](https://www.siye.co.uk/viewstory.php?sid=129781&textsize=1&chapter=13)
     Published: 2013-12-29. Updated: 2014-02-23. Last Viewed: 2021-03-11.
 
-[^200731-2]:
+[^200731-2]: 
     Mrs. J. K. Rowling et al. "[Anelli, Melissa, John Noe and Sue
     Upton. "PotterCast Interviews J.K. Rowling, part one." PotterCast #130,
     17 December 2007.](http://www.accio-quote.org/articles/2007/1217-pottercast-anelli.html)"
     [Accio-Quote](http://www.accio-quote.org/) Last viewed 2020-07-31.
 
-[^210323-1]:
+[^210323-1]: 
     Mrs. J. K. Rowling et al. "[Anelli, Melissa, John Noe and Sue
     Upton. "PotterCast Interviews J.K. Rowling, part one." PotterCast #130,
     17 December 2007.](http://www.accio-quote.org/articles/2007/1217-pottercast-anelli.html)"
     [Accio-Quote](http://www.accio-quote.org/) Last viewed 2020-07-31.
 
-[^210323-2]:
+[^210323-2]: 
     DisobedienceWriter. _[Harry Potter and the Muggle
     Mess](https://www.fanfiction.net/s/5180286)_ Published 2009-06-30. Last
     Viewed 2021-03-23.
 
-[^210323-3]:
+[^210323-3]: 
     I know someone not me actually came up with this theory first,
     but to give them credit I have to re-find it.
 
@@ -420,7 +420,7 @@ this theory to work, [Riddle][] ought to have been at [eleven][], or
 [Ginny]: </Harrypedia/people/Weasley/Ginevra Molly/>
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/>
 
-[^220728-5]:
+[^220728-5]: 
     [Bible Study](https://www.biblestudy.org/). "[Meaning of
     Numbers in the
     Bible](https://www.biblestudy.org/bibleref/meaning-of-numbers-in-bible/introduction.html)"
@@ -433,20 +433,20 @@ this theory to work, [Riddle][] ought to have been at [eleven][], or
       Published: 2019-05-08. Last Updated: 2019-07-28.
       Last Viewed: 2022-07-28.
 
-[^210324-5]:
+[^210324-5]: 
     Yunaine. _[Public
     Safety](https://www.fanfiction.net/s/10387771)_ Published: 2014-05-29.
     Last Viewed: 2021-03-24.
 
-[^210324-4]:
+[^210324-4]: 
     Mrs. J. K. Rowling. _Harry Potter and the Philosopher's
     Stone_. Better citation needed.
 
-[^200625-2]:
+[^200625-2]: 
     Mrs. J. K. Rowling. _Harry Potter and the Goblet of Fire_
     (Kindle Locations 9729-9731). Pottermore Limited. American Kindle Edition.
 
-[^200625-1]:
+[^200625-1]: 
     offsides. _[Long Live The
     Queen](https://www.fanfiction.net/s/11500936)_ https://fanfiction.net
     Last Viewed 2020-06-25.

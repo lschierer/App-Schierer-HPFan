@@ -63,42 +63,42 @@ those outside the family anything not taught at school.
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean/>/
 [tdgsm-1]: https://www.fanfiction.net/s/13049901
 
-[^210420-3]:
+[^210420-3]: 
     Ms. Laura T.
     "[10 Of The Oldest Universities In The World](https://www.topuniversities.com/blog/10-oldest-universities-world)"
     Updated 2021-04-19. Last Viewed 2021-04-20.
 
-[^210420-4]:
+[^210420-4]: 
     [Wikipedia](https://en.wikipedia.org/)
     "[Musaeum](https://en.wikipedia.org/wiki/Musaeum)"
     Last Updated: 2021-04-12. Last Viewed: 2021-04-20.
 
-[^210420-5]:
+[^210420-5]: 
     [Wikipedia](https://en.wikipedia.org/)
     "[Library of Alexandria](https://en.wikipedia.org/wiki/Library_of_Alexandria)"
     Last Updated: 2021-04-07. Last Viewed: 2021-04-20.
 
-[^210420-6]:
+[^210420-6]: 
     [Wikipedia](https://en.wikipedia.org/)
     "[University of Constantinople](https://en.wikipedia.org/wiki/University_of_Constantinople)"
     Last Updated: 2021-03-15. Last Viewed: 2021-04-20.
 
-[^210420-7]:
+[^210420-7]: 
     [Wikipedia](https://en.wikipedia.org/)
     "[Ancient higher-learning institutions](https://en.wikipedia.org/wiki/Ancient_higher-learning_institutions)"
     Last Updated: 2021-04-07. Last Viewed: 2021-04-20.
 
-[^210420-8]:
+[^210420-8]: 
     Mrs. J. K. Rowling.
     "[Wizarding Schools](https://www.wizardingworld.com/writing-by-jk-rowling/wizarding-schools)"
     Originally published on Pottermore 2016-01-29. Last Viewed 2021-04-20.
 
-[^210420-9]:
+[^210420-9]: 
     Mrs. J. K. Rowling.
     "[Wizarding Schools](https://www.wizardingworld.com/writing-by-jk-rowling/wizarding-schools)"
     Originally published on Pottermore 2016-01-29. Last Viewed 2021-04-20.
 
-[^210420-10]:
+[^210420-10]: 
     RoseLilian.
     _[The difference a good solicitor makes](https://www.fanfiction.net/s/13049901)_
     [Chapter 11](https://www.fanfiction.net/s/13049901/11/The-difference-a-good-solicitor-makes)

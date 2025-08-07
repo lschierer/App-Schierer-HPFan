@@ -11,6 +11,6 @@ probably both old money, and strongly invested in preserving the status quo.
 They do not mind first generation magical users per-se, so long as they stay in
 their place — at or near the bottom of the social order.
 
-[^210318-2]:
+[^210318-2]: 
     Mrs. J. K. Rowling. _Harry Potter and the Half-Blood Prince_
     p. 121. Pottermore Publishing. American Kindle Edition.

@@ -21,19 +21,19 @@ This forms an unbreakable magical contract, and any violation of the resulting
 vow/contract results in the death of the breaker (the one who made the
 vow).[^220726-8]
 
-[^220726-6]:
+[^220726-6]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince](https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince)_
     Pages 31,271.
     © 2005 Pottermore Publishing. American Kindle Edition.
 
-[^220726-7]:
+[^220726-7]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince](https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince)_
     Page 31.
     © 2005 Pottermore Publishing. American Kindle Edition.
 
-[^220726-7]:
+[^220726-7]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince](https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince)_
     Page 271.

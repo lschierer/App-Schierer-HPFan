@@ -28,21 +28,21 @@ My guess is not none (the essential premise for a work like _[Exiles]_), but als
 
 [^240318-1]: I am having trouble documenting where this line of reasoning, known now as the "Nuremberg Defence", was actually condemned.
 
-[^240318-2]:
+[^240318-2]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows]_
     Bloomsbury Publishing Plc (2011), pages 85-86.
 
 [Harry Potter and the Deathly Hallows]: https://www.librarything.com/work/3577382
 
-[^240318-3]:
+[^240318-3]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Goblet of Fire]_
     Bloomsbury Publishing Plc (2000), approx location 1253 as one possible example
 
 [Harry Potter and the Goblet of Fire]: https://www.librarything.com/work/113
 
-[^240318-4]:
+[^240318-4]: 
     Mrs. J. K. Rowling.
     "[Ministers of Magic]"
     [The J.K. Rowling Index] Originally Published: 2014-10-31.

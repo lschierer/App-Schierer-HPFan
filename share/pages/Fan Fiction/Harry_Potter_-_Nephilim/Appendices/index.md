@@ -2,8 +2,7 @@
 title: >-
   Harry Potter - Nephilim | Index of Appendices
 author: Luke Schierer
-imports:
-  - /components/DirectoryIndex.ts type="module"
+autoindex: 1
 ---
 
 > [!WARNING]
@@ -15,4 +14,4 @@ imports:
 > [!TIP]
 > Author's Note. These appendices are written from the perspective of an in-world researcher. These in-world researchers are off stage both in the that they do not appear in the story itself, but also in the sense that they are not necessarily from the _present_ as the characters in the story would perceive time. Not all of these researchers have written in the same style, nor have all aimed at, or achieved, any uniform level of professional scholarly writing. Most of these researchers are religious figures working for various in-world Vatican departments or commissions.
 
-<directory-index directory="/FanFiction/Harry_Potter_-_Nephilim"/Appendices/" ></directory-index>
+---

@@ -10,7 +10,7 @@ author: Luke Schierer
   - Nerve
   - Chivalry
 
-[^221221-1]:
+[^221221-1]: 
     Mrs. J. K. Rowling. _[Harry Potter and the Philosopher's Stone][]_
     Pottermore Limited. American Kindle Edition. Page 118.
 
@@ -26,7 +26,7 @@ author: Luke Schierer
     [Hufflepuff][], it is clear that loyalty is not the defining factor of this
     house.
 
-[Hufflepuff]: ../Hufflepuff/
+[Hufflepuff]: Hufflepuff/
 
 [^221221-2]: works include, but not limited to:
 

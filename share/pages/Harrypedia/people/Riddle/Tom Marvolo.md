@@ -23,7 +23,7 @@
   or after his father dies? As the first Malfoy to do so, or the second? Note
   that his graduation would be after the start of the war.[^20210827-11]
 
-[^20210827-1]:
+[^20210827-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince](https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince)_
     p. 178. Pottermore Publishing. American Kindle Edition.
@@ -40,26 +40,26 @@
 
 [^20210827-11]: See my [History] Notes.
 
-[History]: ../../../History/
+[History]: ../../History/
 
-[^20210827-5]:
+[^20210827-5]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince]_
     p. 358. Pottermore Publishing. American Kindle Edition.
 
 [Harry Potter and the Half-Blood Prince]: https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince
 
-[^20210827-6]:
+[^20210827-6]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince]_
     p. 360. Pottermore Publishing. American Kindle Edition.
 
-[^20210827-7]:
+[^20210827-7]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince]_
     p. 366. Pottermore Publishing. American Kindle Edition.
 
-[^20210827-10]:
+[^20210827-10]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince]_
     p. 370. Pottermore Publishing. American Kindle Edition.

@@ -1,4 +1,3 @@
-### Analysis
 
 - Married [Vernon Dursley][VD].
 

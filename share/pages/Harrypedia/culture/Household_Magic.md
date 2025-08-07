@@ -47,11 +47,11 @@ the six years that [Harry] attends class.
 [Ginny]: </Harrypedia/people/Weasley/Ginevra Molly/>/
 [Lily Evens]: </Harrypedia/people/Evans/Lily J/>
 
-[^210329-24]:
+[^210329-24]: 
     Mrs. J. K. Rowling. _Harry Potter and the Goblet of Fire_
     Kindle Locations 964-966. Pottermore Limited. American Kindle Edition.
 
-[^210329-23]:
+[^210329-23]: 
     Mrs. J. K. Rowling.
     "["The Leaky Cauldron and Mugglenet interview Joanne Kathleen Rowling: Part Three](http://www.accio-quote.org/articles/2005/0705-tlc_mugglenet-anelli-3.htm)"
     2005-07-16. Last Viewed 2021-03-29.
@@ -60,7 +60,7 @@ the six years that [Harry] attends class.
 
 [^210329-22]: Mrs. J. K. Rowling. Better citation needed.
 
-[^210329-20]:
+[^210329-20]: 
     Ms. Mercedes Lackey and Ms. Andre Norton. _The Elvenbane:
     Halfbood Chronicles Book 1_ 1991-11-01. Tor Books; ISBN-13: 978-0312851064
     exact citation needed.

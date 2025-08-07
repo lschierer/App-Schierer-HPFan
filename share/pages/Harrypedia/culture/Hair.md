@@ -21,7 +21,7 @@ not substantiated by the cannonical works.
 
 [^220719-2]: This may be a movie thing, and may not be supported by the written works.
 
-[^220719-3]:
+[^220719-3]: 
     [Wikipedia](https://en.wikipedia.org/)
     "[Long hair](https://en.wikipedia.org/wiki/Long_hair)"
     Last Edited: 2022-06-29. Last Viewed: 2022-07-19.

@@ -38,32 +38,32 @@ amount.
 
 ---
 
-[^20210617-1]:
+[^20210617-1]: 
     Mrs. J. K. Rowling.
     "[Comic Relief live chat transcript, March 2001](http://web.archive.org/web/20091023035038/http://www.accio-quote.org/articles/2001/0301-comicrelief-staff.htm)"
     <http://www.accio-quote.org> 2001-03-01.
 
-[^20210617-4]:
+[^20210617-4]: 
     Mrs. J. K. Rowling.
     "[Comic Relief live chat transcript, March 2001](http://web.archive.org/web/20091023035038/http://www.accio-quote.org/articles/2001/0301-comicrelief-staff.htm)"
     <http://www.accio-quote.org> 2001-03-01.
 
-[^20210617-2]:
+[^20210617-2]: 
     [Money Metals Exchange][MMM].
     "[1 Gram Gold Bar (In Assay)][1GGBIA]"
     Last Viewed: 2021-06-17.
 
-[^20210617-3]:
+[^20210617-3]: 
     [Jewellery Quarter Bullion Ltd.][BBP1]
     "[Gold Charts UK in GBP per Gram]"
     Last Viewed 2021-06-17. My figure was from 1991-08-14 on that chart.
 
-[^20210617-5]:
+[^20210617-5]: 
     [Jewellery Quarter Bullion Ltd.][BBP1]
     "[Gold Charts UK in GBP per Gram]"
     Last Viewed 2021-06-17. My figure was from 1991-08-14 on that chart.
 
-[^20210617-6]:
+[^20210617-6]: 
     [USGB, LLC][USGBL]
     "[How Big Is a Gold Bar?]"
     Last Viewed: 2021-06-17.

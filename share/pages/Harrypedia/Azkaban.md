@@ -11,7 +11,7 @@ This illogic is unfortunately typical. We do not know if the [dementors] were in
 [Dementors]: /Harrypedia/non-beings/dementor/
 [dementors]: /Harrypedia/non-beings/dementor/
 
-[^240212-2]:
+[^240212-2]: 
     Mrs. J. K. Rowling.
     "[Azkaban][RIA]"
     [The J.K. Rowling Index]

@@ -13,7 +13,7 @@ but not always, followed immediately by actual death.
 
 [Legilimency]: /Harrypedia/magic/spells/legilimens/
 
-[^211026-1]:
+[^211026-1]: 
     Bobmin356.
     _[Tournament Woes](https://www.fanfiction.net/s/8837107)_
     Published: 2012-12-26.

@@ -38,17 +38,17 @@ Thus I expect that in Rowling's universe, the following numbers would be "magica
 [twenty]: https://www.biblestudy.org/bibleref/meaning-of-numbers-in-bible/20.html
 [thirty-three]: https://www.biblestudy.org/bibleref/meaning-of-numbers-in-bible/33.html
 
-[^220728-1]:
+[^220728-1]: 
     Mr. Jake Ashcraft.
     "[What Is the Significance of Biblical Numerology?](https://www.christianity.com/wiki/christian-terms/what-is-the-significance-of-biblical-numerology.html)"
     Published 2021-04-15. [Christianity.com](https://www.christianity.com).
 
-[^220728-3]:
+[^220728-3]: 
     [Wikipedia](https://wikipedia.org/)
     "[Arithmancy](https://wikipedia.org/wiki/Arithmancy)"
     Last Edited: 2022-07-26. Last Viewed: 2022-07-28.
 
-[^220728-2]:
+[^220728-2]: 
     [Bible Study](https://www.biblestudy.org/).
     "[Meaning of Numbers in the Bible](https://www.biblestudy.org/bibleref/meaning-of-numbers-in-bible/introduction.html)"
     Last Viewed: 2022-07-28.

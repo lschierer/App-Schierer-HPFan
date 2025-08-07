@@ -14,7 +14,7 @@ Hex
 
 Despite the classification as a Hex, this is considered safe to use for teaching [Protego][].
 
-[Protego]: ../protego/
+[Protego]: protego/
 
 ## Found in
 

@@ -34,18 +34,18 @@ skills.
 [FfnRT]: https://www.fanfiction.net/u/2662787/Rex-Tims
 [Guardian]: https://www.theguardian.com/
 
-[^20200720-9]:
+[^20200720-9]: 
     Mrs. J. K. Rowling. _Harry Potter and the Goblet of Fire_
     Kindle Locations 9206-9208. Pottermore Limited. American Kindle Edition.
 
-[^211109-1]:
+[^211109-1]: 
     Rex Tims.
     _[Unspoken Words](https://www.fanfiction.net/s/6621308)_
     Author's note in [Chapter 15. Nearly
     Summer](https://www.fanfiction.net/s/6621308/15/Unspoken-Words)
     Published: 2011-01-03. Updated: 2011-04-03. Last Viewed: 2021-11-09.
 
-[^20200720-10]:
+[^20200720-10]: 
     Mr. Jon Walter.  
     "[Why I'm glad corporal punishment is now only found in books](https://www.theguardian.com/childrens-books-site/2016/jul/01/corporal-punishment-jon-walter)".
     [The Guardian](https://www.theguardian.com/) 2016-07-01. Last viewed  

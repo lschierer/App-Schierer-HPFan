@@ -15,17 +15,17 @@ This idea is supported by lesser canonical sources. In England, the [Potters] ar
 [The Malfoy family]: https://www.rowlingindex.org/work/pmmf/
 [The J.K. Rowling Index]: https://www.rowlingindex.org/
 
-[^20200810-3]:
+[^20200810-3]: 
     Mrs. J. K. Rowling.
     "[The Potter Family]"
     [The J.K. Rowling Index] Originally Published: 2015-09-22. Last Seen: 2024-01-30.
 
-[^20200810-4]:
+[^20200810-4]: 
     Mrs. J. K. Rowling.
     "[The Malfoy family]"
     [The J.K. Rowling Index] Originally Published: 2012-07-10. Last Seen: 2024-01-30.
 
-[^20200810-5]:
+[^20200810-5]: 
     Mrs. J. K. Rowling.
     "[The Malfoy family]"
     [The J.K. Rowling Index] Originally Published: 2012-07-10. Last Seen: 2024-01-30.

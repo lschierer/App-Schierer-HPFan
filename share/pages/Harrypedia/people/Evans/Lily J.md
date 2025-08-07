@@ -1,4 +1,3 @@
-### Analysis
 
 Almost all of our facts about Lily come from [Snape]'s [Worst Memory], or his
 dying memory dump. I do not regard either as a wholely reliable and unbiased
@@ -16,12 +15,12 @@ source. See my thoughts on the [pensieve].
 - She was considered a prodigy at charms and potions.
 - She was "vivacious, talented, and popular student."[^20210927-1]
 
-[^20210927-3]:
+[^20210927-3]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix](https://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix)_
     Kindle Location 9842. Pottermore Limited. American Kindle Edition.
 
-[^20210927-1]:
+[^20210927-1]: 
     [Harry Potter Wiki](https://harrypotter.fandom.com/).
     "[Lily J. Potter](<https://harrypotter.fandom.com/wiki/Lily J._Potter>)"
     Last Edited: 2021-09-21. Last Viewed: 2021-09-27.
@@ -55,12 +54,12 @@ the females in the series at the expense of the males.[^20210927-2]
 [Harry]: <</Harrypedia/people/Potter/Harry James/>>
 [Lupin]: <</Harrypedia/people/Lupin/Remus John/>>
 
-[^20210927-4]:
+[^20210927-4]: 
     gredandforgerock.
     _[I'm Where][GAFRIW]_ [Chapter 3](https://www.fanfiction.net/s/6126906/3/I-m-Where)
     Published: 2010-07-09. Last Viewed: 2021-09-27.
 
-[^20210927-2]:
+[^20210927-2]: 
     Ms. Jasmine Lee's "[Seven Times Hermione Granger Took Ron
     Weasley’s Lines in the Movies](https://www.mugglenet.com/2015/09/7-times-hermione-granger-took-ron-weasleys-lines-in-the-movies/)"
     [MuggleNet](https://www.mugglenet.com/) from 2015-09-07, does a reasonable

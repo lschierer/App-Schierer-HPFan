@@ -1,0 +1,23 @@
+/* directory-list.css */
+.directory-list ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15em, 0.33fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.directory-list li {
+  /* Optional: add some padding/styling to each item */
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.directory-list a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}

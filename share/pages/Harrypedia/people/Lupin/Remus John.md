@@ -9,29 +9,28 @@
 
 [^211108-2]: https://www.google.com/search?q=Remus+Lupin+tweed+coat&rlz=1C5GCEM_enUS958US958&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjx4YHjsIn0AhWjp3IEHSiaCTwQ_AUoAXoECAEQAw&biw=1433&bih=717&dpr=1
 
-[^211108-5]:
+[^211108-5]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Prisoner of Azkaban_
     p. 154. Pottermore Limited. American Kindle Edition.
 
-[^211108-4]:
+[^211108-4]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Prisoner of Azkaban_
     p. 74. Pottermore Limited. American Kindle Edition.
 
-[^211108-3]:
+[^211108-3]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Prisoner of Azkaban_
     p. 74. Pottermore Limited. American Kindle Edition.
 
-[^211007-5]:
+[^211007-5]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows]_
     p. 87. © 2007 Pottermore Publishing. American Kindle Edition.
 
 [Harry Potter and the Deathly Hallows]: https://www.librarything.com/work/3577382/
 
-### Analysis
 
 The overall impression I get is that Remus is _familiar_ with the non-magical
 world, but that the movie over-emphasises the extent to which the magical
@@ -87,21 +86,21 @@ Worse, it was not just his wife he abandoned. His rationale is both pathetic and
     - marylou _[Massacre in the Dungeons](https://www.fanfiction.net/s/12065437)_
       Published: 2016-07-23. Updated: 2017-07-04. Last Viewed: 2021-12-02.
 
-[^20210519-12]:
+[^20210519-12]: 
     Ian Hycrest. "[FanFiction.net Profile Page](https://www.fanfiction.net/u/12433161/Ian-Hycrest)"
     Profile Updated 2019-11-14. Last Viewed: 2021-05-19.
 
-[^211108-6]:
+[^211108-6]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Prisoner of Azkaban_
     p. 363, location 4403 of 5714. Pottermore Limited. American Kindle Edition.
 
-[^211108-7]:
+[^211108-7]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Prisoner of Azkaban_
     p. 204, Location 2551 of 5714. Pottermore Limited. American Kindle Edition.
 
-[^211108-8]:
+[^211108-8]: 
     Any number of fan fiction works have this assumption. These
     include, but are not limited to:
 

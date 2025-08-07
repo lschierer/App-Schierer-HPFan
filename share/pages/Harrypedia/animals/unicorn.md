@@ -21,32 +21,32 @@ It is unclear whether the unicorn is more goat-like or more horse like in
 appearance, at one point did the scarcity of the beast and the separation of
 the magical world start to blur the mundane accounts of the animal?[^220726-6]
 
-[^220726-1]:
+[^220726-1]: 
     [St Neots Museum](https://www.stneotsmuseum.org.uk/)
     "[Unicorns – a brief history](https://www.stneotsmuseum.org.uk/articles/unicorns-a-brief-history/)"
     Dated: 2021-04-08. Last Viewed: 2022-07-26.
 
-[^220726-2]:
+[^220726-2]: 
     [St Neots Museum](https://www.stneotsmuseum.org.uk/)
     "[Unicorns – a brief history](https://www.stneotsmuseum.org.uk/articles/unicorns-a-brief-history/)"
     Dated: 2021-04-08. Last Viewed: 2022-07-26.
 
-[^220726-3]:
+[^220726-3]: 
     [St Neots Museum](https://www.stneotsmuseum.org.uk/)
     "[Unicorns – a brief history](https://www.stneotsmuseum.org.uk/articles/unicorns-a-brief-history/)"
     Dated: 2021-04-08. Last Viewed: 2022-07-26.
 
-[^220726-4]:
+[^220726-4]: 
     [St Neots Museum](https://www.stneotsmuseum.org.uk/)
     "[Unicorns – a brief history](https://www.stneotsmuseum.org.uk/articles/unicorns-a-brief-history/)"
     Dated: 2021-04-08. Last Viewed: 2022-07-26.
 
-[^220726-5]:
+[^220726-5]: 
     [St Neots Museum](https://www.stneotsmuseum.org.uk/)
     "[Unicorns – a brief history](https://www.stneotsmuseum.org.uk/articles/unicorns-a-brief-history/)"
     Dated: 2021-04-08. Last Viewed: 2022-07-26.
 
-[^220726-6]:
+[^220726-6]: 
     Ms. Judith Tarr.
     "[SFF Bestiary Considers the Unicorn](https://www.tor.com/2022/07/25/sff-bestiary-considers-the-unicorn/)"
     Published: 2022-07-25. Last Viewed: 2022-07-26.

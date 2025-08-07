@@ -11,12 +11,12 @@ Just how old is [Professor McGonagall][McGonagall]? Has she worked at
 [Hogwarts]: /Harrypedia/Hogwarts/
 [McGonagall]: /Harrypedia/people/McGonagall/Minerva/
 
-[^231003-2]:
+[^231003-2]: 
     Mrs. J. K. Rowling.
     [Harry Potter and the Order of the Phoenix]
     location 4720. © 2003
 
-[^231003-3]:
+[^231003-3]: 
     Mrs. J. K. Rowling.
     [Fantastic Beasts: The Crimes of Grindelwald]
     Page 137. Text copyright © 2018 Published by

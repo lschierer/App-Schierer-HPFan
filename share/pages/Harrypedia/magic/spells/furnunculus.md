@@ -14,7 +14,7 @@ Charm
 
 Documented as [Dark Magic][], this causes a person to break out in boils/pimples when it came in contact with their skin.
 
-[Dark Magic]: ../../dark/
+[Dark Magic]: ../dark/
 
 insert description
 

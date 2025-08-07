@@ -13,25 +13,25 @@ Is [Amelia][] a traditionalist even if she also believes in justice?[^210701-2]
 Or is [Amelia][] fairly broad minded?[^210701-3]
 
 [Susan]: susan/
-[Riddle]: <../Riddle/Tom Marvolo/>
+[Riddle]: <Riddle/Tom Marvolo/>
 [Amelia]: amelia_susan/
 [ClassLists]: /Harrypedia/Hogwarts/class_lists/
-[Culture]: ../../culture/
+[Culture]: ../culture/
 
-[^210701-3]:
+[^210701-3]: 
     This view of [Amelia] is shown in Fibinaci's _[Padfoot, Docteur
     D'amour](https://www.fanfiction.net/s/4510080)_.
 
-[^210701-2]:
+[^210701-2]: 
     This idea puts [Susan] at odds with her [aunt][Amelia] in VonPelt's _[Her
     Finest Hour](https://www.fanfiction.net/s/13654352/1/Her-Finest-Hour)_.
 
-[^210701-1]:
+[^210701-1]: 
     I do not think you can advance _that high_ in the Ministry without
     influence. That might be political influence, familial influence, or the
     kind you get from knowing everyone's dirty laundry.
 
-[^210519-10]:
+[^210519-10]: 
     Mrs. J. K. Rowling. _Harry Potter and the Order of the Phoenix_
     Locations 0075-0076. Pottermore Limited © 2005. American Kindle Edition.
 

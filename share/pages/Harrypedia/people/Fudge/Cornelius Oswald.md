@@ -1,12 +1,12 @@
 - Fudge was Junior Minister in the Department of Magical Catastrophes in November of 1981.[^220906-1]
 - Elected Minister of Magic in 1990.[^220906-2]
 
-[^220906-2]:
+[^220906-2]: 
     Mrs. J. K. Rowling.
     "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
     [The J.K. Rowling Index](https://www.rowlingindex.org) 2014-10-31.
 
-[^220906-1]:
+[^220906-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Prisoner of Azkaban](https://www.librarything.com/work/2742161)_
     © 2000 Pottermore Limited. American Kindle Edition. p 208.
@@ -45,7 +45,7 @@ trial. Except that a trial did not happen. Fudge _probably_ rode his
 "capture" of the "infamous" [Sirius Black][SB] in his upward climb that
 resulted in his election to Minister of Magic.
 
-[^220906-3]:
+[^220906-3]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Prisoner of Azkaban](https://www.librarything.com/work/2742161)_
     © 2000 Pottermore Limited. American Kindle Edition. p 208.

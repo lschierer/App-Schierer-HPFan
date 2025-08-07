@@ -46,7 +46,7 @@ attacking [Snape].[^230804-2]
 
 [Dark Magic]: /Harrypedia/magic/dark/
 
-[^230804-2]:
+[^230804-2]: 
     In \_[Breaking Assumptions], the author presents an alternative theory,
     [Snape] may have been the instigator for the rocky relationship from the very
     begining. [James]' pranks on [Snape] may, at first, have had nothing to do
@@ -55,17 +55,17 @@ attacking [Snape].[^230804-2]
 
 [Breaking Assumptions]: https://www.fanfiction.net/s/8678515
 
-[^221206-1]:
+[^221206-1]: 
     Ms. Melissa Anelli and Mrs. J. K. Rowling.
     "[J.K. Rowling Web Chat Transcript][LCRWC]"
     [The Leaky Cauldron](http://www.the-leaky-cauldron.org) 2007-07-30
 
-[^221206-5]:
+[^221206-5]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows](https://www.librarything.com/work/3577382/book/225886820)_
     p. 279. Pottermore Publishing. American Kindle Edition.
 
-[^221206-4]:
+[^221206-4]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix](https://www.librarything.com/work/115/book/225886709)_
     Kindle Locations 9396-9398. Pottermore Limited. American Kindle Edition.
@@ -76,7 +76,7 @@ attacking [Snape].[^230804-2]
 
 [Draco]: </Harrypedia/people/Malfoy/Draco Lucius/>/
 
-[^221206-2]:
+[^221206-2]: 
     Anelli, Melissa and Emerson Spartz.
     "[The Leaky Cauldron and MuggleNet interview Joanne Kathleen Rowling: Part Two][LCMIp2]"
     [Accio Quote](http://www.accio-quote.org/), 2005-07-16

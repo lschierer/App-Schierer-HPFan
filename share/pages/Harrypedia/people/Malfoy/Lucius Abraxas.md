@@ -1,4 +1,3 @@
-### Analysis
 
 ### Mini Rant about not understanding the character
 
@@ -24,7 +23,6 @@ villain.
 - Lucius _had_ the diary because [Riddle][] considered him a reliable and dedicated death eater.
 - Lucius spends the last battle mostly standing on the sidelines as a sycophant, before, in the last mad scramble, frantically looking for his son.
 
-### Analysis
 
 This last bullet point comes after [Riddle] has spent much of book seven
 threatening Lucius' life, health, social position, and family. In other words,
@@ -50,7 +48,7 @@ just know that he _wants to be._ This man is very much the grandchild (with
 however many greats inserted) of the man of whom Mrs. Rowling implies a plot to
 seduce Queen Elizabeth and thus take over the throne of England.[^230104-1]
 
-[^230104-1]:
+[^230104-1]: 
     Mrs. J. K. Rowling. "[The Malfoy Family][]"
     _[The J.K. Rowling Index][]_ 2012-07-10.
 

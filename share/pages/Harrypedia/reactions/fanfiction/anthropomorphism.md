@@ -12,13 +12,13 @@ One possibility is that the animal gets a boost to its ability _while the person
 [Sirius]: </Harrypedia/people/Black/Sirius III/>/
 [Azkaban]: /Harrypedia/azkaban/
 
-[^240327-4]:
+[^240327-4]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Prisoner of Azkaban]_
     Bloomsbury Publishing PLC (2004),
     page 372.
 
-[^240327-5]:
+[^240327-5]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Prisoner of Azkaban]_
     Bloomsbury Publishing PLC (2004),

@@ -1,6 +1,5 @@
 Despite being nearly universally portrayed as a pure-blood in fan fiction, she is in fact a half-blood who grew up in the mundane world. She should be familiar with early 19th century fashion, customs and technology.
 
-### Analysis
 
 I really want to like Professor McGonagall, but so much that happens at
 [Hogwarts] is troubling that I am conflicted about her. She is, in some ways,
@@ -31,12 +30,12 @@ the Headmaster was absent? Keep in mind, we are told that she is doing this of
 on her own initiative, as she was "not inducted into the Order of the Phoenix
 during Voldemort's first climb to power."[^220927-6]
 
-[^220927-5]:
+[^220927-5]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Sorcerer's Stone](https://www.librarything.com/work/5403381/book/225886281)_
     © 2004 Pottermore Limited. American Kindle Edition. page 13.
 
-[^220927-6]:
+[^220927-6]: 
     Mrs. J. K. Rowling.
     \_[Short Stories From Hogwarts of Heroism, Hardship, and Dangerous Hobbies](https://www.librarything.com/work/18275508/book/226231606)
     © 2016 Pottermore Limited. American Kindle Edition. page 17.
@@ -181,73 +180,73 @@ incorporating non-magical classes no matter how needed or useful they might be.
 [WMFA1]: https://www.fanfiction.net/s/4175909
 [TBoB]: https://www.fanfiction.net/s/5435295
 
-[^220729-2]:
+[^220729-2]: 
     Darth Mars.
     _[The Bonds of Blood][TBoB]_
     "[Chapter Twenty-Five: Glow In The Dark](https://www.fanfiction.net/s/5435295/25/The-Bonds-of-Blood)"
     Published: 2009-10-11. Updated: 2011-01-15. Last Viewed: 2022-07-29.
 
-[^211103-1]:
+[^211103-1]: 
     [The Harry Potter Lexicon](https://www.hp-lexicon.org/)
     "[Timelines > McGonagall](https://www.hp-lexicon.org/timeline/character-timelines/McGonagall/)"
     © 2000-2021. Last Viewed 2021-11-03.
 
-[^210922-2]:
+[^210922-2]: 
     Worldmaker.
     _[Furious Angels](https://www.fanfiction.net/s/4175909)_
     [Chapter 16](https://www.fanfiction.net/s/4175909/16/Furious-Angels)
     Published: 2008-04-04. Updated: 2009-09-28.
 
-[^210504-2]:
+[^210504-2]: 
     Mrs. J. K. Rowling. _Harry Potter and the Sorcerer's Stone_
     p. 245. Pottermore Limited. American Kindle Edition.
 
-[^210429-1]:
+[^210429-1]: 
     Mrs. J. K. Rowling. _Harry Potter and the Sorcerer's Stone_
     p. 243. Pottermore Limited. American Kindle Edition.
 
-[^210429-2]:
+[^210429-2]: 
     Mrs. J. K. Rowling. _Harry Potter and the Sorcerer's Stone_
     p. 240. Pottermore Limited. American Kindle Edition.
 
-[^210429-3]:
+[^210429-3]: 
     Mrs. J. K. Rowling. _Harry Potter and the Order of the Phoenix_
     paraphrased from Kindle Location 3669. Pottermore Limited. American Kindle Edition.
 
 [dmffan]: https://deluded-musings.fanficauthors.net
 
-[^210322-2]:
+[^210322-2]: 
     Aealket.
     _[When Is It a Contract](https://www.fanfiction.net/s/7382549)_ Published 2011-09-14.
 
 [WIIAC]: https://www.fanfiction.net/s/7382549
 
-[^190823-1]:
+[^190823-1]: 
     [The Board](https://deluded-musings.fanficauthors.net/The_Board/The_Board/)
     Last viewed 2019-08-23.
 
-[^200720-7]:
+[^200720-7]: 
     Mrs. J. K. Rowling.
     "[Professor McGonagall](https://www.wizardingworld.com/writing-by-jk-rowling/professor-mcgonagall)"
     [Wizarding World](https://www.wizardingworld.com/) Originally published
     2015-08-10. Last Viewed 2020-07-20.
 
-[^200720-8]:
+[^200720-8]: 
     Mrs. J. K. Rowling. _Harry Potter and the Order of the Phoenix_
     (Kindle Location 4721). Pottermore Limited. American Kindle Edition.
 
-[^211018-1]:
+[^211018-1]: 
     [Harry Potter Wiki](https://harrypotter.fandom.com/wiki)
     "[Newton Scamander](https://harrypotter.fandom.com/wiki/Newton_Scamander)"
     Last Edited: 2021-10-16. Last Viewed: 2021-10-18.
 
-[^211018-2]:
+[^211018-2]: 
     Mrs. J. K. Rowling.
     _[Fantastic Beasts - The Crimes of Grindelwald: The Original
     Screenplay](https://www.goodreads.com/book/show/39330961-fantastic-beasts---the-crimes-of-grindelwald)_
     page 139. © 2018 Pottermore Publishing. American Kindle Edition.
 
-[^211018-3]:
+[^211018-3]: 
     Frankly, while I have accepted some character names from
     the Fantastic Beasts movies, this is just yet another example why I am
     highly selective about using them at all.

@@ -1,2 +1,8 @@
+% my $generated_index = stash('generated_index') // undef;
 
 <%== $content %>
+
+<% if(defined $generated_index) { %>
+  <% stash(entries => $generated_index); %>
+  %= include 'partials/directory-list'
+<% } %>

@@ -60,7 +60,7 @@ are not made more aware of it.[^221216-1]
 
 [Mental Shields]: </Harrypedia/magic/The_Mind_Arts/Mental Shields/>
 
-[^20191119-9]:
+[^20191119-9]: 
     Mrs. J. K. Rowling. _Harry Potter and the Order of
     the Phoenix_. Better citation needed here.
 
@@ -80,13 +80,13 @@ are not made more aware of it.[^221216-1]
     - JadeSeraph. _[Soul Nexus](https://www.fanfiction.net/s/3577157)_ Published 2007-06-05. Updated: 2008-08-27.
     - Matthew Schooke. _[Harry Potter and the Nightmares of Futures Past](https://github.com/IntermittentlyRupert/hpnofp-ebook)_ Updated: 2022-04-24.
 
-[^20200630-8]:
+[^20200630-8]: 
     Kelly West.
     "[A Key Difference Between Snape And Queenie's Abilities, According to JK
     Rowling](https://www.cinemablend.com/news/1604520/a-key-difference-between-snape-and-queenies-abilities-according-to-jk-rowling)"
     [Cinema Blend](https://www.cinemablend.com/) 2016-12-26. Last Viewed 2020-06-30.
 
-[^20200630-9]:
+[^20200630-9]: 
     https://harrypotter.fandom.com/.
     "[Legilimency](https://harrypotter.fandom.com/wiki/Legilimency)" Last
     Viewed 2020-06-30. Note the article's text only mentions one clear cut

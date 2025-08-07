@@ -59,7 +59,7 @@ In a world where magical contracts can in fact be binding, I can see how laws _m
     - kb0. _[Harry Potter: Air Elemental](https://www.fanfiction.net/s/11995519/1)_
       Published: 2016-06-12. Updated: 2019-02-28.
 
-[^240315-1]:
+[^240315-1]: 
     I initially thought this story fit, but it doesn't, [Molly] starts out irrational (which is probably what I remembered), and then [Ginny] does the jealous fan girl thing.
 
     - [WolfgangNH](https://archiveofourown.org/users/WolfgangNH/pseuds/WolfgangNH).
@@ -74,7 +74,7 @@ In a world where magical contracts can in fact be binding, I can see how laws _m
 
 [The Harry Potter Lexicon]: https://www.hp-lexicon.org
 
-[^240313-3]:
+[^240313-3]: 
     works that influence my thoughts on this include, but are not limited to:
 
     - Aealket. _[When is it a Contract](https://www.fanfiction.net/s/7382549)_
@@ -88,14 +88,14 @@ In a world where magical contracts can in fact be binding, I can see how laws _m
 
 [cbsmith17]: https://www.fanfiction.net/u/14755259/cbsmith17
 
-[^240313-4]:
+[^240313-4]: 
     Mrs. J. K. Rowling.
     _[Short Stories from Hogwarts of Power, Politics and Pesky Poltergeists]_
     Pottermore Publishing © 2016. page 7.
 
 [Short Stories from Hogwarts of Power, Politics and Pesky Poltergeists]: https://www.librarything.com/work/18275514
 
-[^240313-5]:
+[^240313-5]: 
     [Wikipedia].
     "[Marriage settlement (England)](<https://en.wikipedia.org/wiki/Marriage_settlement_(England)>)"
     Last Edited: 2023-11-08. Last Viewed: 2024-03-13.

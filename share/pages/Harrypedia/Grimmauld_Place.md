@@ -38,22 +38,22 @@ god-child is expected and natural.
 [Dorea]: /Harrypedia/people/Black/Dorea/
 [Harry Potter Wiki]: https://harrypotter.fandom.com/wiki
 
-[^211020-4]:
+[^211020-4]: 
     [Harry Potter Wiki](https://harrypotter.fandom.com/wiki)
     "[12 Grimmauld Place](https://harrypotter.fandom.com/wiki/12_Grimmauld_Place)"
     Last Edited: 2021-10-12. Last Viewed: 2021-10-20.
 
-[^211020-3]:
+[^211020-3]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix](https://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix)_
     Kindle Locations 1209,1214-1215,1219-1220. © 2005 Pottermore Limited. American Kindle Edition.
 
-[^211020-2]:
+[^211020-2]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix](https://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix)_
     Kindle Location 1705. © 2005 Pottermore Limited. American Kindle Edition.
 
-[^211020-1]:
+[^211020-1]: 
     Ms. Amy Holland and Mr. Steve VanderArk.
     "[Number Twelve Grimmauld
     Place](https://www.hp-lexicon.org/place/great-britain-united-kingdom/england/london/grimmauld-place/number-twelve-grimmauld-place/)"
@@ -71,7 +71,7 @@ Portrait in some way, given it cannot be moved?
 - She may have bound her soul to it in a pseudo-[horcrux]y
   way.[^211020-7] This may give it some of the same protections from harm.
 
-[^211020-7]:
+[^211020-7]: 
     CmptrWz.
     _[For Want of an Outfit](https://archiveofourown.org/works/28507302)_
     "[Chapter 28: Year 2 - Chapter 10](https://archiveofourown.org/works/28507302/chapters/78741424)"
@@ -79,11 +79,11 @@ Portrait in some way, given it cannot be moved?
 
 [horcrux]: /Harrypedia/magic/dark/Horcruxes/
 
-[^211020-6]:
+[^211020-6]: 
     others came up with this idea first. Document them if I re-find
     them.
 
-[^211020-5]:
+[^211020-5]: 
     intromit.
     _[Harry Potter And Fate's
     Debt](https://www.siye.co.uk/siye/viewstory.php?sid=11253)_

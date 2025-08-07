@@ -23,17 +23,17 @@ If [Snape] _was_ \*_actually_ quite fallen in his younger years, we do not _actu
 [Harry Potter and the Prisoner of Azkaban]: https://www.librarything.com/work/2742161
 [book seven]: https://www.librarything.com/work/3577382
 
-[^240130-1]:
+[^240130-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Prisoner of Azkaban]_
     p. 363, location 4403 of 5714. Pottermore Limited. American Kindle Edition.
 
-[^240130-2]:
+[^240130-2]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Prisoner of Azkaban]_
     Location 2551 of 5714. Pottermore Limited. American Kindle Edition.
 
-[^240130-3]:
+[^240130-3]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Prisoner of Azkaban]_
     284 Location 3556 of 5714. Pottermore Limited. American Kindle Edition.

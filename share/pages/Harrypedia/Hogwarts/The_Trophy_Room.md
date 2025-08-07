@@ -17,7 +17,7 @@ science fairs.
 
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>/
 
-[^20210520-1]:
+[^20210520-1]: 
     FMPtrumpets.
     _[How is this My Life?](https://archiveofourown.org/works/31033985)_
     [Chapter 11: the Midnight Duel](https://archiveofourown.org/works/31033985/chapters/77703686)  

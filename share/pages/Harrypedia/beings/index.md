@@ -24,7 +24,7 @@ sentient, it is the _right_ definition.
 
 [^211111-1]: document some animal/vegitable grey area
 
-[^211111-2]:
+[^211111-2]: 
     [Harry Potter Wiki](https://harrypotter.fandom.com/wiki)
     "[Being](https://harrypotter.fandom.com/wiki/Being)"
     Last Edited: 2020-10-03. Last Viewed: 2021-11-11.

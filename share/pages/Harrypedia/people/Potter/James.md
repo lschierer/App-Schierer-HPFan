@@ -1,4 +1,3 @@
-## Analysis
 
 James Potter is one of the more controversial figures in the Harry Potter
 series. There is so little information about him, that both fan fiction authors
@@ -166,193 +165,193 @@ If either or both of these is true, James might well have been something of a pe
 
 [^240422-3]: this is a really tempting tangent, but this page isn't about [Dumbledore].
 
-[^210629-3]:
+[^210629-3]: 
     Ian Hycrest.
     _[Harry Potter and the Hands of Justice](https://www.fanfiction.net/s/13374289)_
     [Chapter 10](https://www.fanfiction.net/s/13374289/11/Harry-Potter-and-the-Hands-of-Justice)
     Published: 2019-08-27. Updated: 2020-01-14. Last Viewed: 2021-06-29.
 
-[^210629-2]:
+[^210629-2]: 
     Mrs. J. K. Rowling.
     _[Short Stories from Hogwarts of Power, Politics and Pesky Poltergeists](https://www.goodreads.com/book/show/31538614-short-stories-from-hogwarts-of-power-politics-and-pesky-poltergeists)_
     p. 34. Pottermore Publishing. American Kindle Edition.
 
-[^210511-3]:
+[^210511-3]: 
     Mrs. J. K. Rowling.
     "[Wand Woods](https://www.wizardingworld.com/writing-by-jk-rowling/wand-woods)"
     Originally published on Pottermore on 2015-08-10. Last Viewed 2021-05-11.
 
-[^210511-2]:
+[^210511-2]: 
     Mrs. J. K. Rowling. _Harry Potter and the Prisoner of Azkaban_
     p. 357. Pottermore Limited. American Kindle Edition.
 
-[^210511-1]:
+[^210511-1]: 
     Mrs. J. K. Rowling.
     "[The Potter Family](https://www.wizardingworld.com/writing-by-jk-rowling/the-potter-family)"
     Originally published on Pottermore on 2015-09-21. Last Viewed 2021-05-11.
 
-[^210318-7]:
+[^210318-7]: 
     The Sorting Hat says that Slytherins will use any means, and we
     have proven they will use magic that will potentially maim and kill, so
     larceny is hardly a stretch.
 
-[^210318-6]:
+[^210318-6]: 
     Mrs. J. K. Rowling. _Harry Potter and the Prisoner of Azkaban_
     p. 354. Pottermore Limited. American Kindle Edition.
 
-[^210318-5]:
+[^210318-5]: 
     CmptrWz. _[For Want of an Outfit](https://archiveofourown.org/works/28507302)_.
     [Chapter 10](https://archiveofourown.org/works/28507302/chapters/73098891)
     [Archive of Our Own](https://archiveofourown.org/).
     Published: 2021-01-02. Updated: 2021-03-12. Last Viewed: 2021-03-18.
 
-[^210318-4]:
+[^210318-4]: 
     Mrs. J. K. Rowling. _Harry Potter and the Prisoner of Azkaban_
     p. 347. Pottermore Limited. American Kindle Edition.
 
-[^210128-29]:
+[^210128-29]: 
     Mrs. J. K. Rowling. "[The Potter Family](https://web.archive.org/web/20190331103342/https://www.pottermore.com/writing-by-jk-rowling/the-potter-family)"
     Archived version of [Pottermore](https://www.pottermore.com), archived 2019-03-31. Last Viewed 2021-01-28.
 
-[^210128-28]:
+[^210128-28]: 
     Wizarding World characters, names and related indicia are ™ and © of Warner Bros. Entertainment Inc. All rights reserved.
     Archived version of [Pottermore](https://www.pottermore.com), article [In defense of young James Potter](https://web.archive.org/web/20190405052528/https://www.pottermore.com/features/in-defence-of-young-james-potter), archived 2019-041-05. Last Viewed 2021-01-28.
 
-[^210128-27]:
+[^210128-27]: 
     Wizarding World characters, names and related indicia are ™ and © of Warner Bros. Entertainment Inc. All rights reserved.
     Archived version of [Pottermore](https://www.pottermore.com), article [In defense of young James Potter](https://web.archive.org/web/20190405052528/https://www.pottermore.com/features/in-defence-of-young-james-potter), archived 2019-041-05. Last Viewed 2021-01-28.
 
-[^210128-25]:
+[^210128-25]: 
     Wizarding World characters, names and related indicia are ™ and © of Warner Bros. Entertainment Inc. All rights reserved.
     Archived version of [Pottermore](https://www.pottermore.com), article on [James Potter](https://web.archive.org/web/20190108143612/https://www.pottermore.com/explore-the-story/james-potter), archived 2019-01-08. Last Viewed 2021-01-28.
 
-[^210128-26]:
+[^210128-26]: 
     Wizarding World characters, names and related indicia are ™ and © of Warner Bros. Entertainment Inc. All rights reserved.
     Archived version of [Pottermore](https://www.pottermore.com), article on [James Potter](https://web.archive.org/web/20190108143612/https://www.pottermore.com/explore-the-story/james-potter), archived 2019-01-08. Last Viewed 2021-01-28.
 
-[^230628-1]:
+[^230628-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Sorcerer's Stone]_
     p. 82. Pottermore Limited. American Kindle Edition.
 
 [Harry Potter and the Sorcerer's Stone]: https://www.librarything.com/work/5403381/book/225886281
 
-[^210920-1]:
+[^210920-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows]_
     p. 277. Pottermore Publishing. American Kindle Edition.
 
-[^210128-24]:
+[^210128-24]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows]_ p. 277 Location 8526 of 9604.
     Pottermore Publishing. American Kindle Edition.
 
-[^210128-23]:
+[^210128-23]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows]_ p. 135 Location 4200 of 9604.
     Pottermore Publishing. American Kindle Edition.
 
-[^210128-22]:
+[^210128-22]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows]_ p. 73 Location 2312 of 9604.
     Pottermore Publishing. American Kindle Edition.
 
-[^210128-21]:
+[^210128-21]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Prisoner of Azkaban_ pp. 424-425 Location 5332 of 5714.
     Pottermore Limited. American Kindle Edition.
 
-[^210128-20]:
+[^210128-20]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Prisoner of Azkaban_ p. 357 Location 4454 of 5714.
     Pottermore Limited. American Kindle Edition.
 
-[^210128-18]:
+[^210128-18]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Half-Blood Prince_ p. 280 Location 4277 of 8473.
     Pottermore Publishing. American Kindle Edition.
 
-[^210128-17]:
+[^210128-17]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Half-Blood Prince_ p. 202 Location 3069 of 8473.
     Pottermore Publishing. American Kindle Edition.
 
-[^210629-4]:
+[^210629-4]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Order of the Phoenix_ Kindle Locations 9822-9830 of 13038.
     Pottermore Limited. American Kindle Edition.
 
-[^210128-16]:
+[^210128-16]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Order of the Phoenix_ Kindle Locations 9822-9830 of 13038.
     Pottermore Limited. American Kindle Edition.
 
-[^210128-15]:
+[^210128-15]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Order of the Phoenix_ Kindle Locations 9500-9501 of 13038.
     Pottermore Limited. American Kindle Edition.
 
-[^210128-14]:
+[^210128-14]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Order of the Phoenix_ Kindle Locations 9497-9499 of13038.
     Pottermore Limited. American Kindle Edition.
 
-[^210128-13]:
+[^210128-13]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Order of the Phoenix_ Kindle Locations 9487-9493 of 13038.
     Pottermore Limited. American Kindle Edition.
 
-[^210128-12]:
+[^210128-12]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Order of the Phoenix_ Kindle Locations 9461-9464 of 13038.
     Pottermore Limited. American Kindle Edition.
 
-[^210128-11]:
+[^210128-11]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Order of the Phoenix_ Kindle Locations 9455-9457 of 13038.
     Pottermore Limited. American Kindle Edition.
 
-[^210128-10]:
+[^210128-10]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Order of the Phoenix_ Kindle Locations 4485-4486 of 13038.
     Pottermore Limited. American Kindle Edition.
 
-[^210128-3]:
+[^210128-3]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Prisoner of Azkaban_ p. 363, location 4403 of 5714.
     Pottermore Limited. American Kindle Edition.
 
-[^210128-4]:
+[^210128-4]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Sorcerer's Stone_ p. 152 location 1888 of 3996.
     Pottermore Limited. American Kindle Edition.
 
-[^210128-5]:
+[^210128-5]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Sorcerer's Stone_ p. 300 Location 3699 of 3996.
     Pottermore Limited. American Kindle Edition.
 
-[^210128-19]:
+[^210128-19]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Prisoner of Azkaban_ p. 204 Location 2551 of 5714.
     Pottermore Limited. American Kindle Edition.
 
-[^210128-6]:
+[^210128-6]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Prisoner of Azkaban_ p. 284 Location 3556 of 5714.
     Pottermore Limited. American Kindle Edition.
 
-[^210128-7]:
+[^210128-7]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Prisoner of Azkaban_ p. 284 Location 3556 of 5714.
     Pottermore Limited. American Kindle Edition.
 
-[^210128-8]:
+[^210128-8]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Prisoner of Azkaban_ p. 284 Location 3556 of 5714.
     Pottermore Limited. American Kindle Edition.
 
-[^210128-9]:
+[^210128-9]: 
     Mrs. J. K. Rowling.
     _Harry Potter and the Order of the Phoenix_ Kindle Locations 2536-2538 of 13038.
     Pottermore Limited. American Kindle Edition.

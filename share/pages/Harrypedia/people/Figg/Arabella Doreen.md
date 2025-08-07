@@ -35,7 +35,7 @@ possibilities:
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/>
 [Harry]: </Harrypedia/people/Potter/Harry James/>
 
-[^20210831-1]:
+[^20210831-1]: 
     This view is taken by r2r4l in
     _[Yet Another Harry Potter Goes To Hogwarts Story (YAHPGTHS)](<https://www.fan fiction.net/s/10789352>)_
     Published 2014-10-29. Updated: 2015-09-24. Last Viewed: 2021-08-31.

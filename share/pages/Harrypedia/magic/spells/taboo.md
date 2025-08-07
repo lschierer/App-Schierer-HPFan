@@ -31,7 +31,7 @@ _Why_ (for example) must one control the Ministry to set a Taboo?
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean/>
 [Ron]: </Harrypedia/people/Weasley/Ronald Bilius/>
 
-[^240212-1]:
+[^240212-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows]_
     Bloomsburg Publishing. © 2011. Page 161

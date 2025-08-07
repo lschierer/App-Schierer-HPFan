@@ -59,10 +59,10 @@ feel about it. Which is probably precisely the point.
 
 [^20210521-6]: Mr. Rudyard Kipling. _Stalky & Co._ better citation needed.
 
-[^20200811-1]:
+[^20200811-1]: 
     Mrs. J. K. Rowling. _Harry Potter and the Prisoner of
     Azkaban_. Pottermore. American Kindle Edition. Better citation needed.
 
-[^20200811-2]:
+[^20200811-2]: 
     Mrs. J. K. Rowling. I don't recall which book this is in.
     Better citation needed.

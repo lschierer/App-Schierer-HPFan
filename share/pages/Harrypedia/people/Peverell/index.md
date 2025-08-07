@@ -96,13 +96,13 @@ prideful ones, whereas the third brother acted in humility.[^20210226-2]
 
 [^20210226-2]: Mrs. J. K. Rowling. _Harry Potter and the Deathly Hallows_. Chapter 21. Approx Loc 5200 of 9604.
 
-[^20210304-1]:
+[^20210304-1]: 
     Mrs. J. K. Rowling. _Harry Potter and the Half-Blood Prince_ Chapter 10, p. 174. Pottermore
     Publishing. American Kindle Edition. Text copyright 2005.
 
 [^20210218-1]: kb0. _[Harry Potter and the Unexpected Power](https://www.fanfiction.net/s/9444812)_ [Chapter 5](https://www.fanfiction.net/s/9444812/5/Harry-Potter-and-the-Unexpected-Power) Updated: 2013-08-03; Published: 2013-07-01; Last Viewed: 2021-02-18.
 
-[^20210423-1]:
+[^20210423-1]: 
     Ms. Jeanne Kimsey.
     "[Cadmus Peverell](https://www.hp-lexicon.org/character/Peverell/-family/cadmus-peverell/)"
     [The Harry Potter Lexicon](https://www.hp-lexicon.org/) © 2000 – 2021. Last

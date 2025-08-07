@@ -52,37 +52,37 @@ apparently increases every year through out her teen years.[^220726-11] If the
 same is true of her bust size (which is awkward to google), then that may
 explain what the author was _trying_ to convey in my one example.
 
-[^220726-11]:
+[^220726-11]: 
     [HealthLine](https://www.healthline.com/)
     "[What Is the Average Waist Size for Women?](https://www.healthline.com/health/average-waist-size-for-women)"
     Last Medically Reviewed 2019-06-12. (their version of a copyright date). Last Viewed: 2022-07-26
 
-[^220726-8]:
+[^220726-8]: 
     kb0. _[The Lost Year](https://www.fanfiction.net/s/13815274)_
     [Chapter 4](https://www.fanfiction.net/s/13815274/4/The-Lost-Year)
     Published: 2021-02-09. Last Viewed: 2022-07-26
 
-[^220726-10]:
+[^220726-10]: 
     [Royal College of Peadiatrics and Child Health](https://www.rcpch.ac.uk/).
     "[GIRLS UK Growth chart 2-18 years](https://www.rcpch.ac.uk/sites/default/files/Girls_2-18_years_growth_chart.pdf)"
     © Copyright RCPCH 2012
 
-[^220726-9]:
+[^220726-9]: 
     [Royal College of Peadiatrics and Child Health](https://www.rcpch.ac.uk/).
     "[GIRLS UK Growth chart 2-18 years](https://www.rcpch.ac.uk/sites/default/files/Girls_2-18_years_growth_chart.pdf)"
     © Copyright RCPCH 2012
 
-[^220622-1]:
+[^220622-1]: 
     [Royal College of Peadiatrics and Child Health](https://www.rcpch.ac.uk/).
     "[BOYS UK Growth chart 2-18 years](https://www.rcpch.ac.uk/sites/default/files/Boys_2-18_years_growth_chart.pdf)"
     © Copyright RCPCH 2012
 
-[^220622-2]:
+[^220622-2]: 
     [Royal College of Peadiatrics and Child Health](https://www.rcpch.ac.uk/).
     "[BOYS UK Growth chart 2-18 years](https://www.rcpch.ac.uk/sites/default/files/Boys_2-18_years_growth_chart.pdf)"
     © Copyright RCPCH 2012
 
-[^220622-3]:
+[^220622-3]: 
     [Royal College of Peadiatrics and Child Health](https://www.rcpch.ac.uk/).
     "[BOYS UK Growth chart 2-18 years](https://www.rcpch.ac.uk/sites/default/files/Boys_2-18_years_growth_chart.pdf)"
     © Copyright RCPCH 2012. See the section on Predicting height based on

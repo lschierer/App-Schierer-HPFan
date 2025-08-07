@@ -1,4 +1,3 @@
-### Analysis
 
 There are two competing arguments for Charlie's birthday. I am currently foregoing
 Troels Forchhammer's "[The Age of the Weasleys][TAW]" in favor of Philip Legge's

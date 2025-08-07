@@ -10,7 +10,7 @@ Centaurs refused to be classified as [beings], insisting on being considered
 [beings]: /Harrypedia/beings/
 [animals]: /Harrypedia/animals/
 
-[^231003-1]:
+[^231003-1]: 
     Mrs. J. K. Rowling.
     [Fantastic Beasts and Where to Find Them: Illustrated edition]
     location 341. © 2018 Pottermore Publishing

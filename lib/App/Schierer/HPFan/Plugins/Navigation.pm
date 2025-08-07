@@ -93,7 +93,9 @@ package App::Schierer::HPFan::Plugins::Navigation {
   }
 
   sub _merge_or_add_item($level, $path, $new_item) {
+    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     if (exists $level->{$path}) {
+      $logger->debug("Merging item at path: $path");
       my $existing = $level->{$path};
 
       # If existing is a placeholder and new item has real content, upgrade it
@@ -124,13 +126,23 @@ package App::Schierer::HPFan::Plugins::Navigation {
       # If new item is placeholder but existing is real, keep existing
     }
     else {
+      $logger->debug(sprintf(
+      'Adding new item at path: %s,' .
+      ' raw_paths has %s before add. '.
+      'level reference: %s, '.
+      'level has %s before add.', $path, scalar keys %raw_paths, $level, scalar(keys %$level)));
       # New item
       $level->{$path} = $new_item;
+      $logger->debug(sprintf(
+      'Item added successfully at path: %s,', $path));
       $raw_paths{$path}++;
     }
   }
 
   sub _build_path_hierarchy($path, $item) {
+    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
+    $logger->debug("Building hierarchy for path: $path");
+
     my @segments      = grep { $_ ne '' } split '/', $path;
     my $current_level = \%nav_items_by_path;
     my $current_path  = '';
@@ -141,17 +153,26 @@ package App::Schierer::HPFan::Plugins::Navigation {
 
       if ($i == $#segments) {
         # This is the final segment - the actual item being added
+        $logger->debug(sprintf('Adding final item at path: "%s".  Current level reference: %s',
+          $current_path, $current_level));
         _merge_or_add_item($current_level, $current_path, $item);
         $raw_paths{$current_path}++ unless $item->{'_is_placeholder'};
       }
       else {
         # This is an intermediate parent - create placeholder if needed
         unless (exists $current_level->{$current_path}) {
+          $logger->debug("Creating placeholder for: $current_path");
           $current_level->{$current_path} =
             _create_placeholder_item($segments[$i], $current_path);
         }
         # Move to the children level
-        $current_level = $current_level->{$current_path}->{children};
+        if(exists $current_level->{$current_path}->{children}){
+          $current_level = $current_level->{$current_path}->{children};
+        } else {
+            # Create children hash if it doesn't exist
+            $current_level->{$current_path}->{children} = {};
+            $current_level = $current_level->{$current_path}->{children};
+        }
       }
     }
   }
@@ -259,9 +280,23 @@ package App::Schierer::HPFan::Plugins::Navigation {
 
     # Build the hierarchical structure using the web path
     _build_path_hierarchy($web_path, $web_item);
+    $logger->debug("Added to raw_paths: $web_path");
+    $logger->debug(sprintf('Tree structure now has: %s top-level items and %s per _count_tree_items.',
+    , scalar(keys %nav_items_by_path), _count_tree_items(\%nav_items_by_path)));
 
     return 1;
   }
+
+  sub _count_tree_items($items_hash) {
+      my $count = scalar keys %$items_hash;
+      foreach my $item (values %$items_hash) {
+          if ($item->{children} && %{$item->{children}}) {
+              $count += _count_tree_items($item->{children});
+          }
+      }
+      return $count;
+  }
+
 
   sub _titleize ($seg) {
     $seg =~ s/_/ /g;

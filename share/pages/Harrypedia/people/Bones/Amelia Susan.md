@@ -15,7 +15,7 @@ because [Fudge][] appears to be doing the job.[^221213-6] This does not speak
 well of her control over her department, her political influence, or the
 respect with which she might be held.
 
-[^221213-6]:
+[^221213-6]: 
     It is after all [Fudge][] who arrests [Hagrid][] and handles
     [Sirius][]' escape from Azkaban. Surely these would normally be the job of a
     Head of Magical Law Enforcement, not the equivalent of the Head of State and
@@ -27,22 +27,22 @@ respect with which she might be held.
 [Hagrid]: /Harrypedia/people/Hagrid/Rubeus/
 [Sirius]: </Harrypedia/people/Black/Sirius III/>
 
-[^221213-2]:
+[^221213-2]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix](https://www.librarything.com/work/115/book/225886709)_
     Bloomsbury UK (2003). Kindle Location 1856.
 
-[^221213-3]:
+[^221213-3]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix](https://www.librarything.com/work/115/book/225886709)_
     Bloomsbury UK (2003). Kindle Location 2067
 
-[^221213-4]:
+[^221213-4]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix](https://www.librarything.com/work/115/book/225886709)_
     Bloomsbury UK (2003). Kindle Locations 2103-2108
 
-[^221213-5]:
+[^221213-5]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix](https://www.librarything.com/work/115/book/225886709)_
     Bloomsbury UK (2003). Kindle Locations 2103-2104

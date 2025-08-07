@@ -64,19 +64,19 @@ Some fanfiction works that have built on this team:
 [Bill Weasley]: </Harrypedia/people/Weasley/William Arthur/>
 [Hogwarts]: /Harrypedia/Hogwarts/
 
-[^211102-1]:
+[^211102-1]: 
     Venquine1990.
     _[Dumbledore's Folly](https://www.fanfiction.net/s/13948448)_
     "[Chapter 11. Punishment In Mind - Part 02](https://www.fanfiction.net/s/13948448/11/Dumbledore-s-Folly)"
     Published: 2021-08-31. Updated: 2021-10-31. Last Viewed: 2021-11-02.
 
-[^211015-2]:
+[^211015-2]: 
     gredandforgerock.
     _[Remus Lupin: Savior](https://www.fanfiction.net/s/7013332)_
     [Chapter 8](https://www.fanfiction.net/s/7013332/8/Remus-Lupin-Savior)
     Published: 2011-05-22. Updated: 2021-10-15. Last Viewed: 2021-10-15.
 
-[^211015-1]:
+[^211015-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Sorcerer's Stone]_
     p. 51. © 1998 Pottermore Limited. American Kindle Edition.

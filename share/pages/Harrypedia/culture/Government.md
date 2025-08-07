@@ -10,19 +10,19 @@ author: Luke Schierer
 - Like the British Parliament, there is no fixed term.[^210330-7]
 - Elections at least once every seven years.[^210330-8]
 
-[^210330-6]:
+[^210330-6]: 
     Mrs. J. K. Rowling.
     "[Ministers for Magic](https://www.wizardingworld.com/writing-by-jk-rowling/ministers-for-magic)"
     [Wizarding World](https://www.wizardingworld.com/) Originally Published on
     Pottermore: 2015-08-10. Last Viewed: 2021-03-30
 
-[^210330-7]:
+[^210330-7]: 
     Mrs. J. K. Rowling.
     "[Ministers for Magic](https://www.wizardingworld.com/writing-by-jk-rowling/ministers-for-magic)"
     [Wizarding World](https://www.wizardingworld.com/) Originally Published on
     Pottermore: 2015-08-10. Last Viewed: 2021-03-30
 
-[^210330-8]:
+[^210330-8]: 
     Mrs. J. K. Rowling.
     "[Ministers for Magic](https://www.wizardingworld.com/writing-by-jk-rowling/ministers-for-magic)"
     [Wizarding World](https://www.wizardingworld.com/) Originally Published on
@@ -101,69 +101,69 @@ my statement that it contradicts the origin stories).
 
 [^210517-15]: See my notes on the [Potter] family.
 
-[^211007-1]:
+[^211007-1]: 
     Aaran St Vines.
     _["Great Scott, Potter, This is War!"][GSP1]_
     Posted: 2006-03-07. Updated: 2009-02-15. Last Viewed: 2021-10-07.
 
-[^211007-2]:
+[^211007-2]: 
     Aaran St Vines.
     _["Great Scott, Potter, This is War!"][GSP1]_
     [Chapter 15 - The Three-Thirty-Three Families](https://aaran-st-vines.fanficauthors.net/Great_Scott_Potter_This_is_War/Chapter_Fifteen__The_ThreeThirtyThree_Families/)
     Posted: 2007-04-29. Updated: 2009-02-15. Last Viewed: 2025-04-08.
 
-[^210329-11]:
+[^210329-11]: 
     Mrs. J. K. Rowling. _Harry Potter and the Deathly Hallows_
     p. 146. Pottermore Publishing. American Kindle Edition.
 
-[^210329-4]:
+[^210329-4]: 
     Mrs. J. K. Rowling. _Harry Potter and the Order of the Phoenix_
     Kindle Location 2063. Pottermore Limited. American Kindle Edition.
 
-[^210329-5]:
+[^210329-5]: 
     Mrs. J. K. Rowling. _Harry Potter and the Order of the Phoenix_
     Kindle Location 2133. Pottermore Limited. American Kindle Edition.
 
-[^210329-6]:
+[^210329-6]: 
     Mrs. J. K. Rowling. _Harry Potter and the Order of the Phoenix_
     Kindle Locations 2235-2236. Pottermore Limited. American Kindle Edition.
 
-[^210329-7]:
+[^210329-7]: 
     Mrs. J. K. Rowling. _Harry Potter and the Order of the Phoenix_
     Kindle Location 2271. Pottermore Limited. American Kindle Edition.
 
-[^210329-8]:
+[^210329-8]: 
     Find a reference to a fanfiction in which only some Wizengamot
     members make up the court. I know I read one in which it was a rotating
     subset.
 
-[^210329-9]:
+[^210329-9]: 
     Mrs. J. K. Rowling. _Harry Potter and the Order of the Phoenix_
     Kindle Location 2049. Pottermore Limited. American Kindle Edition.
 
-[^210329-10]:
+[^210329-10]: 
     Mrs. J. K. Rowling. _Harry Potter and the Order of the Phoenix_
     Kindle Location 2290-2291. Pottermore Limited. American Kindle Edition.
 
-[^210517-14]:
+[^210517-14]: 
     Mrs. J. K. Rowling.
     "[The Potter Family](https://www.wizardingworld.com/writing-by-jk-rowling/the-potter-family)"
     [Wizarding World](https://www.wizardingworld.com/) Originally Published on
     Pottermore: 2015-09-21. Last Viewed: 2021-03-30.
 
-[^210330-1]:
+[^210330-1]: 
     Mrs. J. K. Rowling.
     "[The Potter Family](https://www.wizardingworld.com/writing-by-jk-rowling/the-potter-family)"
     [Wizarding World](https://www.wizardingworld.com/) Originally Published on
     Pottermore: 2015-09-21. Last Viewed: 2021-03-30.
 
-[^210330-2]:
+[^210330-2]: 
     Mrs. J. K. Rowling.
     "[The Malfoy family](https://www.wizardingworld.com/writing-by-jk-rowling/the-malfoy-family)"
     [Wizarding World](https://www.wizardingworld.com/) Originally Published on
     Pottermore: 2015-08-10. Last Viewed: 2021-03-30.
 
-[^210330-9]:
+[^210330-9]: 
     Mrs. J. K. Rowling.
     "[Ministers for Magic](https://www.wizardingworld.com/writing-by-jk-rowling/ministers-for-magic)"
     [Wizarding World](https://www.wizardingworld.com/) Originally Published on

@@ -172,6 +172,18 @@ package App::Schierer::HPFan::Plugins::Markdown {
       $c->stash(markdown_content => $html_content);
     }
 
+    if ((
+        $c->stash('front_matter')
+        && exists $c->stash('front_matter')->{autoindex}
+      )
+      or $c->stash('autoindex')
+    ) {
+      my $directory       = $file_path->dirname;
+      my $generated_index = $c->app->generate_directory_index($directory);
+
+      $c->stash(generated_index => $generated_index);
+    }
+
     $logger->debug("finally decided on template $template");
     return $c->render(
       template => $template,

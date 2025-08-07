@@ -49,7 +49,7 @@ their tempers.
 [Legilimency]: /Harrypedia/magic/The_Mind_Arts/Legilimency/
 [Occlumency]: /Harrypedia/magic/The_Mind_Arts/Occlumency/
 
-[^20200716-4]:
+[^20200716-4]: 
     know-it-all-bookworm . _[Harry Potter and the Secrets He's
     Kept](https://www.fanfiction.net/s/4367211)_ Chapter 9.
     [FanFiction](https://www.fanfiction.net) Published 2008-07-03. Updated

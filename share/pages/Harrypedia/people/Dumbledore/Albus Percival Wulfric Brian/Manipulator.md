@@ -59,12 +59,12 @@ make the next removal harder (thus I think he _was_ in fact able to resist
 [Harry]: </Harrypedia/people/Potter/Harry James/>
 [AD1]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/>
 
-[^211203-1]:
+[^211203-1]: 
     Many works do this, but it can all be summarised with this one:
     KafkaExMachina. _[Divination is a Wooly Subject](https://www.fanfiction.net/s/5251162)_
     Published: 2009-07-26. Last Viewed: 2021-12-03.
 
-[^20210629-1]:
+[^20210629-1]: 
     Ian Hycrest.
     _[Harry Potter and the Hands of Justice](https://www.fanfiction.net/s/13374289)_
     [Chapter 2](https://www.fanfiction.net/s/13374289/2/Harry-Potter-and-the-Hands-of-Justice)

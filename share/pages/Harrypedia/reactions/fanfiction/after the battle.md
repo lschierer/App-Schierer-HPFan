@@ -31,12 +31,12 @@ In addition to the legitimate unanswered difficult questions that an author atte
 [Hogwarts]: /Harrypedia/Hogwarts//
 [Neville]: /Harrypedia/people/Longbottom/Neville/
 
-[^240424-4]:
+[^240424-4]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows]_
     better citation needed.
 
-[^240424-5]:
+[^240424-5]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows]_
     better citation needed.

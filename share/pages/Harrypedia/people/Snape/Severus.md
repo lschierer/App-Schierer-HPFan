@@ -1,4 +1,3 @@
-### Analysis
 
 One of Mrs. Rowling great themes across the Harry Potter series is the
 redeeming power of love. She is absolutely right to consider love one of the
@@ -70,7 +69,7 @@ _impressive_.[^221206-1]
 [swm]: /Harrypedia/people/Snape/Severus/swm/
 [James]: /Harrypedia/people/Potter/James/
 
-[^221206-1]:
+[^221206-1]: 
     Ms. Melissa Anelli and Mrs. J. K. Rowling.
     "[J.K. Rowling Web Chat Transcript][LCRWC]"
     [The Leaky Cauldron](http://www.the-leaky-cauldron.org) 2007-07-30
@@ -95,12 +94,12 @@ was not around.
 
 [sectumsempra]: /Harrypedia/magic/spells/sectumsempra/
 
-[^221220-4]:
+[^221220-4]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix][]_
     Pottermore Limited. American Kindle Edition. Kindle Locations 9824-9825.
 
-[^221220-5]:
+[^221220-5]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince][]_
     Pottermore Limited. American Kindle Edition. page 431.
@@ -120,7 +119,7 @@ needs no punishment for his actions prior to hearing the prophesy.[^221014-1] I
 cannot agree. He may have earned some clemency, but not full clemency, and not
 without a true trial. [Dumbledore][] is not God.
 
-[^221014-1]:
+[^221014-1]: 
     It is possible that I overstate Dumbledore's opinion, he may
     simply believe that Severus is too useful out of prison, and thus that it
     must be _as if_ the scales are balanced.
@@ -153,12 +152,12 @@ Sure enough, [Harry][], our hero, _does_ risk his life to save [Draco][],
 despite the enmity between them, despite the fact that [Draco][] has once again
 put everyone at risk by threatening the hunt in the Room of Requirement.
 
-[^211220-1]:
+[^211220-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows](https://www.librarything.com/work/3577382/book/225886820)_
     © 2007 Bloomsbury Publishing Plc. page 544.
 
-[^221014-2]:
+[^221014-2]: 
     Priya Ashok.
     _[Harry Potter and the Trip to the Past](https://www.fanfiction.net/s/3804374)_
     Updated 2014-12-29. Published: 2007-09-26.
@@ -183,8 +182,8 @@ out the way Snape was poorly dressed as proof, but this could be simply
 symptomatic of the same cluelessness of non-magical fashion we see in other
 magical characters coupled with their extreme poverty.
 
-[Tobias]: ../Tobias/
-[Eileen]: ../../prince/Eileen/
+[Tobias]: ./Tobias/
+[Eileen]: Prince/Eileen/
 
 Regardless, Severus is now, supposedly, a spy for [Dumbledore][]. How much does
 he know? Does he know that Pettigrew is a Death Eater? Does he know this
@@ -323,17 +322,17 @@ Oracle][ffnvo2]_.[^210603-1]
 [ffnvo2]: https://www.fanfiction.net/s/4627044/
 [lc1]: http://www.the-leaky-cauldron.org/features/essays/issue18/snapeandmalfoys/
 
-[^210603-1]:
+[^210603-1]: 
     BajaB. _[Veritas Oracle](https://www.fanfiction.net/s/4627044/)_
     [Chapter 4](https://www.fanfiction.net/s/4627044/4/Veritas-Oracle)
     Published 2008-10-31. Updated: 2010-12-14. Last Viewed: 2021-06-03.
 
-[^210601-1]:
+[^210601-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Goblet of Fire](https://www.goodreads.com/book/show/6.Harry_Potter_and_the_Goblet_of_Fire)_
     Kindle Location 7922. Pottermore Limited. American Kindle Edition. © 2003
 
-[^210523-2]:
+[^210523-2]: 
     On a side note, how much of Fudge's distrust of Harry is based on
     this episode, and how much is based on Rita Skeeter's articles across the
     tournament? Were Rita's articles in part possible _because_ of this
@@ -342,70 +341,70 @@ Oracle][ffnvo2]_.[^210603-1]
     Britain does seem like the sort of society that would blame a victim of such
     an attack.
 
-[^210523-1]:
+[^210523-1]: 
     Mrs. J. K. Rowling.
     _Short Stories from Hogwarts of Power, Politics, and Pesky Poltergeists_
     Pottermore Publishing © 2016. American Kindle Edition. Page 34.
     https://www.goodreads.com/book/show/31538614-short-stories-from-hogwarts-of-power-politics-and-pesky-poltergeists
 
-[^210517-6]:
+[^210517-6]: 
     Maja AKA Praxagora.
     "[Snape and the Malfoys](http://www.the-leaky-cauldron.org/features/essays/issue18/snapeandmalfoys/)"
     [The Leaky Cauldron](http://www.the-leaky-cauldron.org/) Last Viewed 2021-05-17.
 
-[^210510-3]:
+[^210510-3]: 
     Mrs. J. K. Rowling. _Harry Potter and the Prisoner of Azkaban_
     p. 358. Pottermore Limited. American Kindle Edition.
     https://www.goodreads.com/book/show/5.Harry_Potter_and_the_Prisoner_of_Azkaban
 
-[^210510-4]:
+[^210510-4]: 
     Mrs. J. K. Rowling. _Harry Potter and the Prisoner of Azkaban_
     p. 359. Pottermore Limited. American Kindle Edition.
     https://www.goodreads.com/book/show/5.Harry_Potter_and_the_Prisoner_of_Azkaban
 
-[^210510-5]:
+[^210510-5]: 
     Mrs. J. K. Rowling. _Harry Potter and the Prisoner of Azkaban_
     p. 360. Pottermore Limited. American Kindle Edition.
     https://www.goodreads.com/book/show/5.Harry_Potter_and_the_Prisoner_of_Azkaban
 
-[^210510-6]:
+[^210510-6]: 
     Mrs. J. K. Rowling. _Harry Potter and the Prisoner of Azkaban_
     p. 361. Pottermore Limited. American Kindle Edition.
     https://www.goodreads.com/book/show/5.Harry_Potter_and_the_Prisoner_of_Azkaban
 
-[^210412-6]:
+[^210412-6]: 
     Mrs. J. K. Rowling.
     "[Barnes and Noble & Yahoo! chat](http://www.accio-quote.org/articles/2000/1000-livechat-barnesnoble.html)"
     2000-10-20. Transcript on [Accio Quote](http://www.accio-quote.org/)
 
-[^200806-1]:
+[^200806-1]: 
     Mrs. J. K. Rowling. _Harry Potter and the Deathly Hallows_.
     Chapter 33. Pottermore. American Kindle Edition.
     https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows
 
-[^200806-2]:
+[^200806-2]: 
     Mrs. J. K. Rowling. _Harry Potter and the Deathly Hallows_.
     Chapter 33. Pottermore. American Kindle Edition.
     https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows
 
-[^200806-3]:
+[^200806-3]: 
     Mrs. J. K. Rowling. _Harry Potter and the Deathly Hallows_.
     Chapter 33. Pottermore. American Kindle Edition.
     https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows
 
-[^210106-1]:
+[^210106-1]: 
     Mrs. J. K. Rowling. _Harry Potter and the Deathly Hallows_.
     Chapter 33. Pottermore. American Kindle Edition.
     https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows
 
 [^210106-2]: citation needed.
 
-[^210106-3]:
+[^210106-3]: 
     Mrs. J. K. Rowling. _Harry Potter and the Deathly Hallows_.
     Chapter 33. Pottermore. American Kindle Edition.
     https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows
 
-[^210106-4]:
+[^210106-4]: 
     I am not the only one to pick up on this. there are a number of
     fan fictions on what happens after Snape [dies][SnapeDies].
 

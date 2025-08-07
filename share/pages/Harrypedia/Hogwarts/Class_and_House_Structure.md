@@ -94,18 +94,18 @@ novels, put nearly 250 students in a common room. _Something_, even if not the
 three common room split I propose above, has to be done to make [Hogwarts] work if
 you try to put it in context of a larger student body.
 
-[Hogwarts]: ../
+[Hogwarts]: ./
 [Stalky & Co.]: https://www.gutenberg.org/ebooks/3006
 [CDNN]: https://www.gutenberg.org/ebooks/967
 [BHBS1]: https://www.ourkids.net/school/brief-history-of-boarding
 [FBSU1]: https://britannia-study.com.my/school-type/famous-uk-boarding-schools
 
-[^210725-2]:
+[^210725-2]: 
     Our Kids™.
     "[A Brief History of Boarding Schools](https://www.ourkids.net/school/brief-history-of-boarding)"
     © 2020. [Our Kids](https://www.ourkids.net).
 
-[^210725-1]:
+[^210725-1]: 
     Our Kids™.
     "[A Brief History of Boarding Schools](https://www.ourkids.net/school/brief-history-of-boarding)"
     © 2020. [Our Kids](https://www.ourkids.net).

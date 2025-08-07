@@ -82,11 +82,11 @@ body, and dare not let anyone know that such a possession is possible, then
 **functionally** he ([Dumbledore][]) must act distrustful of [Harry][]. Others
 such as [McGonagall][] and [Sprout][] might well pick up on that distrust.
 
-[^231003-4]:
+[^231003-4]: 
     Mrs. J. K. Rowling. [Harry Potter and the Philosopher's Stone]
     page 243. Pottermore Limited. American Kindle Edition.
 
-[^221109-1]:
+[^221109-1]: 
     Mrs. J. K. Rowling
     _[Harry Potter and the Order of the Phoenix]_
     Kindle Locations 12116-12117. Pottermore Limited. Kindle Edition.
@@ -94,7 +94,7 @@ such as [McGonagall][] and [Sprout][] might well pick up on that distrust.
 [Book 5]: https://www.librarything.com/work/115/book/225886709
 [Perilous Journey]: https://www.fanfiction.net/s/8281675
 
-[^20210901-1]:
+[^20210901-1]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows]_
     p. 280. Pottermore Publishing. American Kindle Edition.
@@ -104,12 +104,12 @@ such as [McGonagall][] and [Sprout][] might well pick up on that distrust.
 [Harry Potter and the Philosopher's Stone]: https://www.librarything.com/work/5403381/
 [Harry Potter and the Goblet of Fire]: https://www.librarything.com/work/113/
 
-[^20210901-2]:
+[^20210901-2]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Goblet of Fire]_
     better citation needed.
 
-[^20210901-3]:
+[^20210901-3]: 
     Bear12. _[Harry Potter: Lost][B12HPL2]_
     Published 2009-09-10. Updated: 2009-11-02. Last Viewed: 2021-09-01.
 

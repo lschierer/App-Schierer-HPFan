@@ -15,37 +15,37 @@ pulled from school because her mother is killed in an attack by either
 [Riddle] or his Death Eaters.[^211004-14] Lastly, we know she fought in the last battle.[^211004-15]
 
 [Hannah]: ./hannah/
-[Riddle]: <../Riddle/Tom Marvolo/>
-[Class_and_Blood]: ../../culture/Class_and_Blood/
+[Riddle]: <Riddle/Tom Marvolo/>
+[Class_and_Blood]: ../culture/Class_and_Blood/
 [Harry]: </Harrypedia/people/Potter/Harry James/>
-[Slytherin]: ../Slytherin/Salazar/
+[Slytherin]: Slytherin/Salazar/
 
-[^211004-15]:
+[^211004-15]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows](https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows)_
     p. 256. © 2007 Pottermore Publishing. Kindle Edition.
 
-[^211004-14]:
+[^211004-14]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince](https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince)_
     p. 186. © 2005 Pottermore Publishing. Kindle Edition.
 
-[^211004-13]:
+[^211004-13]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Goblet of Fire](https://www.goodreads.com/book/show/6.Harry_Potter_and_the_Goblet_of_Fire)_
     Kindle Locations 4823-4824. © 2003 Pottermore Limited. American Kindle Edition.
 
-[^211004-12]:
+[^211004-12]: 
     Mrs. J. K. Rowling.
     _[Harry Potter and the Chamber of Secrets](https://www.goodreads.com/book/show/15881.Harry_Potter_and_the_Chamber_of_Secrets)_
     p. 199. Pottermore Limited. American Kindle Edition.
 
-[^211004-11]:
+[^211004-11]: 
     [The Harry Potter Lexicon](https://www.hp-lexicon.org/)
     "[Abbott family](https://www.hp-lexicon.org/character/abbott-family/)"
     © 2000 – 2021. Last Viewed: 2021-10-04.
 
-[^211004-10]:
+[^211004-10]: 
     Mrs. J. K. Rowling.
     "[Pure-Blood](https://www.rowlingindex.org/work/pmpbl/)"
     [The J.K. Rowling Index](https://www.rowlingindex.org)

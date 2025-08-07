@@ -14,7 +14,7 @@ magical and non-magical cultures. They seem to have been influential with
 government leaders, but not actually part of the magical government, ever
 since.[^210330-5]
 
-[Longbottom]: ../longbottom
+[Longbottom]: longbottom
 
 On a side note, "Malfoy" is essentially "Bad faith" in French. I highly doubt
 that Mrs. Rowling intended this to have any real meaning except foreshadowing
@@ -35,13 +35,13 @@ school.[^210816-3] This overlap is probably the reason why some authors have
 chosen to state that [Lucius][] may have inherited the relationship with
 [Riddle][] rather than having fostered it.
 
-[Riddle]: <../Riddle/Tom Marvolo/>
+[Riddle]: <Riddle/Tom Marvolo/>
 [Lucius]: lucius_abraxas
-[History]: ../../History/
+[History]: ../History/
 
 [^210816-3]: I cannot exactly document a negative for this one.
 
-[^210816-2]:
+[^210816-2]: 
     Mrs. J. K. Rowling.
     "[The Malfoy family](https://www.wizardingworld.com/writing-by-jk-rowling/the-malfoy-family)"
     [Wizarding World](https://www.wizardingworld.com/) Originally Published on
@@ -52,34 +52,34 @@ chosen to state that [Lucius][] may have inherited the relationship with
 
 [^210816-1]: See my [History][] page.
 
-[^210421-2]:
+[^210421-2]: 
     Gemma Ethan Whitaker.
     _[Of Hopes and Dreams](https://www.fanfiction.net/s/8569969)_
     [Chapter 3](https://www.fanfiction.net/s/8569969/3/Of-Hopes-and-Dreams)
     Published: 2012-09-30. Updated: 2013-08-01.
 
-[^210421-1]:
+[^210421-1]: 
     As best I can tell, [Astoria][]'s illness comes from the abominable
     play that was written as a sequel to the books. I refuse to actually
     consider that cannon, but am using it here to highlight that my fiction is
     inherently compatible with Mrs. Rowling's creations.
 
-[^210330-3]:
+[^210330-3]: 
     Mrs. J. K. Rowling.
     "[The Malfoy family](https://www.wizardingworld.com/writing-by-jk-rowling/the-malfoy-family)"
     [Wizarding World](https://www.wizardingworld.com/) Originally Published on
     Pottermore: 2015-08-10. Last Viewed 2021-03-30.
 
-[^210330-4]:
+[^210330-4]: 
     Mrs. J. K. Rowling.
     "[The Malfoy family](https://www.wizardingworld.com/writing-by-jk-rowling/the-malfoy-family)"
     [Wizarding World](https://www.wizardingworld.com/) Originally Published on
     Pottermore: 2015-08-10. Last Viewed 2021-03-30.
 
-[^210330-5]:
+[^210330-5]: 
     Mrs. J. K. Rowling.
     "[The Malfoy family](https://www.wizardingworld.com/writing-by-jk-rowling/the-malfoy-family)"
     [Wizarding World](https://www.wizardingworld.com/) Originally Published on
     Pottermore: 2015-08-10. Last Viewed 2021-03-30.
 
-[Astoria]: ../Greengrass/Astoria/
+[Astoria]: Greengrass/Astoria/

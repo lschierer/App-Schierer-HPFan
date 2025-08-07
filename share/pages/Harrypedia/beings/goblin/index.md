@@ -23,7 +23,7 @@ One thing of note, that I found in reading other people's ideas on this series.
 > named a Cerberus Fluffy and does illegal "Harmless" crossbreeding, thought
 > Goblins were dangerous.[^221109-2]
 
-[^221109-2]:
+[^221109-2]: 
     LittenInAScarf.
     "[LF Fics where Hagrid's opinion on Goblins is relevant.](https://www.reddit.com/r/HPfanfiction/comments/yqwm5s/lf_fics_where_hagrids_opinion_on_goblins_is/?utm_source=share&utm_medium=web2x&context=3)"
     [reddit](https://www.reddit.com/). 2022-11-09.
