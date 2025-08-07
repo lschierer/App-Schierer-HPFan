@@ -1,3 +1,9 @@
+subtree-pull
+  git subtree pull --prefix=share/HPNOFP/ HPNOFP master
+
+subtree-pull
+  git subtree push --prefix=share/HPNOFP/ HPNOFP master
+
 tidy:
   find lib t -name '*.pm' -exec perltidy -b -pro=.perltidyrc {} \;
   perltidy -b -pro=.perltidyrc Build.PL
