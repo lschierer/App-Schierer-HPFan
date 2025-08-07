@@ -10,6 +10,8 @@ install:
   pnpm install
   perl Build.PL
   ./Build installdeps
+  mkdir -p public/images/HPNOFP
+  find share/HPNOFP/src/OEBPS/ \( -name '*.jpg' -o -name '*.gif' \) -exec cp "{}" public/images/HPNOFP/ \;
 
 css:
   pnpm build:css
@@ -18,6 +20,7 @@ ts:
   pnpm build:ts
 
 build: install css ts
+  ./Build manifest
   ./Build
 
 quickdev:

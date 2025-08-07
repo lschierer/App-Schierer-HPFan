@@ -1,0 +1,9 @@
+% my $title = stash('title');
+
+<%== $content->{html} %>
+
+<div class="copyright">
+  <span class="spectrum-Detail spectrum-Detail--sizeM">
+    This page copyright <%== $content->{author} // 'Luke Schierer' %>
+  </span>
+</div>

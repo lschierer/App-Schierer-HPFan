@@ -1,7 +1,7 @@
 ---
-title: "Fan Fiction"
+title: Fan Fiction
 author: Luke Schierer
-autoindex: 1
+
 ---
 
 # My Harry Potter Fan Fiction
@@ -18,4 +18,3 @@ more I realize that I lack the attention span and persistence to follow through
 on these to completion.  I have come to realize that this is primarily an exercise in my own amusement - and it does occassionally amuse me to work on one or more of them.  Thus there is no reason to post them anywhere else.
 
 [archive.org]: https://www.archive.org
----

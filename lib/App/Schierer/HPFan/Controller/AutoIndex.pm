@@ -37,7 +37,7 @@ package App::Schierer::HPFan::Controller::AutoIndex {
     # Register routes for each directory that needs auto-indexing
     while (my $dir_path = $iter->()) {
       $dir_path = Mojo::File->new($dir_path);
-      if(-e $dir_path->child('index.md')) {
+      if (-e $dir_path->child('index.md')) {
         $logger->debug("found index for dir_path $dir_path - skipping");
         next;
       }
@@ -50,8 +50,11 @@ package App::Schierer::HPFan::Controller::AutoIndex {
 
       $logger->info("Registering auto-index route for: '$web_path'");
 
-      $app->routes->get($web_path)
-        ->to(controller => 'AutoIndex', action => 'auto_index_handler', dir_path => "$dir_path");
+      $app->routes->get($web_path)->to(
+        controller => 'AutoIndex',
+        action     => 'auto_index_handler',
+        dir_path   => "$dir_path"
+      );
 
       # Add to navigation
       $app->add_navigation_item({
@@ -97,9 +100,11 @@ package App::Schierer::HPFan::Controller::AutoIndex {
 
     my @entries;
     my $distDir = $app->config('distDir');
-    if(not defined $distDir){
-      $logger->error("distDir is not defined while generating directory for $path");
-    } else {
+    if (not defined $distDir) {
+      $logger->error(
+        "distDir is not defined while generating directory for $path");
+    }
+    else {
       $logger->debug("discovered distDir $distDir from config");
     }
 
@@ -114,7 +119,10 @@ package App::Schierer::HPFan::Controller::AutoIndex {
         $name = join(' ', map { ucfirst lc } split ' ', $name);
         my $route = "$path/" . $child->basename;
         $route =~ s{$distDir/pages}{};
-        $logger->debug(sprintf('route "%s" for path "%s"', $route, "$path/" . $child->basename ));
+        $logger->debug(sprintf(
+          'route "%s" for path "%s"',
+          $route, "$path/" . $child->basename
+        ));
         push @entries,
           {
           title => $name,

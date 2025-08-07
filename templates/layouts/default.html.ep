@@ -1,5 +1,6 @@
 % my $sidebar = stash('sidebar') // 1;
 % my $cr = url_for(current_route)->to_abs->path;
+% $cr = Mojo::Util::url_unescape($cr);
 <!DOCTYPE html>
 <html lang="en" class="spectrum spectrum--medium spectrum--light light-theme light">
   <head>

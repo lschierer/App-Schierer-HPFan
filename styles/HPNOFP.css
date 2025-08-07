@@ -29,12 +29,15 @@ ol {
   list-style: none;
   counter-reset: toc-counter;
 }
+
 ol li {
   counter-increment: toc-counter;
 }
+
 ol li::before {
   content: counter(toc-counter) ". ";
 }
+
 ol li.toc-heading {
   counter-increment: none;
   list-style: none;
@@ -43,9 +46,11 @@ ol li.toc-heading {
   margin-top: 1em;
   margin-bottom: 0.5em;
 }
+
 ol li.toc-heading::before {
   content: "";
 }
+
 ol li.reset-counter {
   counter-reset: toc-counter;
 }
@@ -59,6 +64,12 @@ ol li.reset-counter {
 
 .tocimg {
   width: 45%;
+}
+
+.cover-image {
+  max-width: 100%;
+  max-height: calc(100vh - calc(2 * var(--header-height)));
+  object-fit: contain;
 }
 
 .yearimg {
@@ -78,10 +89,6 @@ ol li.reset-counter {
   margin-bottom: 1em;
 }
 
-.storyparagraph > p:first-child {
-  text-indent: 0;
-}
-
 .raisedcaps {
   font-size: 4em;
   font-weight: bold;
@@ -91,17 +98,9 @@ ol li.reset-counter {
 .author-note {
   font-style: italic;
 }
+
 .backlink {
   margin-top: 0.5em;
-}
-
-.nightmare,
-.letter,
-.song,
-.article {
-  font-style: italic;
-  margin-left: 15%;
-  margin-right: 15%;
 }
 
 .letter p,
@@ -114,6 +113,10 @@ ol li.reset-counter {
   margin-bottom: 1em;
 }
 
+.storyparagraph > p:first-child {
+  text-indent: 0;
+}
+
 .article p.title {
   font-weight: bold;
 }
@@ -121,4 +124,13 @@ ol li.reset-counter {
 .article p.byline {
   font-size: smaller;
   margin-bottom: 0.5em;
+}
+
+.nightmare,
+.letter,
+.song,
+.article {
+  font-style: italic;
+  margin-left: 15%;
+  margin-right: 15%;
 }
