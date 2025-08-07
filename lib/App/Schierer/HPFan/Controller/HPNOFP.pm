@@ -73,41 +73,40 @@ package App::Schierer::HPFan::Controller::HPNOFP {
   }
 
   sub calculate_fanfiction_order($self, $path, $baseRoute) {
-      # Remove the base path to work with just the relevant part
-      my $relative_path = $path;
-      $relative_path =~ s|^$baseRoute/||;
+    # Remove the base path to work with just the relevant part
+    my $relative_path = $path;
+    $relative_path =~ s|^$baseRoute/||;
 
-      # TOC gets order 1
-      if ($relative_path eq 'TOC' || $relative_path =~ /\/TOC$/) {
-          return 1;
-      }
+    # TOC gets order 1
+    if ($relative_path eq 'TOC' || $relative_path =~ /\/TOC$/) {
+      return 1;
+    }
 
-      # Year paths: order = year + (year - 1) * 10
-      if ($relative_path =~ /Year(\d+)/) {
-          my $year = $1;
-          return 2 if $year == 1;
-          return 10 if $year == 2;
-          return 29 if $year == 3;
-          return 41 if $year == 4;
-          return 1;
-      }
+    # Year paths: order = year + (year - 1) * 10
+    if ($relative_path =~ /Year(\d+)/) {
+      my $year = $1;
+      return 2  if $year == 1;
+      return 10 if $year == 2;
+      return 29 if $year == 3;
+      return 41 if $year == 4;
+      return 1;
+    }
 
-      # Chapter paths: order = 1 + chapter_number
-      if ($relative_path =~ /Chapter(\d+)/) {
-          my $chapter = $1;
-          return 1 + $chapter;
-      }
+    # Chapter paths: order = 1 + chapter_number
+    if ($relative_path =~ /Chapter(\d+)/) {
+      my $chapter = $1;
+      return 1 + $chapter;
+    }
 
-      # Appendix and AuthorsNotes get order 1000
-      if ($relative_path =~ /^Appendix/ ) {
-          return 999 if $relative_path =~ /^Appendix$/;
-          return 1000;
-      }
+    # Appendix and AuthorsNotes get order 1000
+    if ($relative_path =~ /^Appendix/) {
+      return 999 if $relative_path =~ /^Appendix$/;
+      return 1000;
+    }
 
-      # Default order for anything else
-      return 500;
+    # Default order for anything else
+    return 500;
   }
-
 
   sub hpnofp_index ($c) {
     my $logger = Log::Log4perl->get_logger(__PACKAGE__);
@@ -185,8 +184,7 @@ package App::Schierer::HPFan::Controller::HPNOFP {
 
       # If this is a link to a chapter or author notes, make it an absolute path
         if ($base =~ /^(Chapter\d+|AuthorNotes)$/) {
-          $target =
-"$baseRoute/$base/$fragment";
+          $target = "$baseRoute/$base/$fragment";
         }
         else {
           # Otherwise, keep it as a relative path
@@ -239,7 +237,7 @@ package App::Schierer::HPFan::Controller::HPNOFP {
 
       }
 
-      if ($navElement ) {
+      if ($navElement) {
         $navElement->removeAttribute('epub:type');
         # Create a new HTML fragment file with just the nav content
 

@@ -97,20 +97,25 @@ package App::Schierer::HPFan::Plugins::Navigation {
     if (exists $level->{$path}) {
       $logger->debug("Merging item at path: $path");
       my $existing = $level->{$path};
-      $logger->debug(sprintf('detected path conflict for %s. ' .
-      'new_item has %s children. ' .
-      'existing has %s children',
-      $path, scalar keys %{ $new_item->{children} }, scalar keys %{ $existing->{children} }
+      $logger->debug(sprintf(
+        'detected path conflict for %s. '
+          . 'new_item has %s children. '
+          . 'existing has %s children',
+        $path,
+        scalar keys %{ $new_item->{children} },
+        scalar keys %{ $existing->{children} }
       ));
       # If existing is a placeholder and new item has real content, upgrade it
       if ($existing->{_is_placeholder} && !$new_item->{_is_placeholder}) {
         # Keep the children from the placeholder, merge in the real content
-        if(exists $new_item->{children}){
-          foreach my $child (keys %{$existing->{children}}) {
+        if (exists $new_item->{children}) {
+          foreach my $child (keys %{ $existing->{children} }) {
             $new_item->{children}->{$child} = $existing->{children}->{$child};
           }
-        } else {
-          $new_item->{children} = $existing->{children} if $existing->{children};
+        }
+        else {
+          $new_item->{children} = $existing->{children}
+            if $existing->{children};
         }
         $level->{$path} = $new_item;
         $raw_paths{$path}++;
@@ -136,10 +141,13 @@ package App::Schierer::HPFan::Plugins::Navigation {
         }
       }
       # If new item is placeholder but existing is real, keep existing
-      $logger->debug(sprintf('after merge of path conflict for %s. ' .
-      'new_item has %s children. ' .
-      'level has %s children',
-      $path, scalar keys %{ $new_item->{children} }, scalar keys %{ $level->{$path}->{children} }
+      $logger->debug(sprintf(
+        'after merge of path conflict for %s. '
+          . 'new_item has %s children. '
+          . 'level has %s children',
+        $path,
+        scalar keys %{ $new_item->{children} },
+        scalar keys %{ $level->{$path}->{children} }
       ));
     }
     else {
@@ -156,10 +164,14 @@ package App::Schierer::HPFan::Plugins::Navigation {
       $logger->debug(sprintf('Item added successfully at path: %s,', $path));
       $raw_paths{$path}++;
     }
-    $logger->debug(sprintf('at end of _merge_or_add_item for %s, there are %s children at that level, ' .
-    'and %s children for its parent.',
-      $path, exists $level->{$path}->{children} ? scalar keys %{ $level->{$path}->{children} } : 0,
-      scalar keys %{ $level },
+    $logger->debug(sprintf(
+'at end of _merge_or_add_item for %s, there are %s children at that level, '
+        . 'and %s children for its parent.',
+      $path,
+      exists $level->{$path}->{children}
+      ? scalar keys %{ $level->{$path}->{children} }
+      : 0,
+      scalar keys %{$level},
     ));
   }
 
