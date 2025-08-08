@@ -1,0 +1,508 @@
+---
+events:
+  - type: mundane england
+    date: 886
+    blurb: Alfred the Great, King of Wessex, declares himself king of the Anglo-Saxons
+    description: |
+      This represents the first successful attempt at continous rule over the English people.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 0899-10-26
+    blurb: Edward the Elder ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 0924-07-17
+    blurb: Ælfweard ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 924
+    blurb: Æthelstan ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 924
+    blurb: Æthelstan ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 927
+    blurb: Æthelstan conquers Northumbria
+    description: |
+      Some historians date the founding of England from 
+      here, as this represents the first rule of the entirety
+      of what would be called England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 924
+    blurb: Æthelstan ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1284-03-03
+    blurb: Wales, previously conquered, annexed by England.
+    description: |
+      By royal decree, Wales, having been previously conquered in wars through the years 1282 and 1283, was annexed into England.  It was initially divided into several administrative areas using the English shire system, but later consolidated into the Principality of Wales.
+    source: |
+      * [Wikipedia](https://en.wikipedia.org/).
+        "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+        Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+      * [Wikipedia](https://en.wikipedia.org/).
+        "[Statute of Rhuddlan](https://en.wikipedia.org/wiki/Statute_of_Rhuddlan)"
+        Last Edited: 2023-05-25. Last Viewed: 2023-12-06
+  - type: mundane england
+    date: 0939-10-27
+    blurb: Edmund I ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 0946-05-26
+    blurb: Eadred ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 0955-11-23
+    blurb: Eadwig ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 0959-10-01
+    blurb: Edgar the Peaceful ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 0975-07-08
+    blurb: Edward the Maryr ascends to the throne of England.
+    description: |
+      Despite the title the English give him, this was not a saintly man.
+    source: |
+      * [Wikipedia](https://en.wikipedia.org/).
+        "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+        Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+      * [WikiPedia](https://en.wikipedia.org/)
+        "[Edward the Martyr](https://en.wikipedia.org/wiki/Edward_the_Martyr)"
+        Last Edited: 2023-11-28. Last Viewed: 2023-12-06
+  - type: mundane england
+    date: 0978-03-18
+    blurb: Æthelred the Unready ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1013-12-25
+    blurb: Sweyn Forkbeard, a Danish King, ascends to the throne of England.
+    description: |
+      Sweyn invaded earlier that year and forced Æthelred into exile in Normandy.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1014-03-03
+    blurb: Æthelred the Unready ascends to the throne of England.
+    description: |
+      He does so following the death of Sweyn, and despite the fact that Danes
+      remain in control over parts of England.  This is possible because some 
+      Danes support him.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 0600
+    blurb: First recorded act of a witenagemot
+    description: |
+      The witenagemot, or Witans, were a collection of the ranking nobles and, after the introduction of Christianity, clergy of the country.  They were called together to advise the king (or queen), to witness key legislative acts, and, based on the evidence, to themselves legislate.  Their role seems to vary over time and to have been poorly defined.  If it was codified in law, the evidence of it has not survived.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[Witan](https://en.wikipedia.org/wiki/Witan)"
+      Last Edited: 2023-11-19. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1016-04-23
+    blurb: Edmund Ironside ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1016-10-18
+    blurb: Cnut the Great ascends to the throne of England.
+    description: |
+      Edmund was lost the Battle of Assandun, and as a result signed a treaty with the Danish King Cnut.  Edmund retained only Wessex, however upon his death a month after the treaty was signed, Cnut gained control of the Wessex as well.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1035-11-12
+    blurb: Harold Harefoot ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1040-03-17
+    blurb: Harthacnut ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1042-06-08
+    blurb: Edward the Confessor ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1066-01-06
+    blurb: Harold II ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1066-10-15
+    blurb: Edgar Ætheling elected by the Witan
+    description: |
+      However, he is unable to rule and submits to William the Conqueror
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1066-09-28
+    blurb: William the Conqueror lands his Norman invasion force in England
+    description: |
+      William landed at Pevensey in Sussex and built a wooden castle at Hastings.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[Norman conquest of England](https://en.wikipedia.org/wiki/Norman_conquest_of_England)"
+      Last Edited: 2023-11-03. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1066-12-25
+    blurb: William I (the Conqueror) ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1087-09-26
+    blurb: Wiliam II ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1100-08-05
+    blurb: Henry I ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1135-12-22
+    blurb: Stephen ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1135-12-22
+    blurb: Stephen ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1141-04-07
+    blurb: Matilda ascends to the throne of England.
+    description: |
+      The first woman to do so, she was never crowned, and controlled
+      the country for only a few months before the throne was siezed by rival claimant Stephen (her cousin).
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1154-12-19
+    blurb: Henry II ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1189-09-03
+    blurb: Richard I (the Lionheart) ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1194-03-04
+    blurb: Richard I recrowned King of England on his return
+    description: |
+      He forgives his brother John for the acts of rebellion and names
+      John his heir.  Considering the travel times of the day, there 
+      is not time for the extended wondering about where Richard was that
+      we see in Ivanhoe and Robin Hood tales.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[Richard I of England](https://en.wikipedia.org/wiki/Richard_I_of_England)"
+      Last Edited: 2023-11-26. Last Viewed: 2023-12-07
+  - type: mundane england
+    date: 1199-05-27
+    blurb: John ascends to the throne of England.
+    description: |
+      John is better known for his failed attempt at rebellion against King Richard during the Third Crusade.  After the death of Richard, John was chosen as King.  What is *actually* most noteworthy is that he lost control over the family's continental lands and dominions, leaving them
+      with only England and some sort of feudal relationship with Ireland.
+    source: |
+      * [Wikipedia](https://en.wikipedia.org/).
+        "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+        Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+      * [Wikipedia](https://en.wikipedia.org/).
+        "[John, King of England](https://en.wikipedia.org/wiki/John,_King_of_England)"
+        Last Edited: 2023-11-23. Last Viewed: 2023-12-07.
+  - type: mundane england
+    date: 1216-10-28
+    blurb: Henry III ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1272-11-20
+    blurb: Edward I (Longshanks) ascends to the throne of England.
+    description: |
+      By my count, there are three earlier kings who took the name "Edward", so I am unsure how/why this one is the "the first"
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1272-11-20
+    blurb: Edward I (Longshanks) ascends to the throne of England.
+    description: |
+      By my count, there are three earlier kings who took the name "Edward", so I am unsure how/why this one is the "the first"
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1307-07-08
+    blurb: Edward II ascends to the throne of England.
+    description: |
+      I find it notable that he would be deposed by his own queen, and "a small army"
+    source: |
+      * [Wikipedia](https://en.wikipedia.org/).
+        "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+        Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+      * [Wikipedia](https://en.wikipedia.org/).
+        "[Edward II of England](https://en.wikipedia.org/wiki/Edward_II_of_England)"
+        Last Edited: 2023-12-02. Last Viewed: 2023-12-07
+  - type: mundane england
+    date: 1327-01-25
+    blurb: Edward III ascends to the throne of England.
+    description: |
+      He is apparently unusual for the length of his reign.
+      He started the Hundred Years War.
+    source: |
+      * [Wikipedia](https://en.wikipedia.org/).
+        "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+        Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+      * [Wikipedia](https://en.wikipedia.org/).
+        "[Edward III of England](https://en.wikipedia.org/w/index.php?title=Edward_III_of_England)"
+        Last Edited: 2023-12-05. Last Viewed: 2023-12-07.
+  - type: mundane england
+    date: 1377-06-22
+    blurb: Richard II ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1399-09-30
+    blurb: Henry IV ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1413-03-21
+    blurb: Henry V ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1422-09-01
+    blurb: Henry VI ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1455-05-22
+    blurb: The Wars of the Roses starts
+    description: The throne of England will be contested between the House of
+      York and Lancaster, both decendants of the House of Plantagenet.
+      The Throne will pass back and forth, and things will be generally
+      confused.
+    source: |
+      * [Wikipedia](https://en.wikipedia.org/).
+        "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+        Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+      * [Wikipedia](https://en.wikipedia.org/).
+        "[Wars of the Roses](https://en.wikipedia.org/wiki/Wars_of_the_Roses)"
+        Last Edited: 2023-12-03. Last Viewed: 2023-12-07.
+  - type: mundane england
+    date: 1487-06-16
+    blurb: The Wars of the Roses end
+    source: |
+      * [Wikipedia](https://en.wikipedia.org/).
+        "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+        Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+      * [Wikipedia](https://en.wikipedia.org/).
+        "[Wars of the Roses](https://en.wikipedia.org/wiki/Wars_of_the_Roses)"
+        Last Edited: 2023-12-03. Last Viewed: 2023-12-07.
+  - type: mundane england
+    date: 1485-08-22
+    blurb: Henry VII ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1509-04-22
+    blurb: Henry VIII ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1547-01-28
+    blurb: Edward VI ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1485-08-22
+    blurb: Henry VII ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1553-07-19
+    blurb: Mary I ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1554-07-25
+    blurb: Philip (the Prudent) ascends to the throne of England.
+    description: |
+      Per the marriage treaty, he would have her titles and honours for as long as the marriage should last.  Thus on her death, he ceases to be King.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1558-11-17
+    blurb: Elizabeth I ascends to the throne of England.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1603-03-24
+    blurb: James I ascends to the throne of England.
+    description: |
+      He was already James VI of Scotland at this time, and inherited the throne as the cousin of Queen Elizabeth.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1644
+    blurb: Wich hunting begins to peak
+    description: |
+      Witch hunting in England peaks during the English Civil
+      War.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[Witch-hunt](https://en.wikipedia.org/wiki/Witch-hunt#Early_Modern_Europe)"
+      Last Viewed 2020-07-04
+  - type: mundane england
+    date: 1653-12-16
+    blurb: Oliver Cromwell becomes Lord Protector of England
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1658-09-03
+    blurb: Richard Cromwell becomes Lord Protector of England
+    description: |
+      There will be a year of anarchy when he is forcibly removed
+      from this post in May 1659.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of English monarchs](https://en.wikipedia.org/wiki/List_of_English_monarchs)"
+      Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
+  - type: mundane england
+    date: 1258
+    blurb: Parliament assembled under Henry III
+    description: |
+      Parliament, initially a council of 15 barons, assembled under Henry III
+      due to the "Provisions of Oxford" and the "Provisions of Westminster," unsure which (or both).
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[Parliament of England](https://en.wikipedia.org/wiki/Parliament_of_England)"
+      Last Edited: 2021-03-23. Last Viewed: 2021-04-06.
+  - type: mundane england
+    date: 1284
+    blurb: England conquers Wales.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[Kingdom of England](https://en.wikipedia.org/wiki/Kingdom_of_England)"
+      Last Edited: 2021-04-05. Last Viewed: 2021-04-06.
+  - type: mundane england
+    date: 1688
+    blurb: England now a Constitutional Monarchy
+    description: |
+      > The kingdom of England, as well as its successor states the Kingdom of
+      > Great Britain and the United Kingdom, have functioned in effect as a
+      > constitutional monarchy.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[Kingdom of England](https://en.wikipedia.org/wiki/Kingdom_of_England)"
+      Last Edited: 2021-04-05. Last Viewed: 2021-04-06.

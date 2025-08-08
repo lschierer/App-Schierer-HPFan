@@ -1,0 +1,36 @@
+---
+events:
+  - type: mundane
+    date: 1188-01
+    blurb: The Third Crusade starts
+    description: |
+      Precise dating of the Crusades defies my ability
+        * the force was multi-national and started at different times
+        * the crusades were marred by and interwoven with the jealosies, 
+          corruption, and politics of the times in which they occur.  Is a
+          particular action *part of the crusade* or part of the secular politics of the era?  Did even the particpants (were they even honest with themselves) know the answer to this question?
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[Third Crusade](https://en.wikipedia.org/wiki/Third_Crusade)"
+      Last Edited: 2023-12-04.
+  - type: mundane
+    blurb: The Third Crusade ends
+    date: 1192-10-09
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[Third Crusade](https://en.wikipedia.org/wiki/Third_Crusade)"
+      Last Edited: 2023-12-04.
+  - type: mundane england
+    blurb: Richard arrested by Austrians returning from the Crusade
+    date: 1192-12
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[Richard I of England](https://en.wikipedia.org/wiki/Richard_I_of_England)"
+      Last Edited: 2023-11-26. Last Viewed: 2023-12-07
+  - type: mundane england
+    blurb: Richard released by the Austrians
+    date: 1194-02-04
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[Richard I of England](https://en.wikipedia.org/wiki/Richard_I_of_England)"
+      Last Edited: 2023-11-26. Last Viewed: 2023-12-07

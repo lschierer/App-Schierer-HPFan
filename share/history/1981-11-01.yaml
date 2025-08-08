@@ -1,0 +1,48 @@
+---
+events:
+  - type: magical
+    blurb: Thursday Morning people are talking about the Potters.
+    description: |
+      * "Tiny old man" with a "squeaky voice that made passersby stare" - probably
+        [Flitwick].
+      * people with cloaks on street corners.
+
+      [Flitwick]: <../people/flitwick/filus/>
+
+    source: |
+      Mrs. J. K. Rowling. _[Harry Potter and the Philosopher's Stone]_
+      Page 5. Text copyright © 1998 
+
+      [Harry Potter and the Philosopher's Stone]: https://www.librarything.com/work/5403381
+
+  - type: magical
+    blurb: Hagrid flies over Bristol.
+    description: |
+      [Hagrid] says he flew over Bristol. There is very very little of the West Country in 
+      which Godric's Hollow could be located for Bristol to be between it and Surrey.  
+      Instead, Bristol seems to indicate a detour to the north, or a point of origin in Wales.
+
+      [Hagrid]: <../people/hagrid/rubeus/>
+    source: |
+      Mrs. J. K. Rowling. _[Harry Potter and the Philosopher's Stone]_
+      Page 15. Text copyright © 1998 
+
+      [Harry Potter and the Philosopher's Stone]: https://www.librarything.com/work/5403381
+
+  - type: magical
+    blurb: Dumbledore arrives at Privet Drive
+    description: |
+      [Dumbledore] arrives at "nearly Midnight" which means that [Harry] was found by [Petunia]
+      on the Morning of the 2st.
+
+      [Dumbledore]: <../people/dumbledore/albus_percival_wulfric_brian/>
+
+      [Harry]: <../people/potter/harry_james/>
+
+      [Petunia]: <../people/evans/petunia/>
+
+    source: |
+      Mrs. J. K. Rowling. _[Harry Potter and the Philosopher's Stone]_
+      Page 8. Text copyright © 1998 
+
+      [Harry Potter and the Philosopher's Stone]: https://www.librarything.com/work/5403381

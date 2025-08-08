@@ -1,0 +1,47 @@
+---
+events:
+  - type: mundane ireland
+    date: 1171
+    blurb: Ireland devalued as an independent Kingdom
+    description: |
+      Through Laudabiliter, the pope declared Ireland to be a feudal provice of the Holy See, but under the temporal rule of the monarch of England under the title "Lord of Ireland."
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[Crown of Ireland Act 1542](https://en.wikipedia.org/wiki/Crown_of_Ireland_Act_1542)"
+      Last Edited: 2023-08-12. Last Viewed: 2023-12-07.
+  - type: mundane ireland
+    date: 1542-06-18
+    blurb: Henry VIII of England declared King of Ireland.
+    description: |
+      This was done via the Crown of Ireland Act of 1542, 
+      passed by the Irish Parliament.  This was probably
+      done to deal with Henry's heresy.  However, it would later 
+      be recognized by Catholic leaders (including the Church) when
+      Mary came to the throne.  There would never again be a
+      *fully* independent Irish monarch.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[Crown of Ireland Act 1542](https://en.wikipedia.org/wiki/Crown_of_Ireland_Act_1542)"
+      Last Edited: 2023-08-12. Last Viewed: 2023-12-07.
+  - type: mundane ireland
+    date: 1921-12-06
+    blurb: The Anglo-Irish Treaty
+    description: |
+      An Irish Free State is created a self governing state still subject to and part of the British Empire.  The King of England remains head of state.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[Anglo-Irish Treaty](https://en.wikipedia.org/wiki/Anglo-Irish_Treaty)"
+      Last Edited: 2023-12-07. Last Viewed: 2023-12-07.
+  - type: mundane ireland
+    date: 1948-12-02
+    blurb: The Republic of Ireland Act
+    description: |
+      This act completes the slow errosion of English rule started in 1921. 
+      It made no attempt to address Northern Ireland, which had remained united to England in 1921.
+    source: |
+      * [Wikipedia](https://en.wikipedia.org/).
+        "[The Republic of Ireland Act 1948](https://en.wikipedia.org/wiki/The_Republic_of_Ireland_Act_1948)"
+        Last Edited: 2023-08-29. Last Viewed: 2023-12-07.
+      * [Wikipedia](https://en.wikipedia.org/).
+        "[Anglo-Irish Treaty](https://en.wikipedia.org/wiki/Anglo-Irish_Treaty)"
+        Last Edited: 2023-12-07. Last Viewed: 2023-12-07.

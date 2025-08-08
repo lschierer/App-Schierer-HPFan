@@ -1,0 +1,262 @@
+---
+events:
+  - type: magical
+    date: 1845
+    blurb: Sirius Black I born
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1853
+    blurb: Elladora Black dies
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1847
+    blurb: Phineus Nigellus Black born
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1925
+    blurb: Phineus Nigellus Black dies
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1850
+    blurb: Elladora Black born
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1931
+    blurb: Elladora Black dies
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1877
+    blurb: Sirius Black II born
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1952
+    blurb: Sirius Black II dies
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1889
+    blurb: Cygnus Black I born
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1943
+    blurb: Cygnus Black I dies
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1886
+    blurb: Belvina Black born
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1962
+    blurb: Elladora Black dies
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1884
+    blurb: Acrtunus Black born
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1959
+    blurb: Acrtunus Black dies
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1904
+    blurb: Lycoris Black born
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1965
+    blurb: Lycoris Black dies
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1906
+    blurb: Regulus Black born
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1959
+    blurb: Elladora Black dies
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1912
+    blurb: Pollux Black born
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1990
+    blurb: Pollux Black dies
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1915
+    blurb: Cassiapeia Black born
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1992
+    blurb: Cassiapeia Black dies
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1920
+    blurb: Dorea Black born
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1977
+    blurb: Dorea Black dies
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1915
+    blurb: Callidora Black born
+    description: |
+      [Callidora] will marry [Harfang Longbottom].  She is apparently
+      alive as of Mrs. Rowling's book timeline.
+
+      [Callidora]: <../people/black/callidora/>
+
+      [Harfang Longbottom]: <../people/longbottom/harfang/>
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1919
+    blurb: Charis Black born
+    description: |
+      She will marry [Caspar Crouch]
+
+      [Caspar Crouch]: <../people/crouch/caspar/>
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1973
+    blurb: Charis Black dies
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1925
+    blurb: Lucretia Black born
+    description: |
+      She will marry [Ignatius Prewett].
+
+      [Ignatius Prewett]: <../people/prewett/ignatius/>
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1992
+    blurb: Lucretia Black dies
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1929
+    blurb: Orion Black born
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1979
+    blurb: Orion Black dies
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1925
+    blurb: Walburga Black born
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1985
+    blurb: Walburga Black dies
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1961
+    blurb: Regulus Black born
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.
+  - type: magical
+    date: 1979
+    blurb: Regulus Black dies
+    source: |
+      J. K. Rowling. 
+      [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
+      Published: 2006-02-21. Last Viewed: 2024-02-12.

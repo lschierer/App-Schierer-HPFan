@@ -1,0 +1,16 @@
+events:
+  - type: magical
+    blurb: End of the 1977-1978 school year.
+    description: |
+      end of [Lily], [James], [Sirius] [Snape] et al. end their seventh year at [Hogwarts].
+
+      [Lily]: <../people/evans/lily_j/>
+
+      [James]: <../people/potter/james/>
+
+      [Sirius]: <../people/black/sirius_iii/>
+
+      [Snape]: <../people/snape/severus/>
+
+      [Hogwarts]: <../hogwarts/>
+    source: computed/inferred from other material

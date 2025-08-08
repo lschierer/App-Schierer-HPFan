@@ -1,0 +1,134 @@
+---
+events:
+  - type: mundane gb
+    date: 1707-05-01
+    blurb: Anne ascends to the unified throne of Great Britain
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of British monarchs](https://wikipedia.org/wiki/List_of_British_monarchs)"
+      Last Edited: 2024-01-03. Last Viewed: 2024-01-04.
+  - type: mundane gb
+    date: 1714-08-01
+    blurb: George I ascends to throne in Great Britain
+    description: |
+      George Louis, son of Sophia of the Palatinate, and Ernest Augustus, Elector of Hanover, ascends to the unified thrones in Great Britain.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of British monarchs](https://wikipedia.org/wiki/List_of_British_monarchs)"
+      Last Edited: 2024-01-03. Last Viewed: 2024-01-04.
+  - type: mundane gb
+    date: 1727-06-11
+    blurb: George II ascends to throne in Great Britain
+    description: |
+      George Augustus, son of George I and Sophia Dorothea of Brunswick-Lüneburg-Celle, ascends to the unified thrones in Great Britain.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of British monarchs](https://wikipedia.org/wiki/List_of_British_monarchs)"
+      Last Edited: 2024-01-03. Last Viewed: 2024-01-04.
+  - type: mundane gb
+    date: 1760-10-25
+    blurb: George III ascends to throne in Great Britain
+    description: |
+      George William Frederick, son of Frederick, Prince of Wales,
+      and Augusta of Saxe-Gotha-Altenburg, ascends to the unified thrones in Great Britain.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of British monarchs](https://wikipedia.org/wiki/List_of_British_monarchs)"
+      Last Edited: 2024-01-03. Last Viewed: 2024-01-04.
+  - type: mundane gb
+    date: 1820-01-29
+    blurb: George IV ascends to throne in Great Britain
+    description: |
+      George Augustus Frederick, son of George III
+      and Charlotte of Mecklenburg-Strelitz, ascends to the unified thrones in Great Britain.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of British monarchs](https://wikipedia.org/wiki/List_of_British_monarchs)"
+      Last Edited: 2024-01-03. Last Viewed: 2024-01-04.
+  - type: mundane gb
+    date: 1830-06-26
+    blurb: William IV ascends to throne in Great Britain
+    description: |
+      William Henry, son of George III
+      and Charlotte of Mecklenburg-Strelitz, ascends to the unified thrones in Great Britain.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of British monarchs](https://wikipedia.org/wiki/List_of_British_monarchs)"
+      Last Edited: 2024-01-03. Last Viewed: 2024-01-04.
+  - type: mundane gb
+    date: 1837-06-20
+    blurb: Victoria ascends to throne in Great Britain
+    description: |
+      Victoria, daughter of Edward, Duke of Kent and Strathearn,
+      and Victoria of Saxe-Coburg-Saalfeld
+      ascends to the unified thrones in Great Britain.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of British monarchs](https://wikipedia.org/wiki/List_of_British_monarchs)"
+      Last Edited: 2024-01-03. Last Viewed: 2024-01-04.
+  - type: mundane gb
+    date: 1901-01-22
+    blurb: Edward VII ascends to throne in Great Britain
+    description: |
+      Albert Edward, son of Victoria
+      and Albert of Saxe-Coburg and Gotha
+      ascends to the unified thrones in Great Britain.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of British monarchs](https://wikipedia.org/wiki/List_of_British_monarchs)"
+      Last Edited: 2024-01-03. Last Viewed: 2024-01-04.
+  - type: mundane gb
+    date: 1910-05-06
+    blurb: George V ascends to throne in Great Britain
+    description: |
+      George Frederick Ernest Albert, son of Edward VII
+      and Alexandra of Denmark
+      ascends to the unified thrones in Great Britain.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of British monarchs](https://wikipedia.org/wiki/List_of_British_monarchs)"
+      Last Edited: 2024-01-03. Last Viewed: 2024-01-04.
+  - type: mundane gb
+    date: 1936-01-20
+    blurb: Edward VIII ascends to throne in Great Britain
+    description: |
+      Edward ALbert Christian George Andrew Patrick David, son of George V
+      and Mary of Teck
+      ascends to the unified thrones in Great Britain.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of British monarchs](https://wikipedia.org/wiki/List_of_British_monarchs)"
+      Last Edited: 2024-01-03. Last Viewed: 2024-01-04.
+  - type: mundane gb
+    date: 1936-12-11
+    blurb: George VI ascends to throne in Great Britain
+    description: |
+      Albert Frederick Arthur George, son of George V
+      and Mary of Teck
+      ascends to the unified thrones in Great Britain.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of British monarchs](https://wikipedia.org/wiki/List_of_British_monarchs)"
+      Last Edited: 2024-01-03. Last Viewed: 2024-01-04.
+  - type: mundane gb
+    date: 1952-02-06
+    blurb: Elizabeth II ascends to throne in Great Britain
+    description: |
+      Elizabeth Alexandra Mary, daughter of George VI
+      and Elizabeth Bowes-Lyon
+      ascends to the unified thrones in Great Britain.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of British monarchs](https://wikipedia.org/wiki/List_of_British_monarchs)"
+      Last Edited: 2024-01-03. Last Viewed: 2024-01-04.
+  - type: mundane gb
+    date: 2022-09-08
+    blurb: Charles III ascends to throne in Great Britain
+    description: |
+      Charles Philip Arthur George, son of Elizabeth II
+      and Philip of Greece and Denmark 
+      ascends to the unified thrones in Great Britain.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[List of British monarchs](https://wikipedia.org/wiki/List_of_British_monarchs)"
+      Last Edited: 2024-01-03. Last Viewed: 2024-01-04.

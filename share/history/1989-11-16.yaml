@@ -1,0 +1,26 @@
+---
+events:
+  - type: mundane england
+    blurb: The Children Act 1989 enacted.
+    description: >
+      The Children Act 1989 comes into force in England and Wales.  Every
+        child has the right to protection from abuse and exploitation and the right to
+        have inquiries made to safeguard their welfare.
+    source: |
+      Mr. David Batty.
+          "[Timeline: the history of child protection](https://www.theguardian.com/society/2004/apr/23/childrensservices.childprotection)"
+          *[The Guardian](https://www.theguardian.com/)* 2004-04-23.  Last Viewed:
+          2021-06-04.
+
+  - type: mundane england
+    blurb: NSPCC empowered.
+    description: >
+      The National Society for the Prevention of Cruelty to Children (NSPCC) was granted statutory powers under the Children Act 1989 to apply
+      for care and supervision orders for children at risk.
+    source: |
+      [Wikipedia] "[National Society for the Prevention of Cruelty to
+      Children]" Last Edited: 2021-11-30. Last Viewed: 2021-12-02.
+
+      [Wikipedia]: https://wikipedia.org/
+
+      [National Society for the Prevention of Cruelty to Children]: https://en.wikipedia.org/wiki/National_Society_for_the_Prevention_of_Cruelty_to_Children

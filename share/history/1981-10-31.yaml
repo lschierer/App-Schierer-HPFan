@@ -1,0 +1,34 @@
+---
+events:
+  - type: magical
+    blurb: Sirius intended to check on Pettigrew
+    description: |
+      The source text contradicts the mundane calendar and notes this is a  Wednesday.
+    source: |
+      Mrs. J. K. Rowling. _Harry Potter and the Prisoner of Azkaban_
+      Chapter 10.
+
+  - type: magical
+    blurb: Riddle attacks the Potters
+    source: |
+      Mrs. J. K. Rowling. _[Harry Potter and the Philosopher's Stone]_
+      Chapter 1, various pages. Text copyright © 1998
+
+      [Harry Potter and the Philosopher's Stone]: https://www.librarything.com/work/5403381
+
+  - type: magical
+    blurb: Hagrid arrives before Sirius
+    description: |
+      [Hagrid] is already holding [Harry] when [Sirius] arrives.  It is because [Sirius] cannot
+      get [Hagrid] to give [Harry] up that [Sirius] decides to go after [Pettigrew].
+
+      [Hagrid]: <../people/hagrid/rubeus/>
+
+      [Sirius]: <../people/black/sirius_iii/>
+
+      [Harry]: <../people/potter/harry_james/>
+
+      [Pettigrew]: <../people/pettigrew/peter/>
+    source: |
+      Mrs. J. K. Rowling. _Harry Potter and the Prisoner of Azkaban_
+      Chapter 10.

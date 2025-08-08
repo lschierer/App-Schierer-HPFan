@@ -1,0 +1,518 @@
+---
+events:
+  - type: mundane scotland
+    blurb: Donald I crowned king of Scotland
+    description: |
+      Donald I crowned king of Scotland at an unknown point this year.
+    date: 858
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Constantine I crowned king of Scotland
+    description: |
+      Constantine I crowned king of Scotland at an unknown point this year.
+    date: 862
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Áed crowned king of Scotland
+    description: |
+      Áed crowned king of Scotland at an unknown point this year.
+    date: 877
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Giric crowned king of Scotland
+    description: |
+      Giric crowned king of Scotland at an unknown point this year.
+    date: 878
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Eochaid crowned king of Scotland at an unknown point this year.
+    date: 878
+    description: |
+      Eochaid crowned king of Scotland at an unknown point this year.  The overlap in dates between Eochaid and Giric is original to my source.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Donald II crowned king of Scotland
+    date: 889
+    description: |
+      Donald II crowned king of Scotland at an unknown point this year.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Constantine II ascends to the throne of Scotland
+    date: 889
+    description: |
+      Constantine II crowned king of Scotland at an unknown point this year.
+
+      > The long reign (900–942/3) of Donald's successor Causantín (Constantine 
+      > II) is often regarded as the key to formation of the Kingdom of Alba/Scotland, and he was later credited with bringing Scottish Christianity 
+      > into conformity with the Catholic Church.
+    source: |
+      * [WikiPedia](https://wikipedia.org/)
+        "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+        Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+      * [Wikipedia](https://en.wikipedia.org/).
+        "[Kingdom of Scotland](https://en.wikipedia.org/wiki/Kingdom_of_Scotland)"
+        Last Edited: 2021-04-03. Last Viewed: 2021-04-06.
+  - type: mundane scotland
+    blurb: Malcolm I crowned king of Scotland
+    date: 943
+    description: |
+      Malcolm I crowned king of Scotland at an unknown point this year.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Indulf crowned king of Scotland
+    date: 954
+    description: |
+      Indulf crowned king of Scotland at an unknown point this year.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Dub crowned king of Scotland
+    date: 954
+    description: |
+      Dub crowned king of Scotland at an unknown point this year.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Cuilén crowned king of Scotland
+    date: 967
+    description: |
+      Cuilén crowned king of Scotland at an unknown point this year.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Kenneth II crowned king of Scotland
+    date: 971
+    description: |
+      Kenneth II crowned king of Scotland at an unknown point this year.
+      We see an overlap in dates in the source material.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Amlaíb crowned king of Scotland
+    date: 973
+    description: |
+      Amlaíb crowned king of Scotland at an unknown point this year.
+      We see an overlap in dates in the source material.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Constantine III crowned king of Scotland
+    date: 995
+    description: |
+      Constantine III crowned king of Scotland at an unknown point this year.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Kenneth III crowned king of Scotland
+    date: 997
+    description: |
+      Kenneth III crowned king of Scotland at an unknown point this year.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Malcolm II crowned king of Scotland
+    date: 1005
+    description: |
+      Malcolm II crowned king of Scotland at an unknown point this year.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Duncan I crowned king of Scotland
+    date: 1034
+    description: |
+      Duncan I crowned king of Scotland at an unknown point this year.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Macbeth crowned king of Scotland
+    date: 1040
+    description: |
+      Macbeth crowned king of Scotland at an unknown point this year.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Lulach crowned king of Scotland
+    date: 1057
+    description: |
+      Lulach crowned king of Scotland at an unknown point this year.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Malcolm III crowned king of Scotland
+    date: 1058
+    description: |
+      Malcolm III crowned king of Scotland at an unknown point this year.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Donald III crowned king of Scotland
+    date: 1093
+    description: |
+      Donald III crowned king of Scotland at an unknown point this year.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Duncan II crowned king of Scotland
+    date: 1094
+    description: |
+      Duncan II crowned king of Scotland at an unknown point this year. He is the first that is listed as "Rex Scottorum" instead of "Rí Alban" or "Rex Pictorum".  While both "Alban" and "Scottorum" appear to mean the same people to modern translators, I suspect the change had some significance at the time.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Edgar crowned king of Scotland
+    date: 1097
+    description: |
+      Edgar crowned king of Scotland at an unknown point this year.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Alexander I crowned king of Scotland
+    date: 1107
+    description: |
+      Alexander I crowned king of Scotland at an unknown point this year.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: David I crowned king of Scotland
+    date: 1124
+    description: |
+      David I crowned king of Scotland at an unknown point this year.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Malcolm IV crowned king of Scotland
+    date: 1153
+    description: |
+      Malcolm IV crowned king of Scotland at an unknown point this year.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: William I crowned king of Scotland
+    date: 1165
+    description: |
+      William I crowned king of Scotland at an unknown point this year.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Alexander II crowned king of Scotland
+    date: 1214
+    description: |
+      Alexander II crowned king of Scotland at an unknown point this year.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Alexander III crowned king of Scotland
+    date: 1214
+    description: |
+      Alexander III crowned king of Scotland at an unknown point this year.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Margaret, Queen of Scotland
+    date: 1286
+    description: |
+      Margaret was not crowned Queen, but started to rule Scotland at an unknown point this year.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: John Balliol crowned king of Scotland
+    date: 1292
+    description: |
+      John Balliol crowned king of Scotland at an unknown point this year, after a two-year interregnum. He is chosen only after the Scottish noblility is forced to accept Edward I of Englad as overlord.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Robert I (the Bruce) crowned king of Scotland
+    date: 1306-03-25
+    description: |
+      Robert I (the Bruce) crowned king of Scotland.
+    source: |
+      * [WikiPedia](https://wikipedia.org/)
+        "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+        Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+      * [WikiPedia](https://wikipedia.org/)
+        "[Robert the Bruce](https://en.wikipedia.org/wiki/Robert_the_Bruce)"
+        Last Edited: 2023-11-17. Last Viewed: 2023-12-05
+  - type: mundane scotland
+    blurb: The Treaty of Edinburgh–Northampton
+    date: 1328-03-17
+    description: |
+      Edward III signs the Treaty of Edinburgh–Northampton renouncing his claim
+      to be overlord of Scotland.
+    source: |
+      * [WikiPedia](https://wikipedia.org/)
+        "[Declaration of Arbroath](https://en.wikipedia.org/wiki/Declaration_of_Arbroath)"
+        Last Edited: 2023-11-30. Last Viewed: 2023-12-05. 
+      * [WikiPedia](https://wikipedia.org/)
+        "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+        Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+      * [WikiPedia](https://wikipedia.org/)
+        "[Robert the Bruce](https://en.wikipedia.org/wiki/Robert_the_Bruce)"
+        Last Edited: 2023-11-17. Last Viewed: 2023-12-05
+      * [WikiPedia](https://wikipedia.org/)
+        "[Treaty of Edinburgh–Northampton](https://wikipedia.org/wiki/Treaty_of_Edinburgh%E2%80%93Northampton)"
+        Last Edited: 2023-05-22. Last Viewed: 2023-12-06
+  - type: mundane scotland
+    blurb: David II assumes throne of Scotland
+    date: 1329-06-07
+    description: |
+      David II assumes the throne of Scotland as a child monarch upon the death of his father.
+    source: |
+      * [WikiPedia](https://wikipedia.org/)
+        "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+        Last Edited: 2023-12-02. Last Viewed: 2023-12-05.
+      * [WikiPedia](https://wikipedia.org/)
+        "[David II of Scotland](https://en.wikipedia.org/wiki/David_II_of_Scotland)"
+        Last Edited: 2023-11-17. Last Viewed: 2023-12-05.
+  - type: mundane scotland
+    blurb: David II crowned king of Scotland
+    date: 1331-11-24
+    description: |
+      David II is the first king of Scotland to be annointed as he is crowned.
+    source: |
+      * [WikiPedia](https://wikipedia.org/)
+        "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+        Last Edited: 2023-12-02. Last Viewed: 2023-12-05.
+      * [WikiPedia](https://wikipedia.org/)
+        "[David II of Scotland](https://en.wikipedia.org/wiki/David_II_of_Scotland)"
+        Last Edited: 2023-11-17. Last Viewed: 2023-12-05.
+  - type: mundane scotland
+    blurb: Edward Balliol siezes the throne
+    date: 1332
+    description: |
+      Edward Balliol will sieze the throne, often with English support, sometimes even causing himself to be crowned, several times between
+      1332 and 1356.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Robert II crowned king of Scotland
+    date: 1371
+    description: |
+      Robert II ascends to the throne at age 55.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Robert III crowned king of Scotland
+    date: 1390
+    description: |
+      Robert III ascends to the throne at age 53.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: James I crowned king of Scotland
+    date: 1406
+    description: |
+      James I ascends to the throne of Scotland.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: James II crowned king of Scotland
+    date: 1437
+    description: |
+      James II ascends to the throne of Scotland.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: James III crowned king of Scotland
+    date: 1460
+    description: |
+      James III ascends to the throne of Scotland.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: James IV crowned king of Scotland
+    date: 1488
+    description: |
+      James IV ascends to the throne of Scotland.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: James V crowned king of Scotland
+    date: 1513
+    description: |
+      James V ascends to the throne of Scotland.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Mary I, Queen of Scotland
+    date: 1542
+    description: |
+      Mary I ascends to the throne of Scotland.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: James VI, King of Scotland
+    date: 1567
+    description: |
+      James VI ascends to the throne of Scotland.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane gb
+    blurb: Charles I, King of Scotland
+    date: 1625-03-27
+    description: |
+      Charles I ascends to the thrones of Scotland and England
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane scotland
+    blurb: Charles II, King of Scotland
+    date: 1649
+    description: |
+      Charles II ascends to the throne of Scotland.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane gb
+    blurb: Charles II, ascends to the thrones of England and Scotland
+    date: 1660
+    description: |
+      With the restoration of the monarchy, Charles II reascends the thrones of Scotland.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane gb
+    blurb: James VII of Scotland and II of England
+    date: 1685-02-06
+    description: |
+      James VII of Scotland and II of England ascends to the thrones of Scotland and England.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane gb
+    blurb: Mary II of Scotland and England
+    date: 1689-02-13
+    description: |
+      She is the "Mary" of "William and Mary"
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane gb
+    blurb: William II (of Orange)
+    date: 1689-02-13
+    description: |
+      He is the "William" of "William and Mary." The pair were
+      initially chosen as regents, but later offered the crown in their own right by Parliament.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane gb
+    blurb: Anne, Queen of Scotland and England
+    date: 1702-03-08
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane gb
+    blurb: Treaty of Union
+    date: 1706-07-22
+    description: |
+      The Acts of Union were passed in each of the Scottish and English parliaments to implement the Treaty of Union, uniting the two thrones
+      into a single crown. A unified government would come later.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[List of Scottish monarchs](https://wikipedia.org/wiki/List_of_Scottish_monarchs)"
+      Last Edited: 2023-12-02. Last Viewed: 2023-12-04.
+  - type: mundane gb
+    blurb: The Acts of Union receive royal assent
+    date: 1707-03-06
+    description: |
+      The Acts of Union 1707 establish Great Britain, uniting the two
+      parliaments.
+    source: |
+      [WikiPedia](https://wikipedia.org/)
+      "[Acts of Union 1707](https://en.wikipedia.org/wiki/Acts_of_Union_1707)"
+      Last Edited: 2023-11-09. Last Viewed: 2023-12-05.

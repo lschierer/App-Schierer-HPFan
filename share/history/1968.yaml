@@ -1,0 +1,20 @@
+---
+events:
+  - type: magical
+    blurb: Gwenog Jones born.
+    description: |
+      Gwenog Jones born at an unknown point during this year.
+    source: |
+      Mrs. J. K. Rowling.
+      "[Wizard of the Month Archive](https://therowlinglibrary.com/jkrowling.com/textonly/en/wotm.html)"
+      Last Viewed 2021-05-21.
+  - type: magical
+    blurb: Eugenia Jenkins elected Minister for Magic
+    description: |
+      Eugenia Jenkins elected Minister for Magic at an unknown
+      point during this year.
+    source: |
+      Mrs. J. K. Rowling.
+      "[Ministers for Magic](https://www.rowlingindex.org/work/msmpm/)"
+      [The J.K. Rowling Index](https://www.rowlingindex.org/) Originally Published on
+      Pottermore 2014-10-31. Last Visited 2023-12-04.

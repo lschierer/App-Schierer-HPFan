@@ -1,0 +1,337 @@
+---
+events:
+  - type: magical
+    blurb: The Ministry of Magic established.
+    date: 1707
+    description: |
+      The Ministry of Magic established. It seems clear that the
+      Wizarding world was already in hiding.  It is also notable
+      that the Wizengamot predates the Ministry, as the first Minister
+      was "Previously head of the Wizengamot."
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Ulick Gamp elected Minister of Magic
+    date: 1707
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Damocles Rowle elected Minister of Magic
+    description: |
+      From his two sentence description, he was a bigot who was eventually forced to step down.  The exact role of the International Confederation of Wizards in this is unclear.
+    date: 1718
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Perseus Parkinson elected Minister of Magic
+    date: 1726
+    description: |
+      Another bigot, the public pushed back.
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Eldritch Diggory elected Minister of Magic
+    date: 1733
+    description: |
+      Established the Auror recruitment programme.
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Albert Boot elected Minister of Magic
+    date: 1747
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Basil Flack elected Minister of Magic
+    date: 1752
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Hesphaestus Gore elected Minister of Magic
+    date: 1752
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Maximilian Crowdy elected Minister of Magic
+    date: 1770
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Poreus Knatchbull elected Minister of Magic
+    date: 1781
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Unctuous Osbert elected Minister of Magic
+    date: 1789
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Artemisia Lufkin elected Minister of Magic
+    date: 1798
+    description: |
+      First female Minister for Magic.
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Grogan Stump elected Minister of Magic
+    date: 1811
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Josephina Flint elected Minister of Magic
+    date: 1819
+    description: |
+      Claimed the telegraph interfered with wand performance.
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Ottaline Gambol elected Minister of Magic
+    date: 1827
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Radolphus Lestrange elected Minister of Magic
+    date: 1835
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Hortensia Milliphutt elected Minister of Magic
+    date: 1841
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Evangeline Orpington elected Minister of Magic
+    date: 1849
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Priscilla Dupont elected Minister of Magic
+    date: 1855
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Dugald McPhail elected Minister of Magic
+    date: 1858
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Faris Spavin elected Minister of Magic
+    date: 1865
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Venusia Crickerly elected Minister of Magic
+    date: 1903
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Archer Evermonde elected Minister of Magic
+    date: 1912
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Lorcan McLaird elected Minister of Magic
+    date: 1923
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Hector Fawley elected Minister of Magic
+    date: 1925
+    description: |
+      Voted out of office because he failed to take [Gellert Grindelwald]
+      seriously.
+
+      [Gellert Grindelwald]: </harrypedia/people/grindelwald/gellert/>
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Leonard Spencer-Moon elected Minister of Magic
+    date: 1939
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Wilhelmina Tuft elected Minister of Magic
+    date: 1948
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Ignatius Tuft elected Minister of Magic
+    date: 1959
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Nobby Leach elected Minister of Magic
+    description: |
+      [Leach] is listed as being a first-generation magical.  The source blurb
+      states that many pure-bloods resigned in protest over his appointment,
+      and that he left office after contracting a "mysterious illness" about which there are a number of conspiracy theories.
+
+      [Leach]: </harrypedia/people/leach/nobby/>
+    date: 1962
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Eugenia Jenkins elected Minister of Magic
+    date: 1968
+    description: |
+      Despite dealing competently with the pure-blood riots in the late 60s, the public perception was that he was unequal to the task of dealing with
+      [Riddle].  This ultimately cost him his position.
+
+      [Riddle]: </harrypedia/people/riddle/tom_marvolo/>
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Harold Minchum elected Minister of Magic
+    date: 1975
+    description: |
+      Elected to deal with the [Riddle] problem, he responded by placing more [Dementors] around [Azkaban].  This proved ineffective.
+
+      [Riddle]: </harrypedia/people/riddle/tom_marvolo/>
+
+      [Dementors]: </harrypedia/non-beings/dementor/>
+
+      [Azkaban]: </harrypedia/azkaban/>
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Millicent Bagnold elected Minister of Magic
+    date: 1980
+    description: |
+      The third Minister to face the [Riddle] war, she also had to answer to the [International Confederation of Wizards] over breaches to the [International Statute of Secrecy] as the Wizarding world celebrated [Riddle]'s disappearance.
+
+      [Riddle]: </harrypedia/people/riddle/tom_marvolo/>
+
+      [International Confederation of Wizards]: <../culture/government/>
+
+      [International Statute of Secrecy]: <../culture/>
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Cornelius Fudge elected Minister of Magic
+    date: 1990
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Rufus Scrimgeour elected Minister of Magic
+    date: 1996-07
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Pius Thicknesse elected Minister of Magic
+    date: 1997
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.
+  - type: magical
+    blurb: Kingsley Shacklebolt elected Minister of Magic
+    date: 1998-05
+    source: |
+      * Mrs. J. K. Rowling.
+        "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
+        _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+        Originally Published: 2014-10-31. Last Visited: 2023-12-05.

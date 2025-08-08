@@ -1,0 +1,27 @@
+---
+events:
+  - type: magical
+    blurb: Snape becomes the Potions Professor
+    description: |
+      [Snape] started at [Hogwarts] in either fall of 1981 or possibly the spring of
+      that year.
+
+      [Snape]: <../people/snape/severus/>
+
+      [Hogwarts]: <../hogwarts/>
+    source: |
+      Mrs. J. K. Rowling. _Harry Potter and the Order of the Phoenix_
+          (Kindle Location 5323). Pottermore Limited. American Kindle Edition.
+  - type: magical
+    blurb: Professor Slughorn resigns.
+    source: |
+      Mrs. J. K. Rowling. _Short Stories from Hogwarts of Power,
+          Politics and Pesky Poltergeists_  Pottermore Publishing. American Kindle
+          Edition. © 2016. Page 34.
+    description: |
+      We are told this was a few days after he heard of [Riddle]'s first fall, so 
+      presumably in November.  This seems suggests that [Snape] started mid-year.
+
+      [Riddle]: <../people/riddle/tom_marvolo/>
+
+      [Snape]: <../people/snape/severus/>

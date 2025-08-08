@@ -1,0 +1,10 @@
+---
+events:
+  - type: magical
+    blurb: Approximate birthday of William (Bill) Weasley.
+    description: |
+      This date is computed from other events.
+    source: |
+      See the [Weasley] family page for justification of this date.
+
+      [Weasley]: <../people/weasley/>

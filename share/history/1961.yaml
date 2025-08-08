@@ -1,0 +1,24 @@
+---
+events:
+  - type: magical
+    blurb: Arthur Weasley starts at Hogwarts
+    description: |
+      [Arthur Weasley] starts Hogwarts.  A man named Ogg is game keepr.
+      We do not know if 'Ogg' is a first or last name.
+
+      [Arthur Weasley]: <../people/weasley/arthur/>
+    source: |
+      Mrs. J. K. Rowling. 
+      _[Harry Potter and the Goblet of Fire]_
+      Pottermore Limited. American Kindle Edition.
+      Approx Kindle Location 9223 of 11332.
+
+      [Harry Potter and the Goblet of Fire]: https://www.librarything.com/work/113
+  - type: magical
+    blurb: Regulus Black born
+    source: |
+      Mrs. J. K. Rowling.
+      "[The Noble and Most Ancient House of Black]"
+      Originally Published: 2006-02-21. Last Viewed: 2023-12-04.
+
+      [The Noble and Most Ancient House of Black]: https://www.rowlingindex.org/work/blacktree/

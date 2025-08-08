@@ -1,0 +1,160 @@
+---
+events:
+  - type: mundane
+    date: 1903
+    blurb: The Pistols Act of 1903
+    description: |
+      Regulates the sale of firearms with a barrel of
+      less than 9 inches.  In practice, this bill does nothing.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[Firearms regulation in the United Kingdom](https://en.wikipedia.org/wiki/Firearms_regulation_in_the_United_Kingdom)"
+      Last Edited 2021-02-14. Last Viewed 2021-02-28.
+  - type: magical
+    date: 1913
+    blurb: Henry Potter serves in the Wizengamot
+    description: |
+      He publicly condemns Minister for
+      Magic, Archer Evermonde.  The Potter family was excluded from the 
+      ‘Sacred Twenty-Eight’.
+    source: |
+      Mrs. J. K. Rowling.
+      "[The Potter Family](https://www.rowlingindex.org/work/pmpfam/)"
+      _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+      Originally Published on Pottermore: 2015-09-22. Last Viewed 2024-02-13.
+  - type: mundane
+    date: 1914-07-28
+    blurb: formal start of World War I
+    description: |
+      History dates the war from here.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/)
+      "[World War I](https://en.wikipedia.org/wiki/World_War_I)"
+      Last Edited: 2021-05-12. Last Viewed: 2021-05-14.
+  - type: mundane
+    date: 1918-11-11
+    blurb: Armistice of 11 November 1918
+    description: |
+      This effectively ends World War I, though the treaties
+      would take some time to be created.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/)
+      "[World War I](https://en.wikipedia.org/wiki/World_War_I)"
+      Last Edited: 2021-05-12. Last Viewed: 2021-05-14.
+  - type: mundane
+    date: 1920
+    blurb: The Firearms Act of 1920
+    description: |
+      > It required anyone wanting to purchase or
+        possess a firearm or ammunition to obtain a firearm certificate. The
+        certificate, which lasted for three years, specified not only the firearm but also the amount of ammunition the holder could buy or possess.
+
+      This law does not affect smooth bore guns.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[Firearms regulation in the United Kingdom](https://en.wikipedia.org/wiki/Firearms_regulation_in_the_United_Kingdom)"
+      Last Edited 2021-02-14. Last Viewed 2021-02-28.
+  - type: magical
+    blurb: Henry Potter leaves Wizengamot
+    source: |
+      Mrs. J. K. Rowling.
+      "[The Potter Family](https://www.rowlingindex.org/work/pmpfam/)"
+      _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
+      Originally Published on Pottermore: 2015-09-22. Last Viewed 2024-02-13.
+  - type: magical
+    date: 1926-12-31
+    blurb: Tom Marvolo Riddle born
+    source: |
+      [Harry Potter Wiki](https://harrypotter.fandom.com/).
+       "[Tom Riddle](https://harrypotter.fandom.com/wiki/Tom_Riddle)" 
+       The logic used in the citation for this is persuasive. 
+       Last edited 2021-02-19. Last viewed 2021-02-23.
+  - type: magical
+    date: 1930
+    blurb: The "Sacred Twenty-Eight" list is Published
+    description: |
+      Sometime in this decade the "Sacred Twenty-Eight" list is
+      published
+    source: |
+      Mrs. J. K. Rowling. 
+      _[Short Stories from Hogwarts of Power, Politics and Pesky Poltergeists]_  
+      Pottermore Publishing. American Kindle Edition. © 2016. Page 31.
+
+      [Short Stories from Hogwarts of Power, Politics and Pesky Poltergeists]: https://www.librarything.com/work/18275514/
+  - type: magical
+    date: 1931
+    blurb: Approximate start of Horace Slughorn's teaching career
+    description: |
+      This may have been as much as one year later.
+    source: |
+      Mrs. J. K. Rowling. 
+      _[Short Stories from Hogwarts of Power, Politics and Pesky Poltergeists]_  
+      Pottermore Publishing. American Kindle
+      Edition. © 2016. Page 34.
+
+       [Short Stories from Hogwarts of Power, Politics and Pesky Poltergeists]: https://www.librarything.com/work/18275514/
+  - type: mundane
+    date: 1937
+    blurb: The Firearms Act of 1937
+    description: |
+      The Firearms Act 1937 extends the 1920 bill to smooth bore shotguns with short barrels, and a few other changes.
+    source: |
+      [Wikipedia](https://en.wikipedia.org/).
+      "[Firearms regulation in the United Kingdom](https://en.wikipedia.org/wiki/Firearms_regulation_in_the_United_Kingdom)"
+      Last Edited 2021-02-14. Last Viewed 2021-02-28.
+  - type: magical
+    date: 1938-09-01
+    blurb: Tom Marvolo Riddle starts at Hogwarts
+    description: |
+      This date is computed from his birthday.
+  - type: mundane
+    date: 1939-09-01
+    blurb: World War II starts
+    source: |
+      [Wikipedia](https://en.wikipedia.org/)
+      "[World War II](https://en.wikipedia.org/wiki/World_War_II)"
+      Last Edited: 2021-05-11. Last Viewed: 2021-05-14.
+  - type: magical
+    date: 1943
+    blurb: Hagrid expelled.
+    source: |
+      [Harry Potter Wiki](https://harrypotter.fandom.com/).
+      "[Rubeus Hagrid](https://harrypotter.fandom.com/wiki/Rubeus_Hagrid)"
+      Last Edited 2021-03-01. Last Viewed 2021-03-01.
+  - type: mundane
+    date: 1945-05-08
+    blurb: German surrender (VE Day)
+    source: |
+      [Wikipedia](https://en.wikipedia.org/)
+      "[World War II](https://en.wikipedia.org/wiki/World_War_II)"
+      Last Edited: 2021-05-11. Last Viewed: 2021-05-14.
+  - type: magical
+    date: 1945-07
+    blurb: Tom Marvolo Riddle graduates
+    description: |
+      Tom Marvolo Riddle graduates from Hogwarts (computed from when he
+      started).
+  - type: mundane
+    blurb: The Children Act of 1948
+    date: 1948
+    description: |
+      The Children Act 1948 established a children's committee and a
+      children's officer in each local authority.
+    source: |
+      Mr. David Batty.
+      "[Timeline: the history of child protection](https://www.theguardian.com/society/2004/apr/23/childrensservices.childprotection)"
+      *[The Guardian](https://www.theguardian.com/)* 2004-04-23.  Last Viewed:
+      2021-06-04.
+  - type: magical
+    date: 1950-02-06
+    blurb: Arthur Weasley born
+    source: |
+      Mrs. J. K. Rowling. "[Arthur Weasley Fact File](https://web.archive.org/web/20170414075352/https://www.pottermore.com/explore-the-story/arthur-weasley)" <https://www.pottermore.com> Snapshot from 2017-04-14. Last Viewed 2021-03-01 via Internet Archive.
+  - type: magical
+    date: 1953
+    blurb: Lucius Malfoy born
+    description: |
+      He was born either this year or the next (1954).
+    source: |
+      [Harry Potter Wiki](https://harrypotter.fandom.com/).
+      "[Lucius Malfoy](https://harrypotter.fandom.com/wiki/Lucius_Malfoy)" The logic used in this citation is persuasive. Last edited 2021-02-10. Last viewed 2021-02-23.

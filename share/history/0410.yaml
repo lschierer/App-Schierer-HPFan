@@ -1,0 +1,40 @@
+---
+events:
+  - type: mundane
+    source: |
+      [Wikipedia]. "[End of Roman rule in Britain]" Last Edited: 2023-09-19.
+      Last Viewed: 2023-10-11.
+
+
+      [End of Roman rule in Britain]: https://en.wikipedia.org/wiki/End_of_Roman_rule_in_Britain
+
+      [Wikipedia]: https://wikipedia.org/
+    blurb: End of the Roman period
+    description: >
+      By 410, the last of the Roman magistrates and soldiers had been expelled
+      from Britain following sucessive withdrawals of the bulk of Roman troops
+      over the proceeding 30 years.
+  - type: mundane
+    source: |
+      [Wikipedia]. "[Dip pen]" Last Edited 2020-07-24. Last Viewed 2020-08-16
+
+      [Dip pen]: https://en.wikipedia.org/wiki/Dip_pen
+
+      [Wikipedia]: https://wikipedia.org/
+    blurb: The oldest known "split-nib metal dip pen"
+    description: This is an approximate date.
+  - type: religious
+    source: |
+      * speculation 
+      * [Wikipedia]. "[Hadrian's Wall]" Last Edited 2023-10-05.
+        Last viewed 2020-10-11.
+
+      [Wikipedia]: https://wikipedia.org/
+
+      [Hadrian's Wall]: https://wikipedia.org/wiki/Hadrian%27s_Wall
+    blurb: Hadrian's Wall marks the northern extent of Christianity.
+    description: >
+      This is pure speculation on my part. I am basing this on the fact that the
+      Wall marks the furthest north that the Romans had a consist presence. I
+      have found no evidence that missionaries were particularly effective among
+      the Pict or Scots.

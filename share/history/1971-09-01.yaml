@@ -1,0 +1,34 @@
+---
+events:
+  - type: magical
+    blurb: Harry's parents and their friends start Hogwarts
+    description: |
+      [James], [Sirius], [Remus],[Lily] and [Snape] are known
+      to have started at the same time. 
+
+      [James]: <../people/potter/james/>
+
+      [Sirius]: <../people/black/sirius_iii/>
+
+      [Remus]: <../people/lupin/remus_john/>
+
+      [Lily]: <../people/evans/lily_j/>
+
+      [Snape]: <../people/snape/severus/>
+    source: |
+      This date is infered/computed from others.
+  - type: magical
+    blurb: Lucius Malfoy as prefect
+    description: |
+      We do not know if he is a fifth, sixth, or seventh
+      year prefect.  We only know that he welcomes [Snape]
+      to the [Slytherin] table during the Sorting.
+
+      [Snape]: <../people/snape/severus/>
+
+      [Slytherin]: <../hogwarts/slytherin/>
+    source: |
+      Mrs. J. K. Rowling. _[Harry Potter and the Deathly Hallows]_
+      American Kindle edition approx location 8539 of 9604, approx page 278. Pottermore Publishing.
+
+      [[Harry Potter and the Deathly Hallows]: https://www.librarything.com/work/3577382
