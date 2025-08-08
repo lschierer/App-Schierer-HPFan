@@ -64,7 +64,7 @@ span.site-title.spectrum-Heading {
   }
 
   div.site-title-section {
-    grid-template-columns: 3fr 3fr;
+    grid-template-columns: 2fr 4fr;
   }
 
   div.title-container {
@@ -84,6 +84,10 @@ span.site-title.spectrum-Heading {
   .header {
     grid-template-columns: 2fr 4.2fr 0.8fr; /* Gradual transition */
     grid-template-areas: "logo navigation social";
+  }
+
+  div.site-title-section {
+    grid-template-columns: 2fr 4fr;
   }
 }
 
@@ -157,6 +161,10 @@ span.site-title.spectrum-Heading {
 }
 
 @media (width >= 1286px) {
+  div.site-title-section {
+    grid-template-columns: 2fr 5fr;
+  }
+
   span.site-title.spectrum-Heading {
     font-size: var(--spectrum-heading-size-xl);
     line-height: var(--spectrum-heading-line-height-xl);
@@ -164,6 +172,10 @@ span.site-title.spectrum-Heading {
 }
 
 @media (width >= 1401px) {
+  div.site-title-section {
+    grid-template-columns: 1fr 6fr;
+  }
+
   span.site-title.spectrum-Heading {
     font-size: var(--spectrum-heading-size-xxl);
     line-height: var(--spectrum-heading-line-height-xxl);
