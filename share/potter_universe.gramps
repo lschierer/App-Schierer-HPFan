@@ -3,7 +3,7 @@
 "http://gramps-project.org/xml/1.7.1/grampsxml.dtd">
 <database xmlns="http://gramps-project.org/xml/1.7.1/">
   <header>
-    <created date="2025-08-05" version="5.1.5"/>
+    <created date="2025-08-08" version="5.1.5"/>
     <researcher>
       <resname>Luke Schierer</resname>
       <resemail>luke@schierer.org</resemail>
@@ -4535,13 +4535,14 @@
       <eventref hlink="_ed99a0b350642067a21bb1689" role="Primary"/>
       <tagref hlink="_ed5f283475c2bd8d650cc02c9c8"/>
     </person>
-    <person handle="_fc76685f51a412a2a61282bc713" change="1734909350" id="I0317">
+    <person handle="_fc76685f51a412a2a61282bc713" change="1754627608" id="I0317">
       <gender>F</gender>
       <name type="Birth Name">
         <first>Leanne</first>
         <surname derivation="Given"></surname>
       </name>
       <eventref hlink="_f6db8d3a6d3167703e85003d625" role="Primary"/>
+      <citationref hlink="_ff54f8bdb4c5f8b3b31e9a269c1"/>
     </person>
     <person handle="_fc76693a27334c0efa03765b8ad" change="1734909429" id="I0318">
       <gender>M</gender>
@@ -4787,6 +4788,22 @@
         <first>Miranda</first>
         <surname derivation="Unknown ">Goshawk</surname>
       </name>
+    </person>
+    <person handle="_ff5513bfa374505ef3988ec746a" change="1754630649" id="I0346">
+      <gender>M</gender>
+      <name type="Birth Name">
+        <first>Fenrir</first>
+        <surname derivation="Given">Greyback</surname>
+      </name>
+      <citationref hlink="_ff5515bd27e76a64ef175c7034c"/>
+    </person>
+    <person handle="_ff551e7ff2a29b35145fd942b69" change="1754631586" id="I0347">
+      <gender>F</gender>
+      <name type="Unknown">
+        <first>Helga</first>
+        <surname derivation="Unknown ">Hufflepuff</surname>
+      </name>
+      <tagref hlink="_ed5f294a35f37f5bdc6b68379cc"/>
     </person>
   </people>
   <families>
@@ -6817,6 +6834,16 @@
       <page>303</page>
       <confidence>3</confidence>
       <sourceref hlink="_ed593362a594923dc8b56aee22b"/>
+    </citation>
+    <citation handle="_ff54f8bdb4c5f8b3b31e9a269c1" change="1754627597" id="C0254">
+      <page>207</page>
+      <confidence>3</confidence>
+      <sourceref hlink="_f12bd2b537bccae1cf9318e1ea"/>
+    </citation>
+    <citation handle="_ff5515bd27e76a64ef175c7034c" change="1754630637" id="C0255">
+      <page>105</page>
+      <confidence>3</confidence>
+      <sourceref hlink="_f12bd2b537bccae1cf9318e1ea"/>
     </citation>
   </citations>
   <sources>
