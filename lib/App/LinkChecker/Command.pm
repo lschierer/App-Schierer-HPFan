@@ -18,6 +18,7 @@ class App::LinkChecker::Command {
   our $VERSION = 'v0.30.0';
 
   field $debug : param //= 0;
+  field $external :param //= 1;
 
   field $startUrl : param;
   field %checked_urls;
@@ -46,7 +47,7 @@ class App::LinkChecker::Command {
   }
 
   method execute {
-    $logger->info("Starting checking at $startUrl");
+    $logger->info("Starting checking at '$startUrl'; external link checking is " . ($external ? 'enabled' : 'disabled'));
 
     # Process queue until empty
     while (@urls_to_check) {
@@ -60,12 +61,12 @@ class App::LinkChecker::Command {
     $self->update_children_statuses();
 
     foreach my $checked (sort keys %checked_urls) {
-      if ($checked_urls{$checked}->{status} !~ /^2/) {
+      if ($checked_urls{$checked}->{status} !~ /^2/ && $checked_urls{$checked}->{status} ne 'skipped') {
         say "Found Broken Link to $checked";
       }
       elsif (exists $checked_urls{$checked}->{children}) {
         foreach my $child (sort keys %{ $checked_urls{$checked}->{children} }) {
-          if ($checked_urls{$checked}->{children}->{$child} !~ /^2/) {
+          if ($checked_urls{$checked}->{children}->{$child} !~ /^2/ && $checked_urls{$checked}->{children}->{$child} ne 'skipped') {
             say "Page $checked contains Broken Link to $child.";
           }
         }
@@ -135,35 +136,57 @@ class App::LinkChecker::Command {
 
           if ($href) {
             my $abs_uri = URI->new($href)->abs($url);
-            $logger->debug("found url to check: $abs_uri");
+            $logger->trace("found url to check: $abs_uri");
 
             unless ($abs_uri->scheme eq 'mailto') {    # Avoid email links
               my $abs_url_str = $abs_uri->as_string;
+
+              # Check if this is a same-page link (fragment-only or same URL without fragment)
+              my $current_uri = URI->new($url);
+              my $is_same_page = 0;
+
+              # Remove fragments for comparison
+              my $current_without_fragment = $current_uri->clone;
+              $current_without_fragment->fragment(undef);
+              my $target_without_fragment = $abs_uri->clone;
+              $target_without_fragment->fragment(undef);
+
+              if ($current_without_fragment->eq($target_without_fragment)) {
+                $is_same_page = 1;
+                $logger->debug("Skipping same-page link: $abs_url_str");
+              }
 
               # Check if URL is already processed
               unless (exists $checked_urls{$abs_url_str}) {
                 # Check if already in queue to avoid duplicates
                 unless (grep { $_ eq $abs_url_str } @urls_to_check) {
-              # Only add to queue for recursive checking if it's the same domain
-                  if ($start_hostname eq $abs_uri->host) {
+                  # Only add to queue for recursive checking if it's the same domain AND not same page
+                  if ($start_hostname eq $abs_uri->host && !$is_same_page) {
                     push @urls_to_check,
                       $abs_url_str; # Add to end of queue for recursive checking
-                    $logger->debug(
-"Added internal URL $abs_url_str to queue for recursive checking"
-                    );
+                    $logger->debug(sprintf(
+                    'Added internal URL "%s" to queue for recursive checking',
+                    $abs_url_str));
                   }
-                  else {
-                    # External URL - check it directly but don't recurse
+                  elsif (!$is_same_page && $external) {
+                    # External URL - check it directly but don't recurse (only if external checking enabled)
                     $self->check_single_url($abs_url_str);
                     $logger->debug(
 "Checked external URL $abs_url_str directly (no recursion)"
                     );
                   }
+                  elsif (!$is_same_page && !$external) {
+                    # External URL but external checking disabled - mark as skipped
+                    $checked_urls{$abs_url_str}->{status} = 'skipped';
+                    $logger->debug("Skipped external URL $abs_url_str (external checking disabled)");
+                  }
                 }
               }
 
-              # Mark the relationship for later status update
-              $checked_urls{$url}->{children}->{$href} = 'pending';
+              # Mark the relationship for later status update (unless it's same-page)
+              unless ($is_same_page) {
+                $checked_urls{$url}->{children}->{$href} = 'pending';
+              }
             }
           }
         }
@@ -176,6 +199,15 @@ class App::LinkChecker::Command {
 
   method check_single_url ($url) {
     # This method checks a single URL without recursion (for external links)
+
+    my $uri = URI->new($url);
+    if ($uri->host ne $start_hostname and not $external) {
+      $logger->debug(sprintf('host "%s" is not "%s" and external set to %s - marking as skipped',
+      $uri->host, $start_hostname, $external ? 'true' : 'false'));
+      $checked_urls{$url}->{status} = 'skipped';
+      return 'skipped';
+    }
+
     if (exists $checked_urls{$url}) {
       $logger->debug("$url has already been checked. Skipping.");
       return $checked_urls{$url}->{status};

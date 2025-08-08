@@ -11,11 +11,13 @@ require App::LinkChecker::Command;
 my $startUrl = 'http://localhost:3000'; # default to assuming a local Mojolicious instance
 my $debug = 0;
 my $help = 0;
+my $noExternal = 0;
 
 GetOptions(
-  'url=s'   => \$startUrl,
-  'debug'   => \$debug,
-  'help'    => \$help,
+  'url=s'       => \$startUrl,
+  'no-external' => \$noExternal,
+  'debug'       => \$debug,
+  'help'        => \$help,
 ) or die "Error in command line arguments\n";
 
 if ($help) {
@@ -24,6 +26,7 @@ Usage: $0 [options]
 
 Options:
   --url=StartUrl  Url to start checking at
+  --no-external   disable checking external links
   --debug         enable debugging
   --help          Display this help message
 
@@ -34,6 +37,7 @@ exit 0;
 my $checker = App::LinkChecker::Command->new(
   debug     => $debug,
   startUrl  => $startUrl,
+  external  => !$noExternal
 );
 
 $checker->execute();
