@@ -12,7 +12,7 @@ require App::Schierer::HPFan::Logger::Config;
 
 class App::LinkChecker::Command {
   use List::AllUtils qw( any none );
-
+  use URI::Escape qw(uri_unescape);
   use namespace::autoclean;
   use Carp;
   our $VERSION = 'v0.30.0';
@@ -26,10 +26,25 @@ class App::LinkChecker::Command {
   field $start_hostname;
   field $logger;
 
+  field $site_origin;
+
+  field $http = HTTP::Tiny->new(
+    max_redirect => 10,   # follow up to 10 redirects
+    timeout      => 10,
+  );
+
   ADJUST {
+    # IMPORTANT: seed raw URL so start-url fragments get checked
     push @urls_to_check, $startUrl;
-    # Extract hostname from start URL for domain checking
-    $start_hostname = URI->new($startUrl)->host;
+
+    my $u = URI->new($startUrl);
+    my $port = $u->port;
+    my $default = ($u->scheme eq 'http'  && $port == 80)
+               || ($u->scheme eq 'https' && $port == 443);
+    my $port_part = $default ? '' : ":$port";
+    $site_origin = sprintf('%s://%s%s', $u->scheme, lc($u->host), $port_part);
+
+    $start_hostname = lc $u->host;
   }
 
   ADJUST {
@@ -49,25 +64,41 @@ class App::LinkChecker::Command {
   method execute {
     $logger->info("Starting checking at '$startUrl'; external link checking is " . ($external ? 'enabled' : 'disabled'));
 
-    # Process queue until empty
     while (@urls_to_check) {
-      my $url = shift @urls_to_check;    # FIFO: take from front
+      my $url = shift @urls_to_check;   # FIFO
       $self->check_url($url);
     }
 
     $logger->info("Url Checking complete");
 
-    # Update children statuses now that all URLs are processed
+    # One final pass to resolve any base-page children still 'pending'
     $self->update_children_statuses();
 
-    foreach my $checked (sort keys %checked_urls) {
-      if ($checked_urls{$checked}->{status} !~ /^2/ && $checked_urls{$checked}->{status} ne 'skipped') {
-        say "Found Broken Link to $checked";
+    # Reporting
+    for my $page (sort keys %checked_urls) {
+      my $pstat = $checked_urls{$page}->{status} // 'unknown';
+      if ($pstat =~ /^3/ || $pstat eq 'pending' || $pstat eq 'unknown') {
+        # ignore or print as informational if you like
+      } elsif ($pstat !~ /^2/ && $pstat ne 'skipped') {
+        say "Found Broken Link to '$page'";
       }
-      elsif (exists $checked_urls{$checked}->{children}) {
-        foreach my $child (sort keys %{ $checked_urls{$checked}->{children} }) {
-          if ($checked_urls{$checked}->{children}->{$child} !~ /^2/ && $checked_urls{$checked}->{children}->{$child} ne 'skipped') {
-            say "Page $checked contains Broken Link to $child.";
+
+      next unless exists $checked_urls{$page}->{children};
+      for my $child (sort keys %{ $checked_urls{$page}->{children} }) {
+        my $cstat = $checked_urls{$page}->{children}->{$child} // 'unknown';
+
+        next if $cstat eq 'pending' || $cstat eq 'unknown';  # <-- important
+
+        my $is_fragment = index($child, '#') >= 0;
+        my $is_broken =
+          ($cstat eq '404-fragment') ||
+          ($cstat ne 'skipped' && $cstat !~ /^2/);
+
+        if ($is_broken) {
+          if ($is_fragment) {
+            say "Page '$page' contains Broken Anchor '$child'.";
+          } else {
+            say "Page '$page' contains Broken Link to '$child'.";
           }
         }
       }
@@ -75,123 +106,113 @@ class App::LinkChecker::Command {
   }
 
   method check_url ($url, $recurse = 1) {
-    # Remove fragment for checking purposes
-    my $uri = URI->new($url);
+    # Canonical base (no fragment) for keying
+    my $canon = $self->canonical($url);              # string
+    my $orig  = URI->new($url);                      # may have fragment
 
-    if (exists $checked_urls{$url}) {
-      $logger->debug("$url has already been checked. Skipping.");
-      return $checked_urls{$url}->{status};
+    if (exists $checked_urls{$canon}->{status}) {
+      $logger->debug("$canon has already been checked (status=$checked_urls{$canon}->{status}). Skipping.");
+      return $checked_urls{$canon}->{status};
     }
 
-    $logger->info("Checking $url");
-
-    my $response = HTTP::Tiny->new->get($url);
-    $checked_urls{$url}->{status} = $response->{status};
+    $logger->info("Checking $canon");
+    my $response = $http->get($canon);
+    $checked_urls{$canon}->{status} = $response->{status};
 
     unless ($response->{success}) {
       $logger->warn(sprintf(
         'Detected Broken page %s via status %s - %s.',
-        $url, $response->{status}, $response->{reason}
+        $canon, $response->{status}, $response->{reason}
       ));
       return $response->{status};
     }
 
-    $logger->debug(
-      sprintf('Page %s returned status %s.', $url, $response->{status}));
+    $logger->debug(sprintf('Page %s returned status %s.', $canon, $response->{status}));
 
-    if ($response->{content} && length($response->{content}) && $recurse) {
-      my $content = $response->{content};
-      if (length($uri->fragment)) {
-        my $frag           = $uri->fragment;
-        my $fragment_found = 0;
+    my $content = $response->{content} // '';
 
-        # Check for id attributes on any element
-        if ($content =~ /<[^>]+id=[\'\"]$frag[\'\"][^>]*>/i) {
-          $fragment_found = 1;
-        }
-        # Check for name attributes (older anchor style)
-        elsif ($content =~ /<a[^>]+name=[\'\"]$frag[\'\"][^>]*>/i) {
-          $fragment_found = 1;
-        }
+    # Build anchor index for this page
+    my %anchors;
+    while ($content =~ /<([A-Za-z][^>\s]*)\s[^>]*\bid=["']([^"']+)["'][^>]*>/g) {
+      $anchors{$2} = 1;
+    }
+    while ($content =~ /<a\s[^>]*\bname=["']([^"']+)["'][^>]*>/g) {
+      $anchors{$1} = 1;
+    }
+    $checked_urls{$canon}->{anchors} = \%anchors;
 
-        unless ($fragment_found) {
-          $logger->warn("Fragment #$frag NOT found on page $url");
-          $checked_urls{$url}->{status} =
-            404;    # Override the successful page status
-          return 404;
-        }
+    # Resolve any pending fragments queued for this base page
+    if (my $pend = delete $checked_urls{$canon}->{pending_fragments}) {
+      for my $frag (keys %$pend) {
+        my $ok = exists $anchors{$frag};
+        $checked_urls{$canon}->{children}->{"$canon#$frag"} = $ok ? 200 : '404-fragment';
       }
-      if ($uri->path !~ /\.(css|js|png|jpg|gif|pdf)$/i)
-      {    # cannot find links to check in these files.
-        my $extractor = HTML::LinkExtor->new(undef, $url);
-        $extractor->parse($response->{content});
-        my @links = $extractor->links;
+    }
 
-        my $hostname = $uri->host;
-        $logger->info("extracted hostname $hostname");
+    # If this *request* had a fragment, validate it (without altering page status)
+    if (my $frag = $orig->fragment) {
+      $frag = uri_unescape($frag);
+      my $ok = exists $anchors{$frag};
+      $checked_urls{$canon}->{children}->{"$canon#$frag"} = $ok ? 200 : '404-fragment';
+    }
 
-        foreach my $link_array (sort @links) {
-          my ($tag, %attrs) = @$link_array;
-          my $href = $attrs{href} || $attrs{src};
+    # Recurse: parse links unless this is a static asset
+    my $req_uri = URI->new($canon);
+    if ($recurse && $req_uri->path !~ /\.(?:css|js|png|jpg|gif|pdf)$/i) {
+      my $extractor = HTML::LinkExtor->new(undef, $canon);
+      $extractor->parse($content);
+      my @links = $extractor->links;
+      $logger->info(sprintf('parsed %d links from %s', scalar @links, $canon));
 
-          if ($href) {
-            my $abs_uri = URI->new($href)->abs($url);
-            $logger->trace("found url to check: $abs_uri");
+      my $hostname = URI->new($canon)->host // '';
+      $logger->info("extracted hostname $hostname for request");
 
-            unless ($abs_uri->scheme eq 'mailto') {    # Avoid email links
-              my $abs_url_str = $abs_uri->as_string;
+      # sorting the links gives me a semi-predictable order it will progress
+      # through the overall site
+      for my $link_array (sort @links) {
+        my ($tag, %attrs) = @$link_array;
+        my $href = $attrs{href} || $attrs{src} or next;
 
-              # Check if this is a same-page link (fragment-only or same URL without fragment)
-              my $current_uri = URI->new($url);
-              my $is_same_page = 0;
+        my $abs  = URI->new($href)->abs($canon);
+        my $base = $self->canonical($abs);   # encoded, no fragment
+        my $frag = $abs->fragment;
+        $frag = uri_unescape($frag) if defined $frag;
 
-              # Remove fragments for comparison
-              my $current_without_fragment = $current_uri->clone;
-              $current_without_fragment->fragment(undef);
-              my $target_without_fragment = $abs_uri->clone;
-              $target_without_fragment->fragment(undef);
+        # Internal if it starts with the site origin
+        my $is_internal = index($base, $site_origin) == 0;
 
-              if ($current_without_fragment->eq($target_without_fragment)) {
-                $is_same_page = 1;
-                $logger->debug("Skipping same-page link: $abs_url_str");
-              }
+        # Same-page?
+        my $parent_base  = $canon;
+        my $is_same_page = ($parent_base eq $base);
 
-              # Check if URL is already processed
-              unless (exists $checked_urls{$abs_url_str}) {
-                # Check if already in queue to avoid duplicates
-                unless (grep { $_ eq $abs_url_str } @urls_to_check) {
-                  # Only add to queue for recursive checking if it's the same domain AND not same page
-                  if ($start_hostname eq $abs_uri->host && !$is_same_page) {
-                    push @urls_to_check,
-                      $abs_url_str; # Add to end of queue for recursive checking
-                    $logger->debug(sprintf(
-                    'Added internal URL "%s" to queue for recursive checking',
-                    $abs_url_str));
-                  }
-                  elsif (!$is_same_page && $external) {
-                    # External URL - check it directly but don't recurse (only if external checking enabled)
-                    $self->check_single_url($abs_url_str);
-                    $logger->debug(
-"Checked external URL $abs_url_str directly (no recursion)"
-                    );
-                  }
-                  elsif (!$is_same_page && !$external) {
-                    # External URL but external checking disabled - mark as skipped
-                    $checked_urls{$abs_url_str}->{status} = 'skipped';
-                    $logger->debug("Skipped external URL $abs_url_str (external checking disabled)");
-                  }
-                }
-              }
-
-              # Mark the relationship for later status update (unless it's same-page)
-              unless ($is_same_page) {
-                $checked_urls{$url}->{children}->{$href} = 'pending';
-              }
-            }
+        # Queue internal
+        unless (exists $checked_urls{$base} || grep { $_ eq $base } @urls_to_check) {
+          if ($is_internal && !$is_same_page) {
+            push @urls_to_check, $base;
+            $logger->info("queued $base from $parent_base");
+          } elsif (!$is_same_page && $external) {
+            $self->check_single_url($base);
+          } elsif (!$is_same_page && !$external) {
+            $checked_urls{$base}->{status} = 'skipped';
           }
         }
-      }
 
+        # Record relationship from parent to child (base or base#frag)
+        if (defined $frag && length $frag) {
+          my $child_key = "$base#$frag";
+          $checked_urls{$parent_base}->{children}->{$child_key} = 'pending';
+
+          if (my $anch = $checked_urls{$base}->{anchors}) {
+            my $ok = exists $anch->{$frag};
+            $checked_urls{$parent_base}->{children}->{$child_key} = $ok ? 200 : '404-fragment';
+          } else {
+            $checked_urls{$base}->{pending_fragments}->{$frag} = 1;
+          }
+        } else {
+          my $child_status = $checked_urls{$base}->{status};
+          $checked_urls{$parent_base}->{children}->{$base} //= (defined $child_status ? $child_status : 'pending');
+        }
+      }
     }
 
     return $response->{status};
@@ -215,7 +236,7 @@ class App::LinkChecker::Command {
 
     $logger->info("Checking external URL $url (no recursion)");
 
-    my $response = HTTP::Tiny->new->get($url);
+    my $response = $http->get($url);
     $checked_urls{$url}->{status} = $response->{status};
 
     unless ($response->{success}) {
@@ -235,29 +256,43 @@ class App::LinkChecker::Command {
   }
 
   method update_children_statuses {
-    foreach my $parent_url (keys %checked_urls) {
-      next unless exists $checked_urls{$parent_url}->{children};
+    for my $parent (keys %checked_urls) {
+      next unless exists $checked_urls{$parent}->{children};
 
-      foreach my $child_href (keys %{ $checked_urls{$parent_url}->{children} })
-      {
-        next
-          unless $checked_urls{$parent_url}->{children}->{$child_href} eq
-          'pending';
+      for my $child (keys %{ $checked_urls{$parent}->{children} }) {
+        next unless $checked_urls{$parent}->{children}->{$child} eq 'pending';
 
-        # Convert relative href to absolute URL to find in checked_urls
-        my $abs_uri     = URI->new($child_href)->abs($parent_url);
-        my $abs_url_str = $abs_uri->as_string;
+        # Fragment children are resolved when the base page is fetched
+        next if index($child, '#') >= 0;
 
-        if (exists $checked_urls{$abs_url_str}) {
-          $checked_urls{$parent_url}->{children}->{$child_href} =
-            $checked_urls{$abs_url_str}->{status};
+        # Base page child: copy status if we have it
+        if (exists $checked_urls{$child}->{status}) {
+          $checked_urls{$parent}->{children}->{$child}
+            = $checked_urls{$child}->{status};
         }
-        else {
-          $logger->warn("Could not find status for child URL: $abs_url_str");
-          $checked_urls{$parent_url}->{children}->{$child_href} = 'unknown';
-        }
+        # else still pending; will resolve after that page is fetched
       }
     }
+  }
+
+  method canonical ($u) {
+    my $uri = URI->new("$u");
+
+    $uri->fragment(undef);
+
+    if (my $host = $uri->host) {
+      $uri->host(lc $host);
+    }
+
+    if (($uri->scheme||'') eq 'http'  && ($uri->port||0) == 80)  { $uri->port(undef) }
+    if (($uri->scheme||'') eq 'https' && ($uri->port||0) == 443) { $uri->port(undef) }
+
+    my $path = $uri->path // '';
+    if ($path ne '/' && $path =~ s{/$}{}) {
+      $uri->path($path);
+    }
+
+    return $uri->as_string;
   }
 
 }
