@@ -125,4 +125,4 @@ fundamentally.
 
 [^210412-1]: See my notes on [relative power levels][rpl].
 
-[rpl]: <../../Appendices/Relative Power Levels/>
+[rpl]: <../Appendices/Relative Power Levels>

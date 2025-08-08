@@ -58,6 +58,6 @@ become just another building.
 
 [^220818-1]: I intentionally changing things here. See [FSSP][] for details.
 
-[FSSP]: ../../Appendices/FSSP/
+[FSSP]: ../Appendices/FSSP
 
 [^220818-2]: Who is a real person, but much younger than in this story.

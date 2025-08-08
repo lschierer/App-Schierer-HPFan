@@ -4,8 +4,6 @@ title: Class Lists by Year
 author: Luke Schierer
 ---
 
-import ClassListTable from '@components/ClassListTable.astro'
-
 I started out being incredibly strict, accepting only names from the listing of
 the original forty and those I found in the books. On being incredibly
 frustrated with the dearth of names, however, I reluctantly expanded that to
@@ -52,7 +50,7 @@ century, if not more, behind.
 <ClassListTable year="1991"></ClassListTable>
 
 There is some ambiguity about Hannah's blood status. See my notes on the
-[Abbott family/Harrypedia/people/abbott).
+[Abbott family](/Harrypedia/people/Abbott).
 
 Terry Boot appears to have attended his seventh year at [Hogwarts][] despite the
 laws against first generation students doing so.[^20210602-1] This means either
@@ -67,10 +65,10 @@ symmetry. Given my [argument about how students would be
 sorted][Class_and_Blood], I think he mutated to a Hufflepuff girl. Based on the
 same logic, Rivers is almost certainly a pure-blood, but might be a halfbood.
 
-[Class_and_Blood]: ../culture/Class_and_Blood/
+[Class_and_Blood]: ../culture/Class_and_Blood
 
 The [same argument][Class_and_Blood] suggests the ambiguity of the
-[Weasley/Harrypedia/people/weasley) social class.
+[Weasley](/Harrypedia/people/Weasley) social class.
 
 Lots of fanfiction uses an extra female character named Fay Dunbar as one of the
 girls in [Harry's][Harry] year. This apparently comes from the _Harry Potter
@@ -79,16 +77,16 @@ wiki article that Mrs. Rowling had influence in naming the extra characters in
 the game versions. Unless I see otherwise, I'm going to assume that Fay and
 Sophie are the same person, and will probably go with Sophie as the name.
 
-[Harry]: </Harrypedia/people/Potter/Harry James/>/
+[Harry]: </Harrypedia/people/Potter/Harry James>
 
-[^20210602-1]: 
+[^20210602-1]:
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows](https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows)_
     p. 236. Pottermore Publishing. American Kindle Edition.
 
 [^20200701-3]: Mrs. J. K. Rowling. https://harrypotter.fandom.com/wiki/Harry_Potter_and_Me?file=Pagenotes.jpg
 
-[^20200706-2]: 
+[^20200706-2]:
     "[Fay Dunbar](https://harrypotter.fandom.com/wiki/Fay_Dunbar#Behind_the_scenes)"
     Last Viewed 2020-07-06.
 

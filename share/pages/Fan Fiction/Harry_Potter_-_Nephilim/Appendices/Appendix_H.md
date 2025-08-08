@@ -102,21 +102,21 @@ The nephilim generally live longer than humans do. They generally get sick less 
 The nephilim are physically more resilient than normal humans. While their dead bodies show no differences from a normal humans (except where they have been mutated per above), it is clear that _something_ is different while they live. They survive acceleration better; they are merely bruised by impacts that would shatter human bones. There is an important exception to this resilance, they appear more sensitive to lack of regular nutrition - they will not die from malnutrition the way a normal human would, but their growth is stunted more easily than that of a human child's, they become lethargic sooner, demonstrate trouble concentrating, and pretty much every other effect of severe malnurishment that a human does - _except_ that they do not die from it. The average nephilim appears to require on average 10 to 20 percent more calories per day, though the difference is less noticable if the individual avoids using their "magic."
 
 [zodiac symbols]: https://www.britannica.com/topic/zodiac
-[AA]: </FanFiction/Harry_Potter_-_Nephilim/Appendices/Points of Divergence/>
-[AB]: </FanFiction/Harry_Potter_-_Nephilim/Appendices/Rules of Magic/>
-[AC]: </FanFiction/Harry_Potter_-_Nephilim/Appendices/Magical Beings/>
-[AD]: </FanFiction/Harry_Potter_-_Nephilim/Appendices/Relative Power Levels/>
-[AE]: </FanFiction/Harry_Potter_-_Nephilim/Appendices/Life Expectancy/>
-[AF]: </FanFiction/Harry_Potter_-_Nephilim/Appendices/Magical Contracts/>
-[AG]: /FanFiction/Harry_Potter_-_Nephilim/Appendices/Appendix_G/
-[ab]: </FanFiction/Harry*Potter*-_Nephilim/Appendices/Rules of Magic/>
-[af]: </FanFiction/Harry_Potter_-_Nephilim/Appendices/Magical Contracts/>
-[Appendix I]: </FanFiction/Harry_Potter_-_Nephilim/Appendices/Veela Pathology/>
-[Encyclopedic Reference]: /Harrypedia/
-[FSSP]: /FanFiction/Harry_Potter_-_Nephilim/Appendices/FSSP/
+[AA]: <./Points of Divergence>
+[AB]: <./Rules of Magic>
+[AC]: <./Magical Beings>
+[AD]: <./Relative Power Levels>
+[AE]: <./Life Expectancy>
+[AF]: <./Magical Contracts>
+[AG]: /.Appendix_G
+[ab]: <./Rules of Magic>
+[af]: <./Magical Contracts>
+[Appendix I]: <./Veela Pathology/>
+[Encyclopedic Reference]: /Harrypedia
+[FSSP]: ./FSSP
 [FWoaO1]: https://archiveofourown.org/works/28507302
-[Inheritance]: /FanFiction/Harry_Potter_-_Nephilim/Appendices/Inheritance/
-[Introduction]: /FanFiction/Harry_Potter_-_Nephilim/introduction/
+[Inheritance]: ./Inheritance
+[Introduction]: ../Introduction/
 [MW]: https://wikipedia.org/wiki/Many_Waters
 [TSL]: https://archive.org/details/in.ernet.dli.2015.86985
 [WP1]: https://wikipedia.org/wiki/Soteriology

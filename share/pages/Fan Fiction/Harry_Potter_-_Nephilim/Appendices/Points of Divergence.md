@@ -45,7 +45,7 @@ to make sense.
   essential component of the magic. Thus beyond the magic learned at Hogwarts,
   there _are_ others, including rituals.
 
-  [AF]: /FanFiction/Harry*Potter*-\_Nephilim/Appendices/Magical Contracts/
+  [AF]: <./Magical Contracts>
 
 [Goblet of Fire]: https://www.goodreads.com/book/show/6.Harry_Potter_and_the_Goblet_of_Fire
 [Deathly Hallows]: https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows
@@ -153,18 +153,18 @@ to make sense.
   positing that fallen angels continued to seduce women during the Old Testament
   times.
 
-[ab]: </FanFiction/Harry*Potter*-_Nephilim/Appendices/Rules of Magic/>
-[af]: </FanFiction/Harry_Potter_-_Nephilim/Appendices/Magical Contracts/>
-[ah]: /FanFiction/Harry_Potter_-_Nephilim/Appendices/Appendix_H/
-[Inheritance]: /FanFiction/Harry_Potter_-_Nephilim/Appendices/Inheritance/
+[ab]: <./Rules of Magic>
+[af]: <./Magical Contracts>
+[ah]: ./Appendix_H
+[Inheritance]: ./Inheritance
 [FWoaO1]: https://archiveofourown.org/works/28507302
 [MW]: https://wikipedia.org/wiki/Many_Waters
 [TSL]: https://archive.org/details/in.ernet.dli.2015.86985
 [TSL2]: https://archive.org/details/in.ernet.dli.2015.86985
 [TSL3]: https://archive.org/details/in.ernet.dli.2015.86985
-[Introduction]: /FanFiction/Harry_Potter_-_Nephilim/Introduction/
-[Encyclopedic Reference]: /Harrypedia/
-[FSSP]: /FanFiction/Harry_Potter_-_Nephilim/Appendices/FSSP/
+[Introduction]: /Fan Fiction/Harry_Potter_-_Nephilim/Introduction/
+[Encyclopedic Reference]: /Harrypedia
+[FSSP]: ./FSSP
 [MW2]: https://wikipedia.org/wiki/Many_Waters
 [MW3]: https://wikipedia.org/wiki/Many_Waters
 

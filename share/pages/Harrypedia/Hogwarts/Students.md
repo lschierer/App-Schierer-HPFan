@@ -27,21 +27,21 @@ but if so I have not found it. Thus, I have started [this list][ClassLists],
 some of these people are also in the [Gramps][] data I have
 [extracted][people].
 
-[people]: /Harrypedia/people/
+[people]: /Harrypedia/people
 [Gramps]: https://gramps-project.org/
 [Harry's Yearmates]: https://mugglenet.com/2016/03/the-revised-forty/
 
-[^200419-1]: 
+[^200419-1]:
     [Mugglenet](https://mugglenet.com).
     _[The Revised Forty](https://www.mugglenet.com/2016/03/the-revised-forty/)_
     Published: 2016-03-31. Updated: 2021-05-31. last viewed 2021-06-02.
 
-[^200630-1]: 
+[^200630-1]:
     Ms. Diana Summers.
     _[Secrets of the Classlist: Harry Potter and the Original Forty Classmates](https://www.goodreads.com/book/show/25464490-secrets-of-the-classlist)_
     Copyright 2011,2014. Amazon Kindle Direct Publishing.
 
-[^200630-3]: 
+[^200630-3]:
     Mrs. J. K. Rowling.
     "[The Original Forty](https://www.rowlingindex.org/work/og40pm/)"
     [The J.K. Rowling Index](https://www.rowlingindex.org)
@@ -86,13 +86,13 @@ artificially deflate the number of first generation wizards not just in
 does seem believable of [Umbridge] and those like her who set up the laws under
 Pius Thicknesse's puppet government.
 
-[Harry]: </Harrypedia/people/Potter/Harry James/>/
-[Arthur]: /Harrypedia/people/Weasley/Arthur/
-[Umbridge]: </Harrypedia/people/Umbridge/Dolores Jane/>
-[Dean]: /Harrypedia/people/Thomas/Dean/
-[comparitive_class_ages]: comparitive_class_ages
+[Harry]: </Harrypedia/people/Potter/Harry James>
+[Arthur]: /Harrypedia/people/Weasley/Arthur
+[Umbridge]: </Harrypedia/people/Umbridge/Dolores Jane>
+[Dean]: /Harrypedia/people/Thomas/Dean
+[comparitive_class_ages]: ./comparitive_class_ages
 
-[^211001-1]: 
+[^211001-1]:
     Bakuraptor.
     _[A Wizard's Guide to 'Banking'](https://www.fanfiction.net/s/12327848)_
     Published: 2017-01-18. Updated: 2021-07-21. Last Viewed: 2021-10-01.
@@ -101,25 +101,25 @@ Pius Thicknesse's puppet government.
 
     - AndrewWolfe. _[The Ghost of Privet Drive](https://archiveofourown.org/works/21500365)_
       [Archive of Our Own](https://archiveofourown.org) Last Updated 2020-08-14. Last Viewed 2020-08-19.
-    - old-crow. _[Unintended Consequences](https://www.fanfiction.net/s/13903544)_  
+    - old-crow. _[Unintended Consequences](https://www.fanfiction.net/s/13903544)_
       [Fanfiction.net](https://fanfiction.net) Published: 2021-06-18. Last
       Updated: 2021-08-10. Last Viewed: 2021-08-12.
 
 [^200817-1]: Mrs. J. K. Rowling. I forget which book this is in.
 
-[^200817-2]: 
+[^200817-2]:
     Mrs. J. K. Rowling.
     "[About the Books: transcript of J.K. Rowling's live interview on Scholastic.com](http://www.accio-quote.org/articles/2000/1000-scholastic-chat.htm)"
     [Accio Quote](http://www.accio-quote.org/) 2000-10-16. Last Viewed 2020-08-17.
 
-[^200819-2]: 
+[^200819-2]:
     I'm assuming that both [Dean Thomas][Dean] and the Death Eaters would
     have regarded [Dean] as a first generation wizard. We are told [Dean] did not
     know about his father, and if the Death Eaters did, they would have
     considered him a blood traitor anyway. Thus that makes at least one student
     who went into hiding unsuccessfully.
 
-[^200819-3]: 
+[^200819-3]:
     It certainly does not mention nearly enough people coming
     through the portrait tunnel, and pretty much his entire class, plus both
     Creevy boys seem to be there. Get a citation for this.

@@ -3,8 +3,7 @@ title: >-
   Life Expectancy
 author: Luke Schierer
 collection: Nephilim
-sidebar:
-  order: 100
+order: 100
 ---
 
 | Average Power Level | US Males 1900 | US Males 2001 | US Male Nephilim 1900 |
@@ -106,5 +105,5 @@ This gives our central characters life expectancies as follows:
 
 \* Fleur is quarter-veela, see [The Veela Curse].
 
-[The Veela Curse]: </FanFiction/Harry_Potter_-_Nephilim/Appendices/Veela Pathology/>
+[The Veela Curse]: <./Veela Pathology>
 [Life Tables for the United States Social Security Area 1900-2100]: https://www.ssa.gov/oact/NOTES/pdf_studies/study120.pdf

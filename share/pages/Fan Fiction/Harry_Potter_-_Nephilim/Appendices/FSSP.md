@@ -31,7 +31,7 @@ with real history. This will also explain why the FSSP priests in this story
 feel constrained in their ability to deal with Harry's situation. They do not
 want to make waves before they are formally established in the diocese.
 
-[AA]: </FanFiction/Harry_Potter_-_Nephilim/Appendices/Points of Divergence/>
+[AA]: <./Points of Divergence>
 
 [^211219-4]: Fraternitas Sacerdotalis Sancti Petri Ltd. "[About the FSSP](https://fssp.org.uk/about-the-fssp/)"
 

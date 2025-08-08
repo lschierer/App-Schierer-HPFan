@@ -296,16 +296,16 @@ make it a distinct category of event worth separate consideration.
     that operated for years without anyone other than the participants being aware that a contract
     was in place.
 
-[AA]: </FanFiction/Harry*Potter*-_Nephilim/Appendices/Points of Divergence/>
-[AB]: </FanFiction/Harry_Potter_-_Nephilim/Appendices/Rules of Magic/>
+[AA]: <./Points of Divergence>
+[AB]: <./Rules of Magic>
 
-[AC]: </FanFiction/Harry*Potter*-_Nephilim/Appendices/Magical Beings/>
-[AD]: </FanFiction/Harry_Potter_-_Nephilim/Appendices/Relative Power Levels/>
-[AE]: </FanFiction/Harry_Potter_-_Nephilim/Appendices/Life Expectancy/>
-[AF]: </FanFiction/Harry_Potter_-_Nephilim/Appendices/Magical Contracts/>
-[AG]: /FanFiction/Harry_Potter_-_Nephilim/Appendices/Appendix_G/
-[AH]: /FanFiction/Harry_Potter_-_Nephilim/Appendices/Appendix_H/
-[Imperius]: /Harrypedia/magic/spells/imperio/
+[AC]: <./Magical Beings>
+[AD]: <./Relative Power Levels>
+[AE]: <./Life Expectancy>
+[AF]: <./Magical Contracts>
+[AG]: ./Appendix_G
+[AH]: ./Appendix_H
+[Imperius]: /Harrypedia/magic/spells/imperio
 
 [^230103-2]:
     these include,

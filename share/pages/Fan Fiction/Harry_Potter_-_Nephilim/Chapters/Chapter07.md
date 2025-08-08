@@ -21,5 +21,5 @@ after he has converted in his thinking.
 
 [^20210604-8]: See the [History] page, The Children Act 1989 was not in effect yet.
 
-[History]: /Harrypedia/History/
-[ISWS]: /Harrypedia/culture/
+[History]: /Harrypedia/History
+[ISWS]: /Harrypedia/culture

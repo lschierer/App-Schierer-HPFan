@@ -68,17 +68,19 @@ Salazar was functionally nomadic, and of the two remaining founders, Rowena's
 home in Scotland was probably more easily isolated and hidden from the
 non-magical population than Godric's in the south.
 
-[^210422-14]: 
+[^210422-14]:
     Mrs. J. K. Rowling.
     "[Ilvermorny School of Witchcraft and Wizardry](https://www.wizardingworld.com/writing-by-jk-rowling/ilvermorny)"
     Originally published on Pottermore: 2016-06-28. Last Viewed: 2021-04-22.
 
-[^210422-13]: 
+[^210422-13]:
     [The Editors of Encyclopaedia Britannica](https://www.britannica.com/)
     "[Viking](https://www.britannica.com/topic/Viking-people)"
     Last Updated 2019-12-19. Last Viewed: 2021-04-22.
 
 [^210422-12]: See [History]
+
+[History]: ../History
 
 [^210422-11]: various, including
 
@@ -101,60 +103,60 @@ non-magical population than Godric's in the south.
       "[Helga Hufflepuff](https://harry-potter-compendium.fandom.com/wiki/Helga_Hufflepuff)"
       Last Edited: 2014-06-15. Last Viewed: 2021-04-22.
 
-[^210422-9]: 
+[^210422-9]:
     [Wikipedia](https://en.wikipedia.org/)
     "[History of Anglo-Saxon England](https://en.wikipedia.org/wiki/History_of_Anglo-Saxon_England)"
     Last Edited: 2021-04-21. Last Viewed: 2021-04-22.
 
-[^210422-8]: 
+[^210422-8]:
     Mrs. J. K. Rowling. _Harry Potter and the Deathly Hallows_
     p. 131. Pottermore Publishing. American Kindle Edition.
 
-[^210422-5]: 
+[^210422-5]:
     [Behind the Name](https://www.behindthename.com/)
     "[Godric](https://www.behindthename.com/name/godric)"
     Updated: 2020-02-04. Last Viewed: 2021-04-22.
 
-[^210422-7]: 
+[^210422-7]:
     [Wikipedia](https://en.wikipedia.org/)
     "[Salazar \(surname\)](<https://en.wikipedia.org/wiki/Salazar_(surname)>)"
     Last Updated: 2021-03-30. Last Viewed: 2021-04-22.
 
-[^210422-6]: 
+[^210422-6]:
     [Wikipedia](https://en.wikipedia.org/)
     "[Old English](https://en.wikipedia.org/wiki/Old_English)
     Last Updated: 2021-04-19. Last Viewed: 2021-04-22.
 
-[^210422-4]: 
+[^210422-4]:
     [Wikipedia](https://en.wikipedia.org/)
     "[Helga](https://en.wikipedia.org/wiki/Helga)"
     Last Edited: 2021-04-08. Last Viewed: 2021-04-22.
 
-[^210422-3]: 
+[^210422-3]:
     [Wikipedia](https://en.wikipedia.org/)
     "[Rowena](https://en.wikipedia.org/wiki/Rowena)"
     Last Edited: 2020-06-06. Last Viewed: 2021-04-22.
 
 [FWO1]: https://archiveofourown.org/works/28507302
 
-[^210525-7]: 
+[^210525-7]:
     CmptrWz.
     _[For Want of an Outfit](https://archiveofourown.org/works/28507302)_
     [Chapter 24](https://archiveofourown.org/works/28507302/chapters/77941415)
     Published: 2021-01-02 Updated: 2021-05-24 Last Viewed: 2021-05-25.
 
-[^210525-6]: 
+[^210525-6]:
     [Wikipedia](https://en.wikipedia.org)
     "[Flush toilet](https://en.wikipedia.org/wiki/Flush_toilet#Pre-modern_flush_toilet_systems)"
     Last Edited: 2021-04-23. Last Viewed: 2021-05-25.
 
-[^210525-5]: 
+[^210525-5]:
     Mrs. J. K. Rowling. _Harry Potter and the Chamber of Secrets_
     Chapter 9. better citation needed.
 
 [^210525-4]: citation needed.
 
-[^210525-2]: 
+[^210525-2]:
     - Mr. William E. Schmidt.
       "[English Bathrooms: Out of the Closet](https://www.nytimes.com/1992/01/23/garden/english-bathrooms-out-of-the-closet.html)"
       [The New York Times](https://www.nytimes.com) 1992-01-23.
@@ -165,25 +167,25 @@ non-magical population than Godric's in the south.
       [The Victorian Emporium](https://www.thevictorianemporium.com) 2011-08-04
       Note the distinction between _baths_ and _toilets_
 
-[^210525-1]: 
+[^210525-1]:
     Mrs. J. K. Rowling.
     _Hogwarts: An Incomplete and Unreliable Guide_
     p. 74. Pottermore Publishing. American Kindle Edition.
 
-[^210525-3]: 
+[^210525-3]:
     Mrs. J. K. Rowling.
     _Hogwarts: An Incomplete and Unreliable Guide_
     p. 74. Pottermore Publishing. American Kindle Edition.
 
-[^210812-1]: 
+[^210812-1]:
     see [History], the Norse took over substantial parts of
     Scotland and eastern England at different times.
 
-[^200720-9]: 
+[^200720-9]:
     Mrs. J. K. Rowling. _Harry Potter and the Goblet of Fire_ (Kindle Locations
     9206-9208). Pottermore Limited. American Kindle Edition.
 
-[^200720-10]: 
+[^200720-10]:
     Mr. Jon Walter.
     "[Why I'm glad corporal punishment is now only found in books](https://www.theguardian.com/childrens-books-site/2016/jul/01/corporal-punishment-jon-walter)".
     [The Guardian](https://www.theguardian.com/) 2016-07-01. Last viewed
@@ -191,7 +193,7 @@ non-magical population than Godric's in the south.
     schools Harry likely attended, 1986 for British state schools, and 2000 for
     Scottish private schools.
 
-[^210520-1]: 
+[^210520-1]:
     FMPtrumpets.
     _[How is this My Life?](https://archiveofourown.org/works/31033985)_
     [Chapter 11: the Midnight Duel](https://archiveofourown.org/works/31033985/chapters/77703686)
@@ -202,31 +204,31 @@ non-magical population than Godric's in the south.
 [BHBS1]: https://www.ourkids.net/school/brief-history-of-boarding
 [FBSU1]: https://britannia-study.com.my/school-type/famous-uk-boarding-schools
 
-[^210725-2]: 
+[^210725-2]:
     Our Kids™.
     "[A Brief History of Boarding Schools](https://www.ourkids.net/school/brief-history-of-boarding)"
     © 2020. [Our Kids](https://www.ourkids.net).
 
-[^210725-1]: 
+[^210725-1]:
     Our Kids™.
     "[A Brief History of Boarding Schools](https://www.ourkids.net/school/brief-history-of-boarding)"
     © 2020. [Our Kids](https://www.ourkids.net).
 
 [^200817-1]: Mrs. J. K. Rowling. I forget which book this is in.
 
-[^200817-2]: 
+[^200817-2]:
     Mrs. J. K. Rowling.
     "[About the Books: transcript of J.K. Rowling's live interview on Scholastic.com](http://www.accio-quote.org/articles/2000/1000-scholastic-chat.htm)"
     [Accio Quote](http://www.accio-quote.org/) 2000-10-16. Last Viewed 2020-08-17.
 
-[^200819-2]: 
+[^200819-2]:
     I'm assuming that both Dean Thomas and the Death Eaters would
     have regarded Dean as a first generation wizard. We are told Dean did not know
     about his father, and if the Death Eaters did, they would have considered him a
     blood traitor anyway. Thus that makes at least one student who went into hiding
     unsuccessfully.
 
-[^200819-3]: 
+[^200819-3]:
     It certainly does not mention nearly enough people coming through
     the portrait tunnel, and pretty much his entire class, plus both Creevy boys
     seem to be there. Get a citation for this.
@@ -241,26 +243,26 @@ non-magical population than Godric's in the south.
 
 [^210521-6]: Mr. Rudyard Kipling. _Stalky & Co._ better citation needed.
 
-[^200811-1]: 
+[^200811-1]:
     Mrs. J. K. Rowling. _Harry Potter and the Prisoner of Azkaban_.
     Pottermore. American Kindle Edition. Better citation needed.
 
-[^200811-2]: 
+[^200811-2]:
     Mrs. J. K. Rowling. I don't recall which book this is in.
     Better citation needed.
 
-[^200419-1]: 
-    Mugglenet.  
+[^200419-1]:
+    Mugglenet.
     _[The Revised Forty](https://www.mugglenet.com/2016/03/the-revised-forty/)_
     [MuggleNet](https://mugglenet.com) Published: 2016-03-31. Updated:
     2021-05-31. last viewed 2021-06-02.
 
-[^200630-1]: 
+[^200630-1]:
     Ms. Diana Summers.
-    _Secrets of the Classlist: Harry Potter and the Original Forty Classmates_  
+    _Secrets of the Classlist: Harry Potter and the Original Forty Classmates_
     Copyright 2011,2014. Amazon Kindle Direct Publishing.
 
-[^200630-3]: 
+[^200630-3]:
     Mrs. J. K. Rowling.
     "[The Original Forty](https://www.wizardingworld.com/writing-by-jk-rowling/the-original-forty)"
     https://www.wizardingworld.com/ Originally published 2015-08-10.

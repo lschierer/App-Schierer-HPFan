@@ -35,4 +35,4 @@ Secondly, some goblins and dwarfs had relations of a sort - war is never a prett
 
 In their pride, the nephilim believe the humans are stupid believe in the myths of dwarfs. There are very few across the world who _know_ that the real history is far closer to the stories that human myth makers have come up with than the "history" that the nephilim teach. These few, for a variety of reasons, stay silent. Some respect the International Statute of Secrecy as law, even if they might privately consider it misguided. Some truly believe the separation best for both sides. Some are wise enough to realise they cannot change the status quo.
 
-[the Flood]: ../The_Flood/
+[the Flood]: ./The_Flood

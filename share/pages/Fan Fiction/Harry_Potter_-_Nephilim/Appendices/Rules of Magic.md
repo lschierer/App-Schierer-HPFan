@@ -9,12 +9,12 @@ tableOfContents:
   maxHeadingLevel: 4
 collection: Nephilim
 imports:
-  - /components/FanFiction/Harry_Potter_-_Nephilim/Appendices/PowerLevelTable.ts type="module"
+  - /components./PowerLevelTable.ts type="module"
 ---
 
 ## Overview
 
-Church scholars have studied magic almost continuously since the Church came out of hiding following [the Edict of Milan][EoM]. In addition to what the clergy have observed and compiled directly themselves, the Church has archived visions that various saints have had that disclose additional information. As these visions, like all visions of the saints, are not considered binding on the faithful, the Church considers this information useful, but not necessarily definitive. Church scholars have, from this research, derived these rules for how magic works.
+Church scholars have studied magic almost continuously since the Church came out of hiding following [the Edict of Milan][EoM].[^250807-1] In addition to what the clergy have observed and compiled directly themselves, the Church has archived visions that various saints have had that disclose additional information. As these visions, like all visions of the saints, are not considered binding on the faithful, the Church considers this information useful, but not necessarily definitive. Church scholars have, from this research, derived these rules for how magic works.
 
 ## Overall Rules
 
@@ -27,7 +27,7 @@ Individual nephil can be rated on a scale of 1 (low) to 10 (high) for access to 
 > [!NOTE]
 > Author's Note. Estimates of some key figures of in the history related in this archive are available [here][AD].
 
-[AD]: </FanFiction/Harry_Potter_-_Nephilim/Appendices/Relative Power Levels/>
+[AD]: <./Relative Power Levels/>
 [abt]: #abilities-by-type
 
 [^221216-2]:
@@ -207,8 +207,8 @@ For each choir we list both the description of that choir and the traits we obse
     Dr. Andrew Sulavik. _[All About Angels](https://www.kofc.org/en/resources/cis/cis303.pdf)_
     © 1999-2021 by Knights of Columbus Supreme Council. Pages 15-16.
 
-[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>
-[Harry]: </Harrypedia/people/Potter/Harry James/>
+[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
+[Harry]: </Harrypedia/people/Potter/Harry James>
 
 ## Mapping to how the Nephilim themselves understand Magic
 
@@ -525,15 +525,15 @@ humans, and _entirely_ outside the intended, natural hierarchy. Despite having g
 
 Nephil have some aspects of both. They are _mostly_ contingent beings that grow and change over time, but their use of magic is, in this universe, the use of an angelic power, and so it tends to either be 1) incredibly crippled compared to actual angels (for example, charms wear off really fast) or 2) incredibly permanent. In the canon books, you cannot remove Walburga's portrait from the wall without removing the wall, which might have been stupid for a house that will be passed down through generations, but clearly demonstrates that a momentary decision can have effects all out of proportion to the result. I am restricting that to magic used on things without immortal souls and to magic used on _other nephilim_ (or on races descending from nephilim, see [Magical Beings][AC]). Things that would be temptations to a human can be overriding compulsions to a nephil, and they are vulnerable to each other (and to others who can use similar powers) in ways that humans are not. See the notes on [contracts].
 
-[contracts]: <../Magical Contracts/>
-[AA]: <../Points of Divergence/>
-[AB]: <../Rules of Magic/>
-[AC]: <../Magical Beings/>
-[AD]: <../Relative Power Levels/>
-[AE]: <../Life Expectancy/>
-[AF]: <../Magical Contracts/>
-[AG]: ../Appendix_G/
-[AH]: ../Appendix_H/
+[contracts]: <./Magical Contracts>
+[AA]: <./Points of Divergence>
+[AB]: <./Rules of Magic>
+[AC]: <./Magical Beings>
+[AD]: <./Relative Power Levels>
+[AE]: <./Life Expectancy>
+[AF]: <./Magical Contracts>
+[AG]: ./Appendix_G
+[AH]: ./Appendix_H
 
 [^220823-1]: [Wikipedia][]. "[Arranged_marriage]" Last edited: 2022-08-17.
 
@@ -553,4 +553,7 @@ Nephil have some aspects of both. They are _mostly_ contingent beings that grow 
 
 [Quill of Acceptance and Book of Admittance]: https://www.rowlingindex.org/work/qaba/
 
-[EoM]: <Wikipedia. "[Edict of Milan](https://wikipedia.org/wiki/Edict_of_Milan)" Last Edited: 2024-10-23.>
+[EoM]: https://wikipedia.org/wiki/Edict_of_Milan
+[Edict of Milan]: https://wikipedia.org/wiki/Edict_of_Milan
+
+[^250807-1]: Wikipedia. "[Edict of Milan]" Last Edited: 2024-10-23.

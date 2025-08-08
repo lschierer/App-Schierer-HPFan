@@ -113,8 +113,8 @@ but will not be taught, laws that they must follow, and _no way out_. Note that 
 
 then I cannot be held culpable for failure to obey Parliament. The fault must belong to the person(s) who created that situation (by placing me there without my knowledge, or otherwise causing me to believe I lived somewhere else).
 
-[Hermione]: </Harrypedia/people/Granger/Hermione Jean/>/
-[Hogwarts]: /Harrypedia/Hogwarts/
+[Hermione]: </Harrypedia/people/Granger/Hermione Jean>
+[Hogwarts]: /Harrypedia/Hogwarts
 
 The students might not have been kidnapped, in that they can go home for a few
 weeks at Christmas, and two months or so each summer, but they will
@@ -158,20 +158,20 @@ their static society, they have options:
 
 Instead I suspect that some percentage of the magical culture actively _desires_ a permanent underclass that cannot succeed.[^240508-4] They _intend_ the first generation "emigrants" to become the next generation of peasant workers in their shops, manufactories/workshops; to fill the secretarial and clerical positions in the [Ministry]. While this may not be formally slavery, it is still repugnant.
 
-[^240508-4]: See also [Class and Blood](Class_and_Blood/) and [Class Consciousness](../Class_Consciousness/)
+[^240508-4]: See also [Class and Blood](Class_and_Blood) and [Class Consciousness](./Class_Consciousness)
 
-[Ministry]: Government/
-[MACUSA]: ../MACUSA/
+[Ministry]: Government
+[MACUSA]: ../MACUSA
 
-[Harry]: </Harrypedia/people/Potter/Harry James/>/
+[Harry]: </Harrypedia/people/Potter/Harry James>
 
-[^210323-5]: 
+[^210323-5]:
     Mrs. J. K. Rowling. _Harry Potter and the Half-Blood Prince_
     p. 8. Pottermore Publishing. American Kindle Edition.
     This is probably the clearest reference, though really the entire
     chapter proves the point.
 
-[^210323-6]: 
+[^210323-6]:
     Ms. Clare Feikert-Ahalt.
     "[Laws Concerning Children of Undocumented Migrants: United Kingdom](https://www.loc.gov/law/help/undocumented-migrants/uk.php)"
     Section III: "Pathways to Legal Residence and Citizenship for Illegal
@@ -179,7 +179,7 @@ Instead I suspect that some percentage of the magical culture actively _desires_
     [Library of Congress Law Library](https://www.loc.gov/law)
     2017-09-??
 
-[^210323-7]: 
+[^210323-7]:
     [Harry Potter Wiki](https://harrypotter.fandom.com/).
     "[International Statute of Wizarding Secrecy]https://harrypotter.fandom.com/wiki/International_Statute_of_Wizarding_Secrecy)"
     Last Edited: 2021-01-18. Last Viewed: 2021-03-23.
@@ -202,5 +202,5 @@ Instead I suspect that some percentage of the magical culture actively _desires_
 [^240508-1]: It is worth noting that nearly every author who spends significant time trying to build upon the backstory decides that there is a a _treaty_ between the magical population and the monarch of Britain to establish the [ISWS], the [Ministry of Magic], or both. A monarch does not sign a treaty with his/her subjects. The [Magna Carta] for example was a _charter_ not a _treaty_.
 
 [Magna Carta]: https://www.parliament.uk/magnacarta/
-[ISWS]: International_Statute_of_Secrecy/
-[Ministry of Magic]: Government/
+[ISWS]: International_Statute_of_Secrecy
+[Ministry of Magic]: Government

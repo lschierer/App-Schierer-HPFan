@@ -1,0 +1,85 @@
+"Potter Family" { 
+	subgraph Generation0 {
+		rank = same;
+		Q1P [label="? ? Potter\nb? - d?", shape=box];
+		Q1PandQ2F [shape=point,width=0.01];
+		Q2F [label="? ? Fleamont\nb? - d?", shape=box];
+		Q1P -> Q1PandQ2F [dir=none];
+		Q1PandQ2F -> Q2F [dir=none];
+	}
+
+	subgraph Generation0C {
+		rank = same;
+		Q1PaQ2Fc [shape=point,width=0.01];
+		H1Pc [shape=point,width=0.01];
+		Q5Pc [shape=point,width=0.01];
+		H1Pc -> Q1PaQ2Fc [dir = none];
+		Q1PaQ2Fc -> Q5Pc [dir = none];
+	}
+	Q1PandQ2F -> Q1PaQ2Fc [dir = none];
+
+	subgraph Generation1 {
+		rank = same;
+		H1P [label="Henry ? Potter\nb? - d?", shape=box];
+		H1PaQ3Q [shape=point,width=0.01];
+		Q3Q [label="? ? ?\nb? - d?", shape=box];
+		H1P -> H1PaQ3Q [dir = none];
+		H1PaQ3Q -> Q3Q [dir = none];
+
+		Q5P [label="? ? Potter\nb? - d?", shape=box];
+		Q5PaQ5Q [shape=point,width=0.01];
+		Q5Q [label="? ? ?\nb? - d?", shape=box];
+		Q5P -> Q5PaQ5Q [dir=none];
+		Q5PaQ5Q -> Q5Q [dir=none];
+		H1P -> Q3Q -> Q5P -> Q5Q [dir=none, penwidth=0.0, style="invis"];
+	}
+	W1913[shape = plaintext, style=invis, label="1913"];
+	W1921[shape = plaintext, style=invis, label="1921"];
+	H1P -> W1913 -> W1921 [ style=invis];
+	H1Pc -> H1P [dir=none];
+	Q5Pc -> Q5P [dir=none];
+
+	subgraph Generation2 {
+		rank = same;
+		F1P [label="Fleamont ? Potter\nb? - d1979", shape=box];
+		F1PaE1Q [shape=point,width=0.01];
+		E1Q [label="Euphemia ? ?\nb? - d?", shape=box];
+		F1P -> F1PaE1Q [dir = none];
+		F1PaE1Q -> E1Q [dir = none];
+
+		C1P [label="Charlus ? Potter\nb? - d?", shape=box];
+		C1PaD1B [shape=point,width=0.01];
+		D1B [label="Dorea ? Black\nb1920 - d1977", shape=box]
+		C1P -> C1PaD1B [dir = none];
+		C1PaD1B -> D1B [dir = none];
+		F1P -> E1Q -> C1P -> D1B [dir=none, penwidth=0.0, style="invis"];
+	}
+	H1PaQ3Q -> F1P [dir=none];
+	Q5PaQ5Q -> C1P [dir = none];
+
+	subgraph Generation3 {
+		rank = same;
+		J1P [label="James ? Potter\nb1960 - d1981-10-31", shape=box];
+		J1PaLJE [shape=point,width=0.01];
+		LJE [label="Lily J. Evans\nb1960-01-30 - d1981-10-31", shape=box];
+		J1P -> J1PaLJE [dir=none];
+		J1PaLJE -> LJE [dir=none];
+		Q4P [label="? ? Potter\nb? - d?", shape=box];
+		J1P -> LJE -> Q4P [dir=none, penwidth=0.0, style="invis"];
+
+	}
+	F1PaE1Q -> J1P [dir=none];
+	C1PaD1B -> Q4P [dir=none];
+
+	subgraph Generation4 {
+		rank = same;
+		HJP [label="Harry James Potter\nb1980-07-31 - ", shape=box];
+		HJPaGMW [shape=point,width=0.01];
+		GMW [label="Ginevra Molly Weasley\nb1981-08-11 - ", shape=box];
+		HJP -> HJPaGMW [dir=none];
+		HJPaGMW -> GMW [dir=none];
+		HJP -> GMW [dir=none, penwidth=0.0, style="invis"];
+
+	}
+	J1PaLJE -> HJP [dir=none];
+}

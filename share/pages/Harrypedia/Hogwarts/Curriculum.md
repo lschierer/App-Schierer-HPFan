@@ -24,8 +24,8 @@ are sometimes provided for NEWT students.[^20210928-7] Moreover, as you answer
 these questions, the overall impossibility of the [class
 schedule][Class_Schedule_Rant] comes more and more into play.
 
-[Class_Schedule_Rant]: Class_Schedule_Rant/
-[Trelawney]: /Harrypedia/people/Trelawney/Sybill/
+[Class_Schedule_Rant]: ./Class_Schedule_Rant
+[Trelawney]: /Harrypedia/people/Trelawney/Sybill
 
 As I stated in my [rant][Class_Schedule_Rant], a few authors have attempted to
 make sense of [Hogwarts][]' class scheduling, class offerings, and related
@@ -47,13 +47,14 @@ actually know if there are (or in the case of the above fan fiction, ever have
 been) _any_ other British schools.
 
 [Hogwarts]: ./
+[History]: ../History
 
-[^20210929-4]: 
+[^20210929-4]:
     Mrs. J. K. Rowling.
     _[Harry Potter and the Sorcerer's Stone](https://www.goodreads.com/book/show/3.Harry_Potter_and_the_Sorcerer_s_Stone)_
     p. 58. © 1998 Pottermore Limited. American Kindle Edition.
 
-[^20210929-3]: 
+[^20210929-3]:
     Mrs. J. K. Rowling.
     "[Wizarding Schools](https://www.rowlingindex.org/work/pmws/)"
     [The J. K. Rowling Index](https://www.rowlingindex.org/)
@@ -65,16 +66,16 @@ been) _any_ other British schools.
 
 [^20210929-1]: See my [History] notes.
 
-[^20210928-7]: 
+[^20210928-7]:
     Mrs. J. K. Rowling.
     _[Hogwarts: An Incomplete and Unreliable Guide](https://www.goodreads.com/book/show/31538647-hogwarts)_
     p. 36. © 2016 Pottermore Publishing. American Kindle Edition.
 
-[^20210928-6]: 
+[^20210928-6]:
     Mrs. J. K. Rowling.
     _[Harry Potter and the Order of the Phoenix](https://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix)_
     Kindle Location 12299. © 2005 Pottermore Limited. Kindle Edition.
 
-[^20210812-1]: 
+[^20210812-1]:
     see [History], the Norse took over substantial parts of
     Scotland and eastern England at different times.

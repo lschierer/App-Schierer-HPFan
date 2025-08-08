@@ -11,11 +11,11 @@ title: Teachers
 - [Minerva McGonagall][McGonagall]
 - [Severus Snape][Snape]
 
-[Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/>/
-[Binns]: /Harrypedia/people/Binns/Cuthbert/
-[Flitwick]: /Harrypedia/people/Flitwick/Filus/
-[McGonagall]: /Harrypedia/people/McGonagall/Minerva/
-[snape]: /Harrypedia/people/Snape/Severus/
+[Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
+[Binns]: /Harrypedia/people/Binns/Cuthbert
+[Flitwick]: /Harrypedia/people/Flitwick/Filus
+[McGonagall]: /Harrypedia/people/McGonagall/Minerva
+[snape]: /Harrypedia/people/Snape/Severus
 
 In more general terms, what is the role of the head of each house?
 [McGonagall] shows up to intervene in Gryffindor's internal discipline only
@@ -53,16 +53,16 @@ who is involved. Never mind [McGonagall] is Deputy Head, and therefore
 more logically the advisor at that point, we need a more Charles Dickens
 feel about it. Which is probably precisely the point.
 
-[Harry]: </Harrypedia/people/Potter/Harry James/>/
-[Luna]: /Harrypedia/people/Lovegood/Luna/
+[Harry]: </Harrypedia/people/Potter/Harry James>
+[Luna]: /Harrypedia/people/Lovegood/Luna
 [Stalky & Co.]: https://www.gutenberg.org/ebooks/3006
 
 [^20210521-6]: Mr. Rudyard Kipling. _Stalky & Co._ better citation needed.
 
-[^20200811-1]: 
+[^20200811-1]:
     Mrs. J. K. Rowling. _Harry Potter and the Prisoner of
     Azkaban_. Pottermore. American Kindle Edition. Better citation needed.
 
-[^20200811-2]: 
+[^20200811-2]:
     Mrs. J. K. Rowling. I don't recall which book this is in.
     Better citation needed.

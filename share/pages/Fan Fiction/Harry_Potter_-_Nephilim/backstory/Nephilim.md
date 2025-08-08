@@ -12,6 +12,6 @@ In other places however, the nephilim were distainful of the humans, and refused
 
 Thus we have the conflicting stories of the unicorns, some of which are terrible monsters[^241120-4] while others were beatiful horse-like creatures. Thus also we have relics of monsters men call diosaurs that have thankfully ceased to exist. It should be no surprise that there are no clear records of this time, for man had not yet learned to write, few would survive the great flood, and many generations would pass between that flood and the first written records. Indeed, the more remarkable thing is that the myths that _did_ form give us any kind of consistency at all.
 
-[the great flood]: ../The_Flood/
+[the great flood]: ./The_Flood
 
 [^241120-4]: Pottermore Publishing. _[A Journey Through Care of Magical Creatures]_. Pottermore Publishing 2019. ISBN 978-1-78110-616-7. Page 10.

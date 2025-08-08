@@ -115,21 +115,21 @@ There are in fact, though no-inworld scholar knows this, precise percentage base
     Mrs. J. K. Rowling & Sony Computer Entertainment Europe.
     _[Miranda Goshawk's Book of Spells](https://archive.org/details/0_20211019/)_ 2013. Page 66.
 
-[Raczidian]: /Harrypedia/people/Raczidian/
-[source works]: /FanFiction/Harry_Potter_-_Nephilim/Introduction/
+[Raczidian]: /Harrypedia/people/Raczidian
+[source works]: /Fan Fiction/Harry_Potter_-_Nephilim/Introduction
 [Many Waters]: https://wikipedia.org/wiki/Many_Waters
-[AA]: </FanFiction/Harry_Potter_-_Nephilim/Appendices/Points of Divergence/>
-[AB]: </FanFiction/Harry_Potter_-_Nephilim/Appendices/Rules of Magic/>
-[AC]: </FanFiction/Harry_Potter_-_Nephilim/Appendices/Magical Beings/>
-[Inheritance]: /FanFiction/Harry_Potter_-_Nephilim/Appendices/Inheritance/
-[AD]: </FanFiction/Harry_Potter_-_Nephilim/Appendices/Relative Power Levels/>
-[AE]: </FanFiction/Harry_Potter_-_Nephilim/Appendices/Life Expectancy/>
-[Magical Contracts]: </FanFiction/Harry_Potter_-_Nephilim/Appendices/Magical Contracts/>
-[Soteriology, Missiology and Ecclesiology]: /FanFiction/Harry_Potter_-_Nephilim/Appendices/Appendix_G/
-[AH]: /FanFiction/Harry_Potter_-_Nephilim/Appendices/Appendix_H//
-[Appendix I]: </FanFiction/Harry_Potter_-_Nephilim/Appendices/Veela Pathology/>
+[AA]: <./Points of Divergence>
+[AB]: <./Rules of Magic>
+[AC]: <./Magical Beings>
+[Inheritance]: ./Inheritance
+[AD]: <./Relative Power Levels>
+[AE]: <./Life Expectancy>
+[Magical Contracts]: <./Magical Contracts>
+[Soteriology, Missiology and Ecclesiology]: ./Appendix_G
+[AH]: ./Appendix_H
+[Appendix I]: <./Veela Pathology>
 
 [^241123-1]: See [Soteriology, Missiology and Ecclesiology] and [Points of Divergence]
 
-[Points of Divergence]: </FanFiction/Harry_Potter_-_Nephilim/Appendices/Points of Divergence/>
-[hippogriff]: /Harrypedia/animals/hippogriff/
+[Points of Divergence]: <./Points of Divergence>
+[hippogriff]: /Harrypedia/animals/hippogriff

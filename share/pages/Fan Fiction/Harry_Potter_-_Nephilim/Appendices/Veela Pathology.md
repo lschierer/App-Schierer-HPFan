@@ -98,7 +98,7 @@ Partial veela tend to take proportionately longer, averaging the normal rate of 
 The veela's _mental_ maturation is not accelerated during this time of accelerated physical growth, putting a mentally young girl in an adult's
 body for a period of years (with all the extra self control issues adding adult hormone levels to that lack of mental maturity would imply). This is why [Fleur]'s classmates dislike her so much - people tend to expect someone who appears older to behave older. They remember the brat.
 
-[Nephilim Inheritance]: ../Inheritance/
+[Nephilim Inheritance]: ./Inheritance
 
 ### Magical Abilities
 
@@ -134,20 +134,20 @@ combine with her inheritance from the Dominions. No full veela is
 capable of permanent transmutation, and a "half-veela" is capable of it
 only to the extent her male parent was.
 
-[Appendix A]: <../Points of Divergence/>
-[Rules of Magic]: <../Rules of Magic/>
-[Magical Beings]: ../magical-beings/
-[Relative Power Levels]: <../Relative Power Levels/>
-[Life Expectancy]: ../life-expectancy/
-[Appendix G]: ../Appendix_G/
-[Appendix H]: ../Appendix_H//
-[Appendix I]: <../Veela Pathology/>
-[the backstory]: ../../backstory/The_Veela/
+[Appendix A]: <./Points of Divergence>
+[Rules of Magic]: <./Rules of Magic>
+[Magical Beings]: <./Magical Beings>
+[Relative Power Levels]: <./Relative Power Levels>
+[Life Expectancy]: <./Life Expectancy>
+[Appendix G]: ./Appendix_G
+[Appendix H]: ./Appendix_H
+[Appendix I]: <./Veela Pathology>
+[the backstory]: ../backstory/The_Veela
 
 [^210916-1]: Like in _[Maskirovat][knffnm]_.
 
-[Fleur]: </Harrypedia/people/Delacour/Fleur Isabelle/>
-[Molly]: /Harrypedia/people/Prewett/Molly/
-[Hermione]: </Harrypedia/people/Granger/Hermione Jean/>
-[Ginny]: </Harrypedia/people/Weasley/Ginevra Molly/>
+[Fleur]: </Harrypedia/people/Delacour/Fleur Isabelle>
+[Molly]: /Harrypedia/people/Prewett/Molly
+[Hermione]: </Harrypedia/people/Granger/Hermione Jean>
+[Ginny]: </Harrypedia/people/Weasley/Ginevra Molly>
 [knffnm]: http://kokopelli.nsns.fanficauthors.net/Maskirovat/Maskirovat/

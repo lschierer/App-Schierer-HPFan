@@ -133,7 +133,7 @@ The argument of this being a case of disposition is as follows. That the nephili
 
 Secondly, because nearly all of the nephilim are aware of magical contracts by the time they reach an age to marry, they fear being subject to them. More than that, they feel unintentionally violating even contracts that _might_ exist. Thus most nephilim, on approaching the alter for marriage, would hold back from a total gift of self, fearing that there might be a contract out there that he or she might need to honour. This holding back would constitute the impediment, not the fact that he or she is a nephilim.
 
-[magical contracts]: <../Magical Contracts/>
+[magical contracts]: <./Magical Contracts>
 
 ### Holy Orders
 

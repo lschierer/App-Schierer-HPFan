@@ -216,5 +216,5 @@ one) had made it clear, without words, that he would find it someday.
     are sometimes remarkably persistent, so Dudley is, just barely, a nephil.
     See my notes on [relative power levels][rpl].
 
-[rpl]: <../../Appendices/Relative Power Levels/>
-[Notes]: <../../Appendices/Points of Divergence/>
+[rpl]: <../Appendices/Relative Power Levels>
+[Notes]: <../Appendices/Points of Divergence>
