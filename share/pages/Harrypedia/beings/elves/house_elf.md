@@ -9,7 +9,7 @@ Mrs. Rowling shows us exactly how evil the institution of slavery can be in the 
 
 On the other hand, the relationship that [Harry] eventually forms with [Kreacher] shows a very different view of the situation. While it is easy to,
 as [Hermione] does, dismiss the [Hogwarts] elves as brainwashed victims who know
-no better, we come to know [Kreacher] more deaply. He _could_ still be a victim of his own upbringing, of the many centuries he has lived as a slave, but his love for [Regulas], and the concern he comes to feel for [Harry] is certainly genuine.
+no better, we come to know [Kreacher] more deaply. He _could_ still be a victim of his own upbringing, of the many centuries he has lived as a slave, but his love for [Regulus], and the concern he comes to feel for [Harry] is certainly genuine.
 
 We know next to nothing about their magic, the _how_ of their enslavement, or their physical lifecycle. In typical Rowling fashion, what little we do know
 is somewhat contradictory.[^240219-2]
@@ -40,7 +40,7 @@ harder because the _curse_ in question is lost and unrecorded by history.[^24021
 
     - [Moe64]. _[What We Do Today]_ Published: 2022-10-10. Updated: 2024-02-12.
 
-[^240219-2]: 
+[^240219-2]:
     In one extra-cannonical source she states House Elves live on
     average 200 years, while [Kreacher] is said (by her) to have lived
     over 600.
@@ -65,12 +65,12 @@ harder because the _curse_ in question is lost and unrecorded by history.[^24021
 
 [Moe64]: https://archiveofourown.org/users/Moe64/pseuds/Moe64
 [What We Do Today]: https://archiveofourown.org/works/42289347
-[Malfoy]: /Harrypedia/people/Malfoy/
-[Crouch]: /Harrypedia/people/Crouch/
-[Harry]: </Harrypedia/people/Potter/Harry James/>
-[Kreacher]: /Harrypedia/people/Black/Kreacher/
-[Hermione]: </Harrypedia/people/Granger/Hermione Jean/>
-[Regulas]: </Harrypedia/people/Black/Regulas Arcturus/>
+[Malfoy]: /Harrypedia/people/Malfoy
+[Crouch]: /Harrypedia/people/Crouch
+[Harry]: </Harrypedia/people/Potter/Harry James>
+[Kreacher]: /Harrypedia/people/Black/Kreacher
+[Hermione]: </Harrypedia/people/Granger/Hermione Jean>
+[Regulus]: </Harrypedia/people/Black/Regulus Arcturus>
 [Brownies]: https://en.wikipedia.org/wiki/Brownie_(folklore)
-[Imperius]: /Harrypedia/magic/spells/imperio/
-[Hogwarts]: /Harrypedia/Hogwarts/
+[Imperius]: /Harrypedia/magic/spells/imperio
+[Hogwarts]: /Harrypedia/Hogwarts

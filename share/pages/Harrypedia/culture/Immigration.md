@@ -202,5 +202,5 @@ Instead I suspect that some percentage of the magical culture actively _desires_
 [^240508-1]: It is worth noting that nearly every author who spends significant time trying to build upon the backstory decides that there is a a _treaty_ between the magical population and the monarch of Britain to establish the [ISWS], the [Ministry of Magic], or both. A monarch does not sign a treaty with his/her subjects. The [Magna Carta] for example was a _charter_ not a _treaty_.
 
 [Magna Carta]: https://www.parliament.uk/magnacarta/
-[ISWS]: International_Statute_of_Secrecy
-[Ministry of Magic]: Government
+[ISWS]: ./International_Statute_of_Secrecy
+[Ministry of Magic]: ./Government

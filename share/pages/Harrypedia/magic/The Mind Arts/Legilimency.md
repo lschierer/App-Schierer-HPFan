@@ -44,8 +44,6 @@ presented to us by Mrs. Rowling are woefully insufficient. There has to be
 something that you can do to defend your privacy, and potentially even the
 integrity of your mind, without risking damage to yourself.
 
-[Occlumency]: /Harrypedia/magic/The_Mind_Arts/Occlumency/
-
 Lastly, as I discuss when considering [Mental Shields] as an alternative to
 [Occlumency], using Legilimency must in some way undermine any defenses you
 may have against being yourself attacked with it. Whatever [Snape] does to
@@ -58,9 +56,8 @@ routinely uses this skill on [Harry] throughout the books, and that it is
 only because [Harry], our narrator, is himself unaware of it, that we in turn
 are not made more aware of it.[^221216-1]
 
-[Mental Shields]: </Harrypedia/magic/The_Mind_Arts/Mental Shields/>
 
-[^20191119-9]: 
+[^20191119-9]:
     Mrs. J. K. Rowling. _Harry Potter and the Order of
     the Phoenix_. Better citation needed here.
 
@@ -68,25 +65,27 @@ are not made more aware of it.[^221216-1]
     laying a trap for [Harry], that he fully intended that [pensieve] to
     eventually be left alone in the room with [Harry] and to be spied upon.
 
-[pensieve]: /Harrypedia/magic/time/pensieve/
-[dark arts]: /Harrypedia/magic/dark/
-[Snape]: /Harrypedia/people/Snape/Severus/
-[Harry]: </Harrypedia/people/Potter/Harry James/>
-[Queenie Goldstein]: /Harrypedia/people/Goldstein/Queenie/
-[Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/>
+[Occlumency]: </Harrypedia/magic/The Mind Arts/Occlumency>
+[Mental Shields]: </Harrypedia/magic/The Mind Arts/Mental Shields>
+[pensieve]: /Harrypedia/magic/time/pensieve
+[dark arts]: /Harrypedia/magic/dark
+[Snape]: /Harrypedia/people/Snape/Severus
+[Harry]: </Harrypedia/people/Potter/Harry James>
+[Queenie Goldstein]: /Harrypedia/people/Goldstein/Queenie
+[Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
 
 [^221216-1]: works include, but not limited to:
 
     - JadeSeraph. _[Soul Nexus](https://www.fanfiction.net/s/3577157)_ Published 2007-06-05. Updated: 2008-08-27.
     - Matthew Schooke. _[Harry Potter and the Nightmares of Futures Past](https://github.com/IntermittentlyRupert/hpnofp-ebook)_ Updated: 2022-04-24.
 
-[^20200630-8]: 
+[^20200630-8]:
     Kelly West.
     "[A Key Difference Between Snape And Queenie's Abilities, According to JK
     Rowling](https://www.cinemablend.com/news/1604520/a-key-difference-between-snape-and-queenies-abilities-according-to-jk-rowling)"
     [Cinema Blend](https://www.cinemablend.com/) 2016-12-26. Last Viewed 2020-06-30.
 
-[^20200630-9]: 
+[^20200630-9]:
     https://harrypotter.fandom.com/.
     "[Legilimency](https://harrypotter.fandom.com/wiki/Legilimency)" Last
     Viewed 2020-06-30. Note the article's text only mentions one clear cut

@@ -32,9 +32,9 @@ unbalanced towards evil.
   parts" of oneself.[^230109-1] As I discuss further on the page
   dedicated to it, this is not healthy.
 
-[Dark Magic]: /Harrypedia/magic/dark/
-[non-beings]: /Harrypedia/non-beings/
-[poltergeists]: /Harrypedia/non-beings/poltergeist/
+[Dark Magic]: /Harrypedia/magic/dark
+[non-beings]: /Harrypedia/non-beings
+[poltergeists]: /Harrypedia/non-beings/poltergeist
 
 Why do we not have shields that cannot be breached, or can only be cast to
 protect someone else, but are stronger than standard shields? Why do
@@ -49,7 +49,7 @@ that creature is so evil it needs its own balance. And yes, Buckbeak
 shows up a few times, but so too do Acromantula, which, again, are
 mostly evil.
 
-[Madam Pomfrey]: /Harrypedia/people/Pomfrey/Poppy/
+[Madam Pomfrey]: /Harrypedia/people/Pomfrey/Poppy
 
 In short, magic seems to have massively escalated the fallen nature of the
 world. If love is so powerful, why is [Lily][]'s self sacrifice the only
@@ -67,19 +67,19 @@ your will away is to become a cold emotionally distant person who
 borders on a trying to split their own personality? I'm sorry, if that
 is true, evil has won.
 
-[Lily]: </Harrypedia/people/Evans/Lily J/>
-[Snape]: /Harrypedia/people/Snape/Severus/
-[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>
-[Harry]: </Harrypedia/people/Potter/Harry James/>
+[Lily]: </Harrypedia/people/Evans/Lily J>
+[Snape]: /Harrypedia/people/Snape/Severus
+[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
+[Harry]: </Harrypedia/people/Potter/Harry James>
 [Brumous]: https://archiveofourown.org/works/42882966
-[Occlumency]: /Harrypedia/magic/The_Mind_Arts/Occlumency/
+[Occlumency]: </Harrypedia/magic/The Mind Arts/Occlumency>
 
-[^211020-11]: 
+[^211020-11]:
     [Harry Potter Wiki](https://harrypotter.fandom.com/wiki/)
     "[Phoenix](https://harrypotter.fandom.com/wiki/Phoenix)"
     Last Edited: 2021-10-16. Last Viewed: 2021-10-20.
 
-[^211020-10]: 
+[^211020-10]:
     [Harry Potter Wiki](https://harrypotter.fandom.com/wiki/)
     "[Poltergeist](https://harrypotter.fandom.com/wiki/Poltergeist)"
     Last Edited: 2021-08-18. Last Viewed: 2021-10-20.

@@ -19,5 +19,5 @@ mnemonic instead of the real memories. I suspect it would come down to a mental
 strength contest. Can you hold your visualisation in place instead of actually
 remembering things as the attacker hunts for memories?
 
-[Occlumency]: /Harrypedia/magic/The_Mind_Arts/Occlumency/
-[Legilimency]: /Harrypedia/magic/The_Mind_Arts/Legilimency/
+[Occlumency]: </Harrypedia/magic/The Mind Arts/Occlumency>
+[Legilimency]: </Harrypedia/magic/The Mind Arts/Legilimency>

@@ -61,56 +61,55 @@ work, and one would think that academic dress, being synonymous with formal
 wear, would be more expensive than the essentially non-magical clothing that
 she says magical folk tend to wear "day to day."[^220630-2]
 
-[Mrs. Weasley]: /Harrypedia/people/Prewett/Molly/
+[Mrs. Weasley]: /Harrypedia/people/Prewett/Molly
+[Ron]: </Harrypedia/people/Weasley/Ronald Bilius>
+[Hermione]: </Harrypedia/people/Granger/Hermione Jean>
+[Harry]: </Harrypedia/people/Potter/Harry James>
+[Snape's]: /Harrypedia/people/Snape/Severus
+[James]: /Harrypedia/people/Potter/James
+[Hogwarts]: /Harrypedia/Hogwarts
+[Mr. Weasley]: /Harrypedia/people/Weasley/Arthur
+[Quidditch]: ../Quidditch
 
-[Ron]: </Harrypedia/people/Weasley/Ronald Bilius/>/
-[Hermione]: </Harrypedia/people/Granger/Hermione Jean/>/
-[Harry]: </Harrypedia/people/Potter/Harry James/>/
-[Snape's]: /Harrypedia/people/Snape/Severus/
-[James]: /Harrypedia/people/Potter/James/
-[Hogwarts]: /Harrypedia/Hogwarts/
-[Mr. Weasley]: /Harrypedia/people/Weasley/Arthur/
-[Quidditch]: ../quidditch
-
-[^210525-8]: 
+[^210525-8]:
     Mrs. J. K. Rowling. _Harry Potter and the Sorcerer's Stone_
     Better citation Needed.
 
-[^210525-9]: 
+[^210525-9]:
     Mrs. J. K. Rowling. _Harry Potter and the Goblet of Fire_
     Kindle Location 2597. Pottermore Limited. American Kindle Edition.
 
-[^210525-10]: 
+[^210525-10]:
     Mrs. J. K. Rowling. _Harry Potter and the Order of the Phoenix_
     Kindle Locations 2893-2894. Pottermore Limited. American Kindle Edition.
 
-[^210525-11]: 
+[^210525-11]:
     Mrs. J. K. Rowling. _Harry Potter and the Order of the Phoenix_
     Kindle Location 9519. Pottermore Limited. American Kindle Edition.
     It is curious that the American edition does not translate the word "pants"
     in this context, because it means something quite different in British
     versus American English.
 
-[^210525-12]: 
+[^210525-12]:
     Mrs. J. K. Rowling. _Harry Potter and the Half-Blood Prince_
     p. 134. Pottermore Publishing. American Kindle Edition.
 
-[^220630-2]: 
+[^220630-2]:
     Mrs. J. K. Rowling.
     "[Clothing](https://www.rowlingindex.org/work/cltpm/)"
     Originally published on Pottermore 2015-08-15. Last Viewed: 2022-06-30.
 
-[^220630-1]: 
+[^220630-1]:
     Mrs. J. K. Rowling.
     "[Clothing](https://www.rowlingindex.org/work/cltpm/)"
     Originally published on Pottermore 2015-08-15. Last Viewed: 2022-06-30.
 
-[^200723-4]: 
+[^200723-4]:
     Mrs. J. K. Rowling.
     "[Clothing](https://www.rowlingindex.org/work/cltpm/)"
     Originally published on Pottermore 2015-08-15. Last Viewed: 2022-06-30.
 
-[^200723-5]: 
+[^200723-5]:
     [Wikipedia](https://en.wikipedia.org).
     "[1500–1550 in Western European fashion](https://en.wikipedia.org/wiki/1500%E2%80%931550_in_Western_European_fashion)"
     Last Edited 2020-05-17. Last Viewed 2020-07-23.
@@ -118,7 +117,7 @@ she says magical folk tend to wear "day to day."[^220630-2]
     "[(1550–1600 in Western European fashion](https://en.wikipedia.org/wiki/1550%E2%80%931600_in_Western_European_fashion)"
     Last Edited 2020-06-25. Last Viewed 2020-07-23.
 
-[^210420-11]: 
+[^210420-11]:
     Mrs. J. K. Rowling.
     "[Clothing](https://www.rowlingindex.org/work/cltpm/)"
     Originally published on Pottermore 2015-08-15. Last Viewed: 2022-06-30.

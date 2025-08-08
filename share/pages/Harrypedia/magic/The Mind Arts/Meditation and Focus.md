@@ -44,12 +44,12 @@ thus something related, but different. I suspect it would work well against
 being said, he is right that it _would_ have benifits for the boys' control over
 their tempers.
 
-[Snape]: /Harrypedia/people/Snape/Severus/
-[Sirius]: </Harrypedia/people/Black/Sirius III/>
-[Legilimency]: /Harrypedia/magic/The_Mind_Arts/Legilimency/
-[Occlumency]: /Harrypedia/magic/The_Mind_Arts/Occlumency/
+[Snape]: /Harrypedia/people/Snape/Severus
+[Sirius]: </Harrypedia/people/Black/Sirius III>
+[Legilimency]: </Harrypedia/magic/The Mind Arts/Legilimency>
+[Occlumency]: </Harrypedia/magic/The Mind Arts/Occlumency>
 
-[^20200716-4]: 
+[^20200716-4]:
     know-it-all-bookworm . _[Harry Potter and the Secrets He's
     Kept](https://www.fanfiction.net/s/4367211)_ Chapter 9.
     [FanFiction](https://www.fanfiction.net) Published 2008-07-03. Updated

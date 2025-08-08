@@ -49,15 +49,14 @@ around for _centuries_. These two examples reiterate what I said discussing
 [clothing] - that magical society in fact wishes to be _different_ regardless
 of what is available or better.
 
-[paper]: ./Parchment_and_Paper
-
 [Harry]: </Harrypedia/people/Potter/Harry James>
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean>
 [Malfoy]: /Harrypedia/people/Malfoy
 [Mr. Weasley]: /Harrypedia/people/Weasley/Arthur
+[clothing]: /Harrypedia/culture/clothing
+[paper]: /Harrypedia/culture/Parchment_and_Paper
 [pgO1]: https://www.fanfiction.net/s/12954205
 [pgO2]: https://www.fanfiction.net/s/12954205
-[clothing]: ./clothing
 
 [^220719-4]: Works include but are not limited to:
 

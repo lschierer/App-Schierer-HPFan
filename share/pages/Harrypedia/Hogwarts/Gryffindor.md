@@ -23,10 +23,10 @@ author: Luke Schierer
     of chivalry, "courage, honour, courtesy, justice, and a readiness to help
     the weak." And certainly to be disloyal may show a lack of honour.
     However, in the context of the overall list, and contrasted with
-    [Hufflepuff][], it is clear that loyalty is not the defining factor of this
+    [Hufflepuff], it is clear that loyalty is not the defining factor of this
     house.
 
-[Hufflepuff]: ./Hufflepuff
+[Hufflepuff]: /Harrypedia/Hogwarts/Hufflepuff
 
 [^221221-2]: works include, but not limited to:
 

@@ -4,17 +4,17 @@
 - Each generation added "to the family coffers"[^221121-3]
 - [Fleamont] quadrupled the family gold.[^221121-4]
 
-[^221121-2]: 
+[^221121-2]:
     Mrs. J. K. Rowling.
     "[The Potter Family](https://www.rowlingindex.org/work/pmpfam/)"
     _[The J.K. Rowling Index](https://www.rowlingindex.org)_ 2015-09-22.
 
-[^221121-3]: 
+[^221121-3]:
     Mrs. J. K. Rowling.
     "[The Potter Family](https://www.rowlingindex.org/work/pmpfam/)"
     _[The J.K. Rowling Index](https://www.rowlingindex.org)_ 2015-09-22.
 
-[^221121-4]: 
+[^221121-4]:
     Mrs. J. K. Rowling.
     "[The Potter Family](https://www.rowlingindex.org/work/pmpfam/)"
     _[The J.K. Rowling Index](https://www.rowlingindex.org)_ 2015-09-22.
@@ -73,31 +73,31 @@ require something (a ring or a key) to unlock that was itself locked in the
 vault in question, because _everything_ the Potters owned was placed in the
 vault without forethought.[^210322-1]
 
-[Bellatrix]: /Harrypedia/people/black/bellatrix/
-[Blacks]: /Harrypedia/people/black/
-[Dumbledore]: /Harrypedia/people/dumbledore/albus_percival_wulfric_brian/
-[Fleamont]: /Harrypedia/people/Potter/fleamont/
-[Grimmauld Place]: /Harrypedia/grimmauld_place/
-[Gringotts]: /Harrypedia/gringotts/
-[Harry]: /Harrypedia/people/Potter/Harry_James/
-[James]: /Harrypedia/people/Potter/James/
-[Lestranges]: /Harrypedia/people/lestrange/
-[Linfred]: /Harrypedia/people/linfred/
-[Riddle]: /Harrypedia/people/riddle/tom_marvolo/
-[Sirius]: /Harrypedia/people/black/sirius_iii/
+[Bellatrix]: /Harrypedia/people/Black/Bellatrix
+[Blacks]: /Harrypedia/people/Black
+[Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
+[Fleamont]: /Harrypedia/people/Potter/Fleamont
+[Grimmauld Place]: </Harrypedia/Grimmauld Place>
+[Gringotts]: /Harrypedia/Gringotts/
 [Harry Potter and the Deathly Hallows]: https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows
+[Harry]: </Harrypedia/people/Potter/Harry James>
+[James]: /Harrypedia/people/Potter/James
+[Lestranges]: /Harrypedia/people/Lestrange
+[Linfred]: /Harrypedia/people/Stinchcombe/Linfred
+[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
+[Sirius]: </Harrypedia/people/Black/Sirius III>
 
-[^210902-1]: 
+[^210902-1]:
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows]_
     p. 74. Pottermore Publishing. American Kindle Edition.
 
-[^221129-1]: 
+[^221129-1]:
     Mrs. J. K. Rowling.
     "[The Potter Family](https://www.rowlingindex.org/work/pmpfam/)"
     _[The J.K. Rowling Index](https://www.rowlingindex.org)_ 2015-09-22.
 
-[^211117-1]: 
+[^211117-1]:
     There are too many of these to even begin to guess where I first
     got the idea, and too many variations on it for _anyone_ to come up with
     something truly original. Speculations on how [Gringotts][] works is
@@ -105,25 +105,25 @@ vault without forethought.[^210322-1]
 
 [Harry Potter and the Sorcerer's Stone]: https://www.goodreads.com/book/show/3.Harry_Potter_and_the_Sorcerer_s_Stone
 
-[^210618-7]: 
+[^210618-7]:
     Mrs. J. K. Rowling.
     _[Harry Potter and the Sorcerer's Stone]_
     p. 131. Pottermore Limited. American Kindle Edition.
 
-[^210618-8]: 
+[^210618-8]:
     Mrs. J. K. Rowling.
     _[Harry Potter and the Sorcerer's Stone]_
     p. 49. Pottermore Limited. American Kindle Edition.
 
-[^210517-11]: 
+[^210517-11]:
     Mrs. J. K. Rowling. _Harry Potter and the Order of the Phoenix_
     better citation needed.
 
-[^210517-10]: 
+[^210517-10]:
     Mrs. J. K. Rowling. _Harry Potter and the Prisoner of Azkaban_
     better citation needed.
 
-[^210517-9]: 
+[^210517-9]:
     Mrs. J. K. Rowling. _Harry Potter and the Prisoner of Azkaban_
     better citation needed. Regardless of citation, the general idea is that if
     it is not taught until during or after seventh year, and even then many
@@ -136,37 +136,37 @@ vault without forethought.[^210322-1]
       [Archive of Our Own](https://archiveofourown.org/)
       Published: 2021-05-02 Updated: 2021-05-16 Last Viewed: 2021-05-17
 
-[^210517-7]: 
+[^210517-7]:
     Mrs. J. K. Rowling. _Harry Potter and the Order of the Phoenix_
     Better citation needed.
 
-[^200710-1]: 
+[^200710-1]:
     Mrs. J. K. Rowling.
     _Harry Potter and the Order of the Phoenix_
     Kindle Locations 9456-9457. Pottermore Limited. American Kindle Edition.
 
-[^200710-2]: 
+[^200710-2]:
     Mrs. J. K. Rowling.
     _[Harry Potter and the Sorcerer's Stone]_
     p. 208. Pottermore Limited. American Kindle Edition.
 
-[^210322-1]: 
+[^210322-1]:
     TheBeardedOne.
     _[Little Whinging Pet Shop](https://archiveofourown.org/works/27669059)_
     [Chapter 22: Harry Roth - Expanded](https://archiveofourown.org/works/27669059/chapters/73491705)
     [ArchiveOfOurOwn](https://archiveofourown.org) Published 2020-11-22. Updated 2021-03-05. Last Viewed 2021-03-22.
 
-[^200710-3]: 
+[^200710-3]:
     Tom Kristal.
     _[Prongs Final Prank](https://www.fanfiction.net/s/4279550/1/Prongs-Final-Prank)_
     [FanFiction by FictionPress](https://www.fanfiction.net/) Published 2008-03-26.
     Last Viewed 2020-07-10.
 
-[^200602-1]: 
+[^200602-1]:
     Mrs. J. K. Rowling. _Harry Potter and the Philosopher's Stone_
     Location 1527 of 3996.
 
-[^200527-1]: 
+[^200527-1]:
     ivybelle. _Don't Touch Me_,
     [Archive of Our Own](https://archiveofourown.org/) last viewed 2020-05-27.
 

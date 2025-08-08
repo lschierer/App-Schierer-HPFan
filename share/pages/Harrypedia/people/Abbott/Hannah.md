@@ -17,39 +17,39 @@ up to peer pressure for a boy she's never even spoken to, or the fact that
 she values loyalty to her own house (we have no proof she knows about, uses,
 or approves of the badges' second message) against her.
 
-[blood status]: ../../culture/Class_and_Blood/
-[Harry]: </Harrypedia/people/Potter/Harry James/>
-[Salazar]: ../Slytherin/Salazar/
-[Ernie]: ../Macmillan/
+[blood status]: ../../culture/Class_and_Blood
+[Harry]: </Harrypedia/people/Potter/Harry James>
+[Salazar]: ../Slytherin/Salazar
+[Ernie]: ../Macmillan
 
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>/
 
-[^211004-15]: 
+[^211004-15]:
     Mrs. J. K. Rowling.
     _[Harry Potter and the Deathly Hallows](https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows)_
     p. 256. © 2007 Pottermore Publishing. Kindle Edition.
 
-[^211004-14]: 
+[^211004-14]:
     Mrs. J. K. Rowling.
     _[Harry Potter and the Half-Blood Prince](https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince)_
     p. 186. © 2005 Pottermore Publishing. Kindle Edition.
 
-[^211004-13]: 
+[^211004-13]:
     Mrs. J. K. Rowling.
     _[Harry Potter and the Goblet of Fire](https://www.goodreads.com/book/show/6.Harry_Potter_and_the_Goblet_of_Fire)_
     Kindle Locations 4823-4824. © 2003 Pottermore Limited. American Kindle Edition.
 
-[^211004-12]: 
+[^211004-12]:
     Mrs. J. K. Rowling.
     _[Harry Potter and the Chamber of Secrets](https://www.goodreads.com/book/show/15881.Harry_Potter_and_the_Chamber_of_Secrets)_
     p. 199. Pottermore Limited. American Kindle Edition.
 
-[^211004-11]: 
+[^211004-11]:
     [The Harry Potter Lexicon](https://www.hp-lexicon.org/)
     "[Abbott family](https://www.hp-lexicon.org/character/abbott-family/)"
     © 2000 – 2021. Last Viewed: 2021-10-04.
 
-[^211004-10]: 
+[^211004-10]:
     Mrs. J. K. Rowling.
     "[Pure-Blood](https://www.rowlingindex.org/work/pmpbl/)"
     [The J.K. Rowling Index](https://www.rowlingindex.org)

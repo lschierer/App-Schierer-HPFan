@@ -9,4 +9,4 @@ sidebar:
 The fact that [house elves] _are_ _**house**_ elves implies that there are
 other kinds, though we know nothing about them. Thus "elf" must be a genus and not a species.
 
-[house elves]: ./house_elf/
+[house elves]: ./elves/house_elf/

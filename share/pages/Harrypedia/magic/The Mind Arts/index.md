@@ -12,10 +12,6 @@ the mind, whereas "mental arts" could be almost anything _using_ your mind. I
 am trying to distinguish, however imperfectly, the mind as an object versus the
 mind as a means.
 
-[Occlumency]: ./Occlumency/
-[Legilimens]: /Harrypedia/magic/spells/legilimens/
-[Legilimency]: ./Legilimency/
-
 I dislike [Occlumency]. I am resigned to accepting a definition of it that I
 am fairly confident is intended to be canonical to this universe; the problem
 is that definition is an unacceptable practice. You can read my rant on it for
@@ -99,24 +95,27 @@ long term use.
 - [Mind Palace]
 - [Obfuscomency]
 
-[Instant Death]: <./Death Defence/>
-[Meditation and focus]: <./Meditation and Focus/>
-[Mental Shields]: <./Mental Shields/>
-[Mind Palace]: <./Mind Palace/>
-[Obfuscomency]: ./Obfuscomency/
-[Imperius Curse]: /Harrypedia/magic/spells/imperio/
-[Imperius]: /Harrypedia/magic/spells/imperio/
-[Confundus]: /Harrypedia/magic/spells/confundus/
-[Confundus Charm]: /Harrypedia/magic/spells/confundus/
+[Occlumency]: </Harrypedia/magic/The Mind Arts/Occlumency>
+[Legilimens]: /Harrypedia/magic/spells/legilimens
+[Legilimency]: </Harrypedia/magic/The Mind Arts/Legilimency>
+[Instant Death]: </Harrypedia/magic/The Mind Arts/Death Defence>
+[Meditation and focus]: </Harrypedia/magic/The Mind Arts/Meditation and Focus>
+[Mental Shields]: </Harrypedia/magic/The Mind Arts/Mental Shields>
+[Mind Palace]: </Harrypedia/magic/The Mind Arts/Mind Palace>
+[Obfuscomency]: </Harrypedia/magic/The Mind Arts/Obfuscomency>
+[Imperius Curse]: /Harrypedia/magic/spells/imperio
+[Imperius]: /Harrypedia/magic/spells/imperio
+[Confundus]: /Harrypedia/magic/spells/confundus
+[Confundus Charm]: /Harrypedia/magic/spells/confundus
 
-[^20200716-1]: 
+[^20200716-1]:
     Mrs. J. K. Rowling. _Harry Potter and the Prisoner of Azkaban_
     (pp. 69-70). Pottermore Limited. American Kindle Edition.
 
-[^20200716-2]: 
+[^20200716-2]:
     Mrs. J. K. Rowling. _Harry Potter and the Half-Blood Prince_
     (p. 194). Pottermore Publishing. American Kindle Edition.
 
-[^20200716-3]: 
+[^20200716-3]:
     Mrs. J. K. Rowling. _Harry Potter and the Goblet of Fire_
     (Kindle Locations 3231-3234). Pottermore Limited. American Kindle Edition.
