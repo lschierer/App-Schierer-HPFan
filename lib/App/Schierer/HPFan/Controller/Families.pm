@@ -105,18 +105,23 @@ package App::Schierer::HPFan::Controller::Families {
       my $id = $p->id;
       my $primary_surname = $p->get_surname;
       if (!$primary_surname) {
-        push @gap_people, $p,
+        push @gap_people, $p;
       }
       $logger->debug("primary_surname present for $id");
       if($primary_surname->can('value')) {
         if (!defined($primary_surname->value)) {
           # Surname object exists but value is undefined
-          push @gap_people, $p,
+          push @gap_people, $p;
         }
         $logger->debug("primary_surname has value " . $primary_surname->value);
       } else {
         # we got back something bogus
-        push @gap_people, $p,
+        push @gap_people, $p;
+      }
+      if(length($primary_surname->value) == 0){
+        # somwhere this fallback value was set,
+        # so the value is *technically* defined.
+        push @gap_people, $p;
       }
       $logger->debug(sprintf('%s has surname "%s", next person.', $id, $primary_surname->value));
     };
@@ -128,11 +133,24 @@ package App::Schierer::HPFan::Controller::Families {
       ($a->primary_name->first || '') cmp ($b->primary_name->first || '')
     } @gap_people;
 
+    my $staticContent = $c->app->config('distDir')->child("pages/Harrypedia/people/Unknown/index.md");
+    my $content = '';
+    if (-f -r $staticContent) {
+      my $markdown = Mojo::File->new($staticContent)->slurp('UTF-8');
+      #get rid of front matter, just discard it.
+      $markdown =~ s/^---\s*\n(.*?)\n---\s*\n//s;
+      $content = $c->render_markdown_snippet($markdown);
+    }
+    else {
+      $logger->debug("static content not found at $staticContent");
+    }
+
     $c->stash(
-      gap_people => \@gap_people,
-      title => 'Genealogical Gaps and Unknown Surnames',
-      template => 'family/genealogical_gaps',
-      layout => 'default'
+      staticContent => $content,
+      gap_people    => \@gap_people,
+      title         => 'Genealogical Gaps and Unknown Surnames',
+      template      => 'family/genealogical_gaps',
+      layout        => 'default'
     );
 
     return $c->render;

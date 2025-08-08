@@ -109,12 +109,11 @@ package App::Schierer::HPFan::Controller::People {
     my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     $logger->debug("start of person_details method");
 
-    my $path = $c->req->url->path->to_string;
-
-    # Remove trailing slash from person pages
-    if ($path =~ /\/$/) {
-      my $canonical = $path;
-      $canonical =~ s/\/$//;
+    my $rp = $c->req->url->path->to_string;
+    # Remove trailing slash from pages
+    if ($rp =~ qr{/$}) {
+      my $canonical = $rp;
+      $canonical =~ s{/$}{};
       return $c->redirect_to($canonical, 301);
     }
 
