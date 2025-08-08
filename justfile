@@ -1,7 +1,7 @@
-subtree-pull
+subtree-pull:
   git subtree pull --prefix=share/HPNOFP/ HPNOFP master
 
-subtree-pull
+subtree-pull:
   git subtree push --prefix=share/HPNOFP/ HPNOFP master
 
 tidy:
