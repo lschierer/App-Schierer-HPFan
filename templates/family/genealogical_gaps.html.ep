@@ -1,0 +1,46 @@
+<article class="genealogical-gaps">
+
+  <div class="explanation">
+    <p>
+      The Harry Potter series provides genealogical information about wizarding families if
+      read carefully, but <em><strong>many</strong></em> gaps remain. The people listed below are known to exist
+      from the source material, but their surnames are not provided.
+    </p>
+
+    <p>
+      These represent real genealogical puzzles - for example, we know Fleamont Potter was
+      named after his mother's maiden name, but we don't know what her first name was,
+      or whether certain characters are related by blood or marriage.
+    </p>
+  </div>
+  <div class="methodology">
+      <h2>Research Methodology</h2>
+      <p>
+        This genealogical reconstruction is based on information from <a href="/Harrypedia#my-own-sources">canonical sources</a>.
+        Where relationships are ambiguous or surnames unknown, individuals are listed here rather than being
+        assigned to speculative family groupings.
+      </p>
+  </div>
+
+  <% if (@$gap_people) { %>
+    <h2>People with Unknown Surnames</h2>
+    <ul class="gap-people-list">
+      <% for my $person (@$gap_people) { %>
+        <li>
+          <a href="<%= link_target_for_person($person) %>">
+            <%= $person->display_name %>
+          </a>
+          <% if (my $birth = gramps->get_birth_date($person)) { %>
+            <span class="dates">
+              (b. <%= gramps->date_parser->format_date($birth) %>)
+            </span>
+          <% } %>
+        </li>
+      <% } %>
+    </ul>
+  <% } else { %>
+    <p>No genealogical gaps currently recorded.</p>
+  <% } %>
+
+
+</div>

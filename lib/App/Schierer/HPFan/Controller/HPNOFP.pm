@@ -111,6 +111,16 @@ package App::Schierer::HPFan::Controller::HPNOFP {
   sub hpnofp_index ($c) {
     my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     $logger->debug(__PACKAGE__ . " hpnofp_index start");
+
+    my $path = $c->req->url->path->to_string;
+
+    # Remove trailing slash from person pages
+    if ($path =~ /\/$/) {
+      my $canonical = $path;
+      $canonical =~ s/\/$//;
+      return $c->redirect_to($canonical, 301);
+    }
+
     $c->stash(
       layout   => 'default',
       template => 'hpnofp/index',
@@ -123,6 +133,16 @@ package App::Schierer::HPFan::Controller::HPNOFP {
   sub hpnofp_page_handler ($c) {
     my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     $logger->debug(__PACKAGE__ . " hpnofp_page_handler start");
+
+    my $path = $c->req->url->path->to_string;
+
+    # Remove trailing slash from person pages
+    if ($path =~ /\/$/) {
+      my $canonical = $path;
+      $canonical =~ s/\/$//;
+      return $c->redirect_to($canonical, 301);
+    }
+
     my $content = $c->stash('content');
 
     unless ($content) {

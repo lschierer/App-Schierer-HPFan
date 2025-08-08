@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/css/directory-list.css" />
+
+<div class="bookmarks-index">
+
+  <% if ($comments) { %>
+    <%== render_markdown_snippet($comments) %>
+    <hr role="separator" class="spectrum-Divider spectrum-Divider--sizeM" />
+  <% } %>
+
+  <% if (@$items) { %>
+    <div class="directory-list">
+      <ul class="directory-list">
+        <% for my $entry (@$items) { %>
+          <li class="spectrum-Body spectrum-Body--sizeM spectrum-Body--serif">
+            <a class="spectrum-Link spectrum-Link--primary" href="<%= $entry->{path} %>">
+              <%= $entry->{title} %>
+            </a>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+  <% } else { %>
+      <p>No bookmarks found in this directory.</p>
+  <% } %>
+</div>

@@ -42,7 +42,21 @@ package App::Schierer::HPFan::Controller::Families {
       $logger->debug(__PACKAGE__ . ' detects gramps_initialized from config');
       $self->_register_routes($app);
     }
-  }
+
+
+    # special case the Unknown family that catches people with missing surname information
+    $app->routes->get('/Harrypedia/people/Unknown')->to(
+        controller => 'Families',
+        action => 'genealogical_gaps'
+    )->name('genealogical_gaps');
+
+    # Add to navigation with appropriate context
+    $app->add_navigation_item({
+        title => 'Genealogical Gaps - People with Unknown Surnames',
+        path  => '/Harrypedia/people/Unknown',
+        order => 9999, # Put it at the end
+    });
+   }
 
   sub _register_routes ($self, $app) {
     my $logger = Log::Log4perl->get_logger(__PACKAGE__);
@@ -81,9 +95,62 @@ package App::Schierer::HPFan::Controller::Families {
     }
   }
 
+  sub genealogical_gaps($c) {
+    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
+    $logger->debug(__PACKAGE__ . 'genealogical_gaps start');
+    # Find all people with "Unknown" as surname
+    my @gap_people;
+    foreach my $p (sort {$a->id cmp $b->id} values %{$c->app->gramps->people}) {
+      $logger->debug(sprintf('inspecting %s', $p->id));
+      my $id = $p->id;
+      my $primary_surname = $p->get_surname;
+      if (!$primary_surname) {
+        push @gap_people, $p,
+      }
+      $logger->debug("primary_surname present for $id");
+      if($primary_surname->can('value')) {
+        if (!defined($primary_surname->value)) {
+          # Surname object exists but value is undefined
+          push @gap_people, $p,
+        }
+        $logger->debug("primary_surname has value " . $primary_surname->value);
+      } else {
+        # we got back something bogus
+        push @gap_people, $p,
+      }
+      $logger->debug(sprintf('%s has surname "%s", next person.', $id, $primary_surname->value));
+    };
+
+    $logger->debug(sprintf('found %s people with unknown surnames.',
+    scalar @gap_people));
+    # Sort by first name for easier browsing
+    @gap_people = sort {
+      ($a->primary_name->first || '') cmp ($b->primary_name->first || '')
+    } @gap_people;
+
+    $c->stash(
+      gap_people => \@gap_people,
+      title => 'Genealogical Gaps and Unknown Surnames',
+      template => 'family/genealogical_gaps',
+      layout => 'default'
+    );
+
+    return $c->render;
+  }
+
   sub family_details ($c) {
     my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     $logger->debug("start of family_details method");
+
+    my $path = $c->req->url->path->to_string;
+
+    # Remove trailing slash from person pages
+    if ($path =~ /\/$/) {
+      my $canonical = $path;
+      $canonical =~ s/\/$//;
+      return $c->redirect_to($canonical, 301);
+    }
+
     my $family_name = $c->param('family_name');
     my $staticContent;
     $c->stash(family_name => $family_name);

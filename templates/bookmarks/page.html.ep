@@ -1,0 +1,63 @@
+% my $title = stash('title');
+% my $comments = stash('comments') // '';
+% my $items = stash('items') // [];
+
+<link rel="stylesheet" href="/css/bookmarks.css" />
+
+<article>
+  <% if($comments) { %>
+    <%== render_markdown_snippet($comments); %>
+  <% } %>
+
+  <% if(scalar @$items) { %>
+    <dl class="bookmark-items">
+      <% foreach my $item (@$items) { %>
+        <dt class="spectrum-Heading spectrum-Heading--sizeM">
+          <% if(exists $item->{title}->{link}) { %>
+            <a class="spectrum-Link spectrum-Link--primary spectrum-Link--quiet" href="<%= $item->{title}->{link} %>">
+          <% } %>
+            <cite >
+              <%= $item->{title}->{name} %>
+            </cite >
+          <% if(exists $item->{title}->{link}) { %>
+            </a>
+          <% } %>
+        </dt>
+        <dd>
+          <span class="spectrum-Detail spectrum-Detail--sizeM spectrum-Detail-strong">Author: </span>
+          <% if(exists $item->{author}->{link}) { %>
+            <a class="spectrum-Link spectrum-Link--primary spectrum-Link--quiet" href="<%= $item->{author}->{link} %>">
+          <% } %>
+            <span class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeXS">
+              <%= $item->{author}->{name} %>
+            </span>
+          <% if(exists $item->{author}->{link}) { %>
+            </a>
+          <% } %>
+        </dd>
+        <dd>
+          <span class="spectrum-Detail spectrum-Detail--sizeM spectrum-Detail-strong ">Date(s): </span><br/>
+          <ul class="dateList">
+            <% foreach my $date_type (qw(series_start published updated completed)) { %>
+              <% my $printLable = $date_type =~ s/_/ /rg; %>
+              <% $printLable =~ s/(\w+)/\u\L$1/g; %>
+              <% if (exists $item->{dates}->{$date_type}) { %>
+                <% my $date = $item->{dates}->{$date_type}; %>
+                <li class="spectrum-Detail spectrum-Detail--sizeM">
+                  <span class="spectrum-Detail-strong "><%= $printLable %>:</span>
+                  <span class="spectrum-Detail--light"><%= $date ? $date : 'N/A' %></span>
+                </li>
+              <% } %>
+            <% } %>
+          </ul>
+        </dd>
+        <dd>
+          <span class=" spectrum-Detail spectrum-Detail--sizeM spectrum-Detail-strong">Comments: </span>
+          <%== render_markdown_snippet($item->{comments}) %>
+        </dd>
+      <% } %>
+    </dl>
+  <% } else {%>
+    <!-- No Items Present -->
+  <% } %>
+</article>

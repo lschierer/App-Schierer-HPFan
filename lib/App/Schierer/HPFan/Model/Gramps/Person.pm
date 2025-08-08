@@ -62,6 +62,23 @@ class App::Schierer::HPFan::Model::Gramps::Person :
     return @$names ? $names->[0] : undef;
   }
 
+  method get_surname() {
+    my $last;
+    my $name = $self->primary_name();
+    $self->logger->debug(sprintf(
+      'picked name "%s" as primary for "%s"', $name, $self->id));
+    foreach my $sn (@{ $name->surnames }) {
+      if ($sn->prim) {
+        $last = $sn;
+        last;
+      }
+    }
+    if (not defined $last && scalar @{ $name->surnames }) {
+      $last = $name->surnames->[0];
+    }
+    return $last;
+  }
+
   method display_name() {
     my $name = $self->primary_name();
     $self->logger->debug(sprintf(

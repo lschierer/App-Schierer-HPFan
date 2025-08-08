@@ -31,6 +31,15 @@ package App::Schierer::HPFan::Plugins::StaticPages {
       ));
       $app->routes->get($static_entry->{route})->to(
         cb => sub ($c) {
+          my $rp = $c->req->url->path->to_string;
+
+          # Remove trailing slash from pages
+          if ($rp ne '/' && $rp =~ /\/$/) {
+            my $canonical = $rp;
+            $canonical =~ s/\/$//;
+            return $c->redirect_to($canonical, 301);
+          }
+
           return $c->render_markdown_file($static_entry->{path});
         }
       );
