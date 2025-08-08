@@ -7,12 +7,14 @@ require Mojolicious::Controller;
 require Mojolicious::Plugin;
 require HTML::HTML5::Writer;
 require XML::LibXML;
+require XML::LibXML::Error;
 require App::Schierer::HPFan::Model::Gramps;
 use namespace::clean;
 
 package App::Schierer::HPFan::Controller::HPNOFP {
   use Mojo::Base 'App::Schierer::HPFan::Controller::ControllerBase';
   use Log::Log4perl;
+
   use Path::Iterator::Rule;
   use HTML::Selector::XPath qw(selector_to_xpath);
   use Carp;
@@ -163,10 +165,37 @@ package App::Schierer::HPFan::Controller::HPNOFP {
   sub process_HPNOFP_OEBPS ($self, $file, $baseRoute) {
     my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     $logger->info(__PACKAGE__ . " process_HPNOFP_OEBPS start for $file");
-    my $dom = XML::LibXML->load_html(
-      location => $file,
-      recover  => 1,
-    );
+    my $xmlLogger = Log::Log4perl->get_logger('XML::LibXML');
+
+    my @warns;
+    local $SIG{__WARN__} = sub { push @warns, @_ };  # capture libxml2 parser warnings
+
+    my $dom;
+    my $ok = eval {
+      $dom = XML::LibXML->load_html(
+        location => $file,
+        recover  => 1,
+      );
+      1;
+    };
+
+    if (!$ok) {
+      my $err = $@;
+      if (blessed($err) && $err->isa('XML::LibXML::Error')) {
+        chomp(my $msg = $err->as_string);
+        $logger->error($msg);
+      } else {
+        chomp $err;
+        $logger->error("XML::LibXML load_html failed: $err");
+      }
+      return undef;
+    }
+
+    # route warnings to Log4perl (you can filter here if desired)
+    for my $w (@warns) {
+      chomp $w;
+      $logger->warn($w);
+    }
 
     my $writer = HTML::HTML5::Writer->new(markup_declaration => 0,);
 
