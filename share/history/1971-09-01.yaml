@@ -6,15 +6,15 @@ events:
       [James], [Sirius], [Remus],[Lily] and [Snape] are known
       to have started at the same time. 
 
-      [James]: <../people/potter/james/>
+      [James]: <./people/Potter/James>
 
-      [Sirius]: <../people/black/sirius_iii/>
+      [Sirius]: <./people/Black/Sirius III>
 
-      [Remus]: <../people/lupin/remus_john/>
+      [Remus]: <./people/Lupin/Remus John>
 
-      [Lily]: <../people/evans/lily_j/>
+      [Lily]: <./people/Evans/Lily J/>
 
-      [Snape]: <../people/snape/severus/>
+      [Snape]: <./people/Snape/Severus>
     source: |
       This date is infered/computed from others.
   - type: magical
@@ -24,9 +24,9 @@ events:
       year prefect.  We only know that he welcomes [Snape]
       to the [Slytherin] table during the Sorting.
 
-      [Snape]: <../people/snape/severus/>
+      [Snape]: <./people/Snape/Severus>
 
-      [Slytherin]: <../hogwarts/slytherin/>
+      [Slytherin]: <./Hogwarts/Slytherin/>
     source: |
       Mrs. J. K. Rowling. _[Harry Potter and the Deathly Hallows]_
       American Kindle edition approx location 8539 of 9604, approx page 278. Pottermore Publishing.

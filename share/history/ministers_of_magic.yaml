@@ -214,7 +214,7 @@ events:
       Voted out of office because he failed to take [Gellert Grindelwald]
       seriously.
 
-      [Gellert Grindelwald]: </harrypedia/people/grindelwald/gellert/>
+      [Gellert Grindelwald]: </Harrypedia/people/Grindelwald/Gellert>
     source: |
       * Mrs. J. K. Rowling.
         "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
@@ -251,7 +251,7 @@ events:
       states that many pure-bloods resigned in protest over his appointment,
       and that he left office after contracting a "mysterious illness" about which there are a number of conspiracy theories.
 
-      [Leach]: </harrypedia/people/leach/nobby/>
+      [Leach]: </Harrypedia/people/Leach/Nobby>
     date: 1962
     source: |
       * Mrs. J. K. Rowling.
@@ -265,7 +265,7 @@ events:
       Despite dealing competently with the pure-blood riots in the late 60s, the public perception was that he was unequal to the task of dealing with
       [Riddle].  This ultimately cost him his position.
 
-      [Riddle]: </harrypedia/people/riddle/tom_marvolo/>
+      [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
     source: |
       * Mrs. J. K. Rowling.
         "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
@@ -277,11 +277,11 @@ events:
     description: |
       Elected to deal with the [Riddle] problem, he responded by placing more [Dementors] around [Azkaban].  This proved ineffective.
 
-      [Riddle]: </harrypedia/people/riddle/tom_marvolo/>
+      [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
 
-      [Dementors]: </harrypedia/non-beings/dementor/>
+      [Dementors]: </Harrypedia/non-beings/dementor/>
 
-      [Azkaban]: </harrypedia/azkaban/>
+      [Azkaban]: </Harrypedia/Azkaban/>
     source: |
       * Mrs. J. K. Rowling.
         "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
@@ -293,11 +293,11 @@ events:
     description: |
       The third Minister to face the [Riddle] war, she also had to answer to the [International Confederation of Wizards] over breaches to the [International Statute of Secrecy] as the Wizarding world celebrated [Riddle]'s disappearance.
 
-      [Riddle]: </harrypedia/people/riddle/tom_marvolo/>
+      [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
 
-      [International Confederation of Wizards]: <../culture/government/>
+      [International Confederation of Wizards]: <./culture/Government/>
 
-      [International Statute of Secrecy]: <../culture/>
+      [International Statute of Secrecy]: <./culture/>
     source: |
       * Mrs. J. K. Rowling.
         "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"

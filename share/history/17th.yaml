@@ -7,11 +7,11 @@ events:
       [Ralston] Potter was seated in the [Wizengamot] from 1612 to 1652.
       He is known for his participation in the debates surounding the [Statute of Secrecy].
 
-      [Statute of Secrecy]: <../culture/government/>
+      [Statute of Secrecy]: <./culture/Government/>
 
-      [Wizengamot]: <../culture/government/>
+      [Wizengamot]: <./culture/Government/>
 
-      [Ralston]: <../people/potter/ralston/>
+      [Ralston]: <./people/Potter/Ralston>
     source: |
       "[The Potter Family](https://www.rowlingindex.org/work/pmpfam/)"
       _[The J.K. Rowling Index]_
@@ -32,7 +32,7 @@ events:
       [Mnemone] is best known as the developer of Memory Modification Charms.
       From this we know they were developed at least slightly before this time.
 
-      [Mnemone]: <../people/radford/mnemone/>
+      [Mnemone]: <./people/Radford/Mnemone>
     source: |
       Mrs. J. K. Rowling.
       "[Wizard of the Month Archive](https://therowlinglibrary.com/jkrowling.com/textonly/en/wotm.html)"
@@ -44,7 +44,7 @@ events:
       While it seems to have *actually* taken several years to be fully ratified, passed, and enforcement begun, histories generally date 
       it from this year. [See more]
 
-      [See more]: <../culture/international_statute_of_secrecy/>
+      [See more]: <./culture/International Statute of Secrecy/>
     source: |
       Mrs. J. K. Rowling.
       "[Ministers of Magic]"
@@ -61,9 +61,9 @@ events:
       sign of The Three Crowns in Strand, London.  At least one fan fiction uses this as a partly [goblin] owned bank to get around the [Statute
       of Secrecy].
 
-      [goblin]: <../beings/goblin/>
+      [goblin]: <./beings/goblin>
 
-      [Statute of Secrecy]: <../culture/government/>
+      [Statute of Secrecy]: <./culture/Government/>
     source: |
       * © COPYRIGHT COUTTS & CO. "[OUR HISTORY](https://www.coutts.com/about/history.html)"
       * AndrewWolfe. 
@@ -76,7 +76,7 @@ events:
     description: |
       Mrs. Rowling would have The Magical Congress of the United States of America, known to American witches and wizards by the abbreviation [MACUSA], established here.
 
-      [MACUSA]: <../macusa/>
+      [MACUSA]: <./MACUSA/>
     source: |
       Mrs. J. K. Rowling.
       "[MACUSA]"

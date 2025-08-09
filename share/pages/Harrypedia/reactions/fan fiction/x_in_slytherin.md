@@ -64,29 +64,29 @@ students (the [Black] family tree has intermarriages with the [Potter],
 influence would then extend _far further_ than just that quarter. [Riddle]
 would have no need of a revolution.
 
-[Potter]: /Harrypedia/people/Potter/
-[Longbottom]: /Harrypedia/people/Longbottom/
-[Crouch]: /Harrypedia/people/Crouch/
-[Black]: /Harrypedia/people/Black/
-[Prewett]: /Harrypedia/people/Prewett/
-[Weasley]: /Harrypedia/people/Weasley/
-[Lucius]: </Harrypedia/people/Malfoy/Lucius Abraxas/>
-[Ravenclaw]: /Harrypedia/Hogwarts/Ravenclaw/
-[Gryffindor]: /Harrypedia/Hogwarts/Gryffindor/
-[Sorting Hat]: /Harrypedia/Hogwarts/sorting_hat
-[Hat]: /Harrypedia/Hogwarts/sorting_hat
-[Draco]: </Harrypedia/people/Malfoy/Draco Lucius/>
-[Fred]: /Harrypedia/people/Weasley/Fred/
-[George]: /Harrypedia/people/Weasley/George/
-[Percy]: </Harrypedia/people/Weasley/Percy Ignatius/>
-[Neville]: /Harrypedia/people/Longbottom/Neville/
-[Ginny]: </Harrypedia/people/Weasley/Ginevra Molly/>
-[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>
-[Slytherin]: /Harrypedia/Hogwarts/Slytherin/
-[Harry]: </Harrypedia/people/Potter/Harry James/>
-[Ron]: </Harrypedia/people/Weasley/Ronald Bilius/>
-[Hermione]: </Harrypedia/people/Granger/Hermione Jean/>
-[Goyle]: /Harrypedia/people/Goyle/Gregory/
+[Potter]: /Harrypedia/people/Potter
+[Longbottom]: /Harrypedia/people/Longbottom
+[Crouch]: /Harrypedia/people/Crouch
+[Black]: /Harrypedia/people/Black
+[Prewett]: /Harrypedia/people/Prewett
+[Weasley]: /Harrypedia/people/Weasley
+[Lucius]: </Harrypedia/people/Malfoy/Lucius Abraxas>
+[Ravenclaw]: /Harrypedia/Hogwarts/Ravenclaw
+[Gryffindor]: /Harrypedia/Hogwarts/Gryffindor
+[Sorting Hat]: </Harrypedia/Hogwarts/Sorting Hat>
+[Hat]: </Harrypedia/Hogwarts/Sorting Hat>
+[Draco]: </Harrypedia/people/Malfoy/Draco Lucius>
+[Fred]: /Harrypedia/people/Weasley/Fred
+[George]: /Harrypedia/people/Weasley/George
+[Percy]: </Harrypedia/people/Weasley/Percy Ignatius>
+[Neville]: /Harrypedia/people/Longbottom/Neville
+[Ginny]: </Harrypedia/people/Weasley/Ginevra Molly>
+[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
+[Slytherin]: /Harrypedia/Hogwarts/Slytherin
+[Harry]: </Harrypedia/people/Potter/Harry James>
+[Ron]: </Harrypedia/people/Weasley/Ronald Bilius>
+[Hermione]: </Harrypedia/people/Granger/Hermione Jean>
+[Goyle]: /Harrypedia/people/Goyle/Gregory
 
 [^230210-3]: I remember reading at least one example of this, but not where.
 

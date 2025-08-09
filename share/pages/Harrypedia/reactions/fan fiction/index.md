@@ -1,8 +1,7 @@
 ---
 collection: Harrypedia
 title: Reactions to Fannon and Fan Fiction
-imports:
-  - /components/DirectoryIndex.ts type="module"
+autoindex: 1
 ---
 
 There is so much fan fiction out there that even not counting the movies, it is
@@ -16,7 +15,7 @@ This section is my reaction to things that are about the universe, but _not_ par
 > [Binns] could be seen as an example of this, but I cover that on his personal page.
 
 ---
-<directory-index directory="/Harrypedia/reactions/fanfiction/"></directory-index>
+
 
 
 [Binns]: /Harrypedia/people/Binns/Cuthbert/

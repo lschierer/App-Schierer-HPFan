@@ -175,9 +175,9 @@ events:
       [Callidora] will marry [Harfang Longbottom].  She is apparently
       alive as of Mrs. Rowling's book timeline.
 
-      [Callidora]: <../people/black/callidora/>
+      [Callidora]: <./people/Black/Callidora>
 
-      [Harfang Longbottom]: <../people/longbottom/harfang/>
+      [Harfang Longbottom]: <./people/Longbottom/Harfang>
     source: |
       J. K. Rowling. 
       [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
@@ -188,7 +188,7 @@ events:
     description: |
       She will marry [Caspar Crouch]
 
-      [Caspar Crouch]: <../people/crouch/caspar/>
+      [Caspar Crouch]: <./people/Crouch/Caspar>
     source: |
       J. K. Rowling. 
       [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)
@@ -206,7 +206,7 @@ events:
     description: |
       She will marry [Ignatius Prewett].
 
-      [Ignatius Prewett]: <../people/prewett/ignatius/>
+      [Ignatius Prewett]: <./people/Prewett/Ignatius>
     source: |
       J. K. Rowling. 
       [The Black Family Tree](https://www.rowlingindex.org/work/blacktree/)

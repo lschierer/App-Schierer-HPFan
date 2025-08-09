@@ -1106,6 +1106,21 @@
       <dateval val="1998-05-02"/>
       <citationref hlink="_fdcb93aa8c7c8250dba33bf02f"/>
     </event>
+    <event handle="_ff57a0af7c7584f9b3bf86497e9" change="1754698894" id="E0225">
+      <type>Birth</type>
+      <dateval val="1612-01-01" type="before"/>
+      <citationref hlink="_ed65c58b8ed29659279fe34aead"/>
+    </event>
+    <event handle="_ff57a33f9d81b407195393be586" change="1754699163" id="E0226">
+      <type>Birth</type>
+      <dateval val="1562"/>
+      <citationref hlink="_ff57a2afdb27f49b267cd7ebc48"/>
+    </event>
+    <event handle="_ff57a392eeb347de33c41aff87a" change="1754699197" id="E0227">
+      <type>Death</type>
+      <dateval val="1649"/>
+      <citationref hlink="_ff57a2afdb27f49b267cd7ebc48"/>
+    </event>
   </events>
   <people>
     <person handle="_ed5923a76c6bb8880c28c319e9" change="1655920494" id="I0000">
@@ -4805,6 +4820,32 @@
       </name>
       <tagref hlink="_ed5f294a35f37f5bdc6b68379cc"/>
     </person>
+    <person handle="_ff578ce19441cbad43e25086873" change="1754696866" id="I0348">
+      <gender>M</gender>
+      <name type="Unknown">
+        <first>Dirk</first>
+        <surname derivation="Given">Cresswell</surname>
+      </name>
+    </person>
+    <person handle="_ff579e9fdd26cc98bc3128e7c85" change="1754698927" id="I0349">
+      <gender>M</gender>
+      <name type="Birth Name">
+        <first>Ralston</first>
+        <surname derivation="Given">Potter</surname>
+      </name>
+      <eventref hlink="_ff57a0af7c7584f9b3bf86497e9" role="Primary"/>
+      <citationref hlink="_ed65c58b8ed29659279fe34aead"/>
+    </person>
+    <person handle="_ff57a12f9d06ec5f345a70a4724" change="1754699210" id="I0350">
+      <gender>F</gender>
+      <name type="Unknown">
+        <first>Mnemone</first>
+        <surname derivation="Given">Radford</surname>
+      </name>
+      <eventref hlink="_ff57a33f9d81b407195393be586" role="Primary"/>
+      <eventref hlink="_ff57a392eeb347de33c41aff87a" role="Primary"/>
+      <citationref hlink="_ff57a2afdb27f49b267cd7ebc48"/>
+    </person>
   </people>
   <families>
     <family handle="_ed59312dc737e38d031951e2757" change="1631134531" id="F0000">
@@ -6844,6 +6885,12 @@
       <page>105</page>
       <confidence>3</confidence>
       <sourceref hlink="_f12bd2b537bccae1cf9318e1ea"/>
+    </citation>
+    <citation handle="_ff57a2afdb27f49b267cd7ebc48" change="1754699104" id="C0256">
+      <daterange start="2004-05-05" stop="2007-10-01"/>
+      <page>https://www.rowlingindex.org/work/wmdw/</page>
+      <confidence>2</confidence>
+      <sourceref hlink="_ed62d28019f197d479f15dd3cc0"/>
     </citation>
   </citations>
   <sources>

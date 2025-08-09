@@ -53,7 +53,8 @@ of what is available or better.
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean>
 [Malfoy]: /Harrypedia/people/Malfoy
 [Mr. Weasley]: /Harrypedia/people/Weasley/Arthur
-[clothing]: /Harrypedia/culture/clothing
+[clothing]: /Harrypedia/culture/Clothing
+[Clothing]: https://www.rowlingindex.org/work/cltpm/
 [paper]: /Harrypedia/culture/Parchment_and_Paper
 [pgO1]: https://www.fanfiction.net/s/12954205
 [pgO2]: https://www.fanfiction.net/s/12954205
@@ -73,6 +74,6 @@ of what is available or better.
 [^220630-4]:
     I believe this is what Mrs. Rowling is, in part, attempting to
     express in the latter half of her article on [Clothing]
-    which I go in to depth on separately.
+    which I go in to depth on [separately][clothing].
 
 [^220630-3]: at least one citation needed.

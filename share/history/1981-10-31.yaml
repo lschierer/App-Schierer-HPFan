@@ -22,13 +22,13 @@ events:
       [Hagrid] is already holding [Harry] when [Sirius] arrives.  It is because [Sirius] cannot
       get [Hagrid] to give [Harry] up that [Sirius] decides to go after [Pettigrew].
 
-      [Hagrid]: <../people/hagrid/rubeus/>
+      [Hagrid]: <./people/Hagrid/Rubeus>
 
-      [Sirius]: <../people/black/sirius_iii/>
+      [Sirius]: <./people/Black/Sirius III>
 
-      [Harry]: <../people/potter/harry_james/>
+      [Harry]: <./people/Potter/Harry James>
 
-      [Pettigrew]: <../people/pettigrew/peter/>
+      [Pettigrew]: <./people/Pettigrew/Peter>
     source: |
       Mrs. J. K. Rowling. _Harry Potter and the Prisoner of Azkaban_
       Chapter 10.

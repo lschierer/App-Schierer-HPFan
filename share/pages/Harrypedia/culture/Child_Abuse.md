@@ -29,18 +29,18 @@ Not only does society have no mechanism to deal with it, the fear would combine 
 
 The obvious exception to this is [Walburga], who from all accounts had no problems with cursing her own child. However, remember that [Sirius] left for [Hogwarts] the first time certainly healthy, probably reasonably happy, fairly typically spoiled rich brat. We have no evidence that she became violent towards him _before_ his sorting. _After_ his sorting, now in possession of his own wand and undergoing magical training, it is reasonable to guess that he is no longer at risk of becoming an [obscurial]. Even if that is not true, unknown in world, or up for debate either way, it is equally possible that the woman is simply insane, and an exception even for her own society.[^240228-3]
 
-[Walburga]: /Harrypedia/people/Black/Walburga/
-[obscurial]: /Harrypedia/beings/Obscurus/
-[Hogwarts]: /Harrypedia/Hogwarts/
-[Sirius]: </Harrypedia/people/Black/Sirius III/>
-[house elves]: /Harrypedia/beings/elves/house_elf/
-[MACUSA]: /Harrypedia/MACUSA/
-[Ministry of Magic]: /Harrypedia/culture/Government/
-[Dursley]: /Harrypedia/people/Dursley/
+[Walburga]: /Harrypedia/people/Black/Walburga
+[obscurial]: /Harrypedia/beings/Obscurus
+[Hogwarts]: /Harrypedia/Hogwarts
+[Sirius]: </Harrypedia/people/Black/Sirius III>
+[house elves]: </Harrypedia/beings/elves/house elf>
+[MACUSA]: /Harrypedia/MACUSA
+[Ministry of Magic]: /Harrypedia/culture/Government
+[Dursley]: /Harrypedia/people/Dursley
 
-[Harry]: </Harrypedia/people/Potter/Harry James/>/
-[Vernon]: /Harrypedia/people/Dursley/Vernon/
-[Petunia]: /Harrypedia/people/Evans/Petunia/
+[Harry]: </Harrypedia/people/Potter/Harry James>
+[Vernon]: /Harrypedia/people/Dursley/Vernon
+[Petunia]: /Harrypedia/people/Evans/Petunia
 [unreliable narrator]: https://wikipedia.org/wiki/Unreliable_narrator
 
 [^240228-1]: Mrs. J. K. Rowling. _[Harry Potter and the Half-Blood Prince]_ American Kindle edition approx Location 611 of 8473.
@@ -51,7 +51,7 @@ The obvious exception to this is [Walburga], who from all accounts had no proble
 
 [Harry Potter and the Chamber of Secrets]: https://www.librarything.com/work/683408/
 
-[^240228-3]: 
+[^240228-3]:
     [PepperonyOwl](https://archiveofourown.org/users/PepperonyOwl/pseuds/PepperonyOwl)
     _[There is no escape](https://archiveofourown.org/works/41105757)_
     Published: 2022-08-17. Updated: 2023-03-04.

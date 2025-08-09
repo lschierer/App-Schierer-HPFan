@@ -34,9 +34,9 @@ interact?
 
 We seem to have:
 
-- [Magical Animals](/Harrypedia/animals/)
+- [Magical Animals](/Harrypedia/animals)
 - [Spells] - curses, hexes, jinks, charms, transfiguration
-  - [wands][]
+  - [wands]
     > The wand is a European invention, and while African witches and wizards
     > have adopted it as a useful tool in the last century, many spells are
     > cast simply by pointing the finger or through hand gestures.[^210304-5]
@@ -46,15 +46,15 @@ We seem to have:
   - I am putting together my own book of spells [here][spells]. I am not
     trying to build a useful spell book, but rather a reference of names and
     sources.
-  - [Transfiguration][] is troubling on a few levels.
+  - [Transfiguration] is troubling on a few levels.
     - Are transfiguration permanent or temporary?
     - Are you changing the form, the substance, or both? [Gamp’s Law][hpl1]
       suggests that this is a complicated answer.
     - The vanishing spell on living things is _really_ disturbing. If you
       master this on a mammal, you essentially have the perfect murder weapon.
   - Fidelius Charm has contradictory information available.
-    - When [Hermione][] disapperates from the Ministry in book 7, bringing Yaxley
-      along, she claims that since [Dumbledore][] died, they are _each_ secret
+    - When [Hermione] disapperates from the Ministry in book 7, bringing Yaxley
+      along, she claims that since [Dumbledore] died, they are _each_ secret
       keepers, and so she has effectively told Yaxley the secret.[^210902-3]
     - Mrs. Rowling, writing in her web page FAQ, writes
       > When a Secret-Keeper dies, their secret dies with them, or, to put it
@@ -64,7 +64,7 @@ We seem to have:
     - The FAQ page exists _after_ the publishing of book 7:
       - Book Seven is copyright 2007
       - [Archive.org][AO1] shows the FAQ page up on 2012-02-04
-    - Either [Hermione][] and [Harry][] are wrong or the FAQ is wrong.
+    - Either [Hermione] and [Harry] are wrong or the FAQ is wrong.
     - If the FAQ is correct, then any use of the spell is really rather
       dangerous. You set up a situation where locations can be totally lost,
       once the secret keeper dies, no one can learn the information, including
@@ -75,7 +75,7 @@ We seem to have:
       Rowling's descriptions. How does the secret move into the other souls
       after the death of the first secret keeper? What is the mechanism that
       makes untransmittable knowledge now something "stored in your soul"?
-  - [Serpensortia](./spells/serpensortia/)
+  - [Serpensortia](./magic/spells/serpensortia)
   - turning vinegar into wine is taught in charms class.[^210820-1]
     - some speculate that this only works with wine based vinegar, because the
       spell is reversing oxidation, not actually transfiguring. Under this
@@ -88,7 +88,7 @@ We seem to have:
     > There is always some element of wandwork necessary to make a
     > potion[^210702-4]
   - I am compiling of [list of these as well][Potions].
-- [Runes][]
+- [Runes]
 - Divination - tea cups, horoscopes, star charts, crystal balls, so on.
 - Arithmancy - Per Google, this should be part of Divination, but is apparently
   something different.

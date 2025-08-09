@@ -7,7 +7,7 @@ events:
         [Flitwick].
       * people with cloaks on street corners.
 
-      [Flitwick]: <../people/flitwick/filus/>
+      [Flitwick]: <./people/Flitwick/Filus>
 
     source: |
       Mrs. J. K. Rowling. _[Harry Potter and the Philosopher's Stone]_
@@ -22,7 +22,7 @@ events:
       which Godric's Hollow could be located for Bristol to be between it and Surrey.  
       Instead, Bristol seems to indicate a detour to the north, or a point of origin in Wales.
 
-      [Hagrid]: <../people/hagrid/rubeus/>
+      [Hagrid]: <./people/Hagrid/Rubeus>
     source: |
       Mrs. J. K. Rowling. _[Harry Potter and the Philosopher's Stone]_
       Page 15. Text copyright © 1998 
@@ -35,11 +35,11 @@ events:
       [Dumbledore] arrives at "nearly Midnight" which means that [Harry] was found by [Petunia]
       on the Morning of the 2st.
 
-      [Dumbledore]: <../people/dumbledore/albus_percival_wulfric_brian/>
+      [Dumbledore]: <./people/Dumbledore/Albus Percival Wulfric Brian>
 
-      [Harry]: <../people/potter/harry_james/>
+      [Harry]: <./people/Potter/Harry James>
 
-      [Petunia]: <../people/evans/petunia/>
+      [Petunia]: <./people/Evans/Petunia>
 
     source: |
       Mrs. J. K. Rowling. _[Harry Potter and the Philosopher's Stone]_

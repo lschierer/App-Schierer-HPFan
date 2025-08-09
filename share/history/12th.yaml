@@ -10,9 +10,9 @@ events:
       His eldest son marries the oldest granddaughter of
       [Ignotus] [Peverell].
 
-      [Ignotus]: <../people/peverell/ignotus/>
+      [Ignotus]: <./people/Peverell/Ignotus>
 
-      [Peverell]: <../people/peverell/>
+      [Peverell]: <./people/Peverell/>
     source: |
       "[The Potter Family](https://www.rowlingindex.org/work/pmpfam/)"
       _[The J.K. Rowling Index](https://www.rowlingindex.org/)_
