@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="/css/history.css" />
+
+<div class="banner spectrum-AlertBanner is-open spectrum-AlertBanner--info">
+  <div class="spectrum-AlertBanner-body">
+    <iconify-icon icon="octicon:info-16"></iconify-icon>
+    <div class="spectrum-AlertBanner-content">
+      <p class="spectrum-AlertBanner-text">
+        Note that the tool creating this timeline fills in unknown fields
+        in dates. Dates that have had fields field in are marked as '(Estimated)'.
+      </p>
+    </div>
+  </div>
+</div>
+
+<section class="timeline">
+  <% if(scalar @$timeline) { %>
+    <ul class="timeline spectrum-Typeography">
+      <% foreach my $event (@$timeline) { %>
+        <li id="<%= $event->{date}->secs_since_1970_GMT %>">
+          <h5 class="spectrum-Heading spectrum-Heading--sizeM">
+            <%= $event->{date}->printf('%Y-%m-%d'); %>
+            <% if(!$event->{date}->complete(qw(m d))) { %>
+              (Estimated)
+            <% } %>
+          </h5>
+          <div class="spectrum-Typography <%= $event->{type} %>">
+            <h6 class="spectrum-Heading spectrum-Heading--sizeXS">
+              <%= $event->{blurb} %>
+            </h6>
+            <p class="spectrum-Body spectrum-Body--sizeM">
+              <% if(exists $event->{description}){ %>
+                <%== render_markdown_snippet($event->{description}) %>
+              <% } %>
+            </p>
+            <span class="spectrum-Body spectrum-Body--sizeM">
+              <% if(exists $event->{source} ){ %>
+                <%== render_markdown_snippet($event->{source}) %>
+              <% } %>
+            </span>
+          </div>
+        </li>
+      <% } %>
+    </ul>
+  <% } else { %>
+    <!-- No events available -->
+  <% } %>
+</section>

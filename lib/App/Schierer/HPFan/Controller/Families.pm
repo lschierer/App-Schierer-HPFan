@@ -43,20 +43,19 @@ package App::Schierer::HPFan::Controller::Families {
       $self->_register_routes($app);
     }
 
-
-    # special case the Unknown family that catches people with missing surname information
+# special case the Unknown family that catches people with missing surname information
     $app->routes->get('/Harrypedia/people/Unknown')->to(
-        controller => 'Families',
-        action => 'genealogical_gaps'
+      controller => 'Families',
+      action     => 'genealogical_gaps'
     )->name('genealogical_gaps');
 
     # Add to navigation with appropriate context
     $app->add_navigation_item({
-        title => 'Genealogical Gaps - People with Unknown Surnames',
-        path  => '/Harrypedia/people/Unknown',
-        order => 9999, # Put it at the end
+      title => 'Genealogical Gaps - People with Unknown Surnames',
+      path  => '/Harrypedia/people/Unknown',
+      order => 9999,    # Put it at the end
     });
-   }
+  }
 
   sub _register_routes ($self, $app) {
     my $logger = Log::Log4perl->get_logger(__PACKAGE__);
@@ -100,40 +99,46 @@ package App::Schierer::HPFan::Controller::Families {
     $logger->debug(__PACKAGE__ . 'genealogical_gaps start');
     # Find all people with "Unknown" as surname
     my @gap_people;
-    foreach my $p (sort {$a->id cmp $b->id} values %{$c->app->gramps->people}) {
+    foreach
+      my $p (sort { $a->id cmp $b->id } values %{ $c->app->gramps->people }) {
       $logger->debug(sprintf('inspecting %s', $p->id));
-      my $id = $p->id;
+      my $id              = $p->id;
       my $primary_surname = $p->get_surname;
       if (!$primary_surname) {
         push @gap_people, $p;
       }
       $logger->debug("primary_surname present for $id");
-      if($primary_surname->can('value')) {
+      if ($primary_surname->can('value')) {
         if (!defined($primary_surname->value)) {
           # Surname object exists but value is undefined
           push @gap_people, $p;
         }
         $logger->debug("primary_surname has value " . $primary_surname->value);
-      } else {
+      }
+      else {
         # we got back something bogus
         push @gap_people, $p;
       }
-      if(length($primary_surname->value) == 0){
+      if (length($primary_surname->value) == 0) {
         # somwhere this fallback value was set,
         # so the value is *technically* defined.
         push @gap_people, $p;
       }
-      $logger->debug(sprintf('%s has surname "%s", next person.', $id, $primary_surname->value));
-    };
+      $logger->debug(sprintf(
+        '%s has surname "%s", next person.',
+        $id, $primary_surname->value
+      ));
+    }
 
-    $logger->debug(sprintf('found %s people with unknown surnames.',
-    scalar @gap_people));
+    $logger->debug(sprintf(
+      'found %s people with unknown surnames.', scalar @gap_people));
     # Sort by first name for easier browsing
     @gap_people = sort {
-      ($a->primary_name->first || '') cmp ($b->primary_name->first || '')
+      ($a->primary_name->first || '') cmp($b->primary_name->first || '')
     } @gap_people;
 
-    my $staticContent = $c->app->config('distDir')->child("pages/Harrypedia/people/Unknown/index.md");
+    my $staticContent = $c->app->config('distDir')
+      ->child("pages/Harrypedia/people/Unknown/index.md");
     my $content = '';
     if (-f -r $staticContent) {
       my $markdown = Mojo::File->new($staticContent)->slurp('UTF-8');

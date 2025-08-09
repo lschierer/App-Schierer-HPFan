@@ -168,7 +168,8 @@ package App::Schierer::HPFan::Controller::HPNOFP {
     my $xmlLogger = Log::Log4perl->get_logger('XML::LibXML');
 
     my @warns;
-    local $SIG{__WARN__} = sub { push @warns, @_ };  # capture libxml2 parser warnings
+    local $SIG{__WARN__} =
+      sub { push @warns, @_ };    # capture libxml2 parser warnings
 
     my $dom;
     my $ok = eval {
@@ -184,7 +185,8 @@ package App::Schierer::HPFan::Controller::HPNOFP {
       if (blessed($err) && $err->isa('XML::LibXML::Error')) {
         chomp(my $msg = $err->as_string);
         $logger->error($msg);
-      } else {
+      }
+      else {
         chomp $err;
         $logger->error("XML::LibXML load_html failed: $err");
       }

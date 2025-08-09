@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@spectrum-css/alertbanner':
+        specifier: ^3.1.2
+        version: 3.1.2(@spectrum-css/button@14.1.6(@spectrum-css/icon@9.1.0(@spectrum-css/tokens@16.0.2))(@spectrum-css/tokens@16.0.2))(@spectrum-css/divider@5.1.0(@spectrum-css/tokens@16.0.2))(@spectrum-css/icon@9.1.0(@spectrum-css/tokens@16.0.2))(@spectrum-css/tokens@16.0.2)
       '@spectrum-css/button':
         specifier: ^14.1.6
         version: 14.1.6(@spectrum-css/icon@9.1.0(@spectrum-css/tokens@16.0.2))(@spectrum-css/tokens@16.0.2)
@@ -747,6 +750,26 @@ packages:
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
+
+  '@spectrum-css/alertbanner@3.1.2':
+    resolution: {integrity: sha512-zGHTm7c0O9R/Bi9KnL9D2zQWFjyuQ4UpHYy1+v0Q6Z+22FmuVZdaZ5cYrPq+ADnLYlEmP2UdL9qUt2euRePnFA==}
+    peerDependencies:
+      '@spectrum-css/button': '>=14.0.0 <15.0.0'
+      '@spectrum-css/closebutton': '>=6.0.0 <7.0.0'
+      '@spectrum-css/divider': '>=5.0.0 <6.0.0'
+      '@spectrum-css/icon': '>=9.0.0 <10.0.0'
+      '@spectrum-css/tokens': '>=16.0.0 <17.0.0'
+    peerDependenciesMeta:
+      '@spectrum-css/button':
+        optional: true
+      '@spectrum-css/closebutton':
+        optional: true
+      '@spectrum-css/divider':
+        optional: true
+      '@spectrum-css/icon':
+        optional: true
+      '@spectrum-css/tokens':
+        optional: true
 
   '@spectrum-css/button@14.1.6':
     resolution: {integrity: sha512-h4LTMT7sRYC9P0OKJn8vr7JJY8NU4xkcKvmwoph5sOgaFaDhNZ15JzO93FoKgAWMpFzh1CXGXyrIJhq2mBpc5A==}
@@ -3683,6 +3706,13 @@ snapshots:
   '@reteps/dockerfmt@0.3.6': {}
 
   '@rtsao/scc@1.1.0': {}
+
+  '@spectrum-css/alertbanner@3.1.2(@spectrum-css/button@14.1.6(@spectrum-css/icon@9.1.0(@spectrum-css/tokens@16.0.2))(@spectrum-css/tokens@16.0.2))(@spectrum-css/divider@5.1.0(@spectrum-css/tokens@16.0.2))(@spectrum-css/icon@9.1.0(@spectrum-css/tokens@16.0.2))(@spectrum-css/tokens@16.0.2)':
+    optionalDependencies:
+      '@spectrum-css/button': 14.1.6(@spectrum-css/icon@9.1.0(@spectrum-css/tokens@16.0.2))(@spectrum-css/tokens@16.0.2)
+      '@spectrum-css/divider': 5.1.0(@spectrum-css/tokens@16.0.2)
+      '@spectrum-css/icon': 9.1.0(@spectrum-css/tokens@16.0.2)
+      '@spectrum-css/tokens': 16.0.2
 
   '@spectrum-css/button@14.1.6(@spectrum-css/icon@9.1.0(@spectrum-css/tokens@16.0.2))(@spectrum-css/tokens@16.0.2)':
     optionalDependencies:
