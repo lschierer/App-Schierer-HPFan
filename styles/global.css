@@ -174,3 +174,21 @@ div.note {
 
   --mod-body-font-color: var(--spectrum-green-800);
 }
+
+div.warning {
+  padding: 0 3rem;
+
+  --mod-body-font-color: var(--spectrum-red-800);
+}
+
+div.important {
+  padding: 0 3rem;
+
+  --mod-body-font-color: var(--spectrum-purple-800);
+}
+
+div.tip {
+  padding: 0 3rem;
+
+  --mod-body-font-color: var(--spectrum-cyan-800);
+}
