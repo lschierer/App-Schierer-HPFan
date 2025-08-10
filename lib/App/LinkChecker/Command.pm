@@ -31,9 +31,9 @@ class App::LinkChecker::Command {
   field $site_origin;
 
   field $http = HTTP::Tiny->new(
-    max_redirect    => 10,    # follow up to 10 redirects
-    timeout         => 60,
-    agent           => 'Mozilla/5.0 (compatible; LinkChecker/1.0)',
+    max_redirect => 10,    # follow up to 10 redirects
+    timeout      => 60,
+    agent        => 'Mozilla/5.0 (compatible; LinkChecker/1.0)',
   );
 
   ADJUST {
@@ -127,8 +127,10 @@ class App::LinkChecker::Command {
     }
 
     if (exists $checked_urls{$canon}->{status}) {
-      $logger->debug(sprintf('"%s" has already been checked (status="%s"). Skipping.',
-      $canon, $checked_urls{$canon}->{status}));
+      $logger->debug(sprintf(
+        '"%s" has already been checked (status="%s"). Skipping.',
+        $canon, $checked_urls{$canon}->{status}
+      ));
       return $checked_urls{$canon}->{status};
     }
 
@@ -249,7 +251,7 @@ class App::LinkChecker::Command {
   method check_single_url ($url) {
     # This method checks a single URL without recursion (for external links)
 
-    my $uri = URI->new($url);
+    my $uri         = URI->new($url);
     my $is_external = (fc($uri->host) ne fc($start_hostname));
 
     if ($uri->host ne $start_hostname and not $external) {
@@ -268,16 +270,22 @@ class App::LinkChecker::Command {
 
     $logger->info("Checking external URL $url (no recursion)");
 
-    my $response = $http->get($url, {
-    headers => $is_external ?{
-            'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-            'Accept-Language' => 'en-US,en;q=0.5',
-            'Accept-Encoding' => 'gzip, deflate',
-            'DNT' => '1',
-            'Connection' => 'keep-alive',
-            'Upgrade-Insecure-Requests' => '1',
-        } : {},
-    });
+    my $response = $http->get(
+      $url,
+      {
+        headers => $is_external
+        ? {
+          'Accept' =>
+            'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+          'Accept-Language'           => 'en-US,en;q=0.5',
+          'Accept-Encoding'           => 'gzip, deflate',
+          'DNT'                       => '1',
+          'Connection'                => 'keep-alive',
+          'Upgrade-Insecure-Requests' => '1',
+          }
+        : {},
+      }
+    );
     $checked_urls{$url}->{status} = $response->{status};
 
     unless ($response->{success}) {
