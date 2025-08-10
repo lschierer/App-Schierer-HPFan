@@ -2,7 +2,7 @@
 % my $now =  DateTime->now;
 <link rel="stylesheet" href="/css/global_footer.css" />
 <footer class="footer">
-  <span id="copyright" class="copyright spectrum-Detail spectrum-Detail--serif spectrum-Detail--sizeM spectrum-Detail--light">
+  <span id="copyright" class="copyright spectrum-Detail spectrum-Detail--serif spectrum-Detail--sizeM">
     © 2023 - <%= $now->year %> Luke Schierer
   </span>
 </footer>

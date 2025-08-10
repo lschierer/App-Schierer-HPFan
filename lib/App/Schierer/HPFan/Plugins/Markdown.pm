@@ -144,9 +144,9 @@ package App::Schierer::HPFan::Plugins::Markdown {
     # splash is not actually a layout, it indicates there is no sidebar.
     if ($layout =~ /splash/i) {
       $c->stash(sidebar => 0);
-      $layout = 'default';
-      $c->stash(layout => 'default');
     }
+    $layout = 'default';
+    $c->stash(layout => $layout);
 
     $c->stash(layout => $layout) unless exists $c->stash->{layout};
     $logger->debug("layout is " . $c->stash('layout'));
@@ -187,7 +187,7 @@ package App::Schierer::HPFan::Plugins::Markdown {
     $logger->debug("finally decided on template $template");
     return $c->render(
       template => $template,
-      layout   => $c->stash('layout'),
+      layout   => $layout,
       content  => $content
     );
   }

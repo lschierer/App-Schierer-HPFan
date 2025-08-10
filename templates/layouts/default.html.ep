@@ -56,11 +56,11 @@
       </div> <!-- close the spectrum-SplitView spectrum-SplitView--horizontal -->
     <% } %>
 
-    <%= include 'partials/global_footer' %>
-    % if (stash('yaml_data') && exists stash('yaml_data')->{js}) {
-      % foreach my $js_file (@{stash('yaml_data')->{js}}) {
+    <% if (stash('yaml_data') && exists stash('yaml_data')->{js}) { %>
+      <% foreach my $js_file (@{stash('yaml_data')->{js}}) { %>
         <script src="<%= $js_file %>"></script>
-      % }
-    % }
+      <% } %>
+    <% } %>
+    <%= include 'partials/global_footer' %>
   </body>
 </html>

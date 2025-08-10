@@ -3,3 +3,4 @@
   <% return; %>
 <% } %>
 %= include 'partials/directory-list'
+<!-- auto index end -->

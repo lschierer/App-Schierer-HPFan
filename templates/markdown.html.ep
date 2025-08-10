@@ -6,3 +6,4 @@
   <% stash(entries => $generated_index); %>
   %= include 'partials/directory-list'
 <% } %>
+<!-- content end -->
