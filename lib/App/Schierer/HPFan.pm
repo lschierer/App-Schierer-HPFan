@@ -63,6 +63,28 @@ package App::Schierer::HPFan {
     # Last the Static Pages
     $self->plugin('App::Schierer::HPFan::Plugins::StaticPages');
     # Register last for lowest priority
+
+    if($mode eq 'development'){
+    $self->app->hook(before_render => sub ($c, $args) {
+      $c->log->info(sprintf
+        'before_render %s -> template=%s layout=%s handler=%s inline?=%s text?=%s',
+        $c->req->url->path->to_string,
+        ($args->{template} // ''),
+        ($args->{layout}   // ''),
+        ($args->{handler}  // '[auto]'),
+        (exists $args->{inline} ? 'yes' : 'no'),
+        (exists $args->{text}   ? 'yes' : 'no'),
+      );
+    });
+
+    $self->app->hook(after_render => sub ($c, $output, $format) {
+      $c->log->info(sprintf 'after_render %s bytes=%d format=%s',
+        $c->req->url->path->to_string, length($$output // ''), ($format // '[undef]'));
+    });
+    }else {
+      $self->log->info("Running in mode $mode");
+    }
+
   }
 
 }
