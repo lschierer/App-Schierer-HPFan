@@ -28,11 +28,27 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
   field $date_parser : reader =
     App::Schierer::HPFan::Model::Gramps::DateHelper->new();
 
+  #derived fields
+  field $people_by_event : reader = {};
+  field $people_by_tag   : reader = {};
+
   ADJUST {
     # Do not assume we are passed a Path::Tiny object;
     $gramps_export = Path::Tiny::path($gramps_export);
     if (!$gramps_export->is_file) {
       $self->logger->logcroak("gramps_export $gramps_export is not a file.");
+    }
+  }
+
+  method build_indexes {
+    $people_by_event = {};
+    for my $person (values %$people) {
+      for my $h ($person->event_refs->@*) {
+        push @{ $people_by_event->{$h} }, $person;
+      }
+      for my $t ($person->tag_refs->@*) {
+        push @{ $people_by_tag->{$t} }, $person;
+      }
     }
   }
 
@@ -456,6 +472,7 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     }
     $self->logger->info(
       sprintf('imported %s families.', scalar keys %{$families}));
+    $self->build_indexes();
   }
 
 }

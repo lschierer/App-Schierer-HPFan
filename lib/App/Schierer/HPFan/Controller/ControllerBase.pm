@@ -49,6 +49,70 @@ package App::Schierer::HPFan::Controller::ControllerBase {
 
       $app->helper(gramps => sub { return $gramps });
 
+      $app->helper(
+        person_house => sub ($c, $person) {
+          my %by_handle =
+            %{ $gramps->tags };    # handle => Tag (assumes ->name or similar)
+
+          for my $th (@{ $person->tag_refs // [] }) {
+            my $tag  = $by_handle{$th} or next;
+            my $name = $tag->name // '';
+            $name =~ s/^\s+|\s+$//g;
+
+            # exact house names
+            return $name
+              if $name =~ /^(?:Gryffindor|Hufflepuff|Ravenclaw|Slytherin)$/;
+
+            # "House: Gryffindor" etc.
+            if ($name =~
+              /^House:\s*(Gryffindor|Hufflepuff|Ravenclaw|Slytherin)\b/i) {
+              return ucfirst lc $1;
+            }
+          }
+
+          return 'Unknown House';
+        }
+      );
+
+      $app->helper(
+        person_blood_status => sub ($c, $person) {
+          my %by_handle =
+            %{ $gramps->tags };    # handle => Tag (assumes ->name or similar)
+
+          for my $th (@{ $person->tag_refs // [] }) {
+            my $tag  = $by_handle{$th} or next;
+            my $name = $tag->name // '';
+            $name =~ s/^\s+|\s+$//g;
+
+            # exact house names
+            return $name
+              if $name =~
+              /^(?:pure-blood|half-blood|1st gen magical|hag|non-magical)$/;
+          }
+
+          return 'Unknown Status';
+        }
+      );
+
+      $app->helper(
+        person_economic_status => sub ($c, $person) {
+          my %by_handle =
+            %{ $gramps->tags };    # handle => Tag (assumes ->name or similar)
+
+          for my $th (@{ $person->tag_refs // [] }) {
+            my $tag  = $by_handle{$th} or next;
+            my $name = $tag->name // '';
+            $name =~ s/^\s+|\s+$//g;
+
+            # exact house names
+            return $name
+              if $name =~ /^(?:Lower Class|Upper Class|Middle Class)$/;
+          }
+
+          return 'Unknown';
+        }
+      );
+
       $app->plugins->emit(gramps_initialized => $gramps);
       $app->config(gramps_initialized => 1);
       1;

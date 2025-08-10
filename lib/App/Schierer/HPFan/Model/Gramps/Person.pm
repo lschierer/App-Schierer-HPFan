@@ -106,6 +106,27 @@ class App::Schierer::HPFan::Model::Gramps::Person :
     my $name_str = $primary ? $primary->to_string : "Unknown";
     return sprintf("Person[%s]: %s (%s)", $handle, $name_str, $gender);
   }
+
+  method to_hash {
+    return {
+      id             => $id,
+      handle         => $handle,
+      priv           => $priv,
+      change         => $change,
+      gender         => $gender,
+      names          => $names,
+      event_refs     => $event_refs,
+      addresses      => $addresses,
+      attributes     => $attributes,
+      urls           => $urls,
+      child_of_refs  => $child_of_refs,
+      parent_in_refs => $parent_in_refs,
+      person_refs    => $person_refs,
+      note_refs      => $note_refs,
+      citation_refs  => $citation_refs,
+      tag_refs       => $tag_refs,
+    };
+  }
 }
 
 1;

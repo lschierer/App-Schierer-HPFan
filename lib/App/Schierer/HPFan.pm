@@ -48,6 +48,8 @@ package App::Schierer::HPFan {
     # First Plugins that provide helpers but do not define routes
     # Markdown
     $self->plugin('App::Schierer::HPFan::Plugins::Markdown');
+    # Helper for the class list tables
+    $self->plugin('App::Schierer::HPFan::Plugins::ClassLists');
     # Navigation
     $self->plugin('App::Schierer::HPFan::Plugins::Navigation');
 

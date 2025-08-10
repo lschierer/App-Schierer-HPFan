@@ -47,7 +47,7 @@ class App::Schierer::HPFan::Logger {
     my $json =
       JSON::PP->new->utf8->pretty->allow_blessed(1)
       ->convert_blessed(1)
-      ->encode($self->to_hash());
+      ->encode(__CLASS__->to_hash());
     return $json;
   }
 
@@ -56,7 +56,7 @@ class App::Schierer::HPFan::Logger {
     my $json =
       JSON::PP->new->utf8->allow_blessed(1)
       ->convert_blessed(1)
-      ->encode($self->to_hash());
+      ->encode(__CLASS__->to_hash());
     return $json;
   }
 }
