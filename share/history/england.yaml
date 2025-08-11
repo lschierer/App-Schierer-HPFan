@@ -41,7 +41,7 @@ events:
     date: 927
     blurb: Æthelstan conquers Northumbria
     description: |
-      Some historians date the founding of England from 
+      Some historians date the founding of England from
       here, as this represents the first rule of the entirety
       of what would be called England.
     source: |
@@ -97,7 +97,7 @@ events:
       Last Edited: 2023-12-06. Last Viewed: 2023-12-06.
   - type: mundane england
     date: 0975-07-08
-    blurb: Edward the Maryr ascends to the throne of England.
+    blurb: Edward the Martyr ascends to the throne of England.
     description: |
       Despite the title the English give him, this was not a saintly man.
     source: |
@@ -128,7 +128,7 @@ events:
     blurb: Æthelred the Unready ascends to the throne of England.
     description: |
       He does so following the death of Sweyn, and despite the fact that Danes
-      remain in control over parts of England.  This is possible because some 
+      remain in control over parts of England.  This is possible because some
       Danes support him.
     source: |
       [Wikipedia](https://en.wikipedia.org/).
@@ -269,7 +269,7 @@ events:
     blurb: Richard I recrowned King of England on his return
     description: |
       He forgives his brother John for the acts of rebellion and names
-      John his heir.  Considering the travel times of the day, there 
+      John his heir.  Considering the travel times of the day, there
       is not time for the extended wondering about where Richard was that
       we see in Ivanhoe and Robin Hood tales.
     source: |

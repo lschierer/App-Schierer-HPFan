@@ -3,7 +3,7 @@
 "http://gramps-project.org/xml/1.7.1/grampsxml.dtd">
 <database xmlns="http://gramps-project.org/xml/1.7.1/">
   <header>
-    <created date="2025-08-08" version="5.1.5"/>
+    <created date="2025-08-11" version="5.1.5"/>
     <researcher>
       <resname>Luke Schierer</resname>
       <resemail>luke@schierer.org</resemail>
@@ -59,9 +59,10 @@
       <dateval val="1929"/>
       <citationref hlink="_ed59398a9c92811e304558645aa"/>
     </event>
-    <event handle="_ed593a1787f656a00db7e436274" change="1631046765" id="E0007">
+    <event handle="_ed593a1787f656a00db7e436274" change="1754947333" id="E0007">
       <type>Death</type>
       <dateval val="1979"/>
+      <noteref hlink="_ff60e0b2b15475dc9cbfb3bf07b"/>
       <citationref hlink="_ed59398a9c92811e304558645aa"/>
     </event>
     <event handle="_ed593a96afe6cbb868a10efeabc" change="1631046817" id="E0008">
@@ -192,7 +193,7 @@
       <dateval val="1959"/>
       <citationref hlink="_ed59398a9c92811e304558645aa"/>
     </event>
-    <event handle="_ed5950b57c04158677c853404a7" change="1631049137" id="E0034">
+    <event handle="_ed5950b57c04158677c853404a7" change="1754937769" id="E0034">
       <type>Birth</type>
       <dateval val="1845"/>
       <citationref hlink="_ed59398a9c92811e304558645aa"/>
@@ -241,9 +242,10 @@
       <dateval val="1920"/>
       <citationref hlink="_ed59398a9c92811e304558645aa"/>
     </event>
-    <event handle="_ed5956426c23d1395133d877603" change="1631049719" id="E0044">
+    <event handle="_ed5956426c23d1395133d877603" change="1754947314" id="E0044">
       <type>Death</type>
       <dateval val="1977"/>
+      <noteref hlink="_ff60e1c8c8f49c7f69452af337e"/>
       <citationref hlink="_ed59398a9c92811e304558645aa"/>
     </event>
     <event handle="_ed5958284c62468fa857da0ace2" change="1631049918" id="E0045">
@@ -302,7 +304,7 @@
       <dateval val="1973"/>
       <citationref hlink="_ed59398a9c92811e304558645aa"/>
     </event>
-    <event handle="_ed59653bfd020eb0b944467daae" change="1631051289" id="E0057">
+    <event handle="_ed59653bfd020eb0b944467daae" change="1754947473" id="E0057">
       <type>Birth</type>
       <dateval val="1915"/>
       <citationref hlink="_ed59398a9c92811e304558645aa"/>
@@ -621,11 +623,11 @@
       <dateval val="1998-05-02"/>
       <citationref hlink="_ed63cec171e3fc49813e2ff8e18"/>
     </event>
-    <event handle="_ed65c8a44283c6aece004bba82d" change="1631383835" id="E0127">
+    <event handle="_ed65c8a44283c6aece004bba82d" change="1754936830" id="E0127">
       <type>Birth</type>
-      <dateval val="1200-01-01" type="before"/>
+      <daterange start="1100-01-01" stop="1200-01-01"/>
       <place hlink="_ed65c85d7b47cf245347468ab7d"/>
-      <citationref hlink="_ed65c58b8ed29659279fe34aead"/>
+      <citationref hlink="_ff607db8ed113b79022ca58d70d"/>
     </event>
     <event handle="_ed65ca15d442f61f30ebcabab69" change="1631383986" id="E0128">
       <type>Marriage</type>
@@ -861,7 +863,7 @@
       <dateval val="1901"/>
       <citationref hlink="_eddd0f701f66d440e5e3eeed9c3"/>
     </event>
-    <event handle="_eddd0fd2fc96c5ecf08341c98a5" change="1634585681" id="E0175">
+    <event handle="_eddd0fd2fc96c5ecf08341c98a5" change="1754938318" id="E0175">
       <type>Death</type>
       <dateval val="1901"/>
       <citationref hlink="_eddd0f701f66d440e5e3eeed9c3"/>
@@ -986,10 +988,11 @@
       <dateval val="1944-09-01"/>
       <citationref hlink="_f20cebd161dc9e7cb71dc166e6"/>
     </event>
-    <event handle="_f2ae250745e3d38dad592b5077" change="1667685996" id="E0200">
+    <event handle="_f2ae250745e3d38dad592b5077" change="1754939084" id="E0200">
       <type>Birth</type>
       <dateval val="1968"/>
       <citationref hlink="_f2ae24ff78422be2d476918a1c9"/>
+      <citationref hlink="_ff60933ff812e3eb938fd1608b3"/>
     </event>
     <event handle="_f2ae2a8a1036193ec76028eadb2" change="1667686574" id="E0201">
       <type>Hogwarts Sorting</type>
@@ -1106,17 +1109,17 @@
       <dateval val="1998-05-02"/>
       <citationref hlink="_fdcb93aa8c7c8250dba33bf02f"/>
     </event>
-    <event handle="_ff57a0af7c7584f9b3bf86497e9" change="1754698894" id="E0225">
+    <event handle="_ff57a0af7c7584f9b3bf86497e9" change="1754937168" id="E0225">
       <type>Birth</type>
       <dateval val="1612-01-01" type="before"/>
-      <citationref hlink="_ed65c58b8ed29659279fe34aead"/>
+      <citationref hlink="_ff607db8ed113b79022ca58d70d"/>
     </event>
     <event handle="_ff57a33f9d81b407195393be586" change="1754699163" id="E0226">
       <type>Birth</type>
       <dateval val="1562"/>
       <citationref hlink="_ff57a2afdb27f49b267cd7ebc48"/>
     </event>
-    <event handle="_ff57a392eeb347de33c41aff87a" change="1754699197" id="E0227">
+    <event handle="_ff57a392eeb347de33c41aff87a" change="1754947543" id="E0227">
       <type>Death</type>
       <dateval val="1649"/>
       <citationref hlink="_ff57a2afdb27f49b267cd7ebc48"/>
@@ -1200,7 +1203,7 @@
       </name>
       <parentin hlink="_ed5936549672cddc25e05ddad8d"/>
     </person>
-    <person handle="_ed5938674f374eecc5135e1192" change="1631211751" id="I0005">
+    <person handle="_ed5938674f374eecc5135e1192" change="1754947337" id="I0005">
       <gender>M</gender>
       <name type="Birth Name">
         <first>Orion</first>
@@ -1471,7 +1474,7 @@
       <parentin hlink="_ed5fd569fc54ca3f223de3fc179"/>
       <citationref hlink="_ed59398a9c92811e304558645aa"/>
     </person>
-    <person handle="_ed59555dc3943ebf101e8eb4be8" change="1633709076" id="I0028">
+    <person handle="_ed59555dc3943ebf101e8eb4be8" change="1754947317" id="I0028">
       <gender>F</gender>
       <name type="Birth Name">
         <first>Dorea</first>
@@ -1693,7 +1696,7 @@
       <parentin hlink="_ed5962a0f595f462a95a4f274b5"/>
       <citationref hlink="_ed59398a9c92811e304558645aa"/>
     </person>
-    <person handle="_ed5963655cb3ed704665206223e" change="1631051401" id="I0047">
+    <person handle="_ed5963655cb3ed704665206223e" change="1754947495" id="I0047">
       <gender>F</gender>
       <name type="Birth Name">
         <first>Callidora</first>
@@ -1702,6 +1705,7 @@
       <eventref hlink="_ed59653bfd020eb0b944467daae" role="Primary"/>
       <childof hlink="_ed5962a0f595f462a95a4f274b5"/>
       <parentin hlink="_ed5964d52cb67b79937f615ee40"/>
+      <noteref hlink="_ff60e31d3115727e9908c0ef58a"/>
       <citationref hlink="_ed59398a9c92811e304558645aa"/>
     </person>
     <person handle="_ed5963ba12460362c8744645b20" change="1663361767" id="I0048">
@@ -3258,7 +3262,7 @@
       <parentin hlink="_ed63c040e04744b7778faabf4df"/>
       <citationref hlink="_ed63bf5fa6f47ee9da21056aa17"/>
     </person>
-    <person handle="_ed65c4983c814d5df333de2729e" change="1754452703" id="I0190">
+    <person handle="_ed65c4983c814d5df333de2729e" change="1754942030" id="I0190">
       <gender>M</gender>
       <name type="Unknown">
         <first>Linfred</first>
@@ -3273,6 +3277,7 @@
       </name>
       <eventref hlink="_ed65c8a44283c6aece004bba82d" role="Primary"/>
       <parentin hlink="_ed65c490109610f6d7fcf8a12dd"/>
+      <noteref hlink="_ff60af617d040e39f55d6a33d6b"/>
       <citationref hlink="_ed65c58b8ed29659279fe34aead"/>
     </person>
     <person handle="_ed65ca255ea5788fdc4cae8c60a" change="1631384254" id="I0191">
@@ -4836,7 +4841,7 @@
       <eventref hlink="_ff57a0af7c7584f9b3bf86497e9" role="Primary"/>
       <citationref hlink="_ed65c58b8ed29659279fe34aead"/>
     </person>
-    <person handle="_ff57a12f9d06ec5f345a70a4724" change="1754699210" id="I0350">
+    <person handle="_ff57a12f9d06ec5f345a70a4724" change="1754947556" id="I0350">
       <gender>F</gender>
       <name type="Unknown">
         <first>Mnemone</first>
@@ -4844,6 +4849,7 @@
       </name>
       <eventref hlink="_ff57a33f9d81b407195393be586" role="Primary"/>
       <eventref hlink="_ff57a392eeb347de33c41aff87a" role="Primary"/>
+      <noteref hlink="_ff60e417b4757f6465cc5c236bd"/>
       <citationref hlink="_ff57a2afdb27f49b267cd7ebc48"/>
     </person>
   </people>
@@ -6183,7 +6189,8 @@
       <confidence>2</confidence>
       <sourceref hlink="_ed593f0310ad05701064d6828a"/>
     </citation>
-    <citation handle="_ed65c58b8ed29659279fe34aead" change="1631383510" id="C0120">
+    <citation handle="_ed65c58b8ed29659279fe34aead" change="1754936465" id="C0120">
+      <dateval val="2015-09-22"/>
       <page>https://www.rowlingindex.org/work/pmpfam/</page>
       <confidence>2</confidence>
       <sourceref hlink="_ed62d28019f197d479f15dd3cc0"/>
@@ -6892,6 +6899,17 @@
       <confidence>2</confidence>
       <sourceref hlink="_ed62d28019f197d479f15dd3cc0"/>
     </citation>
+    <citation handle="_ff607db8ed113b79022ca58d70d" change="1754936820" id="C0257">
+      <dateval val="2015-09-22"/>
+      <page>https://www.rowlingindex.org/work/pmpfam/</page>
+      <confidence>2</confidence>
+      <sourceref hlink="_ff607d3793b2d0f2a089f1a61d0"/>
+    </citation>
+    <citation handle="_ff60933ff812e3eb938fd1608b3" change="1754939077" id="C0258">
+      <page>https://therowlinglibrary.com/jkrowling.com/textonly/en/wotm.html</page>
+      <confidence>2</confidence>
+      <sourceref hlink="_ff6092d72481aba3adb6a5b92cc"/>
+    </citation>
   </citations>
   <sources>
     <source handle="_ed5926e209e1387645aecd422c7" change="1631044751" id="S0000">
@@ -6904,10 +6922,10 @@
       <sauthor>J. K. Rowling</sauthor>
       <spubinfo>copyright © 2007 Pottermore Publishing. American Kindle Edition.</spubinfo>
     </source>
-    <source handle="_ed59397b18f5998a85ea66128be" change="1631046701" id="S0003">
+    <source handle="_ed59397b18f5998a85ea66128be" change="1754937764" id="S0003">
       <stitle>Black Family Tree</stitle>
       <sauthor>J. K. Rowling</sauthor>
-      <reporef hlink="_ed59395f4e15343cde92e096e46" medium="Electronic"/>
+      <reporef hlink="_ed62d26e4866d63d0673c446418" callno="https://www.rowlingindex.org/work/blacktree/" medium="Electronic"/>
     </source>
     <source handle="_ed593f0310ad05701064d6828a" change="1631294626" id="S0004">
       <stitle>Harry Potter Wiki</stitle>
@@ -7046,6 +7064,17 @@
       <sauthor>Leaky Staff - https://www.the-leaky-cauldron.org/info/aboutus/</sauthor>
       <spubinfo>2000-2025</spubinfo>
       <reporef hlink="_fdcb9116df61c16109d6d9604e7" medium="Electronic"/>
+    </source>
+    <source handle="_ff607d3793b2d0f2a089f1a61d0" change="1754936767" id="S0052">
+      <stitle>The Potter Family</stitle>
+      <sauthor>Mrs. J. K. Rowling</sauthor>
+      <sabbrev>PMPFAM</sabbrev>
+      <reporef hlink="_ed62d26e4866d63d0673c446418" medium="Electronic"/>
+    </source>
+    <source handle="_ff6092d72481aba3adb6a5b92cc" change="1754939034" id="S0053">
+      <stitle>Wizard of the Month Archive</stitle>
+      <sauthor>Mrs. J. K. Rowling</sauthor>
+      <reporef hlink="_ed62d26e4866d63d0673c446418" callno="https://therowlinglibrary.com/jkrowling.com/textonly/en/wotm.html" medium="Book"/>
     </source>
   </sources>
   <places>
@@ -7223,7 +7252,7 @@
       <type>Web site</type>
       <url  href="https://www.mugglenet.com/" type="Web Home" description="MuggleNet"/>
     </repository>
-    <repository handle="_ed62d26e4866d63d0673c446418" change="1631304331" id="R0030">
+    <repository handle="_ed62d26e4866d63d0673c446418" change="1754939032" id="R0030">
       <rname>The J.K. Rowling Index</rname>
       <type>Web site</type>
       <url  href="https://www.rowlingindex.org/" type="Web Home" description="List of all J.K. Rowling's writings."/>
@@ -7398,6 +7427,56 @@ Rowling, J.K.. Short Stories from Hogwarts of Heroism, Hardship and Dangerous Ho
     </note>
     <note handle="_fdcb8e5a8566091810f0aa7f72c" change="1744066928" id="N0037" type="Person Note">
       <text>I am including Nagini as definitively a person despite the only cannonical source for this being the Fantastic Beasts series, because I find the logic in the Harry Potter Wiki page on her persuasive.  This page indicates that her back story is material that did not make the final cust for book seven, but *could* have been included there - and thus was envisioned prior to the historical revisionism of Fanstastic Beasts. </text>
+    </note>
+    <note handle="_ff60838a148578d3a6c1077b227" change="1754947538" id="N0038" type="General">
+    </note>
+    <note handle="_ff60890144195630052d908b55" change="1754947403" id="N0039" type="General" format="1">
+    </note>
+    <note handle="_ff6094557ca4a577fe9ac7294e" change="1754939191" id="N0040" type="Event Note">
+      <text>We have no information on how or why she dies.</text>
+    </note>
+    <note handle="_ff6094df3a921955f716429ec61" change="1754947184" id="N0041" type="General">
+    </note>
+    <note handle="_ff60955059d33f4fca01ff4c65c" change="1754947298" id="N0042" type="General">
+    </note>
+    <note handle="_ff60af617d040e39f55d6a33d6b" change="1754946211" id="N0043" type="Person Note" format="1">
+      <text>&gt; Linfred of Stinchcombe, a locally well-beloved and
+&gt; eccentric man, whose nickname, ‘the Potterer’, became corrupted in time to ‘Potter’.
+
+His eldest son marries the oldest granddaughter of [Ignotus] [Peverell].
+
+[Ignotus]: &lt;./people/Peverell/Ignotus&gt;
+
+[Peverell]: &lt;./people/Peverell/&gt;
+</text>
+    </note>
+    <note handle="_ff60e0b2b15475dc9cbfb3bf07b" change="1754947198" id="N0044" type="Event Note">
+      <text>We do not know exactly when or why in 1979 he died.</text>
+    </note>
+    <note handle="_ff60e1c8c8f49c7f69452af337e" change="1754947312" id="N0045" type="Event Note">
+      <text>We do not know exactly when or why in 1977 she died.</text>
+    </note>
+    <note handle="_ff60e2cc93e2e8c25313bbbb29c" change="1754947418" id="N0046" type="Event Note">
+      <text>[Callidora] will marry [Harfang Longbottom].  She is apparently alive as of Mrs. Rowling's book timeline.
+
+[Callidora]: &lt;./people/Black/Callidora&gt;
+
+[Harfang Longbottom]: &lt;./people/Longbottom/Harfang&gt;
+</text>
+    </note>
+    <note handle="_ff60e31d3115727e9908c0ef58a" change="1754947462" id="N0047" type="Person Note" format="1">
+      <text>[Callidora] will marry [Harfang Longbottom].  She is apparently alive as of Mrs. Rowling's book timeline.
+
+[Callidora]: &lt;./people/Black/Callidora&gt;
+
+[Harfang Longbottom]: &lt;./people/Longbottom/Harfang&gt;
+</text>
+    </note>
+    <note handle="_ff60e417b4757f6465cc5c236bd" change="1754947554" id="N0048" type="Person Note" format="1">
+      <text>[Mnemone] is best known as the developer of Memory Modification Charms. From this we know they were developed at least slightly before this time.
+
+[Mnemone]: /Harrypedia/people/Radford/Mnemone
+</text>
     </note>
   </notes>
 </database>

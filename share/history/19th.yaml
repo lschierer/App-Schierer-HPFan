@@ -55,19 +55,11 @@ events:
       Mrs. J. K. Rowling.
       _[Harry Potter and the Order of the Phoenix](https://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix)_
       Kindle Locations 2094-2095. Pottermore Limited. American Kindle Edition.
-  - type: magical
-    date: 1881
-    blurb: Albus Percival Wulfric Brian Dumbledore born
-    source: |
-      [Harry Potter Wiki](https://harrypotter.fandom.com). [Screenshot
-      of the old Potermore fact file for
-      dumbledore](https://harrypotter.fandom.com/wiki/Main_Page?file=Albus+Dumbledore+Fact+File+-+PM+via+Internet+Archive.png)
-      Last viewed 2020-07-14
   - type: mundane
     date: 1895-05-28
     blurb: Queen Victoria grants a charter to the NSPCC
     description: |
-      While it had previously operated under the name "the London 
+      While it had previously operated under the name "the London
       Society for the Prevention of Creulty to Children", it had by
       now become a national organization with branches across Great
       Britain and Ireland.
@@ -81,7 +73,7 @@ events:
     description: |
       The first child welfare act in the UK.  The state can now
       intervene in problems between parents and children, including
-      the power to arrest and the authority to enter a home. 
+      the power to arrest and the authority to enter a home.
       Child employment and begging were also regulated.
     source: |
       [Wikipedia](https://en.wikipedia.org/)
