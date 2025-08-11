@@ -43,11 +43,10 @@ package App::Schierer::HPFan::Plugins::ClassLists {
     my @SortingEvents;
     foreach my $event (@events) {
       if ($event->type eq 'Hogwarts Sorting') {
-        $logger->debug(
-          sprintf(
-            'pushing event %s with type %s', $event->handle, $event->type
-          )
-        );
+        $logger->debug(sprintf(
+          'pushing event %s with type %s',
+          $event->handle, $event->type
+        ));
         push @SortingEvents, $event;
       }
     }
@@ -68,13 +67,11 @@ package App::Schierer::HPFan::Plugins::ClassLists {
         push @matches, $person;
       }
 
-      $logger->debug(
-        sprintf(
-          'buildClassList found %s people sorted in %s: %s',
-          scalar @matches,
-          $eventDate, join(', ', map { $_->display_name } @matches)
-        )
-      );
+      $logger->debug(sprintf(
+        'buildClassList found %s people sorted in %s: %s',
+        scalar @matches,
+        $eventDate, join(', ', map { $_->display_name } @matches)
+      ));
       $ClassLists{$eventDate} = \@matches;
     }
     return \%ClassLists;
@@ -96,12 +93,10 @@ package App::Schierer::HPFan::Plugins::ClassLists {
       my $year = $node->attr('year') // '';
 
       my $matches = $ClassLists->{ sprintf('%s-09-01', $year) } // [];
-      $logger->debug(
-        sprintf(
-          'render_classlist_tables retrieved %s students in %s',
-          scalar @$matches, $year
-        )
-      );
+      $logger->debug(sprintf(
+        'render_classlist_tables retrieved %s students in %s',
+        scalar @$matches, $year
+      ));
 
       # Build replacement HTML
       my $replacement;

@@ -91,6 +91,7 @@ body {
 
 /* 2. Optional sidebar layout */
 body.with-sidebar {
+  max-width: 100vw;
   display: grid;
   grid-template:
     "header" var(--header-height)
@@ -133,7 +134,7 @@ div.spectrum-SplitView.spectrum-SplitView--horizontal {
 main,
 div#main {
   grid-area: content;
-  overflow-y: auto;
+  overflow: auto;
   padding: 0 1rem;
   min-height: var(--main-height);
   box-sizing: border-box;
@@ -149,9 +150,8 @@ div#nav {
 
 /* 5. SplitView pane (used in legacy layout maybe?) */
 div.spectrum-SplitView-pane {
-  height: var(--main-height);
   width: 100vw;
-  overflow: auto;
+  height: var(--main-height);
   box-sizing: border-box;
 }
 

@@ -15,7 +15,7 @@ li p {
 }
 
 li > .magical {
-  background-color: var(--spectrum-purple-100);
+  background-color: var(--spectrum-purple-200);
 }
 
 li > .mundane {

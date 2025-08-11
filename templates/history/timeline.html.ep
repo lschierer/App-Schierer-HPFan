@@ -18,7 +18,10 @@
       <% foreach my $event (@$timeline) { %>
         <li id="<%= $event->{date}->secs_since_1970_GMT %>">
           <h5 class="spectrum-Heading spectrum-Heading--sizeM">
-            <%= $event->{date}->printf('%Y-%m-%d'); %>
+            <%= $event->{date_type} %>
+            <time datetime="<%= $event->{date}->printf('%Y-%m-%d'); %>">
+              <%= $event->{date}->printf('%Y-%m-%d'); %>
+            </time>
             <% if(!$event->{date}->complete(qw(m d))) { %>
               (Estimated)
             <% } %>

@@ -12,6 +12,11 @@ require App::Schierer::HPFan::Model::Gramps::Surname;
 require App::Schierer::HPFan::Model::Gramps::Name;
 require App::Schierer::HPFan::Model::Gramps::Person;
 require App::Schierer::HPFan::Model::Gramps::Family;
+require App::Schierer::HPFan::Model::Gramps::Citation;
+require App::Schierer::HPFan::Model::Gramps::Source;
+require App::Schierer::HPFan::Model::Gramps::Repository;
+require App::Schierer::HPFan::Model::Gramps::Repository::Reference;
+require App::Schierer::HPFan::Model::Gramps::Note;
 
 class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
 # PODNAME: App::Schierer::HPFan::Model::Gramps
@@ -21,11 +26,15 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
 
   field $gramps_export : param;
 
-  field $tags        : reader = {};
-  field $events      : reader = {};
-  field $people      : reader = {};
-  field $families    : reader = {};
-  field $date_parser : reader =
+  field $tags         : reader = {};
+  field $events       : reader = {};
+  field $people       : reader = {};
+  field $families     : reader = {};
+  field $citations    : reader = {};
+  field $sources      : reader = {};
+  field $notes        : reader = {};
+  field $repositories : reader = {};
+  field $date_parser  : reader =
     App::Schierer::HPFan::Model::Gramps::DateHelper->new();
 
   #derived fields
@@ -237,21 +246,19 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     my $xc = XML::LibXML::XPathContext->new($dom);
     $xc->registerNs('g', 'http://gramps-project.org/xml/1.7.1/');
 
-    foreach my $xTag ($xc->findnodes('//g:tags/g:tag')) {
-      my $handle = $xTag->getAttribute('handle');
+    $self->_import_events($xc);
+    $self->_import_people($xc);
+    $self->_import_families($xc);
+    $self->_import_tags($xc);
+    $self->_import_citations($xc);
+    $self->_import_sources($xc);
+    $self->_import_repositories($xc);
+    $self->_import_notes($xc);
+    $self->build_indexes();
+  }
 
-      if ($handle) {
-        $tags->{$handle} = App::Schierer::HPFan::Model::Gramps::Tag->new(
-          handle   => $xTag->getAttribute('handle'),
-          name     => $xTag->getAttribute('name'),
-          color    => $xTag->getAttribute('color'),
-          priority => $xTag->getAttribute('priority'),
-          change   => $xTag->getAttribute('change'),
-        );
-      }
-    }
-    $self->logger->info(sprintf('imported %s tags.', scalar keys %{$tags}));
-
+  method _import_events ($xc) {
+    my $d = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
     foreach my $xEvent ($xc->findnodes('//g:events/g:event')) {
       my $handle = $xEvent->getAttribute('handle');
       if ($handle) {
@@ -283,9 +290,24 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
           push @obj_refs, $or->to_literal;
         }
 
+        my $eventDate = $d->import_gramps_date($xEvent, $xc);
+        if ($eventDate) {
+          $self->logger->debug(sprintf(
+            'got date "%s" with modifier "%s" for event "%s"',
+            $d->format_date($eventDate),
+            exists $eventDate->{modifier}
+            ? $eventDate->{modifier}
+            : "no modifier",
+            $handle,
+          ));
+        }
+        else {
+          $self->logger->error("no event date for $handle");
+        }
+
         $events->{$handle} = App::Schierer::HPFan::Model::Gramps::Event->new(
           handle        => $handle,
-          date          => $d->import_gramps_date($xEvent, $xc),
+          date          => $eventDate,
           id            => $xEvent->getAttribute('id'),
           change        => $xEvent->getAttribute('change'),
           type          => $type,
@@ -296,10 +318,14 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
           note_refs     => \@note_refs,
           tag_refs      => \@tag_refs,
         );
+
       }
     }
     $self->logger->info(sprintf('imported %s events.', scalar keys %{$events}));
+  }
 
+  method _import_people ($xc) {
+    my $d = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
     foreach my $xPerson ($xc->findnodes('//g:people/g:person')) {
       my $handle = $xPerson->getAttribute('handle');
       if ($handle) {
@@ -407,7 +433,9 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
       }
     }
     $self->logger->info(sprintf('imported %s people.', scalar keys %{$people}));
+  }
 
+  method _import_families ($xc) {
     foreach my $xFamily ($xc->findnodes('//g:families/g:family')) {
       my $handle = $xFamily->getAttribute('handle');
       if ($handle) {
@@ -472,7 +500,133 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     }
     $self->logger->info(
       sprintf('imported %s families.', scalar keys %{$families}));
-    $self->build_indexes();
+  }
+
+  method _import_tags ($xc) {
+    foreach my $xTag ($xc->findnodes('//g:tags/g:tag')) {
+      my $handle = $xTag->getAttribute('handle');
+
+      if ($handle) {
+        $tags->{$handle} = App::Schierer::HPFan::Model::Gramps::Tag->new(
+          handle   => $xTag->getAttribute('handle'),
+          name     => $xTag->getAttribute('name'),
+          color    => $xTag->getAttribute('color'),
+          priority => $xTag->getAttribute('priority'),
+          change   => $xTag->getAttribute('change'),
+        );
+      }
+    }
+    $self->logger->info(sprintf('imported %s tags.', scalar keys %{$tags}));
+  }
+
+  method _import_citations ($xc) {
+    my $d = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
+    foreach my $xItem ($xc->findnodes('//g:citations/g:citation')) {
+      my $handle = $xItem->getAttribute('handle');
+      if ($handle) {
+        my $change     = $xItem->getAttribute('change');
+        my $id         = $xItem->getAttribute('id');
+        my $page       = $xc->findvalue('./g:page',       $xItem)      // undef;
+        my $confidence = $xc->findvalue('./g:confidence', $xItem)      // undef;
+        my $sourceref = $xc->findvalue('./g:sourceref/@hlink', $xItem) // undef;
+        my $date      = $d->import_gramps_date($xItem, $xc) // undef;
+        $citations->{$handle} =
+          App::Schierer::HPFan::Model::Gramps::Citation->new(
+          handle     => $handle,
+          id         => $id,
+          change     => $change,
+          page       => $page,
+          confidence => $confidence,
+          sourceref  => $sourceref,
+          date       => $date,
+          );
+
+      }
+    }
+    $self->logger->info(
+      sprintf('imported %s citations.', scalar keys %{$citations}));
+  }
+
+  method _import_sources ($xc) {
+    my $d = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
+    foreach my $xItem ($xc->findnodes('//g:sources/g:source')) {
+      my $handle = $xItem->getAttribute('handle');
+      if ($handle) {
+        my $change   = $xItem->getAttribute('change');
+        my $id       = $xItem->getAttribute('id');
+        my $stitle   = $xc->findvalue('./g:stitle',   $xItem) // undef;
+        my $sauthor  = $xc->findvalue('./g:sauthor',  $xItem) // undef;
+        my $spubinfo = $xc->findvalue('./g:spubinfo', $xItem) // undef;
+        my @repo_refs;
+        foreach my $xrr ($xc->findnodes('./g:reporef', $xItem)) {
+          push @repo_refs,
+            App::Schierer::HPFan::Model::Gramps::Repository::Reference->new(
+            handle => $xrr->getAttribute('hlink'),
+            medium => $xrr->getAttribute('medium'),
+            );
+        }
+        $sources->{$handle} = App::Schierer::HPFan::Model::Gramps::Source->new(
+          handle    => $handle,
+          change    => $change,
+          id        => $id,
+          stitle    => $stitle,
+          sauthor   => $sauthor,
+          spubinfo  => $spubinfo,
+          repo_refs => \@repo_refs,
+        );
+
+      }
+    }
+    $self->logger->info(
+      sprintf('imported %s sources.', scalar keys %{$sources}));
+  }
+
+  method _import_notes ($xc) {
+    my $d = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
+    foreach my $xItem ($xc->findnodes('//g:notes/g:note')) {
+      my $handle = $xItem->getAttribute('handle');
+      if ($handle) {
+        my $change = $xItem->getAttribute('change');
+        my $id     = $xItem->getAttribute('id');
+        my $type   = $xItem->getAttribute('type');
+        my $text   = $xc->findvalue('./g:text', $xItem);
+
+        $notes->{$handle} = App::Schierer::HPFan::Model::Gramps::Note->new(
+          change => $change,
+          id     => $id,
+          type   => $type,
+          text   => $text,
+        );
+
+      }
+    }
+    $self->logger->info(sprintf('imported %s notes.', scalar keys %{$sources}));
+  }
+
+  method _import_repositories ($xc) {
+    my $d = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
+    foreach my $xItem ($xc->findnodes('//g:repositories/g:repository')) {
+      my $handle = $xItem->getAttribute('handle');
+      if ($handle) {
+        my $change = $xItem->getAttribute('change');
+        my $id     = $xItem->getAttribute('id');
+        my $rname  = $xc->findvalue('./g:rname', $xItem) // undef;
+        my $type   = $xc->findvalue('./g:type',  $xItem) // undef;
+        my $url    = $xc->findvalue('./g:url',   $xItem) // undef;
+        $repositories->{$handle} =
+          App::Schierer::HPFan::Model::Gramps::Repository->new(
+          handle => $handle,
+          change => $change,
+          id     => $id,
+          rname  => $rname,
+          type   => $type,
+          url    => $url,
+          );
+
+      }
+    }
+    $self->logger->info(
+      sprintf('imported %s repositories.', scalar keys %{$repositories}));
   }
 
 }

@@ -68,12 +68,275 @@ package App::Schierer::HPFan::Controller::History {
       push @all_events, @$events if $events;
     }
 
+    my $ge = $self->_process_gramps_events($app);
+    $logger->debug(sprintf(
+      'retrieved %s events from gramps', $ge ? scalar @$ge : '0'));
+
+    push @all_events, @$ge if $ge;
+
     # Sort events by date
-    @all_events = sort { $a->{date}->cmp($b->{date}); } @all_events;
+    @all_events = sort {
+      my $date_cmp = $a->{date}->cmp($b->{date});
+
+      # If dates are different, use date comparison
+      if ($date_cmp != 0) {
+        return $date_cmp;
+      }
+
+      # Dates are the same, now handle qualifiers
+      my $a_type = $a->{date_type} // '';
+      my $b_type = $b->{date_type} // '';
+
+      # Both have 'before' - sort by blurb
+      if ($a_type eq 'before' && $b_type eq 'before') {
+        return $a->{blurb} cmp $b->{blurb};
+      }
+
+      # Both have 'after' - sort by blurb
+      if ($a_type eq 'after' && $b_type eq 'after') {
+        return $a->{blurb} cmp $b->{blurb};
+      }
+
+      # One has 'before', other doesn't - 'before' comes first
+      if ($a_type eq 'before' && $b_type ne 'before') {
+        return -1;
+      }
+      if ($b_type eq 'before' && $a_type ne 'before') {
+        return 1;
+      }
+
+      # One has 'after', other doesn't - 'after' comes last
+      if ($a_type eq 'after' && $b_type ne 'after') {
+        return 1;
+      }
+      if ($b_type eq 'after' && $a_type ne 'after') {
+        return -1;
+      }
+
+      # Neither has qualifiers, or both have same non-before/after qualifier
+      return $a->{blurb} cmp $b->{blurb};
+    } @all_events;
 
     $logger->info(
       sprintf("Built timeline with %d total events", scalar @all_events));
     return \@all_events;
+  }
+
+  sub _determine_gramps_date($self, $ged) {
+    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
+    $logger->debug("determining timeline date from gramps date $ged");
+    my $err;
+    my $eventDate = {
+      date_type => '',
+      date      => Date::Manip::Date->new(),
+    };
+    $eventDate->{date}->config("language",         "English");
+    $eventDate->{date}->config("Use_POSIX_Printf", 1);
+    $eventDate->{date}->config("SetDate",          "zone,UTC");
+
+    if ($ged =~ /between/) {
+      if ($ged =~ /([-0-9]+)\s+and\s+([-0-9]+)/) {
+        $logger->debug("this is a 'between' date.");
+        $eventDate->{date}->parse($2);
+      }
+      $eventDate->{date_type} = 'before';
+    }
+    elsif ($ged =~ /([-0-9]+)/) {
+      $eventDate->{date}->parse($1);
+    }
+    if ($err) {
+      $logger->warn(sprintf(
+        'returning date "now" for date %s  because of error: %s',
+        $ged, $err
+      ));
+      $eventDate->{date_type} = 'invalid';
+      return $eventDate;
+    }
+    if ($ged =~ /before/i) {
+      $logger->debug('this is a "before" date.');
+      $eventDate->{date_type} = 'before';
+    }
+    $eventDate->{date}->set('h',  0);
+    $eventDate->{date}->set('mn', 0);
+    $eventDate->{date}->set('s',  0);
+    return $eventDate;
+  }
+
+  sub _find_gramps_event_description($self, $app, $event) {
+    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
+    my @description;
+    if (ref($event->note_refs) ne 'ARRAY') {
+      $logger->error('note_refs not an array!! ' . ref($event->note_refs));
+      return '';
+    }
+    foreach my $nr ($event->note_refs->@*) {
+      my $note = $app->gramps->notes->{$nr};
+      if ($note) {
+        push @description, $note->text;
+      }
+
+    }
+
+    if ($event->type =~ /birth/i) {
+      my @people;
+      foreach my $p ($app->gramps->people_by_event->{ $event->handle }->@*) {
+        push @people, $p;
+      }
+      if (scalar @people) {
+        foreach my $nr ($people[0]->note_refs->@*) {
+          my $note = $app->gramps->notes->{$nr};
+          if ($note) {
+            push @description, $note->text;
+          }
+        }
+      }
+    }
+    if (scalar @description) {
+      return join '\n', @description;
+    }
+    # markdown_render_snippet requires at least one character of text
+    return ' ';
+  }
+
+  sub _process_gramps_events($self, $app) {
+    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
+    my @grampsEvents;
+    foreach my $event (values $app->gramps->events->%*) {
+      if ($event->type !~ /(Hogwarts Sorting|Education)/) {
+        next unless ($event->date);
+        my $now       = Date::Manip::Date->new();
+        my $eventDate = $self->_determine_gramps_date(
+          $app->gramps->date_parser->format_date($event->date));
+        if ($eventDate->{date_type} eq 'invalid') {
+          $logger->debug("skipping event with invalid date_type");
+          next;
+        }
+
+        my @people;
+        foreach my $p ($app->gramps->people_by_event->{ $event->handle }->@*) {
+          push @people, $p;
+        }
+        if ($event->type =~ /(Engagement|Marriage)/i) {
+          next unless scalar(@people);
+        }
+        if ($event->type =~ /(Birth|Death)/i) {
+          next unless scalar(@people) == 1;
+        }
+
+        $logger->debug(sprintf(
+          'found eligible event type "%s" date "%s", people: %s.',
+          $event->type,
+          $eventDate->{date}->printf('%Y-%m-%d'),
+          join(', ', map { $_->display_name } @people)
+        ));
+        my $blurb;
+        if ($event->type =~ /Elected/i) {
+          next unless scalar(@people) >= 1;
+          $blurb =
+            sprintf('%s elected Minister of Magic', $people[0]->display_name);
+        }
+        else {
+          $blurb = sprintf('%s of %s',
+            $event->type, join(', ', map { $_->display_name } @people));
+        }
+        $logger->debug("blurb is '$blurb'");
+
+        my $ge = {
+          date        => $eventDate->{date},
+          date_type   => $eventDate->{date_type},
+          type        => 'magical',
+          blurb       => $blurb,
+          description => $self->_find_gramps_event_description($app, $event),
+          source      => $self->_build_event_sources($app, $event),
+        };
+        push @grampsEvents, $ge;
+      }
+    }
+    return \@grampsEvents;
+  }
+
+  sub _build_event_sources($self, $app, $event) {
+    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
+    my @citations;
+
+    # Get citations for this event
+    foreach my $citation_ref ($event->citation_refs->@*) {
+      my $citation = $app->gramps->citations->{$citation_ref};
+      next unless $citation;
+
+      my $source = $app->gramps->sources->{ $citation->sourceref };
+      next unless $source;
+
+      my $mla_citation = $self->_format_mla_citation($app, $source, $citation);
+      push @citations, "- $mla_citation" if $mla_citation;
+    }
+
+    return @citations ? join("\n", @citations) : '';
+  }
+
+  sub _format_mla_citation($self, $app, $source, $citation) {
+    my @parts;
+
+    # Author (if available)
+    if (my $author = $source->sauthor) {
+      # Handle "Last, First" format for MLA
+      if ($author =~ /^([^,]+),\s*(.+)$/) {
+        push @parts, "$1, $2.";
+      }
+      else {
+        push @parts, "$author.";
+      }
+    }
+
+    # Title (required)
+    if (my $title = $source->stitle) {
+      # Italicize book/work titles in markdown
+      push @parts, "*$title*.";
+    }
+
+    # Publication info (publisher, date, etc.)
+    if (my $pubinfo = $source->spubinfo) {
+      push @parts, $pubinfo;
+    }
+
+    # Repository information (if available)
+    foreach my $repo_ref ($source->repo_refs->@*) {
+      my $repository = $app->gramps->repositories->{ $repo_ref->handle };
+      next unless $repository;
+
+      if (my $repo_name = $repository->rname) {
+        push @parts, $repo_name;
+
+        # Add medium if specified
+        if (my $medium = $repo_ref->medium) {
+          push @parts, $medium;
+        }
+
+        # Add URL if available
+        if (my $url = $repository->url) {
+          push @parts, $url;
+        }
+      }
+    }
+
+    # Page reference from citation
+    if (my $page = $citation->page) {
+      # Add page reference
+      if (@parts) {
+        $parts[-1] =~ s/\.$//;    # Remove trailing period from last part
+        push @parts, "p. $page.";
+      }
+      else {
+        push @parts, "p. $page.";
+      }
+    }
+
+    # Citation date (when the source was accessed/cited)
+    if (my $cite_date = $citation->date) {
+      push @parts, "Accessed " . $cite_date;
+    }
+
+    return join(' ', @parts);
   }
 
   sub _process_history_file($self, $file_path) {
@@ -147,6 +410,9 @@ package App::Schierer::HPFan::Controller::History {
         $logger->error("Date Parsing Failed: $err");
         $dm->parse('9999-12-31');    # Fallback
       }
+      $dm->set('h',  0);
+      $dm->set('mn', 0);
+      $dm->set('s',  0);
 
       $event->{date} = $dm;
       $logger->debug(sprintf(

@@ -9,75 +9,6 @@ class App::Schierer::HPFan::Model::Gramps::DateHelper :
 
   # Static methods for parsing and formatting Gramps dates
 
-  method import_gramps_date ($parent_node, $xc) {
-    # Check for each date type
-    if (my $dateval = $xc->findnodes('g:dateval', $parent_node)->get_node(1)) {
-      return {
-        type      => 'dateval',
-        val       => $dateval->getAttribute('val'),
-        modifier  => $dateval->getAttribute('type') || '',  # before/after/about
-        quality   => $dateval->getAttribute('quality')   || '',
-        cformat   => $dateval->getAttribute('cformat')   || '',
-        dualdated => $dateval->getAttribute('dualdated') || 0,
-        newyear   => $dateval->getAttribute('newyear')   || '',
-      };
-    }
-    elsif (my $daterange =
-      $xc->findnodes('g:daterange', $parent_node)->get_node(1)) {
-      return {
-        type    => 'daterange',
-        start   => $daterange->getAttribute('start'),
-        stop    => $daterange->getAttribute('stop'),
-        quality => $daterange->getAttribute('quality') || '',
-        # ... other attributes
-      };
-    }
-    elsif (my $datespan =
-      $xc->findnodes('g:datespan', $parent_node)->get_node(1)) {
-      return {
-        type    => 'datespan',
-        start   => $datespan->getAttribute('start'),
-        stop    => $datespan->getAttribute('stop'),
-        quality => $datespan->getAttribute('quality') || '',
-        # ... other attributes
-      };
-    }
-    elsif (my $datestr = $xc->findnodes('g:datestr', $parent_node)->get_node(1))
-    {
-      return {
-        type => 'datestr',
-        val  => $datestr->getAttribute('val'),
-      };
-    }
-
-    return undef;    # No date found
-  }
-
-  method parse_gramps_date($date_element) {
-    return undef unless $date_element;
-
-    my $type = ref($date_element);
-
-    if ($type eq 'HASH') {
-      # Handle different date types based on keys
-      if (exists $date_element->{val}) {
-        return $self->_parse_dateval($date_element);
-      }
-      elsif (exists $date_element->{start} && exists $date_element->{stop}) {
-        if (exists $date_element->{_type}
-          && $date_element->{_type} eq 'datespan') {
-          return $self->_parse_datespan($date_element);
-        }
-        else {
-          return $self->_parse_daterange($date_element);
-        }
-      }
-    }
-
-    # Fallback for string dates
-    return $self->_parse_datestr($date_element);
-  }
-
   method format_date($date_data) {
     return undef unless $date_data;
 
@@ -153,8 +84,8 @@ class App::Schierer::HPFan::Model::Gramps::DateHelper :
 
   method _format_dateval($dateval) {
     my $val     = $dateval->{val};
-    my $type    = $dateval->{type}    || '';
-    my $quality = $dateval->{quality} || '';
+    my $type    = $dateval->{modifier} || '';
+    my $quality = $dateval->{quality}  || '';
 
     my @parts;
     push @parts, "about"  if $type eq 'about';
@@ -187,6 +118,76 @@ class App::Schierer::HPFan::Model::Gramps::DateHelper :
 
     return $result;
   }
+
+  method import_gramps_date ($parent_node, $xc) {
+    # Check for each date type
+    if (my $dateval = $xc->findnodes('g:dateval', $parent_node)->get_node(1)) {
+      return {
+        type      => 'dateval',
+        val       => $dateval->getAttribute('val'),
+        modifier  => $dateval->getAttribute('type') || '',  # before/after/about
+        quality   => $dateval->getAttribute('quality')   || '',
+        cformat   => $dateval->getAttribute('cformat')   || '',
+        dualdated => $dateval->getAttribute('dualdated') || 0,
+        newyear   => $dateval->getAttribute('newyear')   || '',
+      };
+    }
+    elsif (my $daterange =
+      $xc->findnodes('g:daterange', $parent_node)->get_node(1)) {
+      return {
+        type    => 'daterange',
+        start   => $daterange->getAttribute('start'),
+        stop    => $daterange->getAttribute('stop'),
+        quality => $daterange->getAttribute('quality') || '',
+        # ... other attributes
+      };
+    }
+    elsif (my $datespan =
+      $xc->findnodes('g:datespan', $parent_node)->get_node(1)) {
+      return {
+        type    => 'datespan',
+        start   => $datespan->getAttribute('start'),
+        stop    => $datespan->getAttribute('stop'),
+        quality => $datespan->getAttribute('quality') || '',
+        # ... other attributes
+      };
+    }
+    elsif (my $datestr = $xc->findnodes('g:datestr', $parent_node)->get_node(1))
+    {
+      return {
+        type => 'datestr',
+        val  => $datestr->getAttribute('val'),
+      };
+    }
+
+    return undef;    # No date found
+  }
+
+  method parse_gramps_date($date_element) {
+    return undef unless $date_element;
+
+    my $type = ref($date_element);
+
+    if ($type eq 'HASH') {
+      # Handle different date types based on keys
+      if (exists $date_element->{val}) {
+        return $self->_parse_dateval($date_element);
+      }
+      elsif (exists $date_element->{start} && exists $date_element->{stop}) {
+        if (exists $date_element->{_type}
+          && $date_element->{_type} eq 'datespan') {
+          return $self->_parse_datespan($date_element);
+        }
+        else {
+          return $self->_parse_daterange($date_element);
+        }
+      }
+    }
+
+    # Fallback for string dates
+    return $self->_parse_datestr($date_element);
+  }
+
 }
 
 1;

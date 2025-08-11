@@ -93,12 +93,15 @@ class App::Schierer::HPFan::Model::Gramps::Person :
     if (not defined $last && scalar @{ $name->surnames }) {
       $last = $name->surnames->[0];
     }
-    return sprintf('%s %s %s %s',
+    my $formatted = sprintf('%s %s %s %s',
       $name->display,
       $last->prefix ? $last->prefix : '',
       $last->value  ? $last->value  : 'Unknown',
       $name->suffix ? $name->suffix : '',
     );
+    $formatted =~ s/^\s+|\s+$//g;
+    $formatted =~ s/\s+/ /g;
+    return $formatted;
   }
 
   method to_string() {
