@@ -230,7 +230,7 @@ export class MojoliciousStack extends Stack {
     });
 
     appContainer.addMountPoints({
-      containerPath: "/home/mojo/var/log/Perl/dist/Game-Evony",
+      containerPath: "/home/mojo/var/log/Perl/dist/App-Schierer-HPFan",
       sourceVolume: `${props.appName}-${props.environment}-perl-logs`,
       readOnly: false,
     });

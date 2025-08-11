@@ -7,4 +7,4 @@ chmod -R 755 /home/mojo/var
 
 # Execute the main application as the unprivileged user
 pwd
-exec sudo -D /opt/Game-EvonyTKR  -u mojo -- "$@"
+exec sudo -D /opt/App-Schierer-HPFan  -u mojo -- "$@"

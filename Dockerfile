@@ -19,11 +19,14 @@ RUN  pnpm install --frozen-lockfile --prod
 
 FROM perl:5.42 as builder
 
-WORKDIR /opt/Game-EvonyTKR
+WORKDIR /opt/App-Schierer-HPFan
 
 COPY . .
+
 # dependencies for the graphics modules I need
 RUN apt-get update && apt-get install -y \
+  fonts-dejavu \
+  graphviz \
   libgd-dev \
   libjpeg-dev \
   libpng-dev \
@@ -37,6 +40,9 @@ RUN apt-get update && \
   unzip /tmp/awscliv2.zip -d /tmp && \
   /tmp/aws/install && \
   rm -rf /tmp/aws /tmp/awscliv2.zip
+
+RUN fc-cache -f -v
+
 RUN apt-get install -y netcat-openbsd
 RUN cpanm utf8::all
 RUN cpanm Module::Build
@@ -49,10 +55,9 @@ RUN ./Build install
 # Final stage
 FROM builder
 # Continue with your normal build...
-WORKDIR /opt/Game-EvonyTKR
+WORKDIR /opt/App-Schierer-HPFan
 
 COPY --from=npmBuilder /app/node_modules ./
-COPY --from=npmBuilder /app/share/node_modules ./share/
 
 # Create a non-root user
 # Mojolicious will create the log directory using Path::Tiny
@@ -69,13 +74,17 @@ RUN useradd -ms /bin/bash -g mojo mojo
 # because of the way the CMD is written,
 # we might not actually be using the installed version
 # but might be using the version from here
-RUN chown -R mojo:mojo /opt/Game-EvonyTKR
+RUN chown -R mojo:mojo /opt/App-Schierer-HPFan
 RUN chown -R mojo:mojo /home/mojo
 
 # create an init script to set /home/mojo/var permissions
 
-RUN apt-get update && \
-  apt-get install -y sudo && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y sudo
+RUN apt-get update && apt-get install -y graphviz
+RUN apt-get update && apt-get install -y fonts-dejavu
+RUN rm -rf /var/lib/apt/lists/*
+
+RUN fc-cache -f -v
 
 # Install Pandoc
 RUN curl -L https://github.com/jgm/pandoc/releases/download/3.2/pandoc-3.2-1-arm64.deb -o /tmp/pandoc.deb \
@@ -92,5 +101,4 @@ RUN chmod +x /usr/local/bin/dockerEntrypoint.sh
 EXPOSE 3000
 ENTRYPOINT ["/usr/local/bin/dockerEntrypoint.sh"]
 #CMD ["nc", "-v", "-l", "0.0.0.0", "3000"]
-CMD ["perl", "scripts/game-evonytkr", "prefork", "-m", "preprod"]
-#CMD ["perl", "scripts/game-evonytkr", "prefork", "-m", "production"]
+CMD ["perl", "bin/app_schierer_hpfan", "prefork", "-m", "production"]

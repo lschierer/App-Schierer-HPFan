@@ -24,9 +24,9 @@ const envConfigs: Record<string, EnvConfig> = {
   prod: {
     CidrRange: "10.239.0.0/24",
     subdomain: "www",
-    desiredCount: 2,
-    cpu: 2048,
-    memory: 5120,
+    desiredCount: 1,
+    cpu: 1024,
+    memory: 4096,
     imageTag: "stable",
   },
 };
