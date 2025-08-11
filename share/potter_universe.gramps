@@ -704,9 +704,9 @@
       <description>Hogwarts</description>
       <tagref hlink="_ed5f2929ec81c675417baaa694a"/>
     </event>
-    <event handle="_ed9999537657e6391026d608b59" change="1632774738" id="E0142">
+    <event handle="_ed9999537657e6391026d608b59" change="1754953864" id="E0142">
       <type>Hogwarts Sorting</type>
-      <dateval val="1965-09-01"/>
+      <dateval val="1965-09-01" type="about"/>
     </event>
     <event handle="_ed9999aeb1f3a316818cf259882" change="1632774775" id="E0143">
       <type>Hogwarts Sorting</type>
@@ -1123,6 +1123,33 @@
       <type>Death</type>
       <dateval val="1649"/>
       <citationref hlink="_ff57a2afdb27f49b267cd7ebc48"/>
+    </event>
+    <event handle="_ff612353a1e63aaac53813ac03c" change="1754954184" id="E0228">
+      <type>Graduation</type>
+      <dateval val="1945-07" quality="calculated"/>
+      <noteref hlink="_ff6123439c078d8ee6ea0ba73ce"/>
+    </event>
+    <event handle="_ff612a35ce761e9bfdfe7db58da" change="1754954906" id="E0229">
+      <type>Education</type>
+      <dateval val="1943"/>
+      <citationref hlink="_ff612a1bc3a2f8af7fe8868c537"/>
+    </event>
+    <event handle="_ff612c84b1a194d201f1577ec08" change="1754955185" id="E0230">
+      <type>Occupation</type>
+      <dateval val="1931" type="about" quality="estimated"/>
+      <description>Start of Horace Slughorn's teaching career</description>
+      <citationref hlink="_ff612c765ee1693a48105ddeb1b"/>
+    </event>
+    <event handle="_ff612e20aaf6a585d67e34c3920" change="1754955317" id="E0231">
+      <type>Retirement</type>
+      <dateval val="1921"/>
+      <citationref hlink="_ff607db8ed113b79022ca58d70d"/>
+    </event>
+    <event handle="_ff612ee06cd4cfbb939395ff698" change="1754955396" id="E0232">
+      <type>Elected</type>
+      <dateval val="1913"/>
+      <description>Begins Serving on the Wizengamot</description>
+      <citationref hlink="_ff607db8ed113b79022ca58d70d"/>
     </event>
   </events>
   <people>
@@ -1602,13 +1629,15 @@
       <tagref hlink="_ed628949497529bfaef5db0538d"/>
       <tagref hlink="_ed5f2929ec81c675417baaa694a"/>
     </person>
-    <person handle="_ed595e8b8aa30fe8686b58c38ea" change="1634622230" id="I0038">
+    <person handle="_ed595e8b8aa30fe8686b58c38ea" change="1754954060" id="I0038">
       <gender>M</gender>
       <name type="Birth Name">
         <first>Lucius Abraxas</first>
         <surname>Malfoy</surname>
       </name>
-      <eventref hlink="_ed9999537657e6391026d608b59" role="Primary"/>
+      <eventref hlink="_ed9999537657e6391026d608b59" role="Primary">
+        <noteref hlink="_ff61203dac74246322d846813f8"/>
+      </eventref>
       <eventref hlink="_edde6c4312e22b463319199ad00" role="Primary"/>
       <childof hlink="_ed5a52ea61d169a34e55a33a648"/>
       <parentin hlink="_ed595e8477739aa07deb8bd96ed"/>
@@ -2131,11 +2160,11 @@
       <tagref hlink="_ed628949497529bfaef5db0538d"/>
       <tagref hlink="_ed5f2929ec81c675417baaa694a"/>
     </person>
-    <person handle="_ed5a56d28857be3cbe2a763480a" change="1631076789" id="I0079">
+    <person handle="_ed5a56d28857be3cbe2a763480a" change="1754954937" id="I0079">
       <gender>M</gender>
       <name type="Birth Name">
         <first>Rubeus</first>
-        <surname>Hagrid</surname>
+        <surname derivation="Given">Hagrid</surname>
       </name>
       <eventref hlink="_ed5a57d8e6e3eab507c9dc6ac1a" role="Primary"/>
       <noteref hlink="_ed5a5856a624333ba37d08518ac"/>
@@ -2167,13 +2196,15 @@
       </name>
       <childof hlink="_ed5a5e27fd464b65573e5e32c07"/>
     </person>
-    <person handle="_ed5a623f3fdb0cc0fb3a9d9f01" change="1634522261" id="I0083">
+    <person handle="_ed5a623f3fdb0cc0fb3a9d9f01" change="1754955401" id="I0083">
       <gender>M</gender>
       <name type="Birth Name">
         <first>Henry</first>
         <surname>Potter</surname>
         <nick>Harry</nick>
       </name>
+      <eventref hlink="_ff612e20aaf6a585d67e34c3920" role="Primary"/>
+      <eventref hlink="_ff612ee06cd4cfbb939395ff698" role="Primary"/>
       <childof hlink="_ed5a69635b0155569877967f4e2"/>
       <parentin hlink="_ed5a623afed2165644ffe5ff3b1"/>
       <citationref hlink="_ed5a63f65f53529389499efd53f"/>
@@ -3883,18 +3914,19 @@
       <citationref hlink="_eed7cdb7d09223a1e709724a0a1"/>
       <tagref hlink="_ed628bd2be366112813f145329a"/>
     </person>
-    <person handle="_f10825dc57a789700307be60736" change="1656358175" id="I0246">
+    <person handle="_f10825dc57a789700307be60736" change="1754955158" id="I0246">
       <gender>M</gender>
       <name type="Birth Name">
         <first>Horace Eugene Flaccus</first>
         <call>Horace</call>
         <surname>Slughorn</surname>
       </name>
+      <eventref hlink="_ff612c84b1a194d201f1577ec08" role="Primary"/>
       <citationref hlink="_f108240e5f0548fcfc8a6424e3e"/>
       <tagref hlink="_ed628949497529bfaef5db0538d"/>
       <tagref hlink="_ed5f2929ec81c675417baaa694a"/>
     </person>
-    <person handle="_f12bd02f39e299a647f1a5033c6" change="1712882832" id="I0247">
+    <person handle="_f12bd02f39e299a647f1a5033c6" change="1754954222" id="I0247">
       <gender>M</gender>
       <name type="Birth Name">
         <first>Tom Marvolo</first>
@@ -3911,6 +3943,7 @@
       <eventref hlink="_f12bd6dc573478b1f9a07a5ade9" role="Primary"/>
       <eventref hlink="_f12bd77857d475b7eb0e785e859" role="Primary"/>
       <eventref hlink="_f6dba0bdbf772f4b879ed60aea1" role="Primary"/>
+      <eventref hlink="_ff612353a1e63aaac53813ac03c" role="Primary"/>
       <childof hlink="_f941d36c1b262d5d53701ac6a2a"/>
       <citationref hlink="_f12bd2e108c1439d47eaba42fac"/>
       <citationref hlink="_f12bd40ac54684a9058a0b62c12"/>
@@ -6910,6 +6943,17 @@
       <confidence>2</confidence>
       <sourceref hlink="_ff6092d72481aba3adb6a5b92cc"/>
     </citation>
+    <citation handle="_ff612a1bc3a2f8af7fe8868c537" change="1754954896" id="C0259">
+      <page>https://harrypotter.fandom.com/wiki/Rubeus_Hagrid</page>
+      <confidence>2</confidence>
+      <sourceref hlink="_ed593f0310ad05701064d6828a"/>
+    </citation>
+    <citation handle="_ff612c765ee1693a48105ddeb1b" change="1754955183" id="C0260">
+      <dateval val="2016"/>
+      <page>34</page>
+      <confidence>2</confidence>
+      <sourceref hlink="_f30e51cffb7377b53bc88e8b1e2"/>
+    </citation>
   </citations>
   <sources>
     <source handle="_ed5926e209e1387645aecd422c7" change="1631044751" id="S0000">
@@ -7477,6 +7521,12 @@ His eldest son marries the oldest granddaughter of [Ignotus] [Peverell].
 
 [Mnemone]: /Harrypedia/people/Radford/Mnemone
 </text>
+    </note>
+    <note handle="_ff61203dac74246322d846813f8" change="1754953861" id="N0049" type="Event Reference Note">
+      <text>At an unknown point in the 1960s, but based on inference from other dates probably 1965, Lucius Malfoy starts his first year at Hogwarts.</text>
+    </note>
+    <note handle="_ff6123439c078d8ee6ea0ba73ce" change="1754954178" id="N0050" type="Event Note">
+      <text>This was calculated from when he started. </text>
     </note>
   </notes>
 </database>
