@@ -119,6 +119,15 @@ package App::Schierer::HPFan::Controller::History {
 
     $logger->info(
       sprintf("Built timeline with %d total events", scalar @all_events));
+
+    foreach my $event (@all_events) {
+      if($event->{description} && length($event->{description})){
+        $event->{description} = $app->render_markdown_snippet($event->{description});
+      }
+      if($event->{source} && length($event->{source})) {
+        $event->{source} = $app->render_markdown_snippet($event->{source});
+      }
+    }
     return \@all_events;
   }
 
@@ -235,10 +244,24 @@ package App::Schierer::HPFan::Controller::History {
           $blurb =
             sprintf('%s elected Minister of Magic', $people[0]->display_name);
         }
-        else {
+        elsif($event->type =~ /property/i) {
+          next unless scalar(@people) >= 1;
+          $blurb = sprintf('Property Awarded to %s', $people[0]->display_name);
+        }
+        elsif($event->type =~/government/i ) {
+          next unless length($event->description);
+          $blurb = $event->description;
+        }
+        elsif(scalar @people) {
           $blurb = sprintf('%s of %s',
             $event->type, join(', ', map { $_->display_name } @people));
+        } elsif( length($event->description)) {
+          $blurb = $event->description
+        } else {
+          $logger->warn('no blurb known for event with handle ' . $event->handle);
+          next;
         }
+
         $logger->debug("blurb is '$blurb'");
 
         my $ge = {

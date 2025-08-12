@@ -32,12 +32,12 @@
             </h6>
             <p class="spectrum-Body spectrum-Body--sizeM">
               <% if(exists $event->{description}){ %>
-                <%== render_markdown_snippet($event->{description}) %>
+                <%== $event->{description} %>
               <% } %>
             </p>
             <span class="spectrum-Body spectrum-Body--sizeM">
               <% if(exists $event->{source} ){ %>
-                <%== render_markdown_snippet($event->{source}) %>
+                <%== $event->{source} %>
               <% } %>
             </span>
           </div>
