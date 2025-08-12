@@ -3,7 +3,7 @@
 "http://gramps-project.org/xml/1.7.1/grampsxml.dtd">
 <database xmlns="http://gramps-project.org/xml/1.7.1/">
   <header>
-    <created date="2025-08-11" version="5.1.5"/>
+    <created date="2025-08-12" version="5.1.5"/>
     <researcher>
       <resname>Luke Schierer</resname>
       <resemail>luke@schierer.org</resemail>
@@ -527,10 +527,9 @@
       <dateval val="1467"/>
       <citationref hlink="_ed5f80c53d32f57e9a0072a2c2f"/>
     </event>
-    <event handle="_ed5f844f6a36ffa9b45176f6e27" change="1631215609" id="E0106">
+    <event handle="_ed5f844f6a36ffa9b45176f6e27" change="1754970824" id="E0106">
       <type>Death</type>
       <dateval val="1555"/>
-      <citationref hlink="_ed5f80c53d32f57e9a0072a2c2f"/>
     </event>
     <event handle="_ed5fc48213d20099cc9c7c1b067" change="1631222340" id="E0107">
       <type>Birth</type>
@@ -686,17 +685,11 @@
       <dateval val="1968" type="before" quality="calculated"/>
       <citationref hlink="_ed89685a65de5aa6a7ae4a5f9a"/>
     </event>
-    <event handle="_ed9995543b45733ea8150038bb1" change="1632774319" id="E0139">
+    <event handle="_ed9995543b45733ea8150038bb1" change="1754971473" id="E0139">
       <type>Education</type>
       <daterange start="1971-09-01" stop="1978-06-30" quality="calculated"/>
-      <description>Hogwarts</description>
+      <description>Attended Hogwarts</description>
       <tagref hlink="_ed5f283475c2bd8d650cc02c9c8"/>
-    </event>
-    <event handle="_ed9996dc7b56a68d259e78aef50" change="1632774480" id="E0140">
-      <type>Education</type>
-      <daterange start="1965-09-01" stop="1972-06-30" quality="estimated"/>
-      <description>Hogwarts</description>
-      <tagref hlink="_ed5f2929ec81c675417baaa694a"/>
     </event>
     <event handle="_ed9997e0a5524bbdf3e915d534b" change="1632774586" id="E0141">
       <type>Education</type>
@@ -1109,29 +1102,30 @@
       <dateval val="1998-05-02"/>
       <citationref hlink="_fdcb93aa8c7c8250dba33bf02f"/>
     </event>
-    <event handle="_ff57a0af7c7584f9b3bf86497e9" change="1754937168" id="E0225">
+    <event handle="_ff57a0af7c7584f9b3bf86497e9" change="1754971201" id="E0225">
       <type>Birth</type>
       <dateval val="1612-01-01" type="before"/>
       <citationref hlink="_ff607db8ed113b79022ca58d70d"/>
     </event>
-    <event handle="_ff57a33f9d81b407195393be586" change="1754699163" id="E0226">
+    <event handle="_ff57a33f9d81b407195393be586" change="1754970884" id="E0226">
       <type>Birth</type>
       <dateval val="1562"/>
-      <citationref hlink="_ff57a2afdb27f49b267cd7ebc48"/>
+      <citationref hlink="_ff60933ff812e3eb938fd1608b3"/>
     </event>
-    <event handle="_ff57a392eeb347de33c41aff87a" change="1754947543" id="E0227">
+    <event handle="_ff57a392eeb347de33c41aff87a" change="1754971259" id="E0227">
       <type>Death</type>
       <dateval val="1649"/>
-      <citationref hlink="_ff57a2afdb27f49b267cd7ebc48"/>
+      <citationref hlink="_ff60933ff812e3eb938fd1608b3"/>
     </event>
     <event handle="_ff612353a1e63aaac53813ac03c" change="1754954184" id="E0228">
       <type>Graduation</type>
       <dateval val="1945-07" quality="calculated"/>
       <noteref hlink="_ff6123439c078d8ee6ea0ba73ce"/>
     </event>
-    <event handle="_ff612a35ce761e9bfdfe7db58da" change="1754954906" id="E0229">
+    <event handle="_ff612a35ce761e9bfdfe7db58da" change="1754971674" id="E0229">
       <type>Education</type>
       <dateval val="1943"/>
+      <description>Expelled from Hogwarts</description>
       <citationref hlink="_ff612a1bc3a2f8af7fe8868c537"/>
     </event>
     <event handle="_ff612c84b1a194d201f1577ec08" change="1754955185" id="E0230">
@@ -1149,6 +1143,56 @@
       <type>Elected</type>
       <dateval val="1913"/>
       <description>Begins Serving on the Wizengamot</description>
+      <citationref hlink="_ff607db8ed113b79022ca58d70d"/>
+    </event>
+    <event handle="_ff61ae0b48d7ec9df151a90cd6c" change="1754968835" id="E0233">
+      <type>Education</type>
+      <dateval val="1000-01-01" type="before" quality="estimated"/>
+      <description>Hogwarts Founded</description>
+      <noteref hlink="_ff61addcc3c2eaf20c78763f7ad"/>
+      <citationref hlink="_ff61aebb4447247205192767b53"/>
+      <citationref hlink="_ff61af02b6c6255c27d800cf823"/>
+    </event>
+    <event handle="_ff61b6469f52bd7b296d30c77da" change="1754969593" id="E0234">
+      <type>Property</type>
+      <dateval val="1066-12-25" type="after"/>
+      <noteref hlink="_ff61b61f58e6bd91c1a4e3620c4"/>
+      <citationref hlink="_ff61b50d21665ea3969037c0bd3"/>
+      <citationref hlink="_ff61b186e03223c7ad312bf4d"/>
+    </event>
+    <event handle="_ff61b6cd0ac5a3923561aaec5d9" change="1754969648" id="E0235">
+      <type>Birth</type>
+      <dateval val="1066" type="before"/>
+      <citationref hlink="_ff61b186e03223c7ad312bf4d"/>
+    </event>
+    <event handle="_ff61ba055a926a685b0adb1d63e" change="1754969986" id="E0236">
+      <type>Legal</type>
+      <dateval val="1289"/>
+      <description>International Warlock Convention</description>
+      <citationref hlink="_ff61aebb4447247205192767b53"/>
+    </event>
+    <event handle="_ff61bce0f4634847605777eb8bb" change="1754970286" id="E0237">
+      <type>Court Attendance</type>
+      <dateval val="1486"/>
+      <description>Sir Nicholas de Mimsy-Porpington attends the court of Henry VII</description>
+      <citationref hlink="_ff61bca4edf6d99e1090773b87d"/>
+    </event>
+    <event handle="_ff61bd517c815c2f3d772738d1c" change="1754970332" id="E0238">
+      <type>Birth</type>
+      <dateval val="1486" type="before"/>
+      <citationref hlink="_ff61bca4edf6d99e1090773b87d"/>
+    </event>
+    <event handle="_ff61c1768f74148fe76e86f48e1" change="1754970766" id="E0239">
+      <type>Government</type>
+      <description>Ministry of Magic established</description>
+      <noteref hlink="_ff61c0b435a19ff8287b16f7662"/>
+      <citationref hlink="_ff61c1724b835d752d1a93398ee"/>
+    </event>
+    <event handle="_ff61c5094c84a1ac3c43d7161f2" change="1754971191" id="E0240">
+      <type>Government</type>
+      <dateval val="1612"/>
+      <description>Ralston Potter seated in the Wizengamot</description>
+      <noteref hlink="_ff61c4fe561217226ecc383e5d9"/>
       <citationref hlink="_ff607db8ed113b79022ca58d70d"/>
     </event>
   </events>
@@ -2160,13 +2204,14 @@
       <tagref hlink="_ed628949497529bfaef5db0538d"/>
       <tagref hlink="_ed5f2929ec81c675417baaa694a"/>
     </person>
-    <person handle="_ed5a56d28857be3cbe2a763480a" change="1754954937" id="I0079">
+    <person handle="_ed5a56d28857be3cbe2a763480a" change="1754971681" id="I0079">
       <gender>M</gender>
       <name type="Birth Name">
         <first>Rubeus</first>
         <surname derivation="Given">Hagrid</surname>
       </name>
       <eventref hlink="_ed5a57d8e6e3eab507c9dc6ac1a" role="Primary"/>
+      <eventref hlink="_ff612a35ce761e9bfdfe7db58da" role="Primary"/>
       <noteref hlink="_ed5a5856a624333ba37d08518ac"/>
       <citationref hlink="_ed5a57cfb513ca6077dbf07698d"/>
     </person>
@@ -2757,7 +2802,7 @@
       <childof hlink="_ed5966e13491fb24279e0e685ef"/>
       <citationref hlink="_ed5f7d1fb023b7a9394000b14c"/>
     </person>
-    <person handle="_ed5f802a66a2f626e9ddb7d5e08" change="1631218573" id="I0142">
+    <person handle="_ed5f802a66a2f626e9ddb7d5e08" change="1754969880" id="I0142">
       <gender>F</gender>
       <name type="Unknown">
         <first>Ignatia</first>
@@ -2766,10 +2811,10 @@
       <eventref hlink="_ed5f823c5d0637e0caf757edb0a" role="Primary"/>
       <eventref hlink="_ed5f8283dda55527065060aee72" role="Primary"/>
       <noteref hlink="_ed5f80fc7e65e21f42b19615b14"/>
-      <citationref hlink="_ed5f80c53d32f57e9a0072a2c2f"/>
+      <citationref hlink="_ff60933ff812e3eb938fd1608b3"/>
       <tagref hlink="_ed5f2966ec73e6e477d5090556e"/>
     </person>
-    <person handle="_ed5f836c3693fae4052ec9d06ec" change="1631215631" id="I0143">
+    <person handle="_ed5f836c3693fae4052ec9d06ec" change="1754970053" id="I0143">
       <gender>F</gender>
       <name type="Unknown">
         <first>Daisy</first>
@@ -2778,7 +2823,7 @@
       <eventref hlink="_ed5f840177d96b9c79cc2c5020" role="Primary"/>
       <eventref hlink="_ed5f844f6a36ffa9b45176f6e27" role="Primary"/>
       <noteref hlink="_ed5f847f7393475454e4c7bc013"/>
-      <citationref hlink="_ed5f80c53d32f57e9a0072a2c2f"/>
+      <citationref hlink="_ff61baa35e33c58c537c7d54394"/>
     </person>
     <person handle="_ed5f9fdc0d333092545da482c3f" change="1734908423" id="I0144">
       <gender>M</gender>
@@ -4865,14 +4910,15 @@
         <surname derivation="Given">Cresswell</surname>
       </name>
     </person>
-    <person handle="_ff579e9fdd26cc98bc3128e7c85" change="1754698927" id="I0349">
+    <person handle="_ff579e9fdd26cc98bc3128e7c85" change="1754971203" id="I0349">
       <gender>M</gender>
       <name type="Birth Name">
         <first>Ralston</first>
         <surname derivation="Given">Potter</surname>
       </name>
       <eventref hlink="_ff57a0af7c7584f9b3bf86497e9" role="Primary"/>
-      <citationref hlink="_ed65c58b8ed29659279fe34aead"/>
+      <eventref hlink="_ff61c5094c84a1ac3c43d7161f2" role="Primary"/>
+      <citationref hlink="_ff607db8ed113b79022ca58d70d"/>
     </person>
     <person handle="_ff57a12f9d06ec5f345a70a4724" change="1754947556" id="I0350">
       <gender>F</gender>
@@ -4884,6 +4930,26 @@
       <eventref hlink="_ff57a392eeb347de33c41aff87a" role="Primary"/>
       <noteref hlink="_ff60e417b4757f6465cc5c236bd"/>
       <citationref hlink="_ff57a2afdb27f49b267cd7ebc48"/>
+    </person>
+    <person handle="_ff61afbd77a63e11493a78c3a77" change="1754969750" id="I0351">
+      <gender>M</gender>
+      <name type="Birth Name">
+        <first>Armand</first>
+        <surname derivation="Unknown ">Malfoy</surname>
+      </name>
+      <eventref hlink="_ff61b6469f52bd7b296d30c77da" role="Primary"/>
+      <eventref hlink="_ff61b6cd0ac5a3923561aaec5d9" role="Primary"/>
+      <citationref hlink="_ff61b186e03223c7ad312bf4d"/>
+    </person>
+    <person handle="_ff61bac9ce349531550f8a80299" change="1754970608" id="I0352">
+      <gender>M</gender>
+      <name type="Birth Name">
+        <first>Nicholas</first>
+        <surname derivation="Given">Mimsy-Porpington</surname>
+        <title>Sir</title>
+      </name>
+      <eventref hlink="_ff61bce0f4634847605777eb8bb" role="Primary"/>
+      <eventref hlink="_ff61bd517c815c2f3d772738d1c" role="Primary"/>
     </person>
   </people>
   <families>
@@ -6954,6 +7020,43 @@
       <confidence>2</confidence>
       <sourceref hlink="_f30e51cffb7377b53bc88e8b1e2"/>
     </citation>
+    <citation handle="_ff61aebb4447247205192767b53" change="1754968802" id="C0261">
+      <page>Chapter 9</page>
+      <confidence>2</confidence>
+      <sourceref hlink="_ed63b404ae569dd228bf6423d28"/>
+    </citation>
+    <citation handle="_ff61af02b6c6255c27d800cf823" change="1754968831" id="C0262">
+      <page>Exact Citation Needed.</page>
+      <confidence>2</confidence>
+      <sourceref hlink="_eed52aea0e17997690f328de8c0"/>
+    </citation>
+    <citation handle="_ff61b186e03223c7ad312bf4d" change="1754969095" id="C0263">
+      <dateval val="2012-07-10"/>
+      <page>https://www.rowlingindex.org/work/pmmf/</page>
+      <confidence>2</confidence>
+      <sourceref hlink="_ff61b144e3b7e075d172a1a7ea2"/>
+    </citation>
+    <citation handle="_ff61b50d21665ea3969037c0bd3" change="1754969465" id="C0264">
+      <dateval val="2025-08-07"/>
+      <page>https://wikipedia.org/wiki/William_the_Conqueror</page>
+      <confidence>2</confidence>
+      <sourceref hlink="_ff61b4a40f77b0859e35e43bd4b"/>
+    </citation>
+    <citation handle="_ff61baa35e33c58c537c7d54394" change="1754970051" id="C0265">
+      <confidence>2</confidence>
+      <sourceref hlink="_ff6092d72481aba3adb6a5b92cc"/>
+    </citation>
+    <citation handle="_ff61bca4edf6d99e1090773b87d" change="1754970261" id="C0266">
+      <page>https://www.rowlingindex.org/work/pmhgh/</page>
+      <confidence>2</confidence>
+      <sourceref hlink="_ff61bc8412522414ab66e61d731"/>
+    </citation>
+    <citation handle="_ff61c1724b835d752d1a93398ee" change="1754970765" id="C0267">
+      <dateval val="2014-10-31"/>
+      <page>https://www.rowlingindex.org/work/msmpm/</page>
+      <confidence>2</confidence>
+      <sourceref hlink="_ff61c145d2a1814cf5589bf5fc8"/>
+    </citation>
   </citations>
   <sources>
     <source handle="_ed5926e209e1387645aecd422c7" change="1631044751" id="S0000">
@@ -7119,6 +7222,30 @@
       <stitle>Wizard of the Month Archive</stitle>
       <sauthor>Mrs. J. K. Rowling</sauthor>
       <reporef hlink="_ed62d26e4866d63d0673c446418" callno="https://therowlinglibrary.com/jkrowling.com/textonly/en/wotm.html" medium="Book"/>
+    </source>
+    <source handle="_ff61b144e3b7e075d172a1a7ea2" change="1754969068" id="S0054">
+      <stitle>The Malfoy Family</stitle>
+      <sauthor>Mrs. J. K. Rowling</sauthor>
+      <spubinfo>Originally Published: 2012-07-10.</spubinfo>
+      <sabbrev>pmmf</sabbrev>
+      <reporef hlink="_ed62d26e4866d63d0673c446418" callno="https://www.rowlingindex.org/work/pmmf/" medium="Electronic"/>
+    </source>
+    <source handle="_ff61b4a40f77b0859e35e43bd4b" change="1754969422" id="S0055">
+      <stitle>William the Conqueror</stitle>
+      <sauthor>Wikipedia</sauthor>
+      <reporef hlink="_ff61b41e4e34b4dc641c6565c4e" callno="https://wikipedia.org/wiki/William_the_Conqueror" medium="Electronic"/>
+    </source>
+    <source handle="_ff61bc8412522414ab66e61d731" change="1754970248" id="S0056">
+      <stitle>Hogwarts Ghosts</stitle>
+      <sauthor>Mrs. J. K. Rowling</sauthor>
+      <sabbrev>pmhgh</sabbrev>
+      <reporef hlink="_ed62d26e4866d63d0673c446418" callno="https://www.rowlingindex.org/work/pmhgh/" medium="Electronic"/>
+    </source>
+    <source handle="_ff61c145d2a1814cf5589bf5fc8" change="1754970746" id="S0057">
+      <stitle>Ministers of Magic</stitle>
+      <sauthor>Mrs. J. K. Rowling</sauthor>
+      <sabbrev>msmpm</sabbrev>
+      <reporef hlink="_ed62d26e4866d63d0673c446418" callno="https://www.rowlingindex.org/work/msmpm/" medium="Book"/>
     </source>
   </sources>
   <places>
@@ -7296,7 +7423,7 @@
       <type>Web site</type>
       <url  href="https://www.mugglenet.com/" type="Web Home" description="MuggleNet"/>
     </repository>
-    <repository handle="_ed62d26e4866d63d0673c446418" change="1754939032" id="R0030">
+    <repository handle="_ed62d26e4866d63d0673c446418" change="1754970744" id="R0030">
       <rname>The J.K. Rowling Index</rname>
       <type>Web site</type>
       <url  href="https://www.rowlingindex.org/" type="Web Home" description="List of all J.K. Rowling's writings."/>
@@ -7320,6 +7447,11 @@
       <rname>The Leaky Cauldron</rname>
       <type>Web site</type>
       <url  href="https://www.the-leaky-cauldron.org/" type="Web Home" description="The Leaky Cauldron"/>
+    </repository>
+    <repository handle="_ff61b41e4e34b4dc641c6565c4e" change="1754969419" id="R0035">
+      <rname>Wikipedia</rname>
+      <type>Web site</type>
+      <url  href="https://wikipedia.org" type="Web Home"/>
     </repository>
   </repositories>
   <notes>
@@ -7527,6 +7659,34 @@ His eldest son marries the oldest granddaughter of [Ignotus] [Peverell].
     </note>
     <note handle="_ff6123439c078d8ee6ea0ba73ce" change="1754954178" id="N0050" type="Event Note">
       <text>This was calculated from when he started. </text>
+    </note>
+    <note handle="_ff61addcc3c2eaf20c78763f7ad" change="1754968711" id="N0051" type="Event Note" format="1">
+      <text>[Hogwarts] was founded “over a thousand years” before HP2. The society the founders recruited students from would have included both Chrstians and papans. Given [Bill]’s work in [Egypt], I believe that before the [Statute of Secrecy], magic was woven into pagan societies, often as part of the priest classes. While we have no direct support for this in cannon, it provides the best explanation of the things the [Weasley]s state they encounter in their trip to visit that country.
+
+[Hogwarts]: ./Hogwarts
+[Bill]: &lt;./people/Weasley/William Arthur&gt;
+[Egypt]: ./Egypt
+[Weasley]: ./people/Weasley
+</text>
+    </note>
+    <note handle="_ff61b61f58e6bd91c1a4e3620c4" change="1754969577" id="N0052" type="Event Note" format="1">
+      <text>&gt; The Malfoy name comes from old French and translates as ‘bad faith’. Like many other progenitors of noble English families, the wizard Armand Malfoy arrived in Britain with William the Conqueror as part of the invading Norman army. Having rendered unknown, shady (and almost certainly magical) services to King William I, Malfoy was given a prime piece of land in Wiltshire, seized from local landowners, upon which his descendants have lived for ten consecutive centuries.
+
+</text>
+    </note>
+    <note handle="_ff61c0b435a19ff8287b16f7662" change="1754970687" id="N0053" type="Event Note" format="1">
+      <text>The Ministry was esablished by and from the pre-existing Wizards' Council and Wizengamot (possibly the same thing).</text>
+    </note>
+    <note handle="_ff61c4fe561217226ecc383e5d9" change="1754971136" id="N0054" type="Event Note" format="1">
+      <text>[Ralston] Potter was seated in the [Wizengamot] from 1612 to 1652. He is known for his participation in the debates surounding the [Statute of Secrecy].
+
+[Statute of Secrecy]: &lt;./culture/International Statute of Secrecy&gt;
+
+      
+[Wizengamot]: &lt;./culture/Government/&gt;
+
+      
+[Ralston]: &lt;./people/Potter/Ralston&gt;</text>
     </note>
   </notes>
 </database>

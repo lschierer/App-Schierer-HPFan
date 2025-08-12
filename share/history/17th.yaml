@@ -1,21 +1,5 @@
 ---
 events:
-  - type: magical
-    date: 1612
-    blurb: Ralston Potter seated in the Wizengamot
-    description: |
-      [Ralston] Potter was seated in the [Wizengamot] from 1612 to 1652.
-      He is known for his participation in the debates surounding the [Statute of Secrecy].
-
-      [Statute of Secrecy]: <./culture/Government/>
-
-      [Wizengamot]: <./culture/Government/>
-
-      [Ralston]: <./people/Potter/Ralston>
-    source: |
-      "[The Potter Family](https://www.rowlingindex.org/work/pmpfam/)"
-      _[The J.K. Rowling Index]_
-      Originally Published: 2015-09-22. Last Viewed: 2024-01-04.
   - type: mundane
     date: 1618
     blurb: Witch hunting begins to peak in Europe
@@ -25,18 +9,6 @@ events:
       [Wikipedia](https://en.wikipedia.org/).
       "[Witch-hunt](https://en.wikipedia.org/wiki/Witch-hunt#Early_Modern_Europe)"
       Last Viewed 2020-07-04
-  - type: magical
-    date: 1649
-    blurb: Mnemone Radford dies
-    description: |
-      [Mnemone] is best known as the developer of Memory Modification Charms.
-      From this we know they were developed at least slightly before this time.
-
-      [Mnemone]: <./people/Radford/Mnemone>
-    source: |
-      Mrs. J. K. Rowling.
-      "[Wizard of the Month Archive](https://therowlinglibrary.com/jkrowling.com/textonly/en/wotm.html)"
-      Last Viewed 2021-05-21.
   - type: magical
     date: 1689
     blurb: The International Statute of Secrecy
