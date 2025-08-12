@@ -344,16 +344,17 @@
       <dateval val="1998-05-02"/>
       <citationref hlink="_ed596fdac7e752d06ca16479bff"/>
     </event>
-    <event handle="_ed597249cdb74cf7e4b8f7cb022" change="1669687126" id="E0066">
+    <event handle="_ed597249cdb74cf7e4b8f7cb022" change="1754979432" id="E0066">
       <type>Birth</type>
       <dateval val="1881-08"/>
-      <citationref hlink="_ed59721ca9631b916988d17587a"/>
       <citationref hlink="_f20cd8366205feb6b11b48051b8"/>
+      <citationref hlink="_ff6213fe3075e4f4c017fe4d965"/>
     </event>
-    <event handle="_ed597285dce1d36d841572d65c8" change="1631052682" id="E0067">
+    <event handle="_ed597285dce1d36d841572d65c8" change="1754979644" id="E0067">
       <type>Death</type>
       <dateval val="1997-06-30"/>
-      <citationref hlink="_ed59721ca9631b916988d17587a"/>
+      <citationref hlink="_ff6213fe3075e4f4c017fe4d965"/>
+      <citationref hlink="_ff6216194c7174a03de43c0cb36"/>
     </event>
     <event handle="_ed5a3762c35219ac525306e2ae1" change="1631073325" id="E0068">
       <type>Birth</type>
@@ -966,7 +967,7 @@
       <dateval val="1895-09-01"/>
       <citationref hlink="_f20ca247d5114bef90691d9e0c3"/>
     </event>
-    <event handle="_f20cd83b07948e74d4e309d88a" change="1663356155" id="E0197">
+    <event handle="_f20cd83b07948e74d4e309d88a" change="1754979695" id="E0197">
       <type>Hogwarts Sorting</type>
       <dateval val="1892-09-01"/>
       <citationref hlink="_f20cd8366205feb6b11b48051b8"/>
@@ -1194,6 +1195,56 @@
       <description>Ralston Potter seated in the Wizengamot</description>
       <noteref hlink="_ff61c4fe561217226ecc383e5d9"/>
       <citationref hlink="_ff607db8ed113b79022ca58d70d"/>
+    </event>
+    <event handle="_ff62113777618842d459a063f02" change="1754979129" id="E0241">
+      <type>Legal</type>
+      <description>Decree for the Reasonable Restriction of Underage Sorcery</description>
+      <noteref hlink="_ff621132e9413afe29f358a6cb4"/>
+      <citationref hlink="_ff6210f3e497f637181248a1ebb"/>
+    </event>
+    <event handle="_ff6218c34a4654f5616926022de" change="1754979920" id="E0242">
+      <type>Elected</type>
+      <dateval val="1925"/>
+      <noteref hlink="_ff6218508043c80e351476405f0"/>
+      <citationref hlink="_ff61c1724b835d752d1a93398ee"/>
+    </event>
+    <event handle="_ff621a3ba083213aba07445b6d3" change="1754980074" id="E0243">
+      <type>Elected</type>
+      <dateval val="1707"/>
+      <citationref hlink="_ff61c1724b835d752d1a93398ee"/>
+    </event>
+    <event handle="_ff621bb870769c66fb04994ae6b" change="1754980230" id="E0244">
+      <type>Elected</type>
+      <dateval val="1718"/>
+      <citationref hlink="_ff61c1724b835d752d1a93398ee"/>
+    </event>
+    <event handle="_ff621ccc0872db2270888f5fb05" change="1754980425" id="E0245">
+      <type>Elected</type>
+      <dateval val="1726"/>
+      <noteref hlink="_ff621d8ea0e6d24b410d87dc69"/>
+      <citationref hlink="_ff61c1724b835d752d1a93398ee"/>
+    </event>
+    <event handle="_ff621e7182d223d5e6ac7ed0818" change="1754980516" id="E0246">
+      <type>Elected</type>
+      <dateval val="1733"/>
+      <citationref hlink="_ff61c1724b835d752d1a93398ee"/>
+    </event>
+    <event handle="_ff621f9882247e83300236b07a6" change="1754980649" id="E0247">
+      <type>Elected</type>
+      <dateval val="1747"/>
+      <citationref hlink="_ff61c1724b835d752d1a93398ee"/>
+    </event>
+    <event handle="_ff6221bf18517f0e6ea1976e6a" change="1754980862" id="E0248">
+      <type>Elected</type>
+      <dateval val="1752"/>
+      <citationref hlink="_ff61c1724b835d752d1a93398ee"/>
+    </event>
+    <event handle="_ff6224124fd746132bf1962f395" change="1754981218" id="E0249">
+      <type>Occupation</type>
+      <dateval val="1981"/>
+      <description>Snape becomes the Potions Professor</description>
+      <noteref hlink="_ff62251ce0b54790fc1e3880bd7"/>
+      <citationref hlink="_ff6223e4a20f111d75ba8e4757"/>
     </event>
   </events>
   <people>
@@ -2176,7 +2227,7 @@
       <tagref hlink="_ed628bd2be366112813f145329a"/>
       <tagref hlink="_ed5f294a35f37f5bdc6b68379cc"/>
     </person>
-    <person handle="_ed5a4f02a823a5bde3b07763106" change="1657560279" id="I0077">
+    <person handle="_ed5a4f02a823a5bde3b07763106" change="1754981238" id="I0077">
       <gender>M</gender>
       <name type="Birth Name">
         <first>Severus</first>
@@ -2184,6 +2235,7 @@
       </name>
       <eventref hlink="_ed5a4ff45522895c175b26ac12c" role="Primary"/>
       <eventref hlink="_ed5a507d15133babae115de0f7d" role="Primary"/>
+      <eventref hlink="_ff6224124fd746132bf1962f395" role="Primary"/>
       <childof hlink="_f134eb7e72575aaabd0ecca5291"/>
       <citationref hlink="_ed5a4fe583fb7dbfe11146bf46"/>
       <citationref hlink="_f134eb10c7c1813197163428e9d"/>
@@ -4951,6 +5003,68 @@
       <eventref hlink="_ff61bce0f4634847605777eb8bb" role="Primary"/>
       <eventref hlink="_ff61bd517c815c2f3d772738d1c" role="Primary"/>
     </person>
+    <person handle="_ff62176de635c0a4692e30a9e6d" change="1754979926" id="I0353">
+      <gender>M</gender>
+      <name type="Birth Name">
+        <first>Hector</first>
+        <surname derivation="Given">Fawley</surname>
+      </name>
+      <eventref hlink="_ff6218c34a4654f5616926022de" role="Primary"/>
+    </person>
+    <person handle="_ff6219852987f941921a3455f13" change="1754980113" id="I0354">
+      <gender>M</gender>
+      <name type="Birth Name">
+        <first>Ulick</first>
+        <surname derivation="Given">Gamp</surname>
+      </name>
+      <eventref hlink="_ff621a3ba083213aba07445b6d3" role="Primary"/>
+      <citationref hlink="_ff61c1724b835d752d1a93398ee"/>
+    </person>
+    <person handle="_ff621aedf565236cf2ccb8b9182" change="1754980259" id="I0355">
+      <gender>M</gender>
+      <name type="Birth Name">
+        <first>Damocles</first>
+        <surname derivation="Given">Rowle</surname>
+      </name>
+      <eventref hlink="_ff621bb870769c66fb04994ae6b" role="Primary"/>
+      <citationref hlink="_ff61c1724b835d752d1a93398ee"/>
+    </person>
+    <person handle="_ff621c5ca4e3115b896ddabed96" change="1754980432" id="I0356">
+      <gender>M</gender>
+      <name type="Birth Name">
+        <first>Perseus</first>
+        <surname derivation="Given">Parkinson</surname>
+      </name>
+      <eventref hlink="_ff621ccc0872db2270888f5fb05" role="Primary"/>
+      <citationref hlink="_ff61c1724b835d752d1a93398ee"/>
+    </person>
+    <person handle="_ff621e0281b62ba80f4240253a1" change="1754980546" id="I0357">
+      <gender>M</gender>
+      <name type="Birth Name">
+        <first>Eldritch</first>
+        <surname derivation="Given">Diggory</surname>
+      </name>
+      <eventref hlink="_ff621e7182d223d5e6ac7ed0818" role="Primary"/>
+      <citationref hlink="_ff61c1724b835d752d1a93398ee"/>
+    </person>
+    <person handle="_ff621f22b9635159ce1ea984dd4" change="1754980672" id="I0358">
+      <gender>M</gender>
+      <name type="Birth Name">
+        <first>Albert</first>
+        <surname derivation="Given">Boot</surname>
+      </name>
+      <eventref hlink="_ff621f9882247e83300236b07a6" role="Primary"/>
+      <citationref hlink="_ff61c1724b835d752d1a93398ee"/>
+    </person>
+    <person handle="_ff62211acdf3965412bf2e8863b" change="1754980895" id="I0359">
+      <gender>M</gender>
+      <name type="Birth Name">
+        <first>Basil</first>
+        <surname derivation="Given">Flack</surname>
+      </name>
+      <eventref hlink="_ff6221bf18517f0e6ea1976e6a" role="Primary"/>
+      <citationref hlink="_ff61c1724b835d752d1a93398ee"/>
+    </person>
   </people>
   <families>
     <family handle="_ed59312dc737e38d031951e2757" change="1631134531" id="F0000">
@@ -7057,6 +7171,26 @@
       <confidence>2</confidence>
       <sourceref hlink="_ff61c145d2a1814cf5589bf5fc8"/>
     </citation>
+    <citation handle="_ff6210f3e497f637181248a1ebb" change="1754979101" id="C0268">
+      <page>American Kindle Edition Locations 2094-2095</page>
+      <confidence>2</confidence>
+      <sourceref hlink="_ed5f0f7679c29eedc2aa033f455"/>
+    </citation>
+    <citation handle="_ff6213fe3075e4f4c017fe4d965" change="1754979420" id="C0269">
+      <page>https://web.archive.org/web/20170630110815/https://www.pottermore.com/explore-the-story/albus-dumbledore</page>
+      <confidence>2</confidence>
+      <sourceref hlink="_ff6213ef74596eb5bb21735035"/>
+    </citation>
+    <citation handle="_ff6216194c7174a03de43c0cb36" change="1754979641" id="C0270">
+      <page>496</page>
+      <confidence>2</confidence>
+      <sourceref hlink="_f12bd2b537bccae1cf9318e1ea"/>
+    </citation>
+    <citation handle="_ff6223e4a20f111d75ba8e4757" change="1754981087" id="C0271">
+      <page>American Kindle Edition Location 5323</page>
+      <confidence>2</confidence>
+      <sourceref hlink="_ed5f0f7679c29eedc2aa033f455"/>
+    </citation>
   </citations>
   <sources>
     <source handle="_ed5926e209e1387645aecd422c7" change="1631044751" id="S0000">
@@ -7247,6 +7381,11 @@
       <sabbrev>msmpm</sabbrev>
       <reporef hlink="_ed62d26e4866d63d0673c446418" callno="https://www.rowlingindex.org/work/msmpm/" medium="Book"/>
     </source>
+    <source handle="_ff6213ef74596eb5bb21735035" change="1754979414" id="S0058">
+      <stitle>Albus Dumbledore Fact File</stitle>
+      <sauthor>Pottermore</sauthor>
+      <reporef hlink="_ed5d9c77bf084bef50a633edd3" callno="https://web.archive.org/web/20170630110815/https://www.pottermore.com/explore-the-story/albus-dumbledore" medium="Electronic"/>
+    </source>
   </sources>
   <places>
     <placeobj handle="_ed5d8e6608a5e457dd6ac58da27" change="1631163135" id="P0001" type="County">
@@ -7403,7 +7542,7 @@
       <type>Web site</type>
       <url  href="https://hp-lexicon.org" type="Web Home" description="Canon discussion/Essays"/>
     </repository>
-    <repository handle="_ed5d9c77bf084bef50a633edd3" change="1631293159" id="R0026">
+    <repository handle="_ed5d9c77bf084bef50a633edd3" change="1754979410" id="R0026">
       <rname>Pottermore</rname>
       <type>Web site</type>
       <url  href="https://web.archive.org/web/20181008151658/https://www.pottermore.com/" type="Web Home" description="Archive.org's version of Pottermore"/>
@@ -7687,6 +7826,30 @@ His eldest son marries the oldest granddaughter of [Ignotus] [Peverell].
 
       
 [Ralston]: &lt;./people/Potter/Ralston&gt;</text>
+    </note>
+    <note handle="_ff621132e9413afe29f358a6cb4" change="1754979127" id="N0055" type="Event Note">
+      <text>Passed at an unknown point this year.
+
+</text>
+    </note>
+    <note handle="_ff6218508043c80e351476405f0" change="1754979873" id="N0056" type="Event Note" format="1">
+      <text>Voted out of office because he failed to take [Gellert Grindelwald] seriously.
+
+[Gellert Grindelwald]: ./people/Grindelwald/Gellert
+</text>
+    </note>
+    <note handle="_ff621d8ea0e6d24b410d87dc69" change="1754980423" id="N0057" type="Event Note">
+      <text>Another bigot, the public pushed back.</text>
+    </note>
+    <note handle="_ff62251ce0b54790fc1e3880bd7" change="1754981215" id="N0058" type="Event Note" format="1">
+      <text>[Snape] started at [Hogwarts] in either fall of 1981 or possibly the spring of that year.
+
+
+      
+[Snape]: &lt;./people/Snape/Severus&gt;
+
+      
+[Hogwarts]: &lt;./Hogwarts/&gt;</text>
     </note>
   </notes>
 </database>
