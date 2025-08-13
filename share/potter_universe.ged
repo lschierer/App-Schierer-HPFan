@@ -1,0 +1,7013 @@
+0 HEAD
+1 SOUR Gramps
+2 VERS 5.1.5
+2 NAME Gramps
+1 DATE 12 AUG 2025
+2 TIME 19:42:50
+1 SUBM @SUBM@
+1 FILE /tmp/potter_universe.ged
+1 COPR Copyright (c) 2025 Luke Schierer.
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+1 LANG English
+0 @SUBM@ SUBM
+1 NAME Luke Schierer
+1 EMAIL luke@@schierer.org
+0 @I0000@ INDI
+1 NAME Harry James /Potter/
+2 GIVN Harry James
+2 SURN Potter
+2 SOUR @S0033@
+3 PAGE Location 2074
+1 SEX M
+1 BIRT
+2 DATE 31 JUL 1980
+2 SOUR @S0000@
+3 PAGE 142
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 FAMC @F0000@
+2 PEDI birth
+1 FAMC @F0037@
+2 PEDI foster
+1 FAMS @F0035@
+1 CHAN
+2 DATE 22 JUN 2022
+3 TIME 17:54:54
+0 @I0001@ INDI
+1 NAME James /Potter/
+2 GIVN James
+2 SURN Potter
+1 SEX M
+1 BIRT
+2 DATE 27 MAR 1960
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20190108143612/https://www.pottermore.com/explore-the-story/james-potter
+3 DATA
+4 DATE 8 JAN 2019
+1 DEAT
+2 DATE 31 OCT 1981
+2 SOUR @S0000@
+3 PAGE 55
+1 FAMC @F0001@
+2 PEDI birth
+1 FAMS @F0000@
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 03:41:20
+0 @I0002@ INDI
+1 NAME Lily J /Evans/
+2 GIVN Lily J
+2 SURN Evans
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20170630235801/https://www.pottermore.com/explore-the-story/lily-potter
+1 NAME Lily J /Potter/
+2 TYPE married
+2 GIVN Lily J
+2 SURN Potter
+2 SOUR @S0002@
+3 PAGE 135
+1 SEX F
+1 BIRT
+2 DATE 30 JAN 1960
+2 SOUR @S0002@
+3 PAGE 135
+1 DEAT
+2 DATE 31 OCT 1980
+2 SOUR @S0002@
+3 PAGE 135
+1 EDUC Attended Hogwarts
+2 DATE BET 1 SEP 1971 AND 30 JUN 1978
+1 FAMC @F0059@
+2 PEDI birth
+1 FAMS @F0000@
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20170630235801/https://www.pottermore.com/explore-the-story/lily-potter
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Lily_J._Potter
+1 NOTE @N0002@
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 05:13:23
+0 @I0003@ INDI
+1 NAME Fleamont /Potter/
+2 GIVN Fleamont
+2 SURN Potter
+1 SEX M
+1 BIRT
+2 DATE 1892
+2 NOTE @N0012@
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Fleamont_Potter
+1 DEAT
+2 DATE 1979
+1 FAMC @F0026@
+2 PEDI birth
+1 FAMS @F0001@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Fleamont_Potter
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 01:47:00
+0 @I0004@ INDI
+1 NAME Euphemia /Potter/
+2 TYPE married
+2 GIVN Euphemia
+2 SURN Potter
+1 SEX F
+1 FAMS @F0001@
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 03:42:20
+0 @I0005@ INDI
+1 NAME Orion /Black/
+2 GIVN Orion
+2 SURN Black
+1 SEX M
+1 BIRT
+2 DATE 1929
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 DEAT
+2 DATE 1979
+2 NOTE @N0044@
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 FAMC @F0003@
+2 PEDI birth
+1 FAMS @F0002@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 11 AUG 2025
+3 TIME 21:22:17
+0 @I0006@ INDI
+1 NAME Walburga /Black/
+2 GIVN Walburga
+2 SURN Black
+1 SEX F
+1 BIRT
+2 DATE 1925
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 DEAT
+2 DATE 1985
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 FAMC @F0008@
+2 PEDI birth
+1 FAMS @F0002@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 18:23:21
+0 @I0007@ INDI
+1 NAME Sirius /Black/ III
+2 GIVN Sirius
+2 SURN Black
+2 NSFX III
+1 NAME Sirius /Black/
+2 TYPE aka
+2 GIVN Sirius
+2 SURN Black
+2 NICK Padfoot
+1 SEX M
+1 BIRT
+2 DATE 3 NOV 1959
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Sirius_Black
+1 DEAT
+2 DATE 18 JUN 1996
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20190110174600/https://www.pottermore.com/explore-the-story/sirius-black
+1 FAMC @F0002@
+2 PEDI birth
+1 ASSO @I0000@
+2 RELA Godfather
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20190110174600/https://www.pottermore.com/explore-the-story/sirius-black
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 05:15:59
+0 @I0008@ INDI
+1 NAME Regulus Arcturus /Black/
+2 GIVN Regulus Arcturus
+2 SURN Black
+1 SEX M
+1 BIRT
+2 DATE 1961
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 DEAT
+2 DATE 1979
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 FAMC @F0002@
+2 PEDI birth
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 SOUR @S0002@
+2 PAGE 76
+2 QUAY 3
+1 CHAN
+2 DATE 27 JUN 2022
+3 TIME 17:55:43
+0 @I0009@ INDI
+1 NAME Arcturus /Black/ III
+2 GIVN Arcturus
+2 SURN Black
+2 NSFX III
+1 SEX M
+1 BIRT
+2 DATE 1901
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 DEAT
+2 DATE 1991
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 FAMC @F0004@
+2 PEDI birth
+1 FAMS @F0003@
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/blacktree/
+1 SOUR @S0003@
+2 PAGE https://www.hp-lexicon.org/wp-content/uploads/2014/06/official-final-version.png
+1 CHAN
+2 DATE 4 OCT 2023
+3 TIME 02:18:17
+0 @I0010@ INDI
+1 NAME Hesper /Gamp/
+2 GIVN Hesper
+2 SURN Gamp
+1 SEX F
+1 FAMS @F0004@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 20:58:53
+0 @I0011@ INDI
+1 NAME Melania /Macmillan/
+2 GIVN Melania
+2 SURN Macmillan
+1 SEX F
+1 FAMS @F0003@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 20:51:46
+0 @I0012@ INDI
+1 NAME Lucretia /Black/
+2 GIVN Lucretia
+2 SURN Black
+1 SEX F
+1 BIRT
+2 DATE 1925
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 DEAT
+2 DATE 1992
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 FAMC @F0003@
+2 PEDI birth
+1 FAMS @F0018@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 18:22:31
+0 @I0013@ INDI
+1 NAME Sirius /Black/ II
+2 GIVN Sirius
+2 SURN Black
+2 NSFX II
+1 SEX M
+1 BIRT
+2 DATE 1877
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 DEAT
+2 DATE 1952
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 FAMC @F0005@
+2 PEDI birth
+1 FAMS @F0004@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 27 JUN 2022
+3 TIME 18:10:34
+0 @I0014@ INDI
+1 NAME Lycoris /Black/
+2 GIVN Lycoris
+2 SURN Black
+1 SEX M
+1 BIRT
+2 DATE 1904
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 DEAT
+2 DATE 1965
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 FAMC @F0004@
+2 PEDI birth
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:01:40
+0 @I0015@ INDI
+1 NAME Regulus /Black/
+2 GIVN Regulus
+2 SURN Black
+1 SEX M
+1 BIRT
+2 DATE 1906
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 DEAT
+2 DATE 1959
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 FAMC @F0004@
+2 PEDI birth
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 18:23:53
+0 @I0016@ INDI
+1 NAME Phineus Nigellus /Black/
+2 GIVN Phineus Nigellus
+2 SURN Black
+1 SEX M
+1 BIRT
+2 DATE 1847
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 DEAT
+2 DATE 1925
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 FAMC @F0044@
+2 PEDI birth
+1 FAMS @F0005@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 01:53:35
+0 @I0017@ INDI
+1 NAME Ursula /Flint/
+2 GIVN Ursula
+2 SURN Flint
+1 SEX F
+1 FAMS @F0005@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:10:29
+0 @I0018@ INDI
+1 NAME Cygnus /Black/ II
+2 GIVN Cygnus
+2 SURN Black
+2 NSFX II
+1 SEX M
+1 BIRT
+2 DATE 1889
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 DEAT
+2 DATE 1943
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 FAMC @F0005@
+2 PEDI birth
+1 FAMS @F0007@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 27 JUN 2022
+3 TIME 18:10:57
+0 @I0019@ INDI
+1 NAME Belvina /Black/
+2 GIVN Belvina
+2 SURN Black
+1 SEX F
+1 BIRT
+2 DATE 1886
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 DEAT
+2 DATE 1962
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 FAMC @F0005@
+2 PEDI birth
+1 FAMS @F0013@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 19:10:03
+0 @I0020@ INDI
+1 NAME Arcturus /Black/ II
+2 GIVN Arcturus
+2 SURN Black
+2 NSFX II
+1 SEX M
+1 BIRT
+2 DATE 1884
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 DEAT
+2 DATE 1959
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 FAMC @F0005@
+2 PEDI birth
+1 FAMS @F0014@
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/blacktree/
+1 SOUR @S0003@
+2 PAGE https://www.hp-lexicon.org/wp-content/uploads/2014/06/official-final-version.png
+1 CHAN
+2 DATE 4 OCT 2023
+3 TIME 02:18:46
+0 @I0022@ INDI
+1 NAME Sirius /Black/
+2 GIVN Sirius
+2 SURN Black
+1 SEX M
+1 BIRT
+2 DATE 1845
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 DEAT
+2 DATE 1853
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 FAMC @F0044@
+2 PEDI birth
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 01:53:35
+0 @I0023@ INDI
+1 NAME Elladera /Black/
+2 GIVN Elladera
+2 SURN Black
+1 SEX F
+1 BIRT
+2 DATE 1850
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 DEAT
+2 DATE 1931
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 FAMC @F0044@
+2 PEDI birth
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 01:53:35
+0 @I0024@ INDI
+1 NAME Iola /Black/
+2 GIVN Iola
+2 SURN Black
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Iola_Black
+1 SEX F
+1 FAMC @F0044@
+2 PEDI birth
+1 FAMS @F0033@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 1 SEP 2022
+3 TIME 22:13:16
+0 @I0025@ INDI
+1 NAME Violetta /Bulstrode/
+2 GIVN Violetta
+2 SURN Bulstrode
+1 SEX F
+1 FAMS @F0007@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:23:32
+0 @I0026@ INDI
+1 NAME Pollux /Black/
+2 GIVN Pollux
+2 SURN Black
+1 SEX M
+1 BIRT
+2 DATE 1912
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 DEAT
+2 DATE 1990
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 FAMC @F0007@
+2 PEDI birth
+1 FAMS @F0008@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 18:22:31
+0 @I0027@ INDI
+1 NAME Cassiopeia /Black/
+2 GIVN Cassiopeia
+2 SURN Black
+1 SEX F
+1 BIRT
+2 DATE 1915
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 DEAT
+2 DATE 1992
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 FAMC @F0007@
+2 PEDI birth
+1 FAMS @F0047@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 21:50:52
+0 @I0028@ INDI
+1 NAME Dorea /Black/
+2 GIVN Dorea
+2 SURN Black
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 NAME Dorea /Potter/
+2 TYPE married
+2 GIVN Dorea
+2 SURN Potter
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 SEX F
+1 BIRT
+2 DATE 1920
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 DEAT
+2 DATE 1977
+2 NOTE @N0045@
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1931
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Dorea_Black
+1 FAMC @F0007@
+2 PEDI birth
+1 FAMS @F0012@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 11 AUG 2025
+3 TIME 21:21:57
+0 @I0029@ INDI
+1 NAME Phineus /Black/
+2 GIVN Phineus
+2 SURN Black
+1 SEX M
+1 FAMC @F0005@
+2 PEDI birth
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 NOTE @N0000@
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 19:10:03
+0 @I0030@ INDI
+1 NAME Irma /Crabbe/
+2 GIVN Irma
+2 SURN Crabbe
+1 SEX F
+1 FAMS @F0008@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:25:20
+0 @I0031@ INDI
+1 NAME Alphard /Black/
+2 GIVN Alphard
+2 SURN Black
+1 SEX M
+1 FAMC @F0008@
+2 PEDI birth
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 18:22:31
+0 @I0032@ INDI
+1 NAME Cygnus /Black/ III
+2 GIVN Cygnus
+2 SURN Black
+2 NSFX III
+1 SEX M
+1 BIRT
+2 DATE 1938
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 DEAT
+2 DATE 1992
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 FAMC @F0008@
+2 PEDI birth
+1 FAMS @F0009@
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/blacktree/
+1 SOUR @S0003@
+2 PAGE https://www.hp-lexicon.org/wp-content/uploads/2014/06/official-final-version.png
+1 NOTE @N0035@
+1 CHAN
+2 DATE 8 APR 2025
+3 TIME 04:27:31
+0 @I0033@ INDI
+1 NAME Druella /Rosier/
+2 GIVN Druella
+2 SURN Rosier
+1 SEX F
+1 FAMS @F0009@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:32:55
+0 @I0034@ INDI
+1 NAME Bellatrix /Black/
+2 GIVN Bellatrix
+2 SURN Black
+1 SEX F
+1 BIRT
+2 DATE 1951
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 DEAT
+2 DATE 2 MAY 1998
+2 SOUR @S0002@
+3 PAGE 304
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1962
+1 FAMC @F0009@
+2 PEDI birth
+1 FAMS @F0010@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 27 SEP 2021
+3 TIME 20:35:10
+0 @I0035@ INDI
+1 NAME Andromeda /Black/
+2 GIVN Andromeda
+2 SURN Black
+1 SEX F
+1 FAMC @F0009@
+2 PEDI birth
+1 FAMS @F0022@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 18:22:31
+0 @I0036@ INDI
+1 NAME Narcissa /Black/
+2 GIVN Narcissa
+2 SURN Black
+1 SEX F
+1 BIRT
+2 DATE 1955
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1966
+1 FAMC @F0009@
+2 PEDI birth
+1 FAMS @F0011@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 27 SEP 2021
+3 TIME 20:33:07
+0 @I0037@ INDI
+1 NAME Rodolphus /Lestrange/
+2 GIVN Rodolphus
+2 SURN Lestrange
+1 SEX M
+1 BIRT
+2 DATE BEF 1964
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Rodolphus_Lestrange
+1 FAMC @F0070@
+2 PEDI birth
+1 FAMS @F0010@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 23:47:01
+0 @I0038@ INDI
+1 NAME Lucius Abraxas /Malfoy/
+2 GIVN Lucius Abraxas
+2 SURN Malfoy
+1 SEX M
+1 BIRT
+2 DATE BET 9 SEP 1953 AND 8 SEP 1954
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Lucius_Malfoy
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE ABT 1 SEP 1965
+1 FAMC @F0023@
+2 PEDI birth
+1 FAMS @F0011@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Malfoy_family
+1 NOTE @N0009@
+1 CHAN
+2 DATE 11 AUG 2025
+3 TIME 23:14:20
+0 @I0039@ INDI
+1 NAME Draco Lucius /Malfoy/
+2 GIVN Draco Lucius
+2 SURN Malfoy
+1 SEX M
+1 BIRT
+2 DATE 5 JUN 1980
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20191002072534/https://www.pottermore.com/explore-the-story/draco-malfoy
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 FAMC @F0011@
+2 PEDI birth
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20191002072534/https://www.pottermore.com/explore-the-story/draco-malfoy
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Main_Page?file=Draco+Lucius+Malfoy.jpg
+1 NOTE @N0008@
+1 CHAN
+2 DATE 27 JUN 2022
+3 TIME 19:11:55
+0 @I0040@ INDI
+1 NAME Charlus /Potter/
+2 GIVN Charlus
+2 SURN Potter
+1 SEX M
+1 DEAT
+2 DATE BEF 31 OCT 1981
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Charlus_Potter
+1 FAMC @F0054@
+2 PEDI birth
+1 FAMS @F0012@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 01:54:22
+0 @I0041@ INDI
+1 NAME  /Potter/
+2 SURN Potter
+1 SEX M
+1 FAMC @F0012@
+2 PEDI birth
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:40:00
+0 @I0042@ INDI
+1 NAME Herbert /Burke/
+2 GIVN Herbert
+2 SURN Burke
+1 SEX M
+1 FAMS @F0013@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:43:27
+0 @I0043@ INDI
+1 NAME  /Burke/
+2 SURN Burke
+1 SEX M
+1 FAMC @F0013@
+2 PEDI birth
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:43:27
+0 @I0044@ INDI
+1 NAME  /Burke/
+2 SURN Burke
+1 SEX M
+1 FAMC @F0013@
+2 PEDI birth
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:43:27
+0 @I0045@ INDI
+1 NAME  /Burke/
+2 SURN Burke
+1 SEX F
+1 FAMC @F0013@
+2 PEDI birth
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:43:27
+0 @I0046@ INDI
+1 NAME Lysandra /Yaxley/
+2 GIVN Lysandra
+2 SURN Yaxley
+1 SEX F
+1 FAMS @F0014@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:47:21
+0 @I0047@ INDI
+1 NAME Callidora /Black/
+2 GIVN Callidora
+2 SURN Black
+1 SEX F
+1 BIRT
+2 DATE 1915
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 FAMC @F0014@
+2 PEDI birth
+1 FAMS @F0015@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 NOTE @N0047@
+1 CHAN
+2 DATE 11 AUG 2025
+3 TIME 21:24:55
+0 @I0048@ INDI
+1 NAME Charis /Black/
+2 GIVN Charis
+2 SURN Black
+1 SEX F
+1 BIRT
+2 DATE 1919
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 DEAT
+2 DATE 1973
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 FAMC @F0014@
+2 PEDI birth
+1 FAMS @F0017@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 16 SEP 2022
+3 TIME 20:56:07
+0 @I0049@ INDI
+1 NAME Cedrella /Black/
+2 GIVN Cedrella
+2 SURN Black
+1 SEX F
+1 FAMC @F0014@
+2 PEDI birth
+1 FAMS @F0016@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:52:20
+0 @I0050@ INDI
+1 NAME Harfang /Longbottom/
+2 GIVN Harfang
+2 SURN Longbottom
+1 SEX M
+1 FAMC @F0030@
+2 PEDI birth
+1 FAMS @F0015@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 03:09:10
+0 @I0051@ INDI
+1 NAME  /Longbottom/
+2 SURN Longbottom
+1 SEX M
+1 FAMC @F0015@
+2 PEDI birth
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 16:15:54
+0 @I0052@ INDI
+1 NAME  /Longbottom/
+2 SURN Longbottom
+1 SEX F
+1 FAMC @F0015@
+2 PEDI birth
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:50:33
+0 @I0053@ INDI
+1 NAME Septimus /Weasley/
+2 GIVN Septimus
+2 SURN Weasley
+1 SEX M
+1 FAMS @F0016@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 10 SEP 2021
+3 TIME 19:25:12
+0 @I0054@ INDI
+1 NAME Caspar /Crouch/
+2 GIVN Caspar
+2 SURN Crouch
+1 SEX M
+1 FAMS @F0017@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:55:02
+0 @I0055@ INDI
+1 NAME  /Crouch/
+2 SURN Crouch
+1 SEX M
+1 FAMC @F0017@
+2 PEDI birth
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:55:02
+0 @I0056@ INDI
+1 NAME  /Crouch/
+2 SURN Crouch
+1 SEX F
+1 FAMC @F0017@
+2 PEDI birth
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:55:02
+0 @I0057@ INDI
+1 NAME  /Crouch/
+2 SURN Crouch
+1 SEX F
+1 FAMC @F0017@
+2 PEDI birth
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:55:02
+0 @I0058@ INDI
+1 NAME Ignatius /Prewett/
+2 GIVN Ignatius
+2 SURN Prewett
+1 SEX M
+1 FAMC @F0032@
+2 PEDI birth
+1 FAMS @F0018@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 17:31:05
+0 @I0059@ INDI
+1 NAME Arthur /Weasley/
+2 GIVN Arthur
+2 SURN Weasley
+1 SEX M
+1 BIRT
+2 DATE 6 FEB 1950
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20170414075352/https://www.pottermore.com/explore-the-story/arthur-weasley
+1 FAMC @F0016@
+2 PEDI birth
+1 FAMS @F0019@
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20170414075352/https://www.pottermore.com/explore-the-story/arthur-weasley
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:02:26
+0 @I0060@ INDI
+1 NAME Remus John /Lupin/
+2 GIVN Remus John
+2 SURN Lupin
+1 NAME Remus John /Lupin/
+2 TYPE aka
+2 GIVN Remus John
+2 SURN Lupin
+2 NICK Moony
+1 SEX M
+1 BIRT
+2 DATE 10 MAR 1960
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20170630110748/https://www.pottermore.com/explore-the-story/remus-lupin
+1 DEAT
+2 DATE 2 MAY 1998
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20170630110748/https://www.pottermore.com/explore-the-story/remus-lupin
+1 FAMC @F0055@
+2 PEDI birth
+1 FAMS @F0034@
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20170630110748/https://www.pottermore.com/explore-the-story/remus-lupin
+1 NOTE @N0001@
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 08:27:22
+0 @I0061@ INDI
+1 NAME Albus Percival Wulfric Brian /Dumbledore/
+2 GIVN Albus Percival Wulfric Brian
+2 SURN Dumbledore
+1 SEX M
+1 BIRT
+2 DATE AUG 1881
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Albus_Dumbledore
+2 SOUR @S0058@
+3 PAGE https://web.archive.org/web/20170630110815/https://www.pottermore.com/explore-the-story/albus-dumbledore
+1 DEAT
+2 DATE 30 JUN 1997
+2 SOUR @S0058@
+3 PAGE https://web.archive.org/web/20170630110815/https://www.pottermore.com/explore-the-story/albus-dumbledore
+2 SOUR @S0046@
+3 PAGE 496
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1892
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Albus_Dumbledore
+1 FAMC @F0075@
+2 PEDI birth
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20170630110815/https://www.pottermore.com/explore-the-story/albus-dumbledore
+1 CHAN
+2 DATE 4 OCT 2023
+3 TIME 03:34:44
+0 @I0062@ INDI
+1 NAME Molly /Prewett/
+2 GIVN Molly
+2 SURN Prewett
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20170701104541/https://www.pottermore.com/explore-the-story/molly-weasley
+1 NAME Molly /Weasley/
+2 TYPE married
+2 GIVN Molly
+2 SURN Weasley
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20170701104541/https://www.pottermore.com/explore-the-story/molly-weasley
+1 SEX F
+1 FAMC @F0025@
+2 PEDI birth
+1 FAMS @F0019@
+1 CHAN
+2 DATE 25 JUL 2022
+3 TIME 17:56:01
+0 @I0063@ INDI
+1 NAME Hermione Jean /Granger/
+2 GIVN Hermione Jean
+2 SURN Granger
+1 SEX F
+1 BIRT
+2 DATE 19 SEP 1979
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20191002071716/https://www.pottermore.com/explore-the-story/hermione-granger
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 FAMS @F0036@
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20191002071716/https://www.pottermore.com/explore-the-story/hermione-granger
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 NOTE @N0003@
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 03:12:48
+0 @I0064@ INDI
+1 NAME Ronald Bilius /Weasley/
+2 GIVN Ronald Bilius
+2 SURN Weasley
+1 NAME Ronald Bilius /Weasley/
+2 TYPE aka
+2 GIVN Ronald Bilius
+2 SURN Weasley
+2 NICK Ron
+1 SEX M
+1 BIRT
+2 DATE 1 MAR 1980
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20191002071722/https://www.pottermore.com/explore-the-story/ron-weasley
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 FAMC @F0019@
+2 PEDI birth
+1 FAMS @F0036@
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20191002071722/https://www.pottermore.com/explore-the-story/ron-weasley
+1 NOTE @N0005@
+1 CHAN
+2 DATE 6 AUG 2025
+3 TIME 03:52:31
+0 @I0065@ INDI
+1 NAME Minerva /McGonagall/
+2 GIVN Minerva
+2 SURN McGonagall
+1 SEX F
+1 BIRT
+2 DATE 4 OCT 1935
+2 SOUR @S0044@
+3 PAGE https://www.hp-lexicon.org/character/mcgonagall-family/minerva-mcgonagall/
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1947
+2 SOUR @S0044@
+3 PAGE https://www.hp-lexicon.org/character/mcgonagall-family/minerva-mcgonagall/
+1 FAMC @F0073@
+2 PEDI birth
+1 FAMS @F0076@
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20191002072017/https://www.pottermore.com/explore-the-story/minerva-mcgonagall
+1 SOUR @S0043@
+2 PAGE 6
+2 NOTE @N0028@
+1 NOTE @N0006@
+1 CHAN
+2 DATE 16 SEP 2022
+3 TIME 20:39:07
+0 @I0066@ INDI
+1 NAME Frank /Longbottom/
+2 GIVN Frank
+2 SURN Longbottom
+1 SEX M
+1 FAMC @F0021@
+2 PEDI birth
+1 FAMS @F0020@
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20191002072355/https://www.pottermore.com/explore-the-story/neville-longbottom
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 03:08:48
+0 @I0067@ INDI
+1 NAME Alice /Longbottom/
+2 TYPE married
+2 GIVN Alice
+2 SURN Longbottom
+1 SEX F
+1 FAMS @F0020@
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20191002072355/https://www.pottermore.com/explore-the-story/neville-longbottom
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 03:09:10
+0 @I0068@ INDI
+1 NAME Neville /Longbottom/
+2 GIVN Neville
+2 SURN Longbottom
+1 SEX M
+1 BIRT
+2 DATE 30 JUL 1980
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20191002072355/https://www.pottermore.com/explore-the-story/neville-longbottom
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 FAMC @F0020@
+2 PEDI birth
+1 FAMS @F0039@
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20191002072355/https://www.pottermore.com/explore-the-story/neville-longbottom
+1 NOTE @N0007@
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 03:08:31
+0 @I0069@ INDI
+1 NAME Augusta /Longbottom/
+2 TYPE married
+2 GIVN Augusta
+2 SURN Longbottom
+1 SEX F
+1 FAMS @F0021@
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20191002072355/https://www.pottermore.com/explore-the-story/neville-longbottom
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 03:09:10
+0 @I0070@ INDI
+1 NAME Ginevra Molly /Weasley/
+2 GIVN Ginevra Molly
+2 SURN Weasley
+2 NICK Ginny
+1 NAME Ginevra Molly /Potter/
+2 TYPE married
+2 GIVN Ginevra Molly
+2 SURN Potter
+2 NPFX Mrs.
+2 NICK Ginny
+2 SOUR @S0002@
+3 PAGE 310
+3 QUAY 3
+1 SEX F
+1 BIRT
+2 DATE 11 AUG 1981
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20191002071823/https://www.pottermore.com/explore-the-story/ginny-weasley
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1992
+2 SOUR @S0039@
+3 PAGE Location 1051
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Luna_Lovegood
+2 SOUR @S0039@
+3 PAGE 96
+1 FAMC @F0019@
+2 PEDI birth
+1 FAMS @F0035@
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20191002071823/https://www.pottermore.com/explore-the-story/ginny-weasley
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:05:09
+0 @I0071@ INDI
+1 NAME Fred /Weasley/
+2 TYPE Unknown
+2 GIVN Fred
+2 SURN Weasley
+1 SEX M
+1 BIRT
+2 DATE 1 APR 1978
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20191002072458/https://www.pottermore.com/explore-the-story/fred-weasley
+1 DEAT
+2 DATE 2 MAY 1998
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20191002072458/https://www.pottermore.com/explore-the-story/fred-weasley
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1989
+2 SOUR @S0041@
+3 PAGE p. 174
+3 QUAY 3
+3 DATA
+4 DATE 1999
+3 NOTE @N0025@
+1 FAMC @F0019@
+2 PEDI birth
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20191002072458/https://www.pottermore.com/explore-the-story/fred-weasley
+1 CHAN
+2 DATE 6 AUG 2025
+3 TIME 03:54:12
+0 @I0072@ INDI
+1 NAME George /Weasley/
+2 GIVN George
+2 SURN Weasley
+1 SEX M
+1 BIRT
+2 DATE 1 APR 1978
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20191002072458/https://www.pottermore.com/explore-the-story/fred-weasley
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1989
+2 SOUR @S0041@
+3 PAGE p. 174
+3 QUAY 3
+3 DATA
+4 DATE 1999
+3 NOTE @N0025@
+1 FAMC @F0019@
+2 PEDI birth
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20191002072458/https://www.pottermore.com/explore-the-story/fred-weasley
+1 CHAN
+2 DATE 6 AUG 2025
+3 TIME 03:54:24
+0 @I0073@ INDI
+1 NAME William Arthur /Weasley/
+2 GIVN William Arthur
+2 SURN Weasley
+1 NAME William Arthur /Weasley/
+2 TYPE aka
+2 GIVN William Arthur
+2 SURN Weasley
+2 NICK Bill
+1 SEX M
+1 BIRT
+2 DATE 29 NOV 1971
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20191002071503/https://www.pottermore.com/explore-the-story/bill-weasley
+2 SOUR @S0030@
+3 PAGE https://www.hp-lexicon.org/2004/05/02/the-age-of-the-weasleys/
+2 SOUR @S0044@
+3 PAGE https://www.hp-lexicon.org/2007/07/18/quidditch-through-the-weasleys-ages-or-the-unusual-career-of-charles-weasley/
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 2 SEP 1983
+2 SOUR @S0044@
+3 PAGE https://www.hp-lexicon.org/2004/05/02/the-age-of-the-weasleys/
+2 SOUR @S0044@
+3 PAGE https://www.hp-lexicon.org/2004/05/02/the-age-of-the-weasleys/
+1 FAMC @F0019@
+2 PEDI birth
+1 FAMS @F0024@
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20191002071503/https://www.pottermore.com/explore-the-story/bill-weasley
+1 CHAN
+2 DATE 6 AUG 2025
+3 TIME 03:53:34
+0 @I0074@ INDI
+1 NAME Percy Ignatius /Weasley/
+2 GIVN Percy Ignatius
+2 SURN Weasley
+1 SEX M
+1 BIRT
+2 DATE 22 AUG 1976
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20191002072541/https://www.pottermore.com/explore-the-story/percy-weasley
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1987
+1 FAMC @F0019@
+2 PEDI birth
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20191002072541/https://www.pottermore.com/explore-the-story/percy-weasley
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:07:06
+0 @I0075@ INDI
+1 NAME Edward /Tonks/
+2 GIVN Edward
+2 SURN Tonks
+2 NICK Ted
+1 SEX M
+1 FAMS @F0022@
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20191002072152/https://www.pottermore.com/explore-the-story/nymphadora-tonks
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 04:34:17
+0 @I0076@ INDI
+1 NAME Nymphadora /Tonks/
+2 GIVN Nymphadora
+2 SURN Tonks
+2 NICK Dora
+1 SEX F
+1 BIRT
+2 DATE 1973
+1 DEAT
+2 DATE 2 MAY 1998
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20191002072152/https://www.pottermore.com/explore-the-story/nymphadora-tonks
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1985
+2 SOUR @S0044@
+3 PAGE https://www.hp-lexicon.org/2004/05/02/the-age-of-the-weasleys/
+2 SOUR @S0044@
+3 PAGE https://www.hp-lexicon.org/2007/07/18/quidditch-through-the-weasleys-ages-or-the-unusual-career-of-charles-weasley/
+1 FAMC @F0022@
+2 PEDI birth
+1 FAMS @F0034@
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20191002072152/https://www.pottermore.com/explore-the-story/nymphadora-tonks
+1 CHAN
+2 DATE 27 SEP 2021
+3 TIME 20:37:28
+0 @I0077@ INDI
+1 NAME Severus /Snape/
+2 GIVN Severus
+2 SURN Snape
+1 SEX M
+1 BIRT
+2 DATE 9 JAN 1960
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20191002071405/https://www.pottermore.com/explore-the-story/severus-snape
+1 DEAT
+2 DATE 2 MAY 1998
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20191002071405/https://www.pottermore.com/explore-the-story/severus-snape
+1 OCCU Snape becomes the Potions Professor
+2 DATE 1981
+2 NOTE @N0058@
+2 SOUR @S0033@
+3 PAGE American Kindle Edition Location 5323
+1 FAMC @F0074@
+2 PEDI birth
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20191002071405/https://www.pottermore.com/explore-the-story/severus-snape
+1 SOUR @S0046@
+2 PAGE 530
+2 QUAY 3
+1 CHAN
+2 DATE 12 AUG 2025
+3 TIME 06:47:18
+0 @I0078@ INDI
+1 NAME Abraxas /Malfoy/
+2 GIVN Abraxas
+2 SURN Malfoy
+1 SEX M
+1 BIRT
+2 DATE BEF 1936
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Abraxas_Malfoy
+1 DEAT
+2 DATE BEF 2 SEP 1996
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Abraxas_Malfoy
+1 FAMS @F0023@
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20191002072046/https://www.pottermore.com/explore-the-story/lucius-malfoy
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Abraxas_Malfoy
+1 CHAN
+2 DATE 19 OCT 2021
+3 TIME 05:48:23
+0 @I0079@ INDI
+1 NAME Rubeus /Hagrid/
+2 GIVN Rubeus
+2 SURN Hagrid
+1 SEX M
+1 BIRT
+2 DATE 6 DEC 1928
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20190624075415/https://www.pottermore.com/explore-the-story/rubeus-hagrid
+1 EDUC Expelled from Hogwarts
+2 DATE 1943
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Rubeus_Hagrid
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20190624075415/https://www.pottermore.com/explore-the-story/rubeus-hagrid
+1 NOTE @N0010@
+1 CHAN
+2 DATE 12 AUG 2025
+3 TIME 04:08:01
+0 @I0080@ INDI
+1 NAME Fleur Isabelle /Delacour/
+2 GIVN Fleur Isabelle
+2 SURN Delacour
+1 SEX F
+1 FAMS @F0024@
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20191002071814/https://www.pottermore.com/explore-the-story/fleur-delacour
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 05:01:06
+0 @I0081@ INDI
+1 NAME Fabian /Prewett/
+2 GIVN Fabian
+2 SURN Prewett
+1 SEX M
+1 FAMC @F0025@
+2 PEDI birth
+1 CHAN
+2 DATE 27 JUN 2022
+3 TIME 18:03:26
+0 @I0082@ INDI
+1 NAME Gideon /Prewett/
+2 GIVN Gideon
+2 SURN Prewett
+1 SEX M
+1 FAMC @F0025@
+2 PEDI birth
+1 CHAN
+2 DATE 27 JUN 2022
+3 TIME 18:03:26
+0 @I0083@ INDI
+1 NAME Henry /Potter/
+2 GIVN Henry
+2 SURN Potter
+2 NICK Harry
+1 SEX M
+1 RETI
+2 DATE 1921
+2 SOUR @S0052@
+3 PAGE https://www.rowlingindex.org/work/pmpfam/
+3 DATA
+4 DATE 22 SEP 2015
+1 _ELEC
+2 TYPE Begins Serving on the Wizengamot
+2 DATE 1913
+2 SOUR @S0052@
+3 PAGE https://www.rowlingindex.org/work/pmpfam/
+3 DATA
+4 DATE 22 SEP 2015
+1 FAMC @F0027@
+2 PEDI birth
+1 FAMS @F0026@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Henry_Potter
+1 CHAN
+2 DATE 11 AUG 2025
+3 TIME 23:36:41
+0 @I0084@ INDI
+1 NAME  /Fleamont/
+2 SURN Fleamont
+1 SEX F
+1 FAMS @F0027@
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/pmpfam/
+2 DATA
+3 DATE 22 SEP 2015
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 01:47:40
+0 @I0087@ INDI
+1 NAME  /Longbottom/
+2 SURN Longbottom
+1 SEX M
+1 FAMC @F0030@
+2 PEDI birth
+1 FAMS @F0021@
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 16:26:24
+0 @I0088@ INDI
+1 NAME  /Longbottom/
+2 SURN Longbottom
+1 SEX M
+1 FAMS @F0030@
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 16:26:24
+0 @I0089@ INDI
+1 NAME  /Longbottom/
+2 SURN Longbottom
+2 NICK Algie
+1 SEX M
+1 FAMC @F0030@
+2 PEDI birth
+1 FAMS @F0031@
+1 SOUR @S0035@
+2 PAGE https://static.wikia.nocookie.net/harrypotter/images/0/00/Longbottomfamilytree-pottermore.jpg/revision/latest?cb=20180424193303
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 16:36:07
+0 @I0090@ INDI
+1 NAME Enid /Longbottom/
+2 TYPE married
+2 GIVN Enid
+2 SURN Longbottom
+1 SEX F
+1 FAMS @F0031@
+1 SOUR @S0035@
+2 PAGE https://static.wikia.nocookie.net/harrypotter/images/0/00/Longbottomfamilytree-pottermore.jpg/revision/latest?cb=20180424193303
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 16:36:07
+0 @I0091@ INDI
+1 NAME  /Prewett/
+2 SURN Prewett
+1 SEX M
+1 FAMC @F0032@
+2 PEDI birth
+1 FAMS @F0025@
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2020/08/the-weasley-family-tree-linking-minor-characters/
+2 DATA
+3 DATE 7 AUG 2021
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 17:30:37
+0 @I0092@ INDI
+1 NAME  /Prewett/
+2 SURN Prewett
+1 SEX M
+1 FAMS @F0032@
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2020/08/the-weasley-family-tree-linking-minor-characters/
+2 DATA
+3 DATE 7 AUG 2021
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 17:30:22
+0 @I0093@ INDI
+1 NAME Robert /Hitchens/
+2 GIVN Robert
+2 SURN Hitchens
+2 NICK Bob
+1 SEX M
+1 FAMS @F0033@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 23:50:42
+0 @I0094@ INDI
+1 NAME Marius /Black/
+2 GIVN Marius
+2 SURN Black
+1 SEX M
+1 FAMC @F0007@
+2 PEDI birth
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 19:08:53
+0 @I0095@ INDI
+1 NAME Charlie /Weasley/
+2 TYPE Unknown
+2 GIVN Charlie
+2 SURN Weasley
+1 SEX M
+1 BIRT
+2 DATE 12 DEC 1973
+2 SOUR @S0030@
+3 PAGE https://www.hp-lexicon.org/2004/05/02/the-age-of-the-weasleys/
+2 SOUR @S0044@
+3 PAGE https://www.hp-lexicon.org/2007/07/18/quidditch-through-the-weasleys-ages-or-the-unusual-career-of-charles-weasley/
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1985
+2 SOUR @S0044@
+3 PAGE https://www.hp-lexicon.org/2004/05/02/the-age-of-the-weasleys/
+2 SOUR @S0044@
+3 PAGE https://www.hp-lexicon.org/2007/07/18/quidditch-through-the-weasleys-ages-or-the-unusual-career-of-charles-weasley/
+1 FAMC @F0019@
+2 PEDI birth
+1 SOUR @S0030@
+2 PAGE https://www.hp-lexicon.org/2004/05/02/the-age-of-the-weasleys/
+1 CHAN
+2 DATE 6 AUG 2025
+3 TIME 03:54:52
+0 @I0096@ INDI
+1 NAME Vernon /Dursley/
+2 GIVN Vernon
+2 SURN Dursley
+1 SEX M
+1 FAMC @F0038@
+2 PEDI birth
+1 FAMS @F0037@
+1 SOUR @S0000@
+2 PAGE 20
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 23:47:23
+0 @I0097@ INDI
+1 NAME Petunia /Evans/
+2 GIVN Petunia
+2 SURN Evans
+1 SEX F
+1 FAMC @F0059@
+2 PEDI birth
+1 FAMS @F0037@
+1 SOUR @S0000@
+2 PAGE 8
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 03:36:13
+0 @I0098@ INDI
+1 NAME Dudley /Dursley/
+2 GIVN Dudley
+2 SURN Dursley
+1 SEX M
+1 BIRT
+2 DATE 30 JUN 1980
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Dudley_Dursley
+3 DATA
+4 DATE 9 SEP 2021
+1 FAMC @F0037@
+2 PEDI birth
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 04:43:48
+0 @I0099@ INDI
+1 NAME Dedalus /Diggle/
+2 GIVN Dedalus
+2 SURN Diggle
+1 SEX M
+1 SOUR @S0000@
+2 PAGE 10
+1 SOUR @S0033@
+2 PAGE American Kindle Location 2584
+1 RESI
+2 ADDR
+3 CONT Kent
+3 CONT UK
+3 STAE Kent
+3 CTRY UK
+2 SOUR @S0000@
+3 PAGE 10
+1 CHAN
+2 DATE 9 MAR 2023
+3 TIME 23:33:01
+0 @I0100@ INDI
+1 NAME Arabella Doreen /Figg/
+2 TYPE married
+2 GIVN Arabella Doreen
+2 SURN Figg
+1 SEX F
+1 SOUR @S0000@
+2 PAGE 31
+1 SOUR @S0033@
+2 PAGE Location 2141
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 23:50:11
+0 @I0101@ INDI
+1 NAME Marge /Dursley/
+2 GIVN Marge
+2 SURN Dursley
+1 SEX F
+1 FAMC @F0038@
+2 PEDI birth
+1 SOUR @S0000@
+2 PAGE 22
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 23:47:23
+0 @I0102@ INDI
+1 NAME Doris /Crockford/
+2 GIVN Doris
+2 SURN Crockford
+1 SEX F
+1 SOUR @S0000@
+2 PAGE 70
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 05:02:55
+0 @I0103@ INDI
+1 NAME Quirinus /Quirrell/
+2 GIVN Quirinus
+2 SURN Quirrell
+1 SEX M
+1 DEAT
+2 DATE 4 JUN 1992
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Quirinus_Quirrell
+3 DATA
+4 DATE 9 SEP 2021
+1 SOUR @S0000@
+2 PAGE 70
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 05:05:09
+0 @I0104@ INDI
+1 NAME  /Malkin/
+2 TYPE Unknown
+2 SURN Malkin
+2 NPFX Madam
+1 SEX F
+1 SOUR @S0000@
+2 PAGE 77
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 05:06:58
+0 @I0105@ INDI
+1 NAME Garrick /Ollivander/
+2 GIVN Garrick
+2 SURN Ollivander
+1 SEX M
+1 SOUR @S0000@
+2 PAGE 82
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20181008151658/https://www.pottermore.com/explore-the-story/garrick-ollivander
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 05:15:03
+0 @I0106@ INDI
+1 NAME Vincent /Crabbe/
+2 GIVN Vincent
+2 SURN Crabbe
+1 SEX M
+1 DEAT
+2 DATE 2 MAY 1998
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Vincent_Crabbe
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0000@
+2 PAGE 108
+1 SOUR @S0032@
+2 PAGE Location 657
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 03:26:39
+0 @I0107@ INDI
+1 NAME Gregory /Goyle/
+2 GIVN Gregory
+2 SURN Goyle
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0000@
+2 PAGE 108
+1 SOUR @S0032@
+2 PAGE Location 658
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 03:14:13
+0 @I0108@ INDI
+1 NAME Hannah /Abbott/
+2 GIVN Hannah
+2 SURN Abbott
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 FAMS @F0039@
+1 SOUR @S0000@
+2 PAGE 119
+1 RESI
+2 ADDR
+3 CONT Devon
+3 CONT UK
+3 STAE Devon
+3 CTRY UK
+2 SOUR @S0032@
+3 PAGE Location 1233
+1 CHAN
+2 DATE 18 MAR 2025
+3 TIME 06:08:19
+0 @I0109@ INDI
+1 NAME Araminta Meliflua /Black/
+2 GIVN Araminta Meliflua
+2 SURN Black
+1 SEX F
+1 FAMC @F0047@
+2 PEDI birth
+1 SOUR @S0033@
+2 PAGE Location 1723
+1 NOTE @N0014@
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 21:50:52
+0 @I0110@ INDI
+1 NAME Rabastan /Lestrange/
+2 GIVN Rabastan
+2 SURN Lestrange
+1 SEX M
+1 BIRT
+2 DATE BEF 1964
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Rabastan_Lestrange
+1 FAMC @F0070@
+2 PEDI birth
+1 SOUR @S0033@
+2 PAGE Location 1742
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 23:47:01
+0 @I0111@ INDI
+1 NAME Amelia Susan /Bones/
+2 GIVN Amelia Susan
+2 SURN Bones
+2 NPFX Madam
+1 SEX F
+1 FAMC @F0056@
+2 PEDI birth
+1 SOUR @S0033@
+2 PAGE Location 2075
+1 CHAN
+2 DATE 27 JUN 2022
+3 TIME 18:01:40
+0 @I0112@ INDI
+1 NAME Dolores Jane /Umbridge/
+2 GIVN Dolores Jane
+2 SURN Umbridge
+1 SEX F
+1 BIRT
+2 DATE 26th August
+2 SOUR @S0038@
+3 PAGE https://www.rowlingindex.org/work/dupm/
+3 QUAY 2
+3 DATA
+4 DATE 31 OCT 2014
+1 FAMC @F0077@
+2 PEDI birth
+1 SOUR @S0033@
+2 PAGE Location 2192
+1 CHAN
+2 DATE 21 NOV 2022
+3 TIME 23:28:02
+0 @I0113@ INDI
+1 NAME Edgar /Bones/
+2 GIVN Edgar
+2 SURN Bones
+1 SEX M
+1 FAMC @F0056@
+2 PEDI birth
+1 SOUR @S0033@
+2 PAGE Locations 2590-2591
+1 CHAN
+2 DATE 27 JUN 2022
+3 TIME 18:01:40
+0 @I0114@ INDI
+1 NAME Aberforth /Dumbledore/
+2 GIVN Aberforth
+2 SURN Dumbledore
+1 SEX M
+1 BIRT
+2 DATE BET 1 SEP 1883 AND 31 AUG 1884
+2 SOUR @S0002@
+3 PAGE 6
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1895
+2 SOUR @S0002@
+3 PAGE 6
+1 FAMC @F0075@
+2 PEDI birth
+1 SOUR @S0033@
+2 PAGE Location 2596
+1 CHAN
+2 DATE 4 OCT 2023
+3 TIME 03:34:20
+0 @I0115@ INDI
+1 NAME Luna /Lovegood/
+2 GIVN Luna
+2 SURN Lovegood
+2 SOUR @S0033@
+3 PAGE Location 2748
+1 NAME  //
+2 TYPE aka
+2 NICK Loony
+2 SOUR @S0033@
+3 PAGE Location 2746
+1 SEX F
+1 BIRT
+2 DATE 13 FEB 1981
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Luna_Lovegood
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1992
+2 SOUR @S0039@
+3 PAGE Location 1051
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Luna_Lovegood
+2 SOUR @S0039@
+3 PAGE 96
+1 FAMC @F0051@
+2 PEDI birth
+1 SOUR @S0033@
+2 PAGE Location 2748
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 03:02:20
+0 @I0116@ INDI
+1 NAME Euan /Abercrombie/
+2 GIVN Euan
+2 SURN Abercrombie
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1995
+1 SOUR @S0033@
+2 PAGE Location 3066-3068
+1 NOTE @N0015@
+1 CHAN
+2 DATE 23 DEC 2024
+3 TIME 00:28:09
+0 @I0117@ INDI
+1 NAME Rose /Zeller/
+2 GIVN Rose
+2 SURN Zeller
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1995
+1 SOUR @S0033@
+2 PAGE Locations 3071-3072
+1 NOTE @N0016@
+1 CHAN
+2 DATE 23 DEC 2024
+3 TIME 00:28:40
+0 @I0118@ INDI
+1 NAME Griselda /Marchbanks/
+2 TYPE Unknown
+2 GIVN Griselda
+2 SURN Marchbanks
+2 NPFX Madam
+1 SEX F
+1 BIRT
+2 DATE BEF 1870
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Griselda_Marchbanks
+1 SOUR @S0033@
+2 PAGE Locations 4523-4524
+1 CHAN
+2 DATE 16 SEP 2021
+3 TIME 21:29:43
+0 @I0119@ INDI
+1 NAME Tiberius /Ogden/
+2 GIVN Tiberius
+2 SURN Ogden
+1 SEX M
+1 SOUR @S0033@
+2 PAGE Locations 4523-4524
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 17:00:35
+0 @I0120@ INDI
+1 NAME Barry /Ryan/
+2 GIVN Barry
+2 SURN Ryan
+1 SEX M
+1 SOUR @S0033@
+2 PAGE Locations 5866-5867
+1 NOTE @N0017@
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 17:16:25
+0 @I0121@ INDI
+1 NAME Andrew /Kirke/
+2 GIVN Andrew
+2 SURN Kirke
+1 SEX M
+1 SOUR @S0033@
+2 PAGE Location 6658
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 17:22:34
+0 @I0122@ INDI
+1 NAME Jack /Sloper/
+2 GIVN Jack
+2 SURN Sloper
+1 SEX M
+1 SOUR @S0033@
+2 PAGE Location 6658
+1 CHAN
+2 DATE 10 SEP 2021
+3 TIME 17:02:12
+0 @I0123@ INDI
+1 NAME Dilys /Derwent/
+2 TYPE Unknown
+2 GIVN Dilys
+2 SURN Derwent
+1 SEX F
+1 SOUR @S0033@
+2 PAGE Locations 7120-7121
+1 NOTE @N0018@
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 17:31:36
+0 @I0124@ INDI
+1 NAME Hippocrates /Smethwyck/
+2 GIVN Hippocrates
+2 SURN Smethwyck
+1 SEX M
+1 SOUR @S0033@
+2 PAGE Locations 7157-7158
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 17:33:27
+0 @I0125@ INDI
+1 NAME Augustus /Pye/
+2 GIVN Augustus
+2 SURN Pye
+1 SEX M
+1 SOUR @S0033@
+2 PAGE Locations 7157-7158
+1 CHAN
+2 DATE 10 SEP 2021
+3 TIME 17:02:12
+0 @I0126@ INDI
+1 NAME Urquhart /Rackharrow/
+2 GIVN Urquhart
+2 SURN Rackharrow
+1 SEX M
+1 BIRT
+2 DATE 1612
+2 SOUR @S0033@
+3 PAGE Locations 7164
+1 DEAT
+2 DATE 1697
+2 SOUR @S0033@
+3 PAGE Locations 7164
+1 SOUR @S0033@
+2 PAGE Locations 7164
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 17:36:32
+0 @I0127@ INDI
+1 NAME Willy /Widdershins/
+2 GIVN Willy
+2 SURN Widdershins
+1 SEX M
+1 SOUR @S0033@
+2 PAGE Locations 7197
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 17:37:54
+0 @I0128@ INDI
+1 NAME Antonin /Dolohov/
+2 GIVN Antonin
+2 SURN Dolohov
+1 SEX M
+1 SOUR @S0033@
+2 PAGE Location 7989
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 17:46:55
+0 @I0129@ INDI
+1 NAME Augustus /Rockwood/
+2 GIVN Augustus
+2 SURN Rockwood
+1 SEX M
+1 SOUR @S0033@
+2 PAGE Location 7990
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 17:48:08
+0 @I0130@ INDI
+1 NAME Roger /Davies/
+2 GIVN Roger
+2 SURN Davies
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1989
+2 SOUR @S0041@
+3 PAGE p. 174
+3 QUAY 3
+3 DATA
+4 DATE 1999
+3 NOTE @N0025@
+1 SOUR @S0033@
+2 PAGE Location 8214
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Roger_Davies
+1 CHAN
+2 DATE 27 SEP 2021
+3 TIME 20:46:34
+0 @I0131@ INDI
+1 NAME  /Edgecombe/
+2 TYPE Unknown
+2 SURN Edgecombe
+2 NPFX Madam
+1 SEX F
+1 FAMS @F0043@
+1 SOUR @S0033@
+2 PAGE Location 8977
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 18:00:48
+0 @I0132@ INDI
+1 NAME Marietta /Edgecombe/
+2 GIVN Marietta
+2 SURN Edgecombe
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1990
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Cormac_McLaggen
+1 FAMC @F0043@
+2 PEDI birth
+1 SOUR @S0033@
+2 PAGE Locations 8974-8977
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:27:10
+0 @I0133@ INDI
+1 NAME John /Dawlish/
+2 GIVN John
+2 SURN Dawlish
+1 SEX M
+1 SOUR @S0033@
+2 PAGE Location 9099
+1 SOUR @S0048@
+2 QUAY 2
+2 DATA
+3 DATE 17 DEC 2007
+1 CHAN
+2 DATE 18 NOV 2022
+3 TIME 20:27:11
+0 @I0134@ INDI
+1 NAME  /Bradley/
+2 SURN Bradley
+1 SEX M
+1 SOUR @S0033@
+2 PAGE Location 10021
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 18:20:40
+0 @I0135@ INDI
+1 NAME  /Chambers/
+2 SURN Chambers
+1 SOUR @S0033@
+2 PAGE Location 10332
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 18:20:28
+0 @I0136@ INDI
+1 NAME  /Tofty/
+2 SURN Tofty
+2 NPFX Professor
+1 SEX M
+1 SOUR @S0033@
+2 PAGE Location 10469
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 18:27:04
+0 @I0137@ INDI
+1 NAME  /Jugson/
+2 SURN Jugson
+1 SEX M
+1 SOUR @S0033@
+2 PAGE Location 11551
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 18:36:24
+0 @I0138@ INDI
+1 NAME  /Mulciber/
+2 SURN Mulciber
+1 SEX M
+1 SOUR @S0033@
+2 PAGE Location 11551
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 18:37:23
+0 @I0139@ INDI
+1 NAME  /Williamson/
+2 SURN Williamson
+1 SOUR @S0033@
+2 PAGE Location 11978
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 18:44:57
+0 @I0140@ INDI
+1 NAME  /Weasley/
+2 SURN Weasley
+1 SEX M
+1 FAMC @F0016@
+2 PEDI birth
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 19:15:12
+0 @I0141@ INDI
+1 NAME  /Weasley/
+2 SURN Weasley
+1 SEX M
+1 FAMC @F0016@
+2 PEDI birth
+1 SOUR @S0038@
+2 PAGE https://www.therowlinglibrary.com/jkrowling.com/textonly/en/extrastuff_view_id=7.html
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 19:15:12
+0 @I0142@ INDI
+1 NAME Ignatia /Wildsmith/
+2 TYPE Unknown
+2 GIVN Ignatia
+2 SURN Wildsmith
+1 SEX F
+1 BIRT
+2 DATE 1227
+2 SOUR @S0038@
+3 PAGE https://www.therowlinglibrary.com/jkrowling.com/textonly/en/wotm.html
+1 DEAT
+2 DATE 1320
+2 SOUR @S0038@
+3 PAGE https://www.therowlinglibrary.com/jkrowling.com/textonly/en/wotm.html
+1 SOUR @S0053@
+2 PAGE https://therowlinglibrary.com/jkrowling.com/textonly/en/wotm.html
+1 NOTE @N0019@
+1 CHAN
+2 DATE 12 AUG 2025
+3 TIME 03:38:00
+0 @I0143@ INDI
+1 NAME Daisy /Dodderidge/
+2 TYPE Unknown
+2 GIVN Daisy
+2 SURN Dodderidge
+1 SEX F
+1 BIRT
+2 DATE 1467
+2 SOUR @S0038@
+3 PAGE https://www.therowlinglibrary.com/jkrowling.com/textonly/en/wotm.html
+1 DEAT
+2 DATE 1555
+1 SOUR @S0053@
+1 NOTE @N0020@
+1 CHAN
+2 DATE 12 AUG 2025
+3 TIME 03:40:53
+0 @I0144@ INDI
+1 NAME Robert /Hilliard/
+2 GIVN Robert
+2 SURN Hilliard
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1987
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/pmhhwm/
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:00:23
+0 @I0145@ INDI
+1 NAME Gemma /Farley/
+2 GIVN Gemma
+2 SURN Farley
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1987
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/pmhhwm/
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 22:59:44
+0 @I0146@ INDI
+1 NAME Gabriel /Truman/
+2 GIVN Gabriel
+2 SURN Truman
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1987
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/pmhhwm/
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:01:08
+0 @I0147@ INDI
+1 NAME Cygnus /Black/
+2 GIVN Cygnus
+2 SURN Black
+1 SEX M
+1 BIRT
+2 DATE 1829
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Cygnus_Black_I
+1 DEAT
+2 DATE 1851
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Cygnus_Black_I
+1 FAMC @F0045@
+2 PEDI birth
+1 FAMS @F0044@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Cygnus_Black_I
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 21:36:25
+0 @I0148@ INDI
+1 NAME Ella /Max/
+2 GIVN Ella
+2 SURN Max
+1 SEX F
+1 FAMS @F0044@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Cygnus_Black_I
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 21:24:46
+0 @I0149@ INDI
+1 NAME Licorus /Black/
+2 GIVN Licorus
+2 SURN Black
+1 SEX M
+1 BIRT
+2 DATE 1808
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Licorus_Black
+1 DEAT
+2 DATE 1872
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Licorus_Black
+1 FAMS @F0045@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Licorus_Black
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 21:36:25
+0 @I0150@ INDI
+1 NAME Misapinoa /Black/
+2 GIVN Misapinoa
+2 SURN Black
+1 SEX F
+1 BIRT
+2 DATE 1826
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Misapinoa_Black
+1 DEAT
+2 DATE 1926
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Misapinoa_Black
+1 FAMC @F0045@
+2 PEDI birth
+1 FAMS @F0046@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Licorus_Black
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 21:42:01
+0 @I0151@ INDI
+1 NAME Arcturus /Black/
+2 GIVN Arcturus
+2 SURN Black
+1 SEX M
+1 BIRT
+2 DATE 1835
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Arcturus_Black_I
+1 DEAT
+2 DATE 1893
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Arcturus_Black_I
+1 FAMC @F0045@
+2 PEDI birth
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Arcturus_Black_I
+1 SOUR @S0003@
+2 PAGE https://www.hp-lexicon.org/wp-content/uploads/2014/06/official-final-version.png
+1 CHAN
+2 DATE 4 OCT 2023
+3 TIME 02:19:09
+0 @I0152@ INDI
+1 NAME Magenta /Tripe/
+2 GIVN Magenta
+2 SURN Tripe
+1 SEX F
+1 FAMS @F0045@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Licorus_Black
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 21:36:25
+0 @I0153@ INDI
+1 NAME Jimbo /Blishwick/
+2 GIVN Jimbo
+2 SURN Blishwick
+1 SEX M
+1 FAMS @F0046@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Misapinoa_Black
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 23:49:26
+0 @I0154@ INDI
+1 NAME Susan /Bones/
+2 GIVN Susan
+2 SURN Bones
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 FAMC @F0057@
+2 PEDI birth
+1 SOUR @S0032@
+2 PAGE Location 1241
+1 RESI
+2 ADDR
+3 CONT Essex
+3 CONT UK
+3 STAE Essex
+3 CTRY UK
+2 SOUR @S0032@
+3 PAGE Location 1241
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:31:43
+0 @I0155@ INDI
+1 NAME Zacharias /Smith/
+2 GIVN Zacharias
+2 SURN Smith
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0032@
+2 PAGE Location 1257
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:53:18
+0 @I0156@ INDI
+1 NAME Wayne /Hopkins/
+2 GIVN Wayne
+2 SURN Hopkins
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0032@
+2 PAGE Location 1281
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 03:10:43
+0 @I0157@ INDI
+1 NAME  /Finnigan/
+2 TYPE married
+2 SURN Finnigan
+2 NPFX Mrs.
+1 SEX F
+1 FAMS @F0048@
+1 SOUR @S0000@
+2 PAGE 125
+1 CHAN
+2 DATE 10 SEP 2021
+3 TIME 19:22:47
+0 @I0158@ INDI
+1 NAME Seamus /Finnigan/
+2 GIVN Seamus
+2 SURN Finnigan
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 FAMC @F0048@
+2 PEDI birth
+1 SOUR @S0000@
+2 PAGE 125
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 23:48:17
+0 @I0159@ INDI
+1 NAME Dean /Thomas/
+2 TYPE Unknown
+2 GIVN Dean
+2 SURN Thomas
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 FAMC @F0060@
+2 PEDI birth
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 CHAN
+2 DATE 8 FEB 2023
+3 TIME 22:23:28
+0 @I0160@ INDI
+1 NAME Blaize /Zabini/
+2 GIVN Blaize
+2 SURN Zabini
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 02:44:02
+0 @I0161@ INDI
+1 NAME Theodore /Nott/
+2 GIVN Theodore
+2 SURN Nott
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0032@
+2 PAGE 813
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 02:50:12
+0 @I0162@ INDI
+1 NAME Terry /Boot/
+2 GIVN Terry
+2 SURN Boot
+1 SEX M
+1 BIRT
+2 DATE FROM 1 SEP 1979 TO 21 APR 1980
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Terry_Boot
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:33:29
+0 @I0163@ INDI
+1 NAME Michael /Corner/
+2 GIVN Michael
+2 SURN Corner
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:44:42
+0 @I0164@ INDI
+1 NAME Stephen /Cornfoot/
+2 GIVN Stephen
+2 SURN Cornfoot
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 03:27:13
+0 @I0165@ INDI
+1 NAME Kevin /Entwhistle/
+2 GIVN Kevin
+2 SURN Entwhistle
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 03:17:07
+0 @I0166@ INDI
+1 NAME Anthony /Goldstein/
+2 GIVN Anthony
+2 SURN Goldstein
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 03:14:40
+0 @I0167@ INDI
+1 NAME Justin /Finch-Fletchley/
+2 GIVN Justin
+2 SURN Finch-Fletchley
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 03:16:36
+0 @I0168@ INDI
+1 NAME Ernie /Macmillan/
+2 GIVN Ernie
+2 SURN Macmillan
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 02:52:17
+0 @I0169@ INDI
+1 NAME Roger /Malone/
+2 GIVN Roger
+2 SURN Malone
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 02:51:16
+0 @I0170@ INDI
+1 NAME Oliver /Rivers/
+2 GIVN Oliver
+2 SURN Rivers
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 02:47:00
+0 @I0171@ INDI
+1 NAME Mandy /Brocklehurst/
+2 GIVN Mandy
+2 SURN Brocklehurst
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:33:58
+0 @I0172@ INDI
+1 NAME Sue /Li/
+2 GIVN Sue
+2 SURN Li
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/og40pm/
+1 CHAN
+2 DATE 20 OCT 2021
+3 TIME 01:32:41
+0 @I0173@ INDI
+1 NAME Morag /MacDougal/
+2 GIVN Morag
+2 SURN MacDougal
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 02:53:03
+0 @I0174@ INDI
+1 NAME Padma /Patil/
+2 GIVN Padma
+2 SURN Patil
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 FAMC @F0049@
+2 PEDI birth
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 CHAN
+2 DATE 4 OCT 2023
+3 TIME 03:36:21
+0 @I0175@ INDI
+1 NAME Pavarti /Patil/
+2 GIVN Pavarti
+2 SURN Patil
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 FAMC @F0049@
+2 PEDI birth
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 CHAN
+2 DATE 4 OCT 2023
+3 TIME 03:36:21
+0 @I0176@ INDI
+1 NAME Lisa /Turpin/
+2 GIVN Lisa
+2 SURN Turpin
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 02:44:54
+0 @I0177@ INDI
+1 NAME Millicent /Bulstrode/
+2 GIVN Millicent
+2 SURN Bulstrode
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:44:52
+0 @I0178@ INDI
+1 NAME Tracey /Davis/
+2 GIVN Tracey
+2 SURN Davis
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 03:21:10
+0 @I0179@ INDI
+1 NAME Daphne /Greengrass/
+2 GIVN Daphne
+2 SURN Greengrass
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 FAMC @F0050@
+2 PEDI birth
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 03:31:57
+0 @I0180@ INDI
+1 NAME Astoria /Greengrass/
+2 GIVN Astoria
+2 SURN Greengrass
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1993
+2 SOUR @S0038@
+3 PAGE https://www.rowlingindex.org/work/dmpm/
+1 FAMC @F0050@
+2 PEDI birth
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/dmpm/
+1 CHAN
+2 DATE 23 DEC 2024
+3 TIME 00:01:59
+0 @I0181@ INDI
+1 NAME Pansy /Parkinson/
+2 GIVN Pansy
+2 SURN Parkinson
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0032@
+2 PAGE Location 723
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 02:49:44
+0 @I0182@ INDI
+1 NAME A. /Runcorn/
+2 GIVN A.
+2 SURN Runcorn
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0032@
+2 PAGE 801
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 02:45:57
+0 @I0183@ INDI
+1 NAME Megan /Jones/
+2 GIVN Megan
+2 SURN Jones
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 03:10:17
+0 @I0184@ INDI
+1 NAME Sally-Anne /Perks/
+2 GIVN Sally-Anne
+2 SURN Perks
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 02:48:29
+0 @I0185@ INDI
+1 NAME Lavender /Brown/
+2 GIVN Lavender
+2 SURN Brown
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0032@
+2 PAGE Location 474
+2 QUAY 1
+1 NOTE @N0036@
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:41:08
+0 @I0186@ INDI
+1 NAME Lily /Moon/
+2 GIVN Lily
+2 SURN Moon
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 02:50:37
+0 @I0187@ INDI
+1 NAME Sophie /Roper/
+2 GIVN Sophie
+2 SURN Roper
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1991
+2 SOUR @S0037@
+3 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 SOUR @S0032@
+2 PAGE 621
+1 SOUR @S0037@
+2 PAGE https://www.mugglenet.com/2016/03/the-revised-forty/
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 02:46:34
+0 @I0188@ INDI
+1 NAME Xenophilius /Lovegood/
+2 GIVN Xenophilius
+2 SURN Lovegood
+1 NAME  //
+2 TYPE aka
+2 NICK Xeno
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Xenophilius_Lovegood
+1 SEX M
+1 FAMS @F0051@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Xenophilius_Lovegood
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 03:07:42
+0 @I0189@ INDI
+1 NAME Pandora /Lovegood/
+2 TYPE married
+2 GIVN Pandora
+2 SURN Lovegood
+1 SEX F
+1 DEAT
+2 DATE EST 1990
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Pandora_Lovegood
+1 FAMS @F0051@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Luna_Lovegood
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 03:02:10
+0 @I0190@ INDI
+1 NAME Linfred /of Stinchcombe/
+2 TYPE Unknown
+2 GIVN Linfred
+2 SPFX of
+2 SURN Stinchcombe
+1 NAME Linfred /of Stinchcombe/
+2 TYPE aka
+2 GIVN Linfred
+2 SPFX of
+2 SURN Stinchcombe
+2 NICK the Potterer
+1 SEX M
+1 BIRT
+2 DATE BET 1 JAN 1100 AND 1 JAN 1200
+2 PLAC Stinchcombe, Gloucestershire, UK
+3 MAP
+4 LATI N51.685065
+4 LONG W2.412815
+2 ADDR
+3 CTRY UK
+2 SOUR @S0052@
+3 PAGE https://www.rowlingindex.org/work/pmpfam/
+3 DATA
+4 DATE 22 SEP 2015
+1 FAMS @F0052@
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/pmpfam/
+2 DATA
+3 DATE 22 SEP 2015
+1 NOTE @N0043@
+1 CHAN
+2 DATE 11 AUG 2025
+3 TIME 19:53:50
+0 @I0191@ INDI
+1 NAME Hardwin /Potter/
+2 GIVN Hardwin
+2 SURN Potter
+1 SEX M
+1 FAMC @F0052@
+2 PEDI birth
+1 FAMS @F0053@
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/pmpfam/
+2 DATA
+3 DATE 22 SEP 2015
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 18:17:34
+0 @I0192@ INDI
+1 NAME Iolanthe /Peverell/
+2 GIVN Iolanthe
+2 SURN Peverell
+1 SEX F
+1 FAMS @F0053@
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/pmpfam/
+2 DATA
+3 DATE 22 SEP 2015
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 18:17:34
+0 @I0193@ INDI
+1 NAME Florean /Fortescue/
+2 GIVN Florean
+2 SURN Fortescue
+1 SEX M
+1 BIRT
+2 DATE FROM 1 JUL 1996 TO 30 MAR 1997
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Florean_Fortescue#cite_ref-pottercast_4-0
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Florean_Fortescue
+1 CHAN
+2 DATE 13 SEP 2021
+3 TIME 17:51:16
+0 @I0194@ INDI
+1 NAME Septima /Vector/
+2 TYPE Unknown
+2 GIVN Septima
+2 SURN Vector
+1 SEX F
+1 BIRT
+2 DATE BEF JAN 1974
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Septima_Vector
+1 CHAN
+2 DATE 15 SEP 2021
+3 TIME 20:55:26
+0 @I0195@ INDI
+1 NAME Bathsheda /Babbling/
+2 TYPE Unknown
+2 GIVN Bathsheda
+2 SURN Babbling
+1 SEX F
+1 BIRT
+2 DATE BEF 1976
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Bathsheda_Babbling
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Bathsheda_Babbling
+1 CHAN
+2 DATE 15 SEP 2021
+3 TIME 21:17:14
+0 @I0196@ INDI
+1 NAME Charity /Burbage/
+2 TYPE Unknown
+2 GIVN Charity
+2 SURN Burbage
+1 SEX F
+1 BIRT
+2 DATE BEF 1980
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Charity_Burbage
+1 DEAT
+2 DATE ABT JUL 1997
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Charity_Burbage
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Charity_Burbage
+1 CHAN
+2 DATE 15 SEP 2021
+3 TIME 21:26:38
+0 @I0197@ INDI
+1 NAME Rolanda /Hooch/
+2 TYPE Unknown
+2 GIVN Rolanda
+2 SURN Hooch
+1 SEX F
+1 BIRT
+2 DATE FROM 1901 TO 1918
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Rolanda_Hooch
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Rolanda_Hooch
+1 CHAN
+2 DATE 15 SEP 2021
+3 TIME 21:36:08
+0 @I0198@ INDI
+1 NAME Cornelius Oswald /Fudge/
+2 GIVN Cornelius Oswald
+2 SURN Fudge
+1 SEX M
+1 BIRT
+2 DATE BEF 1964
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Cornelius_Fudge
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Cornelius_Fudge
+1 SOUR @S0045@
+2 PAGE https://www.insider.com/harry-potter-character-name-meaning-2017-4
+2 DATA
+3 DATE 14 NOV 2018
+1 CHAN
+2 DATE 27 JUN 2022
+3 TIME 19:27:40
+0 @I0199@ INDI
+1 NAME Rufus /Scrimgeour/
+2 GIVN Rufus
+2 SURN Scrimgeour
+1 SEX M
+1 BIRT
+2 DATE BEF 1968
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Rufus_Scrimgeour
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Rufus_Scrimgeour
+1 CHAN
+2 DATE 22 SEP 2021
+3 TIME 20:02:43
+0 @I0200@ INDI
+1 NAME  /Potter/
+2 SURN Potter
+1 SEX M
+1 FAMC @F0027@
+2 PEDI birth
+1 FAMS @F0054@
+1 SOUR @S0040@
+2 PAGE https://www.schierer.org/~luke/log/fiction/Harry_Potter/Notes/Families/Potter/
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 01:57:41
+0 @I0201@ INDI
+1 NAME  /Potter/
+2 SURN Potter
+1 SEX M
+1 FAMS @F0027@
+1 SOUR @S0040@
+2 PAGE https://www.schierer.org/~luke/log/fiction/Harry_Potter/Notes/Families/Potter/
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 01:57:41
+0 @I0202@ INDI
+1 NAME Lyall /Lupin/
+2 GIVN Lyall
+2 SURN Lupin
+1 SEX M
+1 BIRT
+2 DATE EST 1929
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Lyall_Lupin
+1 EVEN
+2 TYPE Marriage
+2 DATE 1959
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Lyall_Lupin
+1 FAMS @F0055@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Lyall_Lupin
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 02:31:54
+0 @I0203@ INDI
+1 NAME Hope /Howell/
+2 GIVN Hope
+2 SURN Howell
+1 NAME Hope /Lupin/
+2 TYPE married
+2 GIVN Hope
+2 SURN Lupin
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Lyall_Lupin
+1 SEX F
+1 BIRT
+2 DATE BEF 1944
+1 DEAT
+2 DATE BEF 31 OCT 1981
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Lyall_Lupin
+1 EVEN
+2 TYPE Marriage
+2 DATE 1959
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Lyall_Lupin
+1 FAMS @F0055@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Lyall_Lupin
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 02:34:00
+0 @I0204@ INDI
+1 NAME Damocles /Belby/
+2 GIVN Damocles
+2 SURN Belby
+1 SEX M
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Damocles_Belby
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 02:41:45
+0 @I0205@ INDI
+1 NAME  /Bones/
+2 SURN Bones
+1 SEX M
+1 DEAT
+2 DATE BEF 31 OCT 1981
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Bones_family
+1 FAMS @F0056@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Bones_family
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 02:54:43
+0 @I0206@ INDI
+1 NAME  /Bones/
+2 SURN Bones
+1 SEX M
+1 FAMC @F0056@
+2 PEDI birth
+1 FAMS @F0057@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Bones_family
+1 CHAN
+2 DATE 27 JUN 2022
+3 TIME 18:01:40
+0 @I0207@ INDI
+1 NAME  /Greengrass/
+2 SURN Greengrass
+1 SEX M
+1 FAMC @F0058@
+2 PEDI birth
+1 FAMS @F0050@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Aquila_Greengrass
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 03:39:18
+0 @I0208@ INDI
+1 NAME  /Greengrass/
+2 SURN Greengrass
+1 SEX M
+1 FAMS @F0058@
+1 SOUR @S0040@
+2 PAGE https://www.schierer.org/~luke/log/fiction/Harry_Potter/Notes/Families/
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 03:34:43
+0 @I0209@ INDI
+1 NAME  /Evans/
+2 SURN Evans
+1 SEX M
+1 FAMS @F0059@
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 03:36:13
+0 @I0210@ INDI
+1 NAME Gareth /Greengrass/
+2 GIVN Gareth
+2 SURN Greengrass
+1 SEX M
+1 DEAT
+2 DATE SEP 2021
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Gareth_Greengrass
+1 FAMC @F0058@
+2 PEDI birth
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Gareth_Greengrass
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 03:39:18
+0 @I0211@ INDI
+1 NAME Benjy /Fenwick/
+2 GIVN Benjy
+2 SURN Fenwick
+1 SEX M
+1 FAMS @F0060@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Benjy_Fenwick
+1 SOUR @S0033@
+2 PAGE American Kindle Locations 2588-2589
+1 CHAN
+2 DATE 9 MAR 2023
+3 TIME 23:35:43
+0 @I0212@ INDI
+1 NAME  /Scamander/
+2 SURN Scamander
+1 SEX M
+1 FAMS @F0061@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Theseus_Scamander
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 17:53:53
+0 @I0213@ INDI
+1 NAME Theseus /Scamander/
+2 GIVN Theseus
+2 SURN Scamander
+1 SEX M
+1 BIRT
+2 DATE BET 25 FEB 1888 AND 23 FEB 1889
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Theseus_Scamander
+1 EVEN
+2 TYPE Engagement
+2 DATE BEF 1927
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Leta_Lestrange
+1 FAMC @F0061@
+2 PEDI birth
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 20:40:43
+0 @I0214@ INDI
+1 NAME Newton Artemis Fido /Scamander/
+2 GIVN Newton Artemis Fido
+2 SURN Scamander
+2 NICK Newt
+1 SEX M
+1 BIRT
+2 DATE 24 FEB 1897
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Newton_Scamander
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1908
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Theseus_Scamander
+1 FAMC @F0061@
+2 PEDI birth
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Theseus_Scamander
+1 SOUR @S0045@
+2 PAGE https://www.insider.com/harry-potter-character-name-meaning-2017-4
+2 DATA
+3 DATE 14 NOV 2018
+1 CHAN
+2 DATE 27 JUN 2022
+3 TIME 19:30:36
+0 @I0215@ INDI
+1 NAME  /Lestrange/
+2 SURN Lestrange
+1 SEX M
+1 FAMS @F0062@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Corvus_Lestrange_(I)
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 18:22:12
+0 @I0216@ INDI
+1 NAME Corvus /Lestrange/
+2 GIVN Corvus
+2 SURN Lestrange
+1 SEX M
+1 BIRT
+2 DATE 28 MAY 1729
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Corvus_Lestrange_(I)
+1 DEAT
+2 DATE 13 SEP 1768
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Corvus_Lestrange_(I)
+1 FAMC @F0062@
+2 PEDI birth
+1 FAMS @F0063@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Corvus_Lestrange_(I)
+1 CHAN
+2 DATE 21 OCT 2021
+3 TIME 00:16:08
+0 @I0217@ INDI
+1 NAME Heloise /Beaufort/
+2 GIVN Heloise
+2 SURN Beaufort
+1 NAME Heloise /Lestrange/
+2 TYPE married
+2 GIVN Heloise
+2 SURN Lestrange
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Lestrange_family
+1 SEX F
+1 FAMS @F0063@
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 20:26:25
+0 @I0218@ INDI
+1 NAME Falco /Lestrange/
+2 GIVN Falco
+2 SURN Lestrange
+1 SEX M
+1 FAMC @F0063@
+2 PEDI birth
+1 FAMS @F0064@
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 18:42:53
+0 @I0219@ INDI
+1 NAME Corvus /Lestrange/ II
+2 GIVN Corvus
+2 SURN Lestrange
+2 NSFX II
+1 SEX M
+1 FAMC @F0063@
+2 PEDI birth
+1 FAMS @F0065@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Corvus_Lestrange_(II)
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 18:52:38
+0 @I0220@ INDI
+1 NAME Minette /Rosier/
+2 GIVN Minette
+2 SURN Rosier
+1 NAME Minette /Lestrange/
+2 TYPE married
+2 GIVN Minette
+2 SURN Lestrange
+1 SEX F
+1 FAMS @F0065@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Minette_Lestrange
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 18:52:38
+0 @I0221@ INDI
+1 NAME Eglantine /Lestrange/
+2 GIVN Eglantine
+2 SURN Lestrange
+1 SEX F
+1 FAMC @F0064@
+2 PEDI birth
+1 FAMS @F0066@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Salom%C3%A9_Lestrange
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 18:57:02
+0 @I0222@ INDI
+1 NAME Salomé /Volant/
+2 GIVN Salomé
+2 SURN Volant
+1 NAME Salomé /Lestrange/
+2 TYPE married
+2 GIVN Salomé
+2 SURN Lestrange
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Salom%C3%A9_Lestrange
+1 SEX F
+1 FAMS @F0064@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Salom%C3%A9_Lestrange
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 18:42:18
+0 @I0223@ INDI
+1 NAME Leonie /Lestrange/
+2 GIVN Leonie
+2 SURN Lestrange
+1 NAME Leonie /Tremblay/
+2 TYPE married
+2 GIVN Leonie
+2 SURN Tremblay
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Leonie_Tremblay
+1 SEX F
+1 FAMC @F0064@
+2 PEDI birth
+1 FAMS @F0068@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Leonie_Tremblay
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 19:30:30
+0 @I0224@ INDI
+1 NAME Manon /Lestrange/
+2 GIVN Manon
+2 SURN Lestrange
+1 NAME Manon /Perrot/
+2 TYPE married
+2 GIVN Manon
+2 SURN Perrot
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Manon_Perrot
+1 SEX F
+1 FAMC @F0065@
+2 PEDI birth
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Manon_Perrot
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 18:52:38
+0 @I0225@ INDI
+1 NAME Josette /Lestrange/
+2 GIVN Josette
+2 SURN Lestrange
+1 NAME Josette /Gage/
+2 TYPE married
+2 GIVN Josette
+2 SURN Gage
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Josette_Gage
+1 SEX F
+1 FAMC @F0065@
+2 PEDI birth
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Josette_Gage
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 18:52:38
+0 @I0226@ INDI
+1 NAME Corvus /Lestrange/ III
+2 GIVN Corvus
+2 SURN Lestrange
+2 NSFX III
+1 SEX M
+1 FAMC @F0065@
+2 PEDI birth
+1 FAMS @F0066@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Corvus_Lestrange_(III)
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 18:57:02
+0 @I0227@ INDI
+1 NAME Corvus /Lestrange/ IV
+2 GIVN Corvus
+2 SURN Lestrange
+2 NSFX IV
+1 SEX M
+1 BIRT
+2 DATE BEF 1879
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Corvus_Lestrange_(IV)
+1 DEAT
+2 DATE BEF 1927
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Corvus_Lestrange_(IV)
+1 FAMC @F0066@
+2 PEDI birth
+1 FAMS @F0067@
+1 FAMS @F0069@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Corvus_Lestrange_(IV)
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 19:43:13
+0 @I0228@ INDI
+1 NAME Laurena /Kama/
+2 TYPE married
+2 GIVN Laurena
+2 SURN Kama
+1 SEX F
+1 BIRT
+2 DATE BEF 1867
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Laurena_Kama
+1 DEAT
+2 DATE BET SEP 1896 AND 30 APR 1897
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Laurena_Kama
+1 FAMS @F0067@
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 19:21:24
+0 @I0229@ INDI
+1 NAME Leta /Lestrange/
+2 GIVN Leta
+2 SURN Lestrange
+1 SEX F
+1 BIRT
+2 DATE BET SEP 1896 AND 30 APR 1897
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Leta_Lestrange
+1 DEAT
+2 DATE BET 1 SEP 1927 AND 15 SEP 1927
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Leta_Lestrange
+1 EVEN
+2 TYPE Engagement
+2 DATE BEF 1927
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Leta_Lestrange
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1908
+1 FAMC @F0067@
+2 PEDI birth
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 19:21:24
+0 @I0230@ INDI
+1 NAME Bernard /Tremblay/
+2 GIVN Bernard
+2 SURN Tremblay
+1 SEX M
+1 FAMS @F0068@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Bernard_Tremblay
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 19:30:30
+0 @I0231@ INDI
+1 NAME Clarisse /Tremblay/
+2 GIVN Clarisse
+2 SURN Tremblay
+1 NAME Clarisse /Lestrange/
+2 TYPE married
+2 GIVN Clarisse
+2 SURN Lestrange
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Clarisse_Lestrange
+1 SEX F
+1 BIRT
+2 DATE BEF MAR 1880
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Clarisse_Lestrange
+1 FAMC @F0068@
+2 PEDI birth
+1 FAMS @F0069@
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 19:43:13
+0 @I0232@ INDI
+1 NAME Corvus /Lestrange/ V
+2 GIVN Corvus
+2 SURN Lestrange
+2 NSFX V
+1 SEX M
+1 BIRT
+2 DATE 1901
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Corvus_Lestrange_(V)
+1 DEAT
+2 DATE 1901
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Corvus_Lestrange_(V)
+1 FAMC @F0069@
+2 PEDI birth
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 19:43:13
+0 @I0233@ INDI
+1 NAME  /Lestrange/
+2 SURN Lestrange
+1 SEX M
+1 BIRT
+2 DATE BET 1920 AND 1929
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Lestrange
+1 FAMS @F0070@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Gang_of_Slytherins
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Lestrange
+1 NOTE @N0023@
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 20:21:01
+0 @I0234@ INDI
+1 NAME  /Dursley/
+2 SURN Dursley
+1 SEX M
+1 FAMS @F0038@
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 23:47:23
+0 @I0235@ INDI
+1 NAME  /Finnigan/
+2 SURN Finnigan
+1 SEX M
+1 FAMS @F0048@
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 23:49:50
+0 @I0236@ INDI
+1 NAME Cyrille /Lestrange/
+2 GIVN Cyrille
+2 SURN Lestrange
+1 SEX M
+1 FAMC @F0062@
+2 PEDI birth
+1 FAMS @F0071@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Cyrille_Lestrange_(I)
+1 CHAN
+2 DATE 21 OCT 2021
+3 TIME 00:21:02
+0 @I0237@ INDI
+1 NAME Darenne /Moreau/
+2 GIVN Darenne
+2 SURN Moreau
+1 NAME Darenne /Lestrange/
+2 TYPE married
+2 GIVN Darenne
+2 SURN Lestrange
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Darenne_Lestrange
+1 SEX F
+1 FAMS @F0071@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Darenne_Lestrange
+1 CHAN
+2 DATE 21 OCT 2021
+3 TIME 00:21:02
+0 @I0238@ INDI
+1 NAME Cyrille /Lestrange/ II
+2 GIVN Cyrille
+2 SURN Lestrange
+2 NSFX II
+1 SEX M
+1 FAMC @F0071@
+2 PEDI birth
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Cyrille_Lestrange_(II)
+1 CHAN
+2 DATE 21 OCT 2021
+3 TIME 00:31:12
+0 @I0239@ INDI
+1 NAME Fulcran /Lestrange/
+2 GIVN Fulcran
+2 SURN Lestrange
+1 SEX M
+1 FAMC @F0071@
+2 PEDI birth
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Fulcran_Lestrange_(I)
+1 CHAN
+2 DATE 21 OCT 2021
+3 TIME 00:31:12
+0 @I0240@ INDI
+1 NAME Cedric /Diggory/
+2 GIVN Cedric
+2 SURN Diggory
+2 SOUR @S0041@
+3 PAGE p. 174
+3 QUAY 3
+3 DATA
+4 DATE 1999
+3 NOTE @N0025@
+1 SEX M
+1 DEAT
+2 DATE 24 JUN 1995
+2 SOUR @S0042@
+3 PAGE Kindle Locations 7585-7586
+3 NOTE @N0027@
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1989
+2 SOUR @S0041@
+3 PAGE p. 174
+3 QUAY 3
+3 DATA
+4 DATE 1999
+3 NOTE @N0025@
+1 FAMC @F0072@
+2 PEDI birth
+1 SOUR @S0041@
+2 PAGE p. 174
+2 QUAY 3
+2 DATA
+3 DATE 1999
+2 NOTE @N0025@
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:10:48
+0 @I0241@ INDI
+1 NAME Amos /Diggory/
+2 GIVN Amos
+2 SURN Diggory
+1 SEX M
+1 FAMS @F0072@
+1 SOUR @S0042@
+2 PAGE Kindle Locations 1151-1152
+2 QUAY 3
+2 DATA
+3 DATE 2003
+2 NOTE @N0026@
+1 CHAN
+2 DATE 3 JAN 2022
+3 TIME 21:47:46
+0 @I0242@ INDI
+1 NAME Robert /McGonagall/
+2 GIVN Robert
+2 SURN McGonagall
+2 NPFX Reverend
+1 SEX M
+1 FAMS @F0073@
+1 SOUR @S0043@
+2 PAGE 7
+2 NOTE @N0029@
+1 CHAN
+2 DATE 4 JAN 2022
+3 TIME 17:16:17
+0 @I0243@ INDI
+1 NAME Isobel /Ross/
+2 GIVN Isobel
+2 SURN Ross
+1 SEX F
+1 FAMS @F0073@
+1 CHAN
+2 DATE 4 JAN 2022
+3 TIME 17:16:17
+0 @I0244@ INDI
+1 NAME Malcolm /McGonagall/
+2 GIVN Malcolm
+2 SURN McGonagall
+1 SEX M
+1 FAMC @F0073@
+2 PEDI birth
+1 SOUR @S0043@
+2 PAGE 8
+2 NOTE @N0031@
+1 CHAN
+2 DATE 4 JAN 2022
+3 TIME 17:17:28
+0 @I0245@ INDI
+1 NAME Robert /McGonagall/ Junior
+2 GIVN Robert
+2 SURN McGonagall
+2 NSFX Junior
+1 SEX M
+1 FAMC @F0073@
+2 PEDI birth
+1 SOUR @S0043@
+2 PAGE 8
+2 NOTE @N0031@
+1 CHAN
+2 DATE 4 JAN 2022
+3 TIME 17:17:40
+0 @I0246@ INDI
+1 NAME Horace Eugene Flaccus /Slughorn/
+2 GIVN Horace Eugene Flaccus
+2 SURN Slughorn
+1 SEX M
+1 OCCU Start of Horace Slughorn's teaching career
+2 DATE ABT 1931
+2 SOUR @S0049@
+3 PAGE 34
+3 DATA
+4 DATE 2016
+1 SOUR @S0045@
+2 PAGE https://www.insider.com/harry-potter-character-name-meaning-2017-4
+2 DATA
+3 DATE 14 NOV 2018
+1 CHAN
+2 DATE 11 AUG 2025
+3 TIME 23:32:38
+0 @I0247@ INDI
+1 NAME Tom Marvolo /Riddle/
+2 GIVN Tom Marvolo
+2 SURN Riddle
+2 SOUR @S0046@
+3 PAGE 221-222
+3 QUAY 3
+1 NAME Voldemort //
+2 TYPE aka
+2 GIVN Voldemort
+2 NPFX Lord
+2 SOUR @S0039@
+3 PAGE 314
+3 QUAY 3
+1 SEX M
+1 BIRT
+2 DATE EST 31 DEC 1926
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Tom_Riddle
+3 DATA
+4 DATE 23 FEB 2021
+2 SOUR @S0044@
+3 PAGE https://www.hp-lexicon.org/event/late-december-31-1926-tom-marvolo-riddle-is-born/
+3 QUAY 2
+1 DEAT
+2 DATE 2 MAY 1998
+2 SOUR @S0050@
+3 PAGE https://twitter.com/jk_rowling/status/1256511008320950273
+3 DATA
+4 DATE 2 MAY 2020
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE CAL 1 SEP 1938
+1 GRAD
+2 DATE CAL JUL 1945
+2 NOTE @N0050@
+1 FAMC @F0078@
+2 PEDI birth
+1 SOUR @S0046@
+2 PAGE 221-222
+2 QUAY 3
+1 SOUR @S0039@
+2 PAGE 244
+2 QUAY 3
+1 CHAN
+2 DATE 11 AUG 2025
+3 TIME 23:17:02
+0 @I0248@ INDI
+1 NAME Nobby /Leach/
+2 GIVN Nobby
+2 SURN Leach
+2 SOUR @S0038@
+3 PAGE https://www.rowlingindex.org/work/msmpm/
+3 QUAY 2
+3 DATA
+4 DATE 31 OCT 2014
+1 SEX M
+1 _ELEC
+2 DATE 1962
+2 SOUR @S0038@
+3 PAGE https://www.rowlingindex.org/work/msmpm/
+3 QUAY 2
+3 DATA
+4 DATE 31 OCT 2014
+1 RETI
+2 DATE 1968
+2 SOUR @S0038@
+3 PAGE https://www.rowlingindex.org/work/msmpm/
+3 QUAY 2
+3 DATA
+4 DATE 31 OCT 2014
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/msmpm/
+2 QUAY 2
+2 DATA
+3 DATE 31 OCT 2014
+1 CHAN
+2 DATE 8 JUL 2022
+3 TIME 21:48:12
+0 @I0249@ INDI
+1 NAME Tobias /Snape/
+2 GIVN Tobias
+2 SURN Snape
+2 SOUR @S0046@
+3 PAGE 530
+3 QUAY 3
+1 SEX M
+1 FAMS @F0074@
+1 SOUR @S0046@
+2 PAGE 530
+2 QUAY 3
+1 CHAN
+2 DATE 11 JUL 2022
+3 TIME 17:24:39
+0 @I0250@ INDI
+1 NAME Eileen /Prince/
+2 GIVN Eileen
+2 SURN Prince
+2 SOUR @S0046@
+3 PAGE 530
+3 QUAY 3
+1 NAME Eileen /Snape/
+2 TYPE married
+2 GIVN Eileen
+2 SURN Snape
+2 SOUR @S0046@
+3 PAGE 530
+3 QUAY 3
+1 SEX F
+1 FAMS @F0074@
+1 SOUR @S0046@
+2 PAGE 530
+2 QUAY 3
+1 CHAN
+2 DATE 11 JUL 2022
+3 TIME 17:24:39
+0 @I0251@ INDI
+1 NAME Rosalind Antigone /Bungs/
+2 TYPE Unknown
+2 GIVN Rosalind Antigone
+2 SURN Bungs
+1 SEX F
+1 SOUR @S0046@
+2 PAGE 530
+2 QUAY 3
+1 CHAN
+2 DATE 11 JUL 2022
+3 TIME 17:26:57
+0 @I0252@ INDI
+1 NAME Rupert /Brookstanton/
+2 GIVN Rupert
+2 SURN Brookstanton
+2 NICK Axebanger
+1 SEX M
+1 SOUR @S0046@
+2 PAGE 530
+2 QUAY 3
+1 CHAN
+2 DATE 11 JUL 2022
+3 TIME 17:27:48
+0 @I0253@ INDI
+1 NAME Sybill /Trelawney/
+2 GIVN Sybill
+2 SURN Trelawney
+1 SEX F
+1 BIRT
+2 DATE (9 MAR)
+2 SOUR @S0038@
+3 PAGE https://www.rowlingindex.org/work/stpm/
+3 DATA
+4 DATE 31 OCT 2014
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/stpm/
+2 DATA
+3 DATE 31 OCT 2014
+1 CHAN
+2 DATE 19 JUL 2022
+3 TIME 15:08:26
+0 @I0254@ INDI
+1 NAME Eldon /Elsrickle/
+2 GIVN Eldon
+2 SURN Elsrickle
+2 SOUR @S0047@
+3 PAGE https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript
+3 DATA
+4 DATE 12 NOV 2012
+1 SEX M
+1 SOUR @S0047@
+2 PAGE https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript
+2 DATA
+3 DATE 12 NOV 2012
+1 CHAN
+2 DATE 25 JUL 2022
+3 TIME 15:39:52
+0 @I0255@ INDI
+1 NAME Jarleth /Hobart/
+2 GIVN Jarleth
+2 SURN Hobart
+1 SEX M
+1 SOUR @S0047@
+2 PAGE https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript
+2 DATA
+3 DATE 12 NOV 2012
+1 CHAN
+2 DATE 25 JUL 2022
+3 TIME 15:41:23
+0 @I0256@ INDI
+1 NAME Garvin /Lügner/
+2 GIVN Garvin
+2 SURN Lügner
+2 SOUR @S0047@
+3 PAGE https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript
+3 DATA
+4 DATE 12 NOV 2012
+1 SEX M
+1 SOUR @S0047@
+2 PAGE https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript
+2 DATA
+3 DATE 12 NOV 2012
+1 CHAN
+2 DATE 25 JUL 2022
+3 TIME 15:43:08
+0 @I0257@ INDI
+1 NAME Blagdon /Blay/
+2 GIVN Blagdon
+2 SURN Blay
+2 SOUR @S0047@
+3 PAGE https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript
+3 DATA
+4 DATE 12 NOV 2012
+1 SEX M
+1 SOUR @S0047@
+2 PAGE https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript
+2 DATA
+3 DATE 12 NOV 2012
+1 CHAN
+2 DATE 25 JUL 2022
+3 TIME 15:44:34
+0 @I0258@ INDI
+1 NAME Malodora /Grymm/
+2 GIVN Malodora
+2 SURN Grymm
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Beautification_Potion
+3 QUAY 1
+3 DATA
+4 DATE 8 JAN 2022
+1 SEX F
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Beautification_Potion
+2 QUAY 1
+2 DATA
+3 DATE 8 JAN 2022
+1 CHAN
+2 DATE 25 JUL 2022
+3 TIME 17:56:25
+0 @I0259@ INDI
+1 NAME Eduardus Limette /Black/
+2 GIVN Eduardus Limette
+2 SURN Black
+1 SEX M
+1 BIRT
+2 DATE BET 1920 AND 1929
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Eduardus_Limette_Black
+3 QUAY 1
+3 DATA
+4 DATE 24 JUN 2022
+1 DEAT
+2 DATE 1899
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Eduardus_Limette_Black
+3 QUAY 1
+3 DATA
+4 DATE 24 JUN 2022
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Eduardus_Limette_Black
+2 QUAY 1
+2 DATA
+3 DATE 24 JUN 2022
+1 CHAN
+2 DATE 1 SEP 2022
+3 TIME 22:11:30
+0 @I0260@ INDI
+1 NAME Gellert /Grindelwald/
+2 GIVN Gellert
+2 SURN Grindelwald
+1 SEX M
+1 DEAT
+2 DATE MAR 1998
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Gellert_Grindelwald
+1 SOUR @S0002@
+2 PAGE 121
+1 CHAN
+2 DATE 16 SEP 2022
+3 TIME 16:38:40
+0 @I0261@ INDI
+1 NAME Kendra /Dumbledore/
+2 TYPE married
+2 GIVN Kendra
+2 SURN Dumbledore
+1 SEX F
+1 DEAT
+2 DATE 1899
+2 SOUR @S0002@
+3 PAGE 6
+1 FAMS @F0075@
+1 SOUR @S0002@
+2 PAGE 52
+1 NOTE @N0032@
+1 CHAN
+2 DATE 16 SEP 2022
+3 TIME 17:57:32
+0 @I0262@ INDI
+1 NAME Percival /Dumbledore/
+2 GIVN Percival
+2 SURN Dumbledore
+1 SEX M
+1 FAMS @F0075@
+1 SOUR @S0002@
+2 PAGE 6, 73
+1 NOTE @N0033@
+1 CHAN
+2 DATE 4 OCT 2023
+3 TIME 03:03:47
+0 @I0263@ INDI
+1 NAME Ariana /Dumbledore/
+2 GIVN Ariana
+2 SURN Dumbledore
+1 SEX F
+1 DEAT
+2 DATE 1899
+2 SOUR @S0002@
+3 PAGE 7
+1 FAMC @F0075@
+2 PEDI birth
+1 SOUR @S0002@
+2 PAGE 7
+1 CHAN
+2 DATE 4 OCT 2023
+3 TIME 03:07:09
+0 @I0264@ INDI
+1 NAME Pomona /Sprout/
+2 GIVN Pomona
+2 SURN Sprout
+1 SEX F
+1 BIRT
+2 DATE 15 MAY 1933
+2 SOUR @S0038@
+3 PAGE https://www.therowlinglibrary.com/tag/sprout/
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1944
+2 SOUR @S0038@
+3 PAGE https://www.therowlinglibrary.com/tag/sprout/
+1 CHAN
+2 DATE 16 SEP 2022
+3 TIME 20:10:01
+0 @I0265@ INDI
+1 NAME Elphinstone /Urquart/
+2 GIVN Elphinstone
+2 SURN Urquart
+1 SEX M
+1 FAMS @F0076@
+1 SOUR @S0043@
+2 PAGE 15
+1 CHAN
+2 DATE 16 SEP 2022
+3 TIME 20:39:07
+0 @I0266@ INDI
+1 NAME Gwenog /Jones/
+2 GIVN Gwenog
+2 SURN Jones
+1 SEX F
+1 BIRT
+2 DATE 1968
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Main_Page?file=Gwenog-Jones-CFC-WOTC.jpg
+2 SOUR @S0053@
+3 PAGE https://therowlinglibrary.com/jkrowling.com/textonly/en/wotm.html
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1979
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Gwenog_Jones
+1 CHAN
+2 DATE 5 NOV 2022
+3 TIME 22:16:29
+0 @I0267@ INDI
+1 NAME Mordicus /Egg/
+2 GIVN Mordicus
+2 SURN Egg
+1 SEX M
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/pmpbl/
+2 QUAY 2
+2 DATA
+3 DATE 18 OCT 2012
+1 CHAN
+2 DATE 21 NOV 2022
+3 TIME 22:05:00
+0 @I0268@ INDI
+1 NAME Cantankerus /Nott/
+2 GIVN Cantankerus
+2 SURN Nott
+1 SEX M
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/pmpbl/
+2 QUAY 2
+2 DATA
+3 DATE 18 OCT 2012
+1 CHAN
+2 DATE 21 NOV 2022
+3 TIME 22:06:01
+0 @I0269@ INDI
+1 NAME Godric /Gryffindor/
+2 GIVN Godric
+2 SURN Gryffindor
+1 SEX M
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/ppshat/
+2 QUAY 3
+2 DATA
+3 DATE 6 SEP 2016
+1 CHAN
+2 DATE 21 NOV 2022
+3 TIME 22:13:48
+0 @I0270@ INDI
+1 NAME Silvanus /Kettleburn/
+2 GIVN Silvanus
+2 SURN Kettleburn
+1 SEX M
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/ppsket/
+2 DATA
+3 DATE 6 SEP 2016
+1 CHAN
+2 DATE 21 NOV 2022
+3 TIME 22:22:53
+0 @I0271@ INDI
+1 NAME Gormlaith /Gaunt/
+2 GIVN Gormlaith
+2 SURN Gaunt
+1 SEX F
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/pmilv/
+2 QUAY 2
+2 DATA
+3 DATE 29 JUN 2016
+1 CHAN
+2 DATE 21 NOV 2022
+3 TIME 22:24:17
+0 @I0272@ INDI
+1 NAME Libatius /Borage/
+2 GIVN Libatius
+2 SURN Borage
+1 SEX M
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/pmcbruxo/
+2 QUAY 2
+2 DATA
+3 DATE 31 JAN 2016
+1 CHAN
+2 DATE 21 NOV 2022
+3 TIME 22:29:53
+0 @I0273@ INDI
+1 NAME Adrian /Tutley/
+2 GIVN Adrian
+2 SURN Tutley
+1 SEX M
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/pmuag/
+2 QUAY 2
+2 DATA
+3 DATE 31 JAN 2016
+1 CHAN
+2 DATE 21 NOV 2022
+3 TIME 22:31:41
+0 @I0274@ INDI
+1 NAME Orford /Umbridge/
+2 GIVN Orford
+2 SURN Umbridge
+1 SEX M
+1 FAMS @F0077@
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/dupm/
+2 QUAY 2
+2 DATA
+3 DATE 31 OCT 2014
+1 CHAN
+2 DATE 21 NOV 2022
+3 TIME 23:28:02
+0 @I0275@ INDI
+1 NAME Ellen /Cracknell/
+2 GIVN Ellen
+2 SURN Cracknell
+1 SEX F
+1 FAMS @F0077@
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/dupm/
+2 QUAY 2
+2 DATA
+3 DATE 31 OCT 2014
+1 CHAN
+2 DATE 21 NOV 2022
+3 TIME 23:28:02
+0 @I0276@ INDI
+1 NAME Rolf /Scamander/
+2 GIVN Rolf
+2 SURN Scamander
+1 SEX M
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/pmqwcdpr/
+2 QUAY 2
+2 DATA
+3 DATE 11 JUL 2014
+1 CHAN
+2 DATE 21 NOV 2022
+3 TIME 23:35:24
+0 @I0277@ INDI
+1 NAME Peter /Pettigrew/
+2 GIVN Peter
+2 SURN Pettigrew
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1970
+1 CHAN
+2 DATE 30 NOV 2022
+3 TIME 19:38:34
+0 @I0278@ INDI
+1 NAME Kingsley /Shacklebolt/
+2 GIVN Kingsley
+2 SURN Shacklebolt
+1 SEX M
+1 SOUR @S0049@
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/msmpm/
+2 QUAY 2
+2 DATA
+3 DATE 31 OCT 2014
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Main_Page?file=KingsleyFile.png
+1 CHAN
+2 DATE 5 DEC 2022
+3 TIME 22:44:15
+0 @I0279@ INDI
+1 NAME Poppy /Pomfrey/
+2 TYPE married
+2 GIVN Poppy
+2 SURN Pomfrey
+2 NPFX Madam
+1 SEX F
+1 CHAN
+2 DATE 24 JAN 2023
+3 TIME 16:37:34
+0 @I0280@ INDI
+1 NAME Millicent /Bagnold/
+2 TYPE Unknown
+2 GIVN Millicent
+2 SURN Bagnold
+1 SEX F
+1 CHAN
+2 DATE 24 JAN 2023
+3 TIME 16:49:45
+0 @I0281@ INDI
+1 NAME Caradoc /Dearborn/
+2 GIVN Caradoc
+2 SURN Dearborn
+1 SEX M
+1 SOUR @S0033@
+2 PAGE American Kindle Location 2592
+1 CHAN
+2 DATE 9 MAR 2023
+3 TIME 23:30:47
+0 @I0282@ INDI
+1 NAME Marlene /MkKinnon/
+2 GIVN Marlene
+2 SURN MkKinnon
+1 SEX F
+1 SOUR @S0033@
+2 PAGE American Kindle Location 2584
+1 CHAN
+2 DATE 9 MAR 2023
+3 TIME 23:33:55
+0 @I0283@ INDI
+1 NAME Emmeline /Vance/
+2 TYPE Unknown
+2 GIVN Emmeline
+2 SURN Vance
+1 SEX F
+1 SOUR @S0033@
+2 PAGE American Kindle Locations 2588-2589
+1 CHAN
+2 DATE 9 MAR 2023
+3 TIME 23:35:03
+0 @I0284@ INDI
+1 NAME Elphias /Doge/
+2 GIVN Elphias
+2 SURN Doge
+1 SEX M
+1 SOUR @S0033@
+2 PAGE American Kindle Location 2593
+1 CHAN
+2 DATE 9 MAR 2023
+3 TIME 23:37:06
+0 @I0285@ INDI
+1 NAME Dorcas /Meadowes/
+2 TYPE Unknown
+2 GIVN Dorcas
+2 SURN Meadowes
+1 SEX F
+1 SOUR @S0033@
+2 PAGE American Kindle Location 2597
+1 CHAN
+2 DATE 9 MAR 2023
+3 TIME 23:39:01
+0 @I0286@ INDI
+1 NAME Cho /Chang/
+2 GIVN Cho
+2 SURN Chang
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1990
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Cormac_McLaggen
+1 SOUR @S0033@
+2 PAGE American Kindle Locations 2786-2787
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:26:06
+0 @I0287@ INDI
+1 NAME Alicia /Spinnet/
+2 GIVN Alicia
+2 SURN Spinnet
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1989
+2 SOUR @S0041@
+3 PAGE p. 174
+3 QUAY 3
+3 DATA
+4 DATE 1999
+3 NOTE @N0025@
+1 SOUR @S0039@
+2 PAGE p. 107
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:09:59
+0 @I0288@ INDI
+1 NAME Marcus /Flint/
+2 GIVN Marcus
+2 SURN Flint
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1986
+1 SOUR @S0039@
+2 PAGE 110
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:07:34
+0 @I0289@ INDI
+1 NAME Colin /Creevey/
+2 GIVN Colin
+2 SURN Creevey
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1992
+2 SOUR @S0039@
+3 PAGE Location 1051
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Luna_Lovegood
+2 SOUR @S0039@
+3 PAGE 96
+1 SOUR @S0039@
+2 PAGE 96
+1 CHAN
+2 DATE 10 MAR 2023
+3 TIME 00:00:03
+0 @I0290@ INDI
+1 NAME Levina /Monkstanley/
+2 TYPE Unknown
+2 GIVN Levina
+2 SURN Monkstanley
+1 SEX F
+1 BIRT
+2 DATE BEF 1772
+2 SOUR @S0047@
+3 PAGE https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript
+3 DATA
+4 DATE 12 NOV 2012
+1 CHAN
+2 DATE 2 OCT 2023
+3 TIME 02:24:24
+0 @I0291@ INDI
+1 NAME Gabrielle /Delacour/
+2 GIVN Gabrielle
+2 SURN Delacour
+1 SEX F
+1 BIRT
+2 DATE BET 31 JUL 1985 AND 31 JUL 1986
+2 SOUR @S0002@
+3 PAGE 44
+1 SOUR @S0002@
+2 PAGE 44
+1 CHAN
+2 DATE 2 OCT 2023
+3 TIME 02:32:47
+0 @I0292@ INDI
+1 NAME  /Patil/
+2 SURN Patil
+1 SEX M
+1 FAMS @F0049@
+1 CHAN
+2 DATE 4 OCT 2023
+3 TIME 03:36:21
+0 @I0293@ INDI
+1 NAME Filus /Flitwick/
+2 GIVN Filus
+2 SURN Flitwick
+1 SEX M
+1 CHAN
+2 DATE 4 OCT 2023
+3 TIME 03:42:12
+0 @I0294@ INDI
+1 NAME Queenie /Goldstein/
+2 GIVN Queenie
+2 SURN Goldstein
+1 SEX F
+1 BIRT
+2 DATE 6 JAN 1903
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Main_Page?file=QueenieGoldsteinsID.jpg
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Main_Page?file=QueenieGoldsteinsID.jpg
+1 CHAN
+2 DATE 4 OCT 2023
+3 TIME 03:47:10
+0 @I0295@ INDI
+1 NAME Edward Remus /Lupin/
+2 GIVN Edward Remus
+2 SURN Lupin
+2 NICK Ted
+1 SEX M
+1 BIRT
+2 DATE APR 1998
+2 SOUR @S0002@
+3 PAGE 213
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE CAL 1 SEP 2009
+2 SOUR @S0002@
+3 PAGE 213
+1 FAMC @F0034@
+2 PEDI birth
+1 SOUR @S0002@
+2 PAGE 213
+1 CHAN
+2 DATE 4 OCT 2023
+3 TIME 04:01:26
+0 @I0296@ INDI
+1 NAME Cormac /McLaggen/
+2 GIVN Cormac
+2 SURN McLaggen
+1 SEX M
+1 BIRT
+2 DATE BET 1 SEP 1978 AND 31 AUG 1979
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Cormac_McLaggen
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1990
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Cormac_McLaggen
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:29:15
+0 @I0298@ INDI
+1 NAME Orabella /Nuttley/
+2 TYPE Unknown
+2 GIVN Orabella
+2 SURN Nuttley
+1 SEX F
+1 SOUR @S0047@
+2 PAGE https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript
+2 DATA
+3 DATE 12 NOV 2012
+1 CHAN
+2 DATE 4 OCT 2023
+3 TIME 04:18:00
+0 @I0299@ INDI
+1 NAME Salazar /Slytherin/
+2 GIVN Salazar
+2 SURN Slytherin
+1 SEX M
+1 BIRT
+2 DATE BEF 1 SEP 890
+2 SOUR @S0000@
+3 PAGE 150
+1 CHAN
+2 DATE 4 OCT 2023
+3 TIME 04:52:30
+0 @I0300@ INDI
+1 NAME Rita /Skeeter/
+2 TYPE Unknown
+2 GIVN Rita
+2 SURN Skeeter
+1 SEX F
+1 CHAN
+2 DATE 11 OCT 2023
+3 TIME 03:16:15
+0 @I0301@ INDI
+1 NAME Cuthbert /Binns/
+2 GIVN Cuthbert
+2 SURN Binns
+1 SEX M
+1 CHAN
+2 DATE 11 OCT 2023
+3 TIME 03:26:33
+0 @I0302@ INDI
+1 NAME Gilderoy /Lockhart/
+2 GIVN Gilderoy
+2 SURN Lockhart
+1 SEX M
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/pmgl/
+2 QUAY 2
+2 DATA
+3 DATE 3 OCT 2013
+1 CHAN
+2 DATE 11 APR 2024
+3 TIME 19:14:45
+0 @I0303@ INDI
+1 NAME  /Riddle/
+2 SURN Riddle
+2 NICK Tom
+1 SEX M
+1 FAMS @F0078@
+1 SOUR @S0042@
+2 PAGE Chapter 33
+2 QUAY 3
+1 CHAN
+2 DATE 12 APR 2024
+3 TIME 00:47:12
+0 @I0304@ INDI
+1 NAME Merope /Gaunt/
+2 GIVN Merope
+2 SURN Gaunt
+1 SEX F
+1 DEAT
+2 DATE 31 DEC 1926
+2 SOUR @S0046@
+3 PAGE 221
+3 QUAY 1
+2 SOUR @S0044@
+3 PAGE https://www.hp-lexicon.org/event/late-december-31-1926-tom-marvolo-riddle-is-born/
+3 QUAY 2
+1 FAMC @F0079@
+2 PEDI birth
+1 FAMS @F0078@
+1 SOUR @S0046@
+2 PAGE 178
+2 QUAY 3
+1 CHAN
+2 DATE 12 APR 2024
+3 TIME 00:50:38
+0 @I0305@ INDI
+1 NAME Marvolo /Gaunt/
+2 GIVN Marvolo
+2 SURN Gaunt
+1 SEX M
+1 FAMS @F0079@
+1 SOUR @S0046@
+2 PAGE 178
+2 QUAY 3
+1 CHAN
+2 DATE 12 APR 2024
+3 TIME 00:50:38
+0 @I0306@ INDI
+1 NAME Morfin /Gaunt/
+2 GIVN Morfin
+2 SURN Gaunt
+1 SEX M
+1 FAMC @F0079@
+2 PEDI birth
+1 SOUR @S0046@
+2 PAGE 178
+2 QUAY 3
+1 CHAN
+2 DATE 12 APR 2024
+3 TIME 00:50:38
+0 @I0307@ INDI
+1 NAME Lucian /Bole/
+2 GIVN Lucian
+2 SURN Bole
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1988
+2 SOUR @S0039@
+3 PAGE 110
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 22:53:41
+0 @I0308@ INDI
+1 NAME Peregrine /Derrick/
+2 GIVN Peregrine
+2 SURN Derrick
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1988
+2 SOUR @S0039@
+3 PAGE 110
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 22:55:12
+0 @I0309@ INDI
+1 NAME Elora /Dunn/
+2 GIVN Elora
+2 SURN Dunn
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1988
+2 SOUR @S0039@
+3 PAGE 110
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 22:56:12
+0 @I0310@ INDI
+1 NAME Beatrice /Haywood/
+2 GIVN Beatrice
+2 SURN Haywood
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1988
+2 SOUR @S0039@
+3 PAGE 110
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 22:57:18
+0 @I0311@ INDI
+1 NAME Penelope /Clearwater/
+2 GIVN Penelope
+2 SURN Clearwater
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1987
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 22:59:08
+0 @I0312@ INDI
+1 NAME Oliver /Wood/
+2 GIVN Oliver
+2 SURN Wood
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1987
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:06:58
+0 @I0313@ INDI
+1 NAME Angelina /Johnson/
+2 GIVN Angelina
+2 SURN Johnson
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1989
+2 SOUR @S0041@
+3 PAGE p. 174
+3 QUAY 3
+3 DATA
+4 DATE 1999
+3 NOTE @N0025@
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:09:08
+0 @I0314@ INDI
+1 NAME Lee /Jordan/
+2 GIVN Lee
+2 SURN Jordan
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1989
+2 SOUR @S0041@
+3 PAGE p. 174
+3 QUAY 3
+3 DATA
+4 DATE 1999
+3 NOTE @N0025@
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:11:48
+0 @I0315@ INDI
+1 NAME Patricia /Stimpson/
+2 GIVN Patricia
+2 SURN Stimpson
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1989
+2 SOUR @S0041@
+3 PAGE p. 174
+3 QUAY 3
+3 DATA
+4 DATE 1999
+3 NOTE @N0025@
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:12:46
+0 @I0316@ INDI
+1 NAME Kenneth /Towler/
+2 GIVN Kenneth
+2 SURN Towler
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1989
+2 SOUR @S0041@
+3 PAGE p. 174
+3 QUAY 3
+3 DATA
+4 DATE 1999
+3 NOTE @N0025@
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:13:51
+0 @I0317@ INDI
+1 NAME Leanne //
+2 GIVN Leanne
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1990
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Cormac_McLaggen
+1 SOUR @S0046@
+2 PAGE 207
+2 QUAY 2
+1 CHAN
+2 DATE 8 AUG 2025
+3 TIME 04:33:28
+0 @I0318@ INDI
+1 NAME Marcus /Belby/
+2 GIVN Marcus
+2 SURN Belby
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1990
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Cormac_McLaggen
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:17:09
+0 @I0319@ INDI
+1 NAME Katie /Bell/
+2 TYPE Unknown
+2 GIVN Katie
+2 SURN Bell
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1990
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Cormac_McLaggen
+1 CHAN
+2 DATE 6 AUG 2025
+3 TIME 03:55:43
+0 @I0320@ INDI
+1 NAME  /Carmichael/
+2 SURN Carmichael
+2 NICK Eddie
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1990
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Cormac_McLaggen
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:25:18
+0 @I0321@ INDI
+1 NAME  /Fawcett/
+2 SURN Fawcett
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1990
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Cormac_McLaggen
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:28:26
+0 @I0322@ INDI
+1 NAME  /Stebbins/
+2 SURN Stebbins
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1990
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Cormac_McLaggen
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:30:12
+0 @I0323@ INDI
+1 NAME  /Summers/
+2 SURN Summers
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1990
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Cormac_McLaggen
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:30:56
+0 @I0324@ INDI
+1 NAME  /Harper/
+2 SURN Harper
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1992
+2 SOUR @S0039@
+3 PAGE Location 1051
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Luna_Lovegood
+2 SOUR @S0039@
+3 PAGE 96
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:54:46
+0 @I0325@ INDI
+1 NAME Romilda /Vane/
+2 GIVN Romilda
+2 SURN Vane
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1993
+2 SOUR @S0038@
+3 PAGE https://www.rowlingindex.org/work/dmpm/
+1 CHAN
+2 DATE 22 DEC 2024
+3 TIME 23:56:06
+0 @I0326@ INDI
+1 NAME Stewart /Ackerley/
+2 GIVN Stewart
+2 SURN Ackerley
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1994
+1 CHAN
+2 DATE 23 DEC 2024
+3 TIME 00:01:15
+0 @I0327@ INDI
+1 NAME Malcolm /Baddock/
+2 GIVN Malcolm
+2 SURN Baddock
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1994
+1 CHAN
+2 DATE 23 DEC 2024
+3 TIME 00:03:01
+0 @I0328@ INDI
+1 NAME Malcolm /Branstone/
+2 GIVN Malcolm
+2 SURN Branstone
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1994
+1 CHAN
+2 DATE 23 DEC 2024
+3 TIME 00:12:53
+0 @I0329@ INDI
+1 NAME Owen /Cauldwell/
+2 GIVN Owen
+2 SURN Cauldwell
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1994
+1 CHAN
+2 DATE 23 DEC 2024
+3 TIME 00:13:50
+0 @I0330@ INDI
+1 NAME Dennis /Creevey/
+2 GIVN Dennis
+2 SURN Creevey
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1994
+1 CHAN
+2 DATE 23 DEC 2024
+3 TIME 00:14:46
+0 @I0331@ INDI
+1 NAME Emma /Dobbs/
+2 GIVN Emma
+2 SURN Dobbs
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1994
+1 CHAN
+2 DATE 23 DEC 2024
+3 TIME 00:15:36
+0 @I0332@ INDI
+1 NAME Natalie /MacDonald/
+2 GIVN Natalie
+2 SURN MacDonald
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1994
+1 CHAN
+2 DATE 23 DEC 2024
+3 TIME 00:20:25
+0 @I0333@ INDI
+1 NAME Laura /Madley/
+2 GIVN Laura
+2 SURN Madley
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1994
+1 CHAN
+2 DATE 23 DEC 2024
+3 TIME 00:21:14
+0 @I0334@ INDI
+1 NAME Graham /Pritchard/
+2 GIVN Graham
+2 SURN Pritchard
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1994
+1 CHAN
+2 DATE 23 DEC 2024
+3 TIME 00:23:48
+0 @I0335@ INDI
+1 NAME James /Peaks/
+2 GIVN James
+2 SURN Peaks
+2 NICK Jimmy
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1994
+1 CHAN
+2 DATE 23 DEC 2024
+3 TIME 00:25:02
+0 @I0336@ INDI
+1 NAME Orla /Quirke/
+2 GIVN Orla
+2 SURN Quirke
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1994
+1 CHAN
+2 DATE 23 DEC 2024
+3 TIME 00:25:44
+0 @I0337@ INDI
+1 NAME Kevin /Whitby/
+2 GIVN Kevin
+2 SURN Whitby
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1994
+1 CHAN
+2 DATE 23 DEC 2024
+3 TIME 00:26:27
+0 @I0338@ INDI
+1 NAME Nigel /Wolpert/
+2 GIVN Nigel
+2 SURN Wolpert
+1 SEX M
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1994
+1 CHAN
+2 DATE 23 DEC 2024
+3 TIME 00:27:15
+0 @I0339@ INDI
+1 NAME Alys //
+2 GIVN Alys
+1 SEX F
+1 EVEN
+2 TYPE Hogwarts Sorting
+2 DATE 1 SEP 1996
+1 CHAN
+2 DATE 23 DEC 2024
+3 TIME 00:29:47
+0 @I0340@ INDI
+1 NAME Eloise /Midgen/
+2 GIVN Eloise
+2 SURN Midgen
+1 SEX F
+1 CHAN
+2 DATE 23 DEC 2024
+3 TIME 00:30:40
+0 @I0341@ INDI
+1 NAME Graham /Montague/
+2 GIVN Graham
+2 SURN Montague
+1 SEX M
+1 CHAN
+2 DATE 23 DEC 2024
+3 TIME 00:31:10
+0 @I0342@ INDI
+1 NAME Demelza /Robins/
+2 GIVN Demelza
+2 SURN Robins
+1 SEX F
+1 CHAN
+2 DATE 23 DEC 2024
+3 TIME 00:31:39
+0 @I0343@ INDI
+1 NAME Nagini //
+2 GIVN Nagini
+1 SEX F
+1 DEAT
+2 DATE 2 MAY 1998
+2 SOUR @S0002@
+3 PAGE 303
+3 QUAY 2
+3 DATA
+4 DATE 2007
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Nagini
+2 QUAY 1
+2 DATA
+3 DATE 19 FEB 2025
+1 SOUR @S0051@
+2 PAGE https://www.the-leaky-cauldron.org/2006/12/24/heart-of-ravenclaw-deadly-veil-never-contenders-for-hp-title/
+2 QUAY 1
+2 DATA
+3 DATE 24 DEC 2006
+1 NOTE @N0037@
+1 CHAN
+2 DATE 7 APR 2025
+3 TIME 23:11:44
+0 @I0344@ INDI
+1 NAME Alastor /Moody/
+2 GIVN Alastor
+2 SURN Moody
+1 SEX M
+1 CHAN
+2 DATE 8 APR 2025
+3 TIME 00:27:23
+0 @I0345@ INDI
+1 NAME Miranda /Goshawk/
+2 TYPE Unknown
+2 GIVN Miranda
+2 SURN Goshawk
+1 SEX F
+1 CHAN
+2 DATE 9 APR 2025
+3 TIME 04:36:44
+0 @I0346@ INDI
+1 NAME Fenrir /Greyback/
+2 GIVN Fenrir
+2 SURN Greyback
+1 SEX M
+1 SOUR @S0046@
+2 PAGE 105
+2 QUAY 2
+1 CHAN
+2 DATE 8 AUG 2025
+3 TIME 05:24:09
+0 @I0347@ INDI
+1 NAME Helga /Hufflepuff/
+2 TYPE Unknown
+2 GIVN Helga
+2 SURN Hufflepuff
+1 SEX F
+1 CHAN
+2 DATE 8 AUG 2025
+3 TIME 05:39:46
+0 @I0348@ INDI
+1 NAME Dirk /Cresswell/
+2 TYPE Unknown
+2 GIVN Dirk
+2 SURN Cresswell
+1 SEX M
+1 CHAN
+2 DATE 8 AUG 2025
+3 TIME 23:47:46
+0 @I0349@ INDI
+1 NAME Ralston /Potter/
+2 GIVN Ralston
+2 SURN Potter
+1 SEX M
+1 BIRT
+2 DATE BEF 1 JAN 1612
+2 SOUR @S0052@
+3 PAGE https://www.rowlingindex.org/work/pmpfam/
+3 DATA
+4 DATE 22 SEP 2015
+1 EVEN Ralston Potter seated in the Wizengamot
+2 TYPE Government
+2 DATE 1612
+2 NOTE @N0054@
+2 SOUR @S0052@
+3 PAGE https://www.rowlingindex.org/work/pmpfam/
+3 DATA
+4 DATE 22 SEP 2015
+1 SOUR @S0052@
+2 PAGE https://www.rowlingindex.org/work/pmpfam/
+2 DATA
+3 DATE 22 SEP 2015
+1 CHAN
+2 DATE 12 AUG 2025
+3 TIME 04:00:03
+0 @I0350@ INDI
+1 NAME Mnemone /Radford/
+2 TYPE Unknown
+2 GIVN Mnemone
+2 SURN Radford
+1 SEX F
+1 BIRT
+2 DATE 1562
+2 SOUR @S0053@
+3 PAGE https://therowlinglibrary.com/jkrowling.com/textonly/en/wotm.html
+1 DEAT
+2 DATE 1649
+2 SOUR @S0053@
+3 PAGE https://therowlinglibrary.com/jkrowling.com/textonly/en/wotm.html
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/wmdw/
+2 DATA
+3 DATE BET 5 MAY 2004 AND 1 OCT 2007
+1 NOTE @N0048@
+1 CHAN
+2 DATE 11 AUG 2025
+3 TIME 21:25:56
+0 @I0351@ INDI
+1 NAME Armand /Malfoy/
+2 GIVN Armand
+2 SURN Malfoy
+1 SEX M
+1 BIRT
+2 DATE BEF 1066
+2 SOUR @S0054@
+3 PAGE https://www.rowlingindex.org/work/pmmf/
+3 DATA
+4 DATE 10 JUL 2012
+1 PROP
+2 DATE AFT 25 DEC 1066
+2 NOTE @N0052@
+2 SOUR @S0055@
+3 PAGE https://wikipedia.org/wiki/William_the_Conqueror
+3 DATA
+4 DATE 7 AUG 2025
+2 SOUR @S0054@
+3 PAGE https://www.rowlingindex.org/work/pmmf/
+3 DATA
+4 DATE 10 JUL 2012
+1 SOUR @S0054@
+2 PAGE https://www.rowlingindex.org/work/pmmf/
+2 DATA
+3 DATE 10 JUL 2012
+1 CHAN
+2 DATE 12 AUG 2025
+3 TIME 03:35:50
+0 @I0352@ INDI
+1 NAME Nicholas /Mimsy-Porpington/
+2 GIVN Nicholas
+2 SURN Mimsy-Porpington
+2 NPFX Sir
+1 SEX M
+1 BIRT
+2 DATE BEF 1486
+2 SOUR @S0056@
+3 PAGE https://www.rowlingindex.org/work/pmhgh/
+1 EVEN Sir Nicholas de Mimsy-Porpington attends the court of Henry VII
+2 TYPE Court Attendance
+2 DATE 1486
+2 SOUR @S0056@
+3 PAGE https://www.rowlingindex.org/work/pmhgh/
+1 CHAN
+2 DATE 12 AUG 2025
+3 TIME 03:50:08
+0 @I0353@ INDI
+1 NAME Hector /Fawley/
+2 GIVN Hector
+2 SURN Fawley
+1 SEX M
+1 _ELEC
+2 DATE 1925
+2 NOTE @N0056@
+2 SOUR @S0057@
+3 PAGE https://www.rowlingindex.org/work/msmpm/
+3 DATA
+4 DATE 31 OCT 2014
+1 CHAN
+2 DATE 12 AUG 2025
+3 TIME 06:25:26
+0 @I0354@ INDI
+1 NAME Ulick /Gamp/
+2 GIVN Ulick
+2 SURN Gamp
+1 SEX M
+1 _ELEC
+2 DATE 1707
+2 SOUR @S0057@
+3 PAGE https://www.rowlingindex.org/work/msmpm/
+3 DATA
+4 DATE 31 OCT 2014
+1 SOUR @S0057@
+2 PAGE https://www.rowlingindex.org/work/msmpm/
+2 DATA
+3 DATE 31 OCT 2014
+1 CHAN
+2 DATE 12 AUG 2025
+3 TIME 06:28:33
+0 @I0355@ INDI
+1 NAME Damocles /Rowle/
+2 GIVN Damocles
+2 SURN Rowle
+1 SEX M
+1 _ELEC
+2 DATE 1718
+2 SOUR @S0057@
+3 PAGE https://www.rowlingindex.org/work/msmpm/
+3 DATA
+4 DATE 31 OCT 2014
+1 SOUR @S0057@
+2 PAGE https://www.rowlingindex.org/work/msmpm/
+2 DATA
+3 DATE 31 OCT 2014
+1 CHAN
+2 DATE 12 AUG 2025
+3 TIME 06:30:59
+0 @I0356@ INDI
+1 NAME Perseus /Parkinson/
+2 GIVN Perseus
+2 SURN Parkinson
+1 SEX M
+1 _ELEC
+2 DATE 1726
+2 NOTE @N0057@
+2 SOUR @S0057@
+3 PAGE https://www.rowlingindex.org/work/msmpm/
+3 DATA
+4 DATE 31 OCT 2014
+1 SOUR @S0057@
+2 PAGE https://www.rowlingindex.org/work/msmpm/
+2 DATA
+3 DATE 31 OCT 2014
+1 CHAN
+2 DATE 12 AUG 2025
+3 TIME 06:33:52
+0 @I0357@ INDI
+1 NAME Eldritch /Diggory/
+2 GIVN Eldritch
+2 SURN Diggory
+1 SEX M
+1 _ELEC
+2 DATE 1733
+2 SOUR @S0057@
+3 PAGE https://www.rowlingindex.org/work/msmpm/
+3 DATA
+4 DATE 31 OCT 2014
+1 SOUR @S0057@
+2 PAGE https://www.rowlingindex.org/work/msmpm/
+2 DATA
+3 DATE 31 OCT 2014
+1 CHAN
+2 DATE 12 AUG 2025
+3 TIME 06:35:46
+0 @I0358@ INDI
+1 NAME Albert /Boot/
+2 GIVN Albert
+2 SURN Boot
+1 SEX M
+1 _ELEC
+2 DATE 1747
+2 SOUR @S0057@
+3 PAGE https://www.rowlingindex.org/work/msmpm/
+3 DATA
+4 DATE 31 OCT 2014
+1 SOUR @S0057@
+2 PAGE https://www.rowlingindex.org/work/msmpm/
+2 DATA
+3 DATE 31 OCT 2014
+1 CHAN
+2 DATE 12 AUG 2025
+3 TIME 06:37:52
+0 @I0359@ INDI
+1 NAME Basil /Flack/
+2 GIVN Basil
+2 SURN Flack
+1 SEX M
+1 _ELEC
+2 DATE 1752
+2 SOUR @S0057@
+3 PAGE https://www.rowlingindex.org/work/msmpm/
+3 DATA
+4 DATE 31 OCT 2014
+1 SOUR @S0057@
+2 PAGE https://www.rowlingindex.org/work/msmpm/
+2 DATA
+3 DATE 31 OCT 2014
+1 CHAN
+2 DATE 12 AUG 2025
+3 TIME 06:41:35
+0 @F0000@ FAM
+1 HUSB @I0001@
+1 WIFE @I0002@
+1 MARR
+2 DATE 1979
+1 CHIL @I0000@
+1 SOUR @S0000@
+2 PAGE 53
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 20:55:31
+0 @F0001@ FAM
+1 HUSB @I0003@
+1 WIFE @I0004@
+1 CHIL @I0001@
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20190108143612/https://www.pottermore.com/explore-the-story/james-potter
+2 DATA
+3 DATE 8 JAN 2019
+1 CHAN
+2 DATE 10 SEP 2021
+3 TIME 17:02:08
+0 @F0002@ FAM
+1 HUSB @I0005@
+1 WIFE @I0006@
+1 MARR
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black
+1 CHIL @I0007@
+1 CHIL @I0008@
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/blacktree/
+1 CHAN
+2 DATE 19 OCT 2021
+3 TIME 00:59:02
+0 @F0003@ FAM
+1 HUSB @I0009@
+1 WIFE @I0011@
+1 CHIL @I0005@
+1 CHIL @I0012@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 20:54:40
+0 @F0004@ FAM
+1 HUSB @I0013@
+1 WIFE @I0010@
+1 MARR
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHIL @I0009@
+1 CHIL @I0014@
+1 CHIL @I0015@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:01:40
+0 @F0005@ FAM
+1 HUSB @I0016@
+1 WIFE @I0017@
+1 MARR
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHIL @I0013@
+1 CHIL @I0018@
+1 CHIL @I0019@
+1 CHIL @I0020@
+1 CHIL @I0029@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 19:10:03
+0 @F0007@ FAM
+1 HUSB @I0018@
+1 WIFE @I0025@
+1 MARR
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHIL @I0026@
+1 CHIL @I0027@
+1 CHIL @I0028@
+1 CHIL @I0094@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 19:08:53
+0 @F0008@ FAM
+1 HUSB @I0026@
+1 WIFE @I0030@
+1 MARR
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHIL @I0006@
+1 CHIL @I0031@
+1 CHIL @I0032@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 19:07:15
+0 @F0009@ FAM
+1 HUSB @I0032@
+1 WIFE @I0033@
+1 CHIL @I0034@
+1 CHIL @I0035@
+1 CHIL @I0036@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:32:55
+0 @F0010@ FAM
+1 HUSB @I0037@
+1 WIFE @I0034@
+1 MARR
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:36:16
+0 @F0011@ FAM
+1 HUSB @I0038@
+1 WIFE @I0036@
+1 MARR
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHIL @I0039@
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:50:56
+0 @F0012@ FAM
+1 HUSB @I0040@
+1 WIFE @I0028@
+1 MARR
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHIL @I0041@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:40:00
+0 @F0013@ FAM
+1 HUSB @I0042@
+1 WIFE @I0019@
+1 MARR
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHIL @I0043@
+1 CHIL @I0044@
+1 CHIL @I0045@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:43:27
+0 @F0014@ FAM
+1 HUSB @I0020@
+1 WIFE @I0046@
+1 MARR
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHIL @I0047@
+1 CHIL @I0048@
+1 CHIL @I0049@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:47:21
+0 @F0015@ FAM
+1 HUSB @I0050@
+1 WIFE @I0047@
+1 MARR
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHIL @I0051@
+1 CHIL @I0052@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:50:33
+0 @F0016@ FAM
+1 HUSB @I0053@
+1 WIFE @I0049@
+1 MARR
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHIL @I0059@
+1 CHIL @I0140@
+1 CHIL @I0141@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 19:15:12
+0 @F0017@ FAM
+1 HUSB @I0054@
+1 WIFE @I0048@
+1 MARR
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHIL @I0055@
+1 CHIL @I0056@
+1 CHIL @I0057@
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:55:02
+0 @F0018@ FAM
+1 HUSB @I0058@
+1 WIFE @I0012@
+1 MARR
+2 SOUR @S0003@
+3 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 SOUR @S0003@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 21:56:28
+0 @F0019@ FAM
+1 HUSB @I0059@
+1 WIFE @I0062@
+1 MARR
+2 DATE 1969
+1 CHIL @I0064@
+1 CHIL @I0070@
+1 CHIL @I0071@
+1 CHIL @I0072@
+1 CHIL @I0073@
+1 CHIL @I0074@
+1 CHIL @I0095@
+1 CHAN
+2 DATE 29 SEP 2023
+3 TIME 06:36:11
+0 @F0020@ FAM
+1 HUSB @I0066@
+1 WIFE @I0067@
+1 MARR
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20191002072355/https://www.pottermore.com/explore-the-story/neville-longbottom
+1 CHIL @I0068@
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20191002072355/https://www.pottermore.com/explore-the-story/neville-longbottom
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 04:10:28
+0 @F0021@ FAM
+1 HUSB @I0087@
+1 WIFE @I0069@
+1 CHIL @I0066@
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 16:20:13
+0 @F0022@ FAM
+1 HUSB @I0075@
+1 WIFE @I0035@
+1 MARR
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20191002072152/https://www.pottermore.com/explore-the-story/nymphadora-tonks
+1 CHIL @I0076@
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20191002072152/https://www.pottermore.com/explore-the-story/nymphadora-tonks
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 04:34:17
+0 @F0023@ FAM
+1 HUSB @I0078@
+1 CHIL @I0038@
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 04:47:07
+0 @F0024@ FAM
+1 HUSB @I0073@
+1 WIFE @I0080@
+1 MARR
+2 DATE 1 AUG 1997
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20191002071814/https://www.pottermore.com/explore-the-story/fleur-delacour
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 05:01:06
+0 @F0025@ FAM
+1 HUSB @I0091@
+1 CHIL @I0062@
+1 CHIL @I0081@
+1 CHIL @I0082@
+1 SOUR @S0033@
+2 PAGE American Kindle Location 2594
+1 CHAN
+2 DATE 27 JUN 2022
+3 TIME 18:03:26
+0 @F0026@ FAM
+1 HUSB @I0083@
+1 CHIL @I0003@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Henry_Potter
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 05:15:08
+0 @F0027@ FAM
+1 HUSB @I0201@
+1 WIFE @I0084@
+1 CHIL @I0083@
+1 CHIL @I0200@
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 01:57:41
+0 @F0030@ FAM
+1 HUSB @I0088@
+1 CHIL @I0087@
+1 CHIL @I0050@
+1 CHIL @I0089@
+1 NOTE @N0013@
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 16:26:24
+0 @F0031@ FAM
+1 HUSB @I0089@
+1 WIFE @I0090@
+1 MARR
+2 SOUR @S0035@
+3 PAGE https://static.wikia.nocookie.net/harrypotter/images/0/00/Longbottomfamilytree-pottermore.jpg/revision/latest?cb=20180424193303
+1 SOUR @S0035@
+2 PAGE https://static.wikia.nocookie.net/harrypotter/images/0/00/Longbottomfamilytree-pottermore.jpg/revision/latest?cb=20180424193303
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 16:36:07
+0 @F0032@ FAM
+1 HUSB @I0092@
+1 CHIL @I0091@
+1 CHIL @I0058@
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 17:31:05
+0 @F0033@ FAM
+1 HUSB @I0093@
+1 WIFE @I0024@
+1 MARR
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Iola_Black
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Iola_Black
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/House_of_Black
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 21:46:26
+0 @F0034@ FAM
+1 HUSB @I0060@
+1 WIFE @I0076@
+1 MARR
+2 DATE JUL 1997
+2 SOUR @S0002@
+3 PAGE 4
+1 CHIL @I0295@
+1 CHAN
+2 DATE 4 OCT 2023
+3 TIME 04:01:26
+0 @F0035@ FAM
+1 HUSB @I0000@
+1 WIFE @I0070@
+1 MARR
+2 SOUR @S0002@
+3 PAGE 309
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 21:23:33
+0 @F0036@ FAM
+1 HUSB @I0064@
+1 WIFE @I0063@
+1 MARR
+2 SOUR @S0002@
+3 PAGE 310
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 21:25:47
+0 @F0037@ FAM
+1 HUSB @I0096@
+1 WIFE @I0097@
+1 MARR
+2 SOUR @S0000@
+3 PAGE 6
+1 CHIL @I0098@
+1 CHIL @I0000@
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 04:43:48
+0 @F0038@ FAM
+1 HUSB @I0234@
+1 CHIL @I0096@
+1 CHIL @I0101@
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 23:47:23
+0 @F0039@ FAM
+1 HUSB @I0068@
+1 WIFE @I0108@
+1 MARR
+2 SOUR @S0035@
+3 PAGE https://web.archive.org/web/20191002072136/https://www.pottermore.com/features/why-neville-longbottom-story-always-deserved-a-happy-ending
+1 SOUR @S0035@
+2 PAGE https://web.archive.org/web/20191002072136/https://www.pottermore.com/features/why-neville-longbottom-story-always-deserved-a-happy-ending
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 05:28:53
+0 @F0043@ FAM
+1 WIFE @I0131@
+1 CHIL @I0132@
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 18:00:48
+0 @F0044@ FAM
+1 HUSB @I0147@
+1 WIFE @I0148@
+1 CHIL @I0022@
+1 CHIL @I0016@
+1 CHIL @I0023@
+1 CHIL @I0024@
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 01:53:35
+0 @F0045@ FAM
+1 HUSB @I0149@
+1 WIFE @I0152@
+1 MARR
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Licorus_Black
+1 CHIL @I0147@
+1 CHIL @I0150@
+1 CHIL @I0151@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Licorus_Black
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 21:36:25
+0 @F0046@ FAM
+1 HUSB @I0153@
+1 WIFE @I0150@
+1 MARR
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Misapinoa_Black
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 21:42:41
+0 @F0047@ FAM
+1 WIFE @I0027@
+1 CHIL @I0109@
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 21:50:52
+0 @F0048@ FAM
+1 HUSB @I0235@
+1 WIFE @I0157@
+1 MARR
+2 SOUR @S0000@
+3 PAGE 125
+1 CHIL @I0158@
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 23:48:56
+0 @F0049@ FAM
+1 HUSB @I0292@
+1 CHIL @I0174@
+1 CHIL @I0175@
+1 CHAN
+2 DATE 4 OCT 2023
+3 TIME 03:36:21
+0 @F0050@ FAM
+1 HUSB @I0207@
+1 MARR
+2 SOUR @S0038@
+3 PAGE https://www.rowlingindex.org/work/dmpm/
+1 CHIL @I0179@
+1 CHIL @I0180@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Aquila_Greengrass
+1 CHAN
+2 DATE 19 OCT 2021
+3 TIME 00:07:43
+0 @F0051@ FAM
+1 HUSB @I0188@
+1 WIFE @I0189@
+1 MARR
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Luna_Lovegood
+1 CHIL @I0115@
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 03:02:20
+0 @F0052@ FAM
+1 HUSB @I0190@
+1 MARR
+2 DATE BEF 1 JAN 1200
+2 SOUR @S0038@
+3 PAGE https://www.rowlingindex.org/work/pmpfam/
+3 DATA
+4 DATE 22 SEP 2015
+1 CHIL @I0191@
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 18:14:52
+0 @F0053@ FAM
+1 HUSB @I0191@
+1 WIFE @I0192@
+1 MARR
+2 SOUR @S0038@
+3 PAGE https://www.rowlingindex.org/work/pmpfam/
+3 DATA
+4 DATE 22 SEP 2015
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 18:17:34
+0 @F0054@ FAM
+1 HUSB @I0200@
+1 CHIL @I0040@
+1 SOUR @S0040@
+2 PAGE https://www.schierer.org/~luke/log/fiction/Harry_Potter/Notes/Families/Potter/
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 01:54:22
+0 @F0055@ FAM
+1 HUSB @I0202@
+1 WIFE @I0203@
+1 MARR
+2 DATE 1959
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Lyall_Lupin
+1 CHIL @I0060@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Lyall_Lupin
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 02:31:54
+0 @F0056@ FAM
+1 HUSB @I0205@
+1 CHIL @I0111@
+1 CHIL @I0113@
+1 CHIL @I0206@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Bones_family
+1 SOUR @S0033@
+2 PAGE American Kindle Locations 2590-2591
+1 CHAN
+2 DATE 27 JUN 2022
+3 TIME 18:01:40
+0 @F0057@ FAM
+1 HUSB @I0206@
+1 CHIL @I0154@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Bones_family
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 02:56:19
+0 @F0058@ FAM
+1 HUSB @I0208@
+1 CHIL @I0207@
+1 CHIL @I0210@
+1 SOUR @S0040@
+2 PAGE https://www.schierer.org/~luke/log/fiction/Harry_Potter/Notes/Families/
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 03:39:18
+0 @F0059@ FAM
+1 HUSB @I0209@
+1 CHIL @I0002@
+1 CHIL @I0097@
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 03:36:13
+0 @F0060@ FAM
+1 HUSB @I0211@
+1 EVEN
+2 TYPE Death
+2 DATE 1981
+2 SOUR @S0004@
+3 PAGE https://harrypotter.fandom.com/wiki/Benjy_Fenwick
+1 CHIL @I0159@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Benjy_Fenwick
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 16:08:08
+0 @F0061@ FAM
+1 HUSB @I0212@
+1 CHIL @I0213@
+1 CHIL @I0214@
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 18:05:02
+0 @F0062@ FAM
+1 HUSB @I0215@
+1 CHIL @I0216@
+1 CHIL @I0236@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Corvus_Lestrange_(I)
+1 CHAN
+2 DATE 21 OCT 2021
+3 TIME 00:16:08
+0 @F0063@ FAM
+1 HUSB @I0216@
+1 WIFE @I0217@
+1 CHIL @I0219@
+1 CHIL @I0218@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Corvus_Lestrange_(I)
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 18:27:27
+0 @F0064@ FAM
+1 HUSB @I0218@
+1 WIFE @I0222@
+1 CHIL @I0221@
+1 CHIL @I0223@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Falco_Lestrange
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 18:42:53
+0 @F0065@ FAM
+1 HUSB @I0219@
+1 WIFE @I0220@
+1 CHIL @I0224@
+1 CHIL @I0225@
+1 CHIL @I0226@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Corvus_Lestrange_(II)
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 18:52:38
+0 @F0066@ FAM
+1 HUSB @I0226@
+1 WIFE @I0221@
+1 CHIL @I0227@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Corvus_Lestrange_(III)
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 18:57:02
+0 @F0067@ FAM
+1 HUSB @I0227@
+1 WIFE @I0228@
+1 CHIL @I0229@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Laurena_Kama
+1 NOTE @N0022@
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 19:21:24
+0 @F0068@ FAM
+1 HUSB @I0230@
+1 WIFE @I0223@
+1 CHIL @I0231@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Bernard_Tremblay
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 19:30:30
+0 @F0069@ FAM
+1 HUSB @I0227@
+1 WIFE @I0231@
+1 CHIL @I0232@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Clarisse_Lestrange
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Corvus_Lestrange_(IV)
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 19:43:13
+0 @F0070@ FAM
+1 HUSB @I0233@
+1 CHIL @I0110@
+1 CHIL @I0037@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Lestrange_family
+1 NOTE @N0024@
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 20:21:01
+0 @F0071@ FAM
+1 HUSB @I0236@
+1 WIFE @I0237@
+1 CHIL @I0238@
+1 CHIL @I0239@
+1 SOUR @S0004@
+2 PAGE https://harrypotter.fandom.com/wiki/Cyrille_Lestrange_(I)
+1 CHAN
+2 DATE 21 OCT 2021
+3 TIME 00:31:12
+0 @F0072@ FAM
+1 HUSB @I0241@
+1 CHIL @I0240@
+1 SOUR @S0042@
+2 PAGE Kindle Locations 1151-1152
+2 QUAY 3
+2 DATA
+3 DATE 2003
+2 NOTE @N0026@
+1 CHAN
+2 DATE 3 JAN 2022
+3 TIME 21:47:46
+0 @F0073@ FAM
+1 HUSB @I0242@
+1 WIFE @I0243@
+1 MARR
+2 DATE BEF 4 OCT 1935
+2 SOUR @S0043@
+3 PAGE 7
+3 NOTE @N0030@
+1 CHIL @I0065@
+1 CHIL @I0244@
+1 CHIL @I0245@
+1 CHAN
+2 DATE 4 JAN 2022
+3 TIME 17:16:17
+0 @F0074@ FAM
+1 HUSB @I0249@
+1 WIFE @I0250@
+1 CHIL @I0077@
+1 SOUR @S0046@
+2 PAGE 530
+2 QUAY 3
+1 CHAN
+2 DATE 11 JUL 2022
+3 TIME 17:24:39
+0 @F0075@ FAM
+1 HUSB @I0262@
+1 WIFE @I0261@
+1 MARR Y
+1 CHIL @I0061@
+1 CHIL @I0114@
+1 CHIL @I0263@
+1 SOUR @S0002@
+2 PAGE 6, 73
+1 NOTE @N0034@
+1 CHAN
+2 DATE 4 OCT 2023
+3 TIME 03:07:09
+0 @F0076@ FAM
+1 HUSB @I0265@
+1 WIFE @I0065@
+1 SOUR @S0043@
+2 PAGE 15
+1 CHAN
+2 DATE 16 SEP 2022
+3 TIME 20:39:07
+0 @F0077@ FAM
+1 HUSB @I0274@
+1 WIFE @I0275@
+1 CHIL @I0112@
+1 SOUR @S0038@
+2 PAGE https://www.rowlingindex.org/work/dupm/
+2 QUAY 2
+2 DATA
+3 DATE 31 OCT 2014
+1 CHAN
+2 DATE 21 NOV 2022
+3 TIME 23:28:02
+0 @F0078@ FAM
+1 HUSB @I0303@
+1 WIFE @I0304@
+1 CHIL @I0247@
+1 SOUR @S0046@
+2 PAGE 221-222
+2 QUAY 3
+1 CHAN
+2 DATE 12 APR 2024
+3 TIME 00:47:12
+0 @F0079@ FAM
+1 HUSB @I0305@
+1 CHIL @I0304@
+1 CHIL @I0306@
+1 SOUR @S0046@
+2 PAGE 178
+2 QUAY 3
+1 CHAN
+2 DATE 12 APR 2024
+3 TIME 00:50:38
+0 @S0000@ SOUR
+1 TITL Harry Potter and the Sorcerer's Stone
+1 AUTH J. K. Rowling
+1 PUBL Pottermore Limited. © 1998
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 19:59:11
+0 @S0002@ SOUR
+1 TITL Harry Potter and the Deathly Hallows
+1 AUTH J. K. Rowling
+1 PUBL copyright © 2007 Pottermore Publishing. American Kindle Edition.
+1 CHAN
+2 DATE 7 SEP 2021
+3 TIME 20:21:02
+0 @S0003@ SOUR
+1 TITL Black Family Tree
+1 AUTH J. K. Rowling
+1 REPO @R0030@
+2 CALN https://www.rowlingindex.org/work/blacktree/
+3 MEDI Electronic
+1 CHAN
+2 DATE 11 AUG 2025
+3 TIME 18:42:44
+0 @S0004@ SOUR
+1 TITL Harry Potter Wiki
+1 AUTH https://harrypotter.fandom.com/
+1 REPO @R0001@
+1 REPO @R0022@
+1 CHAN
+2 DATE 10 SEP 2021
+3 TIME 17:23:46
+0 @S0030@ SOUR
+1 TITL The Age of the Weasleys
+1 AUTH Troels Forchhammer
+1 PUBL The Harry Potter Lexicon 2004-05-02
+1 REPO @R0025@
+1 CHAN
+2 DATE 8 SEP 2021
+3 TIME 19:15:15
+0 @S0032@ SOUR
+1 TITL Secrets of the Classlist
+1 AUTH Diana Summers
+1 PUBL © 2011, 2014 Diana Summers. Secrets of the Classlist: Harry Potter and t
+2 CONC he Original Forty Classmates . Kindle Edition.
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 05:20:53
+0 @S0033@ SOUR
+1 TITL Harry Potter and the Order of the Phoenix
+1 AUTH J. K. Rowling
+1 PUBL © 2003 Pottermore Limited. American Kindle Edition.
+1 CHAN
+2 DATE 9 SEP 2021
+3 TIME 16:02:36
+0 @S0035@ SOUR
+1 TITL Pottermore
+1 AUTH Pottermore
+1 PUBL https://web.archive.org/web/20170630110815/https://www.pottermore.com
+1 REPO @R0005@
+1 REPO @R0014@
+1 REPO @R0018@
+1 REPO @R0021@
+1 REPO @R0013@
+1 REPO @R0012@
+1 REPO @R0003@
+1 REPO @R0002@
+1 REPO @R0019@
+1 REPO @R0010@
+1 REPO @R0011@
+1 REPO @R0015@
+1 REPO @R0016@
+1 REPO @R0004@
+1 REPO @R0009@
+1 REPO @R0020@
+1 REPO @R0017@
+1 REPO @R0002@
+1 REPO @R0026@
+1 REPO @R0008@
+1 REPO @R0007@
+1 REPO @R0006@
+1 REPO @R0022@
+1 CHAN
+2 DATE 10 SEP 2021
+3 TIME 17:23:55
+0 @S0036@ SOUR
+1 TITL Google Maps
+1 AUTH @ 2021 Google
+1 PUBL https://www.google.com/maps
+1 CHAN
+2 DATE 10 SEP 2021
+3 TIME 17:53:10
+0 @S0037@ SOUR
+1 TITL Mugglenet
+1 AUTH MUGGLENET
+1 PUBL © 1999–2021 MuggleNet.com
+1 REPO @R0029@
+1 REPO @R0024@
+1 CHAN
+2 DATE 10 SEP 2021
+3 TIME 20:08:29
+0 @S0038@ SOUR
+1 TITL The J.K. Rowling Index
+1 AUTH J. K. Rowling
+1 PUBL https://www.rowlingindex.org/ All texts on this site are the property o
+2 CONC f their respective owners. Rowling Index is not associated with J.K. Row
+2 CONC ling, The Blair Partnership, Pottermore, Bloomsbury, Scholastic or Warne
+2 CONC r Bros., or any of the individuals or companies associated with producin
+2 CONC g and publishing Harry Potter books.
+1 REPO @R0030@
+1 REPO @R0027@
+1 REPO @R0028@
+1 CHAN
+2 DATE 10 SEP 2021
+3 TIME 20:08:09
+0 @S0039@ SOUR
+1 TITL Harry Potter and the Chamber of Secrets
+1 AUTH J. K. Rowling
+1 PUBL © 1998 Pottermore Limited. American Kindle Edition.
+1 CHAN
+2 DATE 11 SEP 2021
+3 TIME 02:39:45
+0 @S0040@ SOUR
+1 TITL Random Unfinished Thoughts
+1 AUTH Luke Schierer
+1 REPO @R0031@
+1 CHAN
+2 DATE 18 OCT 2021
+3 TIME 01:53:02
+0 @S0041@ SOUR
+1 TITL Harry Potter and the Prisoner of Azkaban
+1 AUTH J. K. Rowling
+1 PUBL ISBN043965548X (ISBN13: 9780439655484)
+1 CHAN
+2 DATE 3 JAN 2022
+3 TIME 21:35:21
+0 @S0042@ SOUR
+1 TITL Harry Potter and the Goblet of Fire
+1 AUTH J. K. Rowling
+1 PUBL © 2003 Pottermore Limited. American Kindle Edition.
+1 CHAN
+2 DATE 3 JAN 2022
+3 TIME 21:42:39
+0 @S0043@ SOUR
+1 TITL Short Stories from Hogwarts of Heroism, Hardship and Dangerous Hobbies
+1 AUTH J. K. Rowling
+1 PUBL Pottermore Publishing. American Kindle Edition.  2016
+1 NOTE @N0028@
+1 CHAN
+2 DATE 4 JAN 2022
+3 TIME 16:47:44
+0 @S0044@ SOUR
+1 TITL The Harry Potter Lexicon
+1 AUTH Steve VanderArk et al. (https://www.hp-lexicon.org/credits/)
+1 PUBL © 2000 – 2021 The Harry Potter Lexicon
+1 REPO @R0032@
+1 CHAN
+2 DATE 4 JAN 2022
+3 TIME 16:58:52
+0 @S0045@ SOUR
+1 TITL The real meanings behind 46 different names in the 'Harry Potter' univer
+2 CONC se — and what they say about the characters
+1 AUTH Jacob Shamsain
+1 PUBL Insider Magazine
+1 REPO @R0033@
+1 CHAN
+2 DATE 27 JUN 2022
+3 TIME 19:27:28
+0 @S0046@ SOUR
+1 TITL Harry Potter and the Half-Blood Prince
+1 AUTH J. K. Rowling
+1 PUBL © 2005 Pottermore Publishing. American Kindle Edition.
+1 CHAN
+2 DATE 8 JUL 2022
+3 TIME 21:29:16
+0 @S0047@ SOUR
+1 TITL Book of Spells
+1 AUTH Sony and J. K. Rowling
+1 CHAN
+2 DATE 25 JUL 2022
+3 TIME 15:38:39
+0 @S0048@ SOUR
+1 TITL "PotterCast Interviews J.K. Rowling, part one."
+1 AUTH Anelli, Melissa, John Noe and Sue Upton.
+1 PUBL PotterCast #130, 17 December 2007.
+1 CHAN
+2 DATE 18 NOV 2022
+3 TIME 20:26:24
+0 @S0049@ SOUR
+1 TITL Short Stories from Hogwarts of Power, Politics and Pesky Poltergeists…
+1 AUTH J. K. Rowling
+1 PUBL Pottermore Publishing (2016)
+1 CHAN
+2 DATE 5 DEC 2022
+3 TIME 19:14:33
+0 @S0050@ SOUR
+1 TITL https://twitter.com/jk_rowling
+1 AUTH Mrs. J. K. Rowling
+1 PUBL Twitter
+1 CHAN
+2 DATE 4 OCT 2023
+3 TIME 04:44:34
+0 @S0051@ SOUR
+1 TITL The Leaky Cauldron
+1 AUTH Leaky Staff - https://www.the-leaky-cauldron.org/info/aboutus/
+1 PUBL 2000-2025
+1 REPO @R0034@
+1 CHAN
+2 DATE 7 APR 2025
+3 TIME 23:07:34
+0 @S0052@ SOUR
+1 TITL The Potter Family
+1 AUTH Mrs. J. K. Rowling
+1 ABBR PMPFAM
+1 REPO @R0030@
+1 CHAN
+2 DATE 11 AUG 2025
+3 TIME 18:26:07
+0 @S0053@ SOUR
+1 TITL Wizard of the Month Archive
+1 AUTH Mrs. J. K. Rowling
+1 REPO @R0030@
+2 CALN https://therowlinglibrary.com/jkrowling.com/textonly/en/wotm.html
+3 MEDI Book
+1 CHAN
+2 DATE 11 AUG 2025
+3 TIME 19:03:54
+0 @S0054@ SOUR
+1 TITL The Malfoy Family
+1 AUTH Mrs. J. K. Rowling
+1 PUBL Originally Published: 2012-07-10.
+1 ABBR pmmf
+1 REPO @R0030@
+2 CALN https://www.rowlingindex.org/work/pmmf/
+3 MEDI Electronic
+1 CHAN
+2 DATE 12 AUG 2025
+3 TIME 03:24:28
+0 @S0055@ SOUR
+1 TITL William the Conqueror
+1 AUTH Wikipedia
+1 REPO @R0035@
+2 CALN https://wikipedia.org/wiki/William_the_Conqueror
+3 MEDI Electronic
+1 CHAN
+2 DATE 12 AUG 2025
+3 TIME 03:30:22
+0 @S0056@ SOUR
+1 TITL Hogwarts Ghosts
+1 AUTH Mrs. J. K. Rowling
+1 ABBR pmhgh
+1 REPO @R0030@
+2 CALN https://www.rowlingindex.org/work/pmhgh/
+3 MEDI Electronic
+1 CHAN
+2 DATE 12 AUG 2025
+3 TIME 03:44:08
+0 @S0057@ SOUR
+1 TITL Ministers of Magic
+1 AUTH Mrs. J. K. Rowling
+1 ABBR msmpm
+1 REPO @R0030@
+2 CALN https://www.rowlingindex.org/work/msmpm/
+3 MEDI Book
+1 CHAN
+2 DATE 12 AUG 2025
+3 TIME 03:52:26
+0 @S0058@ SOUR
+1 TITL Albus Dumbledore Fact File
+1 AUTH Pottermore
+1 REPO @R0026@
+2 CALN https://web.archive.org/web/20170630110815/https://www.pottermore.com/ex
+3 CONC plore-the-story/albus-dumbledore
+3 MEDI Electronic
+1 CHAN
+2 DATE 12 AUG 2025
+3 TIME 06:16:54
+0 @R0000@ REPO
+1 NAME https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTr
+2 CONC ee.jpg
+0 @R0001@ REPO
+1 NAME https://harrypotter.fandom.com/wiki/Sirius_Black
+0 @R0002@ REPO
+1 NAME Sirius Black Fact File
+1 WWW https://web.archive.org/web/20190110174600/https://www.pottermore.com/ex
+2 CONC plore-the-story/sirius-black
+0 @R0003@ REPO
+1 NAME Arthur Weasley Fact File
+1 WWW https://web.archive.org/web/20170414075352/https://www.pottermore.com/ex
+2 CONC plore-the-story/arthur-weasley
+0 @R0004@ REPO
+1 NAME Remus Lupin Fact File
+1 WWW https://web.archive.org/web/20170630110748/https://www.pottermore.com/ex
+2 CONC plore-the-story/remus-lupin
+0 @R0005@ REPO
+1 NAME Albus Dumbledore Fact File
+1 WWW https://web.archive.org/web/20170630110815/https://www.pottermore.com/ex
+2 CONC plore-the-story/albus-dumbledore
+0 @R0006@ REPO
+1 NAME Molly Weasley Fact File
+1 WWW https://web.archive.org/web/20170701104541/https://www.pottermore.com/ex
+2 CONC plore-the-story/molly-weasley
+0 @R0007@ REPO
+1 NAME Lily Potter Fact File
+1 WWW https://web.archive.org/web/20170630235801/https://www.pottermore.com/ex
+2 CONC plore-the-story/lily-potter
+0 @R0008@ REPO
+1 NAME Hermione Granger Fact File
+1 WWW https://web.archive.org/web/20191002071716/https://www.pottermore.com/ex
+2 CONC plore-the-story/hermione-granger
+0 @R0009@ REPO
+1 NAME Ron Weasley fact file
+1 WWW https://web.archive.org/web/20191002071722/https://www.pottermore.com/ex
+2 CONC plore-the-story/ron-weasley
+0 @R0010@ REPO
+1 NAME Minerva McGonagall fact file
+1 WWW https://web.archive.org/web/20191002072017/https://www.pottermore.com/ex
+2 CONC plore-the-story/minerva-mcgonagall
+0 @R0011@ REPO
+1 NAME Neville Longbottom fact file
+1 WWW https://web.archive.org/web/20191002072355/https://www.pottermore.com/ex
+2 CONC plore-the-story/neville-longbottom
+0 @R0012@ REPO
+1 NAME Ginny Weasley fact file
+1 WWW https://web.archive.org/web/20191002071823/https://www.pottermore.com/ex
+2 CONC plore-the-story/ginny-weasley
+0 @R0013@ REPO
+1 NAME Fred Weasley fact file
+1 WWW https://web.archive.org/web/20191002072458/https://www.pottermore.com/ex
+2 CONC plore-the-story/fred-weasley
+0 @R0014@ REPO
+1 NAME Bill Weasley fact file
+1 WWW https://web.archive.org/web/20191002071503/https://www.pottermore.com/ex
+2 CONC plore-the-story/bill-weasley
+0 @R0015@ REPO
+1 NAME Percy Weasley fact file
+1 WWW https://web.archive.org/web/20191002072541/https://www.pottermore.com/ex
+2 CONC plore-the-story/percy-weasley
+0 @R0016@ REPO
+1 NAME Nymphadora Tonks fact file
+1 WWW https://web.archive.org/web/20191002072152/https://www.pottermore.com/ex
+2 CONC plore-the-story/nymphadora-tonks
+0 @R0017@ REPO
+1 NAME Severus Snape fact file
+1 WWW https://web.archive.org/web/20191002071405/https://www.pottermore.com/ex
+2 CONC plore-the-story/severus-snape
+0 @R0018@ REPO
+1 NAME Draco Malfoy fact file
+1 WWW https://web.archive.org/web/20191002072534/https://www.pottermore.com/ex
+2 CONC plore-the-story/draco-malfoy
+0 @R0019@ REPO
+1 NAME Lucius Malfoy fact file
+1 WWW https://web.archive.org/web/20191002072046/https://www.pottermore.com/ex
+2 CONC plore-the-story/lucius-malfoy
+0 @R0020@ REPO
+1 NAME Rubeus Hagrid fact file
+1 WWW https://web.archive.org/web/20190624075415/https://www.pottermore.com/ex
+2 CONC plore-the-story/rubeus-hagrid
+0 @R0021@ REPO
+1 NAME Fleur Delacour fact file
+1 WWW https://web.archive.org/web/20191002071814/https://www.pottermore.com/ex
+2 CONC plore-the-story/fleur-delacour
+0 @R0022@ REPO
+1 NAME Harry Potter Wiki
+1 WWW https://harrypotter.fandom.com/wiki/Main_Page
+0 @R0024@ REPO
+1 NAME MuggleNet
+1 WWW http://mugglenet.com
+0 @R0025@ REPO
+1 NAME The Harry Potter Lexicon
+1 WWW https://hp-lexicon.org
+0 @R0026@ REPO
+1 NAME Pottermore
+1 WWW https://web.archive.org/web/20181008151658/https://www.pottermore.com/
+0 @R0027@ REPO
+1 NAME Archive.org
+1 WWW http://web.archive.org/web/20120204062124/http://www.jkrowling.com/texto
+2 CONC nly/en/
+0 @R0028@ REPO
+1 NAME The Rowling Library
+1 WWW https://www.therowlinglibrary.com/j-k-rowling/official-website/
+0 @R0029@ REPO
+1 NAME Mugglenet
+1 WWW https://www.mugglenet.com/
+0 @R0030@ REPO
+1 NAME The J.K. Rowling Index
+1 WWW https://www.rowlingindex.org/
+0 @R0031@ REPO
+1 NAME Random Unfinished Thoughts
+1 WWW https://www.schierer.org/~luke/log
+0 @R0032@ REPO
+1 NAME The Harry Potter Lexicon
+1 WWW https://www.hp-lexicon.org/
+0 @R0033@ REPO
+1 NAME Insider Magazine
+1 WWW https://www.insider.com/
+0 @R0034@ REPO
+1 NAME The Leaky Cauldron
+1 WWW https://www.the-leaky-cauldron.org/
+0 @R0035@ REPO
+1 NAME Wikipedia
+1 WWW https://wikipedia.org
+0 @N0000@ NOTE Supported Muggle Rights per Black Family Tree
+0 @N0001@ NOTE Cypress and unicorn hair, ten and a quarter inches, pliable - Remu
+1 CONC s Lupin Fact File. 
+0 @N0002@ NOTE Ten and a quarter inches, willow - Lily Potter Fact File
+0 @N0003@ NOTE Dragon heartstring core, ten and three-quarter inches, vine woo
+1 CONC d - Hermione Granger fact file
+1 CONT 
+1 CONT 
+0 @N0004@ NOTE Fourteen inch, willow and unicorn tail - Ron Weasley Fact File
+0 @N0005@ NOTE Fourteen inch, willow and unicorn tail - Ron Weasley fact file
+1 CONT 
+0 @N0006@ NOTE Fir and dragon heartstring, nine and a half inches, stiff - Minerv
+1 CONC a McGonagall fact file
+1 CONT  
+0 @N0007@ NOTE thirteen inches, cherry, unicorn hair - Neville Longbottom fact fil
+1 CONC e
+1 CONT 
+0 @N0008@ NOTE Hawthorn and unicorn hair. Ten inches precisely - Draco Malfoy fac
+1 CONC t file
+1 CONT 
+0 @N0009@ NOTE Eighteen inches, elm, dragon heartstring - Lucius Malfoy fact file
+1 CONT 
+0 @N0010@ NOTE Sixteen inches, oak - Rubeus Hagrid fact file
+1 CONT 
+0 @N0012@ NOTE As the wiki states, in the Fantastic Beasts movie, Fleamont is ment
+1 CONC ioned in a 1926-11-29 Daily Prophet edition as a Potioneer.  He is mos
+1 CONC t likely post-Hogwarts at this time. 
+0 @N0013@ NOTE Inferred from the fact that Neville has multiple great aunts and un
+1 CONC cles, but Harfang has only one son and one daughter. 
+0 @N0014@ NOTE "Araminta Meliflua . . . cousin of my mother’s . . . tried to forc
+1 CONC e through a Ministry Bill to make Muggle-hunting legal . . . " -- Sirius
+1 CONT 
+1 CONT Rowling, J.K.. Harry Potter and the Order of the Phoenix (Harry Potter
+1 CONC , Book 5) (Kindle Locations 1723-1724). Pottermore Limited. Kindle Editi
+1 CONC on. 
+0 @N0015@ NOTE Starts Hogwarts in 1995
+0 @N0016@ NOTE Started Hogwarts in 1995
+0 @N0017@ NOTE Barry Ryan, the Irish International Keeper, 
+1 CONT 
+1 CONT Rowling, J.K.. Harry Potter and the Order of the Phoenix (Harry Potter
+1 CONC , Book 5) (Kindle Locations 5866-5867). Pottermore Limited. Kindle Editi
+1 CONC on. 
+0 @N0018@ NOTE HEADMISTRESS OF HOGWARTS SCHOOL OF WITCHCRAFT AND WIZARDRY, 1741–17
+1 CONC 68 
+1 CONT 
+1 CONT Rowling, J.K.. Harry Potter and the Order of the Phoenix (Harry Potter
+1 CONC , Book 5) (Kindle Location 7121). Pottermore Limited. Kindle Edition. 
+0 @N0019@ NOTE (1227 – 1320) The witch who invented Floo powder.
+1 CONT 
+1 CONT 
+0 @N0020@ NOTE First landlady of the Leaky Cauldron.
+1 CONT 
+1 CONT 
+0 @N0021@ NOTE Based on the speculation on the source page, this relationship make
+1 CONC s the most sense. 
+0 @N0022@ NOTE Listing this as a Civil Union as it appears the magical world recog
+1 CONC nises this as a marriage, but 
+1 CONT 1) if she was under the Imperius Curse, her concent was fatally impaired
+1 CONT 2) it is unclear her husband was in fact deceased prior to this union. I
+1 CONC n fact, it is strongly implied he was not. 
+0 @N0023@ NOTE The existance of this person is infered from the two sources, If Ro
+1 CONC dolphus and Rabastan Lestrange were in the same gang as Snape, then the
+1 CONC y are not the Lestrange who was a classmate of Riddle's.  
+0 @N0024@ NOTE Assuming there are *more* British Lestranges in what seems to b
+1 CONC e a predominately French family stretches probability. 
+0 @N0025@ NOTE Diggory was a fifth year and a lot bigger than Harry. 
+1 CONT 
+1 CONT Rowling, J.K.. Harry Potter and the Prisoner of Azkaban (Harry Potter, B
+1 CONC ook 3) (p. 174). Pottermore Limited. American Kindle Edition. 
+0 @N0026@ NOTE “This is Amos Diggory, everyone,” said Mr. Weasley. “He works for t
+1 CONC he Department for the Regulation and Control of Magical Creatures. An
+1 CONC d I think you know his son, Cedric?” 
+1 CONT 
+1 CONT Rowling, J.K.. Harry Potter and the Goblet of Fire (Book 4) (Kindle Loca
+1 CONC tions 1151-1152). Pottermore Limited. Kindle Edition. 
+0 @N0027@ NOTE “The third and final task will take place at dusk on the twenty-fou
+1 CONC rth of June,” 
+1 CONT 
+1 CONT Rowling, J.K.. Harry Potter and the Goblet of Fire (Book 4) (Kindle Loca
+1 CONC tions 7585-7586). Pottermore Limited. Kindle Edition. 
+0 @N0028@ NOTE Muggle father, witch mother
+1 CONT 
+1 CONT Rowling, J.K.. Short Stories from Hogwarts of Heroism, Hardship and Dang
+1 CONC erous Hobbies (Kindle Single) (Pottermore Presents) (p. 6). Pottermore P
+1 CONC ublishing. American Kindle Edition. 
+0 @N0029@ NOTE Minerva McGonagall was the first child, and only daughter, of a Sco
+1 CONC ttish Presbyterian minister and a Hogwarts-educated witch. She grew up i
+1 CONC n the Highlands of Scotland in the early twentieth century, and only gra
+1 CONC dually became aware that there was something strange, both about her ow
+1 CONC n abilities, and her parents’ marriage. Minerva’s father, the Reverend R
+1 CONC obert McGonagall, had become captivated by the high-spirited Isobel Ross
+1 CONC , who lived in the same village.
+1 CONT 
+1 CONT Rowling, J.K.. Short Stories from Hogwarts of Heroism, Hardship and Dang
+1 CONC erous Hobbies (Kindle Single) (Pottermore Presents) (p. 7). Pottermore P
+1 CONC ublishing. Kindle Edition. 
+0 @N0030@ NOTE The couple eloped, to the fury of both sets of parents.
+1 CONT 
+1 CONT Rowling, J.K.. Short Stories from Hogwarts of Heroism, Hardship and Dang
+1 CONC erous Hobbies (Kindle Single) (Pottermore Presents) (p. 7). Pottermore P
+1 CONC ublishing. Kindle Edition. 
+1 CONT 
+1 CONT The birth of the young couple’s first child, Minerva, proved both a jo
+1 CONC y and a crisis. Missing her family, and the magical community she had gi
+1 CONC ven up for love, Isobel insisted on naming her newborn daughter after he
+1 CONC r own grandmother, an immensely talented witch.
+1 CONT 
+1 CONT Rowling, J.K.. Short Stories from Hogwarts of Heroism, Hardship and Dang
+1 CONC erous Hobbies (Kindle Single) (Pottermore Presents) (p. 7). Pottermore P
+1 CONC ublishing. Kindle Edition. 
+0 @N0031@ NOTE Minerva helped her mother explain to Malcolm and Robert Junior tha
+1 CONC t they must not flaunt their magic,
+1 CONT 
+1 CONT Rowling, J.K.. Short Stories from Hogwarts of Heroism, Hardship and Dang
+1 CONC erous Hobbies (Kindle Single) (Pottermore Presents) (p. 8). Pottermore P
+1 CONC ublishing. Kindle Edition. 
+0 @N0032@ NOTE The source material is somewhat unclear.  Muriel says that Kendra p
+1 CONC retended not to be muggleborn and Doge objects that *she did not pretend
+1 CONC * not that *she was not muggleborn.*  I think the falsehood were in th
+1 CONC e earlier part, the more natural objection would be to say "she *was* x
+1 CONC , she didn't have to pretend."  However, the falsehood is that she denie
+1 CONC d her heritage, thus "she didn't pretend."  
+0 @N0033@ NOTE The source text implies that it is believed that Percival was a sup
+1 CONC porter of blood purity due to his silence at his trial.  Assuming this w
+1 CONC idely held opinion is correct, it only makes sense if he is himself a pu
+1 CONC re-blood and his wife's blood status largely unknown despite my inferenc
+1 CONC e. 
+0 @N0034@ NOTE The Dumbledore family cannot have been a promenent one, or the bloo
+1 CONC d status of Kendra Dumbledore would have been widely known. 
+0 @N0035@ NOTE The Rowling Index has Cirgnus, the HP Lexicon Cygnus.  Of the two
+1 CONC , Cirgnus is likely to be an OCR error as Cygnus and not Cirgnus has act
+1 CONC ual google results for stars and constelations. 
+0 @N0036@ NOTE Per _Secrets of the Classlist_, Lavender was originally listed a
+1 CONC s a pure-blood, but her status "probably" changed, because she consisten
+1 CONC tly reacts with surprise to magic.  On the other hand, she was a residen
+1 CONC t in the room of requirement for the seventh year.  This leads me to con
+1 CONC clude she is a half blood that was raised in the muggle world, her paren
+1 CONC t(s) were probably in hidding.  She may be the child of two first genera
+1 CONC tion magicals.  
+0 @N0037@ NOTE I am including Nagini as definitively a person despite the only can
+1 CONC nonical source for this being the Fantastic Beasts series, because I fin
+1 CONC d the logic in the Harry Potter Wiki page on her persuasive.  This pag
+1 CONC e indicates that her back story is material that did not make the fina
+1 CONC l cust for book seven, but *could* have been included there - and thus w
+1 CONC as envisioned prior to the historical revisionism of Fanstastic Beasts. 
+0 @N0038@ NOTE 
+0 @N0039@ NOTE 
+0 @N0040@ NOTE We have no information on how or why she dies.
+0 @N0041@ NOTE 
+0 @N0042@ NOTE 
+0 @N0043@ NOTE > Linfred of Stinchcombe, a locally well-beloved and
+1 CONT > eccentric man, whose nickname, ‘the Potterer’, became corrupted in tim
+1 CONC e to ‘Potter’.
+1 CONT 
+1 CONT His eldest son marries the oldest granddaughter of [Ignotus] [Peverell].
+1 CONT 
+1 CONT [Ignotus]: <./people/Peverell/Ignotus>
+1 CONT 
+1 CONT [Peverell]: <./people/Peverell/>
+1 CONT 
+0 @N0044@ NOTE We do not know exactly when or why in 1979 he died.
+0 @N0045@ NOTE We do not know exactly when or why in 1977 she died.
+0 @N0046@ NOTE [Callidora] will marry [Harfang Longbottom].  She is apparently ali
+1 CONC ve as of Mrs. Rowling's book timeline.
+1 CONT 
+1 CONT [Callidora]: <./people/Black/Callidora>
+1 CONT 
+1 CONT [Harfang Longbottom]: <./people/Longbottom/Harfang>
+1 CONT 
+0 @N0047@ NOTE [Callidora] will marry [Harfang Longbottom].  She is apparently ali
+1 CONC ve as of Mrs. Rowling's book timeline.
+1 CONT 
+1 CONT [Callidora]: <./people/Black/Callidora>
+1 CONT 
+1 CONT [Harfang Longbottom]: <./people/Longbottom/Harfang>
+1 CONT 
+0 @N0048@ NOTE [Mnemone] is best known as the developer of Memory Modification Cha
+1 CONC rms. From this we know they were developed at least slightly before thi
+1 CONC s time.
+1 CONT 
+1 CONT [Mnemone]: /Harrypedia/people/Radford/Mnemone
+1 CONT 
+0 @N0049@ NOTE At an unknown point in the 1960s, but based on inference from othe
+1 CONC r dates probably 1965, Lucius Malfoy starts his first year at Hogwarts.
+0 @N0050@ NOTE This was calculated from when he started. 
+0 @N0051@ NOTE [Hogwarts] was founded “over a thousand years” before HP2. The soci
+1 CONC ety the founders recruited students from would have included both Chrsti
+1 CONC ans and papans. Given [Bill]’s work in [Egypt], I believe that before th
+1 CONC e [Statute of Secrecy], magic was woven into pagan societies, often as p
+1 CONC art of the priest classes. While we have no direct support for this in c
+1 CONC annon, it provides the best explanation of the things the [Weasley]s sta
+1 CONC te they encounter in their trip to visit that country.
+1 CONT 
+1 CONT [Hogwarts]: ./Hogwarts
+1 CONT [Bill]: <./people/Weasley/William Arthur>
+1 CONT [Egypt]: ./Egypt
+1 CONT [Weasley]: ./people/Weasley
+1 CONT 
+0 @N0052@ NOTE > The Malfoy name comes from old French and translates as ‘bad fait
+1 CONC h’. Like many other progenitors of noble English families, the wizard Ar
+1 CONC mand Malfoy arrived in Britain with William the Conqueror as part of th
+1 CONC e invading Norman army. Having rendered unknown, shady (and almost certa
+1 CONC inly magical) services to King William I, Malfoy was given a prime piec
+1 CONC e of land in Wiltshire, seized from local landowners, upon which his des
+1 CONC cendants have lived for ten consecutive centuries.
+1 CONT 
+1 CONT 
+0 @N0053@ NOTE The Ministry was esablished by and from the pre-existing Wizards' C
+1 CONC ouncil and Wizengamot (possibly the same thing).
+0 @N0054@ NOTE [Ralston] Potter was seated in the [Wizengamot] from 1612 to 1652
+1 CONC . He is known for his participation in the debates surounding the [Statu
+1 CONC te of Secrecy].
+1 CONT 
+1 CONT [Statute of Secrecy]: <./culture/International Statute of Secrecy>
+1 CONT 
+1 CONT       
+1 CONT [Wizengamot]: <./culture/Government/>
+1 CONT 
+1 CONT       
+1 CONT [Ralston]: <./people/Potter/Ralston>
+0 @N0055@ NOTE Passed at an unknown point this year.
+1 CONT 
+1 CONT 
+0 @N0056@ NOTE Voted out of office because he failed to take [Gellert Grindelwald
+1 CONC ] seriously.
+1 CONT 
+1 CONT [Gellert Grindelwald]: ./people/Grindelwald/Gellert
+1 CONT 
+0 @N0057@ NOTE Another bigot, the public pushed back.
+0 @N0058@ NOTE [Snape] started at [Hogwarts] in either fall of 1981 or possibly th
+1 CONC e spring of that year.
+1 CONT 
+1 CONT 
+1 CONT       
+1 CONT [Snape]: <./people/Snape/Severus>
+1 CONT 
+1 CONT       
+1 CONT [Hogwarts]: <./Hogwarts/>
+0 TRLR
