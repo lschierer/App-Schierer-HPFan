@@ -1,5 +1,8 @@
 .footer {
-  padding: 1rem;
+  padding: 0 var(--size-5);
+  display: flex;
+  align-items: center;
+  justify-content: left;
   background-color: var(--mod-heading-font-color);
   color: var(--text-2);
 }

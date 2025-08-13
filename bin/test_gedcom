@@ -1,0 +1,10 @@
+#!/usr/bin/env perl
+use v5.42.0;
+use utf8::all;
+use File::FindLib 'lib';
+
+require App::Schierer::HPFan::Model::Gedcom;
+
+my $gedcom = App::Schierer::HPFan::Model::Gedcom->new();
+
+$gedcom->parse_file('./share/potter_universe_ancestris.ged');

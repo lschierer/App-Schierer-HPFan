@@ -39,7 +39,7 @@
   --size-14: 20rem;
   --size-15: 30rem;
   --header-height: 7vh;
-  --footer-height: 4vh;
+  --footer-height: max(2vh, 2em);
   --main-height: calc(
     100vh - calc(calc(2 * var(--header-height)) + var(--footer-height))
   );
@@ -72,73 +72,80 @@
 }
 
 html {
-  min-width: 100vw;
+  width: 100vw;
   height: 100vh;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
+  overflow: hidden;
   margin: 0;
   color: var(--text-1);
   background-color: var(--spectrum-background-base-color);
   display: grid;
-  grid-template-areas:
-    "header"
-    "content"
-    "footer";
   grid-template-rows: var(--header-height) 1fr var(--footer-height);
   height: 100vh;
+  width: 100vw;
   box-sizing: border-box;
 }
 
 /* 2. Optional sidebar layout */
 body.with-sidebar {
-  max-width: 100vw;
   display: grid;
-  grid-template:
-    "header" var(--header-height)
-    "title" var(--header-height)
-    "content" 1fr
-    "footer" var(--footer-height);
+  grid-template-rows: var(--header-height) var(--header-height) 1fr var(
+      --footer-height
+    );
 }
 
 /* 3. Layout regions */
 header {
   box-sizing: border-box;
-  grid-area: header;
+  grid-row: 1/2;
   width: 100vw;
   height: var(--header-height);
 }
 
 div.title-section {
-  grid-area: title;
+  height: var(--header-height);
+  grid-row: 2/3;
   display: flex;
   justify-content: center;
   align-items: baseline;
+  box-sizing: border-box;
 
   & h1 {
     margin: var(--size-5);
+    box-sizing: border-box;
   }
 }
 
 footer {
-  grid-area: footer;
+  box-sizing: border-box;
   height: var(--footer-height);
   width: 100%;
 }
 
 div.spectrum-SplitView.spectrum-SplitView--horizontal {
-  grid-area: content;
+  box-sizing: border-box;
+  grid-row-end: span 1;
   height: var(--main-height);
   width: 100vw;
+}
+
+main.no-sidebar {
+  grid-row: 2/3;
 }
 
 main,
 div#main {
   grid-area: content;
-  overflow: auto;
+  overflow: hidden auto;
+  width: 100%;
   padding: 0 1rem;
-  min-height: var(--main-height);
+  height: 99%;
+  max-height: var(--main-height);
   box-sizing: border-box;
 }
 
@@ -146,8 +153,15 @@ div#main {
 div#nav {
   grid-area: content;
   max-width: max(250px, 20vw);
+  max-height: var(--main-height);
+  height: min-content;
   overflow-y: auto;
-  padding: 0.5rem;
+  padding: 0 0.5rem;
+  margin: 0;
+}
+
+nav {
+  margin: 0;
 }
 
 /* 5. SplitView pane (used in legacy layout maybe?) */

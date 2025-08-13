@@ -19,6 +19,7 @@ my $build = Module::Build->new(
     'File::HomeDir'                  => '0',
     'File::Share'                    => '0',
     'GD'                             => '0',
+    'Genealogy::Gedcom'              => '0',
     'Git::Repository'                => '0',
     'Git::Repository::Log'           => '0',
     'Git::Repository::Log::Iterator' => '0',

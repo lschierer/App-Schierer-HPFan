@@ -2,13 +2,15 @@
 collection: Harrypedia
 title: Teens, Boarding Schools, and Age Appropriate Literature
 author: Luke Schierer
+css:
+  - '/css/markdown-images.css'
 ---
 
 One of the things that stands out as a contrast across the movie adaptations of Mrs. Rowling's books is the tone. Starting especially with the third movie, and proceeding more or less steadily onwards, the movies get both darker and more mature. The _entire_ school ages as [Harry] does in the movie adaptations; this is not in fact just my interpretation, some of the commentary in the interviews attached to the DvDs released includes statements along the lines of "They are older now so ..."
 
 This age bias in the movies stands out most clearly in the depictions of the [Quidditch] games. In the first movie they are all depicted in flowing brightly coloured robes. There is little to no padding, and despite the bludgers racing about, seemingly none needed. There is a cartoon element (that is, frankly, present in the books as well) that wizards can seemingly take, and shrug off, the incredible damage that an iron ball roughly the size of a cannon ball, flying around at high speed[^241203-1] would do on impact the human frame. Later movies are frankly still ridiculous in terms of the _actual_ damage a bludger would _actually_ do, but there is a greater acknowledgement that [Quidditch] is indeed an incredibly rough sport. The players start to look more like a rugby team, both in their uniforms, and in the blood stained and bruised visages we see them sporting in the few shots the later movies give us of the practice times and games. Compare these [Oliver Wood] from the first year to [Ron] as Keeper in the later movies, both from trailers:
 
-<div class="imgCompare">
+<div class="img-compare">
 
 ![Oliver-Wood-Keeping](/assets/OliverWoodKeeping.png)
 ![Ron Weasley Keeping](/assets/RonWeasleyKeeping.png)

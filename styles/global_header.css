@@ -8,6 +8,7 @@
 }
 
 div.site-title-section {
+  max-height: var(--header-height);
   grid-area: logo;
   display: grid;
   box-sizing: border-box;
@@ -183,6 +184,7 @@ span.site-title.spectrum-Heading {
 }
 
 div.logo-container {
+  max-height: calc(var(--header-height) - 4px);
   display: block;
   box-sizing: border-box;
   grid-row: 1/-1;
@@ -192,9 +194,9 @@ div.logo-container {
 
 svg.site-logo {
   display: block;
+  object-fit: contain;
   width: auto;
   height: 90%;
-  max-height: var(--header-height);
 }
 
 a.site-title {

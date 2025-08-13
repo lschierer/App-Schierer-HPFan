@@ -1,0 +1,18 @@
+div.img-compare {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  box-sizing: border-box;
+
+  & p {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.img-compare img {
+  max-width: 45%;
+  max-height: 20vh;
+  box-sizing: border-box;
+  object-fit: contain;
+}

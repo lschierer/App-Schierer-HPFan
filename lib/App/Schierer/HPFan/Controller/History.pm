@@ -15,13 +15,36 @@ package App::Schierer::HPFan::Controller::History {
 
   sub register($self, $app, $config) {
     my $logger = Log::Log4perl->get_logger(__PACKAGE__);
-    $logger->info(__PACKAGE__ . "Register method start");
+    $logger->info(__PACKAGE__ . " Register method start");
 
-    # Build the unified timeline
-    my $timeline = $self->_build_timeline($app);
+    my $timeline;
 
-    # Store in helper for access
-    $app->helper(history_timeline => sub { return $timeline });
+    if($app->config('gramps_initialized') && !$timeline){
+      $timeline = $self->_build_timeline($app->gramps);
+      foreach my $event (@$timeline) {
+        if($event->{description} && length($event->{description})){
+          $event->{description} = $app->render_markdown_snippet($event->{description});
+        }
+        if($event->{source} && length($event->{source})) {
+          $event->{source} = $app->render_markdown_snippet($event->{source});
+        }
+      }
+    }else {
+      $app->plugins->on(
+        'gramps_initialized' => sub($c, $gramps) {
+        # Build the unified timeline
+        $timeline = $self->_build_timeline($gramps);
+        foreach my $event (@$timeline) {
+          if($event->{description} && length($event->{description})){
+            $event->{description} = $app->render_markdown_snippet($event->{description});
+          }
+          if($event->{source} && length($event->{source})) {
+            $event->{source} = $app->render_markdown_snippet($event->{source});
+          }
+        }
+      });
+    }
+
 
     $app->routes->get('/Harrypedia/History')->to(
       controller => 'History',
@@ -34,7 +57,12 @@ package App::Schierer::HPFan::Controller::History {
       order => 1,
     });
 
+    # Store in helper for access
+    $app->helper(history_timeline => sub { return $timeline });
+
   }
+
+
 
   sub timeline_handler ($c) {
     my $logger = Log::Log4perl->get_logger(__PACKAGE__);
@@ -51,9 +79,9 @@ package App::Schierer::HPFan::Controller::History {
     return $c->render;
   }
 
-  sub _build_timeline($self, $app) {
+  sub _build_timeline($self, $gramps) {
     my $logger      = Log::Log4perl->get_logger(__PACKAGE__);
-    my $history_dir = $app->config('distDir')->child('history');
+    my $history_dir = Mojo::File::Share::dist_dir('App::Schierer::HPFan')->child('history');
 
     my @all_events;
 
@@ -68,7 +96,7 @@ package App::Schierer::HPFan::Controller::History {
       push @all_events, @$events if $events;
     }
 
-    my $ge = $self->_process_gramps_events($app);
+    my $ge = $self->_process_gramps_events($gramps);
     $logger->debug(sprintf(
       'retrieved %s events from gramps', $ge ? scalar @$ge : '0'));
 
@@ -120,14 +148,7 @@ package App::Schierer::HPFan::Controller::History {
     $logger->info(
       sprintf("Built timeline with %d total events", scalar @all_events));
 
-    foreach my $event (@all_events) {
-      if($event->{description} && length($event->{description})){
-        $event->{description} = $app->render_markdown_snippet($event->{description});
-      }
-      if($event->{source} && length($event->{source})) {
-        $event->{source} = $app->render_markdown_snippet($event->{source});
-      }
-    }
+
     return \@all_events;
   }
 
@@ -171,7 +192,7 @@ package App::Schierer::HPFan::Controller::History {
     return $eventDate;
   }
 
-  sub _find_gramps_event_description($self, $app, $event) {
+  sub _find_gramps_event_description($self, $gramps, $event) {
     my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     my @description;
     if (ref($event->note_refs) ne 'ARRAY') {
@@ -179,7 +200,7 @@ package App::Schierer::HPFan::Controller::History {
       return '';
     }
     foreach my $nr ($event->note_refs->@*) {
-      my $note = $app->gramps->notes->{$nr};
+      my $note = $gramps->notes->{$nr};
       if ($note) {
         push @description, $note->text;
       }
@@ -188,12 +209,12 @@ package App::Schierer::HPFan::Controller::History {
 
     if ($event->type =~ /birth/i) {
       my @people;
-      foreach my $p ($app->gramps->people_by_event->{ $event->handle }->@*) {
+      foreach my $p ($gramps->people_by_event->{ $event->handle }->@*) {
         push @people, $p;
       }
       if (scalar @people) {
         foreach my $nr ($people[0]->note_refs->@*) {
-          my $note = $app->gramps->notes->{$nr};
+          my $note = $gramps->notes->{$nr};
           if ($note) {
             push @description, $note->text;
           }
@@ -207,22 +228,22 @@ package App::Schierer::HPFan::Controller::History {
     return ' ';
   }
 
-  sub _process_gramps_events($self, $app) {
+  sub _process_gramps_events($self, $gramps) {
     my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     my @grampsEvents;
-    foreach my $event (values $app->gramps->events->%*) {
+    foreach my $event (values $gramps->events->%*) {
       if ($event->type !~ /(Hogwarts Sorting|Education)/) {
         next unless ($event->date);
         my $now       = Date::Manip::Date->new();
         my $eventDate = $self->_determine_gramps_date(
-          $app->gramps->date_parser->format_date($event->date));
+          $gramps->date_parser->format_date($event->date));
         if ($eventDate->{date_type} eq 'invalid') {
           $logger->debug("skipping event with invalid date_type");
           next;
         }
 
         my @people;
-        foreach my $p ($app->gramps->people_by_event->{ $event->handle }->@*) {
+        foreach my $p ($gramps->people_by_event->{ $event->handle }->@*) {
           push @people, $p;
         }
         if ($event->type =~ /(Engagement|Marriage)/i) {
@@ -269,8 +290,8 @@ package App::Schierer::HPFan::Controller::History {
           date_type   => $eventDate->{date_type},
           type        => 'magical',
           blurb       => $blurb,
-          description => $self->_find_gramps_event_description($app, $event),
-          source      => $self->_build_event_sources($app, $event),
+          description => $self->_find_gramps_event_description($gramps, $event),
+          source      => $self->_build_event_sources($gramps, $event),
         };
         push @grampsEvents, $ge;
       }
@@ -278,26 +299,26 @@ package App::Schierer::HPFan::Controller::History {
     return \@grampsEvents;
   }
 
-  sub _build_event_sources($self, $app, $event) {
+  sub _build_event_sources($self, $gramps, $event) {
     my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     my @citations;
 
     # Get citations for this event
     foreach my $citation_ref ($event->citation_refs->@*) {
-      my $citation = $app->gramps->citations->{$citation_ref};
+      my $citation = $gramps->citations->{$citation_ref};
       next unless $citation;
 
-      my $source = $app->gramps->sources->{ $citation->sourceref };
+      my $source = $gramps->sources->{ $citation->sourceref };
       next unless $source;
 
-      my $mla_citation = $self->_format_mla_citation($app, $source, $citation);
+      my $mla_citation = $self->_format_mla_citation($gramps, $source, $citation);
       push @citations, "- $mla_citation" if $mla_citation;
     }
 
     return @citations ? join("\n", @citations) : '';
   }
 
-  sub _format_mla_citation($self, $app, $source, $citation) {
+  sub _format_mla_citation($self, $gramps, $source, $citation) {
     my @parts;
 
     # Author (if available)
@@ -324,7 +345,7 @@ package App::Schierer::HPFan::Controller::History {
 
     # Repository information (if available)
     foreach my $repo_ref ($source->repo_refs->@*) {
-      my $repository = $app->gramps->repositories->{ $repo_ref->handle };
+      my $repository = $gramps->repositories->{ $repo_ref->handle };
       next unless $repository;
 
       if (my $repo_name = $repository->rname) {
