@@ -1,131 +1,77 @@
 use v5.42.0;
 use experimental qw(class);
 use utf8::all;
-require Path::Tiny;
 use namespace::autoclean;
 
 class App::Schierer::HPFan::Logger {
-# PODNAME: App::Schierer::HPFan::Logger
   use Carp;
-  use Log::Log4perl qw(get_logger :levels);
-  our $VERSION = 'v0.0.2';
+  use Log::Log4perl qw(:levels);    # <-- do NOT import get_logger
+  use Scalar::Util  qw(blessed);
+  use JSON::PP      ();
 
-  field $logger : reader;
+  our $VERSION = 'v0.0.3';
 
+  field $logger : reader;           # readonly accessor -> $obj->logger
   field $category : reader : param = __CLASS__;
 
   ADJUST {
-    $self->get_logger();
+    $self->get_logger;              # initialize on construction
   }
 
   method get_logger {
     return $logger if defined $logger;
-    Log::Log4perl::Config->utf8(1);
-    $logger = Log::Log4perl->get_logger($category)
-      ;    # $category is a field set to __CLASS__
+    # If you use a Log4perl config, make sure it's already initialized elsewhere
+    Log::Log4perl::Config->utf8(1)
+      ;    # only if you really need this, and you've loaded that module
+    $logger = Log::Log4perl->get_logger($category); # <-- set the field directly
     return $logger;
   }
 
-  # Log::Handler methods to forward to Log::Log4perl
-    # These methods are called by modules like Genealogy::Gedcom that expect
-    # a Log::Handler instance.
+  # ----- Log::Handler-compatible shim (what Genealogy::Gedcom expects) -----
 
-    method log ($message, $level = 'info') {
-      $self->_log4perl_forwarder($message, $level);
-    }
+  method log ($message, $level = 'info') {
+    $self->_log4perl_forwarder($message, $level);
+  }
+  method debug   ($message) { $self->_log4perl_forwarder($message, $DEBUG) }
+  method info    ($message) { $self->_log4perl_forwarder($message, $INFO) }
+  method notice  ($message) { $self->_log4perl_forwarder($message, $INFO) }
+  method warning ($message) { $self->_log4perl_forwarder($message, $WARN) }
+  method error   ($message) { $self->_log4perl_forwarder($message, $ERROR) }
+  method critical($message) { $self->_log4perl_forwarder($message, $FATAL) }
+  method alert ($message)   { $self->_log4perl_forwarder($message, $WARN) }
 
-    method debug ($message) {
-      $self->_log4perl_forwarder($message, 'debug');
-    }
-
-    method info ($message) {
-      $self->_log4perl_forwarder($message, 'info');
-    }
-
-    method notice ($message) {
-      $self->_log4perl_forwarder($message, 'notice');
-    }
-
-    method warning ($message) {
-      $self->_log4perl_forwarder($message, 'warning');
-    }
-
-    method error ($message) {
-      $self->_log4perl_forwarder($message, 'error');
-    }
-
-    method critical ($message) {
-      $self->_log4perl_forwarder($message, 'critical');
-    }
-
-    method alert ($message) {
-      $self->_log4perl_forwarder($message, 'alert');
-    }
-
-    method emergency ($message) {
-      $self->_log4perl_forwarder($message, 'emergency');
-    }
-
-    # Internal method to map Log::Handler levels to Log::Log4perl levels
-    method _log4perl_forwarder ($message, $level) {
-      my $log4perl_level = $INFO; # Default to INFO if unknown
-
-      if ( $level eq 'debug' ) {
-          $log4perl_level = $DEBUG;
-      }
-      elsif ( $level eq 'info' ) {
-          $log4perl_level = $INFO;
-      }
-      elsif ( $level eq 'notice' ) {
-          $log4perl_level = $INFO; # Log::Log4perl doesn't have a direct 'notice' level
-      }
-      elsif ( $level eq 'warning' ) {
-          $log4perl_level = $WARN;
-      }
-      elsif ( $level eq 'error' ) {
-          $log4perl_level = $ERROR;
-      }
-      elsif ( $level eq 'critical' || $level eq 'alert' || $level eq 'emergency' ) {
-          $log4perl_level = $FATAL;
-      }
-
-      $self->get_logger()->log($log4perl_level, $message);
-    }
-
-  method toHashRef {
-    # a base toHash implementation is necessary for Data::Printer
-    # to work on child classes.
-    return {};
+  method emergency($message) {
+    $self->_log4perl_forwarder($message, 'emergency');
   }
 
-  method _isTrue {
-    return
-         defined($self)
-      && ref($self)
-      && blessed($self)
-      && blessed($self) eq __CLASS__;
+  method _log4perl_forwarder ($message, $level) {
+    my $lvl = $INFO;    # default
+    if    ($level eq 'debug')                       { $lvl = $DEBUG }
+    elsif ($level eq 'info' or $level eq 'notice')  { $lvl = $INFO }
+    elsif ($level eq 'warning' or $level eq 'warn') { $lvl = $WARN }
+    elsif ($level eq 'error' or $level eq 'err')    { $lvl = $ERROR }
+    elsif ($level eq 'critical'
+      or $level eq 'crit'
+      or $level eq 'alert'
+      or $level eq 'emergency') {
+      $lvl = $FATAL;
+    }
+
+    $self->get_logger->log($lvl, $message);
   }
 
-  # Method for JSON serialization
-  # a base TO_JSON implementation is necessary for Data::Printer
-  # to work on child classes.
+  # ----- Optional helpers for DDP / JSON -----
+
+  method to_hash {
+    return { category => $category };
+  }
+
   method TO_JSON {
-    my $json =
-      JSON::PP->new->utf8->pretty->allow_blessed(1)
-      ->convert_blessed(1)
-      ->encode(__CLASS__->to_hash());
-    return $json;
+    return $self->to_hash;
   }
 
-  # Stringification method using JSON
   method as_string {
-    my $json =
-      JSON::PP->new->utf8->allow_blessed(1)
-      ->convert_blessed(1)
-      ->encode(__CLASS__->to_hash());
-    return $json;
+    return JSON::PP->new->utf8->allow_blessed->convert_blessed->encode($self);
   }
 }
 1;
-
-__END__

@@ -19,32 +19,36 @@ package App::Schierer::HPFan::Controller::History {
 
     my $timeline;
 
-    if($app->config('gramps_initialized') && !$timeline){
+    if ($app->config('gramps_initialized') && !$timeline) {
       $timeline = $self->_build_timeline($app->gramps);
       foreach my $event (@$timeline) {
-        if($event->{description} && length($event->{description})){
-          $event->{description} = $app->render_markdown_snippet($event->{description});
+        if ($event->{description} && length($event->{description})) {
+          $event->{description} =
+            $app->render_markdown_snippet($event->{description});
         }
-        if($event->{source} && length($event->{source})) {
+        if ($event->{source} && length($event->{source})) {
           $event->{source} = $app->render_markdown_snippet($event->{source});
         }
       }
-    }else {
+    }
+    else {
       $app->plugins->on(
         'gramps_initialized' => sub($c, $gramps) {
-        # Build the unified timeline
-        $timeline = $self->_build_timeline($gramps);
-        foreach my $event (@$timeline) {
-          if($event->{description} && length($event->{description})){
-            $event->{description} = $app->render_markdown_snippet($event->{description});
-          }
-          if($event->{source} && length($event->{source})) {
-            $event->{source} = $app->render_markdown_snippet($event->{source});
+          # Build the unified timeline
+          $timeline = $self->_build_timeline($gramps);
+          foreach my $event (@$timeline) {
+            if ($event->{description} && length($event->{description})) {
+              $event->{description} =
+                $app->render_markdown_snippet($event->{description});
+            }
+            if ($event->{source} && length($event->{source})) {
+              $event->{source} =
+                $app->render_markdown_snippet($event->{source});
+            }
           }
         }
-      });
+      );
     }
-
 
     $app->routes->get('/Harrypedia/History')->to(
       controller => 'History',
@@ -62,8 +66,6 @@ package App::Schierer::HPFan::Controller::History {
 
   }
 
-
-
   sub timeline_handler ($c) {
     my $logger = Log::Log4perl->get_logger(__PACKAGE__);
 
@@ -80,8 +82,9 @@ package App::Schierer::HPFan::Controller::History {
   }
 
   sub _build_timeline($self, $gramps) {
-    my $logger      = Log::Log4perl->get_logger(__PACKAGE__);
-    my $history_dir = Mojo::File::Share::dist_dir('App::Schierer::HPFan')->child('history');
+    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
+    my $history_dir =
+      Mojo::File::Share::dist_dir('App::Schierer::HPFan')->child('history');
 
     my @all_events;
 
@@ -147,7 +150,6 @@ package App::Schierer::HPFan::Controller::History {
 
     $logger->info(
       sprintf("Built timeline with %d total events", scalar @all_events));
-
 
     return \@all_events;
   }
@@ -265,21 +267,24 @@ package App::Schierer::HPFan::Controller::History {
           $blurb =
             sprintf('%s elected Minister of Magic', $people[0]->display_name);
         }
-        elsif($event->type =~ /property/i) {
+        elsif ($event->type =~ /property/i) {
           next unless scalar(@people) >= 1;
           $blurb = sprintf('Property Awarded to %s', $people[0]->display_name);
         }
-        elsif($event->type =~/government/i ) {
+        elsif ($event->type =~ /government/i) {
           next unless length($event->description);
           $blurb = $event->description;
         }
-        elsif(scalar @people) {
+        elsif (scalar @people) {
           $blurb = sprintf('%s of %s',
             $event->type, join(', ', map { $_->display_name } @people));
-        } elsif( length($event->description)) {
-          $blurb = $event->description
-        } else {
-          $logger->warn('no blurb known for event with handle ' . $event->handle);
+        }
+        elsif (length($event->description)) {
+          $blurb = $event->description;
+        }
+        else {
+          $logger->warn(
+            'no blurb known for event with handle ' . $event->handle);
           next;
         }
 
@@ -311,7 +316,8 @@ package App::Schierer::HPFan::Controller::History {
       my $source = $gramps->sources->{ $citation->sourceref };
       next unless $source;
 
-      my $mla_citation = $self->_format_mla_citation($gramps, $source, $citation);
+      my $mla_citation =
+        $self->_format_mla_citation($gramps, $source, $citation);
       push @citations, "- $mla_citation" if $mla_citation;
     }
 

@@ -2,9 +2,18 @@
 use v5.42.0;
 use utf8::all;
 use File::FindLib 'lib';
+use Devel::Local;
+use Carp;
 
 require App::Schierer::HPFan::Model::Gedcom;
+require App::Schierer::HPFan::Logger::Config;
+require App::Schierer::HPFan;
 
-my $gedcom = App::Schierer::HPFan::Model::Gedcom->new();
+my $lc = App::Schierer::HPFan::Logger::Config->new('App-Schierer-HPFan');
+my $log4perl_logger = $lc->init('development');
 
-$gedcom->parse_file('./share/potter_universe_ancestris.ged');
+my $gedcom = App::Schierer::HPFan::Model::Gedcom->new(
+  filename => './share/potter_universe.ged'
+);
+
+$gedcom->run();
