@@ -3,7 +3,7 @@
 "http://gramps-project.org/xml/1.7.1/grampsxml.dtd">
 <database xmlns="http://gramps-project.org/xml/1.7.1/">
   <header>
-    <created date="2025-08-12" version="5.1.5"/>
+    <created date="2025-08-13" version="5.1.5"/>
     <researcher>
       <resname>Luke Schierer</resname>
       <resemail>luke@schierer.org</resemail>
@@ -932,10 +932,11 @@
       <dateval val="1968"/>
       <citationref hlink="_f12bdbea976fb0fbd5e03e33cd"/>
     </event>
-    <event handle="_f14e5ed29c1204cd6f1ad8d5282" change="1658243128" id="E0190">
+    <event handle="_f14e5ed29c1204cd6f1ad8d5282" change="1755120372" id="E0190">
       <type>Birth</type>
-      <dateval val="????-03-09"/>
-      <citationref hlink="_f14e5eb6c7d1f399ede8ff8ceb3"/>
+      <dateval val="1980" type="before"/>
+      <noteref hlink="_ff6750a54744bb07a6af1f2bce0"/>
+      <citationref hlink="_ff6752aff7c290a4125e2316c0"/>
     </event>
     <event handle="_f1dcf0ddc9573c102fa3416de2f" change="1662070226" id="E0191">
       <type>Birth</type>
@@ -993,9 +994,10 @@
       <dateval val="1979-09-01"/>
       <citationref hlink="_f2ae2a6c55441ba6bfd70cb7e25"/>
     </event>
-    <event handle="_f2e1cfa111d6525f3e48c5f2cf1" change="1669072906" id="E0202">
+    <event handle="_f2e1cfa111d6525f3e48c5f2cf1" change="1755120716" id="E0202">
       <type>Birth</type>
-      <datestr val="26th August"/>
+      <dateval val="1965" type="before" quality="calculated"/>
+      <noteref hlink="_ff674fffda66bf51d4387ecccb2"/>
       <citationref hlink="_f2e1cf9d57d4d4216804185ce83"/>
     </event>
     <event handle="_f2fe47a174932cfad37bd73e2a9" change="1669837108" id="E0203">
@@ -1245,6 +1247,14 @@
       <description>Snape becomes the Potions Professor</description>
       <noteref hlink="_ff62251ce0b54790fc1e3880bd7"/>
       <citationref hlink="_ff6223e4a20f111d75ba8e4757"/>
+    </event>
+    <event handle="_ff6751988b95bd4cc55ae7b37a7" change="1755120503" id="E0250">
+      <type>Marriage</type>
+      <citationref hlink="_ff6752aff7c290a4125e2316c0"/>
+    </event>
+    <event handle="_ff6753234ee47847742422fd08c" change="1755120543" id="E0251">
+      <type>Divorce</type>
+      <citationref hlink="_ff6752aff7c290a4125e2316c0"/>
     </event>
   </events>
   <people>
@@ -4103,13 +4113,16 @@
       </name>
       <citationref hlink="_f134eb10c7c1813197163428e9d"/>
     </person>
-    <person handle="_f14e5d5cc384cfb76406590c5bc" change="1658243306" id="I0253">
+    <person handle="_f14e5d5cc384cfb76406590c5bc" change="1755120601" id="I0253">
       <gender>F</gender>
       <name type="Birth Name">
         <first>Sybill</first>
         <surname derivation="Given">Trelawney</surname>
       </name>
       <eventref hlink="_f14e5ed29c1204cd6f1ad8d5282" role="Primary"/>
+      <eventref hlink="_ff6751988b95bd4cc55ae7b37a7" role="Primary"/>
+      <eventref hlink="_ff6753234ee47847742422fd08c" role="Primary"/>
+      <parentin hlink="_ff6754c723a2a9b203592888f72"/>
       <citationref hlink="_f14e5eb6c7d1f399ede8ff8ceb3"/>
       <tagref hlink="_ed628bd2be366112813f145329a"/>
       <tagref hlink="_ed5f2966ec73e6e477d5090556e"/>
@@ -5065,6 +5078,14 @@
       <eventref hlink="_ff6221bf18517f0e6ea1976e6a" role="Primary"/>
       <citationref hlink="_ff61c1724b835d752d1a93398ee"/>
     </person>
+    <person handle="_ff6755e76bf4630cd4a18eb6e1c" change="1755120601" id="I0360">
+      <gender>M</gender>
+      <name type="Birth Name">
+        <surname derivation="Given">Higglebottom</surname>
+      </name>
+      <parentin hlink="_ff6754c723a2a9b203592888f72"/>
+      <citationref hlink="_ff6752aff7c290a4125e2316c0"/>
+    </person>
   </people>
   <families>
     <family handle="_ed59312dc737e38d031951e2757" change="1631134531" id="F0000">
@@ -5850,6 +5871,13 @@
         <citationref hlink="_f941d8ef3bba5d9627a674b9c0"/>
       </childref>
       <citationref hlink="_f941d8ef3bba5d9627a674b9c0"/>
+    </family>
+    <family handle="_ff6754c723a2a9b203592888f72" change="1755120601" id="F0080">
+      <rel type="Married"/>
+      <father hlink="_ff6755e76bf4630cd4a18eb6e1c"/>
+      <mother hlink="_f14e5d5cc384cfb76406590c5bc"/>
+      <eventref hlink="_ff6751988b95bd4cc55ae7b37a7" role="Family"/>
+      <eventref hlink="_ff6753234ee47847742422fd08c" role="Family"/>
     </family>
   </families>
   <citations>
@@ -7191,6 +7219,12 @@
       <confidence>2</confidence>
       <sourceref hlink="_ed5f0f7679c29eedc2aa033f455"/>
     </citation>
+    <citation handle="_ff6752aff7c290a4125e2316c0" change="1755120212" id="C0272">
+      <dateval val="2014-10-31"/>
+      <page>https://www.rowlingindex.org/work/stpm/</page>
+      <confidence>2</confidence>
+      <sourceref hlink="_ff6752991d27065793d3148ea43"/>
+    </citation>
   </citations>
   <sources>
     <source handle="_ed5926e209e1387645aecd422c7" change="1631044751" id="S0000">
@@ -7386,6 +7420,12 @@
       <sauthor>Pottermore</sauthor>
       <reporef hlink="_ed5d9c77bf084bef50a633edd3" callno="https://web.archive.org/web/20170630110815/https://www.pottermore.com/explore-the-story/albus-dumbledore" medium="Electronic"/>
     </source>
+    <source handle="_ff6752991d27065793d3148ea43" change="1755120203" id="S0059">
+      <stitle>Sybill Trelawney</stitle>
+      <sauthor>Mrs. J. K. Rowling</sauthor>
+      <sabbrev>stpm</sabbrev>
+      <reporef hlink="_ed62d26e4866d63d0673c446418" callno="https://www.rowlingindex.org/work/stpm/" medium="Electronic"/>
+    </source>
   </sources>
   <places>
     <placeobj handle="_ed5d8e6608a5e457dd6ac58da27" change="1631163135" id="P0001" type="County">
@@ -7562,7 +7602,7 @@
       <type>Web site</type>
       <url  href="https://www.mugglenet.com/" type="Web Home" description="MuggleNet"/>
     </repository>
-    <repository handle="_ed62d26e4866d63d0673c446418" change="1754970744" id="R0030">
+    <repository handle="_ed62d26e4866d63d0673c446418" change="1755120165" id="R0030">
       <rname>The J.K. Rowling Index</rname>
       <type>Web site</type>
       <url  href="https://www.rowlingindex.org/" type="Web Home" description="List of all J.K. Rowling's writings."/>
@@ -7850,6 +7890,12 @@ His eldest son marries the oldest granddaughter of [Ignotus] [Peverell].
 
       
 [Hogwarts]: &lt;./Hogwarts/&gt;</text>
+    </note>
+    <note handle="_ff674fffda66bf51d4387ecccb2" change="1755119930" id="N0059" type="Event Note">
+      <text>We know she is born on August 26th of an unknown year. </text>
+    </note>
+    <note handle="_ff6750a54744bb07a6af1f2bce0" change="1755119998" id="N0060" type="Event Note">
+      <text>We know she is born on March 9th of an unknown year. </text>
     </note>
   </notes>
 </database>
