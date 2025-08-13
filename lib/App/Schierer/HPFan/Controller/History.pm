@@ -96,7 +96,7 @@ package App::Schierer::HPFan::Controller::History {
       $logger->debug("Processing history file: $file_path");
 
       my $events = $self->_process_history_file($file_path);
-      push @all_events, @$events if $events;
+      #push @all_events, @$events if $events;
     }
 
     my $ge = $self->_process_gramps_events($gramps);
@@ -202,7 +202,7 @@ package App::Schierer::HPFan::Controller::History {
       return '';
     }
     foreach my $nr ($event->note_refs->@*) {
-      my $note = $gramps->notes->{$nr};
+      my $note = $gramps->notes->{ $nr->hlink };
       if ($note) {
         push @description, $note->text;
       }
@@ -310,7 +310,7 @@ package App::Schierer::HPFan::Controller::History {
 
     # Get citations for this event
     foreach my $citation_ref ($event->citation_refs->@*) {
-      my $citation = $gramps->citations->{$citation_ref};
+      my $citation = $gramps->citations->{ $citation_ref->hlink };
       next unless $citation;
 
       my $source = $gramps->sources->{ $citation->sourceref };
@@ -351,7 +351,7 @@ package App::Schierer::HPFan::Controller::History {
 
     # Repository information (if available)
     foreach my $repo_ref ($source->repo_refs->@*) {
-      my $repository = $gramps->repositories->{ $repo_ref->handle };
+      my $repository = $gramps->repositories->{ $repo_ref->hlink };
       next unless $repository;
 
       if (my $repo_name = $repository->rname) {
@@ -363,8 +363,16 @@ package App::Schierer::HPFan::Controller::History {
         }
 
         # Add URL if available
-        if (my $url = $repository->url) {
-          push @parts, $url;
+        if (ref($repository) eq 'App::Schierer::HPFan::Model::Gramps::Repository') {
+          if (my $url = $repository->url) {
+            if(ref($url) eq 'ARRAY'){
+              foreach my $u (@$url){
+                push @parts, $u;
+              }
+            }else {
+              push @parts, $url;
+            }
+          }
         }
       }
     }

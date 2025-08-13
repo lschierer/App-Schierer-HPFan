@@ -1,42 +1,69 @@
 use v5.42;
 use utf8::all;
 use experimental qw(class);
+require App::Schierer::HPFan::Model::Gramps::Citation::Reference;
+require App::Schierer::HPFan::Model::Gramps::Note::Reference;
+require App::Schierer::HPFan::Model::Gramps::Tag::Reference;
+require App::Schierer::HPFan::Model::Gramps::Place::Reference;
 
 class App::Schierer::HPFan::Model::Gramps::Event :
-  isa(App::Schierer::HPFan::Logger) {
+  isa(App::Schierer::HPFan::Model::Gramps::Generic) {
   use Carp;
   use App::Schierer::HPFan::Model::Gramps::DateHelper;
 
-  field $id     : reader : param = undef;
-  field $handle : reader : param;
-  field $priv   : reader : param = 0;
-  field $change : reader : param;
-  field $type   : reader : param = undef;
-  field $date   : reader : param =
+  field $id   : reader : param = undef;
+  field $priv : reader : param = 0;
+  field $type : reader : param = undef;
+  field $date : reader : param =
     undef;    # Can be daterange, datespan, dateval, or datestr
-  field $place_ref     : reader : param = undef;    # handle reference to place
-  field $cause         : reader : param = undef;
-  field $description   : reader : param = undef;
-  field $attributes    : param = [];                # unused, for future growth
-  field $note_refs     : param = [];
-  field $citation_refs : param = [];
-  field $obj_refs      : param = [];
-  field $tag_refs      : param = [];
+  field $place_ref   : reader : param = undef;    # handle reference to place
+  field $cause       : reader : param = undef;
+  field $description : reader : param = undef;
+  field $attributes  : param = [];                # unused, for future growth
+  field $obj_refs    : param = [];
 
-  ADJUST {
-    croak "handle is required"           unless defined $handle;
-    croak "change timestamp is required" unless defined $change;
-  }
-
-  method attributes()    { [@$attributes] }
-  method note_refs()     { [@$note_refs] }
-  method citation_refs() { [@$citation_refs] }
-  method obj_refs()      { [@$obj_refs] }
-  method tag_refs()      { [@$tag_refs] }
+  method attributes() { [@$attributes] }
+  method obj_refs()   { [@$obj_refs] }
 
   method date_string() {
     return undef unless $date;
     return App::Schierer::HPFan::Model::Gramps::DateHelper->format_date($date);
+  }
+
+  method _import {
+    my $dh = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
+    $self->SUPER::_import;
+    $id = $self->XPathObject->getAttribute('id');
+    $self->logger->logcroak(
+      sprintf('id not discoverable in %s', $self->XPathObject))
+      unless defined $id;
+    $self->debug("id is $id");
+
+    $type = $self->XPathContext->findvalue('./g:type', $self->XPathObject);
+    $self->logger->logcroak(
+      sprintf('type not discoverable in %s', $self->XPathObject))
+      unless defined $type;
+    $self->debug("type for $id is $type");
+
+    #optional things
+    $date  = $dh->import_gramps_date($self->XPathObject, $self->XPathContext);
+    $priv  = $self->XPathObject->getAttribute('priv');
+    $cause = $self->XPathContext->findvalue('./g:cause');
+    $description = $self->XPathContext->findvalue('./g:description') // ' ';
+    $place_ref   = App::Schierer::HPFan::Model::Gramps::Place::Reference->new(
+      XPathContext => $self->XPathContext,
+      XPathObject  =>
+        $self->XPathContext->findvalue('./g:place', $self->XPathObject)
+    );
+
+    foreach my $ref ($self->XPathContext->findnodes('./g:objref')) {
+      push @$obj_refs,
+        App::Schierer::HPFan::Model::Gramps::Object::Reference->new(
+        XPathContext => $self->XPathContext,
+        XPathObject  => $ref,
+        );
+    }
+
   }
 
   method to_string() {
@@ -51,25 +78,21 @@ class App::Schierer::HPFan::Model::Gramps::Event :
     push @parts, $description if $description;
 
     my $desc = @parts ? join(" ", @parts) : "Unknown event";
-    return sprintf("Event[%s]: %s", $handle, $desc);
+    return sprintf("Event[%s]: %s", $self->handle, $desc);
   }
 
   method to_hash {
-    return {
-      id            => $id,
-      handle        => $handle,
-      change        => $change,
-      type          => $type,
-      date          => $date,
-      place_ref     => $place_ref,
-      cause         => $cause,
-      description   => $description,
-      attributes    => [$attributes->@*],
-      note_refs     => [$note_refs->@*],
-      citation_refs => [$citation_refs->@*],
-      obj_refs      => [$obj_refs->@*],
-      tag_refs      => [$tag_refs->@*],
-    };
+    my $hr = $self->SUPER::to_hash;
+    $hr->{id} = $id;
+    $hr->{type} = $type;
+    $hr->{date} = App::Schierer::HPFan::Model::Gramps::DateHelper->format_date($date);
+    $hr->{place_ref} = $place_ref;
+    $hr->{cause} = $cause;
+    $hr->{description} = $description;
+    $hr->{attributes} = [$attributes->@*];
+    $hr->{obj_refs}   = [$obj_refs->@*];
+
+    return $hr;
   }
 
   method TO_JSON {

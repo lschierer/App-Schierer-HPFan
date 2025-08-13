@@ -73,5 +73,13 @@ class App::Schierer::HPFan::Logger {
   method as_string {
     return JSON::PP->new->utf8->allow_blessed->convert_blessed->encode($self);
   }
+
+  method _isTrue {
+    return
+         defined($self)
+      && ref($self)
+      && blessed($self)
+      && blessed($self) eq __CLASS__;
+  }
 }
 1;

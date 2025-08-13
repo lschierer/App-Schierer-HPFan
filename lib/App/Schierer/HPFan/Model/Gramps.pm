@@ -237,8 +237,8 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
   }
 
   method import_from_xml {
-
-    $self->logger->debug("loading from " . $gramps_export->canonpath);
+    $self->info(
+      'starting Gramps Import from XML file: ' . $gramps_export->canonpath);
     my $dom = XML::LibXML->load_xml(location => $gramps_export->canonpath);
     my $d   = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
 
@@ -262,61 +262,9 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     foreach my $xEvent ($xc->findnodes('//g:events/g:event')) {
       my $handle = $xEvent->getAttribute('handle');
       if ($handle) {
-
-        my $type        = $xc->findvalue('./g:type',         $xEvent);
-        my $description = $xc->findvalue('./g:description',  $xEvent);
-        my $cause       = $xc->findvalue('./g:cause',        $xEvent);
-        my $place_ref   = $xc->findvalue('./g:place/@hlink', $xEvent);
-
-        my @note_refs;
-        foreach my $nr ($xc->findnodes('./g:noteref/@hlink', $xEvent)) {
-          push @note_refs, $nr->to_literal;
-        }
-
-        my @citationref;
-        foreach my $cr ($xc->findnodes('./g:citationref/@hlink', $xEvent)) {
-          push @citationref, $cr->to_literal;
-        }
-
-        # Tag references
-        my @tag_refs;
-        foreach my $tr ($xc->findnodes('./g:tagref/@hlink', $xEvent)) {
-          push @tag_refs, $tr->to_literal;
-        }
-
-        # Object references
-        my @obj_refs;
-        foreach my $or ($xc->findnodes('./g:objref/@hlink', $xEvent)) {
-          push @obj_refs, $or->to_literal;
-        }
-
-        my $eventDate = $d->import_gramps_date($xEvent, $xc);
-        if ($eventDate) {
-          $self->logger->debug(sprintf(
-            'got date "%s" with modifier "%s" for event "%s"',
-            $d->format_date($eventDate),
-            exists $eventDate->{modifier}
-            ? $eventDate->{modifier}
-            : "no modifier",
-            $handle,
-          ));
-        }
-        else {
-          $self->logger->error("no event date for $handle");
-        }
-
         $events->{$handle} = App::Schierer::HPFan::Model::Gramps::Event->new(
-          handle        => $handle,
-          date          => $eventDate,
-          id            => $xEvent->getAttribute('id'),
-          change        => $xEvent->getAttribute('change'),
-          type          => $type,
-          place_ref     => $place_ref,
-          description   => $description,
-          cause         => $cause,
-          citation_refs => \@citationref,
-          note_refs     => \@note_refs,
-          tag_refs      => \@tag_refs,
+          XPathContext => $xc,
+          XPathObject  => $xEvent,
         );
 
       }
@@ -505,14 +453,10 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
   method _import_tags ($xc) {
     foreach my $xTag ($xc->findnodes('//g:tags/g:tag')) {
       my $handle = $xTag->getAttribute('handle');
-
       if ($handle) {
         $tags->{$handle} = App::Schierer::HPFan::Model::Gramps::Tag->new(
-          handle   => $xTag->getAttribute('handle'),
-          name     => $xTag->getAttribute('name'),
-          color    => $xTag->getAttribute('color'),
-          priority => $xTag->getAttribute('priority'),
-          change   => $xTag->getAttribute('change'),
+          XPathContext => $xc,
+          XPathObject  => $xTag,
         );
       }
     }
@@ -561,8 +505,8 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
         foreach my $xrr ($xc->findnodes('./g:reporef', $xItem)) {
           push @repo_refs,
             App::Schierer::HPFan::Model::Gramps::Repository::Reference->new(
-            handle => $xrr->getAttribute('hlink'),
-            medium => $xrr->getAttribute('medium'),
+            XPathContext => $xc,
+            XPathObject  => $xrr,
             );
         }
         $sources->{$handle} = App::Schierer::HPFan::Model::Gramps::Source->new(
@@ -608,21 +552,11 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     foreach my $xItem ($xc->findnodes('//g:repositories/g:repository')) {
       my $handle = $xItem->getAttribute('handle');
       if ($handle) {
-        my $change = $xItem->getAttribute('change');
-        my $id     = $xItem->getAttribute('id');
-        my $rname  = $xc->findvalue('./g:rname', $xItem) // undef;
-        my $type   = $xc->findvalue('./g:type',  $xItem) // undef;
-        my $url    = $xc->findvalue('./g:url',   $xItem) // undef;
         $repositories->{$handle} =
           App::Schierer::HPFan::Model::Gramps::Repository->new(
-          handle => $handle,
-          change => $change,
-          id     => $id,
-          rname  => $rname,
-          type   => $type,
-          url    => $url,
+          XPathContext => $xc,
+          XPathObject  => $xItem,
           );
-
       }
     }
     $self->logger->info(
