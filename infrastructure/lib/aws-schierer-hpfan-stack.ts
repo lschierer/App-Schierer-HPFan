@@ -119,7 +119,8 @@ export class MojoliciousStack extends Stack {
         certificateName: name("cert", 256), // visible in console
         domainName: fullDomainName,
         // If you need SANs, add full domain strings here (".net" is not valid)
-        // subjectAlternativeNames: props.environment === "prod" ? [`${props.appSubdomain}.YOUR-OTHER-DOMAIN.net`] : [],
+        subjectAlternativeNames:
+          props.environment === "prod" ? [`${props.domainName}`] : [],
         validation: acm.CertificateValidation.fromDns(hostedZone),
       },
     );

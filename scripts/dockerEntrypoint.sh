@@ -7,4 +7,4 @@ chmod -R 755 /home/mojo/var
 
 # Execute the main application as the unprivileged user
 pwd
-exec sudo -D /opt/App-Schierer-HPFan  -u mojo -- "$@"
+exec sudo -D /opt/App-Schierer-HPFan --preserve-env=IMAGE_TAG,IMAGE_URI,DEPLOYMENT_TIME,MOJO_MODE,MOJO_LISTEN -u mojo -- "$@"

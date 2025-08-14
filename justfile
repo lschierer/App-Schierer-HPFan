@@ -31,3 +31,9 @@ build: install css ts
 
 quickdev:
   export MOJO_RENDERER_DEBUG=1 ; morbo -w templates -w share -w public -w lib ./bin/app_schierer_hpfan prefork
+
+deploy-dev:
+  pnpm cdk --profile personal deploy --app scripts/aws-schierer-hpfan.ts --context env=dev
+
+deploy-prod:
+  pnpm cdk --profile personal deploy --app scripts/aws-schierer-hpfan.ts --context env=prod

@@ -10,6 +10,7 @@ TARGET_TAG='stable'
 # Fetch the manifest of the source image
 MANIFEST=$(aws --profile "${AWS_PROFILE}" --region "${AWS_REGION}" \
   ecr batch-get-image \
+  --no-cli-pager \
   --repository-name "${REPO_NAME}" \
   --image-ids imageTag="${SOURCE_TAG}" \
   --query 'images[0].imageManifest' \
@@ -18,9 +19,21 @@ MANIFEST=$(aws --profile "${AWS_PROFILE}" --region "${AWS_REGION}" \
 # Put the manifest under the new tag
 aws --profile "${AWS_PROFILE}" --region "${AWS_REGION}" \
   ecr put-image \
+  --no-cli-pager \
   --repository-name "${REPO_NAME}" \
   --image-tag "${TARGET_TAG}" \
   --image-manifest "${MANIFEST}"
+
+# After retagging, verify the new tag exists
+echo "Verifying new tag was created..."
+NEW_DIGEST=$(aws --profile "${AWS_PROFILE}" --region "${AWS_REGION}" \
+  ecr describe-images \
+  --repository-name "${REPO_NAME}" \
+  --image-ids imageTag="${TARGET_TAG}" \
+  --query 'imageDetails[0].imageDigest' \
+  --output text)
+
+echo "New stable tag digest: $NEW_DIGEST"
 
 # Discover all ECS clusters
 CLUSTERS=$(aws --profile "${AWS_PROFILE}" --region "${AWS_REGION}" ecs list-clusters | jq -r '.clusterArns[]')
@@ -34,11 +47,22 @@ for CLUSTER in $CLUSTERS; do
 
     if [ -n "$SERVICE" ]; then
       echo "Forcing new deployment for service: $SERVICE"
-      aws --profile "${AWS_PROFILE}" --region "${AWS_REGION}" ecs update-service \
-        --no-cli-pager \
-        --cluster "$CLUSTER" \
-        --service "$SERVICE" \
-        --force-new-deployment
+        DEPLOYMENT_ID=$(aws --profile "${AWS_PROFILE}" --region "${AWS_REGION}" ecs update-service \
+          --no-cli-pager \
+          --cluster "$CLUSTER" \
+          --service "$SERVICE" \
+          --force-new-deployment \
+          --query 'service.deployments[0].id' \
+          --output text)
+
+        echo "Deployment ID: $DEPLOYMENT_ID"
+        echo "Waiting for deployment to stabilize..."
+
+        aws --profile "${AWS_PROFILE}" --region "${AWS_REGION}" ecs wait services-stable \
+          --cluster "$CLUSTER" \
+          --services "$SERVICE"
+
+        echo "Deployment completed for $SERVICE"
     else
       echo "No services found in cluster: $CLUSTER"
     fi

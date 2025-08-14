@@ -77,8 +77,8 @@ for CLUSTER in $CLUSTERS; do
   # For prod environments
   if $PROD && echo "$CLUSTER" | grep -q -- '-prod-'; then
     echo "Processing prod cluster: $CLUSTER"
-    podman tag :latest ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/:stable
-    podman push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/:stable
+    podman tag hpfan:latest ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/hpfan:stable
+    podman push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/hpfan:stable
 
     # Get the first service in the cluster
     SERVICE=$(aws --profile personal --region us-east-2 ecs list-services --cluster "$CLUSTER" | jq -r '.serviceArns[0]')

@@ -120,16 +120,19 @@ package App::Schierer::HPFan::Controller::ControllerBase {
 
     $routes->get('/health')->to(
       cb => sub($c) {
+        my $APP_START_TIME = $app->config->{'APP_START_TIME'};
         $c->render(
           json => {
             status  => 'ok',
             mode    => $app->mode // 'unknown',
             time    => scalar localtime,
-            deployment_time => $ENV{DEPLOYMENT_TIME} // 'unknown',
+            app_started_at => scalar(localtime($APP_START_TIME)),
+            app_uptime_seconds => time() - $APP_START_TIME,
             build_time => $app->config->{'version'}->{'build-time'},
-            container_id => $ENV{HOSTNAME} // 'unknown', # ECS sets this automatically
-            image_tag => $ENV{IMAGE_TAG} // 'unknown',
-            image_uri => $ENV{IMAGE_URI} // 'unknown',
+            cdk_deployment_time => $app->config->{'HPFAN-Environment'}->{'DEPLOYMENT_TIME'} // 'unknown',
+            container_id => $app->config->{'HPFAN-Environment'}->{'HOSTNAME'} // 'unknown', # ECS sets this automatically
+            image_tag => $app->config->{'HPFAN-Environment'}->{'IMAGE_TAG'} // 'unknown',
+            image_uri => $app->config->{'HPFAN-Environment'}->{'IMAGE_URI'} // 'unknown',
             version => $app->VERSION,
             git_commit => $app->config->{'version'}->{'git-commit'},
           },
