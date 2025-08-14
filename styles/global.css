@@ -85,6 +85,8 @@ body {
   color: var(--text-1);
   background-color: var(--spectrum-background-base-color);
   display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 100vh;
   grid-template-rows: var(--header-height) 1fr var(--footer-height);
   height: 100vh;
   width: 100vw;
@@ -124,7 +126,7 @@ div.title-section {
 footer {
   box-sizing: border-box;
   height: var(--footer-height);
-  width: 100%;
+  width: 100vw;
 }
 
 div.spectrum-SplitView.spectrum-SplitView--horizontal {
@@ -135,12 +137,21 @@ div.spectrum-SplitView.spectrum-SplitView--horizontal {
 }
 
 main.no-sidebar {
+  grid-column: 1/-1;
   grid-row: 2/3;
+  width: 100vw;
 }
 
-main,
+main {
+  grid-row-end: span 1;
+  overflow: hidden auto;
+  padding: 0 1rem;
+  height: 99%;
+  max-height: var(--main-height);
+  box-sizing: border-box;
+}
+
 div#main {
-  grid-area: content;
   overflow: hidden auto;
   width: 100%;
   padding: 0 1rem;
