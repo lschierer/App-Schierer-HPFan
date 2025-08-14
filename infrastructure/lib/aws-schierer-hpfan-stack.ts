@@ -210,6 +210,9 @@ export class MojoliciousStack extends Stack {
           MOJO_MODE: "production",
           MOJO_LISTEN: `http://0.0.0.0:${props.containerPort}`,
           HOME: "/home/mojo",
+          IMAGE_TAG: props.imageTag,
+          IMAGE_URI: `${repository.repositoryUri}:${props.imageTag}`,
+          DEPLOYMENT_TIME: new Date().toISOString(),
         },
         healthCheck: {
           command: [

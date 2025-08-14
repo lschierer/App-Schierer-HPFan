@@ -7,6 +7,12 @@ AWS_PROFILE='personal';
 # pnpm requires that the lock file and the package.json be in sync, ensure that by running pnpm i
 pnpm i
 
+GIT_COMMIT=$(git rev-parse HEAD)
+BUILD_TIME=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+gsed -i -E "s/^(\s+)git-commit:.*/\1git-commit: ${GIT_COMMIT}/" app-schierer-h_p_fan.yml ;
+gsed -i -E "s/^(\s+)build-time:.*/\1build-time: ${BUILD_TIME}/" app-schierer-h_p_fan.yml ;
+
+
 # # Build your Mojolicious app image
 podman build --platform linux/arm64 -t hpfan:latest ./
 

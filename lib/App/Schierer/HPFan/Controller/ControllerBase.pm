@@ -124,8 +124,14 @@ package App::Schierer::HPFan::Controller::ControllerBase {
           json => {
             status  => 'ok',
             mode    => $app->mode // 'unknown',
-            version => $app->VERSION,
             time    => scalar localtime,
+            deployment_time => $ENV{DEPLOYMENT_TIME} // 'unknown',
+            build_time => $app->config->{'version'}->{'build-time'},
+            container_id => $ENV{HOSTNAME} // 'unknown', # ECS sets this automatically
+            image_tag => $ENV{IMAGE_TAG} // 'unknown',
+            image_uri => $ENV{IMAGE_URI} // 'unknown',
+            version => $app->VERSION,
+            git_commit => $app->config->{'version'}->{'git-commit'},
           },
           status => 200
         );
