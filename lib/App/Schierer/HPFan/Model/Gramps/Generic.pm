@@ -20,7 +20,7 @@ class App::Schierer::HPFan::Model::Gramps::Generic :
   field $change        : param : reader //= undef;
   field $note_refs     : param //= [];
   field $citation_refs : param //= [];
-  field $tag_refs       :param //= [];
+  field $tag_refs      : param //= [];
 
   field $XPathContext : param : reader //= undef;
   field $XPathObject  : param : reader //= undef;

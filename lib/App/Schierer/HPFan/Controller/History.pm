@@ -96,7 +96,7 @@ package App::Schierer::HPFan::Controller::History {
       $logger->debug("Processing history file: $file_path");
 
       my $events = $self->_process_history_file($file_path);
-      #push @all_events, @$events if $events;
+      push @all_events, @$events if $events;
     }
 
     my $ge = $self->_process_gramps_events($gramps);
@@ -353,25 +353,40 @@ package App::Schierer::HPFan::Controller::History {
     foreach my $repo_ref ($source->repo_refs->@*) {
       my $repository = $gramps->repositories->{ $repo_ref->hlink };
       next unless $repository;
-
-      if (my $repo_name = $repository->rname) {
-        push @parts, $repo_name;
-
-        # Add medium if specified
-        if (my $medium = $repo_ref->medium) {
-          push @parts, $medium;
-        }
-
-        # Add URL if available
-        if (ref($repository) eq 'App::Schierer::HPFan::Model::Gramps::Repository') {
-          if (my $url = $repository->url) {
-            if(ref($url) eq 'ARRAY'){
-              foreach my $u (@$url){
-                push @parts, $u;
-              }
-            }else {
-              push @parts, $url;
+      if (ref($repository) eq 'App::Schierer::HPFan::Model::Gramps::Repository')
+      {
+        if ($repository->type =~ /Web site/i) {
+          if (my $urlref = $repository->url) {
+            my $url;
+            if (ref($urlref) eq 'ARRAY') {
+              $url = $urlref->[0];
             }
+            else {
+              $url = $urlref;
+            }
+            my $reponame;
+            if ($url) {
+              $reponame = sprintf(
+'<cite><a href="%s" class="spectrum-Link spectrum-Link--primary" alt="%s">%s</a></cite>',
+                $url->href, $url->description // '',
+                $repository->rname
+              );
+            }
+            else {
+              $reponame = $repository->rname;
+            }
+
+            push @parts, $reponame;
+          }
+        }
+      }
+      else {
+        if (my $repo_name = $repository->rname) {
+          push @parts, $repo_name;
+
+          # Add medium if specified
+          if (my $medium = $repo_ref->medium) {
+            push @parts, $medium;
           }
         }
       }

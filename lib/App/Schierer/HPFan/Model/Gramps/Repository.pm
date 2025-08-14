@@ -4,7 +4,6 @@ use experimental qw(class);
 require Date::Manip;
 require App::Schierer::HPFan::Model::Gramps::Url;
 
-
 class App::Schierer::HPFan::Model::Gramps::Repository :
   isa(App::Schierer::HPFan::Model::Gramps::Generic) {
   use Carp;
@@ -12,7 +11,7 @@ class App::Schierer::HPFan::Model::Gramps::Repository :
   field $id    : param : reader = undef;
   field $rname : param : reader = undef;
   field $type  : param : reader = undef;
-  field $url   : param  //= [];
+  field $url   : param //= [];
 
   method url { [@$url] }
 
@@ -28,11 +27,13 @@ class App::Schierer::HPFan::Model::Gramps::Repository :
     # optional things
     $type  = $self->XPathContext->findvalue('./g:type',  $self->XPathObject);
     $rname = $self->XPathContext->findvalue('./g:rname', $self->XPathObject);
-    foreach my $xu ( $self->XPathContext->findnodes('./g:url', $self->XPathObject)){
-      push @$url, App::Schierer::HPFan::Model::Gramps::Url->new(
-        XPathContext  => $self->XPathContext,
-        XPathObject   => $xu,
-      );
+    foreach
+      my $xu ($self->XPathContext->findnodes('./g:url', $self->XPathObject)) {
+      push @$url,
+        App::Schierer::HPFan::Model::Gramps::Url->new(
+        XPathContext => $self->XPathContext,
+        XPathObject  => $xu,
+        );
     }
 
   }

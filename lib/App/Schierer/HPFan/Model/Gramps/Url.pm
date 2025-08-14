@@ -13,9 +13,9 @@ class App::Schierer::HPFan::Model::Gramps::Url :
     '!='  => \&_inequality,
     '""'  => \&as_string;
 
-  field $priv        : reader : param //= undef;
-  field $type        : reader : param //= undef;
-  field $href        : param //= undef;
+  field $priv : reader : param //= undef;
+  field $type : reader : param //= undef;
+  field $href : param //= undef;
   field $description : reader : param //= undef;
 
   field $XPathContext : param : reader //= undef;
@@ -29,7 +29,8 @@ class App::Schierer::HPFan::Model::Gramps::Url :
       defined($href) or (defined($XPathContext) and defined($XPathObject)))) {
       $self->logger->logcroak(
         'Either href, or both XPathContext and XPathObject must be provided.');
-    }elsif (not defined($href)) {
+    }
+    elsif (not defined($href)) {
       $self->_import();
     }
   }
@@ -38,16 +39,17 @@ class App::Schierer::HPFan::Model::Gramps::Url :
     $href = $XPathObject->getAttribute('href');
     $self->logger->logcroak('href is required') unless defined $href;
 
-    $type = $XPathObject->getAttribute('type');
-    $priv = $XPathObject->getAttribute('priv');
-    $description  = $XPathObject->getAttribute('description');
+    $type        = $XPathObject->getAttribute('type');
+    $priv        = $XPathObject->getAttribute('priv');
+    $description = $XPathObject->getAttribute('description');
 
   }
+
   method as_string {
-    if($priv ){
+    if ($priv) {
       return '';
     }
-    if(not (defined($type) and defined($description))){
+    if (not(defined($type) and defined($description))) {
       return "<$href>";
     }
     else {

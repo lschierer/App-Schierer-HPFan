@@ -83,14 +83,15 @@ class App::Schierer::HPFan::Model::Gramps::Event :
 
   method to_hash {
     my $hr = $self->SUPER::to_hash;
-    $hr->{id} = $id;
+    $hr->{id}   = $id;
     $hr->{type} = $type;
-    $hr->{date} = App::Schierer::HPFan::Model::Gramps::DateHelper->format_date($date);
-    $hr->{place_ref} = $place_ref;
-    $hr->{cause} = $cause;
+    $hr->{date} =
+      App::Schierer::HPFan::Model::Gramps::DateHelper->format_date($date);
+    $hr->{place_ref}   = $place_ref;
+    $hr->{cause}       = $cause;
     $hr->{description} = $description;
-    $hr->{attributes} = [$attributes->@*];
-    $hr->{obj_refs}   = [$obj_refs->@*];
+    $hr->{attributes}  = [$attributes->@*];
+    $hr->{obj_refs}    = [$obj_refs->@*];
 
     return $hr;
   }
