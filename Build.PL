@@ -14,6 +14,7 @@ my $build = Module::Build->new(
     'Data::Printer'                  => '0',
     'Date::Manip'                    => '0',
     'DateTime'                       => '0',
+    'DBD::SQLite'                    => '0',
     'Encode'                         => '0',
     'File::FindLib'                  => '0',
     'File::HomeDir'                  => '0',
