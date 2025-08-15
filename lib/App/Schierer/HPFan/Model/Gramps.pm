@@ -501,16 +501,9 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     foreach my $xItem ($xc->findnodes('//g:notes/g:note')) {
       my $handle = $xItem->getAttribute('handle');
       if ($handle) {
-        my $change = $xItem->getAttribute('change');
-        my $id     = $xItem->getAttribute('id');
-        my $type   = $xItem->getAttribute('type');
-        my $text   = $xc->findvalue('./g:text', $xItem);
-
         $notes->{$handle} = App::Schierer::HPFan::Model::Gramps::Note->new(
-          change => $change,
-          id     => $id,
-          type   => $type,
-          text   => $text,
+          XPathContext => $xc,
+          XPathObject  => $xItem,
         );
 
       }
