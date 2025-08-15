@@ -41,12 +41,13 @@ CLUSTERS=$(aws --profile "${AWS_PROFILE}" --region "${AWS_REGION}" ecs list-clus
 # Loop through each cluster looking for prod
 for CLUSTER in $CLUSTERS; do
   if echo "$CLUSTER" | grep -q -- '-prod-'; then
-    echo "Triggering deploy in prod cluster: $CLUSTER"
+    if echo "$CLUSTER" | grep -q -- "/$REPO_NAME-"; then
+      echo "Triggering deploy in prod cluster: $CLUSTER"
 
-    SERVICE=$(aws --profile "${AWS_PROFILE}" --region "${AWS_REGION}" ecs list-services --cluster "$CLUSTER" | jq -r '.serviceArns[0]')
+      SERVICE=$(aws --profile "${AWS_PROFILE}" --region "${AWS_REGION}" ecs list-services --cluster "$CLUSTER" | jq -r '.serviceArns[0]')
 
-    if [ -n "$SERVICE" ]; then
-      echo "Forcing new deployment for service: $SERVICE"
+      if [ -n "$SERVICE" ]; then
+        echo "Forcing new deployment for service: $SERVICE"
         DEPLOYMENT_ID=$(aws --profile "${AWS_PROFILE}" --region "${AWS_REGION}" ecs update-service \
           --no-cli-pager \
           --cluster "$CLUSTER" \
@@ -63,8 +64,9 @@ for CLUSTER in $CLUSTERS; do
           --services "$SERVICE"
 
         echo "Deployment completed for $SERVICE"
-    else
-      echo "No services found in cluster: $CLUSTER"
+      else
+        echo "No services found in cluster: $CLUSTER"
+      fi
     fi
   fi
 done

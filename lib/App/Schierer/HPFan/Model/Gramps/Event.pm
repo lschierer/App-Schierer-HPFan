@@ -23,6 +23,7 @@ class App::Schierer::HPFan::Model::Gramps::Event :
   field $attributes  : param = [];                # unused, for future growth
   field $obj_refs    : param = [];
 
+  field $dh = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
   method attributes() { [@$attributes] }
   method obj_refs()   { [@$obj_refs] }
 
@@ -34,19 +35,10 @@ class App::Schierer::HPFan::Model::Gramps::Event :
   method _import {
     my $dh = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
     $self->SUPER::_import;
-    $id = $self->XPathObject->getAttribute('id');
-    $self->logger->logcroak(
-      sprintf('id not discoverable in %s', $self->XPathObject))
-      unless defined $id;
-    $self->debug("id is $id");
-
-    $type = $self->XPathContext->findvalue('./g:type', $self->XPathObject);
-    $self->logger->logcroak(
-      sprintf('type not discoverable in %s', $self->XPathObject))
-      unless defined $type;
-    $self->debug("type for $id is $type");
 
     #optional things
+    $type = $self->XPathContext->findvalue('./g:type', $self->XPathObject);
+    $id = $self->XPathObject->getAttribute('id');
     $date  = $dh->import_gramps_date($self->XPathObject, $self->XPathContext);
     $priv  = $self->XPathObject->getAttribute('priv');
     $cause = $self->XPathContext->findvalue('./g:cause');
@@ -86,8 +78,7 @@ class App::Schierer::HPFan::Model::Gramps::Event :
     my $hr = $self->SUPER::to_hash;
     $hr->{id}   = $id;
     $hr->{type} = $type;
-    $hr->{date} =
-      App::Schierer::HPFan::Model::Gramps::DateHelper->format_date($date);
+    $hr->{date} = $dh->format_date($date);
     $hr->{place_ref}   = $place_ref;
     $hr->{cause}       = $cause;
     $hr->{description} = $description;

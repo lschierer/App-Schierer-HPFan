@@ -18,15 +18,21 @@ class App::Schierer::HPFan::Model::Gramps::Repository :
   method _import {
     $self->SUPER::_import;
 
-    $id = $self->XPathObject->getAttribute('id');
+    $type  = $self->XPathContext->findvalue('./g:type',  $self->XPathObject);
     $self->logger->logcroak(
-      sprintf('id not discoverable in %s', $self->XPathObject))
-      unless defined $id;
-    $self->debug("id is $id");
+      sprintf('type not discoverable in %s', $self->XPathObject))
+      unless defined $type;
+    $self->debug("type is $type");
+
+    $rname = $self->XPathContext->findvalue('./g:rname', $self->XPathObject);
+    $self->logger->logcroak(
+      sprintf('rname not discoverable in %s', $self->XPathObject))
+      unless defined $rname;
+    $self->debug("rname is $rname");
 
     # optional things
-    $type  = $self->XPathContext->findvalue('./g:type',  $self->XPathObject);
-    $rname = $self->XPathContext->findvalue('./g:rname', $self->XPathObject);
+    $id = $self->XPathObject->getAttribute('id');
+
     foreach
       my $xu ($self->XPathContext->findnodes('./g:url', $self->XPathObject)) {
       push @$url,

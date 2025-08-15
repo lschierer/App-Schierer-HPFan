@@ -292,14 +292,10 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
           my $suffix = $xc->findvalue('./g:suffix', $xName) // '';
           my @surnames;
           foreach my $xSN ($xc->findnodes('./g:surname', $xName)) {
-            my $derivation = $xSN->getAttribute('derivation') // 'Unknown';
-            $derivation =~ s/^\s+|\s+$//g;
-            my $value = $xSN->to_literal();
             push @surnames,
               App::Schierer::HPFan::Model::Gramps::Surname->new(
-              value      => $value,
-              derivation => $derivation,
-              prim       => scalar @surnames ? 0 : 1,
+                XPathContext  => $xc,
+                XPathObject   => $xSN,
               );
           }
           my @citationref;

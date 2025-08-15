@@ -85,7 +85,7 @@ class App::Schierer::HPFan::Model::Gramps::Person :
       'picked name "%s" as primary for "%s"', $name, $self->id));
     my $last;
     foreach my $sn (@{ $name->surnames }) {
-      if ($sn->prim) {
+      if ($sn->primary) {
         $last = $sn;
         last;
       }

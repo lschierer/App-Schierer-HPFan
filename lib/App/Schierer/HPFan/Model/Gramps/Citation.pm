@@ -38,17 +38,28 @@ class App::Schierer::HPFan::Model::Gramps::Citation :
   method _import {
     $self->SUPER::_import;
 
-    $id = $self->XPathObject->getAttribute('id');
+    $confidence = $self->XPathContext->findvalue('./g:confidence',$self->XPathObject);
     $self->logger->logcroak(
-      sprintf('id not discoverable in %s', $self->XPathObject))
-      unless defined $id;
-    $self->debug("id is $id");
+      sprintf('confidence not discoverable in %s', $self->XPathObject))
+      unless defined $confidence;
+    $self->debug("confidence is $confidence");
+
+    foreach my $ref (
+      $self->XPathContext->findnodes('./g:sourceref', $self->XPathObject)) {
+      push @$source_refs,
+        App::Schierer::HPFan::Model::Gramps::Source::Reference->new(
+        XPathContext => $self->XPathContext,
+        XPathObject  => $ref,
+        );
+    }
+    $self->logger->logcroak('at least one sourceref is required!!') unless(scalar @$source_refs);
 
     # optional things
+    $id = $self->XPathObject->getAttribute('id');
     $priv = $self->XPathObject->getAttribute('priv');
     $date  = $dh->import_gramps_date($self->XPathObject, $self->XPathContext);
     $page = $self->XPathContext->findvalue('./g:page',$self->XPathObject);
-    $confidence = $self->XPathContext->findvalue('./g:confidence',$self->XPathObject);
+
 
     foreach my $ref (
       $self->XPathContext->findnodes('./g:objref', $self->XPathObject)) {
@@ -70,16 +81,6 @@ class App::Schierer::HPFan::Model::Gramps::Citation :
         value => $svalue,
         };
     }
-
-    foreach my $ref (
-      $self->XPathContext->findnodes('./g:sourceref', $self->XPathObject)) {
-      push @$source_refs,
-        App::Schierer::HPFan::Model::Gramps::Source::Reference->new(
-        XPathContext => $self->XPathContext,
-        XPathObject  => $ref,
-        );
-    }
-
   }
 }
 1;

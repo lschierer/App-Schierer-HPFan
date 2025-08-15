@@ -96,7 +96,7 @@ package App::Schierer::HPFan::Controller::History {
       $logger->debug("Processing history file: $file_path");
 
       my $events = $self->_process_history_file($file_path);
-      #push @all_events, @$events if $events;
+      push @all_events, @$events if $events;
     }
 
     my $ge = $self->_process_gramps_events($gramps);

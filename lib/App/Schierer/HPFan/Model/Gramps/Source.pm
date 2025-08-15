@@ -24,25 +24,15 @@ class App::Schierer::HPFan::Model::Gramps::Source :
   method _import {
     $self->SUPER::_import;
 
-    $id = $self->XPathObject->getAttribute('id');
-    $self->logger->logcroak(
-      sprintf('id not discoverable in %s', $self->XPathObject))
-      unless defined $id;
-    $self->debug("id is $id");
-
-    $stitle = $self->XPathContext->findvalue('./g:stitle', $self->XPathObject);
-    $self->logger->logcroak(
-      sprintf('stitle not discoverable in %s', $self->XPathObject))
-      unless defined $stitle;
-    $self->debug("stitle is $stitle");
-
     # optional things
+    $id = $self->XPathObject->getAttribute('id');
     $sauthor =
       $self->XPathContext->findvalue('./g:sauthor', $self->XPathObject);
     $spubinfo =
       $self->XPathContext->findvalue('./g:spubinfo', $self->XPathObject);
     $sabbrev =
       $self->XPathContext->findvalue('./g:sabbrev', $self->XPathObject);
+    $stitle = $self->XPathContext->findvalue('./g:stitle', $self->XPathObject);
 
     foreach my $ref ($self->XPathContext->findnodes('./g:objref')) {
       push @$obj_refs,

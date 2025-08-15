@@ -40,7 +40,7 @@ class App::Schierer::HPFan::Model::Gramps::Url :
     $self->logger->logcroak('href is required') unless defined $href;
 
     $type        = $XPathObject->getAttribute('type');
-    $priv        = $XPathObject->getAttribute('priv');
+    $priv        = $XPathObject->getAttribute('priv') // 0;
     $description = $XPathObject->getAttribute('description');
 
   }
