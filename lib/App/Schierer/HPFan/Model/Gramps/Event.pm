@@ -5,6 +5,7 @@ require App::Schierer::HPFan::Model::Gramps::Citation::Reference;
 require App::Schierer::HPFan::Model::Gramps::Note::Reference;
 require App::Schierer::HPFan::Model::Gramps::Tag::Reference;
 require App::Schierer::HPFan::Model::Gramps::Place::Reference;
+require App::Schierer::HPFan::Model::Gramps::Object::Reference;
 
 class App::Schierer::HPFan::Model::Gramps::Event :
   isa(App::Schierer::HPFan::Model::Gramps::Generic) {

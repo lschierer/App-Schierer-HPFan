@@ -96,7 +96,7 @@ package App::Schierer::HPFan::Controller::History {
       $logger->debug("Processing history file: $file_path");
 
       my $events = $self->_process_history_file($file_path);
-      push @all_events, @$events if $events;
+      #push @all_events, @$events if $events;
     }
 
     my $ge = $self->_process_gramps_events($gramps);
@@ -311,14 +311,27 @@ package App::Schierer::HPFan::Controller::History {
     # Get citations for this event
     foreach my $citation_ref ($event->citation_refs->@*) {
       my $citation = $gramps->citations->{ $citation_ref->hlink };
-      next unless $citation;
+      unless ($citation) {
+        $logger->debug(sprintf('no citations for event %s', $event->id));
+        next;
+      }
 
-      my $source = $gramps->sources->{ $citation->sourceref };
-      next unless $source;
+      my @sources;
+      foreach my $sr ($citation->source_refs->@*){
+        my $source = $gramps->sources->{$sr->hlink};
+        next unless $source;
+        push @sources, $source;
+      }
+      unless( scalar @sources) {
+        $logger->debug(sprintf('no sources for citation in event %s', $event->id));
+        next
+      }
 
-      my $mla_citation =
-        $self->_format_mla_citation($gramps, $source, $citation);
-      push @citations, "- $mla_citation" if $mla_citation;
+      foreach my $source (@sources){
+        my $mc = $self->_format_mla_citation($gramps, $source, $citation);
+        push @citations, "- $mc" if $mc;
+      }
+
     }
 
     return @citations ? join("\n", @citations) : '';

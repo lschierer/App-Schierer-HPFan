@@ -468,21 +468,10 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     foreach my $xItem ($xc->findnodes('//g:citations/g:citation')) {
       my $handle = $xItem->getAttribute('handle');
       if ($handle) {
-        my $change     = $xItem->getAttribute('change');
-        my $id         = $xItem->getAttribute('id');
-        my $page       = $xc->findvalue('./g:page',       $xItem)      // undef;
-        my $confidence = $xc->findvalue('./g:confidence', $xItem)      // undef;
-        my $sourceref = $xc->findvalue('./g:sourceref/@hlink', $xItem) // undef;
-        my $date      = $d->import_gramps_date($xItem, $xc) // undef;
         $citations->{$handle} =
           App::Schierer::HPFan::Model::Gramps::Citation->new(
-          handle     => $handle,
-          id         => $id,
-          change     => $change,
-          page       => $page,
-          confidence => $confidence,
-          sourceref  => $sourceref,
-          date       => $date,
+            XPathContext => $xc,
+            XPathObject  => $xItem,
           );
 
       }
@@ -496,27 +485,9 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     foreach my $xItem ($xc->findnodes('//g:sources/g:source')) {
       my $handle = $xItem->getAttribute('handle');
       if ($handle) {
-        my $change   = $xItem->getAttribute('change');
-        my $id       = $xItem->getAttribute('id');
-        my $stitle   = $xc->findvalue('./g:stitle',   $xItem) // undef;
-        my $sauthor  = $xc->findvalue('./g:sauthor',  $xItem) // undef;
-        my $spubinfo = $xc->findvalue('./g:spubinfo', $xItem) // undef;
-        my @repo_refs;
-        foreach my $xrr ($xc->findnodes('./g:reporef', $xItem)) {
-          push @repo_refs,
-            App::Schierer::HPFan::Model::Gramps::Repository::Reference->new(
-            XPathContext => $xc,
-            XPathObject  => $xrr,
-            );
-        }
         $sources->{$handle} = App::Schierer::HPFan::Model::Gramps::Source->new(
-          handle    => $handle,
-          change    => $change,
-          id        => $id,
-          stitle    => $stitle,
-          sauthor   => $sauthor,
-          spubinfo  => $spubinfo,
-          repo_refs => \@repo_refs,
+          XPathContext => $xc,
+          XPathObject  => $xItem,
         );
 
       }
