@@ -13,124 +13,69 @@ class App::Schierer::HPFan::Model::Gramps::Name :
     'bool'     => sub { $_[0]->_isTrue() },
     'fallback' => 0;
 
-  field $alt        : reader : param = 0;
-  field $type       : reader : param = "Birth Name";
-  field $priv       : reader : param = 0;
-  field $sort       : reader : param = undef;
-  field $display    : param = undef;
-  field $first      : reader : param = undef;
+  field $_class     :param;
   field $call       : reader : param = undef;
-  field $nick       : reader : param = undef;
-  field $familynick : reader : param = undef;
-  field $group      : reader : param = undef;
-  field $surnames   : param = [];
-  field $suffix     : reader : param = undef;
-  field $title      : reader : param = undef;
+  field $citation_list : param = [];
   field $date       : reader : param =
     undef;    # Can be daterange, datespan, dateval, or datestr
-  field $note_refs     : param = [];
-  field $citation_refs : param = [];
+  field $display_as    : param = undef;
+  field $famnick  : reader : param = undef;
+  field $first_name      : reader : param = undef;
+  field $group_as   : reader : param = undef;
+  field $nick       : reader : param = undef;
+  field $note_list     : param = [];
+  field $private    : reader : param = 0;
+  field $sort_as    : reader : param = undef;
+  field $suffix     : reader : param = undef;
+  field $surname_list   : param = [];
+  field $title      : reader : param = undef;
+  field $type       : reader : param = "Birth Name";
+  field $alt :writer :reader;
 
   field $dh = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
-  field $XPathContext : param : reader //= undef;
-  field $XPathObject  : param : reader //= undef;
+  field @surnames;
 
   ADJUST {
-    # Validate that surnames is an array of Surname objects
-    if (!$XPathObject && !$XPathContext) {
-        # This is fine - creating an empty name object
-        $self->logger->debug("Creating name object from provided parameters.");
-    }
-    elsif ($XPathObject && $XPathContext) {
-        # Import from XML
-        $self->_import();
-    }
-    elsif ($XPathObject || $XPathContext) {
-        # Only one provided - that's an error
-        $self->logger->logcroak("Must provide both XPathObject and XPathContext for import, or neither");
-    }
-
-    if (@$surnames) {
-      for my $surname (@$surnames) {
-        $self->logger->logcroak( "surnames must be Surname objects")
-          unless ref($surname) eq
-          'App::Schierer::HPFan::Model::Gramps::Surname';
+    if(scalar @$surname_list){
+      foreach my $surname ($surname_list->@*){
+        my $sn = App::Schierer::HPFan::Model::Gramps::Surname->new(
+          $surname->%*
+        );
+        if($sn){
+          push @surnames, $sn;        }
       }
     }
   }
 
-  method surnames() { [@$surnames] }
+  method surnames() { [@surnames] }
 
-  method note_refs()     { [@$note_refs] }
-  method citation_refs() { [@$citation_refs] }
+  method note_refs()     { [@$note_list] }
+  method citation_refs() { [@$citation_list] }
 
   method primary_surname() {
-    # Return the primary surname (prim=1) or first surname
-    for my $surname (@$surnames) {
-      return $surname if $surname->primary;
+    for my $surname (@surnames) {
+       return $surname if $surname->primary;
     }
-    return @$surnames ? $surnames->[0] : undef;
+    return scalar @surnames ? $surnames[0] : undef;
   }
 
   method display {
-    return $display if $display;
+    return $display_as if $display_as;
     my @parts;
-    push @parts, $first  if $first;
-    push @parts, $call   if ($call and not $first);
-    push @parts, "$nick" if ($nick and not $first);
+    push @parts, $first_name  if $first_name;
+    push @parts, $call   if ($call and not $first_name);
+    push @parts, "$nick" if ($nick and not $first_name);
     if (not scalar @parts) {
       push @parts, 'Unknown';
     }
     return join(' ', @parts);
   }
 
-  method _import {
-    $alt = $XPathObject->getAttribute('alt');
-    $priv = $XPathObject->getAttribute('priv') // 0;
-    $type = $XPathObject->getAttribute('type');
-    $sort = $XPathObject->getAttribute('sort');
-    $display = $XPathObject->getAttribute('display');
-    $first = $XPathContext->findvalue('./g:first', $XPathObject);
-    $call = $XPathContext->findvalue('./g:call', $XPathObject);
-    $nick = $XPathContext->findvalue('./g:nick', $XPathObject);
-    $familynick = $XPathContext->findvalue('./g:familynick', $XPathObject);
-    $group = $XPathContext->findvalue('./g:group', $XPathObject);
-    $suffix = $XPathContext->findvalue('./g:suffix', $XPathObject);
-    $title = $XPathContext->findvalue('./g:title', $XPathObject);
-    $date = $dh->import_gramps_date($XPathObject, $XPathContext);
-
-    foreach my $sno ($XPathContext->findnodes('./g:surname', $XPathObject)){
-      push @$surnames, App::Schierer::HPFan::Model::Gramps::Surname->new(
-        XPathContext  => $XPathContext,
-        XPathObject   => $XPathObject,
-      );
-    }
-
-    foreach my $ref (
-      $self->XPathContext->findnodes('./g:noteref', $self->XPathObject)) {
-      push @$note_refs,
-        App::Schierer::HPFan::Model::Gramps::Note::Reference->new(
-        XPathContext => $self->XPathContext,
-        XPathObject  => $ref,
-        );
-    }
-
-    foreach my $ref (
-      $self->XPathContext->findnodes('./g:citationref', $self->XPathObject)) {
-      push @$citation_refs,
-        App::Schierer::HPFan::Model::Gramps::Citation::Reference->new(
-        XPathContext => $self->XPathContext,
-        XPathObject  => $ref,
-        );
-    }
-
-  }
-
   method to_string {
     my @parts;
 
     push @parts, $title if $title;
-    push @parts, $first if $first;
+    push @parts, $first_name if $first_name;
 
     if (my $primary_surname = $self->primary_surname) {
       push @parts, $primary_surname->to_string;

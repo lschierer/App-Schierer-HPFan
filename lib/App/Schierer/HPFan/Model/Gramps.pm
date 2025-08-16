@@ -4,6 +4,8 @@ use utf8::all;
 require Path::Tiny;
 require XML::LibXML;
 require GraphViz;
+require DBI;
+require DBD::SQLite;
 require Data::Printer;
 require App::Schierer::HPFan::Model::Gramps::Tag;
 require App::Schierer::HPFan::Model::Gramps::DateHelper;
@@ -22,9 +24,12 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
 # PODNAME: App::Schierer::HPFan::Model::Gramps
   use Carp;
   use Log::Log4perl;
+  use DBD::SQLite::Constants qw/:dbd_sqlite_string_mode/;
   our $VERSION = 'v0.0.1';
 
   field $gramps_export : param;
+  field $gramps_db :param;
+  field $dbh;
 
   field $tags         : reader = {};
   field $events       : reader = {};
@@ -46,6 +51,23 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     $gramps_export = Path::Tiny::path($gramps_export);
     if (!$gramps_export->is_file) {
       $self->logger->logcroak("gramps_export $gramps_export is not a file.");
+    }
+    $gramps_db = Path::Tiny::path($gramps_db);
+    if(!$gramps_db->is_file){
+      $self->logger->logcroak("gramps_db $gramps_db is not a file.");
+    }else {
+      $dbh = DBI->connect(
+        "dbi:SQLite:$gramps_db",
+        undef,
+        undef,
+        {
+          ReadOnly            => 1,
+          RaiseError          => 1,
+          AutoCommit          => 1, #fallback just in case
+        }
+      );
+      $self->logger->logcroak("unsuccessfull connecting to $gramps_db. error: " . $DBI::errstr) unless ($dbh);
+      $dbh->{sqlite_string_mode} = DBD_SQLITE_STRING_MODE_UNICODE_FALLBACK;
     }
   }
 
@@ -247,7 +269,7 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     $xc->registerNs('g', 'http://gramps-project.org/xml/1.7.1/');
 
     $self->_import_events($xc);
-    $self->_import_people($xc);
+    $self->_import_people();
     $self->_import_families($xc);
     $self->_import_tags($xc);
     $self->_import_citations($xc);
@@ -257,126 +279,38 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     $self->build_indexes();
   }
 
-  method _import_events ($xc) {
-    my $d = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
-    foreach my $xEvent ($xc->findnodes('//g:events/g:event')) {
-      my $handle = $xEvent->getAttribute('handle');
-      if ($handle) {
-        $events->{$handle} = App::Schierer::HPFan::Model::Gramps::Event->new(
-          XPathContext => $xc,
-          XPathObject  => $xEvent,
-        );
+  method _import_people () {
+    my $all_people = $dbh->selectcol_arrayref(
+      "SELECT handle FROM person"
+    );
 
-      }
+    foreach my $handle (@$all_people){
+      $people->{$handle} = App::Schierer::HPFan::Model::Gramps::Person->new(
+        handle  => $handle,
+        dbh     => $dbh,
+      );
     }
-    $self->logger->info(sprintf('imported %s events.', scalar keys %{$events}));
+
+    $self->logger->info(sprintf('imported %s people.', scalar keys %{$people}));
   }
 
-  method _import_people ($xc) {
-    my $d = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
-    foreach my $xPerson ($xc->findnodes('//g:people/g:person')) {
-      my $handle = $xPerson->getAttribute('handle');
-      if ($handle) {
-        my $id     = $xPerson->getAttribute('id');
-        my $change = $xPerson->getAttribute('change');
-        my $gender = $xc->findvalue('./g:gender', $xPerson) // 'U';
-        $gender =~ s/^\s+|\s+$//g;
+  method _import_events ($xc) {
+    my $all_entries = $dbh->selectcol_arrayref(
+      "SELECT handle FROM event"
+    );
 
-        my @names;
-        foreach my $xName ($xc->findnodes('./g:name', $xPerson)) {
-          my $type   = $xName->getAttribute('type') // 'Unknown';
-          my $first  = $xc->findvalue('./g:first',  $xName) // '';
-          my $call   = $xc->findvalue('./g:call',   $xName) // '';
-          my $title  = $xc->findvalue('./g:title',  $xName) // '';
-          my $nick   = $xc->findvalue('./g:nick',   $xName) // '';
-          my $suffix = $xc->findvalue('./g:suffix', $xName) // '';
-          my @surnames;
-          foreach my $xSN ($xc->findnodes('./g:surname', $xName)) {
-            push @surnames,
-              App::Schierer::HPFan::Model::Gramps::Surname->new(
-                XPathContext  => $xc,
-                XPathObject   => $xSN,
-              );
-          }
-          my @citationref;
-          foreach my $cr ($xc->findnodes('./g:citationref/@hlink', $xName)) {
-            push @citationref, $cr->to_literal;
-          }
-          my $alt = $xName->getAttribute('alt') // 0;
-          $self->logger->debug(sprintf(
-            'found name %s %s %s %s %s %s %s with %s surnames for %s',
-            $type, $title,           $first,
-            $call, $nick,            $suffix,
-            $alt,  scalar @surnames, $id
-          ));
-          push @names,
-            App::Schierer::HPFan::Model::Gramps::Name->new(
-            type          => $type,
-            first         => $first,
-            call          => $call,
-            surnames      => \@surnames,
-            suffix        => $suffix,
-            nick          => $nick,
-            title         => $title,
-            citation_refs => \@citationref,
-            date          => $d->import_gramps_date($xName, $xc),
-            alt           => $alt,
-            );
-        }
-
-        my @citationref;
-        foreach my $cr ($xc->findnodes('./g:citationref/@hlink', $xPerson)) {
-          push @citationref, $cr->to_literal;
-        }
-
-        my @eventref;
-        foreach my $hlink ($xc->findnodes('./g:eventref/@hlink', $xPerson)) {
-          push @eventref, $hlink->to_literal;
-        }
-
-        my @parentin;
-        foreach my $hlink ($xc->findnodes('./g:parentin/@hlink', $xPerson)) {
-          push @parentin, $hlink->to_literal;
-        }
-
-        my @childof;
-        foreach my $hlink ($xc->findnodes('./g:childof/@hlink', $xPerson)) {
-          push @childof, $hlink->to_literal;
-        }
-
-        my @noteref;
-        foreach my $hlink ($xc->findnodes('./g:noteref/@hlink', $xPerson)) {
-          push @noteref, $hlink->to_literal;
-        }
-
-        my @personref;
-        foreach my $hlink ($xc->findnodes('./g:personref/@hlink', $xPerson)) {
-          push @personref, $hlink->to_literal;
-        }
-
-        my @tag_refs;
-        foreach my $tr ($xc->findnodes('./g:tagref/@hlink', $xPerson)) {
-          push @tag_refs, $tr->to_literal;
-        }
-
-        $people->{$handle} = App::Schierer::HPFan::Model::Gramps::Person->new(
-          id             => $id,
-          handle         => $handle,
-          change         => $change,
-          gender         => $gender,
-          names          => \@names,
-          event_refs     => \@eventref,
-          child_of_refs  => \@childof,
-          parent_in_refs => \@parentin,
-          person_refs    => \@personref,
-          note_refs      => \@noteref,
-          citation_refs  => \@citationref,
-          tag_refs       => \@tag_refs,
-        );
-
-      }
+    foreach my $handle (@$all_entries){
+      my $row = $dbh->selectrow_hashref(
+        "SELECT * FROM event WHERE handle = ?",
+        undef, $handle,
+      );
+      $self->logger->debug(sprintf('row %s is %s', $handle, Data::Printer::np($row)));
+      $events->{$handle} = App::Schierer::HPFan::Model::Gramps::Event->new(
+        $row->%*
+      );
     }
-    $self->logger->info(sprintf('imported %s people.', scalar keys %{$people}));
+
+    $self->logger->info(sprintf('imported %s events.', scalar keys %{$events}));
   }
 
   method _import_families ($xc) {

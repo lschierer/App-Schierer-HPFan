@@ -4,6 +4,7 @@ use experimental qw(class);
 use File::FindLib 'lib';
 require Data::Printer;
 require Date::Manip;
+
 require XML::LibXML;
 require JSON::PP;
 
@@ -16,30 +17,27 @@ class App::Schierer::HPFan::Model::Gramps::Generic :
     '!='  => \&_inequality,
     '""'  => \&as_string;
 
-  field $handle        : param : reader //= undef;
-  field $change        : param : reader //= undef;
-  field $note_refs     : param //= [];
-  field $citation_refs : param //= [];
-  field $tag_refs      : param //= [];
+  field $handle        :param :reader = undef;
+  field $change        :param = undef;
+  field $note_refs     = [];
+  field $citation_refs = [];
+  field $tag_refs      = [];
 
   field $XPathContext : param : reader //= undef;
   field $XPathObject  : param : reader //= undef;
 
-  ADJUST {
-    if (
-      not(defined($handle)
-        or (defined($XPathContext) and defined($XPathObject)))
-    ) {
-      $self->logger->logcroak(
-        'Either handle, or both XPathContext and XPathObject must be provided.'
-      );
-    }
-    elsif (not defined($handle)) {
-      $self->_import();
-    }
+  field $dbh :reader :param //= undef;
 
+  ADJUST {
+   unless(defined($handle)) {
+    unless(defined($XPathContext) and defined($XPathObject)){
+      $self->logger->logcroak('either handle, or XPathContext and XPathObject must be defined.');
+    }
+    $self->_import();
+   }
   }
 
+  method change()        { $change }
   method note_refs()     { [@$note_refs] }
   method citation_refs() { [@$citation_refs] }
   method tag_refs()      { [@$tag_refs] }

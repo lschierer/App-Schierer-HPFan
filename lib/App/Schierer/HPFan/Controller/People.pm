@@ -44,13 +44,14 @@ package App::Schierer::HPFan::Controller::People {
           return '';
         }
         my $name = $person->primary_name();
-        my $last = 'Unknown';
+        my $last;
         if ($name) {
           $last = $name->primary_surname;
         }
+
         my $route = sprintf('%s %s/%s %s',
           $last->prefix ? $last->prefix : '',
-          $last->value  ? $last->value  : 'Unknown',
+          $last->surname  ? $last->surname  : 'Unknown' ,
           $name
           ? $name->display ne 'Unknown'
               ? $name->display
@@ -84,7 +85,7 @@ package App::Schierer::HPFan::Controller::People {
     foreach my $person (sort { return $a->id cmp $b->id }
       values %{ $app->gramps->people }) {
 
-      my $route = $app->link_target_for_person($person);
+      my $route = $app->link_target_for_person($person) // '/';
       my $rn    = $route =~ s/ /_/gr;
       my $title = $person->display_name();
 

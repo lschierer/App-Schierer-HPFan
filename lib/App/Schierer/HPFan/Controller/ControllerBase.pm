@@ -38,8 +38,12 @@ package App::Schierer::HPFan::Controller::ControllerBase {
 
     my $gramps_export =
       $app->config('distDir')->child('potter_universe.gramps');
+    my $gramps_db =
+      $app->config('distDir')->child('grampsdb/sqlite.db');
     my $gramps =
-      App::Schierer::HPFan::Model::Gramps->new(gramps_export => $gramps_export,
+      App::Schierer::HPFan::Model::Gramps->new(
+        gramps_export => $gramps_export,
+        gramps_db     => $gramps_db,
       );
 
     state $initialized = do {

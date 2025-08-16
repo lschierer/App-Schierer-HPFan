@@ -12,16 +12,19 @@ class App::Schierer::HPFan::Model::Gramps::Event :
   use Carp;
   use App::Schierer::HPFan::Model::Gramps::DateHelper;
 
-  field $id   : reader : param = undef;
-  field $priv : reader : param = 0;
-  field $type : reader : param = undef;
-  field $date : reader : param =
+  field $description  : reader : param = undef;
+  field $gramps_id    : reader : param = undef;
+  field $json_data    : param = undef;
+  field $place        : reader : param = undef;
+  field $private      : reader : param = 0;
+
+  field $type : reader = undef;
+  field $date : reader  =
     undef;    # Can be daterange, datespan, dateval, or datestr
-  field $place_ref   : reader : param = undef;    # handle reference to place
-  field $cause       : reader : param = undef;
-  field $description : reader : param = undef;
-  field $attributes  : param = [];                # unused, for future growth
-  field $obj_refs    : param = [];
+  field $place_ref   : reader  = undef;    # handle reference to place
+  field $cause       : reader  = undef;
+  field $attributes  = [];                # unused, for future growth
+  field $obj_refs    = [];
 
   field $dh = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
   method attributes() { [@$attributes] }
@@ -30,33 +33,6 @@ class App::Schierer::HPFan::Model::Gramps::Event :
   method date_string() {
     return undef unless $date;
     return App::Schierer::HPFan::Model::Gramps::DateHelper->format_date($date);
-  }
-
-  method _import {
-    my $dh = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
-    $self->SUPER::_import;
-
-    #optional things
-    $type = $self->XPathContext->findvalue('./g:type', $self->XPathObject);
-    $id = $self->XPathObject->getAttribute('id');
-    $date  = $dh->import_gramps_date($self->XPathObject, $self->XPathContext);
-    $priv  = $self->XPathObject->getAttribute('priv');
-    $cause = $self->XPathContext->findvalue('./g:cause');
-    $description = $self->XPathContext->findvalue('./g:description') // ' ';
-    $place_ref   = App::Schierer::HPFan::Model::Gramps::Place::Reference->new(
-      XPathContext => $self->XPathContext,
-      XPathObject  =>
-        $self->XPathContext->findvalue('./g:place', $self->XPathObject)
-    );
-
-    foreach my $ref ($self->XPathContext->findnodes('./g:objref')) {
-      push @$obj_refs,
-        App::Schierer::HPFan::Model::Gramps::Object::Reference->new(
-        XPathContext => $self->XPathContext,
-        XPathObject  => $ref,
-        );
-    }
-
   }
 
   method to_string() {
@@ -76,7 +52,7 @@ class App::Schierer::HPFan::Model::Gramps::Event :
 
   method to_hash {
     my $hr = $self->SUPER::to_hash;
-    $hr->{id}   = $id;
+    $hr->{id}   = $gramps_id;
     $hr->{type} = $type;
     $hr->{date} = $dh->format_date($date);
     $hr->{place_ref}   = $place_ref;
