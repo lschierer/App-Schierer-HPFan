@@ -8,14 +8,46 @@ class App::Schierer::HPFan::Logger {
   use Log::Log4perl qw(:levels);    # <-- do NOT import get_logger
   use Scalar::Util  qw(blessed);
   use JSON::PP      ();
+  use Env           qw(DEV_MODE PERL_ENV MOJO_MODE);
 
   our $VERSION = 'v0.0.3';
+  use overload
+    '""'       => \&to_string,              # used for concat too
+    'bool'     => sub { $_[0]->_isTrue },
+    'fallback' => 0;                        # allow Perl defaults for the rest
 
-  field $logger : reader;           # readonly accessor -> $obj->logger
+  field $logger : reader;                   # readonly accessor -> $obj->logger
   field $category : reader : param = __CLASS__;
 
+  field $_debug : reader = 0;
+
   ADJUST {
-    $self->get_logger;              # initialize on construction
+    # decide dev-ness; prefer DEV_MODE, else PERL_ENV/MOJO_MODE
+    my $v = $DEV_MODE // $PERL_ENV // $MOJO_MODE // '';
+    $_debug = ($v && $v !~ /^(?:0|false|prod(?:uction)?)$/i) ? 1 : 0;
+
+    $self->get_logger
+      ;   # initialize on construction (merged from a pre-existing ADJUST block)
+  }
+
+  # Normalize $level to a Log::Log4perl constant if a string is given
+  method _norm_level ($level) {
+    return $level if defined $level && $level =~ /^\d+$/;   # already a constant
+    my %by_name = (
+      trace => $TRACE,
+      debug => $DEBUG,
+      info  => $INFO,
+      warn  => $WARN,
+      error => $ERROR,
+      fatal => $FATAL,
+    );
+    return $by_name{ lc($level // '') } // $WARN;
+  }
+
+  method dev_guard ($msg, $level = $WARN) {
+    if ($self->_debug) { $self->logger->logcroak($msg) }
+    else               { $self->logger->log($self->_norm_level($level), $msg) }
+    return;
   }
 
   method get_logger {
@@ -70,7 +102,7 @@ class App::Schierer::HPFan::Logger {
     return $self->to_hash;
   }
 
-  method as_string {
+  method to_string {
     return JSON::PP->new->utf8->allow_blessed->convert_blessed->encode($self);
   }
 

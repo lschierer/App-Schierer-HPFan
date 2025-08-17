@@ -52,7 +52,7 @@ package App::Schierer::HPFan::Plugins::Markdown {
 
     my $parser       = Pandoc->new();
     my $html_content = $parser->convert(
-      $customCommonMark => 'html',
+      $customCommonMark => 'html5',
       $snippet
     );
     $html_content = $self->app->spectrum_formatting($html_content);
@@ -161,7 +161,7 @@ package App::Schierer::HPFan::Plugins::Markdown {
     my $parser = Pandoc->new();
 
     my $html_content = $parser->convert(
-      $customCommonMark => 'html',
+      $customCommonMark => 'html5',
       $parsedFile->{content}
     );
 

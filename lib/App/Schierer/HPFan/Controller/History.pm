@@ -9,6 +9,7 @@ require Scalar::Util;
 require Sereal::Encoder;
 require Sereal::Decoder;
 require Date::Manip;
+require App::Schierer::HPFan::Model::History::Gramps;
 
 package App::Schierer::HPFan::Controller::History {
   use Mojo::Base 'App::Schierer::HPFan::Controller::ControllerBase';
@@ -96,18 +97,24 @@ package App::Schierer::HPFan::Controller::History {
       $logger->debug("Processing history file: $file_path");
 
       my $events = $self->_process_history_file($file_path);
-      push @all_events, @$events if $events;
+      #push @all_events, @$events if $events;
     }
 
-    my $ge = $self->_process_gramps_events($gramps);
-    $logger->debug(sprintf(
-      'retrieved %s events from gramps', $ge ? scalar @$ge : '0'));
-
-    push @all_events, @$ge if $ge;
+    my $gramps_history =
+      App::Schierer::HPFan::Model::History::Gramps->new(gramps => $gramps);
+    $gramps_history->process;
 
     # Sort events by date
     @all_events = sort {
-      my $date_cmp = $a->{date}->cmp($b->{date});
+      my $aDate = $a->{date};
+      my $bDate = $b->{date};
+      if (ref $aDate eq 'App::Schierer::HPFan::Model::Gramps::GrampsDate') {
+        $aDate = $aDate->as_dm_date;
+      }
+      if (ref $bDate eq 'App::Schierer::HPFan::Model::Gramps::GrampsDate') {
+        $bDate = $bDate->as_dm_date;
+      }
+      my $date_cmp = $aDate->cmp($bDate);
 
       # If dates are different, use date comparison
       if ($date_cmp != 0) {
@@ -154,46 +161,6 @@ package App::Schierer::HPFan::Controller::History {
     return \@all_events;
   }
 
-  sub _determine_gramps_date($self, $ged) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
-    $logger->debug("determining timeline date from gramps date $ged");
-    my $err;
-    my $eventDate = {
-      date_type => '',
-      date      => Date::Manip::Date->new(),
-    };
-    $eventDate->{date}->config("language",         "English");
-    $eventDate->{date}->config("Use_POSIX_Printf", 1);
-    $eventDate->{date}->config("SetDate",          "zone,UTC");
-
-    if ($ged =~ /between/) {
-      if ($ged =~ /([-0-9]+)\s+and\s+([-0-9]+)/) {
-        $logger->debug("this is a 'between' date.");
-        $eventDate->{date}->parse($2);
-      }
-      $eventDate->{date_type} = 'before';
-    }
-    elsif ($ged =~ /([-0-9]+)/) {
-      $eventDate->{date}->parse($1);
-    }
-    if ($err) {
-      $logger->warn(sprintf(
-        'returning date "now" for date %s  because of error: %s',
-        $ged, $err
-      ));
-      $eventDate->{date_type} = 'invalid';
-      return $eventDate;
-    }
-    if ($ged =~ /before/i) {
-      $logger->debug('this is a "before" date.');
-      $eventDate->{date_type} = 'before';
-    }
-    $eventDate->{date}->set('h',  0);
-    $eventDate->{date}->set('mn', 0);
-    $eventDate->{date}->set('s',  0);
-    return $eventDate;
-  }
-
   sub _find_gramps_event_description($self, $gramps, $event) {
     my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     my @description;
@@ -233,16 +200,33 @@ package App::Schierer::HPFan::Controller::History {
   sub _process_gramps_events($self, $gramps) {
     my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     my @grampsEvents;
-    foreach my $event (values $gramps->events->%*) {
+    foreach my $event (sort { $a->gramps_id cmp $b->gramps_id }
+      values $gramps->events->%*) {
       if ($event->type !~ /(Hogwarts Sorting|Education)/) {
         next unless ($event->date);
-        my $now       = Date::Manip::Date->new();
-        my $eventDate = $self->_determine_gramps_date(
-          $gramps->date_parser->format_date($event->date));
-        if ($eventDate->{date_type} eq 'invalid') {
-          $logger->debug("skipping event with invalid date_type");
+        my $now = Date::Manip::Date->new();
+        if (
+          ref($event->date) ne
+          'App::Schierer::HPFan::Model::Gramps::GrampsDate') {
+          $logger->error_warn(
+            sprintf('INVALID EVENT %s!!!', $event->gramps_id));
           next;
         }
+        if ($event->date->precision eq 'none') {
+          $logger->info(
+            sprintf('skipping event %s for no precision', $event->gramps_id));
+        }
+        if (not defined($event->date->as_dm_date)) {
+          $logger->error_warn(
+            sprintf('cannot get Date::Manip::Date from %s!', $event->gramps_id)
+          );
+          next;
+        }
+        $logger->debug(sprintf(
+          'I have a %s date that prints to "%s"',
+          $event->date->precision,
+          $event->date->to_string,
+        ));
 
         my @people;
         foreach my $p ($gramps->people_by_event->{ $event->handle }->@*) {
@@ -258,7 +242,7 @@ package App::Schierer::HPFan::Controller::History {
         $logger->debug(sprintf(
           'found eligible event type "%s" date "%s", people: %s.',
           $event->type,
-          $eventDate->{date}->printf('%Y-%m-%d'),
+          $event->date->to_string,
           join(', ', map { $_->display_name } @people)
         ));
         my $blurb;
@@ -290,9 +274,15 @@ package App::Schierer::HPFan::Controller::History {
 
         $logger->debug("blurb is '$blurb'");
 
+        my $date_type = join ' ',
+          grep {length} (
+          $event->date->quality_label  || '',
+          $event->date->modifier_label || '',
+          );
+
         my $ge = {
-          date        => $eventDate->{date},
-          date_type   => $eventDate->{date_type},
+          date        => $event->date->as_dm_date,
+          date_type   => $date_type,
           type        => 'magical',
           blurb       => $blurb,
           description => $self->_find_gramps_event_description($gramps, $event),
@@ -317,17 +307,18 @@ package App::Schierer::HPFan::Controller::History {
       }
 
       my @sources;
-      foreach my $sr ($citation->source_refs->@*){
-        my $source = $gramps->sources->{$sr->hlink};
+      foreach my $sr ($citation->source_refs->@*) {
+        my $source = $gramps->sources->{ $sr->hlink };
         next unless $source;
         push @sources, $source;
       }
-      unless( scalar @sources) {
-        $logger->debug(sprintf('no sources for citation in event %s', $event->id));
-        next
+      unless (scalar @sources) {
+        $logger->debug(
+          sprintf('no sources for citation in event %s', $event->id));
+        next;
       }
 
-      foreach my $source (@sources){
+      foreach my $source (@sources) {
         my $mc = $self->_format_mla_citation($gramps, $source, $citation);
         push @citations, "- $mc" if $mc;
       }

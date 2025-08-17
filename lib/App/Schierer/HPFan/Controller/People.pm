@@ -50,8 +50,8 @@ package App::Schierer::HPFan::Controller::People {
         }
 
         my $route = sprintf('%s %s/%s %s',
-          $last->prefix ? $last->prefix : '',
-          $last->surname  ? $last->surname  : 'Unknown' ,
+          $last->prefix  ? $last->prefix  : '',
+          $last->surname ? $last->surname : 'Unknown',
           $name
           ? $name->display ne 'Unknown'
               ? $name->display

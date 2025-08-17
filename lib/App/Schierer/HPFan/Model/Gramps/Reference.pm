@@ -10,12 +10,19 @@ class App::Schierer::HPFan::Model::Gramps::Reference :
   use Carp;
   use Readonly;
   use overload
-    '<=>' => \&_comparison,
-    '=='  => \&_equality,
-    '!='  => \&_inequality,
-    '""'  => \&as_string;
+    'cmp'      => \&_comparison,
+    'eq'       => \&_equality,              # string equality
+    '""'       => \&to_string,              # used for concat too
+    'bool'     => sub { $_[0]->_isTrue },
+    'fallback' => 1;
 
-  field $hlink : param : reader = undef;
+  field $_class         : param = undef;
+  field $attribute_list : param = [];
+  field $citation_list  : param = [];
+  field $note_list      : param = [];
+  field $private        : param = 0;
+  field $ref            : param = undef;
+  field $role           : param : reader : writer = undef;
 
   # there are a number of optional fields that are common to some,
   # but not all, reference types. Many of these are *almost* ubiquitous
@@ -26,17 +33,30 @@ class App::Schierer::HPFan::Model::Gramps::Reference :
   # these two fields are only used internally, but need to be *settable* by
   # child classes.
 
-  field $region_attribute_optional : writer = 0;
-  field $region_attribute_required : writer = 0;
-  field $region;
   ADJUST {
-    Readonly::Hash1 my %temp => (
-      corner1_x => '',
-      corner1_y => '',
-      corner2_x => '',
-      corner2_y => '',
-    );
-    $region = \%temp;
+    if (scalar(@$attribute_list)) {
+      $self->dev_guard(
+        sprintf('%s found a non-empty attribute_list.', ref($self)));
+    }
+
+    if (scalar @{$citation_list}) {
+      my @temp;
+      foreach my $item ($citation_list->@*) {
+        $self->logger->debug("pushing $item as citation ref");
+        push @temp, $item;
+      }
+      $self->set_citationref(\@temp);
+    }
+
+    if (scalar @{$note_list}) {
+      my @temp;
+      foreach my $item ($note_list->@*) {
+        $self->logger->debug("pushing $item as note ref");
+        push @temp, $item;
+      }
+      $self->set_noteref(\@temp);
+    }
+
   }
 
   field $attribute_attribute_optional : writer = 0;
@@ -45,149 +65,25 @@ class App::Schierer::HPFan::Model::Gramps::Reference :
 
   field $citationref_attribute_optional : writer = 0;
   field $citationref_attribute_required : writer = 0;
-  field $citationref = [];
+  field $citationref                    : writer = [];
 
   field $noteref_attribute_optional : writer = 0;
   field $noteref_attribute_required : writer = 0;
-  field $noteref = [];
+  field $noteref                    : writer = [];
 
-  field $XPathContext : param : reader //= undef;
-  field $XPathObject  : param : reader //= undef;
-
-  ADJUST {
-    if (
-      not(defined($hlink) or (defined($XPathContext) and defined($XPathObject)))
-    ) {
-      $self->logger->logcroak(
-        'Either hlink, or both XPathContext and XPathObject must be provided.');
-    }
-    elsif (not defined($hlink)) {
-      $self->_import();
-    }
-    elsif (defined($XPathObject) and defined($XPathContext)) {
-      $self->debug('XPathObject is ' . ref $XPathObject);
-    }
-    elsif (defined $hlink) {
-      $self->debug("hlink is $hlink");
-    }
-    elsif (defined($XPathContext)) {
-      $self->logger->logcroak('XPathObject must be defined!!');
-    }
-    elsif (defined($XPathObject)) {
-      $self->logger->logcroak('XPathContext must be defined!!');
-    }
-    else {
-      $self->warn('something wierd initializing ' . __CLASS__);
-    }
-  }
-
-  method _import {
-    if (!$XPathObject) {
-      return;
-    }
-    $hlink = $XPathObject->getAttribute('hlink');
-    $self->logger->logcroak("hlink not discoverable in $XPathObject")
-      unless defined $hlink;
-
-    if ($region_attribute_required or $region_attribute_optional) {
-      foreach my $attr (qw(corner1_x corner1_y corner2_x corner2_y)) {
-        $region->{$attr} = $XPathContext->findnodes('./g:region', $XPathObject)
-          ->getAttribute($attr);
-        if ($region_attribute_required) {
-          $self->logger->logcroak(
-            "region/$attr not discoverable in $XPathObject")
-            unless defined $region->{$attr};
-        }
-      }
-    }
-
-    if ($attribute_attribute_optional or $attribute_attribute_required) {
-      foreach
-        my $xAttr ($XPathContext->findnodes('./g:attribute', $XPathObject)) {
-        my $attr_priv = $xAttr->getAttribute('priv');
-        my $attr_type = $xAttr->getAttribute('type');
-        my $attr_value => $xAttr->getAttribute('value');
-        my $attr_citationref = [];
-        my $attr_noteref     = [];
-
-        foreach my $xanr ($XPathContext->findnodes('./g:citationref', $xAttr)) {
-          push @$attr_citationref,
-            App::Schierer::HPFan::Model::Gramps::Citation::Reference->new(
-            XPathContext => $XPathContext,
-            XPathObject  => $xanr,
-            );
-        }
-
-        foreach my $xanr ($XPathContext->findnodes('./g:noteref', $xAttr)) {
-          push @$attr_noteref,
-            App::Schierer::HPFan::Model::Gramps::Note::Reference->new(
-            XPathContext => $XPathContext,
-            XPathObject  => $xanr,
-            );
-        }
-        if (defined($attr_type)) {
-          push @$attribute,
-            {
-            priv        => $attr_priv,
-            type        => $attr_type,
-            value       => $attr_value,
-            citationref => $attr_citationref,
-            noteref     => $attr_noteref,
-            };
-        }
-
-      }
-      if ($attribute_attribute_required and scalar @$attribute < 1) {
-        $self->logger->logcroak('attribute is required for this reference.');
-      }
-    }
-
-    if ($citationref_attribute_optional or $citationref_attribute_required) {
-      foreach
-        my $xRef (XPathContext->findnodes('./g:citationref', $XPathObject)) {
-        push @$citationref,
-          App::Schierer::HPFan::Model::Gramps::Reference->new(
-          XPathContext => $XPathContext,
-          XPathObject  => $xRef,
-          );
-      }
-      if ($citationref_attribute_required and scalar(@$citationref) < 1) {
-        $self->logger->logcroak('citationref is required for this reference.');
-      }
-    }
-
-    if ($noteref_attribute_optional or $noteref_attribute_required) {
-      foreach my $xRef (XPathContext->findnodes('./g:noteref', $XPathObject)) {
-        push @$noteref,
-          App::Schierer::HPFan::Model::Gramps::Reference->new(
-          XPathContext => $XPathContext,
-          XPathObject  => $xRef,
-          );
-      }
-      if ($noteref_attribute_required and scalar(@$noteref) < 1) {
-        $self->logger->logcroak('noteref is required for this reference.');
-      }
-    }
-
+  method _comparison ($other, $swap = 0) {
+    return $ref cmp $other->ref;
   }
 
   method _equality ($other, $swap = 0) {
-    return $hlink eq $other->hlink;
-  }
-
-  method _inequality ($other, $swap = 0) {
-    return $hlink ne $other->hlink;
-  }
-
-  method _comparison ($other, $swap = 0) {
-    return $hlink cmp $other->hlink;
+    return $self->_comparison($other, $swap) == 0 ? 1 : 0;
   }
 
   method to_hash {
-    return { hlink => $hlink, };
+    return { ref => $ref };
   }
 
-  method as_string {
+  method to_string {
     my $json =
       JSON::PP->new->utf8->pretty->canonical(1)
       ->allow_blessed(1)

@@ -38,17 +38,16 @@ package App::Schierer::HPFan::Controller::ControllerBase {
 
     my $gramps_export =
       $app->config('distDir')->child('potter_universe.gramps');
-    my $gramps_db =
-      $app->config('distDir')->child('grampsdb/sqlite.db');
-    my $gramps =
-      App::Schierer::HPFan::Model::Gramps->new(
-        gramps_export => $gramps_export,
-        gramps_db     => $gramps_db,
-      );
+    my $gramps_db = $app->config('distDir')->child('grampsdb/sqlite.db');
+    my $gramps    = App::Schierer::HPFan::Model::Gramps->new(
+      gramps_export => $gramps_export,
+      gramps_db     => $gramps_db,
+    );
 
     state $initialized = do {
       $logger->info("⚙️  Running gramps import...");
       $gramps->import_from_xml();
+      $gramps->build_indexes();
       $logger->info("✅ gramps import completed.");
 
       $app->helper(gramps => sub { return $gramps });
@@ -127,17 +126,22 @@ package App::Schierer::HPFan::Controller::ControllerBase {
         my $APP_START_TIME = $app->config->{'APP_START_TIME'};
         $c->render(
           json => {
-            status  => 'ok',
-            mode    => $app->mode // 'unknown',
-            time    => scalar localtime,
-            app_started_at => scalar(localtime($APP_START_TIME)),
-            app_uptime_seconds => time() - $APP_START_TIME,
-            build_time => $app->config->{'version'}->{'build-time'},
-            cdk_deployment_time => $app->config->{'HPFAN-Environment'}->{'DEPLOYMENT_TIME'} // 'unknown',
-            container_id => $app->config->{'HPFAN-Environment'}->{'HOSTNAME'} // 'unknown', # ECS sets this automatically
-            image_tag => $app->config->{'HPFAN-Environment'}->{'IMAGE_TAG'} // 'unknown',
-            image_uri => $app->config->{'HPFAN-Environment'}->{'IMAGE_URI'} // 'unknown',
-            version => $app->VERSION,
+            status              => 'ok',
+            mode                => $app->mode // 'unknown',
+            time                => scalar localtime,
+            app_started_at      => scalar(localtime($APP_START_TIME)),
+            app_uptime_seconds  => time() - $APP_START_TIME,
+            build_time          => $app->config->{'version'}->{'build-time'},
+            cdk_deployment_time =>
+              $app->config->{'HPFAN-Environment'}->{'DEPLOYMENT_TIME'}
+              // 'unknown',
+            container_id => $app->config->{'HPFAN-Environment'}->{'HOSTNAME'}
+              // 'unknown',    # ECS sets this automatically
+            image_tag => $app->config->{'HPFAN-Environment'}->{'IMAGE_TAG'}
+              // 'unknown',
+            image_uri => $app->config->{'HPFAN-Environment'}->{'IMAGE_URI'}
+              // 'unknown',
+            version    => $app->VERSION,
             git_commit => $app->config->{'version'}->{'git-commit'},
           },
           status => 200

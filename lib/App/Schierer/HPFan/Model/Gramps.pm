@@ -28,7 +28,7 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
   our $VERSION = 'v0.0.1';
 
   field $gramps_export : param;
-  field $gramps_db :param;
+  field $gramps_db     : param;
   field $dbh;
 
   field $tags         : reader = {};
@@ -53,33 +53,74 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
       $self->logger->logcroak("gramps_export $gramps_export is not a file.");
     }
     $gramps_db = Path::Tiny::path($gramps_db);
-    if(!$gramps_db->is_file){
+    if (!$gramps_db->is_file) {
       $self->logger->logcroak("gramps_db $gramps_db is not a file.");
-    }else {
+    }
+    else {
       $dbh = DBI->connect(
         "dbi:SQLite:$gramps_db",
-        undef,
-        undef,
+        undef, undef,
         {
-          ReadOnly            => 1,
-          RaiseError          => 1,
-          AutoCommit          => 1, #fallback just in case
+          RaiseError => 1,
+          AutoCommit => 1,    #fallback just in case
         }
       );
-      $self->logger->logcroak("unsuccessfull connecting to $gramps_db. error: " . $DBI::errstr) unless ($dbh);
+      $self->logger->logcroak(
+        "unsuccessfull connecting to $gramps_db. error: " . $DBI::errstr)
+        unless ($dbh);
       $dbh->{sqlite_string_mode} = DBD_SQLITE_STRING_MODE_UNICODE_FALLBACK;
+      # One-time-ish setup (safe if repeated)
+      $dbh->do('PRAGMA journal_mode=WAL');     # persistent per DB
+      $dbh->do('PRAGMA synchronous=NORMAL');   # performance tradeoff ok for dev
+      $dbh->do('PRAGMA temp_store=MEMORY');
+
+      # Now forbid writes on THIS connection:
+      $dbh->do('PRAGMA query_only=ON');        # connection-level read-only
+          # Optional: longer busy timeout to handle writer checkpoints
+      $dbh->do('PRAGMA busy_timeout=3000');
     }
   }
 
+  method fetch_change_for_handles (@handles) {
+    return [] unless @handles;
+    my $in = join ',', ('?') x @handles;
+    return $dbh->selectall_arrayref(
+      "SELECT handle, change FROM event WHERE handle IN ($in)",
+      { Slice => {} }, @handles) // [];
+  }
+
   method build_indexes {
+    # reset both maps
     $people_by_event = {};
-    for my $person (values %$people) {
-      for my $h ($person->event_refs->@*) {
-        push @{ $people_by_event->{$h} }, $person;
+    $people_by_tag   = {};
+
+    # iterate the actual people map on the object
+    for my $person (values %{ $self->people }) {
+
+      # ---- events → people
+      my %seen_e;
+      for my $eref (@{ $person->event_refs // [] }) {
+        # $eref is App::…::Event::Reference
+        my $eh = eval { $eref->ref } // '';
+        next unless length $eh;
+        next if $seen_e{$eh}++;
+        push @{ ($people_by_event->{$eh} //= []) }, $person;
       }
-      for my $t ($person->tag_refs->@*) {
-        push @{ $people_by_tag->{$t} }, $person;
-      }
+
+
+      # ---- tags → people
+      # if your person->tag_refs returns objects too, extract their handles;
+      # otherwise if they’re already strings, this is fine
+      #my %seen_t;
+      #for my $tref (@{ $person->tag_refs // [] }) {
+      #  my $th =
+      #    ref($tref) && $tref->can('ref') ? $tref->ref :
+      #    ref($tref) eq 'HASH'            ? ($tref->{ref} // '') :
+      #                                      "$tref"; # already a handle
+      #  next unless length $th;
+      #  next if $seen_t{$th}++;
+      #  push @{ ($people_by_tag->{$th} //= []) }, $person;
+      #}
     }
   }
 
@@ -268,7 +309,6 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     my $xc = XML::LibXML::XPathContext->new($dom);
     $xc->registerNs('g', 'http://gramps-project.org/xml/1.7.1/');
 
-    $self->_import_events($xc);
     $self->_import_people();
     $self->_import_families($xc);
     $self->_import_tags($xc);
@@ -276,41 +316,24 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     $self->_import_sources($xc);
     $self->_import_repositories($xc);
     $self->_import_notes($xc);
-    $self->build_indexes();
+    $self->_import_events();
   }
 
   method _import_people () {
-    my $all_people = $dbh->selectcol_arrayref(
-      "SELECT handle FROM person"
-    );
+    my $all_entries = $dbh->selectcol_arrayref("SELECT handle FROM person");
 
-    foreach my $handle (@$all_people){
-      $people->{$handle} = App::Schierer::HPFan::Model::Gramps::Person->new(
-        handle  => $handle,
-        dbh     => $dbh,
-      );
+    foreach my $handle (@$all_entries) {
+      my $row = $dbh->selectrow_hashref("SELECT * FROM person WHERE handle = ?",
+        undef, $handle,);
+      $self->logger->debug(
+        sprintf('row %s is %s', $handle, Data::Printer::np($row)));
+      $people->{$handle} =
+        App::Schierer::HPFan::Model::Gramps::Person->new($row->%*);
+      $people->{$handle}->set_dbh($dbh);
+      $people->{$handle}->parse_json_data;
     }
 
     $self->logger->info(sprintf('imported %s people.', scalar keys %{$people}));
-  }
-
-  method _import_events ($xc) {
-    my $all_entries = $dbh->selectcol_arrayref(
-      "SELECT handle FROM event"
-    );
-
-    foreach my $handle (@$all_entries){
-      my $row = $dbh->selectrow_hashref(
-        "SELECT * FROM event WHERE handle = ?",
-        undef, $handle,
-      );
-      $self->logger->debug(sprintf('row %s is %s', $handle, Data::Printer::np($row)));
-      $events->{$handle} = App::Schierer::HPFan::Model::Gramps::Event->new(
-        $row->%*
-      );
-    }
-
-    $self->logger->info(sprintf('imported %s events.', scalar keys %{$events}));
   }
 
   method _import_families ($xc) {
@@ -400,8 +423,8 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
       if ($handle) {
         $citations->{$handle} =
           App::Schierer::HPFan::Model::Gramps::Citation->new(
-            XPathContext => $xc,
-            XPathObject  => $xItem,
+          XPathContext => $xc,
+          XPathObject  => $xItem,
           );
 
       }
@@ -455,6 +478,23 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     }
     $self->logger->info(
       sprintf('imported %s repositories.', scalar keys %{$repositories}));
+  }
+
+  method _import_events () {
+    my $all_entries = $dbh->selectcol_arrayref("SELECT handle FROM event");
+
+    foreach my $handle (@$all_entries) {
+      my $row = $dbh->selectrow_hashref("SELECT * FROM event WHERE handle = ?",
+        undef, $handle,);
+      $self->logger->debug(
+        sprintf('row %s is %s', $handle, Data::Printer::np($row)));
+      $events->{$handle} =
+        App::Schierer::HPFan::Model::Gramps::Event->new($row->%*);
+      $events->{$handle}->set_dbh($dbh);
+      $events->{$handle}->parse_json_data;
+    }
+
+    $self->logger->info(sprintf('imported %s events.', scalar keys %{$events}));
   }
 
 }

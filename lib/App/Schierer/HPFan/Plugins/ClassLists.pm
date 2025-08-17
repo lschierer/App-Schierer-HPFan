@@ -42,7 +42,7 @@ package App::Schierer::HPFan::Plugins::ClassLists {
 
     my @SortingEvents;
     foreach my $event (@events) {
-      if ($event->type eq 'Hogwarts Sorting') {
+      if ($event->type->to_string eq 'Hogwarts Sorting') {
         $logger->debug(sprintf(
           'pushing event %s with type %s',
           $event->handle, $event->type
@@ -56,7 +56,7 @@ package App::Schierer::HPFan::Plugins::ClassLists {
 
     foreach my $event (@SortingEvents) {
       my @matches;
-      my $eventDate = $app->gramps->date_parser->format_date($event->date);
+      my $eventDate = $event->date->to_string;
       $logger->debug(sprintf(
         'event %s has date %s and type %s.',
         $event->handle, $eventDate, $event->type

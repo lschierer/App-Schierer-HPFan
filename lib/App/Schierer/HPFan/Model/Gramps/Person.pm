@@ -1,13 +1,23 @@
 use v5.42;
 use utf8::all;
 use experimental qw(class);
-require JSON::PP;
+require App::Schierer::HPFan::Model::Gramps::Event::Reference;
+require App::Schierer::HPFan::Model::Gramps::Person::Reference;
 
 class App::Schierer::HPFan::Model::Gramps::Person :
   isa( App::Schierer::HPFan::Model::Gramps::Generic) {
   use Carp;
   use App::Schierer::HPFan::Model::Gramps::Name;
   use App::Schierer::HPFan::Model::Gramps::DateHelper;
+
+  field $given_name      : param = undef;
+  field $surname         : param = undef;
+  field $gramps_id       : param = undef;
+  field $gender          : param = 'U';
+  field $death_ref_index : param = undef;
+  field $birth_ref_index : param = undef;
+  field $private         : param = undef;
+  field $json_data       : param = undef;
 
   field $event_refs     : param = [];
   field $addresses      : param = [];
@@ -20,126 +30,176 @@ class App::Schierer::HPFan::Model::Gramps::Person :
   field $citation_refs  : param = [];
   field $tag_refs       : param = [];
 
-  method id {
-      my $result = $self->dbh->selectrow_hashref(
-          "SELECT gramps_id FROM person WHERE handle = ?",
-          undef,
-          $self->handle
-      );
-      return $result ? $result->{gramps_id} : undef;
-  }
+  field $ALLOWED_FIELD_NAMES : reader = {
+    map { $_ => 1 }
+      qw(given_name
+      surname
+      gramps_id
+      gender
+      death_ref_index
+      birth_ref_index
+      private
+      json_data        )
+  };
+
+  method given_name      { $self->_get_field('given_name') }
+  method surname         { $self->_get_field('surname') }
+  method gramps_id       { $self->_get_field('gramps_id') }
+  method death_ref_index { $self->_get_field('death_ref_index') }
+  method birth_ref_index { $self->_get_field('birth_ref_index') }
+  method private         { $self->_get_field('private') }
+  method json_data       { $self->_get_field('json_data') }
 
   method gender {
-      my $result = $self->dbh->selectrow_hashref(
-          "SELECT gender FROM person WHERE handle = ?",
-          undef,
-          $self->handle
-      );
-      my %GENDER_MAP = (0 => 'F', 1 => 'M', 2 => 'U');
-      if($result){
-        return $GENDER_MAP{$result->{'gender'}} // 'U';
-      }
-      return 'U';
+    my $gv         = $self->_get_field('gender');
+    my %GENDER_MAP = (0 => 'F', 1 => 'M', 2 => 'U');
+    if ($gv) {
+      return $GENDER_MAP{$gv} // 'U';
+    }
+    return 'U';
   }
 
-  method private {
-      my $result = $self->dbh->selectrow_hashref(
-          "SELECT private FROM person WHERE handle = ?",
-          undef,
-          $self->handle
-      );
-      return $result->{'private'} if $result;
-      return 0;
-  }
-
-  method change {
-      my $result = $self->dbh->selectrow_hashref(
-          "SELECT change FROM person WHERE handle = ?",
-          undef,
-          $self->handle
-      );
-      return $result ? $result->{change} : undef;
-  }
+  method id { $self->gramps_id }
 
   method parse_json_data {
-    my $raw_json = $self->dbh->selectrow_hashref(
-      "SELECT json_data FROM person WHERE handle = ?",
-      undef,
-      $self->handle
-    );
-    $raw_json = $raw_json->{'json_data'};
+    my $raw_json = $self->json_data;
     $self->logger->debug("raw_json: '$raw_json'");
     #trust DBH::SQLite to have already handle UTF8.
     my $hash = JSON::PP->new->decode($raw_json);
-    if(reftype($hash) eq 'HASH') {
-      $self->logger->info("got hash ". Data::Printer::np($hash));
-      return $hash;
-    }else {
-      $self->logger->error(sprintf('parsed json resulted in %s', reftype($hash)));
+    if (reftype($hash) eq 'HASH') {
+      $self->logger->info("got hash " . Data::Printer::np($hash));
+
+      foreach my $er ($hash->{'event_ref_list'}->@*) {
+        push @$event_refs,
+          App::Schierer::HPFan::Model::Gramps::Event::Reference->new($er->%*);
+      }
+
+      foreach my $item ($hash->{'family_list'}->@*) {
+        push @$parent_in_refs, $item;
+      }
+
+      foreach my $item ($hash->{'note_list'}->@*) {
+        push @$note_refs, $item;
+      }
+
+      foreach my $item ($hash->{'parent_family_list'}->@*) {
+        push @$child_of_refs, $item;
+      }
+
+      foreach my $item ($hash->{'note_list'}->@*) {
+        push @$note_refs, $item;
+      }
+
+      foreach my $item ($hash->{'tag_list'}->@*) {
+        push @$tag_refs, $item;
+      }
+
+      foreach my $item ($hash->{'person_ref_list'}->@*) {
+        push @$person_refs,
+          App::Schierer::HPFan::Model::Gramps::Person::Reference->new(
+          $item->%*);
+      }
+
+    }
+    else {
+      $self->logger->error(
+        sprintf('parsed json resulted in %s', reftype($hash)));
     }
     return {};
   }
 
   method names() {
     my @names;
-    my $hash = $self->parse_json_data();
-    if(exists $hash->{primary_name}) {
+    my $hash = $self->json_data;
+    if (exists $hash->{primary_name}) {
       my $name = App::Schierer::HPFan::Model::Gramps::Name->new(
-        $hash->{primary_name}->%*
-      );
-      if($name){
+        $hash->{primary_name}->%*);
+      if ($name) {
         $name->set_alt(0);
         push @names, $name;
       }
     }
-    if(exists $hash->{alternate_names} && scalar @{ $hash->{alternate_names} }){
-      foreach my $nh ($hash->{alternate_names}->@*){
-        my $name = App::Schierer::HPFan::Model::Gramps::Name->new(
-          $nh->%*
-        );
-        if($name){
+    if (exists $hash->{alternate_names} && scalar @{ $hash->{alternate_names} })
+    {
+      foreach my $nh ($hash->{alternate_names}->@*) {
+        my $name = App::Schierer::HPFan::Model::Gramps::Name->new($nh->%*);
+        if ($name) {
           $name->set_alt(1);
           push @names, $name;
         }
       }
     }
-    $self->logger->debug(sprintf('there are %d names for %s',
-    scalar @names, $self->handle));
+    $self->logger->debug(sprintf(
+      'there are %d names for %s', scalar @names, $self->handle));
     return \@names;
-  }               # Return copy
+  }    # Return copy
 
-  method event_refs()     {
-    my $hash = $self->parse_json_data();
+  method event_refs() {
+    my $hash   = JSON::PP->new->decode($self->json_data);
+    my $result = [];
+    foreach my $er ($hash->{'event_ref_list'}->@*) {
+      push @$result,
+        App::Schierer::HPFan::Model::Gramps::Event::Reference->new($er->%*);
+    }
+    return [$result->@*];
+  }
+
+  method addresses() {
+    my $hash = JSON::PP->new->decode($self->json_data);
+    return $hash->{'address_list'};
+  }
+
+  method attributes() {
+    my $hash = JSON::PP->new->decode($self->json_data);
+    return $hash->{'attribute_list'};
+  }
+
+  method urls() {
+    my $hash = JSON::PP->new->decode($self->json_data);
+    return $hash->{'urls'};
+  }
+
+  method child_of_refs() {
+    my $hash = JSON::PP->new->decode($self->json_data);
+    return $hash->{'parent_family_list'};
+  }
+
+  method parent_in_refs() {
+    my $hash = JSON::PP->new->decode($self->json_data);
+    return $hash->{'family_list'};
+  }
+
+  method person_refs() {
+    my $hash   = JSON::PP->new->decode($self->json_data);
+    my $result = [];
+    foreach my $item ($hash->{'person_ref_list'}->@*) {
+      push @$result,
+        App::Schierer::HPFan::Model::Gramps::Person::Reference->new($item->%*);
+    }
+    return [$result->@*];
+  }
+
+  method note_refs() {
+    my $hash = JSON::PP->new->decode($self->json_data);
     return [];
   }
 
-  method addresses()      {
-  my $hash = $self->parse_json_data();
-  return [];
+  method citation_refs() {
+    my $hash = JSON::PP->new->decode($self->json_data);
+    return [$hash->{'note_list'}];
   }
-  method attributes()     { my $hash = $self->parse_json_data();
-  return []; }
-  method urls()           { my $hash = $self->parse_json_data();
-  return []; }
-  method child_of_refs()  { my $hash = $self->parse_json_data();
-  return []; }
-  method parent_in_refs() { my $hash = $self->parse_json_data();
-  return []; }
-  method person_refs()    { my $hash = $self->parse_json_data();
-  return []; }
-  method note_refs()      { my $hash = $self->parse_json_data();
-  return []; }
-  method citation_refs()  { my $hash = $self->parse_json_data();
-  return []; }
-  method tag_refs()       { my $hash = $self->parse_json_data();
-  return []; }
+
+  method tag_refs() {
+    my $hash = JSON::PP->new->decode($self->json_data);
+    return [$hash->{'tag_list'}];
+  }
 
   method primary_name() {
     # Return the first non-alternate name, or first name if all are alternate
     for my $name ($self->names->@*) {
       return $name unless $name->alt;
     }
-    return scalar(@{$self->names}) ? $self->names->[0] : undef;
+    return scalar(@{ $self->names }) ? $self->names->[0] : undef;
   }
 
   method get_surname() {
@@ -180,9 +240,9 @@ class App::Schierer::HPFan::Model::Gramps::Person :
     }
     my $formatted = sprintf('%s %s %s %s',
       $name->display,
-      $last->prefix ? $last->prefix : '',
-      $last->surname  ? $last->surname  : 'Unknown',
-      $name->suffix ? $name->suffix : '',
+      $last->prefix  ? $last->prefix  : '',
+      $last->surname ? $last->surname : 'Unknown',
+      $name->suffix  ? $name->suffix  : '',
     );
     $formatted =~ s/^\s+|\s+$//g;
     $formatted =~ s/\s+/ /g;
@@ -192,7 +252,8 @@ class App::Schierer::HPFan::Model::Gramps::Person :
   method to_string() {
     my $primary  = $self->primary_name;
     my $name_str = $primary ? $primary->to_string : "Unknown";
-    return sprintf("Person[%s]: %s (%s)", $self->handle, $name_str, $self->gender);
+    return
+      sprintf("Person[%s]: %s (%s)", $self->handle, $name_str, $self->gender);
   }
 
   method to_hash {

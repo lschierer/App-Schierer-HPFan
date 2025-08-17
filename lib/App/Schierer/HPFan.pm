@@ -20,15 +20,17 @@ package App::Schierer::HPFan {
     my $config  = $self->plugin('NotYAMLConfig');
     my $distDir = Mojo::File::Share::dist_dir('App::Schierer::HPFan');
     my $mode    = $self->mode;
-    $self->config(distDir => $distDir);
+    $self->config(distDir        => $distDir);
     $self->config(APP_START_TIME => time());
     Env::import();
-    $self->config('HPFAN-Environment' => {
-      DEPLOYMENT_TIME => $DEPLOYMENT_TIME,
-      HOSTNAME        => $HOSTNAME,
-      IMAGE_TAG       => $IMAGE_TAG,
-      IMAGE_URI       => $IMAGE_URI,
-    });
+    $self->config(
+      'HPFAN-Environment' => {
+        DEPLOYMENT_TIME => $DEPLOYMENT_TIME,
+        HOSTNAME        => $HOSTNAME,
+        IMAGE_TAG       => $IMAGE_TAG,
+        IMAGE_URI       => $IMAGE_URI,
+      }
+    );
 
     # Configure the application
     $self->secrets($config->{secrets});
@@ -45,11 +47,13 @@ package App::Schierer::HPFan {
       }
     );
     $self->log->info("Mojolicious Logging initialized");
-    foreach my $envkey (keys %{$self->config->{'HPFAN-Environment'}}){
-      if(defined $envkey){
-        my $envValue = $self->config->{'HPFAN-Environment'}->{$envkey} // 'Undefined';
+    foreach my $envkey (keys %{ $self->config->{'HPFAN-Environment'} }) {
+      if (defined $envkey) {
+        my $envValue = $self->config->{'HPFAN-Environment'}->{$envkey}
+          // 'Undefined';
         $self->log->info("HPFAN-Environnment variable $envkey is $envValue");
-      }else {
+      }
+      else {
         $self->log->warn('undefined envkey in HPFAN-Environment!');
       }
     }

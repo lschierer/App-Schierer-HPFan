@@ -17,8 +17,8 @@ class App::Schierer::HPFan::Model::Gramps::Generic :
     '!='  => \&_inequality,
     '""'  => \&as_string;
 
-  field $handle        :param :reader = undef;
-  field $change        :param = undef;
+  field $handle : param : reader = undef;
+  field $change : param = undef;
   field $note_refs     = [];
   field $citation_refs = [];
   field $tag_refs      = [];
@@ -26,21 +26,77 @@ class App::Schierer::HPFan::Model::Gramps::Generic :
   field $XPathContext : param : reader //= undef;
   field $XPathObject  : param : reader //= undef;
 
-  field $dbh :reader :param //= undef;
+  field $dbh : reader : param : writer //= undef;
+  field $ALLOWED_FIELD_NAMES : reader = {};
 
   ADJUST {
-   unless(defined($handle)) {
-    unless(defined($XPathContext) and defined($XPathObject)){
-      $self->logger->logcroak('either handle, or XPathContext and XPathObject must be defined.');
+    unless (defined($handle)) {
+      unless (defined($XPathContext) and defined($XPathObject)) {
+        $self->logger->logcroak(
+          'either handle, or XPathContext and XPathObject must be defined.');
+      }
+      $self->_import();
     }
-    $self->_import();
-   }
   }
 
-  method change()        { $change }
+  method change()        {$change}
   method note_refs()     { [@$note_refs] }
   method citation_refs() { [@$citation_refs] }
   method tag_refs()      { [@$tag_refs] }
+
+  field $table_names : reader = {
+    citation     => 1,
+    gender_stats => 1,
+    name_group   => 1,
+    place        => 1,
+    source       => 1,
+    event        => 1,
+    media        => 1,
+    note         => 1,
+    reference    => 1,
+    tag          => 1,
+    family       => 1,
+    metadata     => 1,
+    person       => 1,
+    repository   => 1,
+  };
+
+  method class_to_table_name {
+    my @parts = split('::', ref($self));
+    my $base  = pop @parts;
+
+    if ($base) {
+      if (exists $table_names->{ lc($base) }) {
+        return lc($base);
+      }
+    }
+    return 'metadata';
+  }
+
+  method _get_field ($field_name, $table_name = undef) {
+
+    # guard the table name
+    unless (defined $table_name) {
+      $table_name = $self->class_to_table_name;
+    }
+    unless (exists $table_names->{$table_name}) {
+      $table_name = 'metadata';
+    }
+
+    if (exists $self->ALLOWED_FIELD_NAMES->{$field_name}) {
+      unless ($self->dbh) {
+        $self->dev_guard('_get_field called without defined dbh!!!');
+        return undef;
+      }
+
+      my $table_name = my $sql =
+        "SELECT $field_name FROM $table_name WHERE handle = ?";
+      my $result = $self->dbh->selectrow_hashref($sql, undef, $self->handle);
+      return $result ? $result->{$field_name} : undef;
+    }
+    $self->dev_guard("_get_field requested for forbidden field $field_name");
+    return undef;
+  }
 
   method _import {
     $handle = $XPathObject->getAttribute('handle');

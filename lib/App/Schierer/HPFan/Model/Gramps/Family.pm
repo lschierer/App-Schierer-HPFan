@@ -17,6 +17,8 @@ class App::Schierer::HPFan::Model::Gramps::Family {
   field $note_refs     : param = [];
   field $citation_refs : param = [];
   field $tag_refs      : param = [];
+  field $ALLOWED_FIELD_NAMES : reader =
+    { map { $_ => 1 } qw( gramps_id change private json_data) };
 
   ADJUST {
     croak "handle is required"           unless defined $handle;

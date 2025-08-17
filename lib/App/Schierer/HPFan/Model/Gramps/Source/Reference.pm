@@ -6,7 +6,6 @@ class App::Schierer::HPFan::Model::Gramps::Source::Reference :
   isa(App::Schierer::HPFan::Model::Gramps::Reference) {
   use Carp;
 
-
   method _import {
     $self->SUPER::_import;
 

@@ -13,12 +13,15 @@ class App::Schierer::HPFan::Model::Gramps::Repository :
   field $type  : param : reader = undef;
   field $url   : param //= [];
 
+  field $ALLOWED_FIELD_NAMES : reader =
+    { map { $_ => 1 } qw( gramps_id change private json_data) };
+
   method url { [@$url] }
 
   method _import {
     $self->SUPER::_import;
 
-    $type  = $self->XPathContext->findvalue('./g:type',  $self->XPathObject);
+    $type = $self->XPathContext->findvalue('./g:type', $self->XPathObject);
     $self->logger->logcroak(
       sprintf('type not discoverable in %s', $self->XPathObject))
       unless defined $type;

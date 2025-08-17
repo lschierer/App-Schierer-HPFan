@@ -16,6 +16,9 @@ class App::Schierer::HPFan::Model::Gramps::Note :
 
   field $styles : param = [];
 
+  field $ALLOWED_FIELD_NAMES : reader =
+    { map { $_ => 1 } qw( gramps_id change private json_data) };
+
   method styles { [$styles->@*] }
 
   method _import {
@@ -28,16 +31,18 @@ class App::Schierer::HPFan::Model::Gramps::Note :
     $self->debug("id is $id");
 
     # optional things
-    $priv = $self->XPathObject->getAttribute('priv');
+    $priv   = $self->XPathObject->getAttribute('priv');
     $format = $self->XPathObject->getAttribute('format');
-    $type = $self->XPathObject->getAttribute('type');
-    $text = $self->XPathContext->findvalue('./g:text', $self->XPathObject);
+    $type   = $self->XPathObject->getAttribute('type');
+    $text   = $self->XPathContext->findvalue('./g:text', $self->XPathObject);
 
-    foreach my $s ($self->XPathContext->findnodes('./g:style', $self->XPathObject)) {
-      push @$styles, App::Schierer::HPFan::Model::Gramps::Style->new(
-        XPathContext  => $self->XPathContext,
-        XPathObject   => $self->XPathObject,
-      );
+    foreach
+      my $s ($self->XPathContext->findnodes('./g:style', $self->XPathObject)) {
+      push @$styles,
+        App::Schierer::HPFan::Model::Gramps::Style->new(
+        XPathContext => $self->XPathContext,
+        XPathObject  => $self->XPathObject,
+        );
     }
   }
 

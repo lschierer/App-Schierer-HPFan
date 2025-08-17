@@ -17,6 +17,9 @@ class App::Schierer::HPFan::Model::Gramps::Source :
   field $obj_refs      : param = [];
   field $srcattributes : param = [];
 
+  field $ALLOWED_FIELD_NAMES : reader =
+    { map { $_ => 1 } qw( gramps_id change private json_data) };
+
   method repo_refs()     { [@$repo_refs] }
   method obj_refs()      { [@$obj_refs] }
   method srcattributes() { [@$srcattributes] }

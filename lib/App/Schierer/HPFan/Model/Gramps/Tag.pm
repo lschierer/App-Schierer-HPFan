@@ -10,6 +10,9 @@ class App::Schierer::HPFan::Model::Gramps::Tag :
   field $color    : reader : param //= undef;
   field $priority : reader : param //= undef;
 
+  field $ALLOWED_FIELD_NAMES : reader =
+    { map { $_ => 1 } qw( gramps_id change private json_data) };
+
   method _import {
     $self->SUPER::_import;
     $name     = $self->XPathObject->getAttribute('name');
