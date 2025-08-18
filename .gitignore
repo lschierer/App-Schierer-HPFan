@@ -19,3 +19,4 @@ node_modules
 cdk.out
 cdk.context.json
 share/grampsdb/lock
+app-schierer-h_p_fan.yml

@@ -26,6 +26,7 @@ ts:
   pnpm build:ts
 
 build: install css ts
+  ./scripts/generate_config_secret.sh
   ./Build manifest
   ./Build
 
