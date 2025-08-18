@@ -21,7 +21,10 @@ class App::Schierer::HPFan::Model::Gramps::Family :
   field $citation_refs : param = [];
   field $tag_refs      : param = [];
   field $ALLOWED_FIELD_NAMES : reader =
-    { map { $_ => 1 } qw( gramps_id change private json_data) };
+    { map { $_ => 1 } qw( gramps_id change private gramps_id
+  father_handle
+  mother_handle
+  json_data     ) };
 
   method event_refs()    { [@$event_refs] }
   method child_refs()    { [@$child_refs] }

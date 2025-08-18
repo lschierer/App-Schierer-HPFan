@@ -10,13 +10,13 @@ class App::Schierer::HPFan::Model::Gramps::Person :
   use App::Schierer::HPFan::Model::Gramps::Name;
   use App::Schierer::HPFan::Model::Gramps::DateHelper;
 
-  field $given_name      : param = undef;
-  field $surname         : param = undef;
-  field $gramps_id       : param = undef;
-  field $gender          : param = 'U';
-  field $death_ref_index : param = undef;
-  field $birth_ref_index : param = undef;
-  field $json_data       : param = undef;
+  field $given_name      : param //= undef;
+  field $surname         : param //= undef;
+  field $gramps_id       : param //= undef;
+  field $gender          : param //= 'U';
+  field $death_ref_index : param //= undef;
+  field $birth_ref_index : param //= undef;
+  field $json_data       : param //= undef;
 
   field $event_refs     : param = [];
   field $addresses      : param = [];
@@ -51,8 +51,11 @@ class App::Schierer::HPFan::Model::Gramps::Person :
 
   method gender {
     my $gv         = $self->_get_field('gender');
+
     my %GENDER_MAP = (0 => 'F', 1 => 'M', 2 => 'U');
-    if ($gv) {
+    $self->logger->debug(sprintf('"%s" has gender "%s", I will return "%s".',
+    $gramps_id, $gv, $GENDER_MAP{$gv} // 'U'));
+    if (defined($gv)) {
       return $GENDER_MAP{$gv} // 'U';
     }
     return 'U';

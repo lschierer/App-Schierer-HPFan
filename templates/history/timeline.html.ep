@@ -16,28 +16,27 @@
   <% if(defined $timeline && scalar @$timeline) { %>
     <ul class="timeline spectrum-Typeography">
       <% foreach my $event (@$timeline) { %>
-        <li id="<%= $event->{date}->secs_since_1970_GMT %>">
+        <li id="<%= $event->sortval %>">
           <h5 class="spectrum-Heading spectrum-Heading--sizeM">
-            <%= $event->{date_type} %>
-            <time datetime="<%= $event->{date}->printf('%Y-%m-%d'); %>">
-              <%= $event->{date}->printf('%Y-%m-%d'); %>
-            </time>
-            <% if(!$event->{date}->complete(qw(m d))) { %>
-              (Estimated)
+            <% if(length($event->date_kind)) { %>
+              <%= $event->date_kind %>
             <% } %>
+            <time datetime="<%= $event->date_iso %>">
+              <%= $event->date_iso %>
+            </time>
           </h5>
-          <div class="spectrum-Typography <%= $event->{type} %>">
+          <div class="spectrum-Typography <%= $event->type %>">
             <h6 class="spectrum-Heading spectrum-Heading--sizeXS">
-              <%= $event->{blurb} %>
+              <%= $event->blurb %>
             </h6>
             <p class="spectrum-Body spectrum-Body--sizeM">
-              <% if(exists $event->{description}){ %>
-                <%== $event->{description} %>
+              <% if(length($event->html_desc)) { %>
+                <%== $event->html_desc %>
               <% } %>
             </p>
             <span class="spectrum-Body spectrum-Body--sizeM">
-              <% if(exists $event->{source} ){ %>
-                <%== $event->{source} %>
+              <% if(scalar @{ $event->sources }){ %>
+                <%= $event->sources %>
               <% } %>
             </span>
           </div>

@@ -8,14 +8,15 @@ class App::Schierer::HPFan::Model::Gramps::Event::Reference :
   use Carp;
 
   ADJUST {
-    if (
-      ref($self->role) ne
-      'App::Schierer::HPFan::Model::Gramps::Event::RoleType') {
+    if (Scalar::Util::reftype($self->role) ne 'OBJECT') {
       $self->set_role(
         App::Schierer::HPFan::Model::Gramps::Event::RoleType->new(
           $self->role->%*
         )
       );
+    }elsif(not $self->role->isa('App::Schierer::HPFan::Model::Gramps::Event::RoleType')){
+      $self->logger->dev_guard(sprintf('unexpected type for $self->role in %s: %s',
+      ref($self), ref($self->role) ));
     }
   }
 }

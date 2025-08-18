@@ -7,18 +7,24 @@ require Scalar::Util;
 class App::Schierer::HPFan::Model::Gramps::Person::Reference :
   isa(App::Schierer::HPFan::Model::Gramps::Reference) {
   use Carp;
+  use overload
+    'cmp'      => sub { $_[0]->_comparison },
+    'eq'       => sub { $_[0]->_equality },
+    '""'       => sub { $_[0]->to_string },
+    'bool'     => sub { $_[0]->_isTrue },
+    'fallback' => 1;
 
   field $rel  : param : reader //= undef;
   field $frel : param //= undef;
   field $mrel : param //= undef;
 
-  field $father_ref : writer = undef;
-  field $mother_ref : writer = undef;
+  field $father_rel :reader : writer = undef;
+  field $mother_rel :reader : writer = undef;
 
   ADJUST {
-    unless (defined $father_ref) {
+    unless (defined $father_rel) {
       if (defined $frel && Scalar::Util::reftype($frel) eq 'HASH') {
-        $self->set_father_ref(
+        $self->set_father_rel(
           App::Schierer::HPFan::Model::Gramps::Person::ChildReferenceType->new(
             $frel->%*
           )
@@ -36,6 +42,14 @@ class App::Schierer::HPFan::Model::Gramps::Person::Reference :
       }
     }
 
+  }
+
+  method to_hash {
+    my $r = $self->SUPER::to_hash;
+    $r->{rel}         = $rel;
+    $r->{father_rel}  = $father_rel;
+    $r->{mother_rel}  = $mother_rel;
+    return $r;
   }
 
 }

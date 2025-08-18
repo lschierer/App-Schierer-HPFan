@@ -13,14 +13,16 @@
     <span class="spectrum-TreeView-itemLabel">
       <%= $node->{person}->display_name %>
       (
-      <% if (my $birth = gramps->get_birth_date($node->{person})) { %>
-          <span class="birth-year"><%= gramps->date_parser->format_date($birth) %></span>
+      <% if (my $birth = gramps->get_birth_date($node->{person}) // 'Unknown') { %>
+          <% $birth = (Scalar::Util::reftype($birth) // 'SCALAR') eq 'OBJECT' ? $birth->date->to_string : $birth; %>
+          <span class="birth-year"><%= $birth %></span>
       <% } else { %>
         Unknown
       <% } %>
         —
-      <% if (my $death = gramps->get_death_date($node->{person})) { %>
-        <span class="death-year"><%= gramps->date_parser->format_date($death) %></span>
+      <% if (my $death = gramps->get_death_date($node->{person}) // 'Unknown') { %>
+          <% $death = (Scalar::Util::reftype($death) // 'SCALAR') eq 'OBJECT' ? $death->date->to_string : $death; %>
+          <span class="death-year"><%= $death %></span>
       <% } else { %>
         Unknown
       <% } %>

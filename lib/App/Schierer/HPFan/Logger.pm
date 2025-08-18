@@ -72,6 +72,10 @@ class App::Schierer::HPFan::Logger {
     return JSON::PP->new->utf8->allow_blessed->convert_blessed->encode($self);
   }
 
+  method Freezer {
+    return $self->to_hash;
+  }
+
   method _isTrue {
     return
          defined($self)

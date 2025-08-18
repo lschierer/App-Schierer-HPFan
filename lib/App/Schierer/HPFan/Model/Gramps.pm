@@ -148,8 +148,8 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
 
   method find_name_for_family ($family) {
     my $family_name;
-    if ($family->father_ref) {
-      my $father = $people->{ $family->father_ref };
+    if ($family->father_handle) {
+      my $father = $people->{ $family->father_handle };
       if ($father) {
         my $name = $father->primary_name();
         if ($name) {
@@ -174,38 +174,20 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
   }
 
   method find_events_for_person ($person) {
+    $self->logger->debug(sprintf('find_events_for_person called for "%s"', $person->gramps_id));
+
     my @pe;
-    foreach my $handle ($person->event_refs->@*) {
-      push @pe, $events->{$handle};
+    foreach my $cr ($person->event_refs->@*) {
+      my $event = $events->{$cr->ref};
+      $self->logger->debug(sprintf('found event "%s" for handle "%s".',
+      $event? $event->handle : "Undefined", $cr->ref));
+      push @pe, $event if($event);
     }
     $self->logger->debug("retrieved list " . Data::Printer::np(@pe));
     my $date_helper = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
 
     # Sort events by date
-    my @sorted_events = sort {
-      my $date_a = $a->date;
-      my $date_b = $b->date;
-
-      # Events without dates go to the end
-      return 1  if !defined $date_a && defined $date_b;
-      return -1 if defined $date_a  && !defined $date_b;
-      return 0  if !defined $date_a && !defined $date_b;
-
-      # Parse dates for comparison
-      my $parsed_a = $date_helper->parse_gramps_date($date_a);
-      my $parsed_b = $date_helper->parse_gramps_date($date_b);
-
-      # Handle unparseable dates
-      return 1  if !defined $parsed_a && defined $parsed_b;
-      return -1 if defined $parsed_a  && !defined $parsed_b;
-      return 0  if !defined $parsed_a && !defined $parsed_b;
-
-      # Compare based on date type
-      my $sort_date_a = $self->_get_sort_date($parsed_a);
-      my $sort_date_b = $self->_get_sort_date($parsed_b);
-
-      return $sort_date_a cmp $sort_date_b;
-    } @pe;
+    my @sorted_events = sort @pe;
 
     return \@sorted_events;
   }
@@ -236,11 +218,11 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
       $self->logger->debug(ref $family);
     }
     my $spouse;
-    if ($person->handle eq $family->father_ref) {
-      $spouse = $people->{ $family->mother_ref };
+    if ($person->handle eq $family->father_handle) {
+      $spouse = $people->{ $family->mother_handle };
     }
     else {
-      $spouse = $people->{ $family->father_ref };
+      $spouse = $people->{ $family->father_handle };
     }
     return $spouse;
   }
@@ -278,25 +260,47 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
   }
 
   method get_birth_date ($person) {
-    foreach my $eventref (@{ $person->event_refs }) {
-      my $event = $events->{$eventref};
-      if ($event) {
-        if ($event->type eq 'Birth') {
-          return $event->date;
+    $self->logger->debug(sprintf('finding birthday for %s', $person->gramps_id));
+    my $br = $person->birth_ref_index;
+    if($br >= 0 && scalar @{$person->event_refs} >= $br) {
+      my $er = $person->event_refs->[$br];
+      my $event = $events->{$er->ref};
+      if($event){
+        $self->logger->debug(sprintf('event type "%s" id "%s" at specified index "%s"',
+        $event->type, $event->gramps_id, $br));
+        if($event->type eq 'Birth') {
+          $self->logger->debug(sprintf('returning event %s as birthday', $event->gramps_id));
+          return $event;
+        } else {
+          $self->logger->error("found bad event at index $br: " . Data::Printer::np($event));
         }
       }
+    }else {
+      $self->logger->warn(sprintf('No birth index for person %s present', $person->gramps_id));
     }
+    return 'Unknown';
   }
 
   method get_death_date ($person) {
-    foreach my $eventref (@{ $person->event_refs }) {
-      my $event = $events->{$eventref};
-      if ($event) {
-        if ($event->type eq 'Death') {
-          return $event->date;
+    $self->logger->debug(sprintf('finding deathday for %s', $person->gramps_id));
+    my $br = $person->death_ref_index;
+    if($br >= 0 && scalar @{$person->event_refs} >= $br) {
+      my $er = $person->event_refs->[$br];
+      my $event = $events->{$er->ref};
+      if($event){
+        $self->logger->debug(sprintf('event type "%s" id "%s" at specified index "%s"',
+        $event->type, $event->gramps_id, $br));
+        if($event->type eq 'Death') {
+          $self->logger->debug(sprintf('returning event %s as deathday', $event->gramps_id));
+          return $event;
+        } else {
+          $self->logger->error("found bad event at index $br: " . Data::Printer::np($event));
         }
       }
+    }else {
+      $self->logger->warn(sprintf('No death index for person %s present', $person->gramps_id));
     }
+    return 'Unknown';
   }
 
   method execute_import {

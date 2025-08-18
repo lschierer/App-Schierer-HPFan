@@ -259,7 +259,7 @@ package App::Schierer::HPFan::Controller::Families {
       # Find this person's child_ref to check if they're a foster child
       my $person_child_ref;
       foreach my $child_ref (@{ $family->child_refs }) {
-        if ($child_ref->{handle} eq $person->handle) {
+        if ($child_ref->ref eq $person->handle) {
           $person_child_ref = $child_ref;
           last;
         }
@@ -268,25 +268,25 @@ package App::Schierer::HPFan::Controller::Families {
       next unless $person_child_ref;    # Safety check
 
       # Check if this person is a foster child
-      my $father_rel = $person_child_ref->{father_rel} // '';
-      my $mother_rel = $person_child_ref->{mother_rel} // '';
+      my $father_rel = $person_child_ref->father_rel // '';
+      my $mother_rel = $person_child_ref->mother_rel // '';
 
       # If they're a foster child to both parents, skip this family
       next if ($father_rel eq 'Foster' && $mother_rel eq 'Foster');
 
     # Check if non-foster father is in our member list
-    # that assignment test will return falsy if $family->father_ref is undefined
+    # that assignment test will return falsy if $family->father_handle is undefined
     # The parentheses around the assignment are important -
     # without them, the precedence would be wrong
-      if ($father_rel ne 'Foster' && (my $father_ref = $family->father_ref)) {
-        if (exists $member_lookup->{$father_ref}) {
+      if ($father_rel ne 'Foster' && (my $father_handle = $family->father_handle)) {
+        if (exists $member_lookup->{$father_handle}) {
           return 1;
         }
       }
 
       # Check if non-foster mother is in our member list
-      if ($mother_rel ne 'Foster' && (my $mother_ref = $family->mother_ref)) {
-        if (exists $member_lookup->{$mother_ref}) {
+      if ($mother_rel ne 'Foster' && (my $mother_handle = $family->mother_handle)) {
+        if (exists $member_lookup->{$mother_handle}) {
           return 1;
         }
       }
@@ -332,7 +332,7 @@ package App::Schierer::HPFan::Controller::Families {
       next unless $family;
 
       foreach my $child_ref ($family->child_refs->@*) {
-        my $child_handle = $child_ref->{handle};
+        my $child_handle = $child_ref->ref;
         my $child        = $member_lookup->{$child_handle};
         next unless $child;    # Child not in this family name
 

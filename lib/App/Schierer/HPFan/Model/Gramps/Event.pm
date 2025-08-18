@@ -11,18 +11,19 @@ class App::Schierer::HPFan::Model::Gramps::Event :
   use Carp;
   use App::Schierer::HPFan::Model::Gramps::DateHelper;
   use overload
-    '<=>'      => \&_comparison,
+    'cmp'      => \&_comparison,
     'eq'       => \&_equality,
-    'ne'       => \&_inequality,
     '""'       => \&to_string,
-    'fallback' => 0;
+    'bool'     => sub { $_[0]->_isTrue },
+    'fallback' => 1,
+    'nomethod' => sub { croak "No overload method for $_[3]" };
 
   field $description : param = undef;
   field $gramps_id   : param = undef;
   field $json_data   : param = undef;
   field $place       : param = undef;
 
-  field $type : reader = undef;
+
   field $date : reader =
     undef;    # Can be daterange, datespan, dateval, or datestr
   field $place_ref : reader = undef;    # handle reference to place
@@ -56,8 +57,6 @@ class App::Schierer::HPFan::Model::Gramps::Event :
       $self->logger->info("got event hash " . Data::Printer::np($hash));
 
       # set the things that come from the JSON only.
-      $type = App::Schierer::HPFan::Model::Gramps::EventType->new(
-        $hash->{'type'}->%*);
       $date = $dh->parse($hash->{'date'});
       $self->logger->debug("found date " . Data::Printer::np($date));
       foreach my $eventref ($hash->{event_ref_list}->%*) {
@@ -71,13 +70,21 @@ class App::Schierer::HPFan::Model::Gramps::Event :
     return {};
   }
 
+  method type {
+    my $hash = JSON::PP->new->decode($self->json_data);
+    my $type = App::Schierer::HPFan::Model::Gramps::EventType->new(
+      $hash->{type}->%*
+    );
+    return $type;
+  }
+
   method attributes() { [@$attributes] }
   method obj_refs()   { [@$obj_refs] }
 
-  method to_string() {
+  method to_string {
     my @parts;
 
-    push @parts, $type if $type;
+    push @parts, $self->type ;
 
     if (my $date_str = $date->to_string) {
       push @parts, "($date_str)";
@@ -92,7 +99,7 @@ class App::Schierer::HPFan::Model::Gramps::Event :
   method to_hash {
     my $hr = $self->SUPER::to_hash;
     $hr->{id}          = $gramps_id;
-    $hr->{type}        = $type;
+    $hr->{type}        = $self->type;
     $hr->{date}        = $date->to_string;
     $hr->{place_ref}   = $place_ref;
     $hr->{cause}       = $cause;
@@ -101,6 +108,32 @@ class App::Schierer::HPFan::Model::Gramps::Event :
     $hr->{obj_refs}    = [$obj_refs->@*];
 
     return $hr;
+  }
+
+  method _comparison ($other, $swap = 0) {
+    unless(ref($other) eq 'OBJECT'){
+      return -1;
+    }
+    unless ($other->isa('App::Schierer::HPFan::Model::Gramps::Event')) {
+      return -1;
+    }
+    my $dateEquality = 0;
+    my $oDate = $other->date;
+    if($date && $oDate){
+      $dateEquality = $date cmp $oDate;
+    }elsif($date){
+      return -1;
+    }elsif($oDate){
+      return 1;
+    }
+
+    if(not $dateEquality){
+      return $self->to_string cmp $other->to_string;
+    }
+  }
+
+  method _equality ($other, $swap = 0){
+    return $self->_comparison($other, $swap) == 0 ? 1 : 0;
   }
 
   method TO_JSON {

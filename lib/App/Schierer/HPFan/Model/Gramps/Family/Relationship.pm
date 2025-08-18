@@ -8,6 +8,7 @@ class App::Schierer::HPFan::Model::Gramps::Family::Relationship :
   use Carp ();
   use Readonly;
   use Scalar::Util qw(blessed looks_like_number);
+  use List::AllUtils qw( firstidx );
   use overload
     'cmp'      => \&_comparison,
     'eq'       => \&_equality,              # string equality
@@ -50,43 +51,82 @@ class App::Schierer::HPFan::Model::Gramps::Family::Relationship :
   }
 
   # ---- Comparisons ----
-  method _comparison ($other, $swap = 0) {
-    # Coerce $other into something comparable
-    my ($ovalue, $ostring);
 
-    if (blessed($other) && $other->isa(__CLASS__)) {
-      ($ovalue, $ostring) = ($other->value, $other->string);
-    }
-    else {
-      # Numeric if it looks numeric; else treat as custom string
-      if (defined $other && looks_like_number($other)) {
-        $ovalue  = $other +0;
-        $ostring = undef;
+  method _sortValue {
+    my $sortValue;
+    if(defined($value)){
+      if(exists $ROLE_MAP{$value}) {
+        $sortValue = firstidx {$_ eq $ROLE_MAP{$value} } sort values %ROLE_MAP;
+      } else {
+        $self->logger->dev_guard("Missing Sort Map for value $value");
+        $sortValue = $value;
       }
-      else {
-        $ovalue  = 0;                                    # custom bucket
-        $ostring = defined($other) ? "$other" : undef;
-      }
+    }else {
+      $self->warn(sprintf('%s has an undefined value', ref($self)));
     }
-
-    # If both are built-ins (nonzero), numeric compare
-    if ((($value // 0) != 0) && (($ovalue // 0) != 0)) {
-      return ($value // 0) <=> ($ovalue // 0);
-    }
-
-    # If both are custom (value==0), compare strings case-insensitively
-    if ((($value // 0) == 0) && (($ovalue // 0) == 0)) {
-      my $a = defined($string)  ? lc $string  : '';
-      my $b = defined($ostring) ? lc $ostring : '';
-      return $a cmp $b;
-    }
-
-    # Custom (0) sorts before built-in by default
-    return (($value // 0) == 0) ? -1 : 1;
+    $self->logger->debug(sprintf('_sortValue for %s value %s returning %s',
+    ref($self), defined($value) ? $value : 'Undefined',
+    defined($sortValue) ? $sortValue : 'Undefined'));
+    return $sortValue;
   }
 
-  method _equality ($other, $swap = 0) {
-    return $self->_comparison($other, $swap) == 0 ? 1 : 0;
+  method _comparison($other, $swap = 0) {
+      # Same class comparison
+      if (ref($other) && $other->isa(__CLASS__)) {
+          my $cmp = $self->_sortValue <=> $other->_sortValue;
+          if ($cmp == 0 && defined($string)) {
+              return $string cmp $other->string;
+          }
+          return $cmp // 1;  # fallback if _sortValue comparison fails
+      }
+
+      # Numeric comparison
+      if (Scalar::Util::looks_like_number($other)) {
+          $self->logger->debug(sprintf('%s comparing as number, %s to %s',
+              ref($self), $self->_sortValue, $other));
+          return $self->_sortValue <=> $other;
+      }
+
+      # String comparison - try _sortValue first, then custom string
+      if (my $sr = $self->_sortValue) {
+          $self->logger->debug(sprintf('%s comparing _sortValue to string, %s to %s',
+              ref($self), $sr, $other));
+          return $sr cmp $other;
+      }
+
+      if (defined($string)) {
+          $self->logger->debug(sprintf('%s comparing custom string, %s to %s',
+              ref($self), $string, $other));
+          return $string cmp $other;
+      }
+
+      return 1;  # fallback
+  }
+
+  method _equality($other, $swap = 0) {
+      return 0 unless defined($other);
+
+      # Same class comparison
+      if (ref($other) && $other->isa(__CLASS__)) {
+          return $self->_comparison($other, $swap) == 0;
+      }
+
+      # Numeric comparison
+      if (Scalar::Util::looks_like_number($other)) {
+          return $self->_sortValue == $other;
+      }
+
+      # String comparison
+      if (defined($value) && exists $ROLE_MAP{$value}) {
+        my $sr = $ROLE_MAP{$value};
+          return $sr eq $other;
+      }
+
+      if (defined($string)) {
+          return $string eq $other;
+      }
+
+      return 0;
   }
 
 }

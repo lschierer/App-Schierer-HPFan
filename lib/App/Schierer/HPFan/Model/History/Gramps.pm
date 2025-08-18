@@ -67,17 +67,19 @@ class App::Schierer::HPFan::Model::History::Gramps :
       $event->gramps_id, $event->date->to_string
     ));
 
-    if ($event->type !~ /Birth/) {
+    if ($event->type eq  'Birth') {
       if (my $person = $self->_primary_person_for($event)) {
+        my @dklparts;
+        push @dklparts, $event->date->quality_label if (defined $event->date->quality_label && length($event->date->quality_label));
+        push @dklparts, $event->date->modifier_label if (defined $event->date->modifier_label && length($event->date->modifier_label));
         $events->{ $event->gramps_id } =
           App::Schierer::HPFan::Model::History::Event->new(
           id        => $event->gramps_id,
           origin    => 'Gramps',
           type      => 'Birth',
           blurb     => sprintf('Birth of %s', $person->display_name()),
-          date_iso  => $event->date->as_dm_date->to_iso,
-          date_kind => join(' ',
-            qq( $event->date->quality_label $event->date->modifier_label )),
+          date_iso  => (not $event->date->is_range) ? $event->date->as_dm_date->printf('%Y-%m-%d') : sprintf('%s - %s', $event->date->start, $event->date->end),
+          date_kind => scalar @dklparts ? sprintf('(%s)', join(' ', @dklparts),) : '',
           sortval => $event->date->sortval,
           );
       }else {
@@ -91,8 +93,19 @@ class App::Schierer::HPFan::Model::History::Gramps :
     # via your $people_by_event index; find role 'Primary'
     for my $person ($gramps->people_by_event->{ $e->handle }->@*) {
       for my $er ($person->event_refs->@*) {
-        if ($er->ref eq $e->handle && "$er->role" eq 'Primary') {
-          return $person;
+        if ($er->ref eq $e->handle ) {
+          $self->logger->debug(sprintf('potential match: %s and %s',
+          $er->ref, $e->handle));
+          if($er->role eq 'Primary') {
+            $self->logger->debug(sprintf(
+              'returning person %s as primary for event %s based on reference %s',
+              $person->gramps_id, $e->gramps_id, $er->ref,
+            ));
+            return $person;
+          }else {
+            $self->logger->debug(sprintf('er role %s indicates person %s is not the primary.',
+            $er->role, $person->gramps_id));
+          }
         }
       }
     }

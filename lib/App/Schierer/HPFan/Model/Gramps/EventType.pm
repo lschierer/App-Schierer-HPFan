@@ -7,17 +7,22 @@ class App::Schierer::HPFan::Model::Gramps::EventType :
   isa(App::Schierer::HPFan::Logger) {
   use Carp;
   use overload
-    '""'       => \&to_string,              # used for concat too
-    'eq'       => \&eq_over,                # string cmp
-    '=='       => \&num_over,               # numeric cmp
+    '""'       => \&to_string,
+    'cmp'      => \&_comparison,
+    'eq'       => \&_equality,
     'bool'     => sub { $_[0]->_isTrue },
-    'fallback' => 1;                        # allow Perl defaults for the rest
+    'fallback' => 1,
+    'nomethod' => sub { croak "No overload method for $_[3]" };
 
   field $_class : param //= undef;
   field $string : param : reader //= undef;
   field $value  : param : reader //= undef;
   field $value_to_string;
+  field $value_to_sort_order;
 
+  ADJUST {
+    $self->logger->debug("item of type " . ref($self) . " being created.");
+  }
   ADJUST {
     Readonly::Hash my %tmp => {
       0  => $string,
@@ -36,15 +41,94 @@ class App::Schierer::HPFan::Model::Gramps::EventType :
     $value_to_string = \%tmp;
   }
 
-  method equality($other, $swap = 0) {
-    if (ref($other) ne 'App::Schierer::HPFan::Model::Gramps::EventType') {
+  ADJUST {
+    Readonly::Hash my %tmp => {
+      12 => 1,
+      26 => 2,
+      31 => 3,
+      6  => 4,
+      1  => 5,
+      7  => 6,
+      37 => 20,
+      27 => 27,
+      40 => 30,
+      43 => 80,
+      0  => 99,
+      13 => 99,
+    };
+    $value_to_sort_order = \%tmp;
+  }
 
+  method _sortValue {
+    my $sortValue;
+    if(defined($value)) {
+      if(exists $value_to_sort_order->{$value}){
+        $sortValue = $value_to_sort_order->{$value};
+      } else {
+        $self->logger->dev_guard("Missing Sort Map for value $value");
+        $sortValue = $value;
+      }
     }
+    return $sortValue;
+  }
 
-    if ($other->value == 0) {
-      return $string eq $other->string;
-    }
-    return $value == $other->value;
+  method _comparison($other, $swap = 0) {
+      # Same class comparison
+      if (ref($other) && $other->isa(__CLASS__)) {
+          my $cmp = $self->_sortValue <=> $other->_sortValue;
+          if ($cmp == 0 && defined($string)) {
+              return $string cmp $other->string;
+          }
+          return $cmp // 1;  # fallback if _sortValue comparison fails
+      }
+
+      # Numeric comparison
+      if (Scalar::Util::looks_like_number($other)) {
+          $self->logger->debug(sprintf('%s comparing as number, %s to %s',
+              ref($self), $self->_sortValue, $other));
+          return $self->_sortValue <=> $other;
+      }
+
+      # String comparison - try _sortValue first, then custom string
+      if (my $sr = $self->_sortValue) {
+          $self->logger->debug(sprintf('%s comparing _sortValue to string, %s to %s',
+              ref($self), $sr, $other));
+          return $sr cmp $other;
+      }
+
+      if (defined($string)) {
+          $self->logger->debug(sprintf('%s comparing custom string, %s to %s',
+              ref($self), $string, $other));
+          return $string cmp $other;
+      }
+
+      return 1;  # fallback
+  }
+
+  method _equality($other, $swap = 0) {
+      return 0 unless defined($other);
+
+      # Same class comparison
+      if (ref($other) && $other->isa(__CLASS__)) {
+          return $self->_comparison($other, $swap) == 0;
+      }
+
+      # Numeric comparison
+      if (Scalar::Util::looks_like_number($other)) {
+          return $self->_sortValue == $other;
+      }
+
+      # String comparison
+      if (defined($value) && exists $value_to_string->{$value}) {
+        my $sr = $value_to_string->{$value};
+          return $sr eq $other;
+      }
+
+      if (defined($string)) {
+          return $string eq $other;
+      }
+
+      return 0;
   }
 
   # Return a stable “label”: prefer custom string; else builtin; else BuiltIn(n)

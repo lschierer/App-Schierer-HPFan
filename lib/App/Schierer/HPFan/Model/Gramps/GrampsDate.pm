@@ -2,12 +2,13 @@ use v5.42.0;
 use experimental qw(class);
 use utf8::all;
 require Date::Manip;
+require App::Schierer::HPFan::Model::Gramps::DateHelper;
 
 class App::Schierer::HPFan::Model::Gramps::GrampsDate :
   isa(App::Schierer::HPFan::Logger) {
   use Carp;
   use overload
-    '<=>'      => \&_comparison,
+    'cmp'      => \&_comparison,
     'eq'       => \&_equality,
     'ne'       => \&_inequality,
     '""'       => \&to_string,
@@ -19,16 +20,27 @@ class App::Schierer::HPFan::Model::Gramps::GrampsDate :
   field $day   : param //= 0;    # 1..31 or 0 unknown
 
   # Range (if present) – same semantics, partials allowed
-  field $start : param //= undef;    # another GrampsDate or undef
-  field $end   : param //= undef;
+  field $start : param :reader //= undef;    # another GrampsDate or undef
+  field $end   : param :reader //= undef;
+
+  ADJUST {
+    if(defined($start)){
+      my $dh = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
+      $start = $dh->parse($start);
+    }
+    if(defined($end)){
+      my $dh = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
+      $end = $dh->parse($end);
+    }
+  }
 
   # Metadata from Gramps
   field $calendar : param //= 0;     # 0=Gregorian, 1=Julian (per your note)
   field $modifier : param : reader //= 0;    # enum from Gramps (0=exact/none)
   field $quality  : param : reader //= 0;    # enum from Gramps
   field $newyear  : param //= 0;
-  field $text     : param //= '';            # freeform
-  field $sortval  : param //= 0;             # unix epoch if set
+  field $text     : param : reader //= '';            # freeform
+  field $sortval  : param : reader //= 0;             # unix epoch if set
   field $type     : param : reader //= 'single';   # 'single' | 'range' | 'span'
 
   # ---------- Introspection ----------

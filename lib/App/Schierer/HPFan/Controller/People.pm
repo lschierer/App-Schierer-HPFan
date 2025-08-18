@@ -41,7 +41,7 @@ package App::Schierer::HPFan::Controller::People {
 
     $app->helper(
       link_target_for_person => sub ($c, $person) {
-        if (not defined $person) {
+        unless (defined $person) {
           $logger->error("cannot return link for undefined person!!");
           return '';
         }
@@ -203,7 +203,7 @@ s/<svg /<svg preserveAspectRatio="xMidYMid meet" width="100%" height="100%" /;
   sub _add_ancestors_to_graph($self, $graph, $person, $visited, $generation,
     $generation_map) {
     my $person_id = $person->handle;
-    $logger->debug(sprintf('person with person id %s', $person->id));
+    $logger->debug(sprintf('person with person id %s', $person->gramps_id));
     return if $visited->{$person_id};
     $visited->{$person_id} = 1;
 
@@ -212,14 +212,14 @@ s/<svg /<svg preserveAspectRatio="xMidYMid meet" width="100%" height="100%" /;
     # Determine gender-based styling
 
     my $gender = $person->gender;
-    $logger->debug("detected gender $gender for person id " . $person->id);
+    $logger->debug("detected gender $gender for person id " . $person->gramps_id);
 
     # Add person node
     my $label = $person->display_name();
     $graph->add_node(
       $person_id,
       label => $label,
-      href  => $self->app->link_target_for_person($person),
+      href  => $self->link_target_for_person($person),
       class => $gender eq 'M' ? 'color-male'
       : $gender eq 'F' ? 'color-female'
       :                  '',
@@ -230,16 +230,29 @@ s/<svg /<svg preserveAspectRatio="xMidYMid meet" width="100%" height="100%" /;
       my $family = $self->app->gramps->families->{$family_handle};
       next unless $family;
       my $child_ref;
+      my $person_handle = $person->handle;
+      $logger->debug("person_handle is $person_handle");
       foreach my $cr (@{ $family->child_refs() }) {
-        if ($cr->{handle} eq $person->handle) {
+        $logger->debug("cr is a " . Scalar::Util::blessed($cr));
+        my $ch = $cr->ref;
+        unless ($ch){
+          $logger->logcroak("no ref in cr: " . Data::Printer::np($cr));
+          next;
+        }
+        if ($ch eq $person_handle) {
           $child_ref = $cr;
           last;
         }
       }
-      if (  ($child_ref->{father_rel} && $child_ref->{father_rel} eq 'Foster')
-        and ($child_ref->{mother_rel} && $child_ref->{mother_rel} eq 'Foster'))
-      {
-        next;
+
+      if (defined($child_ref)) {
+       if( ($child_ref->father_rel && $child_ref->father_rel eq 'Foster')
+        and ($child_ref->mother_rel && $child_ref->mother_rel eq 'Foster'))
+        {
+          next;
+        }
+      } else {
+        $logger->warn("child_ref is not defined for family ". $family->gramps_id);
       }
 
       # Create invisible family node as connection point
@@ -259,10 +272,10 @@ s/<svg /<svg preserveAspectRatio="xMidYMid meet" width="100%" height="100%" /;
         :                  '',);
 
       # Add parents and connect to family point
-      if (my $father_handle = $family->father_ref) {
+      if (my $father_handle = $family->father_handle) {
         my $father = $self->people->{$father_handle};
         if ($father) {
-          $self->logger->debug("found father $father_handle " . $father->id);
+          $logger->debug("found father $father_handle " . $father->id);
           $self->_add_ancestors_to_graph($graph, $father, $visited,
             $generation + 1,
             $generation_map);
@@ -271,10 +284,10 @@ s/<svg /<svg preserveAspectRatio="xMidYMid meet" width="100%" height="100%" /;
         }
       }
 
-      if (my $mother_handle = $family->mother_ref) {
+      if (my $mother_handle = $family->mother_handle) {
         my $mother = $self->people->{$mother_handle};
         if ($mother) {
-          $self->logger->debug("found mother $mother_handle " . $mother->id);
+          $logger->debug("found mother $mother_handle " . $mother->id);
           $self->_add_ancestors_to_graph($graph, $mother, $visited,
             $generation + 1,
             $generation_map);
