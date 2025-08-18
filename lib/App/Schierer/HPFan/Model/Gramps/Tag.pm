@@ -1,41 +1,32 @@
 use v5.42;
 use utf8::all;
 use experimental qw(class);
+require JSON::PP;
+require Data::Printer;
 
 class App::Schierer::HPFan::Model::Gramps::Tag :
   isa(App::Schierer::HPFan::Model::Gramps::Generic) {
   use Carp;
 
-  field $name     : reader : param //= undef;
-  field $color    : reader : param //= undef;
-  field $priority : reader : param //= undef;
+  field $_class     : param //= undef;
+  field $name       : param //= undef;
+  field $color      : param //= undef;
+  field $priority   : param //= undef;
+  field $json_data  : param //= undef;
 
   field $ALLOWED_FIELD_NAMES : reader =
-    { map { $_ => 1 } qw( gramps_id change private json_data) };
+    { map { $_ => 1 } qw( handle name color priority change json_data) };
 
-  method _import {
-    $self->SUPER::_import;
-    $name     = $self->XPathObject->getAttribute('name');
-    $color    = $self->XPathObject->getAttribute('color');
-    $priority = $self->XPathObject->getAttribute('priority');
-    $self->logger->logcroak(
-      sprintf('name not discoverable in %s', $self->XPathObject))
-      unless defined $name;
-    $self->logger->logcroak(
-      sprintf('color not discoverable in %s', $self->XPathObject))
-      unless defined $color;
-    $self->logger->logcroak(
-      sprintf('priority not discoverable in %s', $self->XPathObject))
-      unless defined $priority;
+  method name      { $self->_get_field('name') }
+  method color     { $self->_get_field('color') }
+  method priority  { $self->_get_field('priority') }
+  method change    { $self->_get_field('change') }
+  method json_data { $self->_get_field('json_data') }
 
-    if ($color && $color !~ /^#[0-9A-Fa-f]{6}$/) {
-      $self->fatal("color must be in hex format (#RRGGBB): $color");
-    }
+  method parse_json_data {
+    my $hash = JSON::PP->new->decode($self->json_data);
+    $self->logger->debug(sprintf('hash for tag "%s" is: %s', $self->handle, Data::Printer::np($hash),));
 
-    # Validate priority is numeric
-    if ($priority && $priority !~ /^\d+$/) {
-      $self->fatal("priority must be numeric: $priority");
-    }
   }
 
   method to_hash {

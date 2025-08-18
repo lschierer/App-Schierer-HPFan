@@ -46,7 +46,7 @@ package App::Schierer::HPFan::Controller::ControllerBase {
 
     state $initialized = do {
       $logger->info("⚙️  Running gramps import...");
-      $gramps->import_from_xml();
+      $gramps->execute_import();
       $gramps->build_indexes();
       $logger->info("✅ gramps import completed.");
 

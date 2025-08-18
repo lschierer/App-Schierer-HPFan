@@ -17,11 +17,15 @@ class App::Schierer::HPFan::Model::Gramps::Generic :
     '!='  => \&_inequality,
     '""'  => \&as_string;
 
-  field $handle : param : reader = undef;
-  field $change : param = undef;
+  field $handle         : param : reader = undef;
+  field $change         : param = undef;
+  field $attribute_list : param //= [];
+  field $private        : param //= 0;
+
   field $note_refs     = [];
   field $citation_refs = [];
   field $tag_refs      = [];
+
 
   field $XPathContext : param : reader //= undef;
   field $XPathObject  : param : reader //= undef;
@@ -30,13 +34,35 @@ class App::Schierer::HPFan::Model::Gramps::Generic :
   field $ALLOWED_FIELD_NAMES : reader = {};
 
   ADJUST {
-    unless (defined($handle)) {
-      unless (defined($XPathContext) and defined($XPathObject)) {
-        $self->logger->logcroak(
-          'either handle, or XPathContext and XPathObject must be defined.');
-      }
-      $self->_import();
+    if (scalar(@$attribute_list)) {
+      $self->dev_guard(
+        sprintf('%s found a non-empty attribute_list.', Scalar::Util::blessed($self)));
     }
+
+    # this slightly awkward test construction lets things like references
+    # which do not have handles inherit from this class.
+    if(exists $self->ALLOWED_FIELD_NAMES->{'handle'}) {
+      unless (defined($handle)) {
+        unless (defined($XPathContext) and defined($XPathObject)) {
+          $self->logger->logcroak(
+            'either handle, or XPathContext and XPathObject must be defined.');
+        }
+        $self->_import();
+      }
+    }
+
+  }
+
+  method set_private ($is_private) {
+    if($is_private){
+      $private = 1;
+    } elsif($is_private == 0) {
+      $private = 0;
+    }
+  }
+
+  method private {
+    return $private ? 1 : 0;
   }
 
   method change()        {$change}

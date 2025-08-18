@@ -1,9 +1,7 @@
 use v5.42;
 use utf8::all;
 use experimental qw(class);
-require App::Schierer::HPFan::Model::Gramps::Citation::Reference;
 require App::Schierer::HPFan::Model::Gramps::Note::Reference;
-require App::Schierer::HPFan::Model::Gramps::Tag::Reference;
 require App::Schierer::HPFan::Model::Gramps::Place::Reference;
 require App::Schierer::HPFan::Model::Gramps::Object::Reference;
 require App::Schierer::HPFan::Model::Gramps::EventType;
@@ -23,7 +21,6 @@ class App::Schierer::HPFan::Model::Gramps::Event :
   field $gramps_id   : param = undef;
   field $json_data   : param = undef;
   field $place       : param = undef;
-  field $private     : param = 0;
 
   field $type : reader = undef;
   field $date : reader =
@@ -62,7 +59,7 @@ class App::Schierer::HPFan::Model::Gramps::Event :
       $type = App::Schierer::HPFan::Model::Gramps::EventType->new(
         $hash->{'type'}->%*);
       $date = $dh->parse($hash->{'date'});
-      $self->debug("found date " . Data::Printer::np($date));
+      $self->logger->debug("found date " . Data::Printer::np($date));
       foreach my $eventref ($hash->{event_ref_list}->%*) {
 
       }

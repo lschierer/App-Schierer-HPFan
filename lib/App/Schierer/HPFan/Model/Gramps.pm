@@ -107,20 +107,17 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
         push @{ ($people_by_event->{$eh} //= []) }, $person;
       }
 
-
       # ---- tags → people
       # if your person->tag_refs returns objects too, extract their handles;
       # otherwise if they’re already strings, this is fine
-      #my %seen_t;
-      #for my $tref (@{ $person->tag_refs // [] }) {
-      #  my $th =
-      #    ref($tref) && $tref->can('ref') ? $tref->ref :
-      #    ref($tref) eq 'HASH'            ? ($tref->{ref} // '') :
-      #                                      "$tref"; # already a handle
-      #  next unless length $th;
-      #  next if $seen_t{$th}++;
-      #  push @{ ($people_by_tag->{$th} //= []) }, $person;
-      #}
+      my %seen_t;
+      for my $tref ($person->tag_refs->@*) {
+        my $th = ref($tref) && ref($tref) eq 'HASH' ?
+          ($tref->{ref} // '') : "$tref"; # already a handle
+        next unless length $th;
+        next if $seen_t{$th}++;
+        push @{ ($people_by_tag->{$th} //= []) }, $person;
+      }
     }
   }
 
@@ -299,8 +296,8 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     }
   }
 
-  method import_from_xml {
-    $self->info(
+  method execute_import {
+    $self->logger->info(
       'starting Gramps Import from XML file: ' . $gramps_export->canonpath);
     my $dom = XML::LibXML->load_xml(location => $gramps_export->canonpath);
     my $d   = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
@@ -309,14 +306,14 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     my $xc = XML::LibXML::XPathContext->new($dom);
     $xc->registerNs('g', 'http://gramps-project.org/xml/1.7.1/');
 
-    $self->_import_people();
-    $self->_import_families($xc);
-    $self->_import_tags($xc);
     $self->_import_citations($xc);
-    $self->_import_sources($xc);
-    $self->_import_repositories($xc);
-    $self->_import_notes($xc);
     $self->_import_events();
+    $self->_import_notes($xc);
+    $self->_import_people();
+    $self->_import_repositories($xc);
+    $self->_import_sources($xc);
+    $self->_import_tags();
+    $self->_import_families();
   }
 
   method _import_people () {
@@ -336,82 +333,35 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     $self->logger->info(sprintf('imported %s people.', scalar keys %{$people}));
   }
 
-  method _import_families ($xc) {
-    foreach my $xFamily ($xc->findnodes('//g:families/g:family')) {
-      my $handle = $xFamily->getAttribute('handle');
-      if ($handle) {
-        my $type   = $xc->findvalue('./g:rel/@type',     $xFamily);
-        my $father = $xc->findvalue('./g:father/@hlink', $xFamily);
-        my $mother = $xc->findvalue('./g:mother/@hlink', $xFamily);
-        my $change = $xFamily->getAttribute('change');
-        my $id     = $xFamily->getAttribute('id');
+  method _import_families () {
+    my $all_entries = $dbh->selectcol_arrayref("SELECT handle FROM family");
 
-        my @childref;
-        foreach my $cr ($xc->findnodes('./g:childref', $xFamily)) {
-          my $handle     = $cr->getAttribute('hlink');
-          my $father_rel = $cr->getAttribute('frel');
-          my $mother_rel = $cr->getAttribute('mrel');
-          my @ccr;
-          foreach my $chl ($xc->findnodes('./citationref/@hlink')) {
-            push @ccr, $chl->to_literal();
-          }
-          push @childref,
-            {
-            handle        => $handle,
-            father_rel    => $father_rel // undef,
-            mother_rel    => $mother_rel // undef,
-            citation_refs => \@ccr,
-            };
-        }
-
-        my @eventref;
-        foreach my $hlink ($xc->findnodes('./g:eventref/@hlink', $xFamily)) {
-          push @eventref, $hlink->to_literal;
-        }
-
-        my @noteref;
-        foreach my $hlink ($xc->findnodes('./g:noteref/@hlink', $xFamily)) {
-          push @noteref, $hlink->to_literal;
-        }
-
-        my @citationref;
-        foreach my $hlink ($xc->findnodes('./g:citationref/@hlink', $xFamily)) {
-          push @citationref, $hlink->to_literal;
-        }
-
-        my @tagref;
-        foreach my $hlink ($xc->findnodes('./g:tagref/@hlink', $xFamily)) {
-          push @tagref, $hlink->to_literal;
-        }
-
-        $families->{$handle} = App::Schierer::HPFan::Model::Gramps::Family->new(
-          id            => $id,
-          handle        => $handle,
-          change        => $change,
-          rel_type      => $type,
-          father_ref    => $father,
-          mother_ref    => $mother,
-          event_refs    => \@eventref,
-          child_refs    => \@childref,
-          note_refs     => \@noteref,
-          citation_refs => \@citationref,
-          tag_refs      => \@tagref,
-        );
-      }
+    foreach my $handle (@$all_entries) {
+      my $row = $dbh->selectrow_hashref("SELECT * FROM family WHERE handle = ?",
+        undef, $handle,);
+      $self->logger->debug(
+        sprintf('row %s is %s', $handle, Data::Printer::np($row)));
+      $families->{$handle} =
+        App::Schierer::HPFan::Model::Gramps::Family->new($row->%*);
+      $families->{$handle}->set_dbh($dbh);
+      $families->{$handle}->parse_json_data;
     }
     $self->logger->info(
       sprintf('imported %s families.', scalar keys %{$families}));
   }
 
-  method _import_tags ($xc) {
-    foreach my $xTag ($xc->findnodes('//g:tags/g:tag')) {
-      my $handle = $xTag->getAttribute('handle');
-      if ($handle) {
-        $tags->{$handle} = App::Schierer::HPFan::Model::Gramps::Tag->new(
-          XPathContext => $xc,
-          XPathObject  => $xTag,
-        );
-      }
+  method _import_tags () {
+    my $all_entries = $dbh->selectcol_arrayref("SELECT handle FROM tag");
+
+    foreach my $handle (@$all_entries) {
+      my $row = $dbh->selectrow_hashref("SELECT * FROM tag WHERE handle = ?",
+        undef, $handle,);
+      $self->logger->debug(
+        sprintf('row %s is %s', $handle, Data::Printer::np($row)));
+      $tags->{$handle} =
+        App::Schierer::HPFan::Model::Gramps::Tag->new($row->%*);
+      $tags->{$handle}->set_dbh($dbh);
+      $tags->{$handle}->parse_json_data;
     }
     $self->logger->info(sprintf('imported %s tags.', scalar keys %{$tags}));
   }

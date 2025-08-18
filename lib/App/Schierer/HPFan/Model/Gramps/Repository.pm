@@ -25,13 +25,13 @@ class App::Schierer::HPFan::Model::Gramps::Repository :
     $self->logger->logcroak(
       sprintf('type not discoverable in %s', $self->XPathObject))
       unless defined $type;
-    $self->debug("type is $type");
+    $self->logger->debug("type is $type");
 
     $rname = $self->XPathContext->findvalue('./g:rname', $self->XPathObject);
     $self->logger->logcroak(
       sprintf('rname not discoverable in %s', $self->XPathObject))
       unless defined $rname;
-    $self->debug("rname is $rname");
+    $self->logger->debug("rname is $rname");
 
     # optional things
     $id = $self->XPathObject->getAttribute('id');

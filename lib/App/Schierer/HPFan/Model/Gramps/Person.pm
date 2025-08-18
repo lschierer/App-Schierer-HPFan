@@ -16,7 +16,6 @@ class App::Schierer::HPFan::Model::Gramps::Person :
   field $gender          : param = 'U';
   field $death_ref_index : param = undef;
   field $birth_ref_index : param = undef;
-  field $private         : param = undef;
   field $json_data       : param = undef;
 
   field $event_refs     : param = [];
@@ -110,7 +109,7 @@ class App::Schierer::HPFan::Model::Gramps::Person :
 
   method names() {
     my @names;
-    my $hash = $self->json_data;
+    my $hash = JSON::PP->new->decode($self->json_data);
     if (exists $hash->{primary_name}) {
       my $name = App::Schierer::HPFan::Model::Gramps::Name->new(
         $hash->{primary_name}->%*);
@@ -186,12 +185,12 @@ class App::Schierer::HPFan::Model::Gramps::Person :
 
   method citation_refs() {
     my $hash = JSON::PP->new->decode($self->json_data);
-    return [$hash->{'note_list'}];
+    return [$hash->{'note_list'}->@* ];
   }
 
   method tag_refs() {
     my $hash = JSON::PP->new->decode($self->json_data);
-    return [$hash->{'tag_list'}];
+    return [ $hash->{'tag_list'}->@* ];
   }
 
   method primary_name() {

@@ -28,7 +28,7 @@ class App::Schierer::HPFan::Model::Gramps::Note :
     $self->logger->logcroak(
       sprintf('id not discoverable in %s', $self->XPathObject))
       unless defined $id;
-    $self->debug("id is $id");
+    $self->logger->debug("id is $id");
 
     # optional things
     $priv   = $self->XPathObject->getAttribute('priv');

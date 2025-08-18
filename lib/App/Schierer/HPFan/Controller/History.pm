@@ -15,41 +15,27 @@ package App::Schierer::HPFan::Controller::History {
   use Mojo::Base 'App::Schierer::HPFan::Controller::ControllerBase';
 
   sub register($self, $app, $config) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
+    my $logger = $app->logger;
+    say "logger is " . ref($logger);
     $logger->info(__PACKAGE__ . " Register method start");
 
     my $timeline;
 
-    if ($app->config('gramps_initialized') && !$timeline) {
-      $timeline = $self->_build_timeline($app->gramps);
-      foreach my $event (@$timeline) {
-        if ($event->{description} && length($event->{description})) {
-          $event->{description} =
-            $app->render_markdown_snippet($event->{description});
-        }
-        if ($event->{source} && length($event->{source})) {
-          $event->{source} = $app->render_markdown_snippet($event->{source});
-        }
-      }
-    }
-    else {
-      $app->plugins->on(
-        'gramps_initialized' => sub($c, $gramps) {
-          # Build the unified timeline
-          $timeline = $self->_build_timeline($gramps);
-          foreach my $event (@$timeline) {
-            if ($event->{description} && length($event->{description})) {
-              $event->{description} =
-                $app->render_markdown_snippet($event->{description});
-            }
-            if ($event->{source} && length($event->{source})) {
-              $event->{source} =
-                $app->render_markdown_snippet($event->{source});
-            }
-          }
-        }
-      );
-    }
+    #if ($app->config('gramps_initialized') && !$timeline) {
+    #  $logger->debug("gramps already initialized.");
+    #  $timeline = $self->_build_timeline($app->gramps);
+
+    #}
+    #else {
+    #  $logger->debug("gramps not initialized yet, waiting for plugin hook");
+    #  $app->plugins->on(
+    #    'gramps_initialized' => sub($c, $gramps) {
+    #      # Build the unified timeline
+    #      $timeline = $self->_build_timeline($gramps);
+
+    #    }
+    #  );
+    #}
 
     $app->routes->get('/Harrypedia/History')->to(
       controller => 'History',
@@ -63,7 +49,7 @@ package App::Schierer::HPFan::Controller::History {
     });
 
     # Store in helper for access
-    $app->helper(history_timeline => sub { return $timeline });
+    #$app->helper(history_timeline => sub { return $timeline });
 
   }
 
@@ -97,12 +83,14 @@ package App::Schierer::HPFan::Controller::History {
       $logger->debug("Processing history file: $file_path");
 
       my $events = $self->_process_history_file($file_path);
+
       #push @all_events, @$events if $events;
     }
 
     my $gramps_history =
       App::Schierer::HPFan::Model::History::Gramps->new(gramps => $gramps);
     $gramps_history->process;
+    push @all_events, $gramps_history->events;
 
     # Sort events by date
     @all_events = sort {
@@ -197,136 +185,8 @@ package App::Schierer::HPFan::Controller::History {
     return ' ';
   }
 
-  sub _process_gramps_events($self, $gramps) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
-    my @grampsEvents;
-    foreach my $event (sort { $a->gramps_id cmp $b->gramps_id }
-      values $gramps->events->%*) {
-      if ($event->type !~ /(Hogwarts Sorting|Education)/) {
-        next unless ($event->date);
-        my $now = Date::Manip::Date->new();
-        if (
-          ref($event->date) ne
-          'App::Schierer::HPFan::Model::Gramps::GrampsDate') {
-          $logger->error_warn(
-            sprintf('INVALID EVENT %s!!!', $event->gramps_id));
-          next;
-        }
-        if ($event->date->precision eq 'none') {
-          $logger->info(
-            sprintf('skipping event %s for no precision', $event->gramps_id));
-        }
-        if (not defined($event->date->as_dm_date)) {
-          $logger->error_warn(
-            sprintf('cannot get Date::Manip::Date from %s!', $event->gramps_id)
-          );
-          next;
-        }
-        $logger->debug(sprintf(
-          'I have a %s date that prints to "%s"',
-          $event->date->precision,
-          $event->date->to_string,
-        ));
 
-        my @people;
-        foreach my $p ($gramps->people_by_event->{ $event->handle }->@*) {
-          push @people, $p;
-        }
-        if ($event->type =~ /(Engagement|Marriage)/i) {
-          next unless scalar(@people);
-        }
-        if ($event->type =~ /(Birth|Death)/i) {
-          next unless scalar(@people) == 1;
-        }
 
-        $logger->debug(sprintf(
-          'found eligible event type "%s" date "%s", people: %s.',
-          $event->type,
-          $event->date->to_string,
-          join(', ', map { $_->display_name } @people)
-        ));
-        my $blurb;
-        if ($event->type =~ /Elected/i) {
-          next unless scalar(@people) >= 1;
-          $blurb =
-            sprintf('%s elected Minister of Magic', $people[0]->display_name);
-        }
-        elsif ($event->type =~ /property/i) {
-          next unless scalar(@people) >= 1;
-          $blurb = sprintf('Property Awarded to %s', $people[0]->display_name);
-        }
-        elsif ($event->type =~ /government/i) {
-          next unless length($event->description);
-          $blurb = $event->description;
-        }
-        elsif (scalar @people) {
-          $blurb = sprintf('%s of %s',
-            $event->type, join(', ', map { $_->display_name } @people));
-        }
-        elsif (length($event->description)) {
-          $blurb = $event->description;
-        }
-        else {
-          $logger->warn(
-            'no blurb known for event with handle ' . $event->handle);
-          next;
-        }
-
-        $logger->debug("blurb is '$blurb'");
-
-        my $date_type = join ' ',
-          grep {length} (
-          $event->date->quality_label  || '',
-          $event->date->modifier_label || '',
-          );
-
-        my $ge = {
-          date        => $event->date->as_dm_date,
-          date_type   => $date_type,
-          type        => 'magical',
-          blurb       => $blurb,
-          description => $self->_find_gramps_event_description($gramps, $event),
-          source      => $self->_build_event_sources($gramps, $event),
-        };
-        push @grampsEvents, $ge;
-      }
-    }
-    return \@grampsEvents;
-  }
-
-  sub _build_event_sources($self, $gramps, $event) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
-    my @citations;
-
-    # Get citations for this event
-    foreach my $citation_ref ($event->citation_refs->@*) {
-      my $citation = $gramps->citations->{ $citation_ref->hlink };
-      unless ($citation) {
-        $logger->debug(sprintf('no citations for event %s', $event->id));
-        next;
-      }
-
-      my @sources;
-      foreach my $sr ($citation->source_refs->@*) {
-        my $source = $gramps->sources->{ $sr->hlink };
-        next unless $source;
-        push @sources, $source;
-      }
-      unless (scalar @sources) {
-        $logger->debug(
-          sprintf('no sources for citation in event %s', $event->id));
-        next;
-      }
-
-      foreach my $source (@sources) {
-        my $mc = $self->_format_mla_citation($gramps, $source, $citation);
-        push @citations, "- $mc" if $mc;
-      }
-
-    }
-
-    return @citations ? join("\n", @citations) : '';
-  }
 
   sub _format_mla_citation($self, $gramps, $source, $citation) {
     my @parts;

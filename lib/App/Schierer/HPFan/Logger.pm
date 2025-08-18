@@ -59,38 +59,7 @@ class App::Schierer::HPFan::Logger {
     return $logger;
   }
 
-  # ----- Log::Handler-compatible shim (what Genealogy::Gedcom expects) -----
 
-  method log ($message, $level = 'info') {
-    $self->_log4perl_forwarder($message, $level);
-  }
-  method debug   ($message) { $self->_log4perl_forwarder($message, $DEBUG) }
-  method info    ($message) { $self->_log4perl_forwarder($message, $INFO) }
-  method notice  ($message) { $self->_log4perl_forwarder($message, $INFO) }
-  method warning ($message) { $self->_log4perl_forwarder($message, $WARN) }
-  method error   ($message) { $self->_log4perl_forwarder($message, $ERROR) }
-  method critical($message) { $self->_log4perl_forwarder($message, $FATAL) }
-  method alert ($message)   { $self->_log4perl_forwarder($message, $WARN) }
-
-  method emergency($message) {
-    $self->_log4perl_forwarder($message, 'emergency');
-  }
-
-  method _log4perl_forwarder ($message, $level) {
-    my $lvl = $INFO;    # default
-    if    ($level eq 'debug')                       { $lvl = $DEBUG }
-    elsif ($level eq 'info' or $level eq 'notice')  { $lvl = $INFO }
-    elsif ($level eq 'warning' or $level eq 'warn') { $lvl = $WARN }
-    elsif ($level eq 'error' or $level eq 'err')    { $lvl = $ERROR }
-    elsif ($level eq 'critical'
-      or $level eq 'crit'
-      or $level eq 'alert'
-      or $level eq 'emergency') {
-      $lvl = $FATAL;
-    }
-
-    $self->get_logger->log($lvl, $message);
-  }
 
   # ----- Optional helpers for DDP / JSON -----
 
