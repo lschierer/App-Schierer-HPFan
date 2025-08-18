@@ -25,6 +25,9 @@ package App::Schierer::HPFan::Plugins::ClassLists {
       }
     );
 
+    #$app->routes->get('/Harrypedia/Hogwarts/ClassLists/:year' -> [year => qr/\d{3,4}/])
+    #  ->to(controller => '')
+
     $app->helper(
       render_classlist_tables => sub ($c, $html) {
 
