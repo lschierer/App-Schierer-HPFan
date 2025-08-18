@@ -112,8 +112,11 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
       # otherwise if they’re already strings, this is fine
       my %seen_t;
       for my $tref ($person->tag_refs->@*) {
-        my $th = ref($tref) && ref($tref) eq 'HASH' ?
-          ($tref->{ref} // '') : "$tref"; # already a handle
+        my $th =
+             ref($tref)
+          && ref($tref) eq 'HASH'
+          ? ($tref->{ref} // '')
+          : "$tref";    # already a handle
         next unless length $th;
         next if $seen_t{$th}++;
         push @{ ($people_by_tag->{$th} //= []) }, $person;

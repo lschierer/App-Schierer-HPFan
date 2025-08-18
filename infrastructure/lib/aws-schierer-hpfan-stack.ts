@@ -384,6 +384,8 @@ export class MojoliciousStack extends Stack {
         },
         command: [
           "/fluent-bit/bin/fluent-bit",
+
+          // Input: tail app files
           "-i",
           "tail",
           "-p",
@@ -391,27 +393,53 @@ export class MojoliciousStack extends Stack {
           "-p",
           "tag=app",
           "-p",
+          "path_key=filename",
+          "-p",
+          "read_from_head=true",
+          "-p",
+          "skip_long_lines=false",
+          "-p",
           "refresh_interval=5",
           "-p",
-          "path_key=filepath",
+          "rotate_wait=30",
+          "-p",
+          "mem_buf_limit=64MB",
+
+          // Enable chunk persistence across restarts (optional, but helps)
+          "-p",
+          "storage.type=filesystem",
+
+          // Output: S3
           "-o",
           "s3",
           "-p",
-          "match=*",
+          "match=app",
           "-p",
           "bucket=${S3_BUCKET}",
           "-p",
-          "region=${AWS_REGION}",
+          `region=${this.region}`,
+
+          // Larger, fewer uploads -> fewer PUTs
           "-p",
-          "s3_key_format=/logs/%Y/%m/%d/${filename}-%H%M%S-${HOSTNAME}.log",
+          "total_file_size=200M", // buffer before upload (tune)
           "-p",
-          "total_file_size=10M",
+          "upload_timeout=30m", // or time-based flush
+
+          // Clean, unique object keys
           "-p",
-          "upload_timeout=10m",
-          "-p",
-          "use_put_object=On",
+          "s3_key_format=logs/%Y/%m/%d/${filename}-${HOSTNAME}.log",
+
+          // Cheaper storage size
           "-p",
           "compression=gzip",
+
+          // Compatibility: direct PUT per object (works well; multipart also ok)
+          "-p",
+          "use_put_object=On",
+
+          // Optional: add metadata to S3 object
+          // "-p", "s3_object_tagging=environment=${ENVIRONMENT},app=${APP}",
+
           "-v",
         ],
       },

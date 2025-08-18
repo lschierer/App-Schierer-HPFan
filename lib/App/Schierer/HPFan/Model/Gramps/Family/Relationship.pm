@@ -21,10 +21,10 @@ class App::Schierer::HPFan::Model::Gramps::Family::Relationship :
 
   # Shared built-in role map; 0 is “custom” (use $string)
   Readonly::Hash my %ROLE_MAP => (
-    0   => 'Married',
-    1   => 'Unmarried',
-    2   => 'Civil Union',
-    3   => 'Unknown',
+    0 => 'Married',
+    1 => 'Unmarried',
+    2 => 'Civil Union',
+    3 => 'Unknown',
   );
 
   # ---- Rendering ----

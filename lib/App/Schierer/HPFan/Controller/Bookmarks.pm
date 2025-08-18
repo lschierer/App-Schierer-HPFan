@@ -12,9 +12,14 @@ require Sereal::Decoder;
 package App::Schierer::HPFan::Controller::Bookmarks {
   use Mojo::Base 'App::Schierer::HPFan::Controller::ControllerBase';
 
+  my $logger;
+
   sub register($self, $app, $config) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
-    $logger->info(__PACKAGE__ . "Register method start");
+    $logger = $app->logger(__PACKAGE__);
+    $logger->info(sprintf(
+      'register function for %s with logging category %s.',
+      __PACKAGE__, $logger->category()
+    ));
 
     my $distDir      = $app->config('distDir');
     my $BookmarksSrc = $distDir->child('Bookmarks');
@@ -71,8 +76,6 @@ package App::Schierer::HPFan::Controller::Bookmarks {
   }
 
   sub bookmark_index ($c) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
-
     my $path = $c->req->url->path->to_string;
 
     # Remove trailing slash from person pages
@@ -132,7 +135,6 @@ package App::Schierer::HPFan::Controller::Bookmarks {
   }
 
   sub bookmark_page ($c) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
 
     my $path = $c->req->url->path->to_string;
 
@@ -162,7 +164,6 @@ package App::Schierer::HPFan::Controller::Bookmarks {
   }
 
   sub process_bookmark_file ($self, $app, $file, $baseRoute, $BookmarksTree) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
 
     $logger->debug(__PACKAGE__ . " process_bookmark_file start for $file");
 

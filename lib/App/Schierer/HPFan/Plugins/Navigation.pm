@@ -20,9 +20,14 @@ package App::Schierer::HPFan::Plugins::Navigation {
     '/index'          => 1,
   };
 
+  my $logger;
+
   sub register ($self, $app, $config) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
-    $logger->info("Registering navigation plugin");
+    $logger = $app->logger(__PACKAGE__);
+    $logger->info(sprintf(
+      'register function for %s with logging category %s.',
+      __PACKAGE__, $logger->category()
+    ));
 
     $app->helper(add_navigation_item => \&_add_navigation_item);
     $app->helper(generate_navigation => \&_generate_navigation);

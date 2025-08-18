@@ -4,19 +4,20 @@ require App::Schierer::HPFan::Model::Gramps::Event::Reference;
 require App::Schierer::HPFan::Model::Gramps::Person::Reference;
 require App::Schierer::HPFan::Model::Gramps::Family::Relationship;
 
-class App::Schierer::HPFan::Model::Gramps::Family :isa(App::Schierer::HPFan::Model::Gramps::Generic) {
+class App::Schierer::HPFan::Model::Gramps::Family :
+  isa(App::Schierer::HPFan::Model::Gramps::Generic) {
   use Carp;
 
-  field $gramps_id      : param = undef;
-  field $father_handle  : param = undef;    # handle reference
-  field $mother_handle  : param = undef;    # handle reference
-  field $json_data      : param //= undef;
+  field $gramps_id     : param = undef;
+  field $father_handle : param = undef;    # handle reference
+  field $mother_handle : param = undef;    # handle reference
+  field $json_data     : param //= undef;
 
-  field $rel_type      : param = undef;    # relationship type
-  field $event_refs    : param = [];
-  field $child_refs    : param = [];  # array of hashrefs with hlink, mrel, frel
-  field $attributes    : param = [];
-  field $note_refs     : param = [];
+  field $rel_type   : param = undef;  # relationship type
+  field $event_refs : param = [];
+  field $child_refs : param = [];     # array of hashrefs with hlink, mrel, frel
+  field $attributes : param = [];
+  field $note_refs  : param = [];
   field $citation_refs : param = [];
   field $tag_refs      : param = [];
   field $ALLOWED_FIELD_NAMES : reader =
@@ -29,15 +30,16 @@ class App::Schierer::HPFan::Model::Gramps::Family :isa(App::Schierer::HPFan::Mod
   method citation_refs() { [@$citation_refs] }
   method tag_refs()      { [@$tag_refs] }
 
-  method gramps_id       { $self->_get_field('gramps_id') }
-  method father_handle   { $self->_get_field('father_handle') }
-  method mother_handle   { $self->_get_field('mother_handle') }
-  method private         { $self->_get_field('private') }
-  method json_data       { $self->_get_field('json_data') }
+  method gramps_id     { $self->_get_field('gramps_id') }
+  method father_handle { $self->_get_field('father_handle') }
+  method mother_handle { $self->_get_field('mother_handle') }
+  method private       { $self->_get_field('private') }
+  method json_data     { $self->_get_field('json_data') }
 
   method rel_type {
     my $hash = JSON::PP->new->decode($self->json_data);
-    return App::Schierer::HPFan::Model::Gramps::Family::Relationship->new( $hash->{'type'}->%* );
+    return App::Schierer::HPFan::Model::Gramps::Family::Relationship->new(
+      $hash->{'type'}->%*);
   }
 
   method has_parent($person_handle) {
@@ -59,24 +61,27 @@ class App::Schierer::HPFan::Model::Gramps::Family :isa(App::Schierer::HPFan::Mod
     if (reftype($hash) eq 'HASH') {
       $self->logger->info("got hash " . Data::Printer::np($hash));
 
-      foreach my $item ( $hash->{'citation_list'}->@* ) {
-        push @$citation_refs, $item,
+      foreach my $item ($hash->{'citation_list'}->@*) {
+        push @$citation_refs, $item,;
       }
 
-      foreach my $item ( $hash->{'note_list'}->@* ) {
-        push @$note_refs, $item,
+      foreach my $item ($hash->{'note_list'}->@*) {
+        push @$note_refs, $item,;
       }
 
-      foreach my $item ( $hash->{'tag_list'}->@* ) {
-        push @$tag_refs, $item,
+      foreach my $item ($hash->{'tag_list'}->@*) {
+        push @$tag_refs, $item,;
       }
 
-      foreach my $item ( $hash->{'event_ref_list'}->@* ) {
-        push @$event_refs, App::Schierer::HPFan::Model::Gramps::Event::Reference->new( $item->%* );
+      foreach my $item ($hash->{'event_ref_list'}->@*) {
+        push @$event_refs,
+          App::Schierer::HPFan::Model::Gramps::Event::Reference->new($item->%*);
       }
 
-      foreach my $item ( $hash->{'child_ref_list'}->@* ) {
-        push @$child_refs, App::Schierer::HPFan::Model::Gramps::Person::Reference->new( $item->%* );
+      foreach my $item ($hash->{'child_ref_list'}->@*) {
+        push @$child_refs,
+          App::Schierer::HPFan::Model::Gramps::Person::Reference->new(
+          $item->%*);
       }
 
     }

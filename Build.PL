@@ -51,6 +51,7 @@ my $build = Module::Build->new(
     'Mojolicious::Plugin::Module::Loader'           => '0',
     'Mojolicious::Routes'                           => '0',
     'Mojolicious::Routes::Route'                    => '0',
+    'MojoX::Log::Log4perl'                          => '0',
     'Pandoc'                                        => '0',
     'Path::Iterator::Rule'                          => '0',
     'Path::Tiny'                                    => '0',

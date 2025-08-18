@@ -9,9 +9,13 @@ package App::Schierer::HPFan::Plugins::ClassLists {
   use Mojo::Base 'Mojolicious::Plugin', -strict, -signatures;
   use Mojo::Util qw(xml_escape);
 
+  my $logger;
   sub register($self, $app, $config) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
-    $logger->info(__PACKAGE__ . "Register method start");
+    $logger = $app->logger(__PACKAGE__);
+    $logger->info(sprintf(
+      'register function for %s with logging category %s.',
+      __PACKAGE__, $logger->category()
+    ));
 
     my $ClassLists = {};
     $app->plugins->on(
@@ -33,7 +37,6 @@ package App::Schierer::HPFan::Plugins::ClassLists {
   }
 
   sub buildClassLists($self, $app,) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     my @events = values $app->gramps->events->%*;
     $logger->debug(
       sprintf('buildClassList found %s events to filter.', scalar @events));
@@ -78,7 +81,6 @@ package App::Schierer::HPFan::Plugins::ClassLists {
   }
 
   sub render_classlist_tables ($self, $c, $ClassLists, $html) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
 
     $logger->debug('ClassLists is ' . ref($ClassLists));
     if (scalar keys %$ClassLists == 0) {

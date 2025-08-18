@@ -14,10 +14,14 @@ package App::Schierer::HPFan::Controller::Families {
   require Data::Printer;
   use Carp;
 
-  sub register($self, $app, $config //= {}) {
+  my $logger;
 
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
-    $logger->info(__PACKAGE__ . " register function");
+  sub register($self, $app, $config //= {}) {
+    $logger = $app->logger(__PACKAGE__);
+    $logger->info(sprintf(
+      'register function for %s with logging category %s.',
+      __PACKAGE__, $logger->category()
+    ));
 
     $app->helper(
       family_by_handle => sub($c, $handle) {
@@ -58,7 +62,6 @@ package App::Schierer::HPFan::Controller::Families {
   }
 
   sub _register_routes ($self, $app) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     $logger->debug(__PACKAGE__ . '_register_routes start');
     my %family_names;
     foreach my $person (sort { return $a->id cmp $b->id; }
@@ -95,7 +98,6 @@ package App::Schierer::HPFan::Controller::Families {
   }
 
   sub genealogical_gaps($c) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     $logger->debug(__PACKAGE__ . 'genealogical_gaps start');
     # Find all people with "Unknown" as surname
     my @gap_people;
@@ -162,7 +164,6 @@ package App::Schierer::HPFan::Controller::Families {
   }
 
   sub family_details ($c) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     $logger->debug("start of family_details method");
 
     my $path = $c->req->url->path->to_string;

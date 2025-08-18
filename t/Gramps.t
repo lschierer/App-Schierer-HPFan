@@ -34,7 +34,7 @@ my $gramps = App::Schierer::HPFan::Model::Gramps->new(
   gramps_db     => $gramps_db,
 );
 
-$gramps->import_from_xml;
+$gramps->execute_import;
 $gramps->build_indexes();
 
 my $people        = $gramps->people;
@@ -50,6 +50,15 @@ is_deeply(\@unknown_events, [], 'All people_by_event keys exist in events');
 my @unknown_tags =
   grep { !exists $gramps->tags->{$_} } keys %{ $gramps->people_by_tag };
 is_deeply(\@unknown_tags, [], 'All people_by_tag keys exist in tags');
+
+my $pbtk_count = scalar keys %{ $gramps->people_by_tag };
+my $gtk_count = scalar keys %{ $gramps->tags };
+my @pbtk = sort keys %{ $gramps->people_by_tag };
+my @gtk = sort keys %{ $gramps->tags };
+if( $pbtk_count != $gtk_count ){
+  say "keys of people by tag: " . Data::Printer::np(@pbtk);
+  say "keys of gramps tags: " . Data::Printer::np(@gtk);
+}
 
 # ---------- Build “truth” sets by walking people ----------
 # ---------- Build “truth” sets by walking people (object-aware) ----------
@@ -71,17 +80,18 @@ for my $p (values %{ $gramps->people }) {
   }
 
   ## tag refs may be objects, hashes, or strings; normalize the same way
-  #my %seen_t;
-  #for my $tref (@{ $p->tag_refs // [] }) {
-  #  my $th =
-  #    (ref($tref) && $tref->can('ref')) ? ($tref->ref // '') :
-  #    ref($tref) eq 'HASH'              ? ($tref->{ref} // '') :
-  #                                        "$tref";
-  #  next unless length $th;
-  #  next if $seen_t{$th}++;
-  #  $truth_by_tag{$th}{$ph} = 1;
-  #}
+  my %seen_t;
+  for my $tref (@{ $p->tag_refs // [] }) {
+    my $th = ref($tref) eq 'HASH' ? ($tref->{ref} // '') :
+                                  "$tref";
+    next unless length $th;
+    next if $seen_t{$th}++;
+    $truth_by_tag{$th}{$ph} = 1;
+  }
 }
+ok(scalar keys %truth_by_tag == scalar keys %{$gramps->tags}, 'truth_by_tag has the same number of keys as there are tags.');
+ok(scalar keys %truth_by_tag == scalar keys %{$gramps->people_by_tag}, 'truth_by_tag has the same number of keys as there are tag index entries.');
+ok(scalar keys %{$gramps->people_by_tag} == scalar keys %{$gramps->tags}, 'there are the same number of tags as tag index entries');
 
 # ---------- Compare keys (which events/tags have participants) ----------
 sub sorted_keys { [ sort keys %{+shift} ] }

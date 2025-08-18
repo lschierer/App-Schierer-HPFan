@@ -12,20 +12,27 @@ class App::Schierer::HPFan::Model::Gramps::Person::Reference :
   field $frel : param //= undef;
   field $mrel : param //= undef;
 
-  field $father_ref : writer  = undef;
-  field $mother_ref : writer  = undef;
-
+  field $father_ref : writer = undef;
+  field $mother_ref : writer = undef;
 
   ADJUST {
-    unless (defined $father_ref){
-      if(defined $frel && Scalar::Util::reftype($frel) eq 'HASH') {
-        $self->set_father_ref(App::Schierer::HPFan::Model::Gramps::Person::ChildReferenceType->new($frel->%*));
+    unless (defined $father_ref) {
+      if (defined $frel && Scalar::Util::reftype($frel) eq 'HASH') {
+        $self->set_father_ref(
+          App::Schierer::HPFan::Model::Gramps::Person::ChildReferenceType->new(
+            $frel->%*
+          )
+        );
       }
     }
 
     unless (defined($mrel)) {
-      if(defined $mrel && Scalar::Util::reftype($mrel) eq 'HASH') {
-        $self->set_mother_ref(App::Schierer::HPFan::Model::Gramps::Person::ChildReferenceType->new($mrel->%*));
+      if (defined $mrel && Scalar::Util::reftype($mrel) eq 'HASH') {
+        $self->set_mother_ref(
+          App::Schierer::HPFan::Model::Gramps::Person::ChildReferenceType->new(
+            $mrel->%*
+          )
+        );
       }
     }
 

@@ -21,12 +21,14 @@ package App::Schierer::HPFan::Controller::ControllerBase {
     return "/" . __PACKAGE__;
   }
 
+  my $logger;
+
   sub register($self, $app, $config //= {}) {
-
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
-    $logger->info("ControllerBase register function");
-
-    $app->helper(logger => sub { return $logger });
+    $logger = $app->logger(__PACKAGE__);
+    $logger->info(sprintf(
+      'register function for %s with logging category %s.',
+      __PACKAGE__, $logger->category()
+    ));
 
     my $routes = $app->routes;
 

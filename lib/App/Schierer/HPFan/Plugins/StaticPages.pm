@@ -12,9 +12,14 @@ package App::Schierer::HPFan::Plugins::StaticPages {
 
   my %static_routes;
 
+  my $logger;
+
   sub register ($self, $app, $config) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
-    $logger->info("Registering static page routes");
+    $logger = $app->logger(__PACKAGE__);
+    $logger->info(sprintf(
+      'register function for %s with logging category %s.',
+      __PACKAGE__, $logger->category()
+    ));
 
     # Add helper to check if a static route exists
     $app->helper(
@@ -53,7 +58,6 @@ package App::Schierer::HPFan::Plugins::StaticPages {
   }
 
   sub build_routes ($self, $app) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     my $pages_dir =
       Mojo::File::Share::dist_dir('App::Schierer::HPFan')->child('pages');
 
@@ -109,7 +113,6 @@ package App::Schierer::HPFan::Plugins::StaticPages {
   # Convert file path to route path
   sub file_path_to_route {
     my ($self, $path) = @_;
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
 
     # Remove file extension
     $path =~ s/\.md$//;

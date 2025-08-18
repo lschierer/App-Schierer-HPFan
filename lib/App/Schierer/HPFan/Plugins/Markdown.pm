@@ -19,9 +19,13 @@ package App::Schierer::HPFan::Plugins::Markdown {
     qw(commonmark alerts attributes autolink_bare_uris footnotes implicit_header_references pipe_tables raw_html rebase_relative_paths smart gfm_auto_identifiers)
   );
 
+  my $logger;
   sub register ($self, $app, $config) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
-    $logger->info(sprintf('initializing %s.', __PACKAGE__));
+    $logger = $app->logger(__PACKAGE__);
+    $logger->info(sprintf(
+      'register function for %s with logging category %s.',
+      __PACKAGE__, $logger->category()
+    ));
 
     # Add helper method for rendering markdown files
     $app->helper(
@@ -44,7 +48,6 @@ package App::Schierer::HPFan::Plugins::Markdown {
   }
 
   sub _render_markdown_snippet ($self, $snippet) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     if (not defined $snippet or length($snippet) == 0) {
       $logger->warn('snippet must be present!!');
       return '';
@@ -61,7 +64,6 @@ package App::Schierer::HPFan::Plugins::Markdown {
   }
 
   sub _parse_markdown_frontmatter ($self, $file_path) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
 
     unless ($file_path && $file_path->isa('Mojo::File')) {
       $logger->error("file_path must be a 'Mojo::File' not "
@@ -113,7 +115,6 @@ package App::Schierer::HPFan::Plugins::Markdown {
     if (not defined $opts) {
       $opts = {};
     }
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     $logger->debug("stash at start of _render_markdown_file has keys "
         . join(", ", keys %{ $c->stash() }));
 

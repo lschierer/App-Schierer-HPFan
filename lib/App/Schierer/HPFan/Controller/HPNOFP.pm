@@ -13,18 +13,19 @@ use namespace::clean;
 
 package App::Schierer::HPFan::Controller::HPNOFP {
   use Mojo::Base 'App::Schierer::HPFan::Controller::ControllerBase';
-  use Log::Log4perl;
-
   use Path::Iterator::Rule;
   use HTML::Selector::XPath qw(selector_to_xpath);
   use Carp;
 
   my $navHtml;
+  my $logger;
 
   sub register($self, $app, $config //= {}) {
-
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
-    $logger->info(__PACKAGE__ . " register function");
+    $logger = $app->logger(__PACKAGE__);
+    $logger->info(sprintf(
+      'register function for %s with logging category %s.',
+      __PACKAGE__, $logger->category()
+    ));
 
     my $distDir   = $app->config('distDir');
     my $HPNOFPSrc = $distDir->child('HPNOFP/src/OEBPS');
@@ -111,7 +112,6 @@ package App::Schierer::HPFan::Controller::HPNOFP {
   }
 
   sub hpnofp_index ($c) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     $logger->debug(__PACKAGE__ . " hpnofp_index start");
 
     my $path = $c->req->url->path->to_string;
@@ -133,7 +133,6 @@ package App::Schierer::HPFan::Controller::HPNOFP {
   }
 
   sub hpnofp_page_handler ($c) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     $logger->debug(__PACKAGE__ . " hpnofp_page_handler start");
 
     my $path = $c->req->url->path->to_string;
@@ -163,7 +162,6 @@ package App::Schierer::HPFan::Controller::HPNOFP {
   }
 
   sub process_HPNOFP_OEBPS ($self, $file, $baseRoute) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     $logger->info(__PACKAGE__ . " process_HPNOFP_OEBPS start for $file");
     my $xmlLogger = Log::Log4perl->get_logger('XML::LibXML');
 

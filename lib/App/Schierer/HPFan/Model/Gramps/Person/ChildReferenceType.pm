@@ -21,8 +21,8 @@ class App::Schierer::HPFan::Model::Gramps::Person::ChildReferenceType :
 
   # Shared built-in role map; 0 is “custom” (use $string)
   Readonly::Hash my %ROLE_MAP => (
-    1  => 'Birth',
-    5  => 'Adoptive',
+    1 => 'Birth',
+    5 => 'Adoptive',
   );
 
   # ---- Rendering ----

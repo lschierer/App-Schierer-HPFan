@@ -12,17 +12,35 @@ class App::Schierer::HPFan::Model::History::Gramps :
   # The ::Model::Gramps from which to get History
   field $gramps : param;
 
+  ADJUST {
+    unless($gramps && $gramps->isa('App::Schierer::HPFan::Model::Gramps')) {
+      $self->logger->logcroak("gramps must be defined, and of type App::Schierer::HPFan::Model::Gramps");
+    }
+  }
+
   # output fields
-  field $events  = {};
+  field $events = {};
 
   method events {
-    return values $events->%*;
+    my @out = sort {
+            ($a->sortval // 0) <=> ($b->sortval // 0)
+         || ($a->date_iso//'') cmp ($b->date_iso//'')
+         || ($a->id//'')       cmp ($b->id//'')
+      } values $events->%*;
+    $self->logger->debug(sprintf('%s is returning %s events.',
+    ref($self), scalar @out));
+    return \@out;
   }
 
   method process {
     $self->logger->info('starting processing of Gramps history.');
-    foreach my $event (sort { $a->gramps_id cmp $b->gramps_id }
-      values $gramps->events->%*) {
+
+    my @events = values $gramps->events->%*;
+    $self->logger->debug(sprintf(
+      'found %s events from gramps to filter.', scalar @events));
+
+    @events = sort { $a->gramps_id cmp $b->gramps_id } @events;
+    foreach my $event (@events) {
       $self->process_event($event);
     }
 
@@ -49,33 +67,37 @@ class App::Schierer::HPFan::Model::History::Gramps :
       $event->gramps_id, $event->date->to_string
     ));
 
-    if($event->type !~ /Birth/) {
-      if(my $person = $self->_primary_person_for($event)) {
-        $events->{$event->gramps_id} = App::Schierer::HPFan::Model::History::Event->new(
+    if ($event->type !~ /Birth/) {
+      if (my $person = $self->_primary_person_for($event)) {
+        $events->{ $event->gramps_id } =
+          App::Schierer::HPFan::Model::History::Event->new(
           id        => $event->gramps_id,
           origin    => 'Gramps',
           type      => 'Birth',
           blurb     => sprintf('Birth of %s', $person->display_name()),
           date_iso  => $event->date->as_dm_date->to_iso,
-          date_kind => join(' ', qq( $event->date->quality_label $event->date->modifier_label )),
-          sortval   => $event->date->sortval,
-        );
+          date_kind => join(' ',
+            qq( $event->date->quality_label $event->date->modifier_label )),
+          sortval => $event->date->sortval,
+          );
+      }else {
+        $self->logger->warn(sprintf('Birth event %s cannot be matched with a person.',
+        $event->gramps_id));
       }
     }
   }
 
   method _primary_person_for ($e) {
-      # via your $people_by_event index; find role 'Primary'
-      for my $person ($gramps->people_by_event->{$e->handle}->@* ) {
-        for my $er ($person->event_refs->@*) {
-          if ($er->ref eq $e->handle && "$er->role" eq 'Primary') {
-            return $person;
-          }
+    # via your $people_by_event index; find role 'Primary'
+    for my $person ($gramps->people_by_event->{ $e->handle }->@*) {
+      for my $er ($person->event_refs->@*) {
+        if ($er->ref eq $e->handle && "$er->role" eq 'Primary') {
+          return $person;
         }
       }
-      return undef;
     }
-
+    return undef;
+  }
 
 }
 1;

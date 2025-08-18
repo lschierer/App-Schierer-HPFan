@@ -185,12 +185,12 @@ class App::Schierer::HPFan::Model::Gramps::Person :
 
   method citation_refs() {
     my $hash = JSON::PP->new->decode($self->json_data);
-    return [$hash->{'note_list'}->@* ];
+    return [$hash->{'note_list'}->@*];
   }
 
   method tag_refs() {
     my $hash = JSON::PP->new->decode($self->json_data);
-    return [ $hash->{'tag_list'}->@* ];
+    return [$hash->{'tag_list'}->@*];
   }
 
   method primary_name() {

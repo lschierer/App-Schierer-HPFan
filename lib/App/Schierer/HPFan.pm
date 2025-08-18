@@ -6,6 +6,8 @@ require Mojo::File::Share;
 require Mojo::Home;
 require App::Schierer::HPFan::Logger::Config;
 require App::Schierer::HPFan::Controller::ControllerBase;
+require Log::Log4perl;
+require App::Schierer::HPFan::Logger::MojoLog4Perl;
 
 package App::Schierer::HPFan {
   use Mojo::Base 'Mojolicious', -strict, -signatures;
@@ -38,15 +40,28 @@ package App::Schierer::HPFan {
 
     my $lc = App::Schierer::HPFan::Logger::Config->new('App-Schierer-HPFan');
     my $log4perl_logger = $lc->init($mode);
-    $self->log->handle(undef);    # Disable default Mojo logger
-    $self->log->level('debug');
-    $self->log->on(
-      message => sub ($log, $level, @lines) {
-        my $msg = join "\n", @lines;
-        $log4perl_logger->$level($msg) if $log4perl_logger->can($level);
+    my $app_log = App::Schierer::HPFan::Logger::MojoLog4Perl->new(
+       l4p => Log::Log4perl->get_logger('App-Schierer-HPFan'),
+    );
+    $self->log($app_log);
+
+    $self->helper(
+      logger => sub ($c, $cat) {
+        if (length($cat) == 0) {
+          $self->log->error('got a logger request with zero length cat!');
+          $cat = 'App-Schierer-HPFan-Unknown';
+        }
+        else {
+          $self->log->info("got a cat '$cat'");
+        }
+        Log::Log4perl::Config->utf8(1);
+        my $logger = Log::Log4perl->get_logger($cat);
+        return $logger;
       }
     );
+
     $self->log->info("Mojolicious Logging initialized");
+
     foreach my $envkey (keys %{ $self->config->{'HPFAN-Environment'} }) {
       if (defined $envkey) {
         my $envValue = $self->config->{'HPFAN-Environment'}->{$envkey}

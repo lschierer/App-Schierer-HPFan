@@ -50,16 +50,13 @@ class App::Schierer::HPFan::Logger {
     return;
   }
 
-  method get_logger {
-    return $logger if defined $logger;
+  method get_logger($cat = $category) {
     # If you use a Log4perl config, make sure it's already initialized elsewhere
     Log::Log4perl::Config->utf8(1)
       ;    # only if you really need this, and you've loaded that module
-    $logger = Log::Log4perl->get_logger($category); # <-- set the field directly
+    $logger = Log::Log4perl->get_logger($cat);    # <-- set the field directly
     return $logger;
   }
-
-
 
   # ----- Optional helpers for DDP / JSON -----
 

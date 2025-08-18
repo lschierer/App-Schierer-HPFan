@@ -9,9 +9,14 @@ require Scalar::Util;
 package App::Schierer::HPFan::Controller::AutoIndex {
   use Mojo::Base 'App::Schierer::HPFan::Controller::ControllerBase';
 
+  my $logger;
+
   sub register($self, $app, $config) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
-    $logger->info("Registering auto index page routes");
+    $logger = $app->logger(__PACKAGE__);
+    $logger->info(sprintf(
+      'register function for %s with logging category %s.',
+      __PACKAGE__, $logger->category()
+    ));
 
     $app->helper(
       generate_directory_index => sub ($c, $path) {
@@ -67,7 +72,6 @@ package App::Schierer::HPFan::Controller::AutoIndex {
   }
 
   sub auto_index_handler ($c) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     $logger->debug(__PACKAGE__ . " auto_index_handler start");
 
     my $path = $c->req->url->path->to_string;
@@ -102,7 +106,6 @@ package App::Schierer::HPFan::Controller::AutoIndex {
   }
 
   sub _generate_directory_index($self, $path, $app) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
 
     $path = Mojo::File->new($path) unless ref $path eq 'Mojo::File';
     $path = $path->dirname if $path->basename eq 'index.md';

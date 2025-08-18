@@ -16,14 +16,14 @@ class App::Schierer::HPFan::Model::Gramps::Reference :
     'bool'     => sub { $_[0]->_isTrue },
     'fallback' => 1;
 
-  field $_class         : param //= undef;
-  field $citation_list  : param //= [];
-  field $note_list      : param //= [];
-  field $ref            : param : reader //= undef;
-  field $role           : param : reader : writer = undef;
+  field $_class        : param //= undef;
+  field $citation_list : param //= [];
+  field $note_list     : param //= [];
+  field $ref           : param : reader //= undef;
+  field $role          : param : reader : writer = undef;
 
-  method citation_list  { [ $citation_list->@* ] }
-  method note_list      { [ $note_list->@* ] }
+  method citation_list { [$citation_list->@*] }
+  method note_list     { [$note_list->@*] }
 
   method _comparison ($other, $swap = 0) {
     return $ref cmp $other->ref;
@@ -35,12 +35,10 @@ class App::Schierer::HPFan::Model::Gramps::Reference :
 
   method to_hash {
     return {} if $self->private;
-    my $r = {
-      ref => $ref
-    };
+    my $r = { ref => $ref };
     $r->{'citation_list'} = $citation_list if (scalar @$citation_list);
-    $r->{'note_list'} = $citation_list if (scalar @$note_list);
-    $r->{'role'} = $role if(defined $role);
+    $r->{'note_list'}     = $citation_list if (scalar @$note_list);
+    $r->{'role'}          = $role          if (defined $role);
     return $r;
   }
 

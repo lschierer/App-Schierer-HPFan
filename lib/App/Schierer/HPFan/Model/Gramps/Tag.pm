@@ -8,11 +8,11 @@ class App::Schierer::HPFan::Model::Gramps::Tag :
   isa(App::Schierer::HPFan::Model::Gramps::Generic) {
   use Carp;
 
-  field $_class     : param //= undef;
-  field $name       : param //= undef;
-  field $color      : param //= undef;
-  field $priority   : param //= undef;
-  field $json_data  : param //= undef;
+  field $_class    : param //= undef;
+  field $name      : param //= undef;
+  field $color     : param //= undef;
+  field $priority  : param //= undef;
+  field $json_data : param //= undef;
 
   field $ALLOWED_FIELD_NAMES : reader =
     { map { $_ => 1 } qw( handle name color priority change json_data) };
@@ -25,7 +25,10 @@ class App::Schierer::HPFan::Model::Gramps::Tag :
 
   method parse_json_data {
     my $hash = JSON::PP->new->decode($self->json_data);
-    $self->logger->debug(sprintf('hash for tag "%s" is: %s', $self->handle, Data::Printer::np($hash),));
+    $self->logger->debug(sprintf(
+      'hash for tag "%s" is: %s',
+      $self->handle, Data::Printer::np($hash),
+    ));
 
   }
 

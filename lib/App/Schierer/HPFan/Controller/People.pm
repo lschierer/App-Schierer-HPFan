@@ -10,14 +10,16 @@ use namespace::clean;
 
 package App::Schierer::HPFan::Controller::People {
   use Mojo::Base 'App::Schierer::HPFan::Controller::ControllerBase';
-  use Log::Log4perl;
-  require Data::Printer;
   use Carp;
 
-  sub register($self, $app, $config //= {}) {
+  my $logger;
 
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
-    $logger->info("::Controller::People register function");
+  sub register($self, $app, $config //= {}) {
+    $logger = $app->logger(__PACKAGE__);
+    $logger->info(sprintf(
+      'register function for %s with logging category %s.',
+      __PACKAGE__, $logger->category()
+    ));
 
     $app->helper(
       people => sub ($c) {
@@ -80,7 +82,7 @@ package App::Schierer::HPFan::Controller::People {
   }
 
   sub _register_routes ($self, $app) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
+
     $logger->debug(__PACKAGE__ . '_register_routes start');
     foreach my $person (sort { return $a->id cmp $b->id }
       values %{ $app->gramps->people }) {
@@ -107,7 +109,6 @@ package App::Schierer::HPFan::Controller::People {
   }
 
   sub person_details ($c) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
     $logger->debug("start of person_details method");
 
     my $rp = $c->req->url->path->to_string;
@@ -163,8 +164,7 @@ package App::Schierer::HPFan::Controller::People {
   }
 
   sub generate_ancestor_chart($self, $person) {
-    my $logger = Log::Log4perl->get_logger(__PACKAGE__);
-    my $graph  = GraphViz->new(
+    my $graph = GraphViz->new(
       directed => 1,
       title    => "Ancestor Chart for "
         . $person->display_name(),    # this line doesn't seem to get used??
@@ -202,7 +202,6 @@ s/<svg /<svg preserveAspectRatio="xMidYMid meet" width="100%" height="100%" /;
 
   sub _add_ancestors_to_graph($self, $graph, $person, $visited, $generation,
     $generation_map) {
-    my $logger    = Log::Log4perl->get_logger(__PACKAGE__);
     my $person_id = $person->handle;
     $logger->debug(sprintf('person with person id %s', $person->id));
     return if $visited->{$person_id};

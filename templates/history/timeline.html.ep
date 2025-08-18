@@ -13,7 +13,7 @@
 </div>
 
 <section class="timeline">
-  <% if(scalar @$timeline) { %>
+  <% if(defined $timeline && scalar @$timeline) { %>
     <ul class="timeline spectrum-Typeography">
       <% foreach my $event (@$timeline) { %>
         <li id="<%= $event->{date}->secs_since_1970_GMT %>">

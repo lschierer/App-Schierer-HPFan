@@ -26,7 +26,6 @@ class App::Schierer::HPFan::Model::Gramps::Generic :
   field $citation_refs = [];
   field $tag_refs      = [];
 
-
   field $XPathContext : param : reader //= undef;
   field $XPathObject  : param : reader //= undef;
 
@@ -36,12 +35,14 @@ class App::Schierer::HPFan::Model::Gramps::Generic :
   ADJUST {
     if (scalar(@$attribute_list)) {
       $self->dev_guard(
-        sprintf('%s found a non-empty attribute_list.', Scalar::Util::blessed($self)));
+        sprintf('%s found a non-empty attribute_list.',
+          Scalar::Util::blessed($self))
+      );
     }
 
     # this slightly awkward test construction lets things like references
     # which do not have handles inherit from this class.
-    if(exists $self->ALLOWED_FIELD_NAMES->{'handle'}) {
+    if (exists $self->ALLOWED_FIELD_NAMES->{'handle'}) {
       unless (defined($handle)) {
         unless (defined($XPathContext) and defined($XPathObject)) {
           $self->logger->logcroak(
@@ -54,9 +55,10 @@ class App::Schierer::HPFan::Model::Gramps::Generic :
   }
 
   method set_private ($is_private) {
-    if($is_private){
+    if ($is_private) {
       $private = 1;
-    } elsif($is_private == 0) {
+    }
+    elsif ($is_private == 0) {
       $private = 0;
     }
   }

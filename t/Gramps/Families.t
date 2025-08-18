@@ -33,7 +33,7 @@ my $gramps = App::Schierer::HPFan::Model::Gramps->new(
   gramps_db     => $gramps_db,
 );
 
-$gramps->import_from_xml;
+$gramps->_import_families;
 
 my $expected_families = count_xml_elements($gramps_file, 'family');
 
