@@ -1,0 +1,157 @@
+@import url("@spectrum-css/tokens");
+@import url("@spectrum-css/page");
+@import url("@spectrum-css/typography");
+@import url("@spectrum-css/alertbanner");
+@import url("@spectrum-css/button");
+@import url("@spectrum-css/divider");
+
+iconify-icon {
+  margin-right: 1.5rem;
+  font-size: 2rem;
+}
+
+/* structure */
+.timeline-card svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.axis {
+  stroke: var(--spectrum-global-color-gray-600);
+  stroke-width: 1;
+}
+
+.tick {
+  stroke: var(--spectrum-global-color-gray-400);
+}
+
+.ticklabel {
+  fill: var(--spectrum-global-color-gray-700);
+  font: 12px var(--spectrum-alias-body-text-font-family);
+}
+
+.events .stem {
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+  stroke: currentcolor;
+  fill: none;
+}
+
+.events .dot {
+  /* stylelint-disable-next-line declaration-property-value-no-unknown */
+  r: 4;
+  fill: currentcolor;
+  stroke: none;
+}
+
+/* SVG sets r; CSS can override via presentation attrs if needed */
+
+.events .range {
+  stroke-width: 3;
+  vector-effect: non-scaling-stroke;
+  stroke: currentcolor;
+  fill: none;
+}
+
+.events .cap {
+  vector-effect: non-scaling-stroke;
+  stroke: currentcolor;
+  fill: none;
+}
+
+/* type-based colors (fallbacks) */
+.events .birth {
+  color: var(--spectrum-semantic-positive-color-default, #0a0);
+}
+
+.events .death {
+  color: var(--spectrum-semantic-negative-color-default, #b00);
+}
+
+.events .other {
+  color: var(--spectrum-global-color-blue-600, #06c);
+}
+
+/* qualifiers */
+.events .estimated .range,
+.events .estimated .stem {
+  stroke-dasharray: 4 3;
+}
+
+.events .calculated .range,
+.events .calculated .stem {
+  stroke-dasharray: 2 2;
+}
+
+/* before/after/between glyph tweaks (optional caps already drawn) */
+
+/* tag-driven hues (compose freely) */
+.events .mundane.england {
+  background-color: transparent;
+  background-image: linear-gradient(
+    175deg,
+    var(--spectrum-gray-200) 15%,
+    var(--spectrum-red-200) 90%
+  );
+}
+
+.events .mundane.scotland {
+  background-color: transparent;
+  background-image: linear-gradient(
+    175deg,
+    var(--spectrum-gray-200) 15%,
+    var(--spectrum-blue-200) 90%
+  );
+}
+
+.events .mundane.ireland {
+  background-color: transparent;
+  background-image: linear-gradient(
+    175deg,
+    var(--spectrum-gray-200) 15%,
+    var(--spectrum-green-200) 90%
+  );
+}
+
+.events .mundane.gb {
+  background-color: transparent;
+  background-image: linear-gradient(
+    175deg,
+    var(--spectrum-gray-200) 15%,
+    var(--spectrum-red-200),
+    var(--spectrum-blue-200)
+  );
+}
+
+.events .color-magical {
+  background-color: var(--spectrum-purple-200);
+}
+
+.events .religious {
+  background-color: var(--spectrum-orange-200);
+}
+
+.color-female {
+  color: var(--color-female);
+}
+
+.color-male {
+  color: var(--color-male);
+}
+
+iconify-icon.color-female {
+  color: var(--color-female);
+}
+
+iconify-icon.color-male {
+  color: var(--color-male);
+}
+
+.events .color-male {
+  --gender-shade: var(--color-male);
+}
+
+.events .color-female {
+  --gender-shade: var(--color-female);
+}

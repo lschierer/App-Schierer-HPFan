@@ -315,12 +315,12 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
 
     $self->_import_citations($xc);
     $self->_import_events();
+    $self->_import_families();
     $self->_import_notes($xc);
     $self->_import_people();
     $self->_import_repositories($xc);
     $self->_import_sources($xc);
     $self->_import_tags();
-    $self->_import_families();
   }
 
   method _import_people () {
@@ -329,8 +329,7 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     foreach my $handle (@$all_entries) {
       my $row = $dbh->selectrow_hashref("SELECT * FROM person WHERE handle = ?",
         undef, $handle,);
-      $self->logger->debug(
-        sprintf('row %s is %s', $handle, Data::Printer::np($row)));
+
       $people->{$handle} =
         App::Schierer::HPFan::Model::Gramps::Person->new($row->%*);
       $people->{$handle}->set_dbh($dbh);
@@ -346,8 +345,7 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     foreach my $handle (@$all_entries) {
       my $row = $dbh->selectrow_hashref("SELECT * FROM family WHERE handle = ?",
         undef, $handle,);
-      $self->logger->debug(
-        sprintf('row %s is %s', $handle, Data::Printer::np($row)));
+
       $families->{$handle} =
         App::Schierer::HPFan::Model::Gramps::Family->new($row->%*);
       $families->{$handle}->set_dbh($dbh);
@@ -363,8 +361,7 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     foreach my $handle (@$all_entries) {
       my $row = $dbh->selectrow_hashref("SELECT * FROM tag WHERE handle = ?",
         undef, $handle,);
-      $self->logger->debug(
-        sprintf('row %s is %s', $handle, Data::Printer::np($row)));
+
       $tags->{$handle} =
         App::Schierer::HPFan::Model::Gramps::Tag->new($row->%*);
       $tags->{$handle}->set_dbh($dbh);
@@ -443,8 +440,6 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     foreach my $handle (@$all_entries) {
       my $row = $dbh->selectrow_hashref("SELECT * FROM event WHERE handle = ?",
         undef, $handle,);
-      $self->logger->debug(
-        sprintf('row %s is %s', $handle, Data::Printer::np($row)));
       $events->{$handle} =
         App::Schierer::HPFan::Model::Gramps::Event->new($row->%*);
       $events->{$handle}->set_dbh($dbh);

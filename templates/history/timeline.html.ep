@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="/css/history.css" />
+<link rel="stylesheet" href="/css/timeline.css" />
+
 
 <div class="banner spectrum-AlertBanner is-open spectrum-AlertBanner--info">
   <div class="spectrum-AlertBanner-body">
@@ -14,35 +16,9 @@
 
 <section class="timeline">
   <% if(defined $timeline && scalar @$timeline) { %>
-    <ul class="timeline spectrum-Typeography">
-      <% foreach my $event (@$timeline) { %>
-        <li id="<%= $event->sortval %>">
-          <h5 class="spectrum-Heading spectrum-Heading--sizeM">
-            <% if(length($event->date_kind)) { %>
-              <%= $event->date_kind %>
-            <% } %>
-            <time datetime="<%= $event->date_iso %>">
-              <%= $event->date_iso %>
-            </time>
-          </h5>
-          <div class="spectrum-Typography <%= $event->type %>">
-            <h6 class="spectrum-Heading spectrum-Heading--sizeXS">
-              <%= $event->blurb %>
-            </h6>
-            <p class="spectrum-Body spectrum-Body--sizeM">
-              <% if(length($event->html_desc)) { %>
-                <%== $event->html_desc %>
-              <% } %>
-            </p>
-            <span class="spectrum-Body spectrum-Body--sizeM">
-              <% if(scalar @{ $event->sources }){ %>
-                <%= $event->sources %>
-              <% } %>
-            </span>
-          </div>
-        </li>
-      <% } %>
-    </ul>
+    <div class="timeline-card">
+      <%== $svg %>
+    </div>
   <% } else { %>
     <!-- No events available -->
   <% } %>

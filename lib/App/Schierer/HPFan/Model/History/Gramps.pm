@@ -57,10 +57,20 @@ class App::Schierer::HPFan::Model::History::Gramps :
     $self->logger->debug(
       sprintf('event %s has type "%s"', $event->gramps_id, $event->type));
 
-    unless (defined($event->date->as_dm_date)) {
+    unless (defined($event->date->as_dm_date) or $event->date->is_range) {
       $self->logger->debug(
         sprintf('skipping event %s, cannot get dm_date.', $event->gramps_id,));
       return;
+    }
+    if($event->date->is_range) {
+      unless(defined($event->date) and $event->date->isa('App::Schierer::HPFan::Model::Gramps::GrampsDate') and
+      (defined($event->date->start) or defined($event->date->end))) {
+        $self->logger->debug(sprintf(
+          'skipping event %s,' .
+          ' must have either at least start or end for a range',
+          $event->gramps_id ));
+          return;
+      }
     }
     $self->logger->debug(sprintf(
       'event %s has date "%s".',
@@ -68,24 +78,51 @@ class App::Schierer::HPFan::Model::History::Gramps :
     ));
 
     if ($event->type eq  'Birth') {
-      if (my $person = $self->_primary_person_for($event)) {
-        my @dklparts;
-        push @dklparts, $event->date->quality_label if (defined $event->date->quality_label && length($event->date->quality_label));
-        push @dklparts, $event->date->modifier_label if (defined $event->date->modifier_label && length($event->date->modifier_label));
-        $events->{ $event->gramps_id } =
-          App::Schierer::HPFan::Model::History::Event->new(
-          id        => $event->gramps_id,
-          origin    => 'Gramps',
-          type      => 'Birth',
-          blurb     => sprintf('Birth of %s', $person->display_name()),
-          date_iso  => (not $event->date->is_range) ? $event->date->as_dm_date->printf('%Y-%m-%d') : sprintf('%s - %s', $event->date->start, $event->date->end),
-          date_kind => scalar @dklparts ? sprintf('(%s)', join(' ', @dklparts),) : '',
-          sortval => $event->date->sortval,
-          );
-      }else {
-        $self->logger->warn(sprintf('Birth event %s cannot be matched with a person.',
-        $event->gramps_id));
-      }
+      $self->process_birth_event($event);
+    }elsif($event->type eq  'Death') {
+      $self->process_death_event($event);
+    }
+  }
+
+  method process_birth_event ($e) {
+    if (my $person = $self->_primary_person_for($e)) {
+      my @dklparts;
+      push @dklparts, $e->date->quality_label if (defined $e->date->quality_label && length($e->date->quality_label));
+      push @dklparts, $e->date->modifier_label if (defined $e->date->modifier_label && length($e->date->modifier_label));
+      $events->{ $e->gramps_id } =
+        App::Schierer::HPFan::Model::History::Event->new(
+        id        => $e->gramps_id,
+        origin    => 'Gramps',
+        type      => 'Birth',
+        blurb     => sprintf('Birth of %s', $person->display_name()),
+        date_iso  => (not $e->date->is_range) ? $e->date->as_dm_date->printf('%Y-%m-%d') : sprintf('%s - %s', $e->date->start, $e->date->end),
+        date_kind => scalar @dklparts ? sprintf('(%s)', join(' ', @dklparts),) : '',
+        sortval => $e->date->sortval,
+        );
+    }else {
+      $self->logger->warn(sprintf('Birth event %s cannot be matched with a person.',
+      $e->gramps_id));
+    }
+  }
+
+  method process_death_event ($e) {
+    if (my $person = $self->_primary_person_for($e)) {
+      my @dklparts;
+      push @dklparts, $e->date->quality_label if (defined $e->date->quality_label && length($e->date->quality_label));
+      push @dklparts, $e->date->modifier_label if (defined $e->date->modifier_label && length($e->date->modifier_label));
+      $events->{ $e->gramps_id } =
+        App::Schierer::HPFan::Model::History::Event->new(
+        id        => $e->gramps_id,
+        origin    => 'Gramps',
+        type      => 'Death',
+        blurb     => sprintf('Death of %s', $person->display_name()),
+        date_iso  => (not $e->date->is_range) ? $e->date->as_dm_date->printf('%Y-%m-%d') : sprintf('%s - %s', $e->date->start, $e->date->end),
+        date_kind => scalar @dklparts ? sprintf('(%s)', join(' ', @dklparts),) : '',
+        sortval => $e->date->sortval,
+        );
+    }else {
+      $self->logger->warn(sprintf('Death event %s cannot be matched with a person.',
+      $e->gramps_id));
     }
   }
 

@@ -8,16 +8,17 @@ class App::Schierer::HPFan::Model::Gramps::GrampsDate :
   isa(App::Schierer::HPFan::Logger) {
   use Carp;
   use overload
-    'cmp'      => \&_comparison,
-    'eq'       => \&_equality,
-    'ne'       => \&_inequality,
-    '""'       => \&to_string,
-    'fallback' => 1;
+    'cmp' => \&_op_cmp,
+    'eq'  => \&_op_eq,
+    '""'  => \&to_string,
+    'bool'  => sub { $_[0]->_isTrue },
+    fallback => 1,
+    'nomethod' => sub { $_[0]->logger->logcroak("No overload method for $_[3]")  };
 
   # Single date (partial ok)
-  field $year  : param //= 0;
-  field $month : param //= 0;    # 1..12 or 0 unknown
-  field $day   : param //= 0;    # 1..31 or 0 unknown
+  field $year  : param : reader //= 0;
+  field $month : param : reader //= 0;    # 1..12 or 0 unknown
+  field $day   : param : reader //= 0;    # 1..31 or 0 unknown
 
   # Range (if present) – same semantics, partials allowed
   field $start : param :reader //= undef;    # another GrampsDate or undef
@@ -25,12 +26,10 @@ class App::Schierer::HPFan::Model::Gramps::GrampsDate :
 
   ADJUST {
     if(defined($start)){
-      my $dh = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
-      $start = $dh->parse($start);
+      $self->logger->debug("found a defined start date: " . ref($start));
     }
     if(defined($end)){
-      my $dh = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
-      $end = $dh->parse($end);
+      $self->logger->debug("found a defined end date: " . ref($end));
     }
   }
 
@@ -82,32 +81,77 @@ class App::Schierer::HPFan::Model::Gramps::GrampsDate :
     defined($start) || defined($end) || $type =~ /^(?:range|span)$/;
   }
 
-  method _comparison ($other, $swap = 0) {
-    my $otherDate;
-    if (ref($other) eq 'App::Schierer::HPFan::Model::Gramps::GrampsDate') {
-      $otherDate = $other->as_dm_date;
+
+
+  # Monotone ordinal for ordering; no calendar lib needed.
+  sub _ord    ($y,$m,$d)    { ($y||0)*372 + (($m||1)*31) + ($d||1) }
+  sub _ord_hi ($y,$m,$d)    { ($y||0)*372 + (($m||12)*31) + ($d||31) }
+
+  # Interval key: [lo_ord, lo_excl, hi_inf, hi_ord, hi_excl]
+  sub _cmp_tuple ($self) {
+    if ($self->type eq 'single') {
+      my ($y,$m,$d) = ($self->year,$self->month,$self->day);
+      my $mod = $self->modifier // 0;
+      if    ($mod == 1) { return [ -9**9, 0, 0, _ord($y,$m,$d),    1 ] } # before: (-∞, X)
+      elsif ($mod == 2) { return [  _ord($y,$m,$d), 1, 1,  9**9,   0 ] } # after:  (X, +∞)
+      # about: treat as exact for ordering (or widen if desired)
+      my $lo = _ord($y,$m,$d);
+      my $hi = _ord_hi($y,$m,$d);
+      return [ $lo, 0, 0, $hi, 0 ];
     }
-    elsif (ref($other) eq 'Date::Manip::Date') {
-      $otherDate = $other;
+
+    # range/span
+    my ($s,$e) = ($self->start, $self->end);
+    my ($sy,$sm,$sd) = $s ? ($s->year,$s->month,$s->day) : (0,0,0);
+    my $lo = _ord($sy,$sm,$sd);
+
+    my $mod = $self->modifier // 0;
+    if ($mod == 5 && !$e) {                         # FROM A
+      return [ $lo, 0, 1, 9**9, 0 ];                # [A, +∞)
     }
-    my $dmDate = $self->as_dm_date;
-    if (defined($otherDate) && defined($dmDate)) {
-      return $dmDate->cmp($otherDate);
+    if ($e) {
+      my ($ey,$em,$ed) = ($e->year,$e->month,$e->day);
+      my $hi = _ord_hi($ey,$em,$ed);
+      return [ $lo, 0, 0, $hi, 0 ];                 # closed [A, B] (BETWEEN too)
     }
-    elsif ($other->can('to_string')) {
-      return $self->to_string cmp $other->to_string;
-    }
-    elsif ($self->precision ne 'none') {
-      return 1;
-    }
-    elsif (length($self->precision)) {
-      return -1;
-    }
-    return 1;
+    return [ -9**9, 0, 1, 9**9, 0 ];                # unknown↔∞
   }
 
-  method _equality ($other, $swap = 0) {
-    return $self->_comparison($other, $swap) == 0 ? 1 : 0;
+  sub _op_cmp ($a, $b, $swap) {
+    # Fallback if RHS isn't comparable: compare strings
+    return (($swap ? "$b" : "$a") cmp ($swap ? "$a" : "$b"))
+      unless (defined $a && defined $b && eval { $a->can('_cmp_tuple') && $b->can('_cmp_tuple') });
+
+    my $A = $a->_cmp_tuple;
+    my $B = $b->_cmp_tuple;
+
+    my $cmp =
+        ($A->[0] <=> $B->[0]) ||   # lo_ord
+        ($A->[1] <=> $B->[1]) ||   # lo_excl (inclusive first)
+        ($A->[2] <=> $B->[2]) ||   # hi_inf  (finite before infinite)
+        ($A->[3] <=> $B->[3]) ||   # hi_ord
+        ($A->[4] <=> $B->[4]);     # hi_excl
+    return $swap ? -$cmp : $cmp;
+  }
+
+  sub _op_eq ($a, $b, $swap) {
+    # undef handling
+    return (!defined($a) && !defined($b)) ? 1 : 0
+      unless (defined $a && defined $b);
+
+    # If either side is not a GrampsDate, fall back to string eq.
+    return (("$a") eq ("$b"))
+      unless (blessed($a) && blessed($b)
+              && $a->isa(__PACKAGE__) && $b->isa(__PACKAGE__));
+
+    # Both sides are GrampsDate: compare tuple elements exactly.
+    my $A = $a->_cmp_tuple;
+    my $B = $b->_cmp_tuple;
+    return 0 unless @$A == @$B;
+    for my $i (0..$#$A) {
+      return 0 if $A->[$i] != $B->[$i];
+    }
+    return 1;
   }
 
   # ---------- Safe formatting ----------

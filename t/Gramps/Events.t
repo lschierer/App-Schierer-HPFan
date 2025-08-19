@@ -18,20 +18,18 @@ use Test::More;
 use DBI;
 use DBD::SQLite::Constants qw/:dbd_sqlite_string_mode/;
 
-BEGIN { use_ok('App::Schierer::HPFan::Model::Gramps') };
+BEGIN { use_ok('App::Schierer::HPFan::Model::Gramps') }
 
 #########################
 
 # Insert your test code below, the Test::More module is use()ed here so read
 # its man page ( perldoc Test::More ) for help writing this test script.
 
-
-
 my $lc = App::Schierer::HPFan::Logger::Config->new('App-Schierer-HPFan');
 my $log4perl_logger = $lc->init('testing');
 
 my $gramps_file = './share/potter_universe.gramps';
-my $gramps_db = './share/grampsdb/sqlite.db';
+my $gramps_db   = './share/grampsdb/sqlite.db';
 
 my $gramps = App::Schierer::HPFan::Model::Gramps->new(
   gramps_export => $gramps_file,
@@ -44,9 +42,9 @@ $gramps->import_from_xml;
 
 my $expected_events = count_xml_elements($gramps_file, 'event');
 
-is(scalar keys %{$gramps->events}, $expected_events,
-   "Imported $expected_events events");
-ok(scalar keys %{$gramps->events} > 0, "Events were imported");
+is(scalar keys %{ $gramps->events },
+  $expected_events, "Imported $expected_events events");
+ok(scalar keys %{ $gramps->events } > 0, "Events were imported");
 
 my @eventKeys = keys %{ $gramps->events };
 
@@ -55,25 +53,42 @@ for my $index (0 .. $#eventKeys) {
     my $key   = $eventKeys[$index];
     my $event = $gramps->events->{$key};
 
-    isa_ok($event, 'App::Schierer::HPFan::Model::Gramps::Event', sprintf('object test for index %s', $index));
+    isa_ok(
+      $event,
+      'App::Schierer::HPFan::Model::Gramps::Event',
+      sprintf('object test for index %s', $index)
+    );
 
     my $date = $event->date;
     if ($date) {
-      isa_ok($date, 'App::Schierer::HPFan::Model::Gramps::GrampsDate', sprintf('event date for %s', $event->gramps_id));
+      isa_ok(
+        $date,
+        'App::Schierer::HPFan::Model::Gramps::GrampsDate',
+        sprintf('event date for %s', $event->gramps_id)
+      );
       my $dmDate = $date->as_dm_date;
-      if($no_date_events->{$event->gramps_id}){
+      if ($no_date_events->{ $event->gramps_id }) {
         # DB says "no date" — we should NOT get a parseable DM date
-        ok(!defined($dmDate), sprintf('no DM date (as expected) for %s', $event->gramps_id));
+        ok(!defined($dmDate),
+          sprintf('no DM date (as expected) for %s', $event->gramps_id));
         pass(sprintf 'Event %s has no date (acceptable)', $event->gramps_id);
-      } else {
-        ok(defined($dmDate), sprintf('as_dm_date returns something %s', $event->gramps_id));
-        if($dmDate){
-          isa_ok($dmDate, 'Date::Manip::Date', sprintf('Date::Manip::Date for %s', $event->gramps_id));
+      }
+      else {
+        ok(defined($dmDate),
+          sprintf('as_dm_date returns something %s', $event->gramps_id));
+        if ($dmDate) {
+          isa_ok($dmDate, 'Date::Manip::Date',
+            sprintf('Date::Manip::Date for %s', $event->gramps_id));
         }
         my $s = $date->to_string // '';
-        ok(length($s) > 0, sprintf 'GrampsDate for %s prints something', $event->gramps_id);
+        ok(
+          length($s) > 0,
+          sprintf 'GrampsDate for %s prints something',
+          $event->gramps_id
+        );
       }
-    } else {
+    }
+    else {
       pass(sprintf 'Event %s has no date (acceptable)', $event->gramps_id);
     }
 
@@ -85,9 +100,9 @@ done_testing();
 
 # Count elements in the XML file
 sub count_xml_elements($file, $element) {
-    my $content = Path::Tiny::path($file)->slurp_utf8;
-    my @matches = $content =~ /<$element\s/g;
-    return scalar @matches;
+  my $content = Path::Tiny::path($file)->slurp_utf8;
+  my @matches = $content =~ /<$element\s/g;
+  return scalar @matches;
 }
 
 sub events_with_no_date {
@@ -102,8 +117,8 @@ sub events_with_no_date {
     );
     $dbh->{sqlite_string_mode} = DBD_SQLITE_STRING_MODE_UNICODE_FALLBACK;
     # One-time-ish setup (safe if repeated)
-    $dbh->do('PRAGMA journal_mode=WAL');     # persistent per DB
-    $dbh->do('PRAGMA synchronous=NORMAL');   # performance tradeoff ok for dev
+    $dbh->do('PRAGMA journal_mode=WAL');      # persistent per DB
+    $dbh->do('PRAGMA synchronous=NORMAL');    # performance tradeoff ok for dev
     $dbh->do('PRAGMA temp_store=MEMORY');
 
     # "No date" = sortval 0 OR all dateval parts are 0 (day,month,year)

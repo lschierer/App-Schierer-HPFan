@@ -15,7 +15,7 @@ require App::Schierer::HPFan::Logger::Config;
 require App::Schierer::HPFan::Model::Gramps;
 
 use Test::More;
-BEGIN { use_ok('App::Schierer::HPFan::Model::Gramps') };
+BEGIN { use_ok('App::Schierer::HPFan::Model::Gramps') }
 
 #########################
 
@@ -26,7 +26,7 @@ my $lc = App::Schierer::HPFan::Logger::Config->new('App-Schierer-HPFan');
 my $log4perl_logger = $lc->init('testing');
 
 my $gramps_file = './share/potter_universe.gramps';
-my $gramps_db = './share/grampsdb/sqlite.db';
+my $gramps_db   = './share/grampsdb/sqlite.db';
 
 my $gramps = App::Schierer::HPFan::Model::Gramps->new(
   gramps_export => $gramps_file,
@@ -37,15 +37,15 @@ $gramps->_import_families;
 
 my $expected_families = count_xml_elements($gramps_file, 'family');
 
-is(scalar keys %{$gramps->families}, $expected_families,
-  "Imported $expected_families families");
-ok(scalar keys %{$gramps->families} > 0, "Familes were imported");
+is(scalar keys %{ $gramps->families },
+  $expected_families, "Imported $expected_families families");
+ok(scalar keys %{ $gramps->families } > 0, "Familes were imported");
 
 done_testing();
 
 # Count elements in the XML file
 sub count_xml_elements($file, $element) {
-    my $content = Path::Tiny::path($file)->slurp_utf8;
-    my @matches = $content =~ /<$element\s/g;
-    return scalar @matches;
+  my $content = Path::Tiny::path($file)->slurp_utf8;
+  my @matches = $content =~ /<$element\s/g;
+  return scalar @matches;
 }

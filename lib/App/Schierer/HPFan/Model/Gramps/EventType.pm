@@ -21,9 +21,6 @@ class App::Schierer::HPFan::Model::Gramps::EventType :
   field $value_to_sort_order;
 
   ADJUST {
-    $self->logger->debug("item of type " . ref($self) . " being created.");
-  }
-  ADJUST {
     Readonly::Hash my %tmp => {
       0  => $string,
       1  => 'Marriage',
@@ -58,14 +55,14 @@ class App::Schierer::HPFan::Model::Gramps::EventType :
     };
     $value_to_sort_order = \%tmp;
   }
-
+  state %SEEN;
   method _sortValue {
-    my $sortValue;
+    my $sortValue = 999;
     if(defined($value)) {
       if(exists $value_to_sort_order->{$value}){
         $sortValue = $value_to_sort_order->{$value};
       } else {
-        $self->logger->dev_guard("Missing Sort Map for value $value");
+        $self->logger->dev_guard("Missing Sort Map for value $value") unless( $SEEN{$value}++);
         $sortValue = $value;
       }
     }

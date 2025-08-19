@@ -10,5 +10,6 @@
     "outDir": "./public/",
     "declarationDir": "./public/types",
     "composite": true
-  }
+  },
+  "include": ["./lib/**/*.ts", "./infrastructure/**/*.ts"]
 }

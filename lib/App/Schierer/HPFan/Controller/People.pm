@@ -3,6 +3,7 @@ use experimental qw(class);
 use utf8::all;
 use File::FindLib 'lib';
 require Data::Printer;
+require GraphViz;
 require Mojolicious::Controller;
 require Mojolicious::Plugin;
 require App::Schierer::HPFan::Model::Gramps;
