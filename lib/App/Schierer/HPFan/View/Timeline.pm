@@ -3,28 +3,22 @@ use utf8::all;
 use experimental qw(class);
 require App::Schierer::HPFan::Model::History::Event;
 require Scalar::Util;
-require GraphViz2;
 require Pandoc;
 
 class App::Schierer::HPFan::View::Timeline
   : isa(App::Schierer::HPFan::Logger) {
-  use SVG;
   use List::AllUtils qw( any min max firstidx );
   use Scalar::Util   qw(blessed);
-
-  #field $top_pad        : param //= 40;
-  #field $bottom_pad     : param //= 40;
-  #field $left_pad       : param //= 80;
-  #field $col_gap        : param //= 140;
-  #field $lane_jitter    : param //= 10;
-  #field $SHOW_TICKS     : param //= 1;
-  #field $tick_step      : param //= undef;
+  use SVG;  #something about this package requies that it be used not just required
+  use Carp;
 
   field $name : param //= 'Timeline';
 
   field $events : param //= [];
 
   # internal fields
+
+  # pandoc for future use
   field $customCommonMark = join('+',
     qw(commonmark alerts attributes autolink_bare_uris footnotes implicit_header_references pipe_tables raw_html rebase_relative_paths smart gfm_auto_identifiers)
   );
@@ -34,70 +28,32 @@ class App::Schierer::HPFan::View::Timeline
   field $nodes_by_sortval = {};
   field $category_offset  = {};
 
-  field $subgraph_opts = {
-    rank    => 'min',
-    margin  => 5,
-  };
-
-  field $graph_opts = {
-    bgcolor   => "transparent",
-    layout    => 'fdp',
-    #rankdir   => 'TB',
-    overlap   => '3:false',
-    splines   => 'line',
-    concentrate => 'false',
-    inputscale  => 72,
-    #diredgeconstraints  => 'true',
-    #mode          => "hier",
-    sep           => 10,
-    start    => "random",
-  };
-
-  field $node_opts = {
-    fillcolor => "transparent",
-
-  };
-
-  field $global_opts = {
-    directed => 1,
-    format   => 'svg',
-    name     => $name,
-    strict   => 1,
-  };
-
   field $base_x = 10; # I decided 100 was too much separation
   #default this to a very high number that should be bigger than my julian dates.
   field $base_y = 9**9;
 
   field $min_date = 9**9;
   field $max_date = 0;
+  field $ymax = 4000;
+  field $xmax = 880;
+  field $vfr = 0;  # vertial version of an FR unit for minimum node separation in the y axis
 
   # output fields
-  field $graph : reader;
+  field $graph :reader;
 
   ADJUST {
-    srand(time);
-    $graph = GraphViz2->new(
-      global   => $global_opts,
-      graph    => $graph_opts,
-      subgraph => $subgraph_opts,
-      logger   => $self->logger,
-      node     => $node_opts,
-
+    $graph = SVG->new(
+      viewBox => "0 0 $xmax $ymax",  # defines coordinate system
+      preserveAspectRatio => 'xMidYMid meet',  # how to scale
     );
-  }
-
-  method get_program {
-    return $graph->dot_input() //'Run failed';
   }
 
   method create {
     $self->_organize_events_by_category_and_date();
-    #$self->_create_timeline_dot_nodes();
     $self->_create_detail_nodes_and_connections();
-    $self->_create_timeline_edges();
+    #$self->_create_timeline_edges();
 
-    $graph->run();
+
     return $self->_process_svg_output();
   }
 
@@ -108,7 +64,7 @@ class App::Schierer::HPFan::View::Timeline
       my @catNames = keys $categories->%*;
       my $catIndex = firstidx {$_ eq $category } @catNames;
 
-      my $xcord = 10 * $catIndex;
+      my $xcord = 10 * ($catIndex +1);
 
       if (defined($event)) {
           # Detail node spreading logic
@@ -117,7 +73,7 @@ class App::Schierer::HPFan::View::Timeline
           my $num_events = @events_on_date;
 
           my $detail_start = $xcord + 50;
-          my $detail_width = 800;
+          my $detail_width = $xmax;
           my $separation = 100 / $num_events;
 
           if ($num_events == 1) {
@@ -129,20 +85,13 @@ class App::Schierer::HPFan::View::Timeline
 
       my $date_span = $max_date - $min_date;
       # INVERT: Subtract from max to flip the timeline
-      # Use a generous spacing for your current sample
-      my $pixels_per_event = 100;  # Plenty of room for testing
-      my $current_event_count = scalar @{ $events };
-      my $estimated_height = $current_event_count * $pixels_per_event;
-
-      my $normalized_y = 100 + (($max_date - $julian) / $date_span) * $estimated_height;
-
+      my $normalized_y = ($julian - $min_date) / ($max_date - $min_date) * $ymax;
+      $normalized_y = max($normalized_y, );
       return {
           x => int($xcord),
           y => int($normalized_y),
       };
   }
-
-
 
   method _organize_events_by_category_and_date {
     foreach my $event ($events->@*) {
@@ -161,6 +110,8 @@ class App::Schierer::HPFan::View::Timeline
 
       push @{ $categories->{$category}->{$date} }, $event;
     }
+    $vfr = $ymax / scalar @$events;  # fractional unit based on event count
+    $self->logger->debug("vfr is $vfr");
   }
 
   method _create_detail_nodes_and_connections {
@@ -168,125 +119,138 @@ class App::Schierer::HPFan::View::Timeline
       foreach my $index (0 .. $#catNames) {
         my $category = $catNames[$index];
 
-          foreach my $date (keys $categories->{$category}->%*) {
-            next if exists $nodes_by_sortval->{$date};
-              my $dot_node_name = "dot_${category}_${date}";
-              my @events_on_date = @{ $categories->{$category}->{$date} };
-              my $pos = $self->_get_normalized_position($category, $date);
+          my $previous_pos;
+          foreach my $date (sort keys $categories->{$category}->%*) {
+            # events will collide on dates, so assume that we might have already created
+            # a given node perhaps as part
+            my $dot_node_name = "dot_${category}_${date}";
+            next if exists $nodes_by_sortval->{$date}->{$dot_node_name};
+            $nodes_by_sortval->{$date}->{$dot_node_name} = 1;
 
-              # Create subgraph for this date (no cluster_ prefix = no visual clustering)
-              $graph->push_subgraph(name => "date_$date");
+            my @events_on_date = @{ $categories->{$category}->{$date} };
+            my $pos = $self->_get_normalized_position($category, $date);
 
-              $graph->add_node(
-                name   => $dot_node_name,
-                xlabel => $date,
-                shape  => 'point',
-                style  => 'filled',
-                class  => $category,
-                pos    => sprintf('%s,%s!', $pos->{x}, $pos->{y}),
-                pin    => 'true',
+            # y cordinates go down from upper left corner
+            # 3 is the minumum spot at which we can draw a node circle.
+            my $miny = defined($previous_pos) ? $previous_pos->{y} + $vfr : 3;
+            $pos->{y} = max($pos->{y},$miny);
+            my $nc = $graph->circle(
+              cx      => $pos->{x},
+              cy      => $pos->{y},
+              r       => 3,
+              class   => "node timeline $category",
+              id      => "dot_${category}_${date}",
+            );
+            if(defined $previous_pos) {
+              $graph->line(
+                x1      => $pos->{x},
+                y1      => $previous_pos->{y} + 3,
+                x2      => $pos->{x},
+                y2      => $pos->{y} - 3,
+                class   => "timeline edge $category",
               );
-              $nodes_by_sortval->{$date}  = {};
+            }
+
+            $previous_pos = $pos;
 
               foreach my $event (@events_on_date) {
-                # do not generate detail nodes until the timeline itself displays correctly.
                 #$self->_create_detail_node_for_event($event, $dot_node_name, $category);
               }
-
-              $graph->pop_subgraph();
           }
+          $self->logger->debug("svg is currently ". $graph->xmlify);
       }
-  }
-
-  method _create_detail_node_for_event($event, $dot_node_name, $category) {
-
-      my $sources = scalar($event->sources) ? join('\n', $event->sources->@*) : ' ';
-
-      my @parts;
-      push @parts, $event->blurb if defined($event->blurb) && length($event->blurb) > 0;
-      push @parts, $event->description if defined($event->description) && length($event->description) > 0;
-      push @parts, $sources if scalar($sources) && length($sources) > 0;
-      my $label = sprintf('{%s}', join('|', @parts));
-
-      state $detail_offset = 0;
-      my $pos = $self->_get_normalized_position($category, $event->sortval, $event);
-      my $x_offset = 50;
-      my $min_offset = scalar keys $categories->%*;
-      $min_offset = $min_offset * 10 + 2;
-      #my $xcord = int($min_offset + ( 1 +  (int(rand($x_offset)) ) % $x_offset ) );
-      my $xcord = max($min_offset, $pos->{x});
-      my $node_name = sprintf('detail_%s', $event->id);
-      next if exists $nodes_by_sortval->{$event->sortval}->{$node_name};
-      $nodes_by_sortval->{$event->sortval}->{$node_name} = 1;
-      $graph->add_node(
-          name  => $node_name,
-          shape => 'Mrecord',
-          label => $label,
-          class => $category,
-          style => 'filled',
-          pos   => sprintf('%s,%s', $xcord, $pos->{y}),
-          pin   => 'true',
-      );
-
-      $graph->add_edge(
-          from => "detail_" . $event->id,
-          to => $dot_node_name,
-          style     => 'dotted',
-          constraint  => "false",
-          class       =>"dotted $category",
-      );
-  }
-
-
-  method _create_timeline_edges {
-    my @catNames = keys $categories->%*;
-    foreach my $index (0 .. $#catNames) {
-      my $category = $catNames[$index];
-      my @dates    = sort keys $categories->{$category}->%*;
-
-      for my $i (0 .. $#dates - 1) {
-        my $to_dot    = "dot_${category}_$dates[$i]";
-        my $from_dot  = "dot_${category}_$dates[$i + 1]";
-        my $date1 = $dates[$i];
-        my $date2 = $dates[$i + 1];
-        my $delta = $date2 - $date1;
-
-        $self->logger->debug(
-          sprintf('Creating timeline edge: %s -> %s; date1: %s, date2: %s, delta: %s',
-          $from_dot, $to_dot, $date1, $date2, $delta));
-
-        $graph->add_edge(
-          from      => $from_dot,
-          to        => $to_dot,
-          style     => 'solid',
-          class     => $category,
-          dir       => 'none',
-          arrowhead => 'none',
-          arrowtail => 'none',
-          minlen       => $delta,
-          constraint  => "true",
-          weight      => $delta,
-        );
-      }
-    }
   }
 
   method _process_svg_output {
-    my $svg = $graph->dot_output();
-    $self->logger->debug(sprintf('Generated DOT: %s', $graph->dot_input));
-
+    my $svg = $graph->xmlify(
+        -pubid => "-//W3C//DTD SVG 1.0//EN",
+        -inline   => 1
+    );
     # Your existing SVG cleanup
-    $svg =~ s/(stroke|fill)="black"//g;
-    $svg =~ s/(stroke|fill)="none"//g;
-    $svg =~ s/<svg ([^>]*)width="[^"]*"/<svg $1/;
-    $svg =~ s/<svg ([^>]*)height="[^"]*"/<svg $1/;
-    $svg =~ s/<svg /<svg preserveAspectRatio="xMidYMid meet" width="100%" height="100%" /;
     $svg =~ s/<text ([^>]+) font-family="[^"]+" font-size="[^"]+">/<text $1 class="spectrum-Heading spectrum-Heading--size-M spectrum-Heading--serif">/g;
     return $svg;
   }
 }
 1;
 __END__
+
+#### from graphviz
+
+method _create_detail_node_for_event($event, $dot_node_name, $category) {
+
+    my $sources = scalar($event->sources) ? join('\n', $event->sources->@*) : ' ';
+
+    my @parts;
+    push @parts, $event->blurb if defined($event->blurb) && length($event->blurb) > 0;
+    push @parts, $event->description if defined($event->description) && length($event->description) > 0;
+    push @parts, $sources if scalar($sources) && length($sources) > 0;
+    my $label = sprintf('{%s}', join('|', @parts));
+
+    state $detail_offset = 0;
+    my $pos = $self->_get_normalized_position($category, $event->sortval, $event);
+    my $x_offset = 50;
+    my $min_offset = scalar keys $categories->%*;
+    $min_offset = $min_offset * 10 + 2;
+    #my $xcord = int($min_offset + ( 1 +  (int(rand($x_offset)) ) % $x_offset ) );
+    my $xcord = max($min_offset, $pos->{x});
+    my $node_name = sprintf('detail_%s', $event->id);
+    next if exists $nodes_by_sortval->{$event->sortval}->{$node_name};
+    $nodes_by_sortval->{$event->sortval}->{$node_name} = 1;
+    $graph->add_node(
+        name  => $node_name,
+        shape => 'Mrecord',
+        label => $label,
+        class => $category,
+        style => 'filled',
+        pos   => sprintf('%s,%s', $xcord, $pos->{y}),
+        pin   => 'true',
+    );
+
+    $graph->add_edge(
+        from => "detail_" . $event->id,
+        to => $dot_node_name,
+        style     => 'dotted',
+        constraint  => "false",
+        class       =>"dotted $category",
+    );
+}
+
+
+method _create_timeline_edges {
+  my @catNames = keys $categories->%*;
+  foreach my $index (0 .. $#catNames) {
+    my $category = $catNames[$index];
+    my @dates    = sort keys $categories->{$category}->%*;
+
+    for my $i (0 .. $#dates - 1) {
+      my $to_dot    = "dot_${category}_$dates[$i]";
+      my $from_dot  = "dot_${category}_$dates[$i + 1]";
+      my $date1 = $dates[$i];
+      my $date2 = $dates[$i + 1];
+      my $delta = $date2 - $date1;
+
+      $self->logger->debug(
+        sprintf('Creating timeline edge: %s -> %s; date1: %s, date2: %s, delta: %s',
+        $from_dot, $to_dot, $date1, $date2, $delta));
+
+      $graph->add_edge(
+        from      => $from_dot,
+        to        => $to_dot,
+        style     => 'solid',
+        class     => $category,
+        dir       => 'none',
+        arrowhead => 'none',
+        arrowtail => 'none',
+        minlen       => $delta,
+        constraint  => "true",
+        weight      => $delta,
+      );
+    }
+  }
+}
+
+
+#### end graphviz
 
 # Build a vertical "git graph"-like SVG.
 # $events  = arrayref of App::Schierer::HPFan::Model::History::Event
