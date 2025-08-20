@@ -50,11 +50,13 @@ class App::Schierer::HPFan::Model::Gramps::Person :
   method json_data       { $self->_get_field('json_data') }
 
   method gender {
-    my $gv         = $self->_get_field('gender');
+    my $gv = $self->_get_field('gender');
 
     my %GENDER_MAP = (0 => 'F', 1 => 'M', 2 => 'U');
-    $self->logger->debug(sprintf('"%s" has gender "%s", I will return "%s".',
-    $gramps_id, $gv, $GENDER_MAP{$gv} // 'U'));
+    $self->logger->debug(sprintf(
+      '"%s" has gender "%s", I will return "%s".',
+      $gramps_id, $gv, $GENDER_MAP{$gv} // 'U'
+    ));
     if (defined($gv)) {
       return $GENDER_MAP{$gv} // 'U';
     }

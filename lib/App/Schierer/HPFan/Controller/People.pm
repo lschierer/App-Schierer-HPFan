@@ -213,7 +213,8 @@ s/<svg /<svg preserveAspectRatio="xMidYMid meet" width="100%" height="100%" /;
     # Determine gender-based styling
 
     my $gender = $person->gender;
-    $logger->debug("detected gender $gender for person id " . $person->gramps_id);
+    $logger->debug(
+      "detected gender $gender for person id " . $person->gramps_id);
 
     # Add person node
     my $label = $person->display_name();
@@ -236,7 +237,7 @@ s/<svg /<svg preserveAspectRatio="xMidYMid meet" width="100%" height="100%" /;
       foreach my $cr (@{ $family->child_refs() }) {
         $logger->debug("cr is a " . Scalar::Util::blessed($cr));
         my $ch = $cr->ref;
-        unless ($ch){
+        unless ($ch) {
           $logger->logcroak("no ref in cr: " . Data::Printer::np($cr));
           next;
         }
@@ -247,13 +248,14 @@ s/<svg /<svg preserveAspectRatio="xMidYMid meet" width="100%" height="100%" /;
       }
 
       if (defined($child_ref)) {
-       if( ($child_ref->father_rel && $child_ref->father_rel eq 'Foster')
-        and ($child_ref->mother_rel && $child_ref->mother_rel eq 'Foster'))
-        {
+        if (  ($child_ref->father_rel && $child_ref->father_rel eq 'Foster')
+          and ($child_ref->mother_rel && $child_ref->mother_rel eq 'Foster')) {
           next;
         }
-      } else {
-        $logger->warn("child_ref is not defined for family ". $family->gramps_id);
+      }
+      else {
+        $logger->warn(
+          "child_ref is not defined for family " . $family->gramps_id);
       }
 
       # Create invisible family node as connection point

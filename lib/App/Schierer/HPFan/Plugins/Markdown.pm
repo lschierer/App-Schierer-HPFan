@@ -20,6 +20,7 @@ package App::Schierer::HPFan::Plugins::Markdown {
   );
 
   my $logger;
+
   sub register ($self, $app, $config) {
     $logger = $app->logger(__PACKAGE__);
     $logger->info(sprintf(

@@ -18,13 +18,15 @@ class App::Schierer::HPFan::Model::Gramps::Family :
   field $child_refs : param = [];     # array of hashrefs with hlink, mrel, frel
   field $attributes : param = [];
   field $note_refs  : param = [];
-  field $citation_refs : param = [];
-  field $tag_refs      : param = [];
-  field $ALLOWED_FIELD_NAMES : reader =
-    { map { $_ => 1 } qw( gramps_id change private gramps_id
-  father_handle
-  mother_handle
-  json_data     ) };
+  field $citation_refs       : param  = [];
+  field $tag_refs            : param  = [];
+  field $ALLOWED_FIELD_NAMES : reader = {
+    map { $_ => 1 }
+      qw( gramps_id change private gramps_id
+      father_handle
+      mother_handle
+      json_data     )
+  };
 
   method event_refs()    { [@$event_refs] }
   method child_refs()    { [@$child_refs] }

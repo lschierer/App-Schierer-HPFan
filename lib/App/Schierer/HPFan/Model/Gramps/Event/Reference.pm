@@ -14,9 +14,14 @@ class App::Schierer::HPFan::Model::Gramps::Event::Reference :
           $self->role->%*
         )
       );
-    }elsif(not $self->role->isa('App::Schierer::HPFan::Model::Gramps::Event::RoleType')){
-      $self->logger->dev_guard(sprintf('unexpected type for $self->role in %s: %s',
-      ref($self), ref($self->role) ));
+    }
+    elsif (
+      not $self->role->isa(
+        'App::Schierer::HPFan::Model::Gramps::Event::RoleType')) {
+      $self->logger->dev_guard(sprintf(
+        'unexpected type for $self->role in %s: %s',
+        ref($self), ref($self->role)
+      ));
     }
   }
 }

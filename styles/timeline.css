@@ -1,3 +1,4 @@
+/* stylelint-disable property-no-unknown */
 @import url("@spectrum-css/tokens");
 @import url("@spectrum-css/page");
 @import url("@spectrum-css/typography");
@@ -15,129 +16,56 @@ iconify-icon {
   display: block;
   width: 100%;
   height: auto;
-}
+  font-optical-sizing: auto;
 
-.axis {
-  stroke: var(--spectrum-global-color-gray-600);
-  stroke-width: 1;
-}
+  --mod-heading-margin-end: 1em;
+  --mod-heading-margin-start: 0;
+  --mod-heading-serif-font-family: "EB Garamond", serif;
 
-.tick {
-  stroke: var(--spectrum-global-color-gray-400);
-}
+  & .spectrum-Heading--size-M {
+    --mod-heading-font-size: 10px;
+  }
 
-.ticklabel {
-  fill: var(--spectrum-global-color-gray-700);
-  font: 12px var(--spectrum-alias-body-text-font-family);
-}
-
-.events .stem {
-  stroke-width: 2;
-  vector-effect: non-scaling-stroke;
-  stroke: currentcolor;
-  fill: none;
-}
-
-.events .dot {
-  /* stylelint-disable-next-line declaration-property-value-no-unknown */
-  r: 4;
-  fill: currentcolor;
-  stroke: none;
-}
-
-/* SVG sets r; CSS can override via presentation attrs if needed */
-
-.events .range {
-  stroke-width: 3;
-  vector-effect: non-scaling-stroke;
-  stroke: currentcolor;
-  fill: none;
-}
-
-.events .cap {
-  vector-effect: non-scaling-stroke;
-  stroke: currentcolor;
-  fill: none;
+  & .spectrum-Heading--size-S {
+    --mod-heading-font-size: 8px;
+  }
 }
 
 /* type-based colors (fallbacks) */
-.events .birth {
+.birth {
   color: var(--spectrum-semantic-positive-color-default, #0a0);
 }
 
-.events .death {
+.death {
   color: var(--spectrum-semantic-negative-color-default, #b00);
 }
 
-.events .other {
+.other {
   color: var(--spectrum-global-color-blue-600, #06c);
 }
 
 /* qualifiers */
-.events .estimated .range,
-.events .estimated .stem {
+.estimated.range,
+.estimated {
   stroke-dasharray: 4 3;
 }
 
-.events .calculated .range,
-.events .calculated .stem {
+.calculated.range,
+.calculated {
   stroke-dasharray: 2 2;
 }
 
-/* before/after/between glyph tweaks (optional caps already drawn) */
-
-/* tag-driven hues (compose freely) */
-.events .mundane.england {
-  background-color: transparent;
-  background-image: linear-gradient(
-    175deg,
-    var(--spectrum-gray-200) 15%,
-    var(--spectrum-red-200) 90%
-  );
-}
-
-.events .mundane.scotland {
-  background-color: transparent;
-  background-image: linear-gradient(
-    175deg,
-    var(--spectrum-gray-200) 15%,
-    var(--spectrum-blue-200) 90%
-  );
-}
-
-.events .mundane.ireland {
-  background-color: transparent;
-  background-image: linear-gradient(
-    175deg,
-    var(--spectrum-gray-200) 15%,
-    var(--spectrum-green-200) 90%
-  );
-}
-
-.events .mundane.gb {
-  background-color: transparent;
-  background-image: linear-gradient(
-    175deg,
-    var(--spectrum-gray-200) 15%,
-    var(--spectrum-red-200),
-    var(--spectrum-blue-200)
-  );
-}
-
-.events .color-magical {
-  background-color: var(--spectrum-purple-200);
-}
-
-.events .religious {
-  background-color: var(--spectrum-orange-200);
-}
-
+/* attributes of the people associated with events */
 .color-female {
   color: var(--color-female);
+
+  --gender-shade: var(--color-female);
 }
 
 .color-male {
   color: var(--color-male);
+
+  --gender-shade: var(--color-male);
 }
 
 iconify-icon.color-female {
@@ -148,10 +76,74 @@ iconify-icon.color-male {
   color: var(--color-male);
 }
 
-.events .color-male {
-  --gender-shade: var(--color-male);
+/* category based styling */
+.mundane.england {
+  background-color: transparent;
+  background-image: linear-gradient(
+    175deg,
+    var(--spectrum-gray-200) 15%,
+    var(--spectrum-red-200) 90%
+  );
 }
 
-.events .color-female {
-  --gender-shade: var(--color-female);
+.mundane.scotland {
+  background-color: transparent;
+  background-image: linear-gradient(
+    175deg,
+    var(--spectrum-gray-200) 15%,
+    var(--spectrum-blue-200) 90%
+  );
+}
+
+.mundane.ireland {
+  background-color: transparent;
+  background-image: linear-gradient(
+    175deg,
+    var(--spectrum-gray-200) 15%,
+    var(--spectrum-green-200) 90%
+  );
+}
+
+.mundane.gb {
+  background-image: linear-gradient(
+    175deg,
+    var(--spectrum-gray-200) 15%,
+    var(--spectrum-red-200),
+    var(--spectrum-blue-200)
+  );
+}
+
+.magical {
+  --category-color: var(--spectrum-purple-600);
+}
+
+.religious {
+  --category-color: var(--spectrum-orange-200);
+}
+
+.generic {
+  --category-color: var(--text-1);
+}
+
+/* defaults */
+
+.edge {
+  stroke-width: 2;
+  stroke: var(--category-color);
+}
+
+.edge path {
+  fill: none;
+  stroke: var(--category-color);
+}
+
+.node text {
+  stroke-width: 0.5;
+}
+
+.node {
+  fill: none;
+  stroke-width: 2;
+  stroke: var(--category-color);
+  fontcolor: var(--category-color);
 }

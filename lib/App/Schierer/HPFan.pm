@@ -40,9 +40,8 @@ package App::Schierer::HPFan {
 
     my $lc = App::Schierer::HPFan::Logger::Config->new('App-Schierer-HPFan');
     my $log4perl_logger = $lc->init($mode);
-    my $app_log = App::Schierer::HPFan::Logger::MojoLog4Perl->new(
-       l4p => Log::Log4perl->get_logger('App-Schierer-HPFan'),
-    );
+    my $app_log         = App::Schierer::HPFan::Logger::MojoLog4Perl->new(
+      l4p => Log::Log4perl->get_logger('App-Schierer-HPFan'),);
     $self->log($app_log);
 
     $self->helper(

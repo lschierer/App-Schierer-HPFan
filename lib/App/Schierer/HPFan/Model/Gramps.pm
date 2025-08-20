@@ -174,14 +174,17 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
   }
 
   method find_events_for_person ($person) {
-    $self->logger->debug(sprintf('find_events_for_person called for "%s"', $person->gramps_id));
+    $self->logger->debug(
+      sprintf('find_events_for_person called for "%s"', $person->gramps_id));
 
     my @pe;
     foreach my $cr ($person->event_refs->@*) {
-      my $event = $events->{$cr->ref};
-      $self->logger->debug(sprintf('found event "%s" for handle "%s".',
-      $event? $event->handle : "Undefined", $cr->ref));
-      push @pe, $event if($event);
+      my $event = $events->{ $cr->ref };
+      $self->logger->debug(sprintf(
+        'found event "%s" for handle "%s".',
+        $event ? $event->handle : "Undefined", $cr->ref
+      ));
+      push @pe, $event if ($event);
     }
     $self->logger->debug("retrieved list " . Data::Printer::np(@pe));
     my $date_helper = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
@@ -260,45 +263,61 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
   }
 
   method get_birth_date ($person) {
-    $self->logger->debug(sprintf('finding birthday for %s', $person->gramps_id));
+    $self->logger->debug(
+      sprintf('finding birthday for %s', $person->gramps_id));
     my $br = $person->birth_ref_index;
-    if($br >= 0 && scalar @{$person->event_refs} >= $br) {
-      my $er = $person->event_refs->[$br];
-      my $event = $events->{$er->ref};
-      if($event){
-        $self->logger->debug(sprintf('event type "%s" id "%s" at specified index "%s"',
-        $event->type, $event->gramps_id, $br));
-        if($event->type eq 'Birth') {
-          $self->logger->debug(sprintf('returning event %s as birthday', $event->gramps_id));
+    if ($br >= 0 && scalar @{ $person->event_refs } >= $br) {
+      my $er    = $person->event_refs->[$br];
+      my $event = $events->{ $er->ref };
+      if ($event) {
+        $self->logger->debug(sprintf(
+          'event type "%s" id "%s" at specified index "%s"',
+          $event->type, $event->gramps_id, $br
+        ));
+        if ($event->type eq 'Birth') {
+          $self->logger->debug(
+            sprintf('returning event %s as birthday', $event->gramps_id));
           return $event;
-        } else {
-          $self->logger->error("found bad event at index $br: " . Data::Printer::np($event));
+        }
+        else {
+          $self->logger->error(
+            "found bad event at index $br: " . Data::Printer::np($event));
         }
       }
-    }else {
-      $self->logger->warn(sprintf('No birth index for person %s present', $person->gramps_id));
+    }
+    else {
+      $self->logger->warn(
+        sprintf('No birth index for person %s present', $person->gramps_id));
     }
     return 'Unknown';
   }
 
   method get_death_date ($person) {
-    $self->logger->debug(sprintf('finding deathday for %s', $person->gramps_id));
+    $self->logger->debug(
+      sprintf('finding deathday for %s', $person->gramps_id));
     my $br = $person->death_ref_index;
-    if($br >= 0 && scalar @{$person->event_refs} >= $br) {
-      my $er = $person->event_refs->[$br];
-      my $event = $events->{$er->ref};
-      if($event){
-        $self->logger->debug(sprintf('event type "%s" id "%s" at specified index "%s"',
-        $event->type, $event->gramps_id, $br));
-        if($event->type eq 'Death') {
-          $self->logger->debug(sprintf('returning event %s as deathday', $event->gramps_id));
+    if ($br >= 0 && scalar @{ $person->event_refs } >= $br) {
+      my $er    = $person->event_refs->[$br];
+      my $event = $events->{ $er->ref };
+      if ($event) {
+        $self->logger->debug(sprintf(
+          'event type "%s" id "%s" at specified index "%s"',
+          $event->type, $event->gramps_id, $br
+        ));
+        if ($event->type eq 'Death') {
+          $self->logger->debug(
+            sprintf('returning event %s as deathday', $event->gramps_id));
           return $event;
-        } else {
-          $self->logger->error("found bad event at index $br: " . Data::Printer::np($event));
+        }
+        else {
+          $self->logger->error(
+            "found bad event at index $br: " . Data::Printer::np($event));
         }
       }
-    }else {
-      $self->logger->warn(sprintf('No death index for person %s present', $person->gramps_id));
+    }
+    else {
+      $self->logger->warn(
+        sprintf('No death index for person %s present', $person->gramps_id));
     }
     return 'Unknown';
   }

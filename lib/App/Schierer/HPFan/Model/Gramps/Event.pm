@@ -23,7 +23,6 @@ class App::Schierer::HPFan::Model::Gramps::Event :
   field $json_data   : param = undef;
   field $place       : param = undef;
 
-
   field $date : reader =
     undef;    # Can be daterange, datespan, dateval, or datestr
   field $place_ref : reader = undef;    # handle reference to place
@@ -72,9 +71,8 @@ class App::Schierer::HPFan::Model::Gramps::Event :
 
   method type {
     my $hash = JSON::PP->new->decode($self->json_data);
-    my $type = App::Schierer::HPFan::Model::Gramps::EventType->new(
-      $hash->{type}->%*
-    );
+    my $type =
+      App::Schierer::HPFan::Model::Gramps::EventType->new($hash->{type}->%*);
     return $type;
   }
 
@@ -84,7 +82,7 @@ class App::Schierer::HPFan::Model::Gramps::Event :
   method to_string {
     my @parts;
 
-    push @parts, $self->type ;
+    push @parts, $self->type;
 
     if (my $date_str = $date->to_string) {
       push @parts, "($date_str)";
@@ -106,33 +104,34 @@ class App::Schierer::HPFan::Model::Gramps::Event :
     $hr->{description} = $description;
     $hr->{attributes}  = [$attributes->@*];
     $hr->{obj_refs}    = [$obj_refs->@*];
-
     return $hr;
   }
 
   method _comparison ($other, $swap = 0) {
-    unless(ref($other) eq 'OBJECT'){
+    unless (ref($other) eq 'OBJECT') {
       return -1;
     }
     unless ($other->isa('App::Schierer::HPFan::Model::Gramps::Event')) {
       return -1;
     }
     my $dateEquality = 0;
-    my $oDate = $other->date;
-    if($date && $oDate){
+    my $oDate        = $other->date;
+    if ($date && $oDate) {
       $dateEquality = $date cmp $oDate;
-    }elsif($date){
+    }
+    elsif ($date) {
       return -1;
-    }elsif($oDate){
+    }
+    elsif ($oDate) {
       return 1;
     }
 
-    if(not $dateEquality){
+    if (not $dateEquality) {
       return $self->to_string cmp $other->to_string;
     }
   }
 
-  method _equality ($other, $swap = 0){
+  method _equality ($other, $swap = 0) {
     return $self->_comparison($other, $swap) == 0 ? 1 : 0;
   }
 

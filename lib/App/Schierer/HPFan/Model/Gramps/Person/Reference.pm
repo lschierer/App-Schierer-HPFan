@@ -18,8 +18,8 @@ class App::Schierer::HPFan::Model::Gramps::Person::Reference :
   field $frel : param //= undef;
   field $mrel : param //= undef;
 
-  field $father_rel :reader : writer = undef;
-  field $mother_rel :reader : writer = undef;
+  field $father_rel : reader : writer = undef;
+  field $mother_rel : reader : writer = undef;
 
   ADJUST {
     unless (defined $father_rel) {
@@ -46,9 +46,9 @@ class App::Schierer::HPFan::Model::Gramps::Person::Reference :
 
   method to_hash {
     my $r = $self->SUPER::to_hash;
-    $r->{rel}         = $rel;
-    $r->{father_rel}  = $father_rel;
-    $r->{mother_rel}  = $mother_rel;
+    $r->{rel}        = $rel;
+    $r->{father_rel} = $father_rel;
+    $r->{mother_rel} = $mother_rel;
     return $r;
   }
 

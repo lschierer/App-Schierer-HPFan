@@ -10,6 +10,7 @@ package App::Schierer::HPFan::Plugins::ClassLists {
   use Mojo::Util qw(xml_escape);
 
   my $logger;
+
   sub register($self, $app, $config) {
     $logger = $app->logger(__PACKAGE__);
     $logger->info(sprintf(
@@ -25,8 +26,8 @@ package App::Schierer::HPFan::Plugins::ClassLists {
       }
     );
 
-    #$app->routes->get('/Harrypedia/Hogwarts/ClassLists/:year' -> [year => qr/\d{3,4}/])
-    #  ->to(controller => '')
+#$app->routes->get('/Harrypedia/Hogwarts/ClassLists/:year' -> [year => qr/\d{3,4}/])
+#  ->to(controller => '')
 
     $app->helper(
       render_classlist_tables => sub ($c, $html) {

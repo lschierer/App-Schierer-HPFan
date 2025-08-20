@@ -16,7 +16,7 @@ sub error { shift->_fwd(error => @_) }
 sub fatal { shift->_fwd(fatal => @_) }
 
 # (optional) Mojolicious also calls ->trace in some versions
-sub trace { shift->_fwd(trace => @_) }  # map to debug if you want
+sub trace { shift->_fwd(trace => @_) }    # map to debug if you want
 
 sub _fwd {
   my ($self, $level, @lines) = @_;

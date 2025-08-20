@@ -7,7 +7,7 @@ class App::Schierer::HPFan::Model::Gramps::Person::ChildReferenceType :
   isa(App::Schierer::HPFan::Logger) {
   use Carp ();
   use Readonly;
-  use Scalar::Util qw(blessed looks_like_number);
+  use Scalar::Util   qw(blessed looks_like_number);
   use List::AllUtils qw( firstidx );
   use overload
     'cmp'      => \&_comparison,
@@ -16,9 +16,9 @@ class App::Schierer::HPFan::Model::Gramps::Person::ChildReferenceType :
     'bool'     => sub { $_[0]->_isTrue },
     'fallback' => 1;
 
-  field $_class : param = undef; # from Gramps JSON
-  field $string : param : reader = '';    # custom label (when value==0)
-  field $value  : param = undef; # numeric enum
+  field $_class : param = undef;            # from Gramps JSON
+  field $string : param : reader = '';      # custom label (when value==0)
+  field $value  : param = undef;            # numeric enum
 
   field $ROLE_MAP;
 
@@ -55,9 +55,10 @@ class App::Schierer::HPFan::Model::Gramps::Person::ChildReferenceType :
 
   method to_hash {
     my $r = $self->SUPER::to_hash;
-    if(defined($value)){
+    if (defined($value)) {
       $r->{value} = exists $ROLE_MAP->{$value} ? $ROLE_MAP->{$value} : $value;
-    } elsif(defined($string) && length($string)) {
+    }
+    elsif (defined($string) && length($string)) {
       $r->{string} = $string;
     }
     return $r;
@@ -67,10 +68,12 @@ class App::Schierer::HPFan::Model::Gramps::Person::ChildReferenceType :
 
   method _sortValue {
     my $sortValue;
-    if(defined($value)){
-      if(exists $ROLE_MAP->{$value}) {
-        $sortValue = firstidx {$_ eq $ROLE_MAP->{$value} } sort values $ROLE_MAP->%*;
-      } else {
+    if (defined($value)) {
+      if (exists $ROLE_MAP->{$value}) {
+        $sortValue =
+          firstidx { $_ eq $ROLE_MAP->{$value} } sort values $ROLE_MAP->%*;
+      }
+      else {
         $self->logger->dev_guard("Missing Sort Map for value $value");
         $sortValue = $value;
       }
@@ -79,62 +82,68 @@ class App::Schierer::HPFan::Model::Gramps::Person::ChildReferenceType :
   }
 
   method _comparison($other, $swap = 0) {
-      # Same class comparison
-      if (ref($other) && $other->isa(__CLASS__)) {
-          my $cmp = $self->_sortValue <=> $other->_sortValue;
-          if ($cmp == 0 && defined($string)) {
-              return $string cmp $other->string;
-          }
-          return $cmp // 1;  # fallback if _sortValue comparison fails
+    # Same class comparison
+    if (ref($other) && $other->isa(__CLASS__)) {
+      my $cmp = $self->_sortValue <=> $other->_sortValue;
+      if ($cmp == 0 && defined($string)) {
+        return $string cmp $other->string;
       }
+      return $cmp // 1;    # fallback if _sortValue comparison fails
+    }
 
-      # Numeric comparison
-      if (Scalar::Util::looks_like_number($other)) {
-          $self->logger->debug(sprintf('%s comparing as number, %s to %s',
-              ref($self), $self->_sortValue, $other));
-          return $self->_sortValue <=> $other;
-      }
+    # Numeric comparison
+    if (Scalar::Util::looks_like_number($other)) {
+      $self->logger->debug(sprintf(
+        '%s comparing as number, %s to %s',
+        ref($self), $self->_sortValue, $other
+      ));
+      return $self->_sortValue <=> $other;
+    }
 
-      # String comparison - try _sortValue first, then custom string
-      if (my $sr = $self->_sortValue) {
-          $self->logger->debug(sprintf('%s comparing _sortValue to string, %s to %s',
-              ref($self), $sr, $other));
-          return $sr cmp $other;
-      }
+    # String comparison - try _sortValue first, then custom string
+    if (my $sr = $self->_sortValue) {
+      $self->logger->debug(sprintf(
+        '%s comparing _sortValue to string, %s to %s',
+        ref($self), $sr, $other
+      ));
+      return $sr cmp $other;
+    }
 
-      if (defined($string)) {
-          $self->logger->debug(sprintf('%s comparing custom string, %s to %s',
-              ref($self), $string, $other));
-          return $string cmp $other;
-      }
+    if (defined($string)) {
+      $self->logger->debug(sprintf(
+        '%s comparing custom string, %s to %s',
+        ref($self), $string, $other
+      ));
+      return $string cmp $other;
+    }
 
-      return 1;  # fallback
+    return 1;    # fallback
   }
 
   method _equality($other, $swap = 0) {
-      return 0 unless defined($other);
+    return 0 unless defined($other);
 
-      # Same class comparison
-      if (ref($other) && $other->isa(__CLASS__)) {
-          return $self->_comparison($other, $swap) == 0;
-      }
+    # Same class comparison
+    if (ref($other) && $other->isa(__CLASS__)) {
+      return $self->_comparison($other, $swap) == 0;
+    }
 
-      # Numeric comparison
-      if (Scalar::Util::looks_like_number($other)) {
-          return $self->_sortValue == $other;
-      }
+    # Numeric comparison
+    if (Scalar::Util::looks_like_number($other)) {
+      return $self->_sortValue == $other;
+    }
 
-      # String comparison
-      if (defined($value) && exists $ROLE_MAP->{$value}) {
-        my $sr = $ROLE_MAP->{$value};
-          return $sr eq $other;
-      }
+    # String comparison
+    if (defined($value) && exists $ROLE_MAP->{$value}) {
+      my $sr = $ROLE_MAP->{$value};
+      return $sr eq $other;
+    }
 
-      if (defined($string)) {
-          return $string eq $other;
-      }
+    if (defined($string)) {
+      return $string eq $other;
+    }
 
-      return 0;
+    return 0;
   }
 }
 1;
