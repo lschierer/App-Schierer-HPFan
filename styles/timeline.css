@@ -18,15 +18,15 @@ iconify-icon {
   height: auto;
   font-optical-sizing: auto;
 
-  --mod-heading-margin-end: 1em;
+  --mod-heading-margin-end: 0;
   --mod-heading-margin-start: 0;
   --mod-heading-serif-font-family: "EB Garamond", serif;
 
-  & .spectrum-Heading--size-M {
+  & .spectrum-Heading--sizeM {
     --mod-heading-font-size: 10px;
   }
 
-  & .spectrum-Heading--size-S {
+  & .spectrum-Heading--sizeS {
     --mod-heading-font-size: 8px;
   }
 }
@@ -137,13 +137,48 @@ iconify-icon.color-male {
   stroke: var(--category-color);
 }
 
-.node text {
-  stroke-width: 0.5;
-}
-
 .node {
   fill: none;
   stroke-width: 2;
   stroke: var(--category-color);
-  fontcolor: var(--category-color);
 }
+
+.timeline.node-label {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  place-content: center flex-start;
+  padding: 2px;
+  overflow-wrap: break-word;
+  overflow: hidden;
+  stroke-width: 1;
+  text-wrap: pretty;
+  height: 80px;
+  width: 120px;
+}
+
+.timeline.detail-edge {
+  stroke-dasharray: 1, 1;
+  stroke-linecap: round;
+  stroke: var(--category-color);
+  stroke-width: 0.75px;
+}
+
+.timeline.node-label div {
+  text-align: center;
+  width: 100%;
+}
+
+/* .timeline.node-label tspan {
+
+}
+
+.timeline.node-label tspan:first-child {
+
+}
+
+.timeline.node-label tspan:nth-child(n + 2) {
+
+}
+*/

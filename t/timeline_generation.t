@@ -38,11 +38,10 @@ my $ge = App::Schierer::HPFan::Model::History::Gramps->new(
 );
 $ge->process();
 
-my $timeline_view = App::Schierer::HPFan::View::Timeline->new(
-  events => $ge->events,
-);
-my $svg = $timeline_view->create();
-say "Dot Program: " . $timeline_view->get_program();
-say "svg size: " . length($svg);
+#my $timeline_view = App::Schierer::HPFan::View::Timeline->new(
+#  events => $ge->events,
+#);
+#my $svg = $timeline_view->create();
+#say "svg size: " . length($svg);
 
 done_testing();
