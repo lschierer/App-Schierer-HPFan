@@ -38,3 +38,6 @@ deploy-dev:
 
 deploy-prod:
   pnpm cdk --profile personal deploy --app scripts/aws-schierer-hpfan.ts --context env=prod
+
+gramps-backup:
+  ./scripts/gramps_backup.sh
