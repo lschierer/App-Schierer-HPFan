@@ -5,32 +5,54 @@ require Date::Manip;
 require App::Schierer::HPFan::Model::Gramps::DateHelper;
 require App::Schierer::HPFan::Model::Gramps::Object::Reference;
 require App::Schierer::HPFan::Model::Gramps::Source::Reference;
+require App::Schierer::HPFan::Model::Gramps::DateHelper;
 
 class App::Schierer::HPFan::Model::Gramps::Citation :
   isa(App::Schierer::HPFan::Model::Gramps::Generic) {
+  use List::AllUtils qw( any );
   use Carp;
-  require App::Schierer::HPFan::Model::Gramps::DateHelper;
-
-  field $id         : reader : param = undef;
-  field $priv       : reader : param = undef;
-  field $page       : reader : param = '';
-  field $confidence : reader : param = 0;
-  field $date       : param = undef;
-
-  field $source_refs   : param //= [];
-  field $obj_refs      : param //= [];
-  field $srcattributes : param = [];
 
   field $dh = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
-  field $ALLOWED_FIELD_NAMES : reader =
-    { map { $_ => 1 } qw( gramps_id change private json_data) };
+  ADJUST {
+    my @desired = qw(
+      handle  gramps_id   page  confidence  source_handle
+      change  private   json_data );
+    my @names;
+    push @names, @desired;
+    push @names, keys $self->ALLOWED_FIELD_NAMES->%*;
+    foreach my $tn (@names) {
+      if(any {$_ eq $tn} @desired) {
+        $self->ALLOWED_FIELD_NAMES->{$tn} = 1;
+      } else {
+        $self->ALLOWED_FIELD_NAMES->{$tn} = undef;
+      }
+    }
+  }
 
-  method source_refs()   { [@$source_refs] }
-  method obj_refs()      { [@$obj_refs] }
-  method srcattributes() { [@$srcattributes] }
+  method gramps_id      { $self->_get_field('gramps_id') }
+  method page           { $self->_get_field('page') }
+  method confidence     { $self->_get_field('confidence') }
+
+  method source_handle  {
+    return App::Schierer::HPFan::Model::Gramps::Source::Reference->new(
+      ref => $self->_get_field('source_handle')
+    );
+  }
+
+  method parse_json_data {
+    #trust DBH::SQLite to have already handle UTF8.
+    my $hash = JSON::PP->new->decode($self->json_data);
+    if (reftype($hash) eq 'HASH') {
+      $self->logger->info("got hash " . Data::Printer::np($hash));
+
+    }
+  }
 
   method date {
-    return $date->to_string;
+    my $hash = JSON::PP->new->decode($self->json_data);
+    my $d = $dh->parse($hash->{'date'});
+    $self->logger->debug("found date " . Data::Printer::np($d));
+    return $d;
   }
 
 }

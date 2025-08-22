@@ -7,39 +7,49 @@ require App::Schierer::HPFan::Model::Gramps::Person::Reference;
 class App::Schierer::HPFan::Model::Gramps::Person :
   isa( App::Schierer::HPFan::Model::Gramps::Generic) {
   use Carp;
+  use List::AllUtils qw( any );
   use App::Schierer::HPFan::Model::Gramps::Name;
   use App::Schierer::HPFan::Model::Gramps::DateHelper;
 
-  field $given_name      : param //= undef;
-  field $surname         : param //= undef;
-  field $gramps_id       : param //= undef;
-  field $gender          : param //= 'U';
-  field $death_ref_index : param //= undef;
-  field $birth_ref_index : param //= undef;
-  field $json_data       : param //= undef;
+  field $given_name       //= undef;
+  field $surname          //= undef;
+  field $gramps_id        //= undef;
+  field $gender           //= 'U';
+  field $death_ref_index  //= undef;
+  field $birth_ref_index  //= undef;
+  field $json_data        //= undef;
 
-  field $event_refs     : param = [];
-  field $addresses      : param = [];
-  field $attributes     : param = [];
-  field $urls           : param = [];
-  field $child_of_refs  : param = [];
-  field $parent_in_refs : param = [];
-  field $person_refs    : param = [];
-  field $note_refs      : param = [];
-  field $citation_refs  : param = [];
-  field $tag_refs       : param = [];
+  field $event_refs      = [];
+  field $addresses       = [];
+  field $attributes      = [];
+  field $urls            = [];
+  field $child_of_refs   = [];
+  field $parent_in_refs  = [];
+  field $person_refs     = [];
+  field $note_refs       = [];
+  field $citation_refs   = [];
+  field $tag_refs        = [];
 
-  field $ALLOWED_FIELD_NAMES : reader = {
-    map { $_ => 1 }
-      qw(given_name
-      surname
-      gramps_id
-      gender
-      death_ref_index
-      birth_ref_index
-      private
-      json_data        )
-  };
+  ADJUST {
+    my @desired = qw(given_name
+    surname
+    gramps_id
+    gender
+    death_ref_index
+    birth_ref_index
+    private
+    json_data        );
+    my @names;
+    push @names, @desired;
+    push @names, keys $self->ALLOWED_FIELD_NAMES->%*;
+    foreach my $tn (@names) {
+      if(any {$_ eq $tn} @desired){
+        $self->ALLOWED_FIELD_NAMES->{$tn} = 1;
+      } else {
+        $self->ALLOWED_FIELD_NAMES->{$tn} = undef;
+      }
+    }
+  }
 
   method given_name      { $self->_get_field('given_name') }
   method surname         { $self->_get_field('surname') }
@@ -55,7 +65,7 @@ class App::Schierer::HPFan::Model::Gramps::Person :
     my %GENDER_MAP = (0 => 'F', 1 => 'M', 2 => 'U');
     $self->logger->debug(sprintf(
       '"%s" has gender "%s", I will return "%s".',
-      $gramps_id, $gv, $GENDER_MAP{$gv} // 'U'
+      $self->gramps_id, $gv, $GENDER_MAP{$gv} // 'U'
     ));
     if (defined($gv)) {
       return $GENDER_MAP{$gv} // 'U';
@@ -82,20 +92,8 @@ class App::Schierer::HPFan::Model::Gramps::Person :
         push @$parent_in_refs, $item;
       }
 
-      foreach my $item ($hash->{'note_list'}->@*) {
-        push @$note_refs, $item;
-      }
-
       foreach my $item ($hash->{'parent_family_list'}->@*) {
         push @$child_of_refs, $item;
-      }
-
-      foreach my $item ($hash->{'note_list'}->@*) {
-        push @$note_refs, $item;
-      }
-
-      foreach my $item ($hash->{'tag_list'}->@*) {
-        push @$tag_refs, $item;
       }
 
       foreach my $item ($hash->{'person_ref_list'}->@*) {

@@ -3,7 +3,7 @@
 "http://gramps-project.org/xml/1.7.2/grampsxml.dtd">
 <database xmlns="http://gramps-project.org/xml/1.7.2/">
   <header>
-    <created date="2025-08-16" version="6.0.4"/>
+    <created date="2025-08-21" version="6.0.4"/>
     <researcher>
       <resname>Luke Schierer</resname>
       <resemail>luke@schierer.org</resemail>
@@ -865,9 +865,9 @@
       <dateval val="1964" type="before"/>
       <citationref hlink="_eddd2b894b93464533d6be6a5fc"/>
     </event>
-    <event handle="_edde6c4312e22b463319199ad00" change="1634622217" id="E0179">
+    <event handle="_edde6c4312e22b463319199ad00" change="1755575734" id="E0179">
       <type>Birth</type>
-      <daterange start="1953-09-09" stop="1954-09-08"/>
+      <daterange start="1953-09-01" stop="1954-08-31"/>
       <citationref hlink="_edde6c39185505acc9e6d9315fb"/>
     </event>
     <event handle="_edde6d2e2ce16a34f50319ca10e" change="1634622314" id="E0180">
@@ -1263,7 +1263,7 @@
       <tagref hlink="_ed5f283475c2bd8d650cc02c9c8"/>
       <tagref hlink="_ed628bd2be366112813f145329a"/>
     </person>
-    <person handle="_ed592b32e775acead90c935caa2" change="1755361209" id="I0001">
+    <person handle="_ed592b32e775acead90c935caa2" change="1755391578" id="I0001">
       <gender>M</gender>
       <name type="Birth Name">
         <first>James</first>
@@ -1271,12 +1271,13 @@
       </name>
       <eventref hlink="_ed592d99c412b3ca4f8e6c2fb53" role="Primary"/>
       <eventref hlink="_ed592f0bdd11e91b3717253d12a" role="Primary"/>
+      <eventref hlink="_ed592a4f06c7e34e27695dfeb73" role="Father"/>
       <childof hlink="_ed5936549672cddc25e05ddad8d"/>
       <parentin hlink="_ed59312dc737e38d031951e2757"/>
       <tagref hlink="_ed5f283475c2bd8d650cc02c9c8"/>
       <tagref hlink="_ed628949497529bfaef5db0538d"/>
     </person>
-    <person handle="_ed5931b104adfb68a0eabbd99e" change="1755361417" id="I0002">
+    <person handle="_ed5931b104adfb68a0eabbd99e" change="1755391613" id="I0002">
       <gender>F</gender>
       <name type="Birth Name">
         <first>Lily J</first>
@@ -1292,6 +1293,7 @@
       </name>
       <eventref hlink="_ed5933cacb446109b4ffb10d38f" role="Primary"/>
       <eventref hlink="_ed5933ff50f98b0f0d6d5a8ba5" role="Primary"/>
+      <eventref hlink="_ed592a4f06c7e34e27695dfeb73" role="Mother"/>
       <childof hlink="_eddaeab8a0042b17124a0506cc0"/>
       <parentin hlink="_ed59312dc737e38d031951e2757"/>
       <noteref hlink="_ed5974f7a2d649bd4efc3c56c2b"/>
@@ -1382,7 +1384,7 @@
       <citationref hlink="_f107f0b782656212f416a91c63"/>
       <tagref hlink="_ed5f2929ec81c675417baaa694a"/>
     </person>
-    <person handle="_ed5942eb7fb270b385d5fc46531" change="1755361209" id="I0009">
+    <person handle="_ed5942eb7fb270b385d5fc46531" change="1755801050" id="I0009">
       <gender>M</gender>
       <name type="Birth Name">
         <first>Arcturus</first>
@@ -1393,7 +1395,7 @@
       <eventref hlink="_ed5943a56917fc780c20e24f83b" role="Primary"/>
       <childof hlink="_ed59475932a1073a936d0088e57"/>
       <parentin hlink="_ed5942deb472eb9e34b1d9842d1"/>
-      <citationref hlink="_f20d08b03ec4a58ef80ca561a6a"/>
+      <citationref hlink="_edddc7b636e14fefa1e6f1a0907"/>
       <citationref hlink="_f6db4c8cbdf15400c8ba50cc90f"/>
     </person>
     <person handle="_ed5943ff78f6f0229a3bbdac5c6" change="1755361209" id="I0010">
@@ -1511,7 +1513,7 @@
       <parentin hlink="_ed5960e600c12de3a0094dbb78c"/>
       <citationref hlink="_ed59398a9c92811e304558645aa"/>
     </person>
-    <person handle="_ed594ee0c681ea02dc1e60e5db8" change="1755361209" id="I0020">
+    <person handle="_ed594ee0c681ea02dc1e60e5db8" change="1755801050" id="I0020">
       <gender>M</gender>
       <name type="Birth Name">
         <first>Arcturus</first>
@@ -1522,7 +1524,7 @@
       <eventref hlink="_ed594f772cf2b138551952f58ca" role="Primary"/>
       <childof hlink="_ed594aec95b1ef41601710577bc"/>
       <parentin hlink="_ed5962a0f595f462a95a4f274b5"/>
-      <citationref hlink="_f20d08b03ec4a58ef80ca561a6a"/>
+      <citationref hlink="_edddc7b636e14fefa1e6f1a0907"/>
       <citationref hlink="_f6db4c8cbdf15400c8ba50cc90f"/>
     </person>
     <person handle="_ed595049fd22a93a490456b1e81" change="1755361209" id="I0022">
@@ -6658,7 +6660,7 @@
       <confidence>2</confidence>
       <sourceref hlink="_ed626729e245ab26cb7e21a8e52"/>
     </citation>
-    <citation handle="_edddc7b636e14fefa1e6f1a0907" change="1634604963" id="C0169">
+    <citation handle="_edddc7b636e14fefa1e6f1a0907" change="1755801050" id="C0169">
       <page>https://www.rowlingindex.org/work/blacktree/</page>
       <confidence>2</confidence>
       <sourceref hlink="_ed62d28019f197d479f15dd3cc0"/>
@@ -6883,11 +6885,6 @@
       <page>15</page>
       <confidence>2</confidence>
       <sourceref hlink="_eed7be4f87a386ff9f7eda86a4f"/>
-    </citation>
-    <citation handle="_f20d08b03ec4a58ef80ca561a6a" change="1663361214" id="C0211">
-      <page>https://www.rowlingindex.org/work/blacktree/</page>
-      <confidence>2</confidence>
-      <sourceref hlink="_ed62d28019f197d479f15dd3cc0"/>
     </citation>
     <citation handle="_f2ae24ff78422be2d476918a1c9" change="1667685993" id="C0212">
       <page>https://harrypotter.fandom.com/wiki/Main_Page?file=Gwenog-Jones-CFC-WOTC.jpg</page>
@@ -7214,69 +7211,51 @@
     </citation>
   </citations>
   <sources>
-    <source handle="_ed5926e209e1387645aecd422c7" change="1631044751" id="S0000">
+    <source handle="_ed5926e209e1387645aecd422c7" change="1755802214" id="S0000">
       <stitle>Harry Potter and the Sorcerer's Stone</stitle>
       <sauthor>J. K. Rowling</sauthor>
       <spubinfo>Pottermore Limited. © 1998</spubinfo>
+      <reporef hlink="_ff80b63501358ffc7ec8866665b" callno="PZ7.R79835 H" medium="Book"/>
     </source>
-    <source handle="_ed593362a594923dc8b56aee22b" change="1631046062" id="S0002">
+    <source handle="_ed593362a594923dc8b56aee22b" change="1755805765" id="S0002">
       <stitle>Harry Potter and the Deathly Hallows</stitle>
       <sauthor>J. K. Rowling</sauthor>
       <spubinfo>copyright © 2007 Pottermore Publishing. American Kindle Edition.</spubinfo>
+      <reporef hlink="_ff80b63501358ffc7ec8866665b" callno="PR6068.O93" medium="Book"/>
     </source>
     <source handle="_ed59397b18f5998a85ea66128be" change="1754937764" id="S0003">
       <stitle>Black Family Tree</stitle>
       <sauthor>J. K. Rowling</sauthor>
       <reporef hlink="_ed62d26e4866d63d0673c446418" callno="https://www.rowlingindex.org/work/blacktree/" medium="Electronic"/>
     </source>
-    <source handle="_ed593f0310ad05701064d6828a" change="1631294626" id="S0004">
+    <source handle="_ed593f0310ad05701064d6828a" change="1755806037" id="S0004">
       <stitle>Harry Potter Wiki</stitle>
       <sauthor>https://harrypotter.fandom.com/</sauthor>
-      <reporef hlink="_ed593ecb8d23e6488c6fb7eabf8" medium="Electronic"/>
       <reporef hlink="_ed5a63bd13619e9701359b55571" medium="Electronic"/>
     </source>
-    <source handle="_ed5c45b81775f3311f6cd0f0b7e" change="1631128515" id="S0030">
+    <source handle="_ed5c45b81775f3311f6cd0f0b7e" change="1755805875" id="S0030">
       <stitle>The Age of the Weasleys</stitle>
       <sauthor>Troels Forchhammer</sauthor>
       <spubinfo>The Harry Potter Lexicon 2004-05-02</spubinfo>
-      <reporef hlink="_ed5c45aba5a2785112649330fec" medium="Electronic"/>
+      <reporef hlink="_eed7c3e33d55026060baa7cb7c0" medium="Electronic"/>
     </source>
-    <source handle="_ed5da04438f28b2c2cff36a1192" change="1631164853" id="S0032">
+    <source handle="_ed5da04438f28b2c2cff36a1192" change="1755806223" id="S0032">
       <stitle>Secrets of the Classlist</stitle>
       <sauthor>Diana Summers</sauthor>
       <spubinfo>© 2011, 2014 Diana Summers. Secrets of the Classlist: Harry Potter and the Original Forty Classmates . Kindle Edition.</spubinfo>
+      <reporef hlink="_ff80e0d436d398d597d7473f586" medium="Book"/>
     </source>
-    <source handle="_ed5f0f7679c29eedc2aa033f455" change="1631203356" id="S0033">
+    <source handle="_ed5f0f7679c29eedc2aa033f455" change="1755806099" id="S0033">
       <stitle>Harry Potter and the Order of the Phoenix</stitle>
       <sauthor>J. K. Rowling</sauthor>
       <spubinfo>© 2003 Pottermore Limited. American Kindle Edition.</spubinfo>
+      <reporef hlink="_ff80b63501358ffc7ec8866665b" medium="Book"/>
     </source>
-    <source handle="_ed626729e245ab26cb7e21a8e52" change="1631294635" id="S0035">
+    <source handle="_ed626729e245ab26cb7e21a8e52" change="1755806029" id="S0035">
       <stitle>Pottermore</stitle>
       <sauthor>Pottermore</sauthor>
       <spubinfo>https://web.archive.org/web/20170630110815/https://www.pottermore.com</spubinfo>
-      <reporef hlink="_ed5971daf4e540f3f3a9fc03e5c" medium="Electronic"/>
-      <reporef hlink="_ed5a4752972153f0b79d4ef6fb1" medium="Electronic"/>
-      <reporef hlink="_ed5a51a377c565307b79cedd526" medium="Electronic"/>
-      <reporef hlink="_ed5a5bf2f11c6022b02f10fbb0" medium="Electronic"/>
-      <reporef hlink="_ed5a445fe9d1ad49405fde7bb05" medium="Electronic"/>
-      <reporef hlink="_ed5a42c689b1697ba6b1de54278" medium="Electronic"/>
-      <reporef hlink="_ed596c4b25849af5dfeec8c39fa" medium="Electronic"/>
-      <reporef hlink="_ed59407ba606a1560ff1eccb4ba" medium="Electronic"/>
-      <reporef hlink="_ed5a543aabf3a12a538b224057b" medium="Electronic"/>
-      <reporef hlink="_ed5a3c4044f11cb7dfb66a8fff5" medium="Electronic"/>
-      <reporef hlink="_ed5a3de9195353a154bb9f5a1fa" medium="Electronic"/>
-      <reporef hlink="_ed5a4921b8750ce4a395ad8c491" medium="Electronic"/>
-      <reporef hlink="_ed5a4b835c2735ad136a1f898e9" medium="Electronic"/>
-      <reporef hlink="_ed596fa5c37635bbc4e041569c3" medium="Electronic"/>
-      <reporef hlink="_ed5a38e23497c11b9b4e07ddf1a" medium="Electronic"/>
-      <reporef hlink="_ed5a57bb593534c484edd84a9e1" medium="Electronic"/>
-      <reporef hlink="_ed5a4fd68f532c75a094b87d1e5" medium="Electronic"/>
-      <reporef hlink="_ed59407ba606a1560ff1eccb4ba" medium="Electronic"/>
       <reporef hlink="_ed5d9c77bf084bef50a633edd3" medium="Electronic"/>
-      <reporef hlink="_ed5a373efdb76d89a764a8ad252" medium="Electronic"/>
-      <reporef hlink="_ed59756ea2060e56254a2cf650" medium="Electronic"/>
-      <reporef hlink="_ed5973b74e872d90edd6b83c3da" medium="Electronic"/>
       <reporef hlink="_ed5a63bd13619e9701359b55571" medium="Electronic"/>
     </source>
     <source handle="_ed6286b44d07d553c3f45e38566" change="1631296390" id="S0036">
@@ -7284,11 +7263,10 @@
       <sauthor>@ 2021 Google</sauthor>
       <spubinfo>https://www.google.com/maps</spubinfo>
     </source>
-    <source handle="_ed62acd935b252b6d6976f8e998" change="1631304509" id="S0037">
+    <source handle="_ed62acd935b252b6d6976f8e998" change="1755805866" id="S0037">
       <stitle>Mugglenet</stitle>
       <sauthor>MUGGLENET</sauthor>
       <spubinfo>© 1999–2021 MuggleNet.com</spubinfo>
-      <reporef hlink="_ed62ac9fef26f454907713089bb" medium="Electronic"/>
       <reporef hlink="_ed5c07d915868e839744732df9d" medium="Electronic"/>
     </source>
     <source handle="_ed62d28019f197d479f15dd3cc0" change="1631304489" id="S0038">
@@ -7299,31 +7277,35 @@
       <reporef hlink="_ed5f7c549a92a69ffc30d007309" medium="Electronic"/>
       <reporef hlink="_ed5f7cc5c11326d4e1a285836db" medium="Electronic"/>
     </source>
-    <source handle="_ed63b404ae569dd228bf6423d28" change="1631327985" id="S0039">
+    <source handle="_ed63b404ae569dd228bf6423d28" change="1755806114" id="S0039">
       <stitle>Harry Potter and the Chamber of Secrets</stitle>
       <sauthor>J. K. Rowling</sauthor>
       <spubinfo>© 1998 Pottermore Limited. American Kindle Edition.</spubinfo>
+      <reporef hlink="_ff80b63501358ffc7ec8866665b" medium="Book"/>
     </source>
     <source handle="_eddaaf057d64b06259063b3f8b4" change="1634521982" id="S0040">
       <stitle>Random Unfinished Thoughts</stitle>
       <sauthor>Luke Schierer</sauthor>
       <reporef hlink="_eddab047cb32f82845de0869d0b" medium="Electronic"/>
     </source>
-    <source handle="_eed52aea0e17997690f328de8c0" change="1641245721" id="S0041">
+    <source handle="_eed52aea0e17997690f328de8c0" change="1755806124" id="S0041">
       <stitle>Harry Potter and the Prisoner of Azkaban</stitle>
       <sauthor>J. K. Rowling</sauthor>
       <spubinfo>ISBN043965548X (ISBN13: 9780439655484)</spubinfo>
+      <reporef hlink="_ff80b63501358ffc7ec8866665b" medium="Book"/>
     </source>
-    <source handle="_eed52f166cc122e471d7c95ef93" change="1641246159" id="S0042">
+    <source handle="_eed52f166cc122e471d7c95ef93" change="1755806134" id="S0042">
       <stitle>Harry Potter and the Goblet of Fire</stitle>
       <sauthor>J. K. Rowling</sauthor>
       <spubinfo>© 2003 Pottermore Limited. American Kindle Edition.</spubinfo>
+      <reporef hlink="_ff80b63501358ffc7ec8866665b" medium="Book"/>
     </source>
-    <source handle="_eed7be4f87a386ff9f7eda86a4f" change="1641314864" id="S0043">
+    <source handle="_eed7be4f87a386ff9f7eda86a4f" change="1755806239" id="S0043">
       <stitle>Short Stories from Hogwarts of Heroism, Hardship and Dangerous Hobbies</stitle>
       <sauthor>J. K. Rowling</sauthor>
       <spubinfo>Pottermore Publishing. American Kindle Edition.  2016</spubinfo>
       <noteref hlink="_eed7be2a1a44cd13cb7e3eb5999"/>
+      <reporef hlink="_ff80e0d436d398d597d7473f586" medium="Book"/>
     </source>
     <source handle="_eed7c4b00ca2303dbc061c124d3" change="1641315532" id="S0044">
       <stitle>The Harry Potter Lexicon</stitle>
@@ -7337,10 +7319,11 @@
       <spubinfo>Insider Magazine</spubinfo>
       <reporef hlink="_f10824e2e7e7b35d5a812af5914" medium="Electronic"/>
     </source>
-    <source handle="_f12bd2b537bccae1cf9318e1ea" change="1657315756" id="S0046">
+    <source handle="_f12bd2b537bccae1cf9318e1ea" change="1755806156" id="S0046">
       <stitle>Harry Potter and the Half-Blood Prince</stitle>
       <sauthor>J. K. Rowling</sauthor>
       <spubinfo>© 2005 Pottermore Publishing. American Kindle Edition.</spubinfo>
+      <reporef hlink="_ff80b63501358ffc7ec8866665b" medium="Book"/>
     </source>
     <source handle="_f161c1a689e6ffbba91f6c942ad" change="1658763519" id="S0047">
       <stitle>Book of Spells</stitle>
@@ -7351,10 +7334,11 @@
       <sauthor>Anelli, Melissa, John Noe and Sue Upton.</sauthor>
       <spubinfo>PotterCast #130, 17 December 2007.</spubinfo>
     </source>
-    <source handle="_f30e51cffb7377b53bc88e8b1e2" change="1670267673" id="S0049">
+    <source handle="_f30e51cffb7377b53bc88e8b1e2" change="1755806256" id="S0049">
       <stitle>Short Stories from Hogwarts of Power, Politics and Pesky Poltergeists…</stitle>
       <sauthor>J. K. Rowling</sauthor>
       <spubinfo>Pottermore Publishing (2016)</spubinfo>
+      <reporef hlink="_ff80e0d436d398d597d7473f586" medium="Book"/>
     </source>
     <source handle="_f6dba050fd866343f6effcbd43e" change="1696394674" id="S0050">
       <stitle>https://twitter.com/jk_rowling</stitle>
@@ -7373,10 +7357,10 @@
       <sabbrev>PMPFAM</sabbrev>
       <reporef hlink="_ed62d26e4866d63d0673c446418" medium="Electronic"/>
     </source>
-    <source handle="_ff6092d72481aba3adb6a5b92cc" change="1754939034" id="S0053">
+    <source handle="_ff6092d72481aba3adb6a5b92cc" change="1755800912" id="S0053">
       <stitle>Wizard of the Month Archive</stitle>
       <sauthor>Mrs. J. K. Rowling</sauthor>
-      <reporef hlink="_ed62d26e4866d63d0673c446418" callno="https://therowlinglibrary.com/jkrowling.com/textonly/en/wotm.html" medium="Book"/>
+      <reporef hlink="_ed62d26e4866d63d0673c446418" callno="https://therowlinglibrary.com/jkrowling.com/textonly/en/wotm.html" medium="Electronic"/>
     </source>
     <source handle="_ff61b144e3b7e075d172a1a7ea2" change="1754969068" id="S0054">
       <stitle>The Malfoy Family</stitle>
@@ -7396,11 +7380,11 @@
       <sabbrev>pmhgh</sabbrev>
       <reporef hlink="_ed62d26e4866d63d0673c446418" callno="https://www.rowlingindex.org/work/pmhgh/" medium="Electronic"/>
     </source>
-    <source handle="_ff61c145d2a1814cf5589bf5fc8" change="1754970746" id="S0057">
+    <source handle="_ff61c145d2a1814cf5589bf5fc8" change="1755801252" id="S0057">
       <stitle>Ministers of Magic</stitle>
       <sauthor>Mrs. J. K. Rowling</sauthor>
       <sabbrev>msmpm</sabbrev>
-      <reporef hlink="_ed62d26e4866d63d0673c446418" callno="https://www.rowlingindex.org/work/msmpm/" medium="Book"/>
+      <reporef hlink="_ed62d26e4866d63d0673c446418" callno="https://www.rowlingindex.org/work/msmpm/" medium="Electronic"/>
     </source>
     <source handle="_ff6213ef74596eb5bb21735035" change="1754979414" id="S0058">
       <stitle>Albus Dumbledore Fact File</stitle>
@@ -7446,133 +7430,41 @@
     </placeobj>
   </places>
   <repositories>
-    <repository handle="_ed59395f4e15343cde92e096e46" change="1631046690" id="R0000">
-      <rname>https://harrypotter.fandom.com/wiki/House_of_Black?file=JKRBlackFamilyTree.jpg</rname>
-      <type>Web site</type>
-    </repository>
-    <repository handle="_ed593ecb8d23e6488c6fb7eabf8" change="1631047258" id="R0001">
-      <rname>https://harrypotter.fandom.com/wiki/Sirius_Black</rname>
-      <type>Web site</type>
-    </repository>
-    <repository handle="_ed59407ba606a1560ff1eccb4ba" change="1631293038" id="R0002">
-      <rname>Sirius Black Fact File</rname>
-      <type>Web site</type>
-      <url  href="https://web.archive.org/web/20190110174600/https://www.pottermore.com/explore-the-story/sirius-black" type="Web Home" description="Pottermore on Sirius Black"/>
-    </repository>
-    <repository handle="_ed596c4b25849af5dfeec8c39fa" change="1631292761" id="R0003">
-      <rname>Arthur Weasley Fact File</rname>
-      <type>Web site</type>
-      <url  href="https://web.archive.org/web/20170414075352/https://www.pottermore.com/explore-the-story/arthur-weasley" type="Web Home" description="Pottermore on Arthur Weasley"/>
-    </repository>
-    <repository handle="_ed596fa5c37635bbc4e041569c3" change="1631292928" id="R0004">
-      <rname>Remus Lupin Fact File</rname>
-      <type>Web site</type>
-      <url  href="https://web.archive.org/web/20170630110748/https://www.pottermore.com/explore-the-story/remus-lupin" type="Web Home"/>
-    </repository>
-    <repository handle="_ed5971daf4e540f3f3a9fc03e5c" change="1631292615" id="R0005">
-      <rname>Albus Dumbledore Fact File</rname>
-      <type>Web site</type>
-      <url  href="https://web.archive.org/web/20170630110815/https://www.pottermore.com/explore-the-story/albus-dumbledore" type="Web Home" description="Albus Dumbledore Fact File"/>
-    </repository>
-    <repository handle="_ed5973b74e872d90edd6b83c3da" change="1631294030" id="R0006">
-      <rname>Molly Weasley Fact File</rname>
-      <type>Web site</type>
-      <url  href="https://web.archive.org/web/20170701104541/https://www.pottermore.com/explore-the-story/molly-weasley" type="Web Home" description="Molly Weasley Fact File"/>
-    </repository>
-    <repository handle="_ed59756ea2060e56254a2cf650" change="1631293803" id="R0007">
-      <rname>Lily Potter Fact File</rname>
-      <type>Web site</type>
-      <url  href="https://web.archive.org/web/20170630235801/https://www.pottermore.com/explore-the-story/lily-potter" type="Web Home" description="Lily Potter Fact File"/>
-    </repository>
-    <repository handle="_ed5a373efdb76d89a764a8ad252" change="1631293724" id="R0008">
-      <rname>Hermione Granger Fact File</rname>
-      <type>Web site</type>
-      <url  href="https://web.archive.org/web/20191002071716/https://www.pottermore.com/explore-the-story/hermione-granger" type="Web Home" description="Hermione Granger fact file"/>
-    </repository>
-    <repository handle="_ed5a38e23497c11b9b4e07ddf1a" change="1631292954" id="R0009">
-      <rname>Ron Weasley fact file</rname>
-      <type>Web site</type>
-      <url  href="https://web.archive.org/web/20191002071722/https://www.pottermore.com/explore-the-story/ron-weasley" type="Web Home" description="Ron Weasley fact file"/>
-    </repository>
-    <repository handle="_ed5a3c4044f11cb7dfb66a8fff5" change="1631292854" id="R0010">
-      <rname>Minerva McGonagall fact file</rname>
-      <type>Web site</type>
-      <url  href="https://web.archive.org/web/20191002072017/https://www.pottermore.com/explore-the-story/minerva-mcgonagall" type="Web Home" description="Minerva McGonagall fact file"/>
-    </repository>
-    <repository handle="_ed5a3de9195353a154bb9f5a1fa" change="1631292873" id="R0011">
-      <rname>Neville Longbottom fact file</rname>
-      <type>Web site</type>
-      <url  href="https://web.archive.org/web/20191002072355/https://www.pottermore.com/explore-the-story/neville-longbottom" type="Web Home" description="Neville Longbottom fact file"/>
-    </repository>
-    <repository handle="_ed5a42c689b1697ba6b1de54278" change="1631292690" id="R0012">
-      <rname>Ginny Weasley fact file</rname>
-      <type>Web site</type>
-      <url  href="https://web.archive.org/web/20191002071823/https://www.pottermore.com/explore-the-story/ginny-weasley" type="Web Home" description="Ginny Weasley fact file"/>
-    </repository>
-    <repository handle="_ed5a445fe9d1ad49405fde7bb05" change="1631292678" id="R0013">
-      <rname>Fred Weasley fact file</rname>
-      <type>Web site</type>
-      <url  href="https://web.archive.org/web/20191002072458/https://www.pottermore.com/explore-the-story/fred-weasley" type="Web Home" description="Fred Weasley fact file"/>
-    </repository>
-    <repository handle="_ed5a4752972153f0b79d4ef6fb1" change="1631292633" id="R0014">
-      <rname>Bill Weasley fact file</rname>
-      <type>Web site</type>
-      <url  href="https://web.archive.org/web/20191002071503/https://www.pottermore.com/explore-the-story/bill-weasley" type="Web Home" description="Bill Weasley fact file"/>
-    </repository>
-    <repository handle="_ed5a4921b8750ce4a395ad8c491" change="1631292888" id="R0015">
-      <rname>Percy Weasley fact file</rname>
-      <type>Web site</type>
-      <url  href="https://web.archive.org/web/20191002072541/https://www.pottermore.com/explore-the-story/percy-weasley" type="Web Home" description="Percy Weasley fact file"/>
-    </repository>
-    <repository handle="_ed5a4b835c2735ad136a1f898e9" change="1631292901" id="R0016">
-      <rname>Nymphadora Tonks fact file</rname>
-      <type>Web site</type>
-      <url  href="https://web.archive.org/web/20191002072152/https://www.pottermore.com/explore-the-story/nymphadora-tonks" type="Web Home" description="Nymphadora Tonks fact file"/>
-    </repository>
-    <repository handle="_ed5a4fd68f532c75a094b87d1e5" change="1631293024" id="R0017">
-      <rname>Severus Snape fact file</rname>
-      <type>Web site</type>
-      <url  href="https://web.archive.org/web/20191002071405/https://www.pottermore.com/explore-the-story/severus-snape" type="Web Home" description="Severus Snape fact file"/>
-    </repository>
-    <repository handle="_ed5a51a377c565307b79cedd526" change="1631292644" id="R0018">
-      <rname>Draco Malfoy fact file</rname>
-      <type>Library</type>
-      <url  href="https://web.archive.org/web/20191002072534/https://www.pottermore.com/explore-the-story/draco-malfoy" type="Web Home" description="Draco Malfoy fact file"/>
-    </repository>
-    <repository handle="_ed5a543aabf3a12a538b224057b" change="1631292841" id="R0019">
-      <rname>Lucius Malfoy fact file</rname>
-      <type>Web site</type>
-      <url  href="https://web.archive.org/web/20191002072046/https://www.pottermore.com/explore-the-story/lucius-malfoy" type="Web Home" description="Lucius Malfoy fact file"/>
-    </repository>
-    <repository handle="_ed5a57bb593534c484edd84a9e1" change="1631292987" id="R0020">
-      <rname>Rubeus Hagrid fact file</rname>
-      <type>Web site</type>
-      <url  href="https://web.archive.org/web/20190624075415/https://www.pottermore.com/explore-the-story/rubeus-hagrid" type="Web Home" description="Rubeus Hagrid fact file"/>
-    </repository>
-    <repository handle="_ed5a5bf2f11c6022b02f10fbb0" change="1631292660" id="R0021">
-      <rname>Fleur Delacour fact file</rname>
-      <type>Web site</type>
-      <url  href="https://web.archive.org/web/20191002071814/https://www.pottermore.com/explore-the-story/fleur-delacour" type="Web Home" description="Fleur Delacour fact file"/>
-    </repository>
-    <repository handle="_ed5a63bd13619e9701359b55571" change="1631118269" id="R0022">
+    <repository handle="_ed5a63bd13619e9701359b55571" change="1755806037" id="R0022">
       <rname>Harry Potter Wiki</rname>
       <type>Web site</type>
       <url  href="https://harrypotter.fandom.com/wiki/Main_Page" type="Web Home" description="the #1 Harry Potter fan database that anyone can edit"/>
     </repository>
-    <repository handle="_ed5c07d915868e839744732df9d" change="1631300388" id="R0024">
+    <repository handle="_ed5c07d915868e839744732df9d" change="1755805866" id="R0024">
       <rname>MuggleNet</rname>
       <type>Web site</type>
       <url  href="http://mugglenet.com" type="Web Home" description="The #1 Wizarding World Resource Since 1999"/>
+      <url  href="https://www.mugglenet.com/" type="Web Home" description="MuggleNet"/>
     </repository>
-    <repository handle="_ed5c45aba5a2785112649330fec" change="1631128510" id="R0025">
-      <rname>The Harry Potter Lexicon</rname>
-      <type>Web site</type>
-      <url  href="https://hp-lexicon.org" type="Web Home" description="Canon discussion/Essays"/>
-    </repository>
-    <repository handle="_ed5d9c77bf084bef50a633edd3" change="1754979410" id="R0026">
+    <repository handle="_ed5d9c77bf084bef50a633edd3" change="1755806029" id="R0026">
       <rname>Pottermore</rname>
       <type>Web site</type>
       <url  href="https://web.archive.org/web/20181008151658/https://www.pottermore.com/" type="Web Home" description="Archive.org's version of Pottermore"/>
+      <url  href="https://web.archive.org/web/20190110174600/https://www.pottermore.com/explore-the-story/sirius-black" type="Web Home" description="Pottermore on Sirius Black"/>
+      <url  href="https://web.archive.org/web/20191002071405/https://www.pottermore.com/explore-the-story/severus-snape" type="Web Home" description="Severus Snape fact file"/>
+      <url  href="https://web.archive.org/web/20190624075415/https://www.pottermore.com/explore-the-story/rubeus-hagrid" type="Web Home" description="Rubeus Hagrid fact file"/>
+      <url  href="https://web.archive.org/web/20191002071722/https://www.pottermore.com/explore-the-story/ron-weasley" type="Web Home" description="Ron Weasley fact file"/>
+      <url  href="https://web.archive.org/web/20170630110748/https://www.pottermore.com/explore-the-story/remus-lupin" type="Web Home"/>
+      <url  href="https://web.archive.org/web/20191002072541/https://www.pottermore.com/explore-the-story/percy-weasley" type="Web Home" description="Percy Weasley fact file"/>
+      <url  href="https://web.archive.org/web/20191002072152/https://www.pottermore.com/explore-the-story/nymphadora-tonks" type="Web Home" description="Nymphadora Tonks fact file"/>
+      <url  href="https://web.archive.org/web/20191002072355/https://www.pottermore.com/explore-the-story/neville-longbottom" type="Web Home" description="Neville Longbottom fact file"/>
+      <url  href="https://web.archive.org/web/20170701104541/https://www.pottermore.com/explore-the-story/molly-weasley" type="Web Home" description="Molly Weasley Fact File"/>
+      <url  href="https://web.archive.org/web/20191002072017/https://www.pottermore.com/explore-the-story/minerva-mcgonagall" type="Web Home" description="Minerva McGonagall fact file"/>
+      <url  href="https://web.archive.org/web/20191002072046/https://www.pottermore.com/explore-the-story/lucius-malfoy" type="Web Home" description="Lucius Malfoy fact file"/>
+      <url  href="https://web.archive.org/web/20170630235801/https://www.pottermore.com/explore-the-story/lily-potter" type="Web Home" description="Lily Potter Fact File"/>
+      <url  href="https://web.archive.org/web/20191002071716/https://www.pottermore.com/explore-the-story/hermione-granger" type="Web Home" description="Hermione Granger fact file"/>
+      <url  href="https://web.archive.org/web/20191002071823/https://www.pottermore.com/explore-the-story/ginny-weasley" type="Web Home" description="Ginny Weasley fact file"/>
+      <url  href="https://web.archive.org/web/20191002072458/https://www.pottermore.com/explore-the-story/fred-weasley" type="Web Home" description="Fred Weasley fact file"/>
+      <url  href="https://web.archive.org/web/20191002071814/https://www.pottermore.com/explore-the-story/fleur-delacour" type="Web Home" description="Fleur Delacour fact file"/>
+      <url  href="https://web.archive.org/web/20191002072534/https://www.pottermore.com/explore-the-story/draco-malfoy" type="Web Home" description="Draco Malfoy fact file"/>
+      <url  href="https://web.archive.org/web/20191002071503/https://www.pottermore.com/explore-the-story/bill-weasley" type="Web Home" description="Bill Weasley fact file"/>
+      <url  href="https://web.archive.org/web/20170414075352/https://www.pottermore.com/explore-the-story/arthur-weasley" type="Web Home" description="Pottermore on Arthur Weasley"/>
+      <url  href="https://web.archive.org/web/20170630110815/https://www.pottermore.com/explore-the-story/albus-dumbledore" type="Web Home" description="Albus Dumbledore Fact File"/>
     </repository>
     <repository handle="_ed5f7c549a92a69ffc30d007309" change="1631214785" id="R0027">
       <rname>Archive.org</rname>
@@ -7584,11 +7476,6 @@
       <type>Web site</type>
       <url  href="https://www.therowlinglibrary.com/j-k-rowling/official-website/" type="Web Home" description="The Rowling Library"/>
     </repository>
-    <repository handle="_ed62ac9fef26f454907713089bb" change="1631300367" id="R0029">
-      <rname>Mugglenet</rname>
-      <type>Web site</type>
-      <url  href="https://www.mugglenet.com/" type="Web Home" description="MuggleNet"/>
-    </repository>
     <repository handle="_ed62d26e4866d63d0673c446418" change="1755120165" id="R0030">
       <rname>The J.K. Rowling Index</rname>
       <type>Web site</type>
@@ -7599,10 +7486,11 @@
       <type>Web site</type>
       <url  href="https://www.schierer.org/~luke/log" type="Web Home" description="Random Unfinished Thoughts"/>
     </repository>
-    <repository handle="_eed7c3e33d55026060baa7cb7c0" change="1641315448" id="R0032">
+    <repository handle="_eed7c3e33d55026060baa7cb7c0" change="1755805875" id="R0032">
       <rname>The Harry Potter Lexicon</rname>
       <type>Web site</type>
       <url  href="https://www.hp-lexicon.org/" type="Web Home" description="The Harry Potter Lexicon"/>
+      <url  href="https://hp-lexicon.org" type="Web Home" description="Canon discussion/Essays"/>
     </repository>
     <repository handle="_f10824e2e7e7b35d5a812af5914" change="1656358005" id="R0033">
       <rname>Insider Magazine</rname>
@@ -7618,6 +7506,14 @@
       <rname>Wikipedia</rname>
       <type>Web site</type>
       <url  href="https://wikipedia.org" type="Web Home"/>
+    </repository>
+    <repository handle="_ff80b63501358ffc7ec8866665b" change="1755805760" id="R0036">
+      <rname>American Kindle Editions of the Primary Harry Potter Series</rname>
+      <type>Collection</type>
+    </repository>
+    <repository handle="_ff80e0d436d398d597d7473f586" change="1755806205" id="R0037">
+      <rname>Other Kindle Books</rname>
+      <type>Collection</type>
     </repository>
   </repositories>
   <notes>

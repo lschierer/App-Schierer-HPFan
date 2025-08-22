@@ -18,59 +18,88 @@ class App::Schierer::HPFan::Model::Gramps::Generic :
     '""'  => \&as_string;
 
   field $handle         : param : reader = undef;
-  field $change         : param = undef;
-  field $attribute_list : param //= [];
-  field $private        : param //= 0;
-
-  field $note_refs     = [];
-  field $citation_refs = [];
-  field $tag_refs      = [];
-
-  field $XPathContext : param : reader //= undef;
-  field $XPathObject  : param : reader //= undef;
 
   field $dbh : reader : param : writer //= undef;
-  field $ALLOWED_FIELD_NAMES : reader = {};
+  field $ALLOWED_FIELD_NAMES : reader = {
+    handle          => 1,
+    change          => 1,
+    attribute_list  => 1,
+    private         => 1,
+    json_data       => 1,
+  };
 
   ADJUST {
-    if (scalar(@$attribute_list)) {
-      $self->dev_guard(
-        sprintf('%s found a non-empty attribute_list.',
-          Scalar::Util::blessed($self))
-      );
+
+    if (exists $self->ALLOWED_FIELD_NAMES->{'handle'} &&
+        $self->ALLOWED_FIELD_NAMES->{'handle'}) {
+      #unless (defined($handle)) {
+      #  $self->logger->logcroak('handle must be defined.');
+      #}
     }
 
-    # this slightly awkward test construction lets things like references
-    # which do not have handles inherit from this class.
-    if (exists $self->ALLOWED_FIELD_NAMES->{'handle'}) {
-      unless (defined($handle)) {
-        unless (defined($XPathContext) and defined($XPathObject)) {
-          $self->logger->logcroak(
-            'either handle, or XPathContext and XPathObject must be defined.');
-        }
-        $self->_import();
-      }
-    }
-
-  }
-
-  method set_private ($is_private) {
-    if ($is_private) {
-      $private = 1;
-    }
-    elsif ($is_private == 0) {
-      $private = 0;
-    }
   }
 
   method private {
-    return $private ? 1 : 0;
+    if(exists $self->ALLOWED_FIELD_NAMES->{'private'}){
+      if($self->ALLOWED_FIELD_NAMES->{'private'}){
+        return $self->_get_field('private');
+      }
+    }
+    return 0;
   }
 
-  method change()        {$change}
-  method note_refs()     { [@$note_refs] }
-  method citation_refs() { [@$citation_refs] }
-  method tag_refs()      { [@$tag_refs] }
+  method json_data {
+    if(exists $self->ALLOWED_FIELD_NAMES->{'json_data'}){
+      if($self->ALLOWED_FIELD_NAMES->{'json_data'}){
+        return $self->_get_field('json_data');
+      }
+    }
+    return {};
+  }
+
+  method change {
+    if(exists $self->ALLOWED_FIELD_NAMES->{'change'}){
+      if($self->ALLOWED_FIELD_NAMES->{'change'}){
+        return $self->_get_field('change');
+      }
+    }
+    return time;
+  }
+
+  method note_refs {
+    my $items = [];
+    if(exists $self->ALLOWED_FIELD_NAMES->{'json_data'}){
+      my $hash = JSON::PP->new->decode($self->json_data);
+      foreach my $item ($hash->{'note_list'}->@*) {
+        push @$items,
+          App::Schierer::HPFan::Model::Gramps::Note::Reference->new($item->%*);
+      }
+    }
+    return [ $items->@* ];
+  }
+
+  method citation_refs {
+    my $items = [];
+    if(exists $self->ALLOWED_FIELD_NAMES->{'json_data'}){
+      my $hash = JSON::PP->new->decode($self->json_data);
+      foreach my $item ($hash->{'citation_list'}->@*) {
+        push @$items,
+          App::Schierer::HPFan::Model::Gramps::Reference->new($item->%*);
+      }
+    }
+    return [ $items->@* ];
+  }
+
+  method tag_refs {
+    my $items = [];
+    if(exists $self->ALLOWED_FIELD_NAMES->{'json_data'}){
+      my $hash = JSON::PP->new->decode($self->json_data);
+      foreach my $item ($hash->{'tag_list'}->@*) {
+        push @$items,
+          App::Schierer::HPFan::Model::Gramps::Reference->new($item->%*);
+      }
+    }
+  }
 
   field $table_names : reader = {
     citation     => 1,
@@ -126,40 +155,6 @@ class App::Schierer::HPFan::Model::Gramps::Generic :
     return undef;
   }
 
-  method _import {
-    $handle = $XPathObject->getAttribute('handle');
-    $change = $XPathObject->getAttribute('change');
-    $self->logger->logcroak("handle not discoverable in $XPathObject")
-      unless defined $handle;
-    $self->logger->logcroak("Timestamp not discoverable in $XPathObject")
-      unless defined $change;
-
-    foreach my $ref (
-      $self->XPathContext->findnodes('./g:noteref', $self->XPathObject)) {
-      push @$note_refs,
-        App::Schierer::HPFan::Model::Gramps::Note::Reference->new(
-        XPathContext => $self->XPathContext,
-        XPathObject  => $ref,
-        );
-    }
-
-    foreach my $ref (
-      $self->XPathContext->findnodes('./g:citationref', $self->XPathObject)) {
-      push @$citation_refs,
-        App::Schierer::HPFan::Model::Gramps::Citation::Reference->new(
-        XPathContext => $self->XPathContext,
-        XPathObject  => $ref,
-        );
-    }
-
-    foreach my $ref ($self->XPathContext->findnodes('./g:tagref')) {
-      push @$tag_refs,
-        App::Schierer::HPFan::Model::Gramps::Tag::Reference->new(
-        XPathContext => $self->XPathContext,
-        XPathObject  => $ref,
-        );
-    }
-  }
 
   method _equality ($other, $swap = 0) {
     return $handle eq $other->handle;
@@ -176,10 +171,10 @@ class App::Schierer::HPFan::Model::Gramps::Generic :
   method to_hash {
     return {
       handle        => $handle,
-      change        => $change,
-      note_refs     => [$note_refs->@*],
-      citation_refs => [$citation_refs->@*],
-      tag_refs      => [$tag_refs->@*],
+      change        => $self->change,
+      note_refs     => [$self->note_refs->@*],
+      citation_refs => [$self->citation_refs->@*],
+      tag_refs      => [$self->tag_refs->@*],
     };
   }
 

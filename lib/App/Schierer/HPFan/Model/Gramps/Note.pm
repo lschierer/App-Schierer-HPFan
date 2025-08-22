@@ -6,44 +6,38 @@ require App::Schierer::HPFan::Model::Gramps::Style;
 
 class App::Schierer::HPFan::Model::Gramps::Note :
   isa(App::Schierer::HPFan::Model::Gramps::Generic) {
+  use List::AllUtils qw( any );
   use Carp;
 
-  field $id     : reader : param = undef;
-  field $priv   : reader : param = 0;
-  field $format : reader : param = undef;
-  field $type   : reader : param = undef;
-  field $text   : reader : param = ' ';
+  ADJUST {
+    my @desired = qw(
+      handle  gramps_id   format
+      change  private     json_data );
 
-  field $styles : param = [];
-
-  field $ALLOWED_FIELD_NAMES : reader =
-    { map { $_ => 1 } qw( gramps_id change private json_data) };
-
-  method styles { [$styles->@*] }
-
-  method _import {
-    $self->SUPER::_import;
-
-    $id = $self->XPathObject->getAttribute('id');
-    $self->logger->logcroak(
-      sprintf('id not discoverable in %s', $self->XPathObject))
-      unless defined $id;
-    $self->logger->debug("id is $id");
-
-    # optional things
-    $priv   = $self->XPathObject->getAttribute('priv');
-    $format = $self->XPathObject->getAttribute('format');
-    $type   = $self->XPathObject->getAttribute('type');
-    $text   = $self->XPathContext->findvalue('./g:text', $self->XPathObject);
-
-    foreach
-      my $s ($self->XPathContext->findnodes('./g:style', $self->XPathObject)) {
-      push @$styles,
-        App::Schierer::HPFan::Model::Gramps::Style->new(
-        XPathContext => $self->XPathContext,
-        XPathObject  => $self->XPathObject,
-        );
+    my @names;
+    push @names, @desired;
+    push @names, keys $self->ALLOWED_FIELD_NAMES->%*;
+    foreach my $tn (@names) {
+      if(any {$_ eq $tn} @desired){
+        $self->ALLOWED_FIELD_NAMES->{$tn} = 1;
+      } else {
+        $self->ALLOWED_FIELD_NAMES->{$tn} = undef;
+      }
     }
+  }
+
+  method styles { my $hash = JSON::PP->new->decode($self->json_data); }
+
+  method gramps_id { $self->_get_field('gramps_id') }
+  method format     { $self->_get_field('format') }
+
+  method parse_json_data {
+    my $hash = JSON::PP->new->decode($self->json_data);
+    $self->logger->debug(sprintf(
+      'hash for tag "%s" is: %s',
+      $self->handle, Data::Printer::np($hash),
+    ));
+
   }
 
 }

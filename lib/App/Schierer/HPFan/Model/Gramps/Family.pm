@@ -6,34 +6,39 @@ require App::Schierer::HPFan::Model::Gramps::Family::Relationship;
 
 class App::Schierer::HPFan::Model::Gramps::Family :
   isa(App::Schierer::HPFan::Model::Gramps::Generic) {
+  use List::AllUtils qw( any );
   use Carp;
 
-  field $gramps_id     : param = undef;
-  field $father_handle : param = undef;    # handle reference
-  field $mother_handle : param = undef;    # handle reference
-  field $json_data     : param //= undef;
+  field $gramps_id     = undef;
+  field $father_handle  = undef;    # handle reference
+  field $mother_handle  = undef;    # handle reference
 
-  field $rel_type   : param = undef;  # relationship type
-  field $event_refs : param = [];
-  field $child_refs : param = [];     # array of hashrefs with hlink, mrel, frel
-  field $attributes : param = [];
-  field $note_refs  : param = [];
-  field $citation_refs       : param  = [];
-  field $tag_refs            : param  = [];
-  field $ALLOWED_FIELD_NAMES : reader = {
-    map { $_ => 1 }
-      qw( gramps_id change private gramps_id
-      father_handle
-      mother_handle
-      json_data     )
-  };
+  field $rel_type    = undef;  # relationship type
+  field $attributes  = [];
+  field $child_refs = [];
+  field $event_refs = [];
+
+  ADJUST {
+    my @desired = qw( gramps_id change private gramps_id
+    father_handle
+    mother_handle
+    json_data     );
+    my @names;
+    push @names, @desired;
+    push @names, keys $self->ALLOWED_FIELD_NAMES->%*;
+    foreach my $tn (@names) {
+      if(any {$_ eq $tn} @desired){
+        $self->ALLOWED_FIELD_NAMES->{$tn} = 1;
+      } else {
+        $self->ALLOWED_FIELD_NAMES->{$tn} = undef;
+      }
+    }
+  }
+
 
   method event_refs()    { [@$event_refs] }
   method child_refs()    { [@$child_refs] }
   method attributes()    { [@$attributes] }
-  method note_refs()     { [@$note_refs] }
-  method citation_refs() { [@$citation_refs] }
-  method tag_refs()      { [@$tag_refs] }
 
   method gramps_id     { $self->_get_field('gramps_id') }
   method father_handle { $self->_get_field('father_handle') }
@@ -65,18 +70,6 @@ class App::Schierer::HPFan::Model::Gramps::Family :
     my $hash = JSON::PP->new->decode($self->json_data);
     if (reftype($hash) eq 'HASH') {
       $self->logger->info("got hash " . Data::Printer::np($hash));
-
-      foreach my $item ($hash->{'citation_list'}->@*) {
-        push @$citation_refs, $item,;
-      }
-
-      foreach my $item ($hash->{'note_list'}->@*) {
-        push @$note_refs, $item,;
-      }
-
-      foreach my $item ($hash->{'tag_list'}->@*) {
-        push @$tag_refs, $item,;
-      }
 
       foreach my $item ($hash->{'event_ref_list'}->@*) {
         push @$event_refs,

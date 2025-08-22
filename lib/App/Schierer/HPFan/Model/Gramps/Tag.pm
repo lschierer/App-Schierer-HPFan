@@ -12,16 +12,12 @@ class App::Schierer::HPFan::Model::Gramps::Tag :
   field $name      : param //= undef;
   field $color     : param //= undef;
   field $priority  : param //= undef;
-  field $json_data : param //= undef;
 
   field $ALLOWED_FIELD_NAMES : reader =
     { map { $_ => 1 } qw( handle name color priority change json_data) };
 
   method name      { $self->_get_field('name') }
   method color     { $self->_get_field('color') }
-  method priority  { $self->_get_field('priority') }
-  method change    { $self->_get_field('change') }
-  method json_data { $self->_get_field('json_data') }
 
   method parse_json_data {
     my $hash = JSON::PP->new->decode($self->json_data);

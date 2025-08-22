@@ -3,9 +3,10 @@ use utf8::all;
 use experimental qw(class);
 require Date::Manip;
 require Scalar::Util;
-require App::Schierer::HPFan::Model::Gramps::Note::Reference;
+require App::Schierer::HPFan::Model::Gramps::Tag;
+require App::Schierer::HPFan::View::Markdown;
 
-class App::Schierer::HPFan::Model::Gramps::Reference :
+class App::Schierer::HPFan::Model::Gramps::Note::Text :
   isa(App::Schierer::HPFan::Model::Gramps::Generic) {
   use Carp;
   use Readonly;
@@ -15,14 +16,6 @@ class App::Schierer::HPFan::Model::Gramps::Reference :
     '""'       => \&to_string,              # used for concat too
     'bool'     => sub { $_[0]->_isTrue },
     'fallback' => 1;
-
-  field $_class        : param //= undef;
-  field $citation_list : param //= [];
-  field $note_list     : param //= [];
-  field $ref           : param : reader //= undef;
-  field $role          : param : reader : writer = undef;
-  field $attribute_list : param : reader = [];
-  field $private        : param  //= undef;
 
   ADJUST {
     my @names;
@@ -36,13 +29,14 @@ class App::Schierer::HPFan::Model::Gramps::Reference :
     }
   }
 
-  method private { $self->private ? 1 : 0 }
+  field $_class : param //= undef;
+  field $string : param //= undef;
+  field $tags   : param //= [];
 
-  method citation_list { [$citation_list->@*] }
-  method note_list     { [$note_list->@*] }
+  method tags { [ $tags->@* ] };
 
   method _comparison ($other, $swap = 0) {
-    return $self->ref cmp $other->ref;
+    return $self->to_string cmp $other->to_string;
   }
 
   method _equality ($other, $swap = 0) {
@@ -52,19 +46,20 @@ class App::Schierer::HPFan::Model::Gramps::Reference :
   method to_hash {
     return {} if $self->private;
     my $r = { ref => $ref };
-    $r->{'citation_list'} = $citation_list if (scalar @$citation_list);
-    $r->{'note_list'}     = $citation_list if (scalar @$note_list);
-    $r->{'role'}          = $role          if (defined $role);
+    $r->{'string'}  = $string if defined($string);
+    $r->{'tags'}    = $tags if scalar(@{ $tags });
     return $r;
   }
 
   method to_string {
-    my $json =
-      JSON::PP->new->utf8->pretty->canonical(1)
-      ->allow_blessed(1)
-      ->convert_blessed(1)
-      ->encode($self->to_hash());
-    return $json;
+    if($_class eq 'StyledText'){
+      my $md = App::Schierer::HPFan::View::Markdown->new();
+      return $md->format_string($string) unless not defined($string);
+      return '';
+    } else {
+      return $string unless not defined $string;
+      return '';
+    }
   }
 }
 1;

@@ -7,18 +7,17 @@ require GraphViz;
 require DBI;
 require DBD::SQLite;
 require Data::Printer;
-require App::Schierer::HPFan::Model::Gramps::Tag;
-require App::Schierer::HPFan::Model::Gramps::DateHelper;
-require App::Schierer::HPFan::Model::Gramps::Event;
-require App::Schierer::HPFan::Model::Gramps::Surname;
-require App::Schierer::HPFan::Model::Gramps::Name;
-require App::Schierer::HPFan::Model::Gramps::Person;
-require App::Schierer::HPFan::Model::Gramps::Family;
 require App::Schierer::HPFan::Model::Gramps::Citation;
-require App::Schierer::HPFan::Model::Gramps::Source;
-require App::Schierer::HPFan::Model::Gramps::Repository;
-require App::Schierer::HPFan::Model::Gramps::Repository::Reference;
+require App::Schierer::HPFan::Model::Gramps::Event;
+require App::Schierer::HPFan::Model::Gramps::Family;
+require App::Schierer::HPFan::Model::Gramps::Name;
 require App::Schierer::HPFan::Model::Gramps::Note;
+require App::Schierer::HPFan::Model::Gramps::Repository;
+require App::Schierer::HPFan::Model::Gramps::Source;
+require App::Schierer::HPFan::Model::Gramps::Surname;
+require App::Schierer::HPFan::Model::Gramps::DateHelper;
+require App::Schierer::HPFan::Model::Gramps::Person;
+require App::Schierer::HPFan::Model::Gramps::Tag;
 
 class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
 # PODNAME: App::Schierer::HPFan::Model::Gramps
@@ -325,20 +324,14 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
   method execute_import {
     $self->logger->info(
       'starting Gramps Import from XML file: ' . $gramps_export->canonpath);
-    my $dom = XML::LibXML->load_xml(location => $gramps_export->canonpath);
-    my $d   = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
 
-    # Register the namespace
-    my $xc = XML::LibXML::XPathContext->new($dom);
-    $xc->registerNs('g', 'http://gramps-project.org/xml/1.7.1/');
-
-    $self->_import_citations($xc);
+    $self->_import_citations();
     $self->_import_events();
     $self->_import_families();
-    $self->_import_notes($xc);
+    $self->_import_notes();
     $self->_import_people();
-    $self->_import_repositories($xc);
-    $self->_import_sources($xc);
+    $self->_import_repositories();
+    $self->_import_sources();
     $self->_import_tags();
   }
 
@@ -346,11 +339,9 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     my $all_entries = $dbh->selectcol_arrayref("SELECT handle FROM person");
 
     foreach my $handle (@$all_entries) {
-      my $row = $dbh->selectrow_hashref("SELECT * FROM person WHERE handle = ?",
-        undef, $handle,);
-
+      $self->logger->debug("importing person with handle '$handle'");
       $people->{$handle} =
-        App::Schierer::HPFan::Model::Gramps::Person->new($row->%*);
+        App::Schierer::HPFan::Model::Gramps::Person->new(handle => $handle);
       $people->{$handle}->set_dbh($dbh);
       $people->{$handle}->parse_json_data;
     }
@@ -362,11 +353,8 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     my $all_entries = $dbh->selectcol_arrayref("SELECT handle FROM family");
 
     foreach my $handle (@$all_entries) {
-      my $row = $dbh->selectrow_hashref("SELECT * FROM family WHERE handle = ?",
-        undef, $handle,);
-
       $families->{$handle} =
-        App::Schierer::HPFan::Model::Gramps::Family->new($row->%*);
+        App::Schierer::HPFan::Model::Gramps::Family->new( handle => $handle);
       $families->{$handle}->set_dbh($dbh);
       $families->{$handle}->parse_json_data;
     }
@@ -378,76 +366,62 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     my $all_entries = $dbh->selectcol_arrayref("SELECT handle FROM tag");
 
     foreach my $handle (@$all_entries) {
-      my $row = $dbh->selectrow_hashref("SELECT * FROM tag WHERE handle = ?",
-        undef, $handle,);
-
       $tags->{$handle} =
-        App::Schierer::HPFan::Model::Gramps::Tag->new($row->%*);
+        App::Schierer::HPFan::Model::Gramps::Tag->new( handle => $handle);
       $tags->{$handle}->set_dbh($dbh);
       $tags->{$handle}->parse_json_data;
     }
     $self->logger->info(sprintf('imported %s tags.', scalar keys %{$tags}));
   }
 
-  method _import_citations ($xc) {
-    my $d = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
-    foreach my $xItem ($xc->findnodes('//g:citations/g:citation')) {
-      my $handle = $xItem->getAttribute('handle');
-      if ($handle) {
-        $citations->{$handle} =
-          App::Schierer::HPFan::Model::Gramps::Citation->new(
-          XPathContext => $xc,
-          XPathObject  => $xItem,
-          );
+  method _import_citations{
+    my $all_entries = $dbh->selectcol_arrayref("SELECT handle FROM citation");
 
-      }
+    foreach my $handle (@$all_entries) {
+      $citations->{$handle} =
+        App::Schierer::HPFan::Model::Gramps::Citation->new( handle => $handle);
+      $citations->{$handle}->set_dbh($dbh);
+      $citations->{$handle}->parse_json_data;
     }
-    $self->logger->info(
+    my $d = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
+        $self->logger->info(
       sprintf('imported %s citations.', scalar keys %{$citations}));
   }
 
-  method _import_sources ($xc) {
-    my $d = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
-    foreach my $xItem ($xc->findnodes('//g:sources/g:source')) {
-      my $handle = $xItem->getAttribute('handle');
-      if ($handle) {
-        $sources->{$handle} = App::Schierer::HPFan::Model::Gramps::Source->new(
-          XPathContext => $xc,
-          XPathObject  => $xItem,
-        );
+  method _import_sources () {
+    my $all_entries = $dbh->selectcol_arrayref("SELECT handle FROM source");
 
-      }
+    foreach my $handle (@$all_entries) {
+      $sources->{$handle} =
+        App::Schierer::HPFan::Model::Gramps::Source->new( handle => $handle);
+      $sources->{$handle}->set_dbh($dbh);
+      $sources->{$handle}->parse_json_data;
     }
     $self->logger->info(
       sprintf('imported %s sources.', scalar keys %{$sources}));
   }
 
-  method _import_notes ($xc) {
-    my $d = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
-    foreach my $xItem ($xc->findnodes('//g:notes/g:note')) {
-      my $handle = $xItem->getAttribute('handle');
-      if ($handle) {
-        $notes->{$handle} = App::Schierer::HPFan::Model::Gramps::Note->new(
-          XPathContext => $xc,
-          XPathObject  => $xItem,
-        );
+  method _import_notes  {
+    my $all_entries = $dbh->selectcol_arrayref("SELECT handle FROM note");
 
-      }
+    foreach my $handle (@$all_entries) {
+      $notes->{$handle} =
+        App::Schierer::HPFan::Model::Gramps::Note->new( handle => $handle);
+      $notes->{$handle}->set_dbh($dbh);
+      $notes->{$handle}->parse_json_data;
     }
-    $self->logger->info(sprintf('imported %s notes.', scalar keys %{$sources}));
+
+    $self->logger->info(sprintf('imported %s notes.', scalar keys %{$notes}));
   }
 
-  method _import_repositories ($xc) {
-    my $d = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
-    foreach my $xItem ($xc->findnodes('//g:repositories/g:repository')) {
-      my $handle = $xItem->getAttribute('handle');
-      if ($handle) {
-        $repositories->{$handle} =
-          App::Schierer::HPFan::Model::Gramps::Repository->new(
-          XPathContext => $xc,
-          XPathObject  => $xItem,
-          );
-      }
+  method _import_repositories {
+    my $all_entries = $dbh->selectcol_arrayref("SELECT handle FROM repository");
+
+    foreach my $handle (@$all_entries) {
+      $repositories->{$handle} =
+        App::Schierer::HPFan::Model::Gramps::Repository->new( handle => $handle);
+      $repositories->{$handle}->set_dbh($dbh);
+      $repositories->{$handle}->parse_json_data;
     }
     $self->logger->info(
       sprintf('imported %s repositories.', scalar keys %{$repositories}));
@@ -457,10 +431,8 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     my $all_entries = $dbh->selectcol_arrayref("SELECT handle FROM event");
 
     foreach my $handle (@$all_entries) {
-      my $row = $dbh->selectrow_hashref("SELECT * FROM event WHERE handle = ?",
-        undef, $handle,);
       $events->{$handle} =
-        App::Schierer::HPFan::Model::Gramps::Event->new($row->%*);
+        App::Schierer::HPFan::Model::Gramps::Event->new( handle => $handle);
       $events->{$handle}->set_dbh($dbh);
       $events->{$handle}->parse_json_data;
     }

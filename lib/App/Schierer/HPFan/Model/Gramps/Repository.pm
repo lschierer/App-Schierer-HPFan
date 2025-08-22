@@ -8,44 +8,48 @@ class App::Schierer::HPFan::Model::Gramps::Repository :
   isa(App::Schierer::HPFan::Model::Gramps::Generic) {
   use Carp;
 
-  field $id    : param : reader = undef;
-  field $rname : param : reader = undef;
-  field $type  : param : reader = undef;
-  field $url   : param //= [];
+  field $gramps_id  : param = undef;
+  field $name       : param = undef;
+  field $json_data  : param = undef;
 
   field $ALLOWED_FIELD_NAMES : reader =
-    { map { $_ => 1 } qw( gramps_id change private json_data) };
+    { map { $_ => 1 } qw(
+      gramps_id   handle  change
+      name        private json_data) };
 
-  method url { [@$url] }
+  method gramps_id { $self->_get_field('gramps_id') }
+  method name      { $self->_get_field('name') }
+  method json_data { $self->_get_field('json_data') }
+  method change    { $self->_get_field('change') }
+  method private   { $self->_get_field('private') }
 
-  method _import {
-    $self->SUPER::_import;
+  method parse_json_data {
+    my $hash = JSON::PP->new->decode($self->json_data);
+    $self->logger->debug(sprintf(
+      'hash for tag "%s" is: %s',
+      $self->handle, Data::Printer::np($hash),
+    ));
 
-    $type = $self->XPathContext->findvalue('./g:type', $self->XPathObject);
-    $self->logger->logcroak(
-      sprintf('type not discoverable in %s', $self->XPathObject))
-      unless defined $type;
-    $self->logger->debug("type is $type");
-
-    $rname = $self->XPathContext->findvalue('./g:rname', $self->XPathObject);
-    $self->logger->logcroak(
-      sprintf('rname not discoverable in %s', $self->XPathObject))
-      unless defined $rname;
-    $self->logger->debug("rname is $rname");
-
-    # optional things
-    $id = $self->XPathObject->getAttribute('id');
-
-    foreach
-      my $xu ($self->XPathContext->findnodes('./g:url', $self->XPathObject)) {
-      push @$url,
-        App::Schierer::HPFan::Model::Gramps::Url->new(
-        XPathContext => $self->XPathContext,
-        XPathObject  => $xu,
-        );
+    if (exists $hash->{'attribute_list'} &&  scalar @{ $hash->{'attribute_list'} }) {
+      $self->logger->dev_guard(
+        sprintf('%s found a non-empty attribute_list', ref($self)));
     }
 
+    foreach my $item ($hash->{'note_list'}->@*) {
+      push @{ $self->note_refs }, $item,;
+    }
+
+    foreach my $item ($hash->{'tag_list'}->@*) {
+      push @{ $self->tag_refs }, $item;
+    }
   }
+
+  method type {
+    my $hash = JSON::PP->new->decode($self->json_data);
+    my $rt = App::Schierer::HPFan::Model::Gramps::Repository::Type->new($hash->{'type'}->%*);
+    return $rt;
+  }
+
 }
 1;
 __END__

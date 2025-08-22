@@ -2,6 +2,7 @@ use v5.42.0;
 use experimental qw(class);
 use utf8::all;
 require Date::Manip;
+require Scalar::Util;
 require App::Schierer::HPFan::Model::Gramps::DateHelper;
 
 class App::Schierer::HPFan::Model::Gramps::GrampsDate :
@@ -28,9 +29,11 @@ class App::Schierer::HPFan::Model::Gramps::GrampsDate :
   ADJUST {
     if (defined($start)) {
       $self->logger->debug("found a defined start date: " . ref($start));
+
     }
     if (defined($end)) {
       $self->logger->debug("found a defined end date: " . ref($end));
+
     }
   }
 
@@ -226,8 +229,25 @@ class App::Schierer::HPFan::Model::Gramps::GrampsDate :
     }
     elsif ($self->precision eq 'y') {
       $err = $d->parse(sprintf('%04d-01-01', $year));
+    }elsif($self->is_range && defined($start)){
+      my $r;
+      if(Scalar::Util::blessed($start) eq 'App::Schierer::HPFan::Model::Gramps::GrampsDate'){
+        $r = $start->as_dm_date;
+        if(defined $r){
+          return $r;
+        }
+      }
+      if(Scalar::Util::blessed($end) eq 'App::Schierer::HPFan::Model::Gramps::GrampsDate'){
+        $r = $end->as_dm_date;
+        if(defined $r){
+          return $r;
+        }
+      }
+      $self->logger->warn("Range defined without start or end dates!!");
+      return undef;
     }
     else {
+      $self->logger->warn("no precision on this date");
       return undef;
     }
     if ($err) {

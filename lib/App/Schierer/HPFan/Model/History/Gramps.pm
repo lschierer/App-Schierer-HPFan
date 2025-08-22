@@ -15,7 +15,8 @@ class App::Schierer::HPFan::Model::History::Gramps :
   ADJUST {
     unless ($gramps && $gramps->isa('App::Schierer::HPFan::Model::Gramps')) {
       $self->logger->logcroak(
-"gramps must be defined, and of type App::Schierer::HPFan::Model::Gramps"
+    "gramps must be defined, ' .
+    'and of type App::Schierer::HPFan::Model::Gramps"
       );
     }
   }

@@ -3,7 +3,6 @@ use utf8::all;
 use experimental qw(class);
 #require App::Schierer::HPFan::Model::History::Event;
 require Scalar::Util;
-require Pandoc;
 
 class App::Schierer::HPFan::View::Timeline
   : isa(App::Schierer::HPFan::Logger) {
@@ -21,21 +20,12 @@ class App::Schierer::HPFan::View::Timeline
 
   # internal fields
 
-  # pandoc for future use
-  field $customCommonMark = join('+',
-    qw(commonmark alerts attributes autolink_bare_uris footnotes implicit_header_references pipe_tables raw_html rebase_relative_paths smart gfm_auto_identifiers)
-  );
-  field $parser = Pandoc->new();
 
   field $categories       = {};
   field $nodes_by_sortval = {};
-  field $category_offset  = {};
-
-  field $base_x = 10;    # I decided 100 was too much separation
 
  # All of these are expected to be set at run time based on the live data.
  #default this to a very high number that should be bigger than my julian dates.
-  field $base_y   = 9**9;
   field $min_date = 9**9;
   field $max_date = 0;
   field $ymax     = 6500;
@@ -53,7 +43,6 @@ class App::Schierer::HPFan::View::Timeline
   field $used_positions = [];
 
   # these are constants
-  field $angles;
   field $detail_distance;
   field $detail_width;
   field $detail_height;
@@ -70,14 +59,6 @@ class App::Schierer::HPFan::View::Timeline
 
   ADJUST {
     #  # only the angles that fit in the layout
-    Readonly::Hash my %tmp => {
-      0     => 1,    # most preferred
-      22.5  => 2,
-      -22.5 => 3,
-      45    => 4,
-      -45   => 5,    # least preferred
-    };
-    $angles = \%tmp;
 
     Readonly::Scalar my $stw => 120;
     $detail_width = $stw;
@@ -110,12 +91,6 @@ class App::Schierer::HPFan::View::Timeline
     );
   }
 
-  # Convert degrees to radians for the lookup
-  method _get_angle_preference($angle_rad) {
-    my $angle_deg = $angle_rad * (180 / Math::Trig::pi);
-    return $angles->{$angle_deg} // 999;    # default to very low preference
-  }
-
   method create {
     $self->_organize_events_by_category_and_date();
     $self->_create_detail_nodes_and_connections();
@@ -134,7 +109,6 @@ class App::Schierer::HPFan::View::Timeline
       my $category = $event->event_class // 'generic';
       my $date     = $event->sortval;
       # set the base y cordinate to the minimum Julian Date
-      $base_y   = min($base_y,   $event->sortval);
       $min_date = min($min_date, $event->sortval);
       $max_date = max($max_date, $event->sortval);
 
@@ -441,12 +415,10 @@ s/<text ([^>]+) font-family="[^"]+" font-size="[^"]+">/<text $1 class="spectrum-
 
     foreach my $pos (@try_positions) {
       if ($self->_is_position_clear($event, $pos)) {
-        $self->logger->debug(
-          sprintf(
-            '%s recieved true for pos %s %s',
-            $event->id, $pos->{x}, $pos->{y}
-          )
-        );
+        $self->logger->debug(sprintf(
+          '%s recieved true for pos %s %s',
+          $event->id, $pos->{x}, $pos->{y}
+        ));
 
         push @{$used_positions}, $pos;
         return { x => int($pos->{x}), y => int($pos->{y}) };
@@ -455,52 +427,52 @@ s/<text ([^>]+) font-family="[^"]+" font-size="[^"]+">/<text $1 class="spectrum-
 
     # Fallback
     my $fb = { x => $timeline_pos->{x} + 400, y => $timeline_pos->{y} + 10 };
-    $self->logger->warn(
-      sprintf(
-        'using fallback value for event %s: pos %s %s',
-        $event->id, $fb->{x}, $fb->{y}
-      )
-    );
+    $self->logger->warn(sprintf(
+      'using fallback value for event %s: pos %s %s',
+      $event->id, $fb->{x}, $fb->{y}
+    ));
     return $fb;
   }
 
   method _is_position_clear($event, $pos) {
-      return 0 unless $pos->{y} >= 0;
-      return 0 unless $pos->{x} >= 1;
+    return 0 unless $pos->{y} >= 0;
+    return 0 unless $pos->{x} >= 1;
 
-      # Convert center to corner for boundary checking
-      my $corner_x = $pos->{x} - $detail_width/2;
-      my $corner_y = $pos->{y} - $detail_height/2;
+    # Convert center to corner for boundary checking
+    my $corner_x = $pos->{x} - $detail_width / 2;
+    my $corner_y = $pos->{y} - $detail_height / 2;
 
-      # Boundary checks using corner coordinates
-      my @catNames = keys $categories->%*;
-      my $numCats = scalar @catNames;
-      my $leftGutter = ($numCats + 1) * 10;
+    # Boundary checks using corner coordinates
+    my @catNames   = keys $categories->%*;
+    my $numCats    = scalar @catNames;
+    my $leftGutter = ($numCats + 1) * 10;
 
-      return 0 if $corner_x <= $leftGutter;
-      return 0 if $corner_x + $detail_width >= $xmax;
-      return 0 if $corner_y < 3;
-      return 0 if $corner_y + $detail_height > $viewheight;
+    return 0 if $corner_x <= $leftGutter;
+    return 0 if $corner_x + $detail_width >= $xmax;
+    return 0 if $corner_y < 3;
+    return 0 if $corner_y + $detail_height > $viewheight;
 
-      # Collision detection using CENTER coordinates
-      foreach my $used ($used_positions->@*) {
-          if ($pos->{x} == $used->{x} && $pos->{y} == $used->{y}) {
-              return 0;  # exact match
-          }
-
-          # Center-to-center collision detection
-          my $x_distance = abs($pos->{x} - $used->{x});
-          my $y_distance = abs($pos->{y} - $used->{y});
-
-          # Boxes overlap if center distance < box dimension
-          if ($x_distance < $detail_width && $y_distance < $detail_height) {
-              return 0;  # overlap detected
-          }
+    # Collision detection using CENTER coordinates
+    foreach my $used ($used_positions->@*) {
+      if ($pos->{x} == $used->{x} && $pos->{y} == $used->{y}) {
+        return 0;    # exact match
       }
-      $self->logger->debug(sprintf('no test case failed for event %s with pos %s %s', $event->id, $pos->{x}, $pos->{y}));
-      return 1;  # position is clear
-  }
 
+      # Center-to-center collision detection
+      my $x_distance = abs($pos->{x} - $used->{x});
+      my $y_distance = abs($pos->{y} - $used->{y});
+
+      # Boxes overlap if center distance < box dimension
+      if ($x_distance < $detail_width && $y_distance < $detail_height) {
+        return 0;    # overlap detected
+      }
+    }
+    $self->logger->debug(sprintf(
+      'no test case failed for event %s with pos %s %s',
+      $event->id, $pos->{x}, $pos->{y}
+    ));
+    return 1;    # position is clear
+  }
 
 }
 1;

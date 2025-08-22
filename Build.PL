@@ -83,6 +83,7 @@ my $build = Module::Build->new(
     'Perl::Critic::Policy' => '0',
     'Test::Deep'           => '0',
     'Test::More'           => '0',
+    'Test::Log::Log4perl'  => '0',
     'URI'                  => '0',
   },
   configure_requires => {
