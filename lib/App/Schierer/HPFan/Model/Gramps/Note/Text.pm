@@ -24,9 +24,7 @@ class App::Schierer::HPFan::Model::Gramps::Note::Text :
       $self->ALLOWED_FIELD_NAMES->{$tn} = undef;
     }
 
-    if(scalar @{ $attribute_list }){
-      $self->dev_guard(sprintf('%s encountered a populated attribute_list', CORE::ref($self)));
-    }
+
   }
 
   field $_class : param //= undef;
@@ -45,7 +43,7 @@ class App::Schierer::HPFan::Model::Gramps::Note::Text :
 
   method to_hash {
     return {} if $self->private;
-    my $r = { ref => $ref };
+    my $r = { ref => $self->ref };
     $r->{'string'}  = $string if defined($string);
     $r->{'tags'}    = $tags if scalar(@{ $tags });
     return $r;
@@ -64,3 +62,8 @@ class App::Schierer::HPFan::Model::Gramps::Note::Text :
 }
 1;
 __END__
+SELECT
+    gramps_id,
+    json_extract(json_data, '$.type.value')   AS type_value,
+FROM note
+ORDER BY type_value, type_string, gramps_id;

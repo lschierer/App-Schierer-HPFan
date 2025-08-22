@@ -3,6 +3,8 @@ use experimental qw(class);
 use utf8::all;
 require Date::Manip;
 require App::Schierer::HPFan::Model::History::Event;
+require App::Schierer::HPFan::Model::Gramps::Note;
+require App::Schierer::HPFan::View::Markdown;
 
 class App::Schierer::HPFan::Model::History::Gramps :
   isa(App::Schierer::HPFan::Logger) {
@@ -11,6 +13,7 @@ class App::Schierer::HPFan::Model::History::Gramps :
 
   # The ::Model::Gramps from which to get History
   field $gramps : param;
+  field $mv = App::Schierer::HPFan::View::Markdown->new();
 
   ADJUST {
     unless ($gramps && $gramps->isa('App::Schierer::HPFan::Model::Gramps')) {
@@ -91,27 +94,65 @@ class App::Schierer::HPFan::Model::History::Gramps :
   }
 
   method process_birth_event ($e) {
+    my @citations;
+    my @description;
     if (my $person = $self->_primary_person_for($e)) {
+
+      # handle date
       my @dklparts;
       push @dklparts, $e->date->quality_label
         if (defined $e->date->quality_label && length($e->date->quality_label));
       push @dklparts, $e->date->modifier_label
         if (defined $e->date->modifier_label
         && length($e->date->modifier_label));
+
+      # set up description
+      push @description, mv->format_string($e->description, 1)
+        if (defined($e->description) && length($e->description));
+
+      foreach my $nr ($e->note_refs->@*) {
+        # TODO some note references have other interesting properties beyond being a handle
+        if(Scalar::Util::reftype($nr) eq 'OBJECT' && $nr->isa('App::Schierer::HPFan::Model::Gramps::Note::Reference')){
+          my $note = App::Schierer::HPFan::Model::Gramps::Note->new( handle => $nr->ref );
+          $note->set_dbh($e->dbh);
+          if($note->isa('App::Schierer::HPFan::Model::Gramps::Note')) {
+            if(defined($note->gramps_id) && length($note->gramps_id)){
+              push @description, $note->text;
+              $self->logger->debug(sprintf('pushed new note to description for %s',
+              $e->gramps_id));
+              foreach my $cr ($note->citation_refs->@*){
+                #todo handle citations.
+              }
+            }
+          }else {
+            $self->logger->error(sprintf('note is not a Note object, it shows as ref %s blessed %s.', Scalar::Util::reftype($note), Scalar::Util::blessed($note)));
+          }
+        } else {
+          $self->logger->error(sprintf(
+            'nr is not a Note::Reference object, it shows as ref %s blessed %s. isa %s',
+            Scalar::Util::reftype($nr) // 'Undefined' , Scalar::Util::blessed($nr) // 'Undefined',
+           $nr->isa('App::Schierer::HPFan::Model::Gramps::Note::Reference') ? 'true' : 'false', ));
+        }
+
+
+      }
+
+      # final object
       $events->{ $e->gramps_id } =
         App::Schierer::HPFan::Model::History::Event->new(
         id          => $e->gramps_id,
-        origin      => 'Gramps',
-        type        => 'Birth',
-        event_class => 'magical',
         blurb       => sprintf('Birth of %s', $person->display_name()),
         date_iso    => (not $e->date->is_range)
         ? $e->date->as_dm_date->printf('%Y-%m-%d')
         : sprintf('%s - %s', $e->date->start, $e->date->end),
         date_kind => scalar @dklparts ? sprintf('(%s)', join(' ', @dklparts),)
         : '',
-        sortval  => $e->date->sortval,
+        description => join('', @description),
+        event_class => 'magical',
+        origin      => 'Gramps',
         raw_date => $e->date,
+        sortval  => $e->date->sortval,
+        type        => 'Birth',
         );
     }
     else {
@@ -123,12 +164,30 @@ class App::Schierer::HPFan::Model::History::Gramps :
 
   method process_death_event ($e) {
     if (my $person = $self->_primary_person_for($e)) {
+      my @citations;
+      my @description;
+
+      # set up date
       my @dklparts;
       push @dklparts, $e->date->quality_label
         if (defined $e->date->quality_label && length($e->date->quality_label));
       push @dklparts, $e->date->modifier_label
         if (defined $e->date->modifier_label
         && length($e->date->modifier_label));
+
+      # set up description
+      push @description, mv->format_string($e->description)
+        if (defined($e->description) && length($e->description));
+
+      foreach my $nr ($e->note_refs) {
+        # TODO handle interesting details in notes.
+        # add them to the description.
+        # and their citations to the sources.
+      }
+
+
+
+      # final object
       $events->{ $e->gramps_id } =
         App::Schierer::HPFan::Model::History::Event->new(
         id          => $e->gramps_id,
@@ -143,7 +202,7 @@ class App::Schierer::HPFan::Model::History::Gramps :
         : '',
         sortval     => $e->date->sortval,
         raw_date    => $e->date,
-        description => $e->description,
+        description => join('', @description),
         );
     }
     else {

@@ -3,7 +3,7 @@ use utf8::all;
 use experimental qw(class);
 use Readonly;
 
-class App::Schierer::HPFan::Model::Gramps::EventType :
+class App::Schierer::HPFan::Model::Gramps::Event::Type :
   isa(App::Schierer::HPFan::Logger) {
   use Carp;
   use overload

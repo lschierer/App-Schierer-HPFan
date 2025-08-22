@@ -4,7 +4,7 @@ use experimental qw(class);
 require App::Schierer::HPFan::Model::Gramps::Note::Reference;
 require App::Schierer::HPFan::Model::Gramps::Place::Reference;
 require App::Schierer::HPFan::Model::Gramps::Object::Reference;
-require App::Schierer::HPFan::Model::Gramps::EventType;
+require App::Schierer::HPFan::Model::Gramps::Event::Type;
 
 class App::Schierer::HPFan::Model::Gramps::Event :
   isa(App::Schierer::HPFan::Model::Gramps::Generic) {
@@ -83,7 +83,7 @@ class App::Schierer::HPFan::Model::Gramps::Event :
   method type {
     my $hash = JSON::PP->new->decode($self->json_data);
     my $type =
-      App::Schierer::HPFan::Model::Gramps::EventType->new($hash->{type}->%*);
+      App::Schierer::HPFan::Model::Gramps::Event::Type->new($hash->{type}->%*);
     return $type;
   }
 

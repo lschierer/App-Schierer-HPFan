@@ -5,6 +5,8 @@ use experimental qw(class);
 require Scalar::Util;
 require Pandoc;
 require Path::Tiny;
+use XML::LibXML;
+require Mojo::DOM58;
 
 class App::Schierer::HPFan::View::Markdown
   : isa(App::Schierer::HPFan::Logger) {
@@ -12,7 +14,7 @@ class App::Schierer::HPFan::View::Markdown
   field $markdownHome : param //= undef;
 
   ADJUST {
-    $markdownHome = Path::Tiny::path($markdownHome);
+    $markdownHome = Path::Tiny::path($markdownHome) if defined($markdownHome);
   }
 
   # pandoc for future use
@@ -20,13 +22,54 @@ class App::Schierer::HPFan::View::Markdown
     qw(commonmark alerts attributes autolink_bare_uris footnotes implicit_header_references pipe_tables raw_html rebase_relative_paths smart gfm_auto_identifiers)
   );
 
-  method format_string ($snippet) {
+  method html5_to_xhtml_fragment ($html) {
+      my $XHTML_NS = 'http://www.w3.org/1999/xhtml';
+
+      my $p   = XML::LibXML->new(recover => 1);
+      my $tmp = $p->load_html(string => "<div id='__frag'>$html</div>");
+      my ($root) = $tmp->findnodes('//*[@id="__frag"]');
+      return '' unless $root;
+
+      my $xml  = XML::LibXML::Document->new('1.0', 'UTF-8');
+      my $host = $xml->createElementNS($XHTML_NS, 'div');
+      $xml->setDocumentElement($host);
+
+      for my $child ($root->childNodes) {
+        my $imp = $self->_import_as_xhtml($xml, $child, $XHTML_NS);
+        $host->appendChild($imp) if $imp;
+      }
+
+      my $out = '';
+      $out .= $_->toString for $host->childNodes;   # inner XML only
+      return $out;
+    }
+
+  method _import_as_xhtml ($doc, $node, $ns) {
+      return $doc->importNode($node, 1)
+        if $node->nodeType != XML_ELEMENT_NODE;
+
+      my $new = $doc->createElementNS($ns, $node->nodeName);
+      for my $attr ($node->attributes) {
+        $new->setAttribute($attr->nodeName, $attr->getValue);
+      }
+      for my $ch ($node->childNodes) {
+        my $imp = $self->_import_as_xhtml($doc, $ch, $ns);
+        $new->appendChild($imp) if $imp;
+      }
+      return $new;
+    }
+
+
+  method format_string ($snippet, $asXHTML = 0) {
     my $parser = Pandoc->new();
-    my $html_content = parser->convert(
+    my $html_content = $parser->convert(
       $customCommonMark => 'html5',
       $snippet
     );
     $html_content = $self->SpectrumFormatting($html_content);
+    if($asXHTML) {
+      return $self->html5_to_xhtml_fragment($html_content);
+    }
     return $html_content;
   }
 

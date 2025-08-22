@@ -12,6 +12,7 @@ class App::Schierer::HPFan::View::Timeline
   use SVG;
   use Readonly;
   use Math::Trig ':pi';
+  use Digest::MD5 qw(md5_hex);
   use Carp;
 
   field $name : param //= 'Timeline';
@@ -20,7 +21,7 @@ class App::Schierer::HPFan::View::Timeline
 
   # internal fields
 
-
+  field $replacements    => {};
   field $categories       = {};
   field $nodes_by_sortval = {};
 
@@ -318,9 +319,14 @@ class App::Schierer::HPFan::View::Timeline
     }
 
     if (defined($event->description) && length($event->description)) {
+      $self->logger->debug(sprintf('adding description "%s" to event %s',
+      $event->description, $event->id));
+
+      my $token = md5_hex($event->description);
+      $replacements->{$token} = $event->description;
       $div->tag('div',
         class => 'spectrum-Body spectrum-Body--sizeS spectrum-Body--serif')
-        ->cdata($event->description);
+        ->CDATA($token);
     }
 
     foreach my $source ($event->sources->@*) {

@@ -2,12 +2,20 @@ use v5.42;
 use utf8::all;
 use experimental qw(class);
 require Date::Manip;
-require App::Schierer::HPFan::Model::Gramps::Style;
+require App::Schierer::HPFan::Model::Gramps::Note::Text;
+require App::Schierer::HPFan::Model::Gramps::Note::Type;
 
 class App::Schierer::HPFan::Model::Gramps::Note :
   isa(App::Schierer::HPFan::Model::Gramps::Generic) {
   use List::AllUtils qw( any );
   use Carp;
+  use overload
+    'cmp'      => \&_comparison,
+    'eq'       => \&_equality,
+    '""'       => \&to_string,
+    'bool'     => sub { $_[0]->_isTrue },
+    'fallback' => 1,
+    'nomethod' => sub { croak "No overload method for $_[3]" };
 
   ADJUST {
     my @desired = qw(
@@ -38,6 +46,58 @@ class App::Schierer::HPFan::Model::Gramps::Note :
       $self->handle, Data::Printer::np($hash),
     ));
 
+  }
+
+  method text {
+    my $hash = JSON::PP->new->decode($self->json_data);
+    my $tn = $hash->{'text'} if exists $hash->{'text'};
+    return App::Schierer::HPFan::Model::Gramps::Note::Text->new(
+      $tn->%*
+    ) if defined ($tn);
+    return undef;
+  }
+
+  method type {
+    my $hash = JSON::PP->new->decode($self->json_data);
+    if(exists $hash->{'type'}){
+      return App::Schierer::HPFan::Model::Gramps::Note::Type->new( $hash->{'type'}->%* );
+    }
+    return undef;
+  }
+
+  method to_string {
+    return $self->text;
+  }
+
+  method to_hash {
+    my $hr = $self->SUPER::to_hash;
+    $hr->{gramps_id}  = $self->gramps_id;
+    $hr->{text}       = $self->text;
+    $hr->{type}       = $self->type;
+    return $hr;
+  }
+
+  method _comparison ($other, $swap = 0) {
+    unless (ref($other) eq 'OBJECT') {
+      return -1;
+    }
+    unless ($other->isa('App::Schierer::HPFan::Model::Gramps::Note')) {
+      return -1;
+    }
+    my $tcmp = $self->type <=> $other->type;
+    if($tcmp == 0){
+      return $self->text cmp $other->text;
+    }
+    return $tcmp;
+
+  }
+
+  method _equality ($other, $swap = 0) {
+    return $self->_comparison($other, $swap) == 0 ? 1 : 0;
+  }
+
+  method TO_JSON {
+    my $json = $self->json_data;
   }
 
 }

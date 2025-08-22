@@ -3,7 +3,7 @@ use v5.42;
 use utf8::all;
 use experimental qw(class);
 
-class App::Schierer::HPFan::Model::Gramps::Event::RoleType :
+class App::Schierer::HPFan::Model::Gramps::Event::Role::Type :
   isa(App::Schierer::HPFan::Logger) {
   use Carp ();
   use Readonly;
@@ -73,7 +73,7 @@ class App::Schierer::HPFan::Model::Gramps::Event::RoleType :
 
     # unknown value? warn in dev, but don’t leak UI details
     if (defined $value) {
-      $self->dev_guard(sprintf('Unknown RoleType value %s!', $value));
+      $self->dev_guard(sprintf('Unknown Role::Type value %s!', $value));
       return "$value";    # show number in UI
     }
 

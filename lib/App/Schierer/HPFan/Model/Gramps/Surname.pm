@@ -3,7 +3,7 @@ use utf8::all;
 use experimental qw(class);
 
 class App::Schierer::HPFan::Model::Gramps::Surname :
-  isa(App::Schierer::HPFan::Logger) {
+  isa(App::Schierer::HPFan::Model::Gramps::Generic) {
   use Carp;
   use overload
     '""'       => \&to_string,
@@ -22,6 +22,13 @@ class App::Schierer::HPFan::Model::Gramps::Surname :
   field $derivation : param : reader = "Unknown";
 
   ADJUST {
+    my @names;
+    push @names, keys $self->ALLOWED_FIELD_NAMES->%*;
+    foreach my $tn (@names) {
+      $self->ALLOWED_FIELD_NAMES->{$tn} = undef;
+    }
+
+
     # Validate derivation types from DTD comment
     my %valid_derivations = map { $_ => 1 } qw(
       Unknown Inherited Given Taken Patronymic Matronymic Feudal

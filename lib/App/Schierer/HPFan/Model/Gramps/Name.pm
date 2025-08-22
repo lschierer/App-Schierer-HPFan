@@ -5,7 +5,7 @@ require App::Schierer::HPFan::Model::Gramps::DateHelper;
 require App::Schierer::HPFan::Model::Gramps::Surname;
 
 class App::Schierer::HPFan::Model::Gramps::Name :
-  isa(App::Schierer::HPFan::Logger) {
+  isa(App::Schierer::HPFan::Model::Gramps::Generic) {
   use Carp;
   use overload
     '""'       => \&to_string,
@@ -36,6 +36,11 @@ class App::Schierer::HPFan::Model::Gramps::Name :
   field @surnames;
 
   ADJUST {
+
+    foreach my $tn (keys $self->ALLOWED_FIELD_NAMES->%*) {
+      $self->ALLOWED_FIELD_NAMES->{$tn} = undef;
+    }
+
     if (scalar @$surname_list) {
       foreach my $surname ($surname_list->@*) {
         my $sn =

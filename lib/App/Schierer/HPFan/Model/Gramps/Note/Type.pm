@@ -1,14 +1,14 @@
-
 use v5.42;
 use utf8::all;
 use experimental qw(class);
 
-class App::Schierer::HPFan::Model::Gramps::Person::ChildReferenceType :
+class App::Schierer::HPFan::Model::Gramps::Note::Type :
   isa(App::Schierer::HPFan::Logger) {
   use Carp ();
   use Readonly;
   use Scalar::Util   qw(blessed looks_like_number);
   use List::AllUtils qw( firstidx );
+
   use overload
     'cmp'      => \&_comparison,
     'eq'       => \&_equality,              # string equality
@@ -17,18 +17,45 @@ class App::Schierer::HPFan::Model::Gramps::Person::ChildReferenceType :
     'fallback' => 1;
 
   field $_class : param = undef;            # from Gramps JSON
-  field $string : param : reader = '';      # custom label (when value==0)
-  field $value  : param = undef;            # numeric enum
-
+  field $string : param = undef;            # custom label (when value==0)
+  field $value  : param = undef;
   field $ROLE_MAP;
 
   ADJUST {
-    Readonly::Hash my %temp => (
-      0 => $string,
-      1 => 'Birth',
-      5 => 'Adoptive',
+    # Shared built-in role map; 0 is “custom” (use $string)
+    Readonly::Hash my %tmp => (
+      1  => 'Primary',
+      5  => 'Bride',
+      6  => 'Groom',
+      11 => 'Father',
+      12 => 'Mother',
     );
-    $ROLE_MAP = \%temp;
+    $ROLE_MAP = \%tmp;
+  }
+
+  method _sortValue {
+    my $sortValue;
+    if (defined($value)) {
+      $self->logger->debug("value is $value");
+      if (exists $ROLE_MAP->{$value}) {
+        $sortValue =
+          firstidx { $_ eq $ROLE_MAP->{$value} } sort values $ROLE_MAP->%*;
+      }
+      else {
+        $self->logger->dev_guard("Missing Sort Map for value $value");
+        $sortValue = $value;
+      }
+    }
+    else {
+      $self->warn(sprintf('%s has an undefined value', ref($self)));
+    }
+    $self->logger->debug(sprintf(
+      '_sortValue for %s value %s returning %s',
+      ref($self),
+      defined($value)     ? $value     : 'Undefined',
+      defined($sortValue) ? $sortValue : 'Undefined'
+    ));
+    return $sortValue;
   }
 
   # ---- Rendering ----
@@ -45,7 +72,7 @@ class App::Schierer::HPFan::Model::Gramps::Person::ChildReferenceType :
 
     # unknown value? warn in dev, but don’t leak UI details
     if (defined $value) {
-      $self->dev_guard(sprintf('Unknown RoleType value %s!', $value));
+      $self->dev_guard(sprintf('Unknown Role::Type value %s!', $value));
       return "$value";    # show number in UI
     }
 
@@ -53,34 +80,7 @@ class App::Schierer::HPFan::Model::Gramps::Person::ChildReferenceType :
     return 'Unknown';
   }
 
-  method to_hash {
-    my $r = $self->SUPER::to_hash;
-    if (defined($value)) {
-      $r->{value} = exists $ROLE_MAP->{$value} ? $ROLE_MAP->{$value} : $value;
-    }
-    elsif (defined($string) && length($string)) {
-      $r->{string} = $string;
-    }
-    return $r;
-  }
-
   # ---- Comparisons ----
-
-  method _sortValue {
-    my $sortValue;
-    if (defined($value)) {
-      if (exists $ROLE_MAP->{$value}) {
-        $sortValue =
-          firstidx { $_ eq $ROLE_MAP->{$value} } sort values $ROLE_MAP->%*;
-      }
-      else {
-        $self->logger->dev_guard("Missing Sort Map for value $value");
-        $sortValue = $value;
-      }
-    }
-    return $sortValue;
-  }
-
   method _comparison($other, $swap = 0) {
     # Same class comparison
     if (ref($other) && $other->isa(__CLASS__)) {
@@ -136,15 +136,24 @@ class App::Schierer::HPFan::Model::Gramps::Person::ChildReferenceType :
     # String comparison
     if (defined($value) && exists $ROLE_MAP->{$value}) {
       my $sr = $ROLE_MAP->{$value};
+      $self->logger->debug(sprintf(
+        '%s comparing _sortValue to string, %s to %s',
+        ref($self), $sr, $other
+      ));
       return $sr eq $other;
     }
 
     if (defined($string)) {
+      $self->logger->debug(sprintf(
+        '%s comparing custom string, %s to %s',
+        ref($self), $string, $other
+      ));
       return $string eq $other;
     }
 
     return 0;
   }
+
 }
 1;
 __END__

@@ -71,8 +71,17 @@ class App::Schierer::HPFan::Model::Gramps::Generic :
     if(exists $self->ALLOWED_FIELD_NAMES->{'json_data'}){
       my $hash = JSON::PP->new->decode($self->json_data);
       foreach my $item ($hash->{'note_list'}->@*) {
-        push @$items,
-          App::Schierer::HPFan::Model::Gramps::Note::Reference->new($item->%*);
+        if(ref($item) eq 'OBJECT') {
+          my $temp =
+            App::Schierer::HPFan::Model::Gramps::Note::Reference->new($item->%*);
+          $temp->set_dbh($self->dbh);
+          push @$items, $temp;
+        } else {
+          my $temp =
+          App::Schierer::HPFan::Model::Gramps::Note::Reference->new(ref => $item);
+          $temp->set_dbh($self->dbh);
+          push @$items, $temp;
+        }
       }
     }
     return [ $items->@* ];
