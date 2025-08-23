@@ -372,7 +372,7 @@ class App::Schierer::HPFan::View::Timeline
     );
     my $viewbox = sprintf('0 0 %s %s', $xmax, $self->viewheight);
     # Your existing SVG cleanup
-    $svg =~ s/^<svg/<svg viewBox="$viewbox"/;
+    $svg =~ s/<svg /<svg viewBox="$viewbox"/;
 s/<text ([^>]+) font-family="[^"]+" font-size="[^"]+">/<text $1 class="spectrum-Heading spectrum-Heading--size-M spectrum-Heading--serif">/g;
     return $svg;
   }
