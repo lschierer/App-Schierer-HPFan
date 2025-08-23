@@ -10,35 +10,35 @@ class App::Schierer::HPFan::Model::Gramps::Family :
   use Carp;
 
   field $gramps_id     = undef;
-  field $father_handle  = undef;    # handle reference
-  field $mother_handle  = undef;    # handle reference
+  field $father_handle = undef;    # handle reference
+  field $mother_handle = undef;    # handle reference
 
-  field $rel_type    = undef;  # relationship type
-  field $attributes  = [];
+  field $rel_type   = undef;       # relationship type
+  field $attributes = [];
   field $child_refs = [];
   field $event_refs = [];
 
   ADJUST {
     my @desired = qw( gramps_id change private gramps_id
-    father_handle
-    mother_handle
-    json_data     );
+      father_handle
+      mother_handle
+      json_data     );
     my @names;
     push @names, @desired;
     push @names, keys $self->ALLOWED_FIELD_NAMES->%*;
     foreach my $tn (@names) {
-      if(any {$_ eq $tn} @desired){
+      if (any { $_ eq $tn } @desired) {
         $self->ALLOWED_FIELD_NAMES->{$tn} = 1;
-      } else {
+      }
+      else {
         $self->ALLOWED_FIELD_NAMES->{$tn} = undef;
       }
     }
   }
 
-
-  method event_refs()    { [@$event_refs] }
-  method child_refs()    { [@$child_refs] }
-  method attributes()    { [@$attributes] }
+  method event_refs() { [@$event_refs] }
+  method child_refs() { [@$child_refs] }
+  method attributes() { [@$attributes] }
 
   method gramps_id     { $self->_get_field('gramps_id') }
   method father_handle { $self->_get_field('father_handle') }

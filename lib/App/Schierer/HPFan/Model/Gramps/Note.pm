@@ -26,9 +26,10 @@ class App::Schierer::HPFan::Model::Gramps::Note :
     push @names, @desired;
     push @names, keys $self->ALLOWED_FIELD_NAMES->%*;
     foreach my $tn (@names) {
-      if(any {$_ eq $tn} @desired){
+      if (any { $_ eq $tn } @desired) {
         $self->ALLOWED_FIELD_NAMES->{$tn} = 1;
-      } else {
+      }
+      else {
         $self->ALLOWED_FIELD_NAMES->{$tn} = undef;
       }
     }
@@ -37,7 +38,7 @@ class App::Schierer::HPFan::Model::Gramps::Note :
   method styles { my $hash = JSON::PP->new->decode($self->json_data); }
 
   method gramps_id { $self->_get_field('gramps_id') }
-  method format     { $self->_get_field('format') }
+  method format    { $self->_get_field('format') }
 
   method parse_json_data {
     my $hash = JSON::PP->new->decode($self->json_data);
@@ -50,17 +51,17 @@ class App::Schierer::HPFan::Model::Gramps::Note :
 
   method text {
     my $hash = JSON::PP->new->decode($self->json_data);
-    my $tn = $hash->{'text'} if exists $hash->{'text'};
-    return App::Schierer::HPFan::Model::Gramps::Note::Text->new(
-      $tn->%*
-    ) if defined ($tn);
+    my $tn   = $hash->{'text'} if exists $hash->{'text'};
+    return App::Schierer::HPFan::Model::Gramps::Note::Text->new($tn->%*)
+      if defined($tn);
     return undef;
   }
 
   method type {
     my $hash = JSON::PP->new->decode($self->json_data);
-    if(exists $hash->{'type'}){
-      return App::Schierer::HPFan::Model::Gramps::Note::Type->new( $hash->{'type'}->%* );
+    if (exists $hash->{'type'}) {
+      return App::Schierer::HPFan::Model::Gramps::Note::Type->new(
+        $hash->{'type'}->%*);
     }
     return undef;
   }
@@ -71,9 +72,9 @@ class App::Schierer::HPFan::Model::Gramps::Note :
 
   method to_hash {
     my $hr = $self->SUPER::to_hash;
-    $hr->{gramps_id}  = $self->gramps_id;
-    $hr->{text}       = $self->text;
-    $hr->{type}       = $self->type;
+    $hr->{gramps_id} = $self->gramps_id;
+    $hr->{text}      = $self->text;
+    $hr->{type}      = $self->type;
     return $hr;
   }
 
@@ -85,7 +86,7 @@ class App::Schierer::HPFan::Model::Gramps::Note :
       return -1;
     }
     my $tcmp = $self->type <=> $other->type;
-    if($tcmp == 0){
+    if ($tcmp == 0) {
       return $self->text cmp $other->text;
     }
     return $tcmp;

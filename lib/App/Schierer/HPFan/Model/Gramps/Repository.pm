@@ -8,14 +8,16 @@ class App::Schierer::HPFan::Model::Gramps::Repository :
   isa(App::Schierer::HPFan::Model::Gramps::Generic) {
   use Carp;
 
-  field $gramps_id  : param = undef;
-  field $name       : param = undef;
-  field $json_data  : param = undef;
+  field $gramps_id : param = undef;
+  field $name      : param = undef;
+  field $json_data : param = undef;
 
-  field $ALLOWED_FIELD_NAMES : reader =
-    { map { $_ => 1 } qw(
+  field $ALLOWED_FIELD_NAMES : reader = {
+    map { $_ => 1 }
+      qw(
       gramps_id   handle  change
-      name        private json_data) };
+      name        private json_data)
+  };
 
   method gramps_id { $self->_get_field('gramps_id') }
   method name      { $self->_get_field('name') }
@@ -30,7 +32,8 @@ class App::Schierer::HPFan::Model::Gramps::Repository :
       $self->handle, Data::Printer::np($hash),
     ));
 
-    if (exists $hash->{'attribute_list'} &&  scalar @{ $hash->{'attribute_list'} }) {
+    if (exists $hash->{'attribute_list'}
+      && scalar @{ $hash->{'attribute_list'} }) {
       $self->logger->dev_guard(
         sprintf('%s found a non-empty attribute_list', ref($self)));
     }
@@ -46,7 +49,8 @@ class App::Schierer::HPFan::Model::Gramps::Repository :
 
   method type {
     my $hash = JSON::PP->new->decode($self->json_data);
-    my $rt = App::Schierer::HPFan::Model::Gramps::Repository::Type->new($hash->{'type'}->%*);
+    my $rt   = App::Schierer::HPFan::Model::Gramps::Repository::Type->new(
+      $hash->{'type'}->%*);
     return $rt;
   }
 

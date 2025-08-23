@@ -32,19 +32,25 @@ class App::Schierer::HPFan::Model::Gramps::Event :
     push @names, @desired;
     push @names, keys $self->ALLOWED_FIELD_NAMES->%*;
     foreach my $tn (@names) {
-      if(any {$_ eq $tn} @desired){
+      if (any { $_ eq $tn } @desired) {
         $self->ALLOWED_FIELD_NAMES->{$tn} = 1;
-      } else {
+      }
+      else {
         $self->ALLOWED_FIELD_NAMES->{$tn} = undef;
       }
     }
   }
 
-  method gramps_id   { $self->_get_field('gramps_id') }
-  method description { $self->_get_field('description') }
-  method place       { $self->_get_field('place') }
-  method change      { $self->_get_field('change') }
-  method private     { $self->_get_field('private') // 0; }
+  method gramps_id { $self->_get_field('gramps_id') }
+
+  method description {
+    my $d = $self->_get_field('description');
+    $d =~ s/^\s+|\s+$//g;
+    return $d;
+  }
+  method place   { $self->_get_field('place') }
+  method change  { $self->_get_field('change') }
+  method private { $self->_get_field('private') // 0; }
 
   method parse_json_data {
     my $rj = $self->json_data();
@@ -63,19 +69,19 @@ class App::Schierer::HPFan::Model::Gramps::Event :
 
   method event_refs {
     my $items = [];
-    if(exists $self->ALLOWED_FIELD_NAMES->{'json_data'}){
+    if (exists $self->ALLOWED_FIELD_NAMES->{'json_data'}) {
       my $hash = JSON::PP->new->decode($self->json_data);
       foreach my $item ($hash->{'event_ref_list'}->@*) {
         push @$items,
           App::Schierer::HPFan::Model::Gramps::Event::Reference->new($item->%*);
       }
     }
-    return [ $items->@* ];
+    return [$items->@*];
   }
 
   method date {
     my $hash = JSON::PP->new->decode($self->json_data);
-    my $d = $dh->parse($hash->{'date'});
+    my $d    = $dh->parse($hash->{'date'});
     $self->logger->debug("found date " . Data::Printer::np($d));
     return $d;
   }
@@ -86,8 +92,6 @@ class App::Schierer::HPFan::Model::Gramps::Event :
       App::Schierer::HPFan::Model::Gramps::Event::Type->new($hash->{type}->%*);
     return $type;
   }
-
-
 
   method attributes() { [@$attributes] }
   method obj_refs()   { [@$obj_refs] }
@@ -128,7 +132,7 @@ class App::Schierer::HPFan::Model::Gramps::Event :
       return -1;
     }
     my $dateEquality = 0;
-    my $d = $self->date;
+    my $d            = $self->date;
     my $oDate        = $other->date;
     if ($d && $oDate) {
       $dateEquality = $d cmp $oDate;

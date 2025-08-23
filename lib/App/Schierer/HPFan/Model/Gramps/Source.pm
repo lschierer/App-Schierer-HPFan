@@ -21,16 +21,17 @@ class App::Schierer::HPFan::Model::Gramps::Source :
 
   ADJUST {
     my @desired = qw(
-    gramps_id   handle  change
-    title       author  abbrev
-    pubinfo   json_data private  );
+      gramps_id   handle  change
+      title       author  abbrev
+      pubinfo   json_data private  );
     my @names;
     push @names, @desired;
     push @names, keys $self->ALLOWED_FIELD_NAMES->%*;
     foreach my $tn (@names) {
-      if(any {$_ eq $tn} @desired){
+      if (any { $_ eq $tn } @desired) {
         $self->ALLOWED_FIELD_NAMES->{$tn} = 1;
-      } else {
+      }
+      else {
         $self->ALLOWED_FIELD_NAMES->{$tn} = undef;
       }
     }
@@ -41,7 +42,6 @@ class App::Schierer::HPFan::Model::Gramps::Source :
   method author    { $self->_get_field('author') }
   method pubinfo   { $self->_get_field('pubinfo') }
   method abbrev    { $self->_get_field('abbrev') }
-
 
   method parse_json_data {
     my $hash = JSON::PP->new->decode($self->json_data);
@@ -63,12 +63,11 @@ class App::Schierer::HPFan::Model::Gramps::Source :
 
   method repo_refs {
     my $repo_refs = [];
-    my $hash = JSON::PP->new->decode($self->json_data);
+    my $hash      = JSON::PP->new->decode($self->json_data);
     foreach my $item ($hash->{'reporef_list'}->@*) {
       push @$repo_refs,
         App::Schierer::HPFan::Model::Gramps::Repository::Reference->new(
-          $item->%*
-        );
+        $item->%*);
     }
     return [$repo_refs->@*];
   }

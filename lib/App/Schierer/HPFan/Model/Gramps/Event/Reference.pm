@@ -17,7 +17,8 @@ class App::Schierer::HPFan::Model::Gramps::Event::Reference :
     }
     elsif (
       not $self->role->isa(
-        'App::Schierer::HPFan::Model::Gramps::Event::Reference::Role::Type')) {
+        'App::Schierer::HPFan::Model::Gramps::Event::Reference::Role::Type')
+    ) {
       $self->logger->dev_guard(sprintf(
         'unexpected type for $self->role in %s: %s',
         ref($self), ref($self->role)

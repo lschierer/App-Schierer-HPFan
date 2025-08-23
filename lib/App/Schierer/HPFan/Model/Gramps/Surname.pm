@@ -28,7 +28,6 @@ class App::Schierer::HPFan::Model::Gramps::Surname :
       $self->ALLOWED_FIELD_NAMES->{$tn} = undef;
     }
 
-
     # Validate derivation types from DTD comment
     my %valid_derivations = map { $_ => 1 } qw(
       Unknown Inherited Given Taken Patronymic Matronymic Feudal

@@ -11,25 +11,25 @@ class App::Schierer::HPFan::Model::Gramps::Tag :
 
   ADJUST {
     my @desired = qw(
-    handle  name  color   priority
-    change  json_data );
+      handle  name  color   priority
+      change  json_data );
 
     my @names;
     push @names, @desired;
     push @names, keys $self->ALLOWED_FIELD_NAMES->%*;
     foreach my $tn (@names) {
-      if(any {$_ eq $tn} @desired){
+      if (any { $_ eq $tn } @desired) {
         $self->ALLOWED_FIELD_NAMES->{$tn} = 1;
-      } else {
+      }
+      else {
         $self->ALLOWED_FIELD_NAMES->{$tn} = undef;
       }
     }
   }
 
-  method name      { $self->_get_field('name') }
-  method color     { $self->_get_field('color') }
-  method priority  { $self->_get_field('priority') }
-
+  method name     { $self->_get_field('name') }
+  method color    { $self->_get_field('color') }
+  method priority { $self->_get_field('priority') }
 
   method parse_json_data {
     my $hash = JSON::PP->new->decode($self->json_data);

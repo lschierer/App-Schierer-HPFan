@@ -12,6 +12,8 @@ class App::Schierer::HPFan::View::Markdown
   : isa(App::Schierer::HPFan::Logger) {
 
   field $markdownHome : param //= undef;
+  field $asXHTML      = 0;
+  field $sizeTemplate = 'default';
 
   ADJUST {
     $markdownHome = Path::Tiny::path($markdownHome) if defined($markdownHome);
@@ -23,83 +25,87 @@ class App::Schierer::HPFan::View::Markdown
   );
 
   method html5_to_xhtml_fragment ($html) {
-      my $XHTML_NS = 'http://www.w3.org/1999/xhtml';
+    $html =~ s/<br\s*>/<br\/>/gi;
+    $html =~ s/<hr\s*>/<hr\/>/gi;
+    $html =~ s/<img([^>]*[^\/])>/<img$1\/>/gi;
+    $html =~ s/<input([^>]*[^\/])>/<input$1\/>/gi;
+    return $html;
+  }
 
-      my $p   = XML::LibXML->new(recover => 1);
-      my $tmp = $p->load_html(string => "<div id='__frag'>$html</div>");
-      my ($root) = $tmp->findnodes('//*[@id="__frag"]');
-      return '' unless $root;
+  method format_string ($snippet, $opts = {}) {
+    $self->logger->trace("format_string recieved options: "
+        . Data::Printer::np($opts, multiline => 0));
+    $asXHTML      = $opts->{asXHTML}      if exists $opts->{asXHTML};
+    $sizeTemplate = $opts->{sizeTemplate} if exists $opts->{sizeTemplate};
 
-      my $xml  = XML::LibXML::Document->new('1.0', 'UTF-8');
-      my $host = $xml->createElementNS($XHTML_NS, 'div');
-      $xml->setDocumentElement($host);
-
-      for my $child ($root->childNodes) {
-        my $imp = $self->_import_as_xhtml($xml, $child, $XHTML_NS);
-        $host->appendChild($imp) if $imp;
-      }
-
-      my $out = '';
-      $out .= $_->toString for $host->childNodes;   # inner XML only
-      return $out;
-    }
-
-  method _import_as_xhtml ($doc, $node, $ns) {
-      return $doc->importNode($node, 1)
-        if $node->nodeType != XML_ELEMENT_NODE;
-
-      my $new = $doc->createElementNS($ns, $node->nodeName);
-      for my $attr ($node->attributes) {
-        $new->setAttribute($attr->nodeName, $attr->getValue);
-      }
-      for my $ch ($node->childNodes) {
-        my $imp = $self->_import_as_xhtml($doc, $ch, $ns);
-        $new->appendChild($imp) if $imp;
-      }
-      return $new;
-    }
-
-
-  method format_string ($snippet, $asXHTML = 0) {
-    my $parser = Pandoc->new();
+    my $parser       = Pandoc->new();
     my $html_content = $parser->convert(
       $customCommonMark => 'html5',
       $snippet
     );
     $html_content = $self->SpectrumFormatting($html_content);
-    if($asXHTML) {
+    if ($asXHTML) {
       return $self->html5_to_xhtml_fragment($html_content);
     }
     return $html_content;
   }
 
-  method SpectrumFormatting ( $html_content) {
+  method SpectrumFormatting ($html_content) {
     my $dom = Mojo::DOM58->new($html_content);
+    $self->logger->trace("requested size template is '$sizeTemplate'");
 
-    my %spectrum_h = (
-      h1 => "spectrum-Heading spectrum-Heading--sizeXXL",
-      h2 => "spectrum-Heading spectrum-Heading--sizeXL",
-      h3 => "spectrum-Heading spectrum-Heading--sizeL",
-      h4 => "spectrum-Heading spectrum-Heading--sizeM",
-      h5 => "spectrum-Heading spectrum-Heading--sizeS",
-      h6 => "spectrum-Heading spectrum-Heading--sizeXS",
-    );
+    my $spectrum_h = {
+      default => {
+        h1 => "spectrum-Heading spectrum-Heading--sizeXXL",
+        h2 => "spectrum-Heading spectrum-Heading--sizeXL",
+        h3 => "spectrum-Heading spectrum-Heading--sizeL",
+        h4 => "spectrum-Heading spectrum-Heading--sizeM",
+        h5 => "spectrum-Heading spectrum-Heading--sizeS",
+        h6 => "spectrum-Heading spectrum-Heading--sizeXS",
+      },
+      timeline => {
+        h1 => "spectrum-Heading spectrum-Heading--sizeL",
+        h2 => "spectrum-Heading spectrum-Heading--sizeL",
+        h3 => "spectrum-Heading spectrum-Heading--sizeM",
+        h4 => "spectrum-Heading spectrum-Heading--sizeM",
+        h5 => "spectrum-Heading spectrum-Heading--sizeS",
+        h6 => "spectrum-Heading spectrum-Heading--sizeXS",
+      }
+    };
+
+    my $spectrum_tags = {
+      default => {
+        p  => 'spectrum-Body spectrum-Body--serif spectrum-Body--sizeM',
+        dt => 'spectrum-Detail spectrum-Detail--serif spectrum-Detail--sizeM'
+        ,    # spectrum-Detail for citation labels
+        dd => 'spectrum-Body spectrum-Body--serif spectrum-Body--sizeM',
+        hr => 'spectrum-Divider spectrum-Divider--sizeM',
+        li => 'spectrum-Body spectrum-Body--serif spectrum-Body--sizeM',
+      },
+      timeline => {
+        p  => 'spectrum-Body spectrum-Body--serif spectrum-Body--sizeS',
+        dt => 'spectrum-Detail spectrum-Detail--serif spectrum-Detail--sizeS'
+        ,    # spectrum-Detail for citation labels
+        dd => 'spectrum-Body spectrum-Body--serif spectrum-Body--sizeS',
+        hr => 'spectrum-Divider spectrum-Divider--sizeS',
+        li => 'spectrum-Body spectrum-Body--serif spectrum-Body--sizeS',
+      },
+    };
 
     # Add header classes
-    for my $tag (keys %spectrum_h) {
-      $dom->find($tag)->each(sub { $_->attr(class => $spectrum_h{$tag}) });
+    for my $tag (keys $spectrum_h->{$sizeTemplate}->%*) {
+      $dom->find($tag)
+        ->each(sub { $_->attr(class => $spectrum_h->{$sizeTemplate}->{$tag}) });
     }
 
     # Add paragraph classes
     $dom->find('p')->each(sub {
-      $_->attr(
-        class => "spectrum-Body spectrum-Body--serif spectrum-Body--sizeM");
+      $_->attr(class => $spectrum_tags->{$sizeTemplate}->{'p'});
     });
 
     # Add list item classes
     $dom->find('li')->each(sub {
-      $_->attr(
-        class => "spectrum-Body spectrum-Body--serif spectrum-Body--sizeM");
+      $_->attr(class => $spectrum_tags->{$sizeTemplate}->{'li'});
     });
 
     # Add link classes
@@ -119,7 +125,7 @@ class App::Schierer::HPFan::View::Markdown
     });
 
     $dom->find('hr')->each(sub {
-      $_->attr(class => 'spectrum-Divider spectrum-Divider--sizeM');
+      $_->attr(class => $spectrum_tags->{$sizeTemplate}->{'hr'});
     });
 
     # Add table classes

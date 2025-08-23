@@ -3,6 +3,7 @@ use utf8::all;
 use experimental qw(class);
 #require App::Schierer::HPFan::Model::History::Event;
 require Scalar::Util;
+require HTML::Strip;
 
 class App::Schierer::HPFan::View::Timeline
   : isa(App::Schierer::HPFan::Logger) {
@@ -12,7 +13,7 @@ class App::Schierer::HPFan::View::Timeline
   use SVG;
   use Readonly;
   use Math::Trig ':pi';
-  use Digest::MD5 qw(md5_hex);
+  use POSIX qw(ceil);
   use Carp;
 
   field $name : param //= 'Timeline';
@@ -21,7 +22,7 @@ class App::Schierer::HPFan::View::Timeline
 
   # internal fields
 
-  field $replacements    => {};
+  field $replacements     = {};
   field $categories       = {};
   field $nodes_by_sortval = {};
 
@@ -29,7 +30,7 @@ class App::Schierer::HPFan::View::Timeline
  #default this to a very high number that should be bigger than my julian dates.
   field $min_date = 9**9;
   field $max_date = 0;
-  field $ymax     = 6500;
+  field $ymax     = 5500;
   field $xmax     = 880;
   # vertial version of an FR unit for minimum node separation in the y axis
   field $vfr = 0;
@@ -46,26 +47,23 @@ class App::Schierer::HPFan::View::Timeline
   # these are constants
   field $detail_distance;
   field $detail_width;
-  field $detail_height;
+  field $detail_height = 0;
   field $detail_radius;
-
-  ADJUST {
-
-  }
 
   # output fields
   field $graph : reader;
 
-  field $viewheight;
+  method viewheight { max(
+      $ymax * ($fr_scaling_factor + 0.6),
+      $ymax + $detail_height,
+    );
+  }
 
   ADJUST {
     #  # only the angles that fit in the layout
 
     Readonly::Scalar my $stw => 120;
     $detail_width = $stw;
-
-    Readonly::Scalar my $sth => 80;
-    $detail_height = $sth;
 
     #  # base distance from timeline dot
     Readonly::Scalar my $st1 => $detail_width * 3 / 4;
@@ -74,9 +72,14 @@ class App::Schierer::HPFan::View::Timeline
     # ensure we have room for 7 ranks horizontally
     # 100 for the categories
     # 100 for the gaps.
-    $xmax       = $detail_width * 6 + 200;
-    $viewheight = $ymax * ($fr_scaling_factor + 0.6);
-    #  # for collision detection
+    $xmax = $detail_width * 6 + 200;
+
+    Readonly::Scalar my $sth => int(($self->viewheight / (scalar($events->@*) * 4)));
+    $detail_height = $sth;
+    $self->logger->info(sprintf(
+      'based on %s events and %s viewheight, detail_height is %s',
+      scalar($events->@*), $self->viewheight, $detail_height
+    ));
 
     #  # space each detail needs
     Readonly::Scalar my $st2 => max($detail_width, $detail_height) / 2;
@@ -87,7 +90,6 @@ class App::Schierer::HPFan::View::Timeline
     # of the fr unit.
 
     $graph = SVG->new(
-      viewBox => "0 0 $xmax $viewheight",        # defines coordinate system
       preserveAspectRatio => 'xMidYMid meet',    # how to scale
     );
   }
@@ -141,7 +143,12 @@ class App::Schierer::HPFan::View::Timeline
           defined($previous_pos)
           ? $previous_pos->{y} + $vfr * $fr_scaling_factor
           : 3;
-        $pos->{y} = max($pos->{y}, $miny);
+        if ($miny > $pos->{y}) {
+          my $dy = $miny - $pos->{y};
+          $ymax = $ymax + $dy;
+          $pos->{y} = $miny;
+        }
+
         my $nc = $graph->circle(
           cx    => $pos->{x},
           cy    => $pos->{y},
@@ -171,59 +178,74 @@ class App::Schierer::HPFan::View::Timeline
           $graph->line(
             x1    => $pos->{x},
             y1    => $pos->{y},
-            x2    => $detail_pos->{x} - $detail_width / 2,
-            y2    => $detail_pos->{y} - $detail_height / 2,
+            x2    => $detail_pos->{x} - $detail_pos->{width} / 2,
+            y2    => $detail_pos->{y} - $detail_pos->{height} / 2,
             class => "timeline detail-edge $category",
           );
           $self->_create_detail_node_for_event($event, $detail_pos);
         }
       }
-      $self->logger->debug("svg is currently " . $graph->xmlify);
+      $self->logger->trace("svg is currently " . $graph->xmlify);
     }
   }
 
-  method _calculate_detail_dimensions($event) {
-    my $base_width     = 80;
-    my $base_height    = 40;
-    my $line_height    = 12;
-    my $chars_per_line = 15;    # rough estimate for your font size
+  method _calc_height($event, $wide = 0) {
+    my $line_height              = 13;
+    my $chars_per_line           = 30;
+    my $date_chars_per_line      = 23;
+    my $wide_chars_per_line      = 40;
+    my $wide_date_chars_per_line = 33;
+    my $hs                       = HTML::Strip->new();
+    my $lines                    = 2;    # date + (blurb OR description) minimum
 
-    my $lines = 2;              # date + (blurb OR description) minimum
+    my $tc = $wide ? $wide_chars_per_line : $chars_per_line;
+    if (length($event->blurb) > $tc) {
+      # subtract one for the line already allocated
+      my $bl = ceil((length($event->blurb) / $tc) - 1);
+      $self->logger->debug("blurb adding $bl to lines for " . $event->id);
+      $lines += $bl unless ($bl < 0);
+    }
+
+    # date uses slightly larger text
+    my $dc = $wide ? $wide_date_chars_per_line : $date_chars_per_line;
+    if (length($event->print_date) > $dc) {
+      # subtract one for the line already allocated
+      my $dl = ceil((length($event->print_date) / $dc) - 1);
+      $self->logger->debug("date adding $dl to lines for " . $event->id);
+      $lines += $dl unless ($dl < 0);
+    }
 
     # Count extra lines from content
-    if ( defined($event->blurb)
-      && defined($event->description)
-      && length($event->blurb)
+    if (defined($event->description)
       && length($event->description)) {
-      $lines++;    # both blurb AND description
+      my $text_only = $hs->parse($event->description);
+
+      my $dl = ceil((length($text_only) / $tc));
+      $self->logger->debug("description adding $dl to lines for " . $event->id);
+      $lines += $dl unless ($dl < 0);
     }
 
-    # Estimate wrapped lines for description
-    if ($event->description && length($event->description) > $chars_per_line) {
-      my $desc_lines = int(length($event->description) / $chars_per_line) + 1;
-      $lines += ($desc_lines - 1)
-        ;          # subtract 1 since we already counted the description line
-    }
+    my $sl = scalar @{ $event->sources };
+    $self->logger->debug("sources adding $sl to lines for " . $event->id);
+    $lines += $sl unless ($sl < 0);
 
-    $lines += scalar @{ $event->sources };
+    my $height = max($detail_height, ($lines * $line_height));
+    return $height;
 
-    my $width  = $base_width;
-    my $height = $base_height + (($lines - 2) * $line_height);
+  }
+
+  method _calculate_detail_dimensions($event) {
+    my $hs     = HTML::Strip->new();
+    my $width  = $detail_width;
+    my $height = $detail_height;
 
     # Maybe wider boxes for long descriptions to reduce wrapping
-    if ($event->description && length($event->description) > 50) {
+    if ($event->description && length($hs->parse($event->description)) > 50) {
       $width += 40;
-      # Recalculate lines with wider box
-      my $wider_chars_per_line = 25;
-      if (length($event->description) > $wider_chars_per_line) {
-        my $desc_lines =
-          int(length($event->description) / $wider_chars_per_line) + 1;
-        $lines =
-          $lines -
-          int(length($event->description) / $chars_per_line) +
-          $desc_lines - 1;
-        $height = $base_height + (($lines - 2) * $line_height);
-      }
+      $height = $self->_calc_height($event, 1);
+    }
+    else {
+      $height = $self->_calc_height($event);
     }
 
     return { width => $width, height => $height };
@@ -264,7 +286,14 @@ class App::Schierer::HPFan::View::Timeline
   }
 
   method _create_detail_node_for_event ($event, $pos) {
-
+    my $height = $pos->{height} // $detail_height;
+    my $width  = $pos->{width}  // $detail_width;
+    if (not defined($pos->{height}) or $pos->{height} < 3) {
+      $self->dev_guard(sprintf(
+        'detail node with no height for event %s: %s',
+        $event->id, Data::Printer::np($pos, multiline => 0)
+      ));
+    }
     $graph->circle(
       stroke         => 'blue',
       fill           => 'solid',
@@ -276,28 +305,28 @@ class App::Schierer::HPFan::View::Timeline
 
     my $group = $graph->tag(
       'g',
-      x      => $pos->{x} - $detail_width / 2,
-      y      => $pos->{y} - $detail_height / 2,
-      width  => $detail_width,
-      height => $detail_height,
+      x      => $pos->{x} - $width / 2,
+      y      => $pos->{y} - $height / 2,
+      width  => $width,
+      height => $height,
       id     => $event->id,
       class  => sprintf('timeline node %s', $event->event_class),
     );
     # a rectangle creates from the top left corner.
     $group->rectangle(
-      x      => $pos->{x} - $detail_width / 2,
-      y      => $pos->{y} - $detail_height / 2,
-      width  => $detail_width,
-      height => $detail_height,
+      x      => $pos->{x} - $width / 2,
+      y      => $pos->{y} - $height / 2,
+      width  => $width,
+      height => $height,
       rx     => 0.1,
       ry     => 0.1,
     );
 
     my $fo = $group->foreignObject(
-      x      => $pos->{x} - $detail_width / 2,
-      y      => $pos->{y} - $detail_height / 2,
-      width  => $detail_width,
-      height => $detail_height
+      x      => $pos->{x} - $width / 2,
+      y      => $pos->{y} - $height / 2,
+      width  => $width,
+      height => $height
     );
 
     my $div = $fo->tag(
@@ -319,14 +348,14 @@ class App::Schierer::HPFan::View::Timeline
     }
 
     if (defined($event->description) && length($event->description)) {
-      $self->logger->debug(sprintf('adding description "%s" to event %s',
-      $event->description, $event->id));
+      $self->logger->debug(sprintf(
+        'adding description "%s" to event %s',
+        $event->description, $event->id
+      ));
 
-      my $token = md5_hex($event->description);
-      $replacements->{$token} = $event->description;
-      $div->tag('div',
-        class => 'spectrum-Body spectrum-Body--sizeS spectrum-Body--serif')
-        ->CDATA($token);
+      my $cc = $div->tag('div',
+        class => 'spectrum-Body spectrum-Body--sizeS spectrum-Body--serif');
+      $cc->cdata_noxmlesc($event->description);
     }
 
     foreach my $source ($event->sources->@*) {
@@ -334,7 +363,6 @@ class App::Schierer::HPFan::View::Timeline
         class => 'spectrum-Body spectrum-Body--sizeS spectrum-Body--serif')
         ->cdata($source);
     }
-
   }
 
   method _process_svg_output {
@@ -342,8 +370,9 @@ class App::Schierer::HPFan::View::Timeline
       -pubid  => "-//W3C//DTD SVG 1.0//EN",
       -inline => 1
     );
+    my $viewbox = sprintf('0 0 %s %s', $xmax, $self->viewheight);
     # Your existing SVG cleanup
-    $svg =~
+    $svg =~ s/^<svg/<svg viewBox="$viewbox"/;
 s/<text ([^>]+) font-family="[^"]+" font-size="[^"]+">/<text $1 class="spectrum-Heading spectrum-Heading--size-M spectrum-Heading--serif">/g;
     return $svg;
   }
@@ -352,60 +381,65 @@ s/<text ([^>]+) font-family="[^"]+" font-size="[^"]+">/<text $1 class="spectrum-
 
   method _find_detail_position($event, $timeline_pos) {
     # Simple approach: try positions in a predictable spiral pattern
+    my $size = $self->_calculate_detail_dimensions($event);
     my @try_positions;
 
+    my $gutter = 3;
     for (my $i = 0; $i < 15; $i++) {
       push @try_positions,
         {
-        x        => $timeline_pos->{x} + $detail_width * $i,
-        y        => $timeline_pos->{y},
+        x        => $timeline_pos->{x} + $size->{width} * $i + $gutter,
+        y        => $timeline_pos->{y} + $gutter,
         distance => 350
         };
 
       push @try_positions,
         {
-        x => $detail_width * $i + 10,
-        y => $detail_height * $i + 10,
+        x => $size->{width} * $i + $gutter,
+        y => $size->{height} * $i + $gutter,
         };
       push @try_positions,
         {
-        x => $detail_width + $timeline_pos->{x},
-        y => $detail_height * $i + 10,
-        };
-
-      push @try_positions,
-        {
-        x => $detail_width * $i + 10,
-        y => $detail_height + $timeline_pos->{y},
+        x => $size->{width} + $timeline_pos->{x} + $gutter,
+        y => $size->{height} * $i + 10 + $gutter,
         };
 
       push @try_positions,
         {
-        x => $detail_width * $i + $timeline_pos->{x},
-        y => $timeline_pos->{y} + $detail_height * $i,
+        x => $size->{width} * $i + 10 + $gutter,
+        y => $size->{height} + $timeline_pos->{y} + $gutter,
         };
 
       push @try_positions,
         {
-        x => $detail_width + $timeline_pos->{x},
-        y => $timeline_pos->{y} + $detail_height * $i,
+        x => $size->{width} * $i + $timeline_pos->{x} + $gutter,
+        y => $timeline_pos->{y} + $size->{height} * $i + $gutter,
+        };
+
+      push @try_positions,
+        {
+        x => $size->{width} + $timeline_pos->{x} + $gutter,
+        y => $timeline_pos->{y} + $size->{height} * $i + $gutter,
         };
 
       push @try_positions, {
-        x => $detail_width * $i + $timeline_pos->{x},
-        y => $timeline_pos->{y} - $detail_height * $i,    # negative Y
+        x => $size->{width} * $i + $timeline_pos->{x} + $gutter,
+        y => $timeline_pos->{y} - $size->{height} * $i + $gutter,   # negative Y
       };
 
       push @try_positions,
         {
-        x => $detail_width * $i + $timeline_pos->{x},
-        y => $timeline_pos->{y} - $detail_height * $i,
+        x => $size->{width} * $i + $timeline_pos->{x} + $gutter,
+        y => $timeline_pos->{y} - $size->{height} * $i + $gutter,
         };
 
       push @try_positions,
         {
-        x => $timeline_pos->{x} + $detail_width * $i + ($detail_width / 2),
-        y => $timeline_pos->{y},
+        x => $timeline_pos->{x} +
+          $size->{width} * $i +
+          ($size->{width} / 2) +
+          $gutter,
+        y => $timeline_pos->{y} + $gutter,
         };
 
     }
@@ -420,19 +454,27 @@ s/<text ([^>]+) font-family="[^"]+" font-size="[^"]+">/<text $1 class="spectrum-
     } @try_positions;
 
     foreach my $pos (@try_positions) {
-      if ($self->_is_position_clear($event, $pos)) {
+      if ($self->_is_position_clear($event, $size, $pos)) {
         $self->logger->debug(sprintf(
           '%s recieved true for pos %s %s',
           $event->id, $pos->{x}, $pos->{y}
         ));
-
+        # store the amount of space we used as well as the center of that space
+        $pos->{width}  = $size->{width};
+        $pos->{height} = $size->{height};
         push @{$used_positions}, $pos;
-        return { x => int($pos->{x}), y => int($pos->{y}) };
+        return $pos;
       }
     }
 
     # Fallback
-    my $fb = { x => $timeline_pos->{x} + 400, y => $timeline_pos->{y} + 10 };
+    my $fb = {
+      x      => $timeline_pos->{x} + 400,
+      y      => $timeline_pos->{y} + 10,
+      width  => $size->{width},
+      height => $size->{height},
+    };
+    push @{$used_positions}, $fb;
     $self->logger->warn(sprintf(
       'using fallback value for event %s: pos %s %s',
       $event->id, $fb->{x}, $fb->{y}
@@ -440,13 +482,13 @@ s/<text ([^>]+) font-family="[^"]+" font-size="[^"]+">/<text $1 class="spectrum-
     return $fb;
   }
 
-  method _is_position_clear($event, $pos) {
+  method _is_position_clear($event, $size, $pos) {
     return 0 unless $pos->{y} >= 0;
     return 0 unless $pos->{x} >= 1;
 
     # Convert center to corner for boundary checking
-    my $corner_x = $pos->{x} - $detail_width / 2;
-    my $corner_y = $pos->{y} - $detail_height / 2;
+    my $corner_x = $pos->{x} - $size->{width} / 2;
+    my $corner_y = $pos->{y} - $size->{height} / 2;
 
     # Boundary checks using corner coordinates
     my @catNames   = keys $categories->%*;
@@ -454,9 +496,9 @@ s/<text ([^>]+) font-family="[^"]+" font-size="[^"]+">/<text $1 class="spectrum-
     my $leftGutter = ($numCats + 1) * 10;
 
     return 0 if $corner_x <= $leftGutter;
-    return 0 if $corner_x + $detail_width >= $xmax;
+    return 0 if $corner_x + $size->{width} >= $xmax;
     return 0 if $corner_y < 3;
-    return 0 if $corner_y + $detail_height > $viewheight;
+    return 0 if $corner_y + $size->{height} >= $ymax + $detail_height;
 
     # Collision detection using CENTER coordinates
     foreach my $used ($used_positions->@*) {
@@ -468,10 +510,14 @@ s/<text ([^>]+) font-family="[^"]+" font-size="[^"]+">/<text $1 class="spectrum-
       my $x_distance = abs($pos->{x} - $used->{x});
       my $y_distance = abs($pos->{y} - $used->{y});
 
-      # Boxes overlap if center distance < box dimension
-      if ($x_distance < $detail_width && $y_distance < $detail_height) {
+      # Boxes overlap if center distance < sum of half-widths/half-heights
+      my $min_x_distance = ($size->{width} + $used->{width}) / 2;
+      my $min_y_distance = ($size->{height} + $used->{height}) / 2;
+
+      if ($x_distance < $min_x_distance && $y_distance < $min_y_distance) {
         return 0;    # overlap detected
       }
+
     }
     $self->logger->debug(sprintf(
       'no test case failed for event %s with pos %s %s',

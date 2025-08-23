@@ -21,14 +21,22 @@ iconify-icon {
   --mod-heading-margin-end: 0;
   --mod-heading-margin-start: 0;
   --mod-heading-serif-font-family: "EB Garamond", serif;
+}
 
-  & .spectrum-Heading--sizeM {
-    --mod-heading-font-size: 10px;
-  }
+div.timeline-card svg .spectrum-Heading--sizeM,
+div.timeline-card svg .spectrum-Body--sizeM,
+div.timeline-card svg .spectrum-Detail--sizeM {
+  --mod-heading-font-size: 10px;
+  --mod-body-font-size: 10px;
+  --mod-detail-font-size: 10px;
+}
 
-  & .spectrum-Heading--sizeS {
-    --mod-heading-font-size: 8px;
-  }
+div.timeline-card svg .spectrum-Heading--sizeS,
+div.timeline-card svg .spectrum-Body--sizeS,
+div.timeline-card svg .spectrum-Detail--sizeS {
+  --mod-heading-font-size: 8px;
+  --mod-body-font-size: 8px;
+  --mod-detail-font-size: 8px;
 }
 
 /* type-based colors (fallbacks) */
@@ -154,8 +162,8 @@ iconify-icon.color-male {
   overflow: hidden;
   stroke-width: 1;
   text-wrap: pretty;
-  height: 80px;
-  width: 120px;
+  height: 99%;
+  width: 99%;
 }
 
 .timeline.detail-edge {

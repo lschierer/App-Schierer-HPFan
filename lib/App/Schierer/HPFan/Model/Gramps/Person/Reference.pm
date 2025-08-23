@@ -25,9 +25,10 @@ class App::Schierer::HPFan::Model::Gramps::Person::Reference :
     unless (defined $father_rel) {
       if (defined $frel && Scalar::Util::reftype($frel) eq 'HASH') {
         $self->set_father_rel(
-          App::Schierer::HPFan::Model::Gramps::Person::Child::Reference::Type->new(
+          App::Schierer::HPFan::Model::Gramps::Person::Child::Reference::Type
+            ->new(
             $frel->%*
-          )
+            )
         );
       }
     }
@@ -35,9 +36,10 @@ class App::Schierer::HPFan::Model::Gramps::Person::Reference :
     unless (defined($mrel)) {
       if (defined $mrel && Scalar::Util::reftype($mrel) eq 'HASH') {
         $self->set_mother_ref(
-          App::Schierer::HPFan::Model::Gramps::Person::Child::Reference::Type->new(
+          App::Schierer::HPFan::Model::Gramps::Person::Child::Reference::Type
+            ->new(
             $mrel->%*
-          )
+            )
         );
       }
     }

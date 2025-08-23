@@ -13,6 +13,7 @@ require Log::Log4perl;
 require GraphViz;
 require App::Schierer::HPFan::Model::History::Gramps;
 require App::Schierer::HPFan::View::Timeline;
+require App::Schierer::HPFan::Model::History::YAML;
 
 package App::Schierer::HPFan::Controller::History {
   use Mojo::Base 'App::Schierer::HPFan::Controller::ControllerBase';
@@ -45,11 +46,16 @@ package App::Schierer::HPFan::Controller::History {
       return if $timeline_cache->{built};
       $logger->info('Building History timeline from Gramps…');
 
+      my $ye = App::Schierer::HPFan::Model::History::YAML->new(
+        SourceDir => $app->config('distDir')->child('history'));
+      $ye->process();
+      push @{ $timeline_cache->{events}}, $ye->events->@*;
+
       my $ge = App::Schierer::HPFan::Model::History::Gramps->new(
         gramps => $app->gramps);
       $ge->process();
 
-      $timeline_cache->{events} = $ge->events;
+      push @{ $timeline_cache->{events}}, $ge->events->@*;
       $timeline_cache->{built}  = 1;
 
       $logger->info(

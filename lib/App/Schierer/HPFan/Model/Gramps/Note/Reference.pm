@@ -6,8 +6,6 @@ class App::Schierer::HPFan::Model::Gramps::Note::Reference :
   isa(App::Schierer::HPFan::Model::Gramps::Reference) {
   use Carp;
 
-
-
 }
 1;
 __END__

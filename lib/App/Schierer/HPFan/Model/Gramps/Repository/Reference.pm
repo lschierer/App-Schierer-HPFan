@@ -14,7 +14,7 @@ class App::Schierer::HPFan::Model::Gramps::Repository::Reference :
   ADJUST {
     if (defined($media_type)) {
       my $type = Scalar::Util::blessed($media_type) // '';
-      if ( $type ne 'App::Schierer::HPFan::Model::Gramps::Source::MediaType') {
+      if ($type ne 'App::Schierer::HPFan::Model::Gramps::Source::MediaType') {
         $media_type =
           App::Schierer::HPFan::Model::Gramps::Source::MediaType->new(
           $media_type->%*);

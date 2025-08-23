@@ -16,13 +16,13 @@ class App::Schierer::HPFan::Model::Gramps::Reference :
     'bool'     => sub { $_[0]->_isTrue },
     'fallback' => 1;
 
-  field $_class        : param //= undef;
-  field $citation_list : param //= [];
-  field $note_list     : param //= [];
-  field $ref           : param : reader //= undef;
-  field $role          : param : reader : writer = undef;
+  field $_class         : param //= undef;
+  field $citation_list  : param //= [];
+  field $note_list      : param //= [];
+  field $ref            : param : reader //= undef;
+  field $role           : param : reader : writer = undef;
   field $attribute_list : param : reader = [];
-  field $private        : param  //= undef;
+  field $private        : param //= undef;
 
   ADJUST {
     my @names;
@@ -31,8 +31,9 @@ class App::Schierer::HPFan::Model::Gramps::Reference :
       $self->ALLOWED_FIELD_NAMES->{$tn} = undef;
     }
 
-    if(scalar @{ $attribute_list }){
-      $self->dev_guard(sprintf('%s encountered a populated attribute_list', CORE::ref($self)));
+    if (scalar @{$attribute_list}) {
+      $self->dev_guard(
+        sprintf('%s encountered a populated attribute_list', CORE::ref($self)));
     }
   }
 

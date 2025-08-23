@@ -5,11 +5,13 @@ require JSON::PP;
 require Scalar::Util;
 require DateTime::Calendar::Julian;
 require DateTime::Format::DateManip;
+require Date::Calc::Object;
 
 class App::Schierer::HPFan::Model::History::Event
   : isa(App::Schierer::HPFan::Logger) {
   use Carp;
   use Readonly;
+  use Date::Calc qw(Date_to_Days);
   use Scalar::Util qw(blessed);
   use overload
     'cmp'      => \&_op_cmp,
@@ -163,6 +165,10 @@ class App::Schierer::HPFan::Model::History::Event
   method _coerce_to_sortval ($rhs) {
     return 9**9 unless defined $rhs;
     return $rhs +0 if Scalar::Util::looks_like_number($rhs);
+
+    if(blessed($rhs) && $rhs->isa('Date::Calc')){
+      return 0+ Date_to_Days($rhs->date());
+    }
 
     if (blessed($rhs) && $rhs->isa('Date::Manip::Date')) {
       my $dt = DateTime::Format::DateManip->parse_datetime($rhs);

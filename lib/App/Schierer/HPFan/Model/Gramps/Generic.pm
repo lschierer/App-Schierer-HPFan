@@ -17,21 +17,21 @@ class App::Schierer::HPFan::Model::Gramps::Generic :
     '!='  => \&_inequality,
     '""'  => \&as_string;
 
-  field $handle         : param : reader = undef;
+  field $handle : param : reader = undef;
 
   field $dbh : reader : param : writer //= undef;
   field $ALLOWED_FIELD_NAMES : reader = {
-    handle          => 1,
-    change          => 1,
-    attribute_list  => 1,
-    private         => 1,
-    json_data       => 1,
+    handle         => 1,
+    change         => 1,
+    attribute_list => 1,
+    private        => 1,
+    json_data      => 1,
   };
 
   ADJUST {
 
-    if (exists $self->ALLOWED_FIELD_NAMES->{'handle'} &&
-        $self->ALLOWED_FIELD_NAMES->{'handle'}) {
+    if (exists $self->ALLOWED_FIELD_NAMES->{'handle'}
+      && $self->ALLOWED_FIELD_NAMES->{'handle'}) {
       #unless (defined($handle)) {
       #  $self->logger->logcroak('handle must be defined.');
       #}
@@ -40,8 +40,8 @@ class App::Schierer::HPFan::Model::Gramps::Generic :
   }
 
   method private {
-    if(exists $self->ALLOWED_FIELD_NAMES->{'private'}){
-      if($self->ALLOWED_FIELD_NAMES->{'private'}){
+    if (exists $self->ALLOWED_FIELD_NAMES->{'private'}) {
+      if ($self->ALLOWED_FIELD_NAMES->{'private'}) {
         return $self->_get_field('private');
       }
     }
@@ -49,8 +49,8 @@ class App::Schierer::HPFan::Model::Gramps::Generic :
   }
 
   method json_data {
-    if(exists $self->ALLOWED_FIELD_NAMES->{'json_data'}){
-      if($self->ALLOWED_FIELD_NAMES->{'json_data'}){
+    if (exists $self->ALLOWED_FIELD_NAMES->{'json_data'}) {
+      if ($self->ALLOWED_FIELD_NAMES->{'json_data'}) {
         return $self->_get_field('json_data');
       }
     }
@@ -58,8 +58,8 @@ class App::Schierer::HPFan::Model::Gramps::Generic :
   }
 
   method change {
-    if(exists $self->ALLOWED_FIELD_NAMES->{'change'}){
-      if($self->ALLOWED_FIELD_NAMES->{'change'}){
+    if (exists $self->ALLOWED_FIELD_NAMES->{'change'}) {
+      if ($self->ALLOWED_FIELD_NAMES->{'change'}) {
         return $self->_get_field('change');
       }
     }
@@ -68,40 +68,43 @@ class App::Schierer::HPFan::Model::Gramps::Generic :
 
   method note_refs {
     my $items = [];
-    if(exists $self->ALLOWED_FIELD_NAMES->{'json_data'}){
+    if (exists $self->ALLOWED_FIELD_NAMES->{'json_data'}) {
       my $hash = JSON::PP->new->decode($self->json_data);
       foreach my $item ($hash->{'note_list'}->@*) {
-        if(ref($item) eq 'OBJECT') {
+        if (ref($item) eq 'OBJECT') {
           my $temp =
-            App::Schierer::HPFan::Model::Gramps::Note::Reference->new($item->%*);
+            App::Schierer::HPFan::Model::Gramps::Note::Reference->new(
+            $item->%*);
           $temp->set_dbh($self->dbh);
           push @$items, $temp;
-        } else {
+        }
+        else {
           my $temp =
-          App::Schierer::HPFan::Model::Gramps::Note::Reference->new(ref => $item);
+            App::Schierer::HPFan::Model::Gramps::Note::Reference->new(
+            ref => $item);
           $temp->set_dbh($self->dbh);
           push @$items, $temp;
         }
       }
     }
-    return [ $items->@* ];
+    return [$items->@*];
   }
 
   method citation_refs {
     my $items = [];
-    if(exists $self->ALLOWED_FIELD_NAMES->{'json_data'}){
+    if (exists $self->ALLOWED_FIELD_NAMES->{'json_data'}) {
       my $hash = JSON::PP->new->decode($self->json_data);
       foreach my $item ($hash->{'citation_list'}->@*) {
         push @$items,
           App::Schierer::HPFan::Model::Gramps::Reference->new($item->%*);
       }
     }
-    return [ $items->@* ];
+    return [$items->@*];
   }
 
   method tag_refs {
     my $items = [];
-    if(exists $self->ALLOWED_FIELD_NAMES->{'json_data'}){
+    if (exists $self->ALLOWED_FIELD_NAMES->{'json_data'}) {
       my $hash = JSON::PP->new->decode($self->json_data);
       foreach my $item ($hash->{'tag_list'}->@*) {
         push @$items,
@@ -163,7 +166,6 @@ class App::Schierer::HPFan::Model::Gramps::Generic :
     $self->dev_guard("_get_field requested for forbidden field $field_name");
     return undef;
   }
-
 
   method _equality ($other, $swap = 0) {
     return $handle eq $other->handle;

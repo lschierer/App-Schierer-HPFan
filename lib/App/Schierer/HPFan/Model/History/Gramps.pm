@@ -18,7 +18,7 @@ class App::Schierer::HPFan::Model::History::Gramps :
   ADJUST {
     unless ($gramps && $gramps->isa('App::Schierer::HPFan::Model::Gramps')) {
       $self->logger->logcroak(
-    "gramps must be defined, ' .
+        "gramps must be defined, ' .
     'and of type App::Schierer::HPFan::Model::Gramps"
       );
     }
@@ -107,51 +107,32 @@ class App::Schierer::HPFan::Model::History::Gramps :
         && length($e->date->modifier_label));
 
       # set up description
-      push @description, mv->format_string($e->description, 1)
+      push @description, $e->description
         if (defined($e->description) && length($e->description));
-
-      foreach my $nr ($e->note_refs->@*) {
-        # TODO some note references have other interesting properties beyond being a handle
-        if(Scalar::Util::reftype($nr) eq 'OBJECT' && $nr->isa('App::Schierer::HPFan::Model::Gramps::Note::Reference')){
-          my $note = App::Schierer::HPFan::Model::Gramps::Note->new( handle => $nr->ref );
-          $note->set_dbh($e->dbh);
-          if($note->isa('App::Schierer::HPFan::Model::Gramps::Note')) {
-            if(defined($note->gramps_id) && length($note->gramps_id)){
-              push @description, $note->text;
-              $self->logger->debug(sprintf('pushed new note to description for %s',
-              $e->gramps_id));
-              foreach my $cr ($note->citation_refs->@*){
-                #todo handle citations.
-              }
-            }
-          }else {
-            $self->logger->error(sprintf('note is not a Note object, it shows as ref %s blessed %s.', Scalar::Util::reftype($note), Scalar::Util::blessed($note)));
-          }
-        } else {
-          $self->logger->error(sprintf(
-            'nr is not a Note::Reference object, it shows as ref %s blessed %s. isa %s',
-            Scalar::Util::reftype($nr) // 'Undefined' , Scalar::Util::blessed($nr) // 'Undefined',
-           $nr->isa('App::Schierer::HPFan::Model::Gramps::Note::Reference') ? 'true' : 'false', ));
-        }
-
-
-      }
+      my $note_text = $self->_notes_for_event($e);
+      push @description, $note_text->@* if (scalar @$note_text);
 
       # final object
       $events->{ $e->gramps_id } =
         App::Schierer::HPFan::Model::History::Event->new(
-        id          => $e->gramps_id,
-        blurb       => sprintf('Birth of %s', $person->display_name()),
-        date_iso    => (not $e->date->is_range)
+        id       => $e->gramps_id,
+        blurb    => sprintf('Birth of %s', $person->display_name()),
+        date_iso => (not $e->date->is_range)
         ? $e->date->as_dm_date->printf('%Y-%m-%d')
         : sprintf('%s - %s', $e->date->start, $e->date->end),
         date_kind => scalar @dklparts ? sprintf('(%s)', join(' ', @dklparts),)
         : '',
-        description => join('', @description),
+        description => $mv->format_string(
+          join('\n', @description),
+          {
+            asXHTML      => 1,
+            sizeTemplate => 'timeline',
+          }
+        ),
         event_class => 'magical',
         origin      => 'Gramps',
-        raw_date => $e->date,
-        sortval  => $e->date->sortval,
+        raw_date    => $e->date,
+        sortval     => $e->date->sortval,
         type        => 'Birth',
         );
     }
@@ -176,16 +157,17 @@ class App::Schierer::HPFan::Model::History::Gramps :
         && length($e->date->modifier_label));
 
       # set up description
-      push @description, mv->format_string($e->description)
-        if (defined($e->description) && length($e->description));
+      push @description,
+        $mv->format_string(
+        $e->description,
+        {
+          asXHTML      => 1,
+          sizeTemplate => 'timeline',
+        }
+        ) if (defined($e->description) && length($e->description));
 
-      foreach my $nr ($e->note_refs) {
-        # TODO handle interesting details in notes.
-        # add them to the description.
-        # and their citations to the sources.
-      }
-
-
+      my $note_text = $self->_notes_for_event($e);
+      push @description, $note_text->@* if (scalar @$note_text);
 
       # final object
       $events->{ $e->gramps_id } =
@@ -210,6 +192,48 @@ class App::Schierer::HPFan::Model::History::Gramps :
         'Death event %s cannot be matched with a person.',
         $e->gramps_id));
     }
+  }
+
+  method _notes_for_event ($e) {
+    my @return;
+    foreach my $nr ($e->note_refs->@*) {
+# TODO some note references have other interesting properties beyond being a handle
+      if (Scalar::Util::reftype($nr) eq 'OBJECT'
+        && $nr->isa('App::Schierer::HPFan::Model::Gramps::Note::Reference')) {
+        my $note =
+          App::Schierer::HPFan::Model::Gramps::Note->new(handle => $nr->ref);
+        $note->set_dbh($e->dbh);
+        if ($note->isa('App::Schierer::HPFan::Model::Gramps::Note')) {
+          if (defined($note->gramps_id) && length($note->gramps_id)) {
+            push @return, $note->text->raw
+              if (defined($note->text->raw) && length($note->text->raw));
+            $self->logger->debug(sprintf(
+              'pushed new note to description for %s', $e->gramps_id));
+            foreach my $cr ($note->citation_refs->@*) {
+              #todo handle citations.
+            }
+          }
+        }
+        else {
+          $self->logger->error(sprintf(
+            'note is not a Note object, it shows as ref %s blessed %s.',
+            Scalar::Util::reftype($note),
+            Scalar::Util::blessed($note)
+          ));
+        }
+      }
+      else {
+        $self->logger->error(sprintf(
+'nr is not a Note::Reference object, it shows as ref %s blessed %s. isa %s',
+          Scalar::Util::reftype($nr) // 'Undefined',
+          Scalar::Util::blessed($nr) // 'Undefined',
+          $nr->isa('App::Schierer::HPFan::Model::Gramps::Note::Reference')
+          ? 'true'
+          : 'false',
+        ));
+      }
+    }
+    return \@return;
   }
 
   method _primary_person_for ($e) {

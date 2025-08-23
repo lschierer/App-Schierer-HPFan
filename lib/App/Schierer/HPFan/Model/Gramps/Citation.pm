@@ -21,22 +21,22 @@ class App::Schierer::HPFan::Model::Gramps::Citation :
     push @names, @desired;
     push @names, keys $self->ALLOWED_FIELD_NAMES->%*;
     foreach my $tn (@names) {
-      if(any {$_ eq $tn} @desired) {
+      if (any { $_ eq $tn } @desired) {
         $self->ALLOWED_FIELD_NAMES->{$tn} = 1;
-      } else {
+      }
+      else {
         $self->ALLOWED_FIELD_NAMES->{$tn} = undef;
       }
     }
   }
 
-  method gramps_id      { $self->_get_field('gramps_id') }
-  method page           { $self->_get_field('page') }
-  method confidence     { $self->_get_field('confidence') }
+  method gramps_id  { $self->_get_field('gramps_id') }
+  method page       { $self->_get_field('page') }
+  method confidence { $self->_get_field('confidence') }
 
-  method source_handle  {
+  method source_handle {
     return App::Schierer::HPFan::Model::Gramps::Source::Reference->new(
-      ref => $self->_get_field('source_handle')
-    );
+      ref => $self->_get_field('source_handle'));
   }
 
   method parse_json_data {
@@ -50,7 +50,7 @@ class App::Schierer::HPFan::Model::Gramps::Citation :
 
   method date {
     my $hash = JSON::PP->new->decode($self->json_data);
-    my $d = $dh->parse($hash->{'date'});
+    my $d    = $dh->parse($hash->{'date'});
     $self->logger->debug("found date " . Data::Printer::np($d));
     return $d;
   }

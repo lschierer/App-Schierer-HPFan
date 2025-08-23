@@ -229,17 +229,20 @@ class App::Schierer::HPFan::Model::Gramps::GrampsDate :
     }
     elsif ($self->precision eq 'y') {
       $err = $d->parse(sprintf('%04d-01-01', $year));
-    }elsif($self->is_range && defined($start)){
+    }
+    elsif ($self->is_range && defined($start)) {
       my $r;
-      if(Scalar::Util::blessed($start) eq 'App::Schierer::HPFan::Model::Gramps::GrampsDate'){
+      if (Scalar::Util::blessed($start) eq
+        'App::Schierer::HPFan::Model::Gramps::GrampsDate') {
         $r = $start->as_dm_date;
-        if(defined $r){
+        if (defined $r) {
           return $r;
         }
       }
-      if(Scalar::Util::blessed($end) eq 'App::Schierer::HPFan::Model::Gramps::GrampsDate'){
+      if (Scalar::Util::blessed($end) eq
+        'App::Schierer::HPFan::Model::Gramps::GrampsDate') {
         $r = $end->as_dm_date;
-        if(defined $r){
+        if (defined $r) {
           return $r;
         }
       }

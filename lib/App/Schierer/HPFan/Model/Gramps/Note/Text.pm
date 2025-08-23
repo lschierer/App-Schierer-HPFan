@@ -24,14 +24,19 @@ class App::Schierer::HPFan::Model::Gramps::Note::Text :
       $self->ALLOWED_FIELD_NAMES->{$tn} = undef;
     }
 
-
   }
 
   field $_class : param //= undef;
   field $string : param //= undef;
   field $tags   : param //= [];
 
-  method tags { [ $tags->@* ] };
+  ADJUST {
+    if (defined $string) {
+      $string =~ s/^\s+|\s+$//g;
+    }
+  }
+
+  method tags { [$tags->@*] }
 
   method _comparison ($other, $swap = 0) {
     return $self->to_string cmp $other->to_string;
@@ -44,17 +49,23 @@ class App::Schierer::HPFan::Model::Gramps::Note::Text :
   method to_hash {
     return {} if $self->private;
     my $r = { ref => $self->ref };
-    $r->{'string'}  = $string if defined($string);
-    $r->{'tags'}    = $tags if scalar(@{ $tags });
+    $r->{'string'} = $string if defined($string);
+    $r->{'tags'}   = $tags   if scalar(@{$tags});
     return $r;
   }
 
+  method raw {
+    return $string unless not defined $string;
+    return '';
+  }
+
   method to_string {
-    if($_class eq 'StyledText'){
+    if ($_class eq 'StyledText') {
       my $md = App::Schierer::HPFan::View::Markdown->new();
       return $md->format_string($string) unless not defined($string);
       return '';
-    } else {
+    }
+    else {
       return $string unless not defined $string;
       return '';
     }

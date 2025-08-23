@@ -11,41 +11,43 @@ class App::Schierer::HPFan::Model::Gramps::Person :
   use App::Schierer::HPFan::Model::Gramps::Name;
   use App::Schierer::HPFan::Model::Gramps::DateHelper;
 
-  field $given_name       //= undef;
-  field $surname          //= undef;
-  field $gramps_id        //= undef;
-  field $gender           //= 'U';
-  field $death_ref_index  //= undef;
-  field $birth_ref_index  //= undef;
-  field $json_data        //= undef;
+  field $given_name      //= undef;
+  field $surname         //= undef;
+  field $gramps_id       //= undef;
+  field $gender          //= 'U';
+  field $death_ref_index //= undef;
+  field $birth_ref_index //= undef;
+  field $json_data       //= undef;
 
-  field $event_refs      = [];
-  field $addresses       = [];
-  field $attributes      = [];
-  field $urls            = [];
-  field $child_of_refs   = [];
-  field $parent_in_refs  = [];
-  field $person_refs     = [];
-  field $note_refs       = [];
-  field $citation_refs   = [];
-  field $tag_refs        = [];
+  field $event_refs     = [];
+  field $addresses      = [];
+  field $attributes     = [];
+  field $urls           = [];
+  field $child_of_refs  = [];
+  field $parent_in_refs = [];
+  field $person_refs    = [];
+  field $note_refs      = [];
+  field $citation_refs  = [];
+  field $tag_refs       = [];
 
   ADJUST {
     my @desired = qw(given_name
-    surname
-    gramps_id
-    gender
-    death_ref_index
-    birth_ref_index
-    private
-    json_data        );
+      surname
+      gramps_id
+      gender
+      death_ref_index
+      birth_ref_index
+      private
+      json_data        );
     my @names;
     push @names, @desired;
     push @names, keys $self->ALLOWED_FIELD_NAMES->%*;
+
     foreach my $tn (@names) {
-      if(any {$_ eq $tn} @desired){
+      if (any { $_ eq $tn } @desired) {
         $self->ALLOWED_FIELD_NAMES->{$tn} = 1;
-      } else {
+      }
+      else {
         $self->ALLOWED_FIELD_NAMES->{$tn} = undef;
       }
     }

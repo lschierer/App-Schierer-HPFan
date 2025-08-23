@@ -354,7 +354,7 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
 
     foreach my $handle (@$all_entries) {
       $families->{$handle} =
-        App::Schierer::HPFan::Model::Gramps::Family->new( handle => $handle);
+        App::Schierer::HPFan::Model::Gramps::Family->new(handle => $handle);
       $families->{$handle}->set_dbh($dbh);
       $families->{$handle}->parse_json_data;
     }
@@ -367,24 +367,24 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
 
     foreach my $handle (@$all_entries) {
       $tags->{$handle} =
-        App::Schierer::HPFan::Model::Gramps::Tag->new( handle => $handle);
+        App::Schierer::HPFan::Model::Gramps::Tag->new(handle => $handle);
       $tags->{$handle}->set_dbh($dbh);
       $tags->{$handle}->parse_json_data;
     }
     $self->logger->info(sprintf('imported %s tags.', scalar keys %{$tags}));
   }
 
-  method _import_citations{
+  method _import_citations {
     my $all_entries = $dbh->selectcol_arrayref("SELECT handle FROM citation");
 
     foreach my $handle (@$all_entries) {
       $citations->{$handle} =
-        App::Schierer::HPFan::Model::Gramps::Citation->new( handle => $handle);
+        App::Schierer::HPFan::Model::Gramps::Citation->new(handle => $handle);
       $citations->{$handle}->set_dbh($dbh);
       $citations->{$handle}->parse_json_data;
     }
     my $d = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
-        $self->logger->info(
+    $self->logger->info(
       sprintf('imported %s citations.', scalar keys %{$citations}));
   }
 
@@ -393,7 +393,7 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
 
     foreach my $handle (@$all_entries) {
       $sources->{$handle} =
-        App::Schierer::HPFan::Model::Gramps::Source->new( handle => $handle);
+        App::Schierer::HPFan::Model::Gramps::Source->new(handle => $handle);
       $sources->{$handle}->set_dbh($dbh);
       $sources->{$handle}->parse_json_data;
     }
@@ -401,12 +401,12 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
       sprintf('imported %s sources.', scalar keys %{$sources}));
   }
 
-  method _import_notes  {
+  method _import_notes {
     my $all_entries = $dbh->selectcol_arrayref("SELECT handle FROM note");
 
     foreach my $handle (@$all_entries) {
       $notes->{$handle} =
-        App::Schierer::HPFan::Model::Gramps::Note->new( handle => $handle);
+        App::Schierer::HPFan::Model::Gramps::Note->new(handle => $handle);
       $notes->{$handle}->set_dbh($dbh);
       $notes->{$handle}->parse_json_data;
     }
@@ -419,7 +419,7 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
 
     foreach my $handle (@$all_entries) {
       $repositories->{$handle} =
-        App::Schierer::HPFan::Model::Gramps::Repository->new( handle => $handle);
+        App::Schierer::HPFan::Model::Gramps::Repository->new(handle => $handle);
       $repositories->{$handle}->set_dbh($dbh);
       $repositories->{$handle}->parse_json_data;
     }
@@ -432,7 +432,7 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
 
     foreach my $handle (@$all_entries) {
       $events->{$handle} =
-        App::Schierer::HPFan::Model::Gramps::Event->new( handle => $handle);
+        App::Schierer::HPFan::Model::Gramps::Event->new(handle => $handle);
       $events->{$handle}->set_dbh($dbh);
       $events->{$handle}->parse_json_data;
     }
