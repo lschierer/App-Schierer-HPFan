@@ -19,6 +19,11 @@ use Test::More;
 use DBI;
 use DBD::SQLite::Constants qw/:dbd_sqlite_string_mode/;
 
+# set up logging
+my $lc = App::Schierer::HPFan::Logger::Config->new('App-Schierer-HPFan');
+my $log4perl_logger = $lc->init('testing');
+my $logger = Log::Log4perl->get_logger('Test');
+
 BEGIN { use_ok('App::Schierer::HPFan::Model::Gramps') }
 
 #########################
@@ -26,9 +31,6 @@ BEGIN { use_ok('App::Schierer::HPFan::Model::Gramps') }
 # Insert your test code below, the Test::More module is use()ed here so read
 # its man page ( perldoc Test::More ) for help writing this test script.
 
-my $lc = App::Schierer::HPFan::Logger::Config->new('App-Schierer-HPFan');
-my $log4perl_logger = $lc->init('testing');
-my $logger = Log::Log4perl->get_logger('Test');
 
 my $gramps_file = './share/potter_universe.gramps';
 my $gramps_db   = './share/grampsdb/sqlite.db';
@@ -64,30 +66,28 @@ for my $index (0 .. $#eventKeys) {
     );
 
     my $date = $event->date;
+
     if ($date) {
       isa_ok(
-        $date,
-        'App::Schierer::HPFan::Model::Gramps::GrampsDate',
+        Scalar::Util::blessed($date),
+        'App::Schierer::HPFan::Model::CustomDate',
         sprintf('event date for %s', $event->gramps_id)
       );
-      my $dmDate = $date->as_dm_date;
+
+      my $isoDate = $date->toISO;
       if ($no_date_events->{ $event->gramps_id }) {
         # DB says "no date" — we should NOT get a parseable DM date
-        ok(!defined($dmDate),
-          sprintf('no DM date (as expected) for %s', $event->gramps_id));
+        ok(!defined($isoDate),
+          sprintf('no isoDate date (as expected) for %s', $event->gramps_id));
         pass(sprintf 'Event %s has no date (acceptable)', $event->gramps_id);
       }
       else {
-        ok(defined($dmDate),
-          sprintf('as_dm_date returns something %s', $event->gramps_id));
-        if ($dmDate) {
-          isa_ok($dmDate, 'Date::Manip::Date',
-            sprintf('Date::Manip::Date for %s', $event->gramps_id));
-        }
+        ok(defined($isoDate),
+          sprintf('isoDate returns something %s', $event->gramps_id));
         my $s = $date->to_string // '';
         ok(
           length($s) > 0,
-          sprintf 'GrampsDate for %s prints something',
+          sprintf 'CustomDate for %s prints something',
           $event->gramps_id
         );
       }

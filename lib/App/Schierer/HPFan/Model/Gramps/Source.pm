@@ -5,7 +5,6 @@ require Date::Manip;
 require JSON::PP;
 require Data::Printer;
 require App::Schierer::HPFan::Model::Gramps::Repository::Reference;
-require App::Schierer::HPFan::Model::Gramps::DateHelper;
 
 class App::Schierer::HPFan::Model::Gramps::Source :
   isa(App::Schierer::HPFan::Model::Gramps::Generic) {

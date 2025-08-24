@@ -52,11 +52,12 @@ class App::Schierer::HPFan::View::Timeline
 
   # output fields
   field $graph : reader;
+  field $edges_group;
+  field $nodes_group;
+  field $text_group;
 
-  method viewheight { max(
-      $ymax * ($fr_scaling_factor + 0.6),
-      $ymax + $detail_height,
-    );
+  method viewheight {
+    max($ymax * ($fr_scaling_factor + 0.6), $ymax + $detail_height,);
   }
 
   ADJUST {
@@ -74,7 +75,8 @@ class App::Schierer::HPFan::View::Timeline
     # 100 for the gaps.
     $xmax = $detail_width * 6 + 200;
 
-    Readonly::Scalar my $sth => int(($self->viewheight / (scalar($events->@*) * 4)));
+    Readonly::Scalar my $sth =>
+      int(($self->viewheight / (scalar($events->@*) * 4)));
     $detail_height = $sth;
     $self->logger->info(sprintf(
       'based on %s events and %s viewheight, detail_height is %s',
@@ -92,6 +94,12 @@ class App::Schierer::HPFan::View::Timeline
     $graph = SVG->new(
       preserveAspectRatio => 'xMidYMid meet',    # how to scale
     );
+    $edges_group =
+      $graph->group(id => 'layer-edges', class => 'timeline edges');
+    $nodes_group =
+      $graph->group(id => 'layer-nodes', class => 'timeline nodes');
+    $text_group = $graph->group(id => 'layer-text', class => 'timeline text');
+
   }
 
   method create {
@@ -110,7 +118,24 @@ class App::Schierer::HPFan::View::Timeline
       }
 
       my $category = $event->event_class // 'generic';
-      my $date     = $event->sortval;
+      my @parts    = grep {length} split /\s+/, ($event->event_class // '');
+      if (scalar @parts) {
+        @parts = grep { $_ !~ /mundane/i } @parts;
+        if (scalar @parts) {
+          @parts    = sort @parts;
+          $category = 'generic';
+          if ($parts[0] =~ /england/i) {
+            if ($#parts >= 1 && $parts[1] =~ /scotland/i) {
+              $category = 'gb';
+            }
+          }
+          if ($category eq 'generic' && scalar(@parts)) {
+            $category = join(' ', @parts);
+          }
+        }
+      }
+
+      my $date = $event->sortval;
       # set the base y cordinate to the minimum Julian Date
       $min_date = min($min_date, $event->sortval);
       $max_date = max($max_date, $event->sortval);
@@ -122,7 +147,7 @@ class App::Schierer::HPFan::View::Timeline
   }
 
   method _create_detail_nodes_and_connections {
-    my @catNames = keys $categories->%*;
+    my @catNames = sort keys $categories->%*;
     foreach my $index (0 .. $#catNames) {
       my $category = $catNames[$index];
 
@@ -149,7 +174,7 @@ class App::Schierer::HPFan::View::Timeline
           $pos->{y} = $miny;
         }
 
-        my $nc = $graph->circle(
+        my $nc = $nodes_group->circle(
           cx    => $pos->{x},
           cy    => $pos->{y},
           r     => 3,
@@ -158,7 +183,7 @@ class App::Schierer::HPFan::View::Timeline
         );
 
         if (defined $previous_pos) {
-          $graph->line(
+          $edges_group->line(
             x1    => $pos->{x},
             y1    => $previous_pos->{y} + 3,
             x2    => $pos->{x},
@@ -175,7 +200,7 @@ class App::Schierer::HPFan::View::Timeline
           my $detail_pos = $self->_find_detail_position($event, $pos);
           # Draw dashed line from timeline dot to detail box
           # Draw the line to the corner, not the center.
-          $graph->line(
+          $edges_group->line(
             x1    => $pos->{x},
             y1    => $pos->{y},
             x2    => $detail_pos->{x} - $detail_pos->{width} / 2,
@@ -294,16 +319,22 @@ class App::Schierer::HPFan::View::Timeline
         $event->id, Data::Printer::np($pos, multiline => 0)
       ));
     }
-    $graph->circle(
-      stroke         => 'blue',
-      fill           => 'solid',
-      'stroke-width' => 3,
-      cx             => $pos->{x},
-      cy             => $pos->{y},
-      r              => 3,
-    );
 
-    my $group = $graph->tag(
+    # 1) Split event_class into tokens (whitespace-separated)
+    my @parts = grep {length} split /\s+/, ($event->event_class // '');
+
+    # “whitespace count + 1” stops; ensure at least 1 stop
+    my $n_stops = @parts ? (@parts + 1) : 1;
+
+    # 2) Build style that maps tokens to --stop-i using your CSS palette vars
+    # e.g. "--stop-1: var(--england); --stop-2: var(--scotland); ..."
+    my $style = join '; ',
+      map { my $i = $_ + 1; "--stop-$i: var(--$parts[$_])" } (0 .. $#parts);
+
+    (my $safe_id = $event->id // 'evt') =~ s/[^A-Za-z0-9_.:-]+/_/g;
+    my $grad_id = "grad_$safe_id";
+
+    my $group = $nodes_group->tag(
       'g',
       x      => $pos->{x} - $width / 2,
       y      => $pos->{y} - $height / 2,
@@ -311,7 +342,35 @@ class App::Schierer::HPFan::View::Timeline
       height => $height,
       id     => $event->id,
       class  => sprintf('timeline node %s', $event->event_class),
+      (length $style ? (style => $style) : ()),
     );
+
+    my $defs = $group->tag('defs');
+    my $lg   = $defs->tag(
+      'linearGradient',
+      id                => $grad_id,
+      x1                => '0%',
+      y1                => '0%',
+      x2                => '100%',
+      y2                => '0%',
+      gradientUnits     => 'objectBoundingBox',
+      gradientTransform => 'rotate(175)'          # adjust angle as you like
+    );
+
+    # Build evenly spaced stops. Each stop uses --stop-i with fallbacks.
+    for my $i (1 .. $n_stops) {
+      my $offset =
+        ($n_stops == 1)
+        ? '15%'
+        : sprintf('%.3f%%', ($i - 1) * 100 / ($n_stops - 1));
+
+      $lg->tag(
+        'stop',
+        offset       => $offset,
+        'stop-color' => "var(--stop-$i, var(--category-color, currentColor))",
+      );
+    }
+
     # a rectangle creates from the top left corner.
     $group->rectangle(
       x      => $pos->{x} - $width / 2,
@@ -320,17 +379,21 @@ class App::Schierer::HPFan::View::Timeline
       height => $height,
       rx     => 0.1,
       ry     => 0.1,
+      (scalar @parts ? (fill => "url(#$grad_id)",) : ()),
     );
 
-    my $fo = $group->foreignObject(
+    my $fo = $text_group->foreignObject(
       x      => $pos->{x} - $width / 2,
       y      => $pos->{y} - $height / 2,
       width  => $width,
-      height => $height
+      height => $height,
     );
+
+    $fo->comment(sprintf('event %s sortval %s', $event->id, $event->sortval));
 
     my $div = $fo->tag(
       'div',
+      id    => sprintf('fo-div-%s', $event->id),
       xmlns => 'http://www.w3.org/1999/xhtml',
       class => sprintf('timeline node-label %s', $event->event_class),
     );
@@ -366,6 +429,7 @@ class App::Schierer::HPFan::View::Timeline
   }
 
   method _process_svg_output {
+
     my $svg = $graph->xmlify(
       -pubid  => "-//W3C//DTD SVG 1.0//EN",
       -inline => 1
@@ -373,7 +437,10 @@ class App::Schierer::HPFan::View::Timeline
     my $viewbox = sprintf('0 0 %s %s', $xmax, $self->viewheight);
     # Your existing SVG cleanup
     $svg =~ s/<svg /<svg viewBox="$viewbox"/;
+
+    $svg =~
 s/<text ([^>]+) font-family="[^"]+" font-size="[^"]+">/<text $1 class="spectrum-Heading spectrum-Heading--size-M spectrum-Heading--serif">/g;
+
     return $svg;
   }
 
@@ -388,58 +455,73 @@ s/<text ([^>]+) font-family="[^"]+" font-size="[^"]+">/<text $1 class="spectrum-
     for (my $i = 0; $i < 15; $i++) {
       push @try_positions,
         {
-        x        => $timeline_pos->{x} + $size->{width} * $i + $gutter,
-        y        => $timeline_pos->{y} + $gutter,
+        x        => $timeline_pos->{x} + $size->{width} * $i,
+        y        => $timeline_pos->{y},
         distance => 350
         };
 
       push @try_positions,
         {
-        x => $size->{width} * $i + $gutter,
-        y => $size->{height} * $i + $gutter,
+        x => $size->{width} * $i,
+        y => $size->{height} * $i,
         };
       push @try_positions,
         {
-        x => $size->{width} + $timeline_pos->{x} + $gutter,
-        y => $size->{height} * $i + 10 + $gutter,
-        };
-
-      push @try_positions,
-        {
-        x => $size->{width} * $i + 10 + $gutter,
-        y => $size->{height} + $timeline_pos->{y} + $gutter,
+        x => $size->{width} + $timeline_pos->{x},
+        y => $size->{height} * $i + 10,
         };
 
       push @try_positions,
         {
-        x => $size->{width} * $i + $timeline_pos->{x} + $gutter,
-        y => $timeline_pos->{y} + $size->{height} * $i + $gutter,
+        x => $size->{width} * $i + 10,
+        y => $size->{height} + $timeline_pos->{y},
         };
 
       push @try_positions,
         {
-        x => $size->{width} + $timeline_pos->{x} + $gutter,
-        y => $timeline_pos->{y} + $size->{height} * $i + $gutter,
+        x => $size->{width} * $i + $timeline_pos->{x},
+        y => $timeline_pos->{y} + $size->{height} * $i,
+        };
+
+      push @try_positions,
+        {
+        x => $size->{width} + $timeline_pos->{x},
+        y => $timeline_pos->{y} + $size->{height} * $i,
         };
 
       push @try_positions, {
-        x => $size->{width} * $i + $timeline_pos->{x} + $gutter,
-        y => $timeline_pos->{y} - $size->{height} * $i + $gutter,   # negative Y
+        x => $size->{width} * $i + $timeline_pos->{x},
+        y => $timeline_pos->{y} - $size->{height} * $i,    # negative Y
       };
 
       push @try_positions,
         {
-        x => $size->{width} * $i + $timeline_pos->{x} + $gutter,
-        y => $timeline_pos->{y} - $size->{height} * $i + $gutter,
+        x => $size->{width} * $i + $timeline_pos->{x},
+        y => $timeline_pos->{y} - $size->{height} * $i,
         };
 
       push @try_positions,
         {
-        x => $timeline_pos->{x} +
-          $size->{width} * $i +
-          ($size->{width} / 2) +
-          $gutter,
-        y => $timeline_pos->{y} + $gutter,
+        x => $timeline_pos->{x} + $size->{width} * $i + ($size->{width} / 2),
+        y => $timeline_pos->{y},
+        };
+
+      push @try_positions,
+        {
+        x => $timeline_pos->{x} - $size->{width} * $i + ($size->{width} / 2),
+        y => $timeline_pos->{y},
+        };
+
+      push @try_positions,
+        {
+        x => $timeline_pos->{x} - $size->{width} * $i,
+        y => $timeline_pos->{y} - $size->{height} * $i * 2,
+        };
+
+      push @try_positions,
+        {
+        x => $timeline_pos->{x} + $size->{width} * int($i / 2),
+        y => $timeline_pos->{y} - $size->{height} * 3 * $i,
         };
 
     }
@@ -483,6 +565,8 @@ s/<text ([^>]+) font-family="[^"]+" font-size="[^"]+">/<text $1 class="spectrum-
   }
 
   method _is_position_clear($event, $size, $pos) {
+    my $PAD = 2;
+
     return 0 unless $pos->{y} >= 0;
     return 0 unless $pos->{x} >= 1;
 
@@ -495,10 +579,10 @@ s/<text ([^>]+) font-family="[^"]+" font-size="[^"]+">/<text $1 class="spectrum-
     my $numCats    = scalar @catNames;
     my $leftGutter = ($numCats + 1) * 10;
 
-    return 0 if $corner_x <= $leftGutter;
-    return 0 if $corner_x + $size->{width} >= $xmax;
-    return 0 if $corner_y < 3;
-    return 0 if $corner_y + $size->{height} >= $ymax + $detail_height;
+    return 0 if $corner_x <= $leftGutter + $PAD;
+    return 0 if $corner_x + $size->{width} >= $xmax - $PAD;
+    return 0 if $corner_y < 3 + $PAD;
+    return 0 if $corner_y + $size->{height} >= $ymax + $detail_height - $PAD;
 
     # Collision detection using CENTER coordinates
     foreach my $used ($used_positions->@*) {
@@ -510,11 +594,11 @@ s/<text ([^>]+) font-family="[^"]+" font-size="[^"]+">/<text $1 class="spectrum-
       my $x_distance = abs($pos->{x} - $used->{x});
       my $y_distance = abs($pos->{y} - $used->{y});
 
-      # Boxes overlap if center distance < sum of half-widths/half-heights
-      my $min_x_distance = ($size->{width} + $used->{width}) / 2;
-      my $min_y_distance = ($size->{height} + $used->{height}) / 2;
+      # Require at least PAD px extra beyond just touching
+      my $min_x_distance = ($size->{width} + $used->{width}) / 2 + $PAD;
+      my $min_y_distance = ($size->{height} + $used->{height}) / 2 + $PAD;
 
-      if ($x_distance < $min_x_distance && $y_distance < $min_y_distance) {
+      if ($x_distance <= $min_x_distance && $y_distance <= $min_y_distance) {
         return 0;    # overlap detected
       }
 

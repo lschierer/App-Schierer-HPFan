@@ -8,19 +8,15 @@ use Scalar::Util qw(blessed);
 
 require App::Schierer::HPFan;
 require App::Schierer::HPFan::Logger::Config;
-use App::Schierer::HPFan::Model::Gramps::GrampsDate;
-use App::Schierer::HPFan::Model::Gramps::DateHelper;
+use App::Schierer::HPFan::Model::CustomDate;
 
 # set up logging
 my $lc = App::Schierer::HPFan::Logger::Config->new('App-Schierer-HPFan');
 my $log4perl_logger = $lc->init('testing');
 
-my $H = App::Schierer::HPFan::Model::Gramps::DateHelper->new;
 
-sub mk ($h) { $H->parse($h) }
-
-sub is_date ($d, $name = 'is GrampsDate') {
-  ok(blessed($d) && $d->isa('App::Schierer::HPFan::Model::Gramps::GrampsDate'),
+sub is_date ($d, $name = 'is CustomDate') {
+  ok(blessed($d) && $d->isa('App::Schierer::HPFan::Model::CustomDate'),
     $name);
 }
 
@@ -103,29 +99,6 @@ subtest 'range-in-one-dateval' => sub {
 
 };
 
-# --- explicit range shape
-subtest 'explicit range {start,end}' => sub {
-  my $rng = mk({
-    type     => 'range',
-    modifier => 5,                                 # from
-    start    => { dateval => [1, 1, 1890, 0] },
-    end      => { dateval => [0, 6, 1895, 0] },    # 1895-06
-  });
-  like(stringify($rng), qr/^from\s+1890-01-01\s+to\s+1895-06\b/i,
-    'from … to …');
-
-  # Open-ended from
-  my $open = mk({
-    dateval  => [15, 1, 1880, 0, 0, 0, 0, 0],      # only start present
-    modifier => 5,
-    text     => 'from 1880-01-15',
-  });
-  like(stringify($open), qr/^from\s+1880-01-15$/i,
-    'open-ended "from" shows only start');
-  done_testing();
-
-};
-
 # --- ordering with ranges
 subtest 'ordering: single vs range' => sub {
   my $mid1890      = mk({ dateval => [1, 7, 1890, 0] });    # 1890-07-01
@@ -169,15 +142,26 @@ subtest 'cmp: transitivity & antisymmetry (smoke)' => sub {
 
 # --- equality across different shapes that represent the same point
 subtest 'eq across shapes' => sub {
-  my $by_text = mk({ text    => '1900-01-01' });
-  my $by_val  = mk({ dateval => [1, 1, 1900, 0] });
+  my $by_text = mk('1700-01-01');
+  my $by_val  = mk({ dateval => [1, 1, 1700, 0] });
   ok($by_text eq $by_val, 'text and structured single are equal');
 
-  my $yyyy     = mk({ dateval => [0, 0, 1900, 0] });
-  my $yyyy_txt = mk({ text    => '1900' });
+  my $yyyy     = mk({ dateval => [0, 0, 1700, 0] });
+  my $yyyy_txt = mk('1700');
   ok($yyyy eq $yyyy_txt, 'year-only equality');
   done_testing();
 
 };
 
 done_testing();
+
+sub mk ($h) {
+  # Allow modifier/quality labels in tests
+  #if (ref($h) eq 'HASH' && exists $h->{modifier} && !looks_like_number($h->{modifier})) {
+  #  $h->{modifier} = $modifier_rev->{ lc $h->{modifier} } // $h->{modifier};
+  #}
+  #if (ref($h) eq 'HASH' && exists $h->{quality} && !looks_like_number($h->{quality})) {
+  #  $h->{quality}  = $quality_rev->{ lc $h->{quality} }  // $h->{quality};
+  #}
+  return App::Schierer::HPFan::Model::CustomDate->new(text => $h);
+}

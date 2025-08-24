@@ -13,6 +13,7 @@ iconify-icon {
 
 /* structure */
 .timeline-card svg {
+  margin-top: 3px;
   display: block;
   width: 100%;
   height: auto;
@@ -21,6 +22,13 @@ iconify-icon {
   --mod-heading-margin-end: 0;
   --mod-heading-margin-start: 0;
   --mod-heading-serif-font-family: "EB Garamond", serif;
+  --gb: var(--spectrum-blue-600);
+  --ireland: var(--spectrum-green-600);
+  --magical: var(--spectrum-fuchsia-600);
+  --religious: var(--spectrum-orange-600);
+  --scotland: var(--spectrum-cyan-600);
+  --england: var(--spectrum-red-900);
+  --generic: var(--spectrum-brown-800);
 }
 
 div.timeline-card svg .spectrum-Heading--sizeM,
@@ -85,55 +93,45 @@ iconify-icon.color-male {
 }
 
 /* category based styling */
-.mundane.england {
-  background-color: transparent;
-  background-image: linear-gradient(
-    175deg,
-    var(--spectrum-gray-200) 15%,
-    var(--spectrum-red-200) 90%
-  );
+
+.england {
+  --category-color: var(--england);
 }
 
-.mundane.scotland {
-  background-color: transparent;
-  background-image: linear-gradient(
-    175deg,
-    var(--spectrum-gray-200) 15%,
-    var(--spectrum-blue-200) 90%
-  );
+.scotland {
+  --category-color: var(--scotland);
 }
 
-.mundane.ireland {
-  background-color: transparent;
-  background-image: linear-gradient(
-    175deg,
-    var(--spectrum-gray-200) 15%,
-    var(--spectrum-green-200) 90%
-  );
+.gb {
+  --category-color: var(--gb);
 }
 
-.mundane.gb {
-  background-image: linear-gradient(
-    175deg,
-    var(--spectrum-gray-200) 15%,
-    var(--spectrum-red-200),
-    var(--spectrum-blue-200)
-  );
+.ireland {
+  --category-color: var(--ireland);
 }
 
 .magical {
-  --category-color: var(--spectrum-purple-600);
+  --category-color: var(--magical);
 }
 
 .religious {
-  --category-color: var(--spectrum-orange-200);
+  --category-color: var(--religious);
 }
 
 .generic {
-  --category-color: var(--text-1);
+  --category-color: var(--generic);
+}
+
+.mundane:not(.england, .scotland, .ireland, .gb, .religious) {
+  --category-color: var(--generic);
 }
 
 /* defaults */
+
+line,
+circle {
+  stroke: var(--category-color);
+}
 
 .edge {
   stroke-width: 2;
@@ -149,6 +147,16 @@ iconify-icon.color-male {
   fill: none;
   stroke-width: 2;
   stroke: var(--category-color);
+}
+
+.node rect {
+  fill: var(--category-color);
+  fill-opacity: 0.1;
+}
+
+.node.enland rect {
+  fill: url("#grad_scotland-45");
+  fill-opacity: 0.1;
 }
 
 .timeline.node-label {

@@ -48,6 +48,35 @@ class App::Schierer::HPFan::Model::Gramps::Generic :
     return 0;
   }
 
+  method date {
+    my $hash = JSON::PP->new->decode($self->json_data);
+    my $d    = $hash->{'date'} if exists $hash->{'date'};
+    my $r;
+    if (defined $d && exists $d->{dateval} && $d->{dateval}->[2] > 0) {
+
+      my $f = App::Schierer::HPFan::Model::CustomDate->new(text => $d);
+      if ($f->year == 9999) {
+        $self->logger->error(sprintf(
+          'invalid date %s detected for event %s',
+          Data::Printer::np($d, multiline => 0),
+          $self->gramps_id
+        ));
+      }
+      $r = $f;
+      $r->set_qualifiers($d->{quality}) if exists $d->{quality};
+      $r->set_modifiers($d->{modifier}) if exists $d->{modifier};
+
+      return $r;
+    }
+    else {
+      $self->logger->error(sprintf(
+        'no dateval for event %s, hash is %s',
+        $self->gramps_id, Data::Printer::np($d)
+      ));
+    }
+    return undef;
+  }
+
   method json_data {
     if (exists $self->ALLOWED_FIELD_NAMES->{'json_data'}) {
       if ($self->ALLOWED_FIELD_NAMES->{'json_data'}) {

@@ -15,7 +15,6 @@ require App::Schierer::HPFan::Model::Gramps::Note;
 require App::Schierer::HPFan::Model::Gramps::Repository;
 require App::Schierer::HPFan::Model::Gramps::Source;
 require App::Schierer::HPFan::Model::Gramps::Surname;
-require App::Schierer::HPFan::Model::Gramps::DateHelper;
 require App::Schierer::HPFan::Model::Gramps::Person;
 require App::Schierer::HPFan::Model::Gramps::Tag;
 
@@ -38,8 +37,6 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
   field $sources      : reader = {};
   field $notes        : reader = {};
   field $repositories : reader = {};
-  field $date_parser  : reader =
-    App::Schierer::HPFan::Model::Gramps::DateHelper->new();
 
   #derived fields
   field $people_by_event : reader = {};
@@ -186,7 +183,6 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
       push @pe, $event if ($event);
     }
     $self->logger->debug("retrieved list " . Data::Printer::np(@pe));
-    my $date_helper = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
 
     # Sort events by date
     my @sorted_events = sort @pe;
@@ -227,25 +223,6 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
       $spouse = $people->{ $family->father_handle };
     }
     return $spouse;
-  }
-
-  # Helper method to extract a sortable date from parsed date data
-  method _get_sort_date($parsed_date) {
-    return '' unless $parsed_date;
-
-    if ($parsed_date->{type} eq 'single' && $parsed_date->{date}) {
-      return $parsed_date->{date};
-    }
-    elsif ($parsed_date->{type} eq 'range' || $parsed_date->{type} eq 'span') {
-      # Use start date for ranges/spans
-      return $parsed_date->{start_date} || '';
-    }
-    elsif ($parsed_date->{type} eq 'string') {
-      # String dates go after parsed dates but before undefined
-      return 'zzz_' . $parsed_date->{date_string};
-    }
-
-    return '';
   }
 
   method compare_by_birth_date($person_a, $person_b) {
@@ -383,7 +360,6 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
       $citations->{$handle}->set_dbh($dbh);
       $citations->{$handle}->parse_json_data;
     }
-    my $d = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
     $self->logger->info(
       sprintf('imported %s citations.', scalar keys %{$citations}));
   }

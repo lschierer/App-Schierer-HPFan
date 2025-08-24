@@ -63,9 +63,10 @@ class App::Schierer::HPFan::Model::History::Gramps :
     $self->logger->debug(
       sprintf('event %s has type "%s"', $event->gramps_id, $event->type));
 
-    unless (defined($event->date->as_dm_date) or $event->date->is_range) {
+    unless (defined($event->date)
+      && (defined($event->date->year) or $event->date->is_range)) {
       $self->logger->debug(
-        sprintf('skipping event %s, cannot get dm_date.', $event->gramps_id,));
+        sprintf('skipping event %s, cannot get year.', $event->gramps_id,));
       return;
     }
     if ($event->date->is_range) {
@@ -100,11 +101,11 @@ class App::Schierer::HPFan::Model::History::Gramps :
 
       # handle date
       my @dklparts;
-      push @dklparts, $e->date->quality_label
-        if (defined $e->date->quality_label && length($e->date->quality_label));
-      push @dklparts, $e->date->modifier_label
-        if (defined $e->date->modifier_label
-        && length($e->date->modifier_label));
+      push @dklparts, $e->date->qualifiers
+        if (defined $e->date->qualifiers && length($e->date->qualifiers));
+      push @dklparts, $e->date->modifiers
+        if (defined $e->date->modifiers
+        && length($e->date->modifiers));
 
       # set up description
       push @description, $e->description
@@ -117,9 +118,8 @@ class App::Schierer::HPFan::Model::History::Gramps :
         App::Schierer::HPFan::Model::History::Event->new(
         id       => $e->gramps_id,
         blurb    => sprintf('Birth of %s', $person->display_name()),
-        date_iso => (not $e->date->is_range)
-        ? $e->date->as_dm_date->printf('%Y-%m-%d')
-        : sprintf('%s - %s', $e->date->start, $e->date->end),
+        date_iso => (not $e->date->is_range) ? $e->date->toISO
+        : sprintf('%s - %s', $e->date->start->toISO, $e->date->end->toISO),
         date_kind => scalar @dklparts ? sprintf('(%s)', join(' ', @dklparts),)
         : '',
         description => $mv->format_string(
@@ -150,11 +150,11 @@ class App::Schierer::HPFan::Model::History::Gramps :
 
       # set up date
       my @dklparts;
-      push @dklparts, $e->date->quality_label
-        if (defined $e->date->quality_label && length($e->date->quality_label));
-      push @dklparts, $e->date->modifier_label
-        if (defined $e->date->modifier_label
-        && length($e->date->modifier_label));
+      push @dklparts, $e->date->qualifiers
+        if (defined $e->date->qualifiers && length($e->date->qualifiers));
+      push @dklparts, $e->date->modifiers
+        if (defined $e->date->modifiers
+        && length($e->date->modifiers));
 
       # set up description
       push @description,
@@ -177,9 +177,8 @@ class App::Schierer::HPFan::Model::History::Gramps :
         type        => 'Death',
         event_class => 'magical',
         blurb       => sprintf('Death of %s', $person->display_name()),
-        date_iso    => (not $e->date->is_range)
-        ? $e->date->as_dm_date->printf('%Y-%m-%d')
-        : sprintf('%s - %s', $e->date->start, $e->date->end),
+        date_iso    => (not $e->date->is_range) ? $e->date->toISO
+        : sprintf('%s - %s', $e->date->start->toISO, $e->date->end->toISO),
         date_kind => scalar @dklparts ? sprintf('(%s)', join(' ', @dklparts),)
         : '',
         sortval     => $e->date->sortval,

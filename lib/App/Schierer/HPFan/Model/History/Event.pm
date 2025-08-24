@@ -11,7 +11,7 @@ class App::Schierer::HPFan::Model::History::Event
   : isa(App::Schierer::HPFan::Logger) {
   use Carp;
   use Readonly;
-  use Date::Calc qw(Date_to_Days);
+  use Date::Calc   qw(Date_to_Days);
   use Scalar::Util qw(blessed);
   use overload
     'cmp'      => \&_op_cmp,
@@ -30,10 +30,13 @@ class App::Schierer::HPFan::Model::History::Event
   field $origin : param : reader //= undef;    # 'gramps' | 'yaml'
   field $type   : param : reader //=
     undef;    # free text like "Birth" | "Battle" | ...
-  field $blurb    : param : reader;              # 1 line teaser
+  field $blurb : param : reader;                 # 1 line teaser
   field $date_iso : param : reader //= undef;    # "YYYY[-MM[-DD]]" (partial ok)
-  field $raw_date : param : reader //= undef
-    ; # GrampsDate or Date::Manip::Date (the latter when this was created by ::Model::History::Yaml)
+
+# GrampsDate or Date::Calc (the latter when this was created by ::Model::History::Yaml)
+  field $raw_date : param : reader //= undef;
+
+  # the categories
   field $event_class : param : reader //= 'generic';
 
   field $date_kind : param : reader //= undef;
@@ -71,10 +74,14 @@ class App::Schierer::HPFan::Model::History::Event
       if ($datetype eq 'Scalar') {
         $r = sprintf('%s %s', $r, defined($date_iso) ? $date_iso : $sortval);
       }
+      elsif ($datetype eq 'Date::Calc') {
+        $r = sprintf('%s-%s-%s', $raw_date->year, $raw_date->month,
+          $raw_date->day);
+      }
       elsif ($datetype eq 'Date::Manip::Date') {
         $r = sprintf('%s %s', $r, $raw_date->printf('%Y-%m-%d'));
       }
-      elsif ($datetype eq 'App::Schierer::HPFan::Model::Gramps::GrampsDate') {
+      elsif ($datetype eq 'App::Schierer::HPFan::Model::CustomDate') {
         $r = $raw_date->to_string;
       }
     }
@@ -166,7 +173,7 @@ class App::Schierer::HPFan::Model::History::Event
     return 9**9 unless defined $rhs;
     return $rhs +0 if Scalar::Util::looks_like_number($rhs);
 
-    if(blessed($rhs) && $rhs->isa('Date::Calc')){
+    if (blessed($rhs) && $rhs->isa('Date::Calc')) {
       return 0+ Date_to_Days($rhs->date());
     }
 

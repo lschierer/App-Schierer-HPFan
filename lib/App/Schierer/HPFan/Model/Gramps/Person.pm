@@ -9,7 +9,6 @@ class App::Schierer::HPFan::Model::Gramps::Person :
   use Carp;
   use List::AllUtils qw( any );
   use App::Schierer::HPFan::Model::Gramps::Name;
-  use App::Schierer::HPFan::Model::Gramps::DateHelper;
 
   field $given_name      //= undef;
   field $surname         //= undef;

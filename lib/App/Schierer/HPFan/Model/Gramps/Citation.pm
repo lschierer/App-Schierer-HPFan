@@ -1,18 +1,15 @@
 use v5.42;
 use utf8::all;
 use experimental qw(class);
-require Date::Manip;
-require App::Schierer::HPFan::Model::Gramps::DateHelper;
 require App::Schierer::HPFan::Model::Gramps::Object::Reference;
 require App::Schierer::HPFan::Model::Gramps::Source::Reference;
-require App::Schierer::HPFan::Model::Gramps::DateHelper;
+require App::Schierer::HPFan::Model::CustomDate;
 
 class App::Schierer::HPFan::Model::Gramps::Citation :
   isa(App::Schierer::HPFan::Model::Gramps::Generic) {
   use List::AllUtils qw( any );
   use Carp;
 
-  field $dh = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
   ADJUST {
     my @desired = qw(
       handle  gramps_id   page  confidence  source_handle
@@ -46,13 +43,6 @@ class App::Schierer::HPFan::Model::Gramps::Citation :
       $self->logger->info("got hash " . Data::Printer::np($hash));
 
     }
-  }
-
-  method date {
-    my $hash = JSON::PP->new->decode($self->json_data);
-    my $d    = $dh->parse($hash->{'date'});
-    $self->logger->debug("found date " . Data::Printer::np($d));
-    return $d;
   }
 
 }

@@ -9,7 +9,6 @@ require App::Schierer::HPFan::Model::Gramps::Event::Type;
 class App::Schierer::HPFan::Model::Gramps::Event :
   isa(App::Schierer::HPFan::Model::Gramps::Generic) {
   use Carp;
-  use App::Schierer::HPFan::Model::Gramps::DateHelper;
   use List::AllUtils qw( any );
   use overload
     'cmp'      => \&_comparison,
@@ -23,8 +22,6 @@ class App::Schierer::HPFan::Model::Gramps::Event :
   field $cause     : reader = undef;
   field $attributes = [];               # unused, for future growth
   field $obj_refs   = [];
-
-  field $dh = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
 
   ADJUST {
     my @desired = qw( gramps_id description place change  private json_data);
@@ -79,13 +76,6 @@ class App::Schierer::HPFan::Model::Gramps::Event :
     return [$items->@*];
   }
 
-  method date {
-    my $hash = JSON::PP->new->decode($self->json_data);
-    my $d    = $dh->parse($hash->{'date'});
-    $self->logger->debug("found date " . Data::Printer::np($d));
-    return $d;
-  }
-
   method type {
     my $hash = JSON::PP->new->decode($self->json_data);
     my $type =
@@ -115,7 +105,7 @@ class App::Schierer::HPFan::Model::Gramps::Event :
     my $hr = $self->SUPER::to_hash;
     $hr->{id}          = $self->gramps_id;
     $hr->{type}        = $self->type;
-    $hr->{date}        = $self->date->to_string;
+    $hr->{date}        = $self->date;
     $hr->{place_ref}   = $place_ref;
     $hr->{cause}       = $cause;
     $hr->{description} = $self->description;

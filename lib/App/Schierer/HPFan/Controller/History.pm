@@ -49,14 +49,15 @@ package App::Schierer::HPFan::Controller::History {
       my $ye = App::Schierer::HPFan::Model::History::YAML->new(
         SourceDir => $app->config('distDir')->child('history'));
       $ye->process();
-      push @{ $timeline_cache->{events}}, $ye->events->@*;
+      push @{ $timeline_cache->{events} }, $ye->events->@*;
 
       my $ge = App::Schierer::HPFan::Model::History::Gramps->new(
         gramps => $app->gramps);
       $ge->process();
+      push @{ $timeline_cache->{events} }, $ge->events->@*;
 
-      push @{ $timeline_cache->{events}}, $ge->events->@*;
-      $timeline_cache->{built}  = 1;
+      #both are now done.
+      $timeline_cache->{built} = 1;
 
       $logger->info(
         sprintf 'History timeline built: %d items',

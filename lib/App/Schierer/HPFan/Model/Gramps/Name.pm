@@ -1,7 +1,6 @@
 use v5.42;
 use utf8::all;
 use experimental qw(class);
-require App::Schierer::HPFan::Model::Gramps::DateHelper;
 require App::Schierer::HPFan::Model::Gramps::Surname;
 
 class App::Schierer::HPFan::Model::Gramps::Name :
@@ -32,7 +31,6 @@ class App::Schierer::HPFan::Model::Gramps::Name :
   field $type         : reader : param = "Birth Name";
   field $alt          : writer : reader;
 
-  field $dh = App::Schierer::HPFan::Model::Gramps::DateHelper->new();
   field @surnames;
 
   ADJUST {
