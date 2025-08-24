@@ -30,8 +30,8 @@ class App::Schierer::HPFan::Model::History::Event
   field $origin : param : reader //= undef;    # 'gramps' | 'yaml'
   field $type   : param : reader //=
     undef;    # free text like "Birth" | "Battle" | ...
-  field $blurb : param : reader;                 # 1 line teaser
-  field $date   : writer  : reader //= undef;
+  field $blurb : param : reader;    # 1 line teaser
+  field $date : writer : reader //= undef;
 
   # the categories
   field $event_class : param : reader //= 'generic';
@@ -58,16 +58,15 @@ class App::Schierer::HPFan::Model::History::Event
     $kind_sort_order = \%temp;
   }
 
-
   method to_hash {
     my $r = {};
-    $r->{id}          = $id          unless not defined $id;
-    $r->{origin}      = $origin      unless not defined $origin;
-    $r->{type}        = $type        unless not defined $type;
-    $r->{blurb}       = $blurb       unless not defined $blurb;
+    $r->{id}          = $id              unless not defined $id;
+    $r->{origin}      = $origin          unless not defined $origin;
+    $r->{type}        = $type            unless not defined $type;
+    $r->{blurb}       = $blurb           unless not defined $blurb;
     $r->{date}        = $date->to_string unless not defined $date;
-    $r->{sortval}     = $sortval     unless not defined $sortval;
-    $r->{description} = $description unless not defined $description;
+    $r->{sortval}     = $sortval         unless not defined $sortval;
+    $r->{description} = $description     unless not defined $description;
     $r->{sources}     = [$sources->@*];
     return $r;
   }
@@ -83,13 +82,13 @@ class App::Schierer::HPFan::Model::History::Event
   method to_string {
     my @parts;
 
-    push @parts, $id          unless not defined $id;
-    push @parts, $origin      unless not defined $origin;
-    push @parts, $type        unless not defined $type;
-    push @parts, $blurb       unless not defined $blurb;
+    push @parts, $id              unless not defined $id;
+    push @parts, $origin          unless not defined $origin;
+    push @parts, $type            unless not defined $type;
+    push @parts, $blurb           unless not defined $blurb;
     push @parts, $date->to_string unless not defined $date;
-    push @parts, $sortval     unless not defined $sortval;
-    push @parts, $description unless not defined $description;
+    push @parts, $sortval         unless not defined $sortval;
+    push @parts, $description     unless not defined $description;
     push @parts, $sources->@*;
 
     return join '; ', @parts;

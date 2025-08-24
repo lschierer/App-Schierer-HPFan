@@ -34,7 +34,7 @@ class App::Schierer::HPFan::Model::History::YAML :
     my @out = sort {
            ($a->sortval // 0) <=> ($b->sortval // 0)
         || ($a->date->toISO // '') cmp($b->date->toISO // '')
-        || ($a->id       // '') cmp($b->id       // '')
+        || ($a->id // '') cmp($b->id // '')
     } values $events->%*;
     $self->logger->debug(sprintf(
       '%s is returning %s events.', ref($self), scalar @out));
@@ -112,8 +112,8 @@ class App::Schierer::HPFan::Model::History::YAML :
 
     my $id = sprintf('%s-%s', $file->basename(qr/\.ya?ml$/), $index);
     $events->{$id} = App::Schierer::HPFan::Model::History::Event->new(
-      id       => $id,
-      blurb    => $object->{blurb},
+      id          => $id,
+      blurb       => $object->{blurb},
       sortval     => $sortval,
       event_class => join(' ', @types),
     );

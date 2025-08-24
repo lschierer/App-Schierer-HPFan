@@ -20,6 +20,7 @@ my $build = Module::Build->new(
     'DBD::SQLite'                    => '0',
     'DBI'                            => '0',
     'Encode'                         => '0',
+    'Exporter'                       => '0',
     'File::FindLib'                  => '0',
     'File::HomeDir'                  => '0',
     'File::Share'                    => '0',

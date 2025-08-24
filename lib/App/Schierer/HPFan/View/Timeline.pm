@@ -4,6 +4,7 @@ use experimental qw(class);
 #require App::Schierer::HPFan::Model::History::Event;
 require Scalar::Util;
 require HTML::Strip;
+require App::Schierer::HPFan::View::Timeline::PositionHelpers;
 
 class App::Schierer::HPFan::View::Timeline
   : isa(App::Schierer::HPFan::Logger) {
@@ -15,6 +16,8 @@ class App::Schierer::HPFan::View::Timeline
   use Math::Trig ':pi';
   use POSIX qw(ceil);
   use Carp;
+  use App::Schierer::HPFan::View::Timeline::Utilities
+    qw(get_category_for_event);
 
   field $name : param //= 'Timeline';
 
@@ -40,10 +43,6 @@ class App::Schierer::HPFan::View::Timeline
   field $fr_scaling_factor = 2;
   ## for collision avoidance
 
-  # hash at distance radius,
-  # each containing an array of { x => $x, y => $y, radius => $r }
-  field $used_positions = [];
-
   # these are constants
   field $detail_distance;
   field $detail_width;
@@ -57,6 +56,13 @@ class App::Schierer::HPFan::View::Timeline
   field $text_group;
   field $category_groups = {};
 
+  field $rails = {};
+
+  field $ph = App::Schierer::HPFan::View::Timeline::PositionHelpers->new(
+    detail_width  => $detail_width,
+    detail_height => $detail_height,
+  );
+
   method viewheight {
     max($ymax * ($fr_scaling_factor + 0.6), $ymax + $detail_height,);
   }
@@ -66,6 +72,7 @@ class App::Schierer::HPFan::View::Timeline
 
     Readonly::Scalar my $stw => 120;
     $detail_width = $stw;
+    $ph->set_detail_width($detail_width);
 
     #  # base distance from timeline dot
     Readonly::Scalar my $st1 => $detail_width * 3 / 4;
@@ -79,6 +86,15 @@ class App::Schierer::HPFan::View::Timeline
     Readonly::Scalar my $sth =>
       int(($self->viewheight / (scalar($events->@*) * 4)));
     $detail_height = $sth;
+    $ph->set_props(
+      detail_width  => $detail_width,
+      detail_height => $detail_height,
+      categories    => $categories,
+      min_date      => $min_date,
+      max_date      => $max_date,
+      ymax          => $ymax,
+      xmax          => $xmax,
+    );
     $self->logger->info(sprintf(
       'based on %s events and %s viewheight, detail_height is %s',
       scalar($events->@*), $self->viewheight, $detail_height
@@ -105,30 +121,48 @@ class App::Schierer::HPFan::View::Timeline
 
   method create {
     $self->_organize_events_by_category_and_date();
+    $ph->set_events($events);
     $self->_create_detail_nodes_and_connections();
+    $ph->relaxer;
+    $self->_draw_all_detail_boxes_from_boxes();
 
     return $self->_process_svg_output();
   }
 
-  method get_category_for_event( $event ) {
-    my $category = $event->event_class // 'generic';
-    my @parts    = grep {length} split /\s+/, ($event->event_class // '');
-    if (scalar @parts) {
-      @parts = grep { $_ !~ /mundane/i } @parts;
-      if (scalar @parts) {
-        @parts    = sort @parts;
-        $category = 'generic';
-        if ($parts[0] =~ /england/i) {
-          if ($#parts >= 1 && $parts[1] =~ /scotland/i) {
-            $category = 'gb';
-          }
+  method _draw_all_detail_boxes_from_boxes {
+    for my $cat (sort keys $ph->boxes->%*) {
+      my $lane = $ph->boxes->{$cat};
+
+      for my $pos (@$lane) {
+        my $id = $pos->{id};
+        if (not defined($id)) {
+          $self->logger->error(
+            'no id in pos: ' . Data::Printer::np($pos, multiline => 0));
+          next;
         }
-        if ($category eq 'generic' && scalar(@parts)) {
-          $category = join(' ', @parts);
+        my $event = $ph->event_by_id->{$id};
+        unless ($event) {
+          $self->logger->warn("No event found for id=$id; skipping draw");
+          next;
         }
+        my $category      = $pos->{category};
+        my $sv            = $event->sortval;
+        my $dot_node_name = "dot_${category}_${sv}";
+        my $rail_node     = $rails->{$category}->{$dot_node_name};
+        $self->logger->debug(sprintf('rail node %s %s is %s',
+        $category, $sv,
+        Data::Printer::np($rail_node, multiline => 0)));
+        if(not defined $rail_node, or not defined $rail_node->{x}){
+          $self->logger->error(sprintf('rail node for %s %s is missing or invalid: %s',
+          $category, $sv, Data::Printer::np($rail_node, multiline => 0))
+          );
+          next;
+        }
+
+        # draw the box content
+        $self->_create_detail_node_for_event($event, $pos, $rail_node);
       }
     }
-    return $category;
   }
 
   method _organize_events_by_category_and_date {
@@ -139,9 +173,11 @@ class App::Schierer::HPFan::View::Timeline
         next;
       }
 
-      my $category = $self->get_category_for_event($event);
-      $self->logger->debug(sprintf('computed category %s from event id %s cat string %s.',
-      $category, $event->id, $event->event_class));
+      my $category = get_category_for_event($self, $event, $self->logger);
+      $self->logger->debug(sprintf(
+        'computed category %s from event id %s cat string %s.',
+        $category, $event->id, $event->event_class
+      ));
 
       my $date = $event->sortval;
       # set the base y cordinate to the minimum Julian Date
@@ -150,16 +186,16 @@ class App::Schierer::HPFan::View::Timeline
 
       push @{ $categories->{$category}->{$date} }, $event;
     }
-    foreach my $category (keys $categories->%*) {
+    foreach my $category (sort keys $categories->%*) {
       my $layer_name = $category =~ s/ /-/r;
       $layer_name = "${layer_name}-layer";
       $self->logger->debug(
         "layer for category '$category' layer name '$layer_name'");
 
-      $category_groups->{$category} =
-        $nodes_group->group(
-          id => "$layer_name",
-          class => "timeline nodes ${category}");
+      $category_groups->{$category} = $nodes_group->group(
+        id    => "$layer_name",
+        class => "timeline nodes ${category}"
+      );
     }
     $vfr = $ymax / scalar @$events;    # fractional unit based on event count
     $self->logger->debug("vfr is $vfr");
@@ -168,22 +204,32 @@ class App::Schierer::HPFan::View::Timeline
   method _create_detail_nodes_and_connections {
     my @sortedEvents = sort {
       my $svc = $a->sortval <=> $b->sortval;
-      if($svc == 0) {
-        return $a->date cmp $b->date
-      } return $svc;
+      if ($svc == 0) {
+        return $a->date cmp $b->date;
+      }
+      return $svc;
     } grep {
       Scalar::Util::reftype($_) eq 'OBJECT'
-      && $_->isa('App::Schierer::HPFan::Model::History::Event')
+        && $_->isa('App::Schierer::HPFan::Model::History::Event')
     } $events->@*;
 
     my $previous_pos;
     foreach my $event (@sortedEvents) {
-      my $category = $self->get_category_for_event($event);
-      my $sv = $event->sortval;
+      my $category      = get_category_for_event($self, $event, $self->logger);
+      my $sv            = $event->sortval;
       my $dot_node_name = "dot_${category}_${sv}";
       my $pos;
-      if(! exists $nodes_by_sortval->{$sv}->{$dot_node_name}) {
-        $pos = $self->_get_normalized_position($category, $sv);
+      if (!exists $nodes_by_sortval->{$sv}->{$dot_node_name}) {
+        $ph->set_props(
+          detail_width  => $detail_width,
+          detail_height => $detail_height,
+          categories    => $categories,
+          min_date      => $min_date,
+          max_date      => $max_date,
+          ymax          => $ymax,
+          xmax          => $xmax,
+        );
+        $pos = $ph->_get_normalized_position($ymax, $category, $sv);
         # y cordinates go down from upper left corner
         # 3 is the minumum spot at which we can draw a node circle.
         my $miny =
@@ -196,7 +242,12 @@ class App::Schierer::HPFan::View::Timeline
           $pos->{y} = $miny;
         }
 
-        my $nc = $category_groups->{$category}->circle(
+        my $lane_group = $category_groups->{$category};
+        if (not defined $lane_group) {
+          $self->logger->error(sprintf(
+            'lane group not defined for category %s', $category));
+        }
+        my $nc = $lane_group->circle(
           cx    => $pos->{x},
           cy    => $pos->{y},
           r     => 3,
@@ -214,126 +265,44 @@ class App::Schierer::HPFan::View::Timeline
             class => "timeline edge $category",
           );
         }
-
-        $previous_pos->{$category} = $pos;
+        $pos->{id}                                 = $dot_node_name;
+        $pos->{type}                               = 'node';
+        $previous_pos->{$category}                 = $pos;
         $nodes_by_sortval->{$sv}->{$dot_node_name} = $pos;
+        $rails->{$category}->{$dot_node_name}      = $pos;
       }
       # if we by-pass the if block, we need to know the $pos value
       $pos = $nodes_by_sortval->{$sv}->{$dot_node_name};
 
-      my $detail_pos = $self->_find_detail_position($event, $pos);
-      # Draw dashed line from timeline dot to detail box
-      # Draw the line to the corner, not the center.
-      $edges_group->line(
-        x1    => $pos->{x},
-        y1    => $pos->{y},
-        x2    => $detail_pos->{x} - $detail_pos->{width} / 2,
-        y2    => $detail_pos->{y} - $detail_pos->{height} / 2,
-        class => "timeline detail-edge $category",
+      $ph->set_props(
+        detail_width  => $detail_width,
+        detail_height => $detail_height,
+        categories    => $categories,
+        min_date      => $min_date,
+        max_date      => $max_date,
+        ymax          => $ymax,
+        xmax          => $xmax,
       );
-      $self->_create_detail_node_for_event($event, $detail_pos);
+      my $detail_pos = $ph->find_detail_position($event, $pos, $dot_node_name);
+      # Draw dashed line from timeline dot to detail box$categories,
+      # Draw the line to the corner, not the center.
 
     }
     $self->logger->trace("svg is currently " . $graph->xmlify);
   }
 
-  # event is undefined if it is a timeline dot node
-  method _get_normalized_position($category, $julian, $event = undef) {
-    my @catNames = keys $categories->%*;
-    my $catIndex = firstidx { $_ eq $category } @catNames;
+  method _create_detail_node_for_event ($event, $pos, $node_pos) {
 
-    my $xcord = 10 * ($catIndex + 1);
+    my $category = $pos->{category};
 
-    if (defined($event)) {
-      # Detail node spreading logic
-      my @events_on_date = @{ $categories->{$category}->{ $event->sortval } };
-      my $event_index    = firstidx { $_->id eq $event->id } @events_on_date;
-      my $num_events     = @events_on_date;
+    $edges_group->line(
+      x1    => $node_pos->{x},
+      y1    => $node_pos->{y},
+      x2    => $pos->{x} - $pos->{width} / 2,
+      y2    => $pos->{y} - $pos->{height} / 2,
+      class => "timeline detail-edge $category",
+    );
 
-      my $detail_start = $xcord + 50;
-      my $separation   = 100 / $num_events;
-
-      if ($num_events == 1) {
-        $xcord = int($detail_start + $separation);
-      }
-      else {
-        $xcord =
-          int($detail_start + abs((rand($event_index + 1) * $separation)));
-      }
-    }
-
-    my $date_span = $max_date - $min_date;
-    # INVERT: Subtract from max to flip the timeline
-    my $normalized_y = ($julian - $min_date) / ($max_date - $min_date) * $ymax;
-    return {
-      x => int($xcord),
-      y => int($normalized_y),
-    };
-  }
-
-  method _calc_height($event, $wide = 0) {
-    my $line_height              = 13;
-    my $chars_per_line           = 30;
-    my $date_chars_per_line      = 23;
-    my $wide_chars_per_line      = 40;
-    my $wide_date_chars_per_line = 33;
-    my $hs                       = HTML::Strip->new();
-    my $lines                    = 2;    # date + (blurb OR description) minimum
-
-    my $tc = $wide ? $wide_chars_per_line : $chars_per_line;
-    if (length($event->blurb) > $tc) {
-      # subtract one for the line already allocated
-      my $bl = ceil((length($event->blurb) / $tc) - 1);
-      $self->logger->debug("blurb adding $bl to lines for " . $event->id);
-      $lines += $bl unless ($bl < 0);
-    }
-
-    # date uses slightly larger text
-    my $dc = $wide ? $wide_date_chars_per_line : $date_chars_per_line;
-    if (length($event->date->to_string) > $dc) {
-      # subtract one for the line already allocated
-      my $dl = ceil((length($event->date->to_string) / $dc) - 1);
-      $self->logger->debug("date adding $dl to lines for " . $event->id);
-      $lines += $dl unless ($dl < 0);
-    }
-
-    # Count extra lines from content
-    if (defined($event->description)
-      && length($event->description)) {
-      my $text_only = $hs->parse($event->description);
-
-      my $dl = ceil((length($text_only) / $tc));
-      $self->logger->debug("description adding $dl to lines for " . $event->id);
-      $lines += $dl unless ($dl < 0);
-    }
-
-    my $sl = scalar @{ $event->sources };
-    $self->logger->debug("sources adding $sl to lines for " . $event->id);
-    $lines += $sl unless ($sl < 0);
-
-    my $height = max($detail_height, ($lines * $line_height));
-    return $height;
-
-  }
-
-  method _calculate_detail_dimensions($event) {
-    my $hs     = HTML::Strip->new();
-    my $width  = $detail_width;
-    my $height = $detail_height;
-
-    # Maybe wider boxes for long descriptions to reduce wrapping
-    if ($event->description && length($hs->parse($event->description)) > 50) {
-      $width += 40;
-      $height = $self->_calc_height($event, 1);
-    }
-    else {
-      $height = $self->_calc_height($event);
-    }
-
-    return { width => $width, height => $height };
-  }
-
-  method _create_detail_node_for_event ($event, $pos) {
     my $height = $pos->{height} // $detail_height;
     my $width  = $pos->{width}  // $detail_width;
     if (not defined($pos->{height}) or $pos->{height} < 3) {
@@ -468,170 +437,6 @@ s/<text ([^>]+) font-family="[^"]+" font-size="[^"]+">/<text $1 class="spectrum-
   }
 
   ##### positioning for details
-
-  method _find_detail_position($event, $timeline_pos) {
-    # Simple approach: try positions in a predictable spiral pattern
-    my $size = $self->_calculate_detail_dimensions($event);
-    my @try_positions;
-
-    my $gutter = 3;
-    for (my $i = 0; $i < 15; $i++) {
-      push @try_positions,
-        {
-        x        => $timeline_pos->{x} + $size->{width} * $i,
-        y        => $timeline_pos->{y},
-        distance => 350
-        };
-
-      push @try_positions,
-        {
-        x => $size->{width} * $i,
-        y => $size->{height} * $i,
-        };
-      push @try_positions,
-        {
-        x => $size->{width} + $timeline_pos->{x},
-        y => $size->{height} * $i + 10,
-        };
-
-      push @try_positions,
-        {
-        x => $size->{width} * $i + 10,
-        y => $size->{height} + $timeline_pos->{y},
-        };
-
-      push @try_positions,
-        {
-        x => $size->{width} * $i + $timeline_pos->{x},
-        y => $timeline_pos->{y} + $size->{height} * $i,
-        };
-
-      push @try_positions,
-        {
-        x => $size->{width} + $timeline_pos->{x},
-        y => $timeline_pos->{y} + $size->{height} * $i,
-        };
-
-      push @try_positions, {
-        x => $size->{width} * $i + $timeline_pos->{x},
-        y => $timeline_pos->{y} - $size->{height} * $i,    # negative Y
-      };
-
-      push @try_positions,
-        {
-        x => $size->{width} * $i + $timeline_pos->{x},
-        y => $timeline_pos->{y} - $size->{height} * $i,
-        };
-
-      push @try_positions,
-        {
-        x => $timeline_pos->{x} + $size->{width} * $i + ($size->{width} / 2),
-        y => $timeline_pos->{y},
-        };
-
-      push @try_positions,
-        {
-        x => $timeline_pos->{x} - $size->{width} * $i + ($size->{width} / 2),
-        y => $timeline_pos->{y},
-        };
-
-      push @try_positions,
-        {
-        x => $timeline_pos->{x} - $size->{width} * $i,
-        y => $timeline_pos->{y} - $size->{height} * $i * 2,
-        };
-
-      push @try_positions,
-        {
-        x => $timeline_pos->{x} + $size->{width} * int($i / 2),
-        y => $timeline_pos->{y} - $size->{height} * 3 * $i,
-        };
-
-    }
-
-    # Sort by distance from timeline position (closest first)
-    @try_positions = sort {
-      my $dist_a = sqrt(
-        ($a->{x} - $timeline_pos->{x})**2 + ($a->{y} - $timeline_pos->{y})**2);
-      my $dist_b = sqrt(
-        ($b->{x} - $timeline_pos->{x})**2 + ($b->{y} - $timeline_pos->{y})**2);
-      $dist_a <=> $dist_b;
-    } @try_positions;
-
-    foreach my $pos (@try_positions) {
-      if ($self->_is_position_clear($event, $size, $pos)) {
-        $self->logger->debug(sprintf(
-          '%s recieved true for pos %s %s',
-          $event->id, $pos->{x}, $pos->{y}
-        ));
-        # store the amount of space we used as well as the center of that space
-        $pos->{width}  = $size->{width};
-        $pos->{height} = $size->{height};
-        push @{$used_positions}, $pos;
-        return $pos;
-      }
-    }
-
-    # Fallback
-    my $fb = {
-      x      => $timeline_pos->{x} + 400,
-      y      => $timeline_pos->{y} + 10,
-      width  => $size->{width},
-      height => $size->{height},
-    };
-    push @{$used_positions}, $fb;
-    $self->logger->warn(sprintf(
-      'using fallback value for event %s: pos %s %s',
-      $event->id, $fb->{x}, $fb->{y}
-    ));
-    return $fb;
-  }
-
-  method _is_position_clear($event, $size, $pos) {
-    my $PAD = 2;
-
-    return 0 unless $pos->{y} >= 0;
-    return 0 unless $pos->{x} >= 1;
-
-    # Convert center to corner for boundary checking
-    my $corner_x = $pos->{x} - $size->{width} / 2;
-    my $corner_y = $pos->{y} - $size->{height} / 2;
-
-    # Boundary checks using corner coordinates
-    my @catNames   = keys $categories->%*;
-    my $numCats    = scalar @catNames;
-    my $leftGutter = ($numCats + 1) * 10;
-
-    return 0 if $corner_x <= $leftGutter + $PAD;
-    return 0 if $corner_x + $size->{width} >= $xmax - $PAD;
-    return 0 if $corner_y < 3 + $PAD;
-    return 0 if $corner_y + $size->{height} >= $ymax + $detail_height - $PAD;
-
-    # Collision detection using CENTER coordinates
-    foreach my $used ($used_positions->@*) {
-      if ($pos->{x} == $used->{x} && $pos->{y} == $used->{y}) {
-        return 0;    # exact match
-      }
-
-      # Center-to-center collision detection
-      my $x_distance = abs($pos->{x} - $used->{x});
-      my $y_distance = abs($pos->{y} - $used->{y});
-
-      # Require at least PAD px extra beyond just touching
-      my $min_x_distance = ($size->{width} + $used->{width}) / 2 + $PAD;
-      my $min_y_distance = ($size->{height} + $used->{height}) / 2 + $PAD;
-
-      if ($x_distance <= $min_x_distance && $y_distance <= $min_y_distance) {
-        return 0;    # overlap detected
-      }
-
-    }
-    $self->logger->debug(sprintf(
-      'no test case failed for event %s with pos %s %s',
-      $event->id, $pos->{x}, $pos->{y}
-    ));
-    return 1;    # position is clear
-  }
 
 }
 1;

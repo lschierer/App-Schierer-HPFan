@@ -67,12 +67,14 @@ class App::Schierer::HPFan::Model::CustomDate :
   }
 
   method modifiers {
-    return $modifier_enum->{$modifiers} if defined($modifiers) && exists $modifier_enum->{$modifiers};
+    return $modifier_enum->{$modifiers}
+      if defined($modifiers) && exists $modifier_enum->{$modifiers};
     return undef;
   }
 
   method qualifiers {
-    return $quality_enum->{$qualifiers} if defined($qualifiers) && exists $quality_enum->{$qualifiers};
+    return $quality_enum->{$qualifiers}
+      if defined($qualifiers) && exists $quality_enum->{$qualifiers};
     return undef;
   }
 
@@ -346,25 +348,26 @@ class App::Schierer::HPFan::Model::CustomDate :
   method _modifier_rank {
     # before < about < (none/exact) < between==from < after
     state %R = (
-      1   => 0,
-      3   => 1,
-      ''  => 2,
-      4   => 3,
-      2   => 4,
-      5   => 4,    # same bucket
+      1  => 0,
+      3  => 1,
+      '' => 2,
+      4  => 3,
+      2  => 4,
+      5  => 4,    # same bucket
     );
 
-    my $m = $modifier_rev->{$modifiers} if defined $modifiers && exists $modifier_rev->{$modifiers};
+    my $m = $modifier_rev->{$modifiers}
+      if defined $modifiers && exists $modifier_rev->{$modifiers};
     $m = 2 if not defined $m;
     $m = lc($m);
     $m =~ s/^\s+|\s+$//g;
     my $rank = exists $R{$m} ? $R{$m} : 2;    # unknown -> neutral “exact”
     $self->logger->debug(sprintf(
       'modifiers: %s reved: %s rank %s',
-      defined($modifiers)? $modifiers : 'undef',
+      defined($modifiers) ? $modifiers : 'undef',
       $m, $rank
-      ));
-      return $rank;
+    ));
+    return $rank;
 
   }
 

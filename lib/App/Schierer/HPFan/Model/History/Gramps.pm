@@ -31,7 +31,7 @@ class App::Schierer::HPFan::Model::History::Gramps :
     my @out = sort {
            ($a->sortval // 0) <=> ($b->sortval // 0)
         || ($a->date->toISO // '') cmp($b->date->toISO // '')
-        || ($a->id       // '') cmp($b->id       // '')
+        || ($a->id // '') cmp($b->id // '')
     } values $events->%*;
     $self->logger->debug(sprintf(
       '%s is returning %s events.', ref($self), scalar @out));
@@ -116,8 +116,8 @@ class App::Schierer::HPFan::Model::History::Gramps :
       # final object
       $events->{ $e->gramps_id } =
         App::Schierer::HPFan::Model::History::Event->new(
-        id       => $e->gramps_id,
-        blurb    => sprintf('Birth of %s', $person->display_name()),
+        id          => $e->gramps_id,
+        blurb       => sprintf('Birth of %s', $person->display_name()),
         description => $mv->format_string(
           join('\n', @description),
           {
@@ -130,7 +130,7 @@ class App::Schierer::HPFan::Model::History::Gramps :
         sortval     => $e->date->sortval,
         type        => 'Birth',
         );
-        $events->{ $e->gramps_id }->set_date($e->date);
+      $events->{ $e->gramps_id }->set_date($e->date);
     }
     else {
       $self->logger->warn(sprintf(
@@ -176,7 +176,7 @@ class App::Schierer::HPFan::Model::History::Gramps :
         sortval     => $e->date->sortval,
         description => join('', @description),
         );
-        $events->{ $e->gramps_id }->set_date($e->date);
+      $events->{ $e->gramps_id }->set_date($e->date);
     }
     else {
       $self->logger->warn(sprintf(
