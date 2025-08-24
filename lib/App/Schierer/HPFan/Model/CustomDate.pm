@@ -67,12 +67,13 @@ class App::Schierer::HPFan::Model::CustomDate :
   }
 
   method modifiers {
-    # $modifiers now stores the canonical label (or undef)
-    return $modifiers;
+    return $modifier_enum->{$modifiers} if defined($modifiers) && exists $modifier_enum->{$modifiers};
+    return undef;
   }
 
   method qualifiers {
-    return $qualifiers;
+    return $quality_enum->{$qualifiers} if defined($qualifiers) && exists $quality_enum->{$qualifiers};
+    return undef;
   }
 
   ADJUST {
@@ -140,7 +141,8 @@ class App::Schierer::HPFan::Model::CustomDate :
           my ($d2, $m2, $y2) = ($dv->[4] || 1, $dv->[5] || 1, $dv->[6] || 0);
           my $iso_end = _iso_from_triplet($d2, $m2, $y2);
 
-# coerce BETWEEN/“span” vs FROM/“range” only via label; you’ll use midpoint later
+          # coerce BETWEEN/“span” vs FROM/“range” only via label;
+          # you’ll use midpoint later
           $start    = __CLASS__->new(text => $iso_start);
           $end      = __CLASS__->new(text => $iso_end);
           $is_range = 1;
@@ -151,14 +153,18 @@ class App::Schierer::HPFan::Model::CustomDate :
           return;
         }
         else {
-# no end triple → treat as SINGLE; if the incoming *intended* it as "from/before",
-# keep that semantic only as a modifier (tie-break), not as an open-ended range.
+          # no end triple → treat as SINGLE;
+          # if the incoming *intended* it as "from/before",
+          # keep that semantic only as a modifier (tie-break),
+          # not as an open-ended range.
           ($year, $month, $day) = ($y1 || 0, $m1 || 1, $d1 || 1);
           $is_range = 0;
 
-# normalize broken-data semantics:
-# - if Gramps put modifier==5 ("from") but no end → demote to single+after
-# - if Gramps put modifier==4 ("between") but no end → treat as single (drop 'between')
+          # normalize broken-data semantics:
+          # - if Gramps put modifier==5 ("from")
+          # but no end → demote to single+after
+          # - if Gramps put modifier==4 ("between")
+          # but no end → treat as single (drop 'between')
           if ((lc($modifiers // '') eq 'from')) {
             $modifiers = 'after';
           }    # or 'from' if you prefer label
@@ -321,9 +327,9 @@ class App::Schierer::HPFan::Model::CustomDate :
       return join ' ', @p;
     }
     my @parts;
-    push @parts, $self->qualifiers if defined $self->qualifiers;
-    push @parts, sprintf('%s-%s-%s', $year, $month, $day);
     push @parts, $self->modifiers if defined $self->modifiers;
+    push @parts, sprintf('%s-%s-%s', $year, $month, $day);
+    push @parts, $self->qualifiers if defined $self->qualifiers;
     return join(' ', @parts);
   }
 
@@ -340,18 +346,26 @@ class App::Schierer::HPFan::Model::CustomDate :
   method _modifier_rank {
     # before < about < (none/exact) < between==from < after
     state %R = (
-      'before'  => 0,
-      'abt'     => 1,
-      'about'   => 1,
-      ''        => 2,
-      'exact'   => 2,    # treat “no modifier” as exact
-      'between' => 3,
-      'after'   => 4,
-      'from'    => 4,    # same bucket
+      1   => 0,
+      3   => 1,
+      ''  => 2,
+      4   => 3,
+      2   => 4,
+      5   => 4,    # same bucket
     );
-    my $m = lc($self->modifiers // '');
+
+    my $m = $modifier_rev->{$modifiers} if defined $modifiers && exists $modifier_rev->{$modifiers};
+    $m = 2 if not defined $m;
+    $m = lc($m);
     $m =~ s/^\s+|\s+$//g;
-    return exists $R{$m} ? $R{$m} : 2;    # unknown -> neutral “exact”
+    my $rank = exists $R{$m} ? $R{$m} : 2;    # unknown -> neutral “exact”
+    $self->logger->debug(sprintf(
+      'modifiers: %s reved: %s rank %s',
+      defined($modifiers)? $modifiers : 'undef',
+      $m, $rank
+      ));
+      return $rank;
+
   }
 
   method _quality_rank {

@@ -55,6 +55,7 @@ class App::Schierer::HPFan::View::Timeline
   field $edges_group;
   field $nodes_group;
   field $text_group;
+  field $category_groups = {};
 
   method viewheight {
     max($ymax * ($fr_scaling_factor + 0.6), $ymax + $detail_height,);
@@ -109,6 +110,27 @@ class App::Schierer::HPFan::View::Timeline
     return $self->_process_svg_output();
   }
 
+  method get_category_for_event( $event ) {
+    my $category = $event->event_class // 'generic';
+    my @parts    = grep {length} split /\s+/, ($event->event_class // '');
+    if (scalar @parts) {
+      @parts = grep { $_ !~ /mundane/i } @parts;
+      if (scalar @parts) {
+        @parts    = sort @parts;
+        $category = 'generic';
+        if ($parts[0] =~ /england/i) {
+          if ($#parts >= 1 && $parts[1] =~ /scotland/i) {
+            $category = 'gb';
+          }
+        }
+        if ($category eq 'generic' && scalar(@parts)) {
+          $category = join(' ', @parts);
+        }
+      }
+    }
+    return $category;
+  }
+
   method _organize_events_by_category_and_date {
     foreach my $event ($events->@*) {
       unless (Scalar::Util::reftype($event) eq 'OBJECT'
@@ -117,23 +139,9 @@ class App::Schierer::HPFan::View::Timeline
         next;
       }
 
-      my $category = $event->event_class // 'generic';
-      my @parts    = grep {length} split /\s+/, ($event->event_class // '');
-      if (scalar @parts) {
-        @parts = grep { $_ !~ /mundane/i } @parts;
-        if (scalar @parts) {
-          @parts    = sort @parts;
-          $category = 'generic';
-          if ($parts[0] =~ /england/i) {
-            if ($#parts >= 1 && $parts[1] =~ /scotland/i) {
-              $category = 'gb';
-            }
-          }
-          if ($category eq 'generic' && scalar(@parts)) {
-            $category = join(' ', @parts);
-          }
-        }
-      }
+      my $category = $self->get_category_for_event($event);
+      $self->logger->debug(sprintf('computed category %s from event id %s cat string %s.',
+      $category, $event->id, $event->event_class));
 
       my $date = $event->sortval;
       # set the base y cordinate to the minimum Julian Date
@@ -142,31 +150,45 @@ class App::Schierer::HPFan::View::Timeline
 
       push @{ $categories->{$category}->{$date} }, $event;
     }
+    foreach my $category (keys $categories->%*) {
+      my $layer_name = $category =~ s/ /-/r;
+      $layer_name = "${layer_name}-layer";
+      $self->logger->debug(
+        "layer for category '$category' layer name '$layer_name'");
+
+      $category_groups->{$category} =
+        $nodes_group->group(
+          id => "$layer_name",
+          class => "timeline nodes ${category}");
+    }
     $vfr = $ymax / scalar @$events;    # fractional unit based on event count
     $self->logger->debug("vfr is $vfr");
   }
 
   method _create_detail_nodes_and_connections {
-    my @catNames = sort keys $categories->%*;
-    foreach my $index (0 .. $#catNames) {
-      my $category = $catNames[$index];
+    my @sortedEvents = sort {
+      my $svc = $a->sortval <=> $b->sortval;
+      if($svc == 0) {
+        return $a->date cmp $b->date
+      } return $svc;
+    } grep {
+      Scalar::Util::reftype($_) eq 'OBJECT'
+      && $_->isa('App::Schierer::HPFan::Model::History::Event')
+    } $events->@*;
 
-      my $previous_pos;
-      foreach my $date (sort keys $categories->{$category}->%*) {
-   # events will collide on dates, so assume that we might have already created
-   # a given node perhaps because of the birthday paradox (amoung other reasons)
-        my $dot_node_name = "dot_${category}_${date}";
-        next if exists $nodes_by_sortval->{$date}->{$dot_node_name};
-        $nodes_by_sortval->{$date}->{$dot_node_name} = 1;
-
-        my @events_on_date = @{ $categories->{$category}->{$date} };
-        my $pos            = $self->_get_normalized_position($category, $date);
-
+    my $previous_pos;
+    foreach my $event (@sortedEvents) {
+      my $category = $self->get_category_for_event($event);
+      my $sv = $event->sortval;
+      my $dot_node_name = "dot_${category}_${sv}";
+      my $pos;
+      if(! exists $nodes_by_sortval->{$sv}->{$dot_node_name}) {
+        $pos = $self->_get_normalized_position($category, $sv);
         # y cordinates go down from upper left corner
         # 3 is the minumum spot at which we can draw a node circle.
         my $miny =
-          defined($previous_pos)
-          ? $previous_pos->{y} + $vfr * $fr_scaling_factor
+          defined($previous_pos->{$category})
+          ? $previous_pos->{$category}->{y} + $vfr * $fr_scaling_factor
           : 3;
         if ($miny > $pos->{y}) {
           my $dy = $miny - $pos->{y};
@@ -174,44 +196,79 @@ class App::Schierer::HPFan::View::Timeline
           $pos->{y} = $miny;
         }
 
-        my $nc = $nodes_group->circle(
+        my $nc = $category_groups->{$category}->circle(
           cx    => $pos->{x},
           cy    => $pos->{y},
           r     => 3,
           class => "node timeline $category",
-          id    => "dot_${category}_${date}",
+          id    => "dot_${category}_${sv}",
         );
 
-        if (defined $previous_pos) {
+        if (defined $previous_pos->{$category}) {
+          my $prev = $previous_pos->{$category};
           $edges_group->line(
             x1    => $pos->{x},
-            y1    => $previous_pos->{y} + 3,
+            y1    => $prev->{y} + 3,
             x2    => $pos->{x},
             y2    => $pos->{y} - 3,
             class => "timeline edge $category",
           );
         }
 
-        $previous_pos = $pos;
-        my $detail_distance = 50;    # pixels from timeline dot
-
-        foreach my $i (0 .. $#events_on_date) {
-          my $event      = $events_on_date[$i];
-          my $detail_pos = $self->_find_detail_position($event, $pos);
-          # Draw dashed line from timeline dot to detail box
-          # Draw the line to the corner, not the center.
-          $edges_group->line(
-            x1    => $pos->{x},
-            y1    => $pos->{y},
-            x2    => $detail_pos->{x} - $detail_pos->{width} / 2,
-            y2    => $detail_pos->{y} - $detail_pos->{height} / 2,
-            class => "timeline detail-edge $category",
-          );
-          $self->_create_detail_node_for_event($event, $detail_pos);
-        }
+        $previous_pos->{$category} = $pos;
+        $nodes_by_sortval->{$sv}->{$dot_node_name} = $pos;
       }
-      $self->logger->trace("svg is currently " . $graph->xmlify);
+      # if we by-pass the if block, we need to know the $pos value
+      $pos = $nodes_by_sortval->{$sv}->{$dot_node_name};
+
+      my $detail_pos = $self->_find_detail_position($event, $pos);
+      # Draw dashed line from timeline dot to detail box
+      # Draw the line to the corner, not the center.
+      $edges_group->line(
+        x1    => $pos->{x},
+        y1    => $pos->{y},
+        x2    => $detail_pos->{x} - $detail_pos->{width} / 2,
+        y2    => $detail_pos->{y} - $detail_pos->{height} / 2,
+        class => "timeline detail-edge $category",
+      );
+      $self->_create_detail_node_for_event($event, $detail_pos);
+
     }
+    $self->logger->trace("svg is currently " . $graph->xmlify);
+  }
+
+  # event is undefined if it is a timeline dot node
+  method _get_normalized_position($category, $julian, $event = undef) {
+    my @catNames = keys $categories->%*;
+    my $catIndex = firstidx { $_ eq $category } @catNames;
+
+    my $xcord = 10 * ($catIndex + 1);
+
+    if (defined($event)) {
+      # Detail node spreading logic
+      my @events_on_date = @{ $categories->{$category}->{ $event->sortval } };
+      my $event_index    = firstidx { $_->id eq $event->id } @events_on_date;
+      my $num_events     = @events_on_date;
+
+      my $detail_start = $xcord + 50;
+      my $separation   = 100 / $num_events;
+
+      if ($num_events == 1) {
+        $xcord = int($detail_start + $separation);
+      }
+      else {
+        $xcord =
+          int($detail_start + abs((rand($event_index + 1) * $separation)));
+      }
+    }
+
+    my $date_span = $max_date - $min_date;
+    # INVERT: Subtract from max to flip the timeline
+    my $normalized_y = ($julian - $min_date) / ($max_date - $min_date) * $ymax;
+    return {
+      x => int($xcord),
+      y => int($normalized_y),
+    };
   }
 
   method _calc_height($event, $wide = 0) {
@@ -233,9 +290,9 @@ class App::Schierer::HPFan::View::Timeline
 
     # date uses slightly larger text
     my $dc = $wide ? $wide_date_chars_per_line : $date_chars_per_line;
-    if (length($event->print_date) > $dc) {
+    if (length($event->date->to_string) > $dc) {
       # subtract one for the line already allocated
-      my $dl = ceil((length($event->print_date) / $dc) - 1);
+      my $dl = ceil((length($event->date->to_string) / $dc) - 1);
       $self->logger->debug("date adding $dl to lines for " . $event->id);
       $lines += $dl unless ($dl < 0);
     }
@@ -276,40 +333,6 @@ class App::Schierer::HPFan::View::Timeline
     return { width => $width, height => $height };
   }
 
-  # event is undefined if it is a timeline dot node
-  method _get_normalized_position($category, $julian, $event = undef) {
-    my @catNames = keys $categories->%*;
-    my $catIndex = firstidx { $_ eq $category } @catNames;
-
-    my $xcord = 10 * ($catIndex + 1);
-
-    if (defined($event)) {
-      # Detail node spreading logic
-      my @events_on_date = @{ $categories->{$category}->{ $event->sortval } };
-      my $event_index    = firstidx { $_->id eq $event->id } @events_on_date;
-      my $num_events     = @events_on_date;
-
-      my $detail_start = $xcord + 50;
-      my $separation   = 100 / $num_events;
-
-      if ($num_events == 1) {
-        $xcord = int($detail_start + $separation);
-      }
-      else {
-        $xcord =
-          int($detail_start + abs((rand($event_index + 1) * $separation)));
-      }
-    }
-
-    my $date_span = $max_date - $min_date;
-    # INVERT: Subtract from max to flip the timeline
-    my $normalized_y = ($julian - $min_date) / ($max_date - $min_date) * $ymax;
-    return {
-      x => int($xcord),
-      y => int($normalized_y),
-    };
-  }
-
   method _create_detail_node_for_event ($event, $pos) {
     my $height = $pos->{height} // $detail_height;
     my $width  = $pos->{width}  // $detail_width;
@@ -334,7 +357,7 @@ class App::Schierer::HPFan::View::Timeline
     (my $safe_id = $event->id // 'evt') =~ s/[^A-Za-z0-9_.:-]+/_/g;
     my $grad_id = "grad_$safe_id";
 
-    my $group = $nodes_group->tag(
+    my $group = $text_group->tag(
       'g',
       x      => $pos->{x} - $width / 2,
       y      => $pos->{y} - $height / 2,
@@ -382,7 +405,7 @@ class App::Schierer::HPFan::View::Timeline
       (scalar @parts ? (fill => "url(#$grad_id)",) : ()),
     );
 
-    my $fo = $text_group->foreignObject(
+    my $fo = $group->foreignObject(
       x      => $pos->{x} - $width / 2,
       y      => $pos->{y} - $height / 2,
       width  => $width,
@@ -401,7 +424,7 @@ class App::Schierer::HPFan::View::Timeline
     $div->tag('div',
       class => 'spectrum-Heading spectrum-Heading--sizeM '
         . 'spectrum-Heading--serif spectrum-Heading--strong')
-      ->cdata($event->print_date);
+      ->cdata($event->date->to_string);
 
     if (defined($event->blurb) && length($event->blurb)) {
       $div->tag('div',

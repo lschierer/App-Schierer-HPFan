@@ -31,16 +31,11 @@ class App::Schierer::HPFan::Model::History::Event
   field $type   : param : reader //=
     undef;    # free text like "Birth" | "Battle" | ...
   field $blurb : param : reader;                 # 1 line teaser
-  field $date_iso : param : reader //= undef;    # "YYYY[-MM[-DD]]" (partial ok)
-
-# GrampsDate or Date::Calc (the latter when this was created by ::Model::History::Yaml)
-  field $raw_date : param : reader //= undef;
+  field $date   : writer  : reader //= undef;
 
   # the categories
   field $event_class : param : reader //= 'generic';
 
-  field $date_kind : param : reader //= undef;
-  ## '', 'before', 'after', 'about', 'between', 'from', 'estimated', 'calculated'
   field $sortval : param : reader;
   ## numeric sort key (e.g. gramps sortval / computed)
   field $description : param : reader : writer //= undef;
@@ -63,35 +58,6 @@ class App::Schierer::HPFan::Model::History::Event
     $kind_sort_order = \%temp;
   }
 
-  method print_date {
-    my $r = '';
-    $r = $date_kind if defined($date_kind);
-    if (defined($raw_date)) {
-      my $datetype =
-          Scalar::Util::blessed($raw_date)
-        ? Scalar::Util::blessed($raw_date)
-        : 'Scalar';
-      if ($datetype eq 'Scalar') {
-        $r = sprintf('%s %s', $r, defined($date_iso) ? $date_iso : $sortval);
-      }
-      elsif ($datetype eq 'Date::Calc') {
-        $r = sprintf('%s-%s-%s', $raw_date->year, $raw_date->month,
-          $raw_date->day);
-      }
-      elsif ($datetype eq 'Date::Manip::Date') {
-        $r = sprintf('%s %s', $r, $raw_date->printf('%Y-%m-%d'));
-      }
-      elsif ($datetype eq 'App::Schierer::HPFan::Model::CustomDate') {
-        $r = $raw_date->to_string;
-      }
-    }
-    else {
-      # sortval is a required field.
-      $r = sprintf('%s %s', $r, $sortval);
-    }
-    $r =~ s/^\s+|\s+$//g;
-    return $r;
-  }
 
   method to_hash {
     my $r = {};
@@ -99,8 +65,7 @@ class App::Schierer::HPFan::Model::History::Event
     $r->{origin}      = $origin      unless not defined $origin;
     $r->{type}        = $type        unless not defined $type;
     $r->{blurb}       = $blurb       unless not defined $blurb;
-    $r->{date_iso}    = $date_iso    unless not defined $date_iso;
-    $r->{date_kind}   = $date_kind   unless not defined $date_kind;
+    $r->{date}        = $date->to_string unless not defined $date;
     $r->{sortval}     = $sortval     unless not defined $sortval;
     $r->{description} = $description unless not defined $description;
     $r->{sources}     = [$sources->@*];
@@ -122,8 +87,7 @@ class App::Schierer::HPFan::Model::History::Event
     push @parts, $origin      unless not defined $origin;
     push @parts, $type        unless not defined $type;
     push @parts, $blurb       unless not defined $blurb;
-    push @parts, $date_iso    unless not defined $date_iso;
-    push @parts, $date_kind   unless not defined $date_kind;
+    push @parts, $date->to_string unless not defined $date;
     push @parts, $sortval     unless not defined $sortval;
     push @parts, $description unless not defined $description;
     push @parts, $sources->@*;

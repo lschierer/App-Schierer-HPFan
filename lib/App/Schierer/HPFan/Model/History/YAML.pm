@@ -33,7 +33,7 @@ class App::Schierer::HPFan::Model::History::YAML :
   method events {
     my @out = sort {
            ($a->sortval // 0) <=> ($b->sortval // 0)
-        || ($a->date_iso // '') cmp($b->date_iso // '')
+        || ($a->date->toISO // '') cmp($b->date->toISO // '')
         || ($a->id       // '') cmp($b->id       // '')
     } values $events->%*;
     $self->logger->debug(sprintf(
@@ -114,13 +114,10 @@ class App::Schierer::HPFan::Model::History::YAML :
     $events->{$id} = App::Schierer::HPFan::Model::History::Event->new(
       id       => $id,
       blurb    => $object->{blurb},
-      raw_date => \$date,
-      date_iso =>
-        sprintf('%d-%02d-%02d', $date->year, $date->month, $date->day),
       sortval     => $sortval,
       event_class => join(' ', @types),
-      date_kind   => $date->complete ? '' : 'estimated',
     );
+    $events->{$id}->set_date($date);
   }
 
   method getDate ($index, $object, $file) {

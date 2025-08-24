@@ -30,7 +30,7 @@ class App::Schierer::HPFan::Model::History::Gramps :
   method events {
     my @out = sort {
            ($a->sortval // 0) <=> ($b->sortval // 0)
-        || ($a->date_iso // '') cmp($b->date_iso // '')
+        || ($a->date->toISO // '') cmp($b->date->toISO // '')
         || ($a->id       // '') cmp($b->id       // '')
     } values $events->%*;
     $self->logger->debug(sprintf(
@@ -118,10 +118,6 @@ class App::Schierer::HPFan::Model::History::Gramps :
         App::Schierer::HPFan::Model::History::Event->new(
         id       => $e->gramps_id,
         blurb    => sprintf('Birth of %s', $person->display_name()),
-        date_iso => (not $e->date->is_range) ? $e->date->toISO
-        : sprintf('%s - %s', $e->date->start->toISO, $e->date->end->toISO),
-        date_kind => scalar @dklparts ? sprintf('(%s)', join(' ', @dklparts),)
-        : '',
         description => $mv->format_string(
           join('\n', @description),
           {
@@ -131,10 +127,10 @@ class App::Schierer::HPFan::Model::History::Gramps :
         ),
         event_class => 'magical',
         origin      => 'Gramps',
-        raw_date    => $e->date,
         sortval     => $e->date->sortval,
         type        => 'Birth',
         );
+        $events->{ $e->gramps_id }->set_date($e->date);
     }
     else {
       $self->logger->warn(sprintf(
@@ -177,14 +173,10 @@ class App::Schierer::HPFan::Model::History::Gramps :
         type        => 'Death',
         event_class => 'magical',
         blurb       => sprintf('Death of %s', $person->display_name()),
-        date_iso    => (not $e->date->is_range) ? $e->date->toISO
-        : sprintf('%s - %s', $e->date->start->toISO, $e->date->end->toISO),
-        date_kind => scalar @dklparts ? sprintf('(%s)', join(' ', @dklparts),)
-        : '',
         sortval     => $e->date->sortval,
-        raw_date    => $e->date,
         description => join('', @description),
         );
+        $events->{ $e->gramps_id }->set_date($e->date);
     }
     else {
       $self->logger->warn(sprintf(

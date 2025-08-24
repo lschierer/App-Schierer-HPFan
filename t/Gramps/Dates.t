@@ -28,13 +28,16 @@ subtest 'single: cmp / eq' => sub {
   my $b = mk({ dateval => [2, 1, 1900, 0] });    # 1900-01-02
   my $c = mk({ dateval => [0, 2, 1900, 0] });    # 1900-02 (no day)
   my $d = mk({ dateval => [0, 0, 1901, 0] });    # 1901 (year only)
+  my $e = mk("1811"); # 1811 (year only)
+  my $f = mk({ dateval => [1, 9, 890, 0] }); # 890-9-1 (Syltherin's BDay)
 
-  is_date $_ for ($a, $b, $c, $d);
+  is_date $_ for ($a, $b, $c, $d, $e);
 
   ok($a lt $b, '01 < 02');
   ok($a lt $c, '1900-01-* < 1900-02');
   ok($c lt $d, '1900-* < 1901');
   ok($b lt $d, '1900-01-02 < 1901');
+  ok($f lt $e, '0890-09-01 < 1811');
 
   ok($a ne $b,                                 '!= works');
   ok($a eq mk({ dateval => [1, 1, 1900, 0] }), 'eq same');
