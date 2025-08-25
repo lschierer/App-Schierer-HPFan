@@ -1,6 +1,6 @@
 ---
 events:
-  - type: mundane
+  - type: mundane gb
     date: 1903
     blurb: The Pistols Act of 1903
     description: |
@@ -29,7 +29,7 @@ events:
       [Wikipedia](https://en.wikipedia.org/)
       "[World War I](https://en.wikipedia.org/wiki/World_War_I)"
       Last Edited: 2021-05-12. Last Viewed: 2021-05-14.
-  - type: mundane
+  - type: mundane gb
     date: 1920
     blurb: The Firearms Act of 1920
     description: |
@@ -54,7 +54,7 @@ events:
       Pottermore Publishing. American Kindle Edition. © 2016. Page 31.
 
       [Short Stories from Hogwarts of Power, Politics and Pesky Poltergeists]: https://www.librarything.com/work/18275514/
-  - type: mundane
+  - type: mundane gb
     date: 1937
     blurb: The Firearms Act of 1937
     description: |
@@ -78,7 +78,7 @@ events:
       "[World War II](https://en.wikipedia.org/wiki/World_War_II)"
       Last Edited: 2021-05-11. Last Viewed: 2021-05-14.
   - type: mundane
-    blurb: The Children Act of 1948
+    blurb: The Children Act of 1948 gb
     date: 1948
     description: |
       The Children Act 1948 established a children's committee and a
