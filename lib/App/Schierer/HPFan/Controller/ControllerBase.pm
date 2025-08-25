@@ -3,18 +3,18 @@ use experimental qw(class);
 use utf8::all;
 use File::FindLib 'lib';
 require Data::Printer;
+require Mojo::File;
+require YAML::PP;
 require Mojolicious::Controller;
 require Mojolicious::Plugin;
 require App::Schierer::HPFan::Model::Gramps;
+require App::Schierer::HPFan::Schema::Gramps;
 use namespace::clean;
 
 package App::Schierer::HPFan::Controller::ControllerBase {
   use Mojo::Base 'Mojolicious::Controller';
   use Mojo::Base 'Mojolicious::Plugin', -role, -signatures;
   use Log::Log4perl;
-  require Mojo::File;
-  require YAML::PP;
-  require Data::Printer;
   use Carp;
 
   sub getBase ($self) {
@@ -41,7 +41,26 @@ package App::Schierer::HPFan::Controller::ControllerBase {
     my $gramps_export =
       $app->config('distDir')->child('potter_universe.gramps');
     my $gramps_db = $app->config('distDir')->child('grampsdb/sqlite.db');
-    my $gramps    = App::Schierer::HPFan::Model::Gramps->new(
+
+    my $dist_dir = $self->config('distDir');
+    my $db_file  = $dist_dir->child('grampsdb/sqlite.db');
+
+    my $schema;
+    $self->helper(
+      schema => sub {
+        # Connect once and cache the schema object.
+        return $schema //= App::Schierer::HPFan::Schema::Gramps->connect(
+          "dbi:SQLite:dbname=$gramps_db",
+          '', '',
+          {
+            AutoCommit => 1,
+            RaiseError => 1,
+          }
+        );
+      }
+    );
+
+    my $gramps = App::Schierer::HPFan::Model::Gramps->new(
       gramps_export => $gramps_export,
       gramps_db     => $gramps_db,
     );

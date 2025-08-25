@@ -154,12 +154,10 @@ class App::Schierer::HPFan::View::Timeline
           $category, $sv, Data::Printer::np($rail_node, multiline => 0)
         ));
         if (not defined $rail_node, or not defined $rail_node->{x}) {
-          $self->logger->error(
-            sprintf(
-              'rail node for %s %s is missing or invalid: %s',
-              $category, $sv, Data::Printer::np($rail_node, multiline => 0)
-            )
-          );
+          $self->logger->error(sprintf(
+            'rail node for %s %s is missing or invalid: %s',
+            $category, $sv, Data::Printer::np($rail_node, multiline => 0)
+          ));
           next;
         }
 

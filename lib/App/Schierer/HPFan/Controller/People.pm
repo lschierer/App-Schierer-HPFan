@@ -85,6 +85,12 @@ package App::Schierer::HPFan::Controller::People {
   sub _register_routes ($self, $app) {
 
     $logger->debug(__PACKAGE__ . '_register_routes start');
+    my $rs = $app->schema->resultset('person')->search(
+      {},
+      {
+        columns => [ qw/gramps_id given_name ]
+      }
+    );
     foreach my $person (sort { return $a->id cmp $b->id }
       values %{ $app->gramps->people }) {
 
