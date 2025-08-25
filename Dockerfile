@@ -69,7 +69,7 @@ RUN groupadd mojo
 # -s set the default shell
 # -g set the default group
 RUN useradd -ms /bin/bash -g mojo mojo
-
+RUN usermod -aG sudo mojo
 
 # because of the way the CMD is written,
 # we might not actually be using the installed version
@@ -79,7 +79,7 @@ RUN chown -R mojo:mojo /home/mojo
 
 # create an init script to set /home/mojo/var permissions
 
-RUN apt-get update && apt-get install -y sudo
+RUN apt-get update && apt-get install -y sudo gosu
 RUN apt-get update && apt-get install -y graphviz
 RUN apt-get update && apt-get install -y fonts-dejavu
 RUN rm -rf /var/lib/apt/lists/*
@@ -97,8 +97,8 @@ RUN pandoc --version
 COPY scripts/dockerEntrypoint.sh /usr/local/bin/dockerEntrypoint.sh
 RUN chmod +x /usr/local/bin/dockerEntrypoint.sh
 
+
 # Command to run your application
 EXPOSE 3000
 ENTRYPOINT ["/usr/local/bin/dockerEntrypoint.sh"]
 #CMD ["nc", "-v", "-l", "0.0.0.0", "3000"]
-CMD ["perl", "bin/app_schierer_hpfan", "prefork", "-m", "production"]
