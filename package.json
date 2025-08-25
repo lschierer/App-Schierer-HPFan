@@ -5,7 +5,7 @@
   "scripts": {
     "build:css": "rimraf ./public/css ; mkdir -p ./public/css/ ; tsx ./scripts/build-css.ts ./public/css/",
     "build:ts": "tsc -p ./tsconfig.build.json && tsx ./scripts/build-ts.ts",
-    "build:cdk": "tsx scripts/aws-schierer-hpfan.ts "
+    "app": "tsx scripts/aws-schierer-hpfan.ts "
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.2",
@@ -13,15 +13,15 @@
     "@types/node": "^24.3.0",
     "@types/postcss-import": "^14.0.3",
     "@types/postcss-sorting": "^8.0.2",
-    "@typescript-eslint/parser": "^8.40.0",
+    "@typescript-eslint/parser": "^8.41.0",
     "autoprefixer": "^10.4.21",
-    "aws-cdk": "^2.1025.0",
+    "aws-cdk": "^2.1026.0",
     "aws-cdk-lib": "^2.212.0",
     "constructs": "^10.4.2",
-    "cssnano": "^7.1.0",
+    "cssnano": "^7.1.1",
     "esbuild": "^0.25.9",
     "esbuild-plugin-lit-css": "^4.0.0",
-    "eslint": "^9.33.0",
+    "eslint": "^9.34.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-import-x": "^4.16.1",
@@ -35,7 +35,7 @@
     "postcss-import": "^16.1.1",
     "postcss-load-config": "^6.0.1",
     "postcss-nesting": "^13.0.2",
-    "postcss-preset-env": "^10.2.4",
+    "postcss-preset-env": "^10.3.0",
     "postcss-reporter": "^7.1.0",
     "postcss-sorting": "^9.1.0",
     "prettier": "^3.6.2",
@@ -45,9 +45,9 @@
     "stylelint-config-standard": "^39.0.0",
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
-    "tsx": "^4.20.4",
+    "tsx": "^4.20.5",
     "typescript": "^5.9.2",
-    "typescript-eslint": "^8.40.0"
+    "typescript-eslint": "^8.41.0"
   },
   "dependencies": {
     "@spectrum-css/alertbanner": "^3.1.2",

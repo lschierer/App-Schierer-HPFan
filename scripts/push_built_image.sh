@@ -4,31 +4,9 @@ AWS_REGION='us-east-2';
 AWS_ACCOUNT_ID='699040795025';
 AWS_PROFILE='personal';
 
-# pnpm requires that the lock file and the package.json be in sync, ensure that by running pnpm i
-pnpm i
-
-GIT_COMMIT=$(git rev-parse HEAD)
-BUILD_TIME=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-gsed -i -E "s/^(\s+)git-commit:.*/\1git-commit: ${GIT_COMMIT}/" app-schierer-h_p_fan.yml ;
-gsed -i -E "s/^(\s+)build-time:.*/\1build-time: ${BUILD_TIME}/" app-schierer-h_p_fan.yml ;
-
-
-# # Build your Mojolicious app image
-podman build --platform linux/arm64 -t hpfan:latest ./
-
-# Create ECR repository (if it doesn't exist)
-if aws --profile personal --region ${AWS_REGION} ecr describe-repositories | jq '.repositories.[].repositoryName' | grep -q hpfan ; then
-  echo "repository already exists, not attempting creation."
-else
-  aws --profile ${AWS_PROFILE} --region ${AWS_REGION} ecr create-repository --repository-name hpfan
-fi
 
 # Get ECR login credentials and login
 aws --profile ${AWS_PROFILE} --region ${AWS_REGION} ecr get-login-password | podman login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com || exit 1;
-
-# Tag and push the image
-podman tag hpfan:latest ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/hpfan:latest
-podman push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/hpfan:latest
 
 DEV=false
 PROD=false
