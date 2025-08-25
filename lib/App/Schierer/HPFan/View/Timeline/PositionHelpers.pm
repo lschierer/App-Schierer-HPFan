@@ -77,61 +77,112 @@ class App::Schierer::HPFan::View::Timeline::PositionHelpers
     # Simple approach: try positions in a predictable spiral pattern
     my $size = $self->_calculate_detail_dimensions($event);
 
-    my %seen;  # de-dupe absolute candidate positions
+  # --- Generate offset families programmatically ------------------------------
 
-    my @offsets;
-    for my $i (1..14) {
-      my $wx = $size->{width}  * $i;
-      my $hy = $size->{height} * $i;
-      my $ky = $size->{height} + $size->{height} * ($i/10);
-      my $kx = $size->{width} + $size->{width} * ($i/10);
+    my $W = $size->{width};
+    my $H = $size->{height};
 
-      push @offsets,
-        [ +$wx,    0       ],  # right
-        [ +$wx,   +$hy     ],  # down-right
-        [ +$wx,   +$hy*0.5     ],  # down-right
-        [ +$wx,   -$hy     ],  # up-right
-        [ +$wx,   -$hy*0.5     ],  # up-right
-        [ +$size->{width}, +$hy ],   # column just to the right (near)
-        [ +$size->{width}, -$hy ],   # column just to the right (near)
-        [ +$kx,     +$ky     ],
-        [ +$kx,     -$ky     ],
-        [  0,     +$hy     ],  # straight down
-        [  0,     -$hy     ],  # straight up
+    # Families (as functions of i). Keep them simple & monotone.
+    my @xf = (
+      sub ($i, $W, $H) { $W * $i },               # strict grid steps
+      sub ($i, $W, $H) { $W * (1 + $i / 10) },    # fine gradation
+      sub ($i, $W, $H) { $W * (1 + $i / 3) },     # coarse gradation
+    );
+
+    my @yf = (
+      sub ($i, $W, $H) { $H * $i },
+      sub ($i, $W, $H) { $H * (1 + $i / 10) },
+      sub ($i, $W, $H) { $H * (1 + $i / 3) },
+    );
+
+    # We always want the box to the right of the timeline column.
+    my $MIN_X_OFFSET = $W / 4;    # at least 1/2 box-width to the right
+    my $MAX_I        = 14;        # more i => more candidates
+    my %seen;
+    my @candidates;
+
+    for my $i (0 .. $MAX_I) {
+      for my $fx (@xf) {
+        my $dx = $fx->($i, $W, $H);
+        next if $dx < $MIN_X_OFFSET;
+
+        # Straight right
+        my $k = int($dx) . ',0';
+        push @candidates, [$dx, 0] unless $seen{$k}++;
+
+        for my $fy (@yf) {
+          my $dy = $fy->($i, $W, $H);
+
+          # Down-right
+          my $k1 = int($dx) . ',' . int(+$dy);
+          push @candidates, [$dx, +$dy] unless $seen{$k1}++;
+
+          # Up-right
+          my $k2 = int($dx) . ',' . int(-$dy);
+          push @candidates, [$dx, -$dy] unless $seen{$k2}++;
+        }
+      }
+
+      # A few “diagonals” with mixed scales to reduce fallback overlaps
+      my $kx = $W * (1 + $i / 10);
+      my $ky = $H * (1 + $i / 10);
+      if ($kx >= $MIN_X_OFFSET) {
+        my $k3 = int($kx) . ',' . int(+$ky);
+        push @candidates, [$kx, +$ky] unless $seen{$k3}++;
+
+        my $k4 = int($kx) . ',' . int(-$ky);
+        push @candidates, [$kx, -$ky] unless $seen{$k4}++;
+      }
     }
 
-    my @try_positions;
-    for my $off (@offsets) {
-      my $x = $timeline_pos->{x} + $off->[0];
-      my $y = $timeline_pos->{y} + $off->[1];
+  # --- Rank by “nice” proximity to the dot ------------------------------------
 
-      # de-dupe exact repeats
-      my $key = "$x,$y";
-      next if $seen{$key}++;
-      push @try_positions, { x => $x, y => $y };
-    }
+# Favor small horizontal movement (keeps leader lines short) but do care about vertical.
+    my $score = sub ($dx, $dy) { sqrt($dx * $dx + (0.8 * $dy) * (0.8 * $dy)) };
+
+    # Convert to absolute positions and sort nearest-first
+    my @try_positions = map {
+      +{
+        x => $timeline_pos->{x} + $_->[0],
+        y => $timeline_pos->{y} + $_->[1],
+      }
+    } @candidates;
 
     @try_positions = sort {
-      my ($dxA, $dyA) = ($a->{x} - $timeline_pos->{x}, $a->{y} - $timeline_pos->{y});
-      my ($dxB, $dyB) = ($b->{x} - $timeline_pos->{x}, $b->{y} - $timeline_pos->{y});
+      $score->($a->{x} - $timeline_pos->{x}, $a->{y} - $timeline_pos->{y})
+        <=> $score->($b->{x} - $timeline_pos->{x}, $b->{y} - $timeline_pos->{y})
+    } @try_positions;
+
+    # Optional: cap the tail for speed if you like
+    splice @try_positions, 250 if @try_positions > 250;
+
+    @try_positions = sort {
+      my ($dxA, $dyA) =
+        ($a->{x} - $timeline_pos->{x}, $a->{y} - $timeline_pos->{y});
+      my ($dxB, $dyB) =
+        ($b->{x} - $timeline_pos->{x}, $b->{y} - $timeline_pos->{y});
 
       # scale by box footprint so “one box up” ~ “one box right”
       my $Wx = $size->{width}  || 1;
       my $Hy = $size->{height} || 1;
 
       # weights: tweak to taste
-      my $wx = 1.0;   # horizontal weight
-      my $wy = 2.0;   # vertical weight (penalize y more than x)
-      my $up = 1.0;   # extra penalty for moving upward (dy < 0)
-      my $rt = -0.25; # slight reward (negative cost) for moving right
+      my $wx = 1.0;       # horizontal weight
+      my $wy = 2.0;       # vertical weight (penalize y more than x)
+      my $up = 1.0;       # extra penalty for moving upward (dy < 0)
+      my $rt = -0.005;    # slight reward (negative cost) for moving right
 
-      my $costA = $wx * ($dxA/$Wx)**2 + $wy * ($dyA/$Hy)**2
-                + ($dyA < 0 ? $up * abs($dyA)/$Hy : 0)
-                + ($dxA > 0 ? $rt : 0);
+      my $costA =
+        $wx * ($dxA / $Wx)**2 +
+        $wy * ($dyA / $Hy)**2 +
+        ($dyA < 0 ? $up * abs($dyA) / $Hy : 0) +
+        ($dxA > 0 ? $rt                   : 0);
 
-      my $costB = $wx * ($dxB/$Wx)**2 + $wy * ($dyB/$Hy)**2
-                + ($dyB < 0 ? $up * abs($dyB)/$Hy : 0)
-                + ($dxB > 0 ? $rt : 0);
+      my $costB =
+        $wx * ($dxB / $Wx)**2 +
+        $wy * ($dyB / $Hy)**2 +
+        ($dyB < 0 ? $up * abs($dyB) / $Hy : 0) +
+        ($dxB > 0 ? $rt                   : 0);
 
       $costA <=> $costB;
     } @try_positions;
@@ -143,12 +194,12 @@ class App::Schierer::HPFan::View::Timeline::PositionHelpers
           $event->id, $pos->{x}, $pos->{y}
         ));
         # store the amount of space we used as well as the center of that space
-        $pos->{width}  = $size->{width};
-        $pos->{height} = $size->{height};
-        $pos->{id}     = $event->id;
-        $pos->{node}   = $dot_node_name;
-        $pos->{type}   = 'detail';
-        $pos->{desired_y}   = $timeline_pos->{y};
+        $pos->{width}     = $size->{width};
+        $pos->{height}    = $size->{height};
+        $pos->{id}        = $event->id;
+        $pos->{node}      = $dot_node_name;
+        $pos->{type}      = 'detail';
+        $pos->{desired_y} = $timeline_pos->{y};
         $self->logger->debug(
           sprintf('recording detail position %s',
             Data::Printer::np($pos, multiline => 0))
@@ -184,7 +235,7 @@ class App::Schierer::HPFan::View::Timeline::PositionHelpers
 
     # Maybe wider boxes for long descriptions to reduce wrapping
     if ($event->description && length($hs->parse($event->description)) > 50) {
-      $width += 40;
+      $width += 50;
       $height = $self->_calc_height($event, 1);
     }
     else {
@@ -240,10 +291,11 @@ class App::Schierer::HPFan::View::Timeline::PositionHelpers
   }
 
   method _calc_height($event, $wide = 0) {
-    my $line_height              = 13;
-    my $chars_per_line           = 30;
+    my $line_height              = 15;
+    my $chars_per_line           = 45;
+    my $short_chars_per_line     = 40;
     my $date_chars_per_line      = 23;
-    my $wide_chars_per_line      = 40;
+    my $wide_chars_per_line      = 55;
     my $wide_date_chars_per_line = 33;
     my $hs                       = HTML::Strip->new();
     my $lines                    = 2;    # date + (blurb OR description) minimum
@@ -269,13 +321,36 @@ class App::Schierer::HPFan::View::Timeline::PositionHelpers
     if (defined($event->description)
       && length($event->description)) {
       my $text_only = $hs->parse($event->description);
+      if ($event->description =~ m{<ul\b}i) {
+        $self->logger->debug(
+          "description list found, shortening line size for " . $event->id);
+        $tc = $short_chars_per_line;
+      }
+      if ($event->description =~ m{<blockquote\b}i) {
+        $self->logger->debug(
+          "blockquote found, shortening line size for" . $event->id);
+        $tc = $short_chars_per_line;
+      }
 
       my $dl = ceil((length($text_only) / $tc));
       $self->logger->debug("description adding $dl to lines for " . $event->id);
       $lines += $dl unless ($dl < 0);
     }
 
-    my $sl = scalar @{ $event->sources };
+    my $sl  = scalar @{ $event->sources };
+    my $stl = 0;
+    foreach my $source (@{ $event->sources }) {
+      my $text_only = $hs->parse($source);
+      if ($source =~ m{<ul\b}i) {
+        my $n =()= ($source =~ m{<li\b}ig);
+        $self->logger->debug(
+          'source list found, adding more space to ' . $event->id);
+        $lines += $n;
+      }
+      $stl += ceil((length($text_only) / $tc));
+    }
+    # add in one extra, it seems to help
+    $sl = max($sl, $stl) + 1;
     $self->logger->debug("sources adding $sl to lines for " . $event->id);
     $lines += $sl unless ($sl < 0);
 
@@ -315,19 +390,19 @@ class App::Schierer::HPFan::View::Timeline::PositionHelpers
 
   }
 
-  method _count_overlaps ($lane, ) {
+  method _count_overlaps ($lane,) {
     my @idx = grep {
       my $b = $lane->[$_];
       $b && defined $b->{y} && defined $b->{height}
-    } 0..$#$lane;
+    } 0 .. $#$lane;
 
     @idx = sort { $lane->[$a]{y} <=> $lane->[$b]{y} } @idx;
 
     my $count = 0;
-    for my $k (1..$#idx) {
-      my ($i,$j) = @idx[$k-1,$k];
-      my ($bi,$bj) = @{$lane}[$i,$j];
-      my $min_gap = ($bi->{height} + $bj->{height})/2 + $pad;
+    for my $k (1 .. $#idx) {
+      my ($i,  $j)  = @idx[$k - 1, $k];
+      my ($bi, $bj) = @{$lane}[$i, $j];
+      my $min_gap = ($bi->{height} + $bj->{height}) / 2 + $pad;
       $count++ if $bj->{y} < $bi->{y} + $min_gap - 0.5;
     }
     return $count;

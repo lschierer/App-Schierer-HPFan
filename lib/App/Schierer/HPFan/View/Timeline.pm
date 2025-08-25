@@ -33,7 +33,7 @@ class App::Schierer::HPFan::View::Timeline
  #default this to a very high number that should be bigger than my julian dates.
   field $min_date = 9**9;
   field $max_date = 0;
-  field $ymax     = 5500;
+  field $ymax     = 10000;
   field $xmax     = 880;
   # vertial version of an FR unit for minimum node separation in the y axis
   field $vfr = 0;
@@ -64,13 +64,13 @@ class App::Schierer::HPFan::View::Timeline
   );
 
   method viewheight {
-    max($ymax * ($fr_scaling_factor + 0.6), $ymax + $detail_height,);
+    min($ymax * ($fr_scaling_factor + 0.6), $ymax + $detail_height,);
   }
 
   ADJUST {
     #  # only the angles that fit in the layout
 
-    Readonly::Scalar my $stw => 120;
+    Readonly::Scalar my $stw => 200;
     $detail_width = $stw;
     $ph->set_detail_width($detail_width);
 
@@ -149,12 +149,16 @@ class App::Schierer::HPFan::View::Timeline
         my $sv            = $event->sortval;
         my $dot_node_name = "dot_${category}_${sv}";
         my $rail_node     = $rails->{$category}->{$dot_node_name};
-        $self->logger->debug(sprintf('rail node %s %s is %s',
-        $category, $sv,
-        Data::Printer::np($rail_node, multiline => 0)));
-        if(not defined $rail_node, or not defined $rail_node->{x}){
-          $self->logger->error(sprintf('rail node for %s %s is missing or invalid: %s',
-          $category, $sv, Data::Printer::np($rail_node, multiline => 0))
+        $self->logger->debug(sprintf(
+          'rail node %s %s is %s',
+          $category, $sv, Data::Printer::np($rail_node, multiline => 0)
+        ));
+        if (not defined $rail_node, or not defined $rail_node->{x}) {
+          $self->logger->error(
+            sprintf(
+              'rail node for %s %s is missing or invalid: %s',
+              $category, $sv, Data::Printer::np($rail_node, multiline => 0)
+            )
           );
           next;
         }
@@ -409,14 +413,17 @@ class App::Schierer::HPFan::View::Timeline
       ));
 
       my $cc = $div->tag('div',
-        class => 'spectrum-Body spectrum-Body--sizeS spectrum-Body--serif');
+        class =>
+          'description spectrum-Body spectrum-Body--sizeS spectrum-Body--serif'
+      );
       $cc->cdata_noxmlesc($event->description);
     }
 
     foreach my $source ($event->sources->@*) {
       $div->tag('div',
-        class => 'spectrum-Body spectrum-Body--sizeS spectrum-Body--serif')
-        ->cdata($source);
+        class =>
+          'sources spectrum-Body spectrum-Body--sizeS spectrum-Body--serif')
+        ->cdata_noxmlesc($source);
     }
   }
 

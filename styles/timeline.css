@@ -34,17 +34,41 @@ iconify-icon {
 div.timeline-card svg .spectrum-Heading--sizeM,
 div.timeline-card svg .spectrum-Body--sizeM,
 div.timeline-card svg .spectrum-Detail--sizeM {
-  --mod-heading-font-size: 10px;
-  --mod-body-font-size: 10px;
-  --mod-detail-font-size: 10px;
+  --mod-heading-font-size: 12px;
+  --mod-body-font-size: 12px;
+  --mod-detail-font-size: 12px;
 }
 
 div.timeline-card svg .spectrum-Heading--sizeS,
 div.timeline-card svg .spectrum-Body--sizeS,
 div.timeline-card svg .spectrum-Detail--sizeS {
-  --mod-heading-font-size: 8px;
-  --mod-body-font-size: 8px;
-  --mod-detail-font-size: 8px;
+  --mod-heading-font-size: 10px;
+  --mod-body-font-size: 10px;
+  --mod-detail-font-size: 10px;
+}
+
+foreignObject div.spectrum-Body {
+  --mod-body-margin-end: 0;
+}
+
+foreignObject div.spectrum-Body.description,
+foreignObject div.spectrum-Body.sources {
+  text-align: left;
+}
+
+foreignObject div.spectrum-Body.description blockquote {
+  margin-inline: 2em 0;
+  margin-block: 1px;
+}
+
+div.spectrum-Body ul {
+  margin-block: 0;
+  padding-inline: 2em 0;
+  text-align: left;
+}
+
+div.spectrum-Body li.spectrum-Body {
+  margin-block: 0;
 }
 
 /* type-based colors (fallbacks) */
@@ -151,11 +175,6 @@ circle {
 
 .node rect {
   fill: var(--category-color);
-  fill-opacity: 0.1;
-}
-
-.node.england rect {
-  fill: url("#grad_scotland-45");
   fill-opacity: 0.1;
 }
 

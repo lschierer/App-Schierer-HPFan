@@ -110,14 +110,35 @@ class App::Schierer::HPFan::Model::History::YAML :
     my $sortval = $date->sortval;
     $self->logger->debug("sortval is $sortval");
 
+    my $description = $object->{description} if exists $object->{description};
+    $description = $mv->format_string(
+      $description,
+      {
+        asXHTML      => 1,
+        sizeTemplate => 'timeline',
+      }
+    );
+
+    my $source = $object->{source} if exists $object->{source};
+    $source = $mv->format_string(
+      $source,
+      {
+        asXHTML      => 1,
+        sizeTemplate => 'timeline',
+      }
+    );
+
     my $id = sprintf('%s-%s', $file->basename(qr/\.ya?ml$/), $index);
     $events->{$id} = App::Schierer::HPFan::Model::History::Event->new(
       id          => $id,
       blurb       => $object->{blurb},
       sortval     => $sortval,
       event_class => join(' ', @types),
+      description => $description,
+      sources     => [$source],
     );
     $events->{$id}->set_date($date);
+
   }
 
   method getDate ($index, $object, $file) {
