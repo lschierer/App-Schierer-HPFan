@@ -3,6 +3,7 @@ use utf8::all;
 use experimental qw(class);
 require App::Schierer::HPFan::Model::Gramps::Event::Reference;
 require App::Schierer::HPFan::Model::Gramps::Person::Reference;
+require App::Schierer::HPFan::Model::Gramps::Name;
 
 class App::Schierer::HPFan::Model::Gramps::Person :
   isa( App::Schierer::HPFan::Logger) {
@@ -12,17 +13,17 @@ class App::Schierer::HPFan::Model::Gramps::Person :
 
   field $data :param //= undef;
 
-  field $handle          : reader //= undef;
+  field $birth_ref_index //= undef;
+  field $death_ref_index //= undef;
   field $gender          : reader //= 'U';
-  field $gramps_id       : reader //= undef;
   field $given_name      //= undef;
+  field $gramps_id       : reader //= undef;
+  field $handle          : reader //= undef;
+  field $primary_name    : reader //= undef;
   field $surname         //= undef;
 
-
-  field $death_ref_index //= undef;
-  field $birth_ref_index //= undef;
-
   field $addresses      = [];
+  field $alternate_names = [];
   field $attributes     = [];
   field $citation_list  = [];
   field $event_ref_list     = [];
@@ -50,6 +51,11 @@ class App::Schierer::HPFan::Model::Gramps::Person :
     $gender     = $data->{gender} == 1 ? 'M' : $data->{gender} == 0 ? 'F' : 'U';
     $gramps_id  = $data->{gramps_id};
     $handle     = $data->{handle};
+    $primary_name   = App::Schierer::HPFan::Model::Gramps::Name->new(data => $data->{primary_name});
+
+    foreach my $item ($data->{alternate_names}->@*){
+      App::Schierer::HPFan::Model::Gramps::Name->new( data => $item);
+    }
 
     foreach my $item ($data->{citation_list}->@*){
       push @$citation_list, $item;
@@ -75,24 +81,14 @@ class App::Schierer::HPFan::Model::Gramps::Person :
 
   method names() {
     my @names;
-
+    push @names, $primary_name,
+    push @names, $alternate_names->@*;
     return \@names;
-  }    # Return copy
-
-
-
-
-  method primary_name() {
-    # Return the first non-alternate name, or first name if all are alternate
-    for my $name ($self->names->@*) {
-      return $name unless $name->alt;
-    }
-    return scalar(@{ $self->names }) ? $self->names->[0] : undef;
   }
 
   method get_surname() {
     my $last;
-    my $name = $self->primary_name();
+    my $name = $primary_name;
     $self->logger->debug(sprintf(
       'picked name "%s" as primary for "%s"', $name, $self->id));
     foreach my $sn (@{ $name->surnames }) {
@@ -108,13 +104,13 @@ class App::Schierer::HPFan::Model::Gramps::Person :
   }
 
   method display_name() {
-    my $name = $self->primary_name();
+    my $name = $primary_name;
     unless ($name) {
       $self->warning("No name available for " . $self->handle);
       return " ";
     }
     $self->logger->debug(sprintf(
-      'picked name "%s" as primary for "%s"', $name, $self->id));
+      'picked name "%s" as primary for "%s"', $name, $gramps_id));
     my $last;
 
     foreach my $sn (@{ $name->surnames }) {
@@ -138,7 +134,7 @@ class App::Schierer::HPFan::Model::Gramps::Person :
   }
 
   method to_string() {
-    my $primary  = $self->primary_name;
+    my $primary  = $primary_name;
     my $name_str = $primary ? $primary->to_string : "Unknown";
     return
       sprintf("Person[%s]: %s (%s)", $self->handle, $name_str, $self->gender);

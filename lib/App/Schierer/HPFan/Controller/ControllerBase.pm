@@ -37,12 +37,13 @@ package App::Schierer::HPFan::Controller::ControllerBase {
       }
     );
 
+    my $dist_dir = $app->config('distDir');
+    my $db_file  = $dist_dir->child('grampsdb/sqlite.db');
+
     my $gramps_export =
-      $app->config('distDir')->child('share/data/gramps');
+      $app->config('distDir')->child('data/gramps');
     my $gramps_db = $app->config('distDir')->child('grampsdb/sqlite.db');
 
-    my $dist_dir = $self->config('distDir');
-    my $db_file  = $dist_dir->child('grampsdb/sqlite.db');
 
     my $gramps = App::Schierer::HPFan::Model::Gramps->new(
       gramps_export => $gramps_export,
@@ -57,37 +58,37 @@ package App::Schierer::HPFan::Controller::ControllerBase {
 
       $app->helper(gramps => sub { return $gramps });
 
-      $app->helper(
-        person_house => sub ($c, $person) {
-          my %by_handle =
-            %{ $gramps->tags };    # handle => Tag (assumes ->name or similar)
+       $app->helper(
+         person_house => sub ($c, $person) {
+           my %by_handle =
+             %{ $gramps->tags };    # handle => Tag (assumes ->name or similar)
 
-          for my $th (@{ $person->tag_refs // [] }) {
-            my $tag  = $by_handle{$th} or next;
-            my $name = $tag->name // '';
-            $name =~ s/^\s+|\s+$//g;
+           for my $th (@{ $person->tag_list // [] }) {
+             my $tag  = $by_handle{$th} or next;
+             my $name = $tag->name // '';
+             $name =~ s/^\s+|\s+$//g;
 
-            # exact house names
-            return $name
-              if $name =~ /^(?:Gryffindor|Hufflepuff|Ravenclaw|Slytherin)$/;
+             # exact house names
+             return $name
+               if $name =~ /^(?:Gryffindor|Hufflepuff|Ravenclaw|Slytherin)$/;
 
-            # "House: Gryffindor" etc.
-            if ($name =~
-              /^House:\s*(Gryffindor|Hufflepuff|Ravenclaw|Slytherin)\b/i) {
-              return ucfirst lc $1;
-            }
-          }
+             # "House: Gryffindor" etc.
+             if ($name =~
+               /^House:\s*(Gryffindor|Hufflepuff|Ravenclaw|Slytherin)\b/i) {
+               return ucfirst lc $1;
+             }
+           }
 
-          return 'Unknown House';
-        }
-      );
+           return 'Unknown House';
+         }
+       );
 
       $app->helper(
         person_blood_status => sub ($c, $person) {
           my %by_handle =
             %{ $gramps->tags };    # handle => Tag (assumes ->name or similar)
 
-          for my $th (@{ $person->tag_refs // [] }) {
+          for my $th (@{ $person->tag_list // [] }) {
             my $tag  = $by_handle{$th} or next;
             my $name = $tag->name // '';
             $name =~ s/^\s+|\s+$//g;
@@ -107,7 +108,7 @@ package App::Schierer::HPFan::Controller::ControllerBase {
           my %by_handle =
             %{ $gramps->tags };    # handle => Tag (assumes ->name or similar)
 
-          for my $th (@{ $person->tag_refs // [] }) {
+          for my $th (@{ $person->tag_list // [] }) {
             my $tag  = $by_handle{$th} or next;
             my $name = $tag->name // '';
             $name =~ s/^\s+|\s+$//g;

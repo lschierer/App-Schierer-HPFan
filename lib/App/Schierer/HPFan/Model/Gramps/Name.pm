@@ -2,6 +2,7 @@ use v5.42;
 use utf8::all;
 use experimental qw(class);
 require App::Schierer::HPFan::Model::Gramps::Surname;
+require App::Schierer::HPFan::Model::CustomDate;
 
 class App::Schierer::HPFan::Model::Gramps::Name :
   isa(App::Schierer::HPFan::Model::Gramps::Generic) {
@@ -12,54 +13,65 @@ class App::Schierer::HPFan::Model::Gramps::Name :
     'bool'     => sub { $_[0]->_isTrue() },
     'fallback' => 0;
 
-  field $_class        : param;
-  field $call          : reader : param = undef;
-  field $citation_list : param = [];
-  field $date          : reader : param =
-    undef;    # Can be daterange, datespan, dateval, or datestr
-  field $display_as   : param = undef;
-  field $famnick      : reader : param = undef;
-  field $first_name   : reader : param = undef;
-  field $group_as     : reader : param = undef;
-  field $nick         : reader : param = undef;
-  field $note_list    : param = [];
-  field $private      : reader : param = 0;
-  field $sort_as      : reader : param = undef;
-  field $suffix       : reader : param = undef;
-  field $surname_list : param = [];
-  field $title        : reader : param = undef;
-  field $type         : reader : param = "Birth Name";
-  field $alt          : writer : reader;
+  field $data : param;
 
-  field @surnames;
+  field $_class        ;
+  field $alt          : writer : reader;
+  field $call          : reader  = undef;
+  field $date          : reader  = undef;
+  field $display_as    = undef;
+  field $famnick      : reader  = undef;
+  field $first_name   : reader  = undef;
+  field $group_as     : reader  = undef;
+  field $nick         : reader  = undef;
+  field $private      : reader  = 0;
+  field $sort_as      : reader  = undef;
+  field $suffix       : reader  = undef;
+  field $title        : reader  = undef;
+  field $type         : reader  = "Birth Name";
+
+  field $surnames = [];
+  field $citation_list  = [];
+  field $note_list     = [];
+  field $surname_list  = [];
+
 
   ADJUST {
+    $call       = $data->{call};
+    $date       = App::Schierer::HPFan::Model::CustomDate->new(text => $data->{date});
+    $display_as = $data->{display_as};
+    $famnick    = $data->{famnick};
+    $first_name = $data->{first_name};
+    $group_as   = $data->{group_as};
+    $nick       = $data->{nick};
+    $private    = $data->{private} ? 1 : 0;
+    $sort_as    = $data->{sort_as};
+    $suffix     = $data->{suffix};
 
-    foreach my $tn (keys $self->ALLOWED_FIELD_NAMES->%*) {
-      $self->ALLOWED_FIELD_NAMES->{$tn} = undef;
+
+    foreach my $item ($data->{citation_list}->@*){
+      push @$citation_list, $item;
     }
 
-    if (scalar @$surname_list) {
-      foreach my $surname ($surname_list->@*) {
-        my $sn =
-          App::Schierer::HPFan::Model::Gramps::Surname->new($surname->%*);
-        if ($sn) {
-          push @surnames, $sn;
-        }
-      }
+    foreach my $item ($data->{note_list}->@*){
+      push @$note_list, $item;
+    }
+
+    foreach my $item ($data->{surname_list}->@*) {
+      push @{ $surnames }, App::Schierer::HPFan::Model::Gramps::Surname->new( data => $item);
     }
   }
 
-  method surnames() { [@surnames] }
+  method surnames() { [@$surnames] }
 
   method note_refs()     { [@$note_list] }
-  method citation_refs() { [@$citation_list] }
+  method citation_list() { [@$citation_list] }
 
   method primary_surname() {
-    for my $surname (@surnames) {
+    for my $surname (@$surnames) {
       return $surname if $surname->primary;
     }
-    return scalar @surnames ? $surnames[0] : undef;
+    return scalar @$surnames ? $surnames->[0] : undef;
   }
 
   method display {

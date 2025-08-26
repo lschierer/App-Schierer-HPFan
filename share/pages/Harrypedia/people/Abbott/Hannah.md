@@ -22,7 +22,7 @@ or approves of the badges' second message) against her.
 [Salazar]: ../Slytherin/Salazar
 [Ernie]: ../Macmillan
 
-[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>/
+[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
 
 [^211004-15]:
     Mrs. J. K. Rowling.

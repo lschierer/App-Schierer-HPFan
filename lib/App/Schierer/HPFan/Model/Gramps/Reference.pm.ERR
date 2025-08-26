@@ -1,0 +1,28 @@
+Perltidy version is 20250711
+
+lib/App/Schierer/HPFan/Model/Gramps/Reference.pm: Begin Error Output Stream
+
+There is no previous '[' to match a ']' on line 51
+51: $r->{ref_class] = $self->ref_class if defined($self->ref_class);
+                  ^
+
+57: method to_string {
+    ^
+found bareword where operator expected
+
+Missing ';' or ',' above?
+67: final indentation level: 1
+
+Final nesting depth of '{'s is 1
+The most recent un-matched '{' is on line 7 (its closing '}' was not found)
+7: isa(App::Schierer::HPFan::Model::Gramps::Generic) {
+                                                     ^
+
+Table of initial nesting level differences at closing braces.
+This might help localize brace errors if the file was previously formatted.
+line: error=[new brace level]-[old indentation level]
+46: 0
+65: 1
+There may be a missing '}' or extra '{' between lines 46 and 65
+
+67: To save a full .LOG file rerun with -g

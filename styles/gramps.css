@@ -54,6 +54,7 @@ iconify-icon.color-male {
 iconify-icon {
   display: block;
   height: 100%;
+  width: 5em;
   box-sizing: border-box;
 }
 

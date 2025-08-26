@@ -8,7 +8,7 @@
 
 <link rel="stylesheet" href="/css/gramps.css" />
 
-<div class="basic-info spectrum-Card spectrum-Card--horizontal" id="<%= $person->id %>" role="figure">
+<div class="basic-info spectrum-Card spectrum-Card--horizontal" id="<%= $person->gramps_id %>" role="figure">
   <div class="spectrum-Card-preview">
     <iconify-icon icon="<%= $iconName %>" class="<%= $iconClass %>" width="none"></iconify-icon>
   </div>
@@ -23,7 +23,7 @@
         <!-- there are <%= scalar @{ $events } %> events -->
         <ul class="bio">
           <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
-            <strong>ID</strong>: <%= $person->id %>
+            <strong>ID</strong>: <%= $person->gramps_id %>
           </li>
           <% foreach my $event (@{ $events }) { %>
             <!-- <%= $event ? ref $event : 'undefined event'; %> -->

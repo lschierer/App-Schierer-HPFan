@@ -58,8 +58,8 @@ package App::Schierer::HPFan::Controller::People {
           $name
           ? $name->display ne 'Unknown'
               ? $name->display
-              : $person->id
-          : $person->id,
+              : $person->gramps_id
+          : $person->gramps_id,
           $name->suffix ? $name->suffix : '',
         );
         $route =~ s/^\s+|\s+$//g;
@@ -85,7 +85,7 @@ package App::Schierer::HPFan::Controller::People {
   sub _register_routes ($self, $app) {
 
     $logger->debug(__PACKAGE__ . '_register_routes start');
-    foreach my $person (sort { return $a->id cmp $b->id }
+    foreach my $person (sort { return $a->gramps_id cmp $b->gramps_id }
       values %{ $app->gramps->people }) {
 
       my $route = $app->link_target_for_person($person) // '/';
@@ -94,10 +94,10 @@ package App::Schierer::HPFan::Controller::People {
 
       $logger->debug(sprintf(
         'adding route %s for %s with id %s',
-        $route, $title, $person->id
+        $route, $title, $person->gramps_id
       ));
 
-      $app->routes->get($route,=> { id => $person->id, })
+      $app->routes->get($route,=> { id => $person->gramps_id, })
         ->to(controller => 'People', action => 'person_details')
         ->name($rn);
       $app->add_navigation_item({
@@ -228,7 +228,7 @@ s/<svg /<svg preserveAspectRatio="xMidYMid meet" width="100%" height="100%" /;
     );
 
     # Process families (parents)
-    foreach my $family_handle ($person->child_of_refs->@*) {
+    foreach my $family_handle ($person->parent_family_list->@*) {
       my $family = $self->app->gramps->families->{$family_handle};
       next unless $family;
       my $child_ref;

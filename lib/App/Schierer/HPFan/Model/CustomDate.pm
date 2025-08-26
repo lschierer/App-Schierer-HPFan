@@ -211,7 +211,7 @@ class App::Schierer::HPFan::Model::CustomDate :
 
  # Build a YYYY-MM-DD string from a Gramps date triple (d,m,y), anchoring zeros.
   sub _iso_from_triplet ($d, $m, $y) {
-    my $yy = ($y || 0);
+    my $yy = ($y || 9999);
     my $mm = ($m || 1);
     my $dd = ($d || 1);
     return sprintf('%04d-%02d-%02d', $yy, $mm, $dd);
@@ -254,6 +254,12 @@ class App::Schierer::HPFan::Model::CustomDate :
   }
 
   method gregorian_to_jdn {
+    unless($year > 0) {
+      $year = 9999;
+      $month = 12;
+      $day = 31;
+    }
+
     $year  = sprintf('%04d', $year);
     $month = sprintf('%02d', $month);
     $day   = sprintf('%02d', $day);

@@ -12,32 +12,23 @@ class App::Schierer::HPFan::Model::Gramps::Surname :
     'cmp'      => \&_equality,
     'fallback' => 0;
 
-  field $_class     : param;
-  field $connector  : param : reader = undef;
-  field $origintype : param;
-  field $prefix     : param : reader = undef;
-  field $primary    : param : reader = 0;
-  field $surname    : param : reader //= undef;
+  field $data : param;
+  field $_class = undef;
+  field $connector  : reader //= undef;
+  field $origintype : reader //= undef;
+  field $prefix     : reader //= undef;
+  field $primary    : reader //= 0;
+  field $surname    : reader //= undef;
 
-  field $derivation : param : reader = "Unknown";
+  field $derivation : reader //= "Unknown";
 
   ADJUST {
-    my @names;
-    push @names, keys $self->ALLOWED_FIELD_NAMES->%*;
-    foreach my $tn (@names) {
-      $self->ALLOWED_FIELD_NAMES->{$tn} = undef;
-    }
-
-    # Validate derivation types from DTD comment
-    my %valid_derivations = map { $_ => 1 } qw(
-      Unknown Inherited Given Taken Patronymic Matronymic Feudal
-      Pseudonym Patrilineal Matrilineal Occupation Location
-    );
-    $derivation = $origintype->{'string'}
-      && length($origintype->{'string'}) ? $origintype->{'string'} : undef;
-    if ($derivation && !$valid_derivations{$derivation}) {
-      $self->logger->logcroak("Invalid derivation type: '$derivation'");
-    }
+    $_class     = $data->{_class};
+    $connector  = $data->{connector};
+    $origintype = $data->{origintype};
+    $prefix     = $data->{prefix};
+    $primary    = $data->{primary};
+    $surname    = $data->{surname};
   }
 
   method display_name {
@@ -54,7 +45,8 @@ class App::Schierer::HPFan::Model::Gramps::Surname :
 
   method to_string() {
     my @parts;
-
+    $self->logger->debug("prefix is $prefix");
+    $self->logger->debug("surname is $surname");
     push @parts, $prefix if $prefix;
     push @parts, $surname;
 

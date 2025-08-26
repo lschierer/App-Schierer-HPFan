@@ -106,7 +106,7 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
       }
 
       # ---- tags → people
-      # if your person->tag_refs returns objects too, extract their handles;
+      # if your person->tag_list returns objects too, extract their handles;
       # otherwise if they’re already strings, this is fine
       my %seen_t;
       for my $tref ($person->tag_list->@*) {
@@ -128,7 +128,7 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
 
   method find_person_by_id ($id) {
     foreach my $person (values %{$people}) {
-      if ($person->id =~ /$id/i) {
+      if ($person->gramps_id =~ /$id/i) {
         return $person;
       }
     }
@@ -176,7 +176,7 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
       sprintf('find_events_for_person called for "%s"', $person->gramps_id));
 
     my @pe;
-    foreach my $cr ($person->event_refs->@*) {
+    foreach my $cr ($person->event_ref_list->@*) {
       my $event = $events->{ $cr->ref };
       $self->logger->debug(sprintf(
         'found event "%s" for handle "%s".',
@@ -194,7 +194,7 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
 
   method find_families_as_parent ($person) {
     my @pf;
-    foreach my $fr (@{ $person->parent_in_refs() }) {
+    foreach my $fr (@{ $person->family_list() }) {
       push @pf, $families->{$fr};
     }
     return \@pf;
@@ -202,7 +202,7 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
 
   method find_families_as_child ($person) {
     my @cf;
-    foreach my $fr (@{ $person->child_of_refs() }) {
+    foreach my $fr (@{ $person->parent_family_list() }) {
       push @cf, $families->{$fr};
     }
     return \@cf;
@@ -244,8 +244,8 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     $self->logger->debug(
       sprintf('finding birthday for %s', $person->gramps_id));
     my $br = $person->birth_ref_index;
-    if ($br >= 0 && scalar @{ $person->event_refs } >= $br) {
-      my $er    = $person->event_refs->[$br];
+    if ($br >= 0 && scalar @{ $person->event_ref_list } >= $br) {
+      my $er    = $person->event_ref_list->[$br];
       my $event = $events->{ $er->ref };
       if ($event) {
         $self->logger->debug(sprintf(
@@ -274,8 +274,8 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     $self->logger->debug(
       sprintf('finding deathday for %s', $person->gramps_id));
     my $br = $person->death_ref_index;
-    if ($br >= 0 && scalar @{ $person->event_refs } >= $br) {
-      my $er    = $person->event_refs->[$br];
+    if ($br >= 0 && scalar @{ $person->event_ref_list } >= $br) {
+      my $er    = $person->event_ref_list->[$br];
       my $event = $events->{ $er->ref };
       if ($event) {
         $self->logger->debug(sprintf(
@@ -308,10 +308,10 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     $self->_import_events();
     $self->_import_families();
     $self->_import_notes();
-    $self->_import_people();
     $self->_import_repositories();
     $self->_import_sources();
     $self->_import_tags();
+    $self->_import_people();
   }
 
   method _import_people () {
@@ -333,7 +333,7 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
 
       my $data   = $file->slurp_utf8;
       my $ih = JSON::PP->new->utf8->allow_blessed->decode($data);
-      $people->{ $ih->{gramps_id} } = App::Schierer::HPFan::Model::Gramps::Person->new( data => $ih);
+      $people->{ $ih->{handle} } = App::Schierer::HPFan::Model::Gramps::Person->new( data => $ih);
     }
 
     $self->logger->info(sprintf('imported %s people.', scalar keys %{$people}));
