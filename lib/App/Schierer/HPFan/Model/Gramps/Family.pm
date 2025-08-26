@@ -73,7 +73,7 @@ class App::Schierer::HPFan::Model::Gramps::Family :
 
       foreach my $item ($hash->{'event_ref_list'}->@*) {
         push @$event_refs,
-          App::Schierer::HPFan::Model::Gramps::Event::Reference->new($item->%*);
+          App::Schierer::HPFan::Model::Gramps::Event::Reference->new( data => $item);
       }
 
       foreach my $item ($hash->{'child_ref_list'}->@*) {

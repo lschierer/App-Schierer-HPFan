@@ -64,17 +64,17 @@ package App::Schierer::HPFan::Controller::Families {
   sub _register_routes ($self, $app) {
     $logger->debug(__PACKAGE__ . '_register_routes start');
     my %family_names;
-    foreach my $person (sort { return $a->id cmp $b->id; }
+    foreach my $person (sort { return $a->gramps_id cmp $b->gramps_id; }
       values %{ $app->gramps->people }) {
       $logger->debug(
-        sprintf('inspecting %s for presence of family name', $person->id));
+        sprintf('inspecting %s for presence of family name', $person->gramps_id));
       my $name = $person->primary_name;
       if ($name) {
         my $sn = $name->primary_surname;
         if ($sn && length($sn->display_name)) {
           $logger->debug(sprintf(
             'found family name "%s" in person %s',
-            $sn->display_name, $person->id
+            $sn->display_name, $person->gramps_id
           ));
           $family_names{ $sn->display_name }++;
         }
@@ -102,9 +102,9 @@ package App::Schierer::HPFan::Controller::Families {
     # Find all people with "Unknown" as surname
     my @gap_people;
     foreach
-      my $p (sort { $a->id cmp $b->id } values %{ $c->app->gramps->people }) {
-      $logger->debug(sprintf('inspecting %s', $p->id));
-      my $id              = $p->id;
+      my $p (sort { $a->gramps_id cmp $b->gramps_id } values %{ $c->app->gramps->people }) {
+      $logger->debug(sprintf('inspecting %s', $p->gramps_id));
+      my $id              = $p->gramps_id;
       my $primary_surname = $p->get_surname;
       if (!$primary_surname) {
         push @gap_people, $p;
@@ -192,7 +192,7 @@ package App::Schierer::HPFan::Controller::Families {
           && $sn->display_name eq $family_name) {
           $logger->debug(sprintf(
             'person %s with lastname %s matches %s',
-            $person->id, $sn->display_name, $family_name
+            $person->gramps_id, $sn->display_name, $family_name
           ));
           push @members, $person;
         }
@@ -252,7 +252,7 @@ package App::Schierer::HPFan::Controller::Families {
   }
 
   sub _has_parents_in_family ($self, $person, $member_lookup) {
-    foreach my $family_handle (@{ $person->child_of_refs }) {
+    foreach my $family_handle (@{ $person->parent_family_list }) {
       my $family = $self->app->gramps->families->{$family_handle};
       next unless $family;
 
@@ -329,7 +329,7 @@ package App::Schierer::HPFan::Controller::Families {
     my @children;
 
     # Look through families where this person is a parent
-    foreach my $family_handle ($person->parent_in_refs->@*) {
+    foreach my $family_handle ($person->family_list->@*) {
       my $family = $self->app->gramps->families->{$family_handle};
       next unless $family;
 

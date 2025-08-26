@@ -3,7 +3,7 @@ use v5.42;
 use utf8::all;
 use experimental qw(class);
 
-class App::Schierer::HPFan::Model::Gramps::Event::Role::Type :
+class App::Schierer::HPFan::Model::Gramps::Event::Reference::Role::Type :
   isa(App::Schierer::HPFan::Logger) {
   use Carp ();
   use Readonly;

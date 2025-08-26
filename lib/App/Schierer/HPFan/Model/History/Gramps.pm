@@ -230,7 +230,7 @@ class App::Schierer::HPFan::Model::History::Gramps :
   method _primary_person_for ($e) {
     # via your $people_by_event index; find role 'Primary'
     for my $person ($gramps->people_by_event->{ $e->handle }->@*) {
-      for my $er ($person->event_refs->@*) {
+      for my $er ($person->event_ref_list->@*) {
         if ($er->ref eq $e->handle) {
           $self->logger->debug(sprintf(
             'potential match: %s and %s', $er->ref, $e->handle));

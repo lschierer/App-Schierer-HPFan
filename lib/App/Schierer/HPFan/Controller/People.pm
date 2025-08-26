@@ -278,7 +278,7 @@ s/<svg /<svg preserveAspectRatio="xMidYMid meet" width="100%" height="100%" /;
       if (my $father_handle = $family->father_handle) {
         my $father = $self->people->{$father_handle};
         if ($father) {
-          $logger->debug("found father $father_handle " . $father->id);
+          $logger->debug("found father $father_handle " . $father->gramps_id);
           $self->_add_ancestors_to_graph($graph, $father, $visited,
             $generation + 1,
             $generation_map);
@@ -290,7 +290,7 @@ s/<svg /<svg preserveAspectRatio="xMidYMid meet" width="100%" height="100%" /;
       if (my $mother_handle = $family->mother_handle) {
         my $mother = $self->people->{$mother_handle};
         if ($mother) {
-          $logger->debug("found mother $mother_handle " . $mother->id);
+          $logger->debug("found mother $mother_handle " . $mother->gramps_id);
           $self->_add_ancestors_to_graph($graph, $mother, $visited,
             $generation + 1,
             $generation_map);

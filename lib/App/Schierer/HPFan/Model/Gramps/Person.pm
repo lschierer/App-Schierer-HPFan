@@ -13,8 +13,8 @@ class App::Schierer::HPFan::Model::Gramps::Person :
 
   field $data :param //= undef;
 
-  field $birth_ref_index //= undef;
-  field $death_ref_index //= undef;
+  field $birth_ref_index : reader //= undef;
+  field $death_ref_index : reader //= undef;
   field $gender          : reader //= 'U';
   field $given_name      //= undef;
   field $gramps_id       : reader //= undef;
@@ -59,6 +59,10 @@ class App::Schierer::HPFan::Model::Gramps::Person :
 
     foreach my $item ($data->{citation_list}->@*){
       push @$citation_list, $item;
+    }
+
+    foreach my $item ($data->{event_ref_list}->@*){
+      push @$event_ref_list, App::Schierer::HPFan::Model::Gramps::Event::Reference->new( data => $item);
     }
 
     foreach my $item ($data->{family_list}->@*){
