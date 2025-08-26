@@ -11,17 +11,17 @@ require XML::LibXML;
 require App::Schierer::HPFan::Logger::Config;
 use namespace::autoclean;
 
-class App::Schierer::HPFan::Data :isa(App::Schierer::HPFan::Logger){
+class App::Schierer::HPFan::Data : isa(App::Schierer::HPFan::Logger) {
   use Carp;
   use Log::Log4perl;
-  use List::AllUtils qw( first any );
+  use List::AllUtils         qw( first any );
   use DBD::SQLite::Constants qw/:dbd_sqlite_string_mode/;
   our $VERSION = 'v0.0.1';
 
   field $dbh;
-  field $gramps_db  : param;
-  field $output     : param;
-  field $debug      : param = 0;
+  field $gramps_db : param;
+  field $output    : param;
+  field $debug     : param = 0;
   field $logger;
 
   ADJUST {
@@ -38,11 +38,10 @@ class App::Schierer::HPFan::Data :isa(App::Schierer::HPFan::Logger){
     $logger = Log::Log4perl->get_logger(__CLASS__);
   }
 
-
   ADJUST {
     # Do not assume we are passed a Path::Tiny object;
     $output = Path::Tiny::path($output);
-    if(!$output->is_dir) {
+    if (!$output->is_dir) {
       $self->logger->logcroak("output directory $output is not a directory.");
     }
     $gramps_db = Path::Tiny::path($gramps_db);
@@ -75,8 +74,10 @@ class App::Schierer::HPFan::Data :isa(App::Schierer::HPFan::Logger){
   }
 
   method execute {
-     $self->logger->info("App::Schierer::HPFan::Data starting processing of $gramps_db");
-     $self->get_person_data();
+    $self->logger->info(
+      "App::Schierer::HPFan::Data starting processing of $gramps_db");
+    $self->get_person_data();
+    $self->get_family_data();
   }
 
   method get_person_data {
@@ -160,27 +161,32 @@ class App::Schierer::HPFan::Data :isa(App::Schierer::HPFan::Logger){
     $self->logger->debug("finished processing of repository table");
   }
 
-  method _get_data_with_gramps_id($tableName, $target){
+  method _get_data_with_gramps_id($tableName, $target) {
     my @tableNames = qw(
-    citation      gender_stats  name_group    place         source
-    event         media         note          reference     tag
-    family        metadata      person        repository
+      citation      gender_stats  name_group    place         source
+      event         media         note          reference     tag
+      family        metadata      person        repository
     );
     unless (any { $_ eq $tableName } @tableNames) {
-      $self->logger->error(sprintf('tableName %s must be one of %s',
-      $tableName, join(' ', @tableNames) ));
+      $self->logger->error(sprintf(
+        'tableName %s must be one of %s',
+        $tableName, join(' ', @tableNames)
+      ));
       return;
     }
-    my $all_entries = $dbh->selectcol_arrayref("SELECT gramps_id FROM ${tableName}");
+    my $all_entries =
+      $dbh->selectcol_arrayref("SELECT gramps_id FROM ${tableName}");
 
     foreach my $entry (@$all_entries) {
       $self->logger->debug(" processing $entry");
-      my $sql = "SELECT json_data FROM $tableName WHERE gramps_id = ?";
+      my $sql    = "SELECT json_data FROM $tableName WHERE gramps_id = ?";
       my $result = $dbh->selectrow_hashref($sql, undef, $entry);
-      my $hash = JSON::PP->new->decode($result->{'json_data'});
-      $self->logger->debug(sprintf('hash of %s is %s', $entry, Data::Printer::np($hash)));
+      my $hash   = JSON::PP->new->decode($result->{'json_data'});
+      $self->logger->debug(
+        sprintf('hash of %s is %s', $entry, Data::Printer::np($hash)));
       my $entry_target = $target->child("${entry}.json");
-      $entry_target->spew_utf8(JSON::PP->new->utf8->pretty->canonical->encode($hash));
+      $entry_target->spew_utf8(
+        JSON::PP->new->utf8->pretty->canonical->encode($hash));
     }
   }
 

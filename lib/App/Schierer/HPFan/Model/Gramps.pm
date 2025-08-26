@@ -48,7 +48,8 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
     # Do not assume we are passed a Path::Tiny object;
     $gramps_export = Path::Tiny::path($gramps_export);
     if (!$gramps_export->is_dir) {
-      $self->logger->logcroak("gramps_export $gramps_export is not a directory.");
+      $self->logger->logcroak(
+        "gramps_export $gramps_export is not a directory.");
     }
     $gramps_db = Path::Tiny::path($gramps_db);
     if (!$gramps_db->is_file) {
@@ -331,23 +332,38 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
       $file = Path::Tiny::path(Encode::decode('utf8', $file));
       $self->logger->debug(sprintf('%s importing %s', ref($self), $file));
 
-      my $data   = $file->slurp_utf8;
-      my $ih = JSON::PP->new->utf8->allow_blessed->decode($data);
-      $people->{ $ih->{handle} } = App::Schierer::HPFan::Model::Gramps::Person->new( data => $ih);
+      my $data = $file->slurp_utf8;
+      my $ih   = JSON::PP->new->utf8->allow_blessed->decode($data);
+      $people->{ $ih->{handle} } =
+        App::Schierer::HPFan::Model::Gramps::Person->new(data => $ih);
     }
 
     $self->logger->info(sprintf('imported %s people.', scalar keys %{$people}));
   }
 
   method _import_families () {
-    my $all_entries = $dbh->selectcol_arrayref("SELECT handle FROM family");
+    my $rule = Path::Iterator::Rule->new;
+    $rule->file->readable->nonempty->name('*.json');
+    $rule->file->nonempty;
+    my $iter = $rule->iter(
+      $gramps_export->child('families'),
+      {
+        follow_symlinks => 0,
+        sorted          => 1,
+      }
+    );
 
-    foreach my $handle (@$all_entries) {
-      $families->{$handle} =
-        App::Schierer::HPFan::Model::Gramps::Family->new(handle => $handle);
-      $families->{$handle}->set_dbh($dbh);
-      $families->{$handle}->parse_json_data;
+    while (defined(my $file = $iter->())) {
+      # work around for UTF8 filenames not importing correctly by default.
+      $file = Path::Tiny::path(Encode::decode('utf8', $file));
+      $self->logger->debug(sprintf('%s importing %s', ref($self), $file));
+
+      my $data = $file->slurp_utf8;
+      my $ih   = JSON::PP->new->utf8->allow_blessed->decode($data);
+      $families->{ $ih->{handle} } =
+        App::Schierer::HPFan::Model::Gramps::Family->new(data => $ih);
     }
+
     $self->logger->info(
       sprintf('imported %s families.', scalar keys %{$families}));
   }

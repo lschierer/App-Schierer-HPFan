@@ -10,7 +10,7 @@ package App::Schierer::HPFan::Model::Gramps::Utilities {
   use Exporter qw(import);
 
   our @EXPORT      = qw( event_role event_type );
-  our %EXPORT_TAGS = (all_funcs => [ @EXPORT ]);
+  our %EXPORT_TAGS = (all_funcs => [@EXPORT]);
 
   our $logger = Log::Log4perl->get_logger(__PACKAGE__);
 

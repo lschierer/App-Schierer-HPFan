@@ -95,7 +95,6 @@ package App::Schierer::HPFan {
     # Helper for the class list tables
     $self->plugin('App::Schierer::HPFan::Plugins::ClassLists');
 
-
     # Last the Static Pages
     $self->plugin('App::Schierer::HPFan::Plugins::StaticPages');
     # Register last for lowest priority

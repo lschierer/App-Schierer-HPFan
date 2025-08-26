@@ -254,10 +254,10 @@ class App::Schierer::HPFan::Model::CustomDate :
   }
 
   method gregorian_to_jdn {
-    unless($year > 0) {
-      $year = 9999;
+    unless ($year > 0) {
+      $year  = 9999;
       $month = 12;
-      $day = 31;
+      $day   = 31;
     }
 
     $year  = sprintf('%04d', $year);

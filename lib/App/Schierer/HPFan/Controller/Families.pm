@@ -67,7 +67,10 @@ package App::Schierer::HPFan::Controller::Families {
     foreach my $person (sort { return $a->gramps_id cmp $b->gramps_id; }
       values %{ $app->gramps->people }) {
       $logger->debug(
-        sprintf('inspecting %s for presence of family name', $person->gramps_id));
+        sprintf(
+          'inspecting %s for presence of family name', $person->gramps_id
+        )
+      );
       my $name = $person->primary_name;
       if ($name) {
         my $sn = $name->primary_surname;
@@ -101,8 +104,8 @@ package App::Schierer::HPFan::Controller::Families {
     $logger->debug(__PACKAGE__ . 'genealogical_gaps start');
     # Find all people with "Unknown" as surname
     my @gap_people;
-    foreach
-      my $p (sort { $a->gramps_id cmp $b->gramps_id } values %{ $c->app->gramps->people }) {
+    foreach my $p (sort { $a->gramps_id cmp $b->gramps_id }
+      values %{ $c->app->gramps->people }) {
       $logger->debug(sprintf('inspecting %s', $p->gramps_id));
       my $id              = $p->gramps_id;
       my $primary_surname = $p->get_surname;

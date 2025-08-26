@@ -15,30 +15,29 @@ class App::Schierer::HPFan::Model::Gramps::Name :
 
   field $data : param;
 
-  field $_class        ;
-  field $alt          : writer : reader;
-  field $call          : reader  = undef;
-  field $date          : reader  = undef;
-  field $display_as    = undef;
-  field $famnick      : reader  = undef;
-  field $first_name   : reader  = undef;
-  field $group_as     : reader  = undef;
-  field $nick         : reader  = undef;
-  field $private      : reader  = 0;
-  field $sort_as      : reader  = undef;
-  field $suffix       : reader  = undef;
-  field $title        : reader  = undef;
-  field $type         : reader  = "Birth Name";
+  field $_class;
+  field $alt  : writer : reader;
+  field $call : reader = undef;
+  field $date : reader = undef;
+  field $display_as = undef;
+  field $famnick    : reader = undef;
+  field $first_name : reader = undef;
+  field $group_as   : reader = undef;
+  field $nick       : reader = undef;
+  field $private    : reader = 0;
+  field $sort_as    : reader = undef;
+  field $suffix     : reader = undef;
+  field $title      : reader = undef;
+  field $type       : reader = "Birth Name";
 
-  field $surnames = [];
-  field $citation_list  = [];
+  field $surnames      = [];
+  field $citation_list = [];
   field $note_list     = [];
   field $surname_list  = [];
 
-
   ADJUST {
-    $call       = $data->{call};
-    $date       = App::Schierer::HPFan::Model::CustomDate->new(text => $data->{date});
+    $call = $data->{call};
+    $date = App::Schierer::HPFan::Model::CustomDate->new(text => $data->{date});
     $display_as = $data->{display_as};
     $famnick    = $data->{famnick};
     $first_name = $data->{first_name};
@@ -48,17 +47,17 @@ class App::Schierer::HPFan::Model::Gramps::Name :
     $sort_as    = $data->{sort_as};
     $suffix     = $data->{suffix};
 
-
-    foreach my $item ($data->{citation_list}->@*){
+    foreach my $item ($data->{citation_list}->@*) {
       push @$citation_list, $item;
     }
 
-    foreach my $item ($data->{note_list}->@*){
+    foreach my $item ($data->{note_list}->@*) {
       push @$note_list, $item;
     }
 
     foreach my $item ($data->{surname_list}->@*) {
-      push @{ $surnames }, App::Schierer::HPFan::Model::Gramps::Surname->new( data => $item);
+      push @{$surnames},
+        App::Schierer::HPFan::Model::Gramps::Surname->new(data => $item);
     }
   }
 
