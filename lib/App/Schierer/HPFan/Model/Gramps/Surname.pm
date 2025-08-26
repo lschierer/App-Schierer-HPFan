@@ -3,7 +3,7 @@ use utf8::all;
 use experimental qw(class);
 
 class App::Schierer::HPFan::Model::Gramps::Surname :
-  isa(App::Schierer::HPFan::Model::Gramps::Generic) {
+  isa(App::Schierer::HPFan::Logger) {
   use Carp;
   use overload
     '""'       => \&to_string,

@@ -113,13 +113,14 @@ class App::Schierer::HPFan::View::Timeline::PositionHelpers
         for my $fy (@yf) {
           my $dy = $fy->($i, $W, $H);
 
+          # Up-right
+          my $k2 = int($dx) . ',' . int(-$dy);
+          push @candidates, [$dx, -$dy] unless $seen{$k2}++;
+
           # Down-right
           my $k1 = int($dx) . ',' . int(+$dy);
           push @candidates, [$dx, +$dy] unless $seen{$k1}++;
 
-          # Up-right
-          my $k2 = int($dx) . ',' . int(-$dy);
-          push @candidates, [$dx, -$dy] unless $seen{$k2}++;
         }
       }
 
@@ -337,20 +338,7 @@ class App::Schierer::HPFan::View::Timeline::PositionHelpers
       $lines += $dl unless ($dl < 0);
     }
 
-    my $sl  = scalar @{ $event->sources };
-    my $stl = 0;
-    foreach my $source (@{ $event->sources }) {
-      my $text_only = $hs->parse($source);
-      if ($source =~ m{<ul\b}i) {
-        my $n =()= ($source =~ m{<li\b}ig);
-        $self->logger->debug(
-          'source list found, adding more space to ' . $event->id);
-        $lines += $n;
-      }
-      $stl += ceil((length($text_only) / $tc));
-    }
-    # add in one extra, it seems to help
-    $sl = max($sl, $stl) + 1;
+    my $sl = 2;
     $self->logger->debug("sources adding $sl to lines for " . $event->id);
     $lines += $sl unless ($sl < 0);
 

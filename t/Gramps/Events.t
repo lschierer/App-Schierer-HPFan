@@ -32,11 +32,12 @@ BEGIN { use_ok('App::Schierer::HPFan::Model::Gramps') }
 # its man page ( perldoc Test::More ) for help writing this test script.
 
 
+my $gramps_dir = './share/data/gramps';
 my $gramps_file = './share/potter_universe.gramps';
 my $gramps_db   = './share/grampsdb/sqlite.db';
 
 my $gramps = App::Schierer::HPFan::Model::Gramps->new(
-  gramps_export => $gramps_file,
+  gramps_export => $gramps_dir,
   gramps_db     => $gramps_db,
 );
 

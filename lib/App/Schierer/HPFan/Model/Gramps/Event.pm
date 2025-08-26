@@ -1,13 +1,11 @@
 use v5.42;
 use utf8::all;
 use experimental qw(class);
-require App::Schierer::HPFan::Model::Gramps::Note::Reference;
-require App::Schierer::HPFan::Model::Gramps::Place::Reference;
-require App::Schierer::HPFan::Model::Gramps::Object::Reference;
 require App::Schierer::HPFan::Model::Gramps::Event::Type;
+require App::Schierer::HPFan::Model::CustomDate;
 
 class App::Schierer::HPFan::Model::Gramps::Event :
-  isa(App::Schierer::HPFan::Model::Gramps::Generic) {
+  isa(App::Schierer::HPFan::Logger) {
   use Carp;
   use List::AllUtils qw( any );
   use overload
@@ -18,73 +16,55 @@ class App::Schierer::HPFan::Model::Gramps::Event :
     'fallback' => 1,
     'nomethod' => sub { croak "No overload method for $_[3]" };
 
-  field $place_ref : reader = undef;    # handle reference to place
-  field $cause     : reader = undef;
-  field $attributes = [];               # unused, for future growth
-  field $obj_refs   = [];
+  field $data : param;
+
+  field $change       : reader //= undef;
+  field $date         : reader //= undef;
+  field $description  : reader //= undef;
+  field $gramps_id    : reader //= undef;
+  field $handle       : reader //= undef;
+  field $place        : reader //= undef;
+  field $private      : reader //= 0;
+  field $type         : reader //= undef;
+
+  field $place_ref : reader = undef;
+
+  field $attribute_list = [];
+  field $citation_list  = [];
+  field $note_list      = [];
+  field $tag_list       = [];
+
+  method attribute_list   { [ $attribute_list->@* ] }
+  method citation_list    { [ $citation_list->@* ] }
+  method note_list        { [ $note_list->@* ] }
+  method tag_list()       { [ $tag_list->@* ] }
 
   ADJUST {
-    my @desired = qw( gramps_id description place change  private json_data);
-    my @names;
-    push @names, @desired;
-    push @names, keys $self->ALLOWED_FIELD_NAMES->%*;
-    foreach my $tn (@names) {
-      if (any { $_ eq $tn } @desired) {
-        $self->ALLOWED_FIELD_NAMES->{$tn} = 1;
-      }
-      else {
-        $self->ALLOWED_FIELD_NAMES->{$tn} = undef;
-      }
+    $change       = $data->{change};
+    $date         = App::Schierer::HPFan::Model::CustomDate->new( text => $data->{date});
+    $description  = $data->{description};
+    $gramps_id    = $data->{gramps_id};
+    $handle       = $data->{handle};
+    $place        = $data->{place};
+    $private      = $data->{private};
+    $type         = App::Schierer::HPFan::Model::Gramps::Event::Type->new($data->{type}->%*);
+
+    foreach my $item ($data->{attribute_list}->@*) {
+      push @$attribute_list, $item;
+    }
+
+    foreach my $item ($data->{citation_list}->@*) {
+      push @$citation_list, $item;
+    }
+
+    foreach my $item ($data->{note_list}->@*) {
+      push @$note_list, $item;
+    }
+
+    foreach my $item ($data->{tag_list}->@*) {
+      push @$tag_list, $item;
     }
   }
-
-  method gramps_id { $self->_get_field('gramps_id') }
-
-  method description {
-    my $d = $self->_get_field('description');
-    $d =~ s/^\s+|\s+$//g;
-    return $d;
-  }
-  method place   { $self->_get_field('place') }
-  method change  { $self->_get_field('change') }
-  method private { $self->_get_field('private') // 0; }
-
-  method parse_json_data {
-    my $rj = $self->json_data();
-    $self->logger->debug(sprintf('event sees json_data %s', $rj));
-    my $hash = JSON::PP->new->decode($rj);
-    if (reftype($hash) eq 'HASH') {
-      $self->logger->info("got event hash " . Data::Printer::np($hash));
-
-    }
-    else {
-      $self->logger->error(
-        sprintf('parsed event json resulted in %s', reftype($hash)));
-    }
-    return {};
-  }
-
-  method event_refs {
-    my $items = [];
-    if (exists $self->ALLOWED_FIELD_NAMES->{'json_data'}) {
-      my $hash = JSON::PP->new->decode($self->json_data);
-      foreach my $item ($hash->{'event_ref_list'}->@*) {
-        push @$items,
-          App::Schierer::HPFan::Model::Gramps::Event::Reference->new($item->%*);
-      }
-    }
-    return [$items->@*];
-  }
-
-  method type {
-    my $hash = JSON::PP->new->decode($self->json_data);
-    my $type =
-      App::Schierer::HPFan::Model::Gramps::Event::Type->new($hash->{type}->%*);
-    return $type;
-  }
-
-  method attributes() { [@$attributes] }
-  method obj_refs()   { [@$obj_refs] }
 
   method to_string {
     my @parts;
@@ -107,10 +87,11 @@ class App::Schierer::HPFan::Model::Gramps::Event :
     $hr->{type}        = $self->type;
     $hr->{date}        = $self->date;
     $hr->{place_ref}   = $place_ref;
-    $hr->{cause}       = $cause;
     $hr->{description} = $self->description;
-    $hr->{attributes}  = [$attributes->@*];
-    $hr->{obj_refs}    = [$obj_refs->@*];
+    $hr->{attribute_list}   = [$attribute_list->@*];
+    $hr->{citation_list}    = [$citation_list->@*];
+    $hr->{note_list}        = [$note_list->@*];
+    $hr->{tag_list}         = [$tag_list->@*];
     return $hr;
   }
 

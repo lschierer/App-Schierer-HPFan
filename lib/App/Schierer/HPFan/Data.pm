@@ -78,6 +78,12 @@ class App::Schierer::HPFan::Data : isa(App::Schierer::HPFan::Logger) {
       "App::Schierer::HPFan::Data starting processing of $gramps_db");
     $self->get_person_data();
     $self->get_family_data();
+    $self->get_citation_data();
+    $self->get_citation_data();
+    $self->get_repository_data();
+    $self->get_source_data();
+    $self->get_event_data();
+    $self->get_note_data();
   }
 
   method get_person_data {
@@ -153,7 +159,7 @@ class App::Schierer::HPFan::Data : isa(App::Schierer::HPFan::Logger) {
   }
 
   method get_repository_data {
-    my $repositorys = $output->child('repositorys');
+    my $repositorys = $output->child('repositories');
     $repositorys->mkdir({ mode => 0750 });
 
     $self->logger->info("starting processing of repository table");

@@ -5,7 +5,7 @@ require App::Schierer::HPFan::Model::Gramps::Surname;
 require App::Schierer::HPFan::Model::CustomDate;
 
 class App::Schierer::HPFan::Model::Gramps::Name :
-  isa(App::Schierer::HPFan::Model::Gramps::Generic) {
+  isa(App::Schierer::HPFan::Logger) {
   use Carp;
   use overload
     '""'       => \&to_string,

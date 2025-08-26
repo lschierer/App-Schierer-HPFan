@@ -13,50 +13,35 @@ class App::Schierer::HPFan::Model::Gramps::Url :
     '!='  => \&_inequality,
     '""'  => \&as_string;
 
-  field $priv : reader : param //= undef;
-  field $type : reader : param //= undef;
-  field $href : param //= undef;
-  field $description : reader : param //= undef;
-
-  field $XPathContext : param : reader //= undef;
-  field $XPathObject  : param : reader //= undef;
+  field $_class       : param //= undef;
+  field $desc         : reader : param //= undef;
+  field $path         : reader : param //= undef;
+  field $private      : reader : param //= 0;
+  field $type         : reader : param //= undef;
 
   method href {
-    return URI->new($href);
+    return URI->new($path);
   }
+
   ADJUST {
-    if (not(
-      defined($href) or (defined($XPathContext) and defined($XPathObject)))) {
+    if (not defined($path)) {
       $self->logger->logcroak(
-        'Either href, or both XPathContext and XPathObject must be provided.');
+        'path must be provided.');
     }
-    elsif (not defined($href)) {
-      $self->_import();
-    }
-  }
-
-  method _import {
-    $href = $XPathObject->getAttribute('href');
-    $self->logger->logcroak('href is required') unless defined $href;
-
-    $type        = $XPathObject->getAttribute('type');
-    $priv        = $XPathObject->getAttribute('priv') // 0;
-    $description = $XPathObject->getAttribute('description');
-
   }
 
   method as_string {
-    if ($priv) {
+    if ($private) {
       return '';
     }
-    if (not(defined($type) and defined($description))) {
-      return "<$href>";
+    if (not(defined($type) and defined($desc))) {
+      return "<$self->href>";
     }
     else {
       my @parts;
       push @parts, $type;
-      push @parts, "<$href>";
-      push @parts, $description;
+      push @parts, "<$self->href>";
+      push @parts, $desc;
       return join '; ', @parts;
     }
   }

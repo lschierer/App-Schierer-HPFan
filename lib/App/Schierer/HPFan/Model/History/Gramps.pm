@@ -1,10 +1,10 @@
 use v5.42.0;
 use experimental qw(class);
 use utf8::all;
-require Date::Manip;
 require App::Schierer::HPFan::Model::History::Event;
 require App::Schierer::HPFan::Model::Gramps::Note;
 require App::Schierer::HPFan::View::Markdown;
+require App::Schierer::HPFan::Model::History::Gramps::footnote;
 
 class App::Schierer::HPFan::Model::History::Gramps :
   isa(App::Schierer::HPFan::Logger) {
@@ -98,6 +98,11 @@ class App::Schierer::HPFan::Model::History::Gramps :
     my @citations;
     my @description;
     if (my $person = $self->_primary_person_for($e)) {
+      my $fn = App::Schierer::HPFan::Model::History::Gramps::footnote->new(
+        event   => $e,
+        people  => [$person],
+        gramps  => $gramps,
+      );
 
       # handle date
       my @dklparts;
@@ -129,6 +134,7 @@ class App::Schierer::HPFan::Model::History::Gramps :
         origin      => 'Gramps',
         sortval     => $e->date->sortval,
         type        => 'Birth',
+        sources     => $fn->footnote,
         );
       $events->{ $e->gramps_id }->set_date($e->date);
     }
@@ -143,6 +149,11 @@ class App::Schierer::HPFan::Model::History::Gramps :
     if (my $person = $self->_primary_person_for($e)) {
       my @citations;
       my @description;
+      my $fn = App::Schierer::HPFan::Model::History::Gramps::footnote->new(
+        event   => $e,
+        people  => [$person],
+        gramps  => $gramps,
+      );
 
       # set up date
       my @dklparts;
@@ -175,6 +186,7 @@ class App::Schierer::HPFan::Model::History::Gramps :
         blurb       => sprintf('Death of %s', $person->display_name()),
         sortval     => $e->date->sortval,
         description => join('', @description),
+        sources     => $fn->footnote,
         );
       $events->{ $e->gramps_id }->set_date($e->date);
     }
@@ -187,40 +199,21 @@ class App::Schierer::HPFan::Model::History::Gramps :
 
   method _notes_for_event ($e) {
     my @return;
-    foreach my $nr ($e->note_refs->@*) {
-# TODO some note references have other interesting properties beyond being a handle
-      if (Scalar::Util::reftype($nr) eq 'OBJECT'
-        && $nr->isa('App::Schierer::HPFan::Model::Gramps::Note::Reference')) {
-        my $note =
-          App::Schierer::HPFan::Model::Gramps::Note->new(handle => $nr->ref);
-        $note->set_dbh($e->dbh);
-        if ($note->isa('App::Schierer::HPFan::Model::Gramps::Note')) {
-          if (defined($note->gramps_id) && length($note->gramps_id)) {
-            push @return, $note->text->raw
-              if (defined($note->text->raw) && length($note->text->raw));
-            $self->logger->debug(sprintf(
-              'pushed new note to description for %s', $e->gramps_id));
-            foreach my $cr ($note->citation_refs->@*) {
-              #todo handle citations.
-            }
-          }
-        }
-        else {
-          $self->logger->error(sprintf(
-            'note is not a Note object, it shows as ref %s blessed %s.',
-            Scalar::Util::reftype($note),
-            Scalar::Util::blessed($note)
-          ));
+    foreach my $nr ($e->note_list->@*) {
+      my $note = $gramps->notes->{$nr};
+      if ($note->isa('App::Schierer::HPFan::Model::Gramps::Note')) {
+        if (defined($note->gramps_id) && length($note->gramps_id)) {
+          push @return, $note->text->raw if (defined($note->text->raw) && length($note->text->raw));
+          $self->logger->debug(sprintf(
+            'pushed new note to description for %s', $e->gramps_id));
+
         }
       }
       else {
         $self->logger->error(sprintf(
-'nr is not a Note::Reference object, it shows as ref %s blessed %s. isa %s',
-          Scalar::Util::reftype($nr) // 'Undefined',
-          Scalar::Util::blessed($nr) // 'Undefined',
-          $nr->isa('App::Schierer::HPFan::Model::Gramps::Note::Reference')
-          ? 'true'
-          : 'false',
+          'note is not a Note object, it shows as ref %s blessed %s.',
+          Scalar::Util::reftype($note),
+          Scalar::Util::blessed($note)
         ));
       }
     }

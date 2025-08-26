@@ -40,7 +40,7 @@ class App::Schierer::HPFan::View::Timeline
 # testing has demonstrated that the we want to scale vertically by several fractions.
 # the logic of having a css style fractional unit seams sound, I don't want to change
 # that, I just want to use N of them where N is the scaling factor.
-  field $fr_scaling_factor = 2;
+  field $fr_scaling_factor = 2.5;
   ## for collision avoidance
 
   # these are constants
@@ -55,6 +55,8 @@ class App::Schierer::HPFan::View::Timeline
   field $nodes_group;
   field $text_group;
   field $category_groups = {};
+
+  field $footnotes : reader = {};
 
   field $rails = {};
 
@@ -173,6 +175,10 @@ class App::Schierer::HPFan::View::Timeline
         && $event->isa('App::Schierer::HPFan::Model::History::Event')) {
         $self->logger->warn(sprintf('Skipping invalid event: %s', ref($event)));
         next;
+      }
+
+      if(defined($event->sources) && scalar( @{ $event->sources } )){
+        $footnotes->{$event->id} = $event->sources;
       }
 
       my $category = get_category_for_event($self, $event, $self->logger);
@@ -417,12 +423,15 @@ class App::Schierer::HPFan::View::Timeline
       $cc->cdata_noxmlesc($event->description);
     }
 
-    foreach my $source ($event->sources->@*) {
+    if(defined($event->sources) && scalar(@{ $event->sources })){
       $div->tag('div',
-        class =>
-          'sources spectrum-Body spectrum-Body--sizeS spectrum-Body--serif')
-        ->cdata_noxmlesc($source);
+        class=>'sources spectrum-Body spectrum-Body--sizeS spectrum-Body--serif',
+
+      )->cdata_noxmlesc(sprintf('<a href="#footnotes-%s" class="%s">Sources and References</a>',
+        $event->id, 'spectrum-Link spectrum-Link--quiet spectrum-Link--primary',
+      ));
     }
+
   }
 
   method _process_svg_output {

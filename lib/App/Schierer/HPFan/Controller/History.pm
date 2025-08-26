@@ -44,16 +44,20 @@ package App::Schierer::HPFan::Controller::History {
 
     my $build_timeline = sub {
       return if $timeline_cache->{built};
-      $logger->info('Building History timeline from Gramps…');
+      $logger->info('Building History timeline from YAML…');
 
       my $ye = App::Schierer::HPFan::Model::History::YAML->new(
         SourceDir => $app->config('distDir')->child('history'));
       $ye->process();
+
+      $logger->info(sprintf('Recieved %s events from YAML', scalar @{ $ye->events }));
       push @{ $timeline_cache->{events} }, $ye->events->@*;
+      $logger->info('Building History timeline from Gramps…');
 
       my $ge = App::Schierer::HPFan::Model::History::Gramps->new(
         gramps => $app->gramps);
       $ge->process();
+      $logger->info(sprintf('Recieved %s events from Gramps', scalar @{ $ge->events }));
       push @{ $timeline_cache->{events} }, $ge->events->@*;
 
       #both are now done.
@@ -102,8 +106,10 @@ package App::Schierer::HPFan::Controller::History {
     my $timeline_view =
       App::Schierer::HPFan::View::Timeline->new(events => $timeline);
     my $svg = $timeline_view->create();
+    my $footnotes = $timeline_view->footnotes;
 
     $c->stash(svg => $svg);
+    $c->stash(footnotes => $footnotes);
 
     $c->stash(
       svg      => $svg,

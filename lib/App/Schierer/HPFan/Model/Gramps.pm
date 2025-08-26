@@ -381,66 +381,134 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
   }
 
   method _import_citations {
-    my $all_entries = $dbh->selectcol_arrayref("SELECT handle FROM citation");
+    my $rule = Path::Iterator::Rule->new;
+    $rule->file->readable->nonempty->name('*.json');
+    $rule->file->nonempty;
+    my $iter = $rule->iter(
+      $gramps_export->child('citations'),
+      {
+        follow_symlinks => 0,
+        sorted          => 1,
+      }
+    );
 
-    foreach my $handle (@$all_entries) {
-      $citations->{$handle} =
-        App::Schierer::HPFan::Model::Gramps::Citation->new(handle => $handle);
-      $citations->{$handle}->set_dbh($dbh);
-      $citations->{$handle}->parse_json_data;
+    while (defined(my $file = $iter->())) {
+      # work around for UTF8 filenames not importing correctly by default.
+      $file = Path::Tiny::path(Encode::decode('utf8', $file));
+      $self->logger->debug(sprintf('%s importing %s', ref($self), $file));
+
+      my $data = $file->slurp_utf8;
+      my $ih   = JSON::PP->new->utf8->allow_blessed->decode($data);
+      $citations->{ $ih->{handle} } =
+        App::Schierer::HPFan::Model::Gramps::Citation->new(data => $ih);
     }
+
     $self->logger->info(
       sprintf('imported %s citations.', scalar keys %{$citations}));
   }
 
   method _import_sources () {
-    my $all_entries = $dbh->selectcol_arrayref("SELECT handle FROM source");
+    my $rule = Path::Iterator::Rule->new;
+    $rule->file->readable->nonempty->name('*.json');
+    $rule->file->nonempty;
+    my $iter = $rule->iter(
+      $gramps_export->child('sources'),
+      {
+        follow_symlinks => 0,
+        sorted          => 1,
+      }
+    );
 
-    foreach my $handle (@$all_entries) {
-      $sources->{$handle} =
-        App::Schierer::HPFan::Model::Gramps::Source->new(handle => $handle);
-      $sources->{$handle}->set_dbh($dbh);
-      $sources->{$handle}->parse_json_data;
+    while (defined(my $file = $iter->())) {
+      # work around for UTF8 filenames not importing correctly by default.
+      $file = Path::Tiny::path(Encode::decode('utf8', $file));
+      $self->logger->debug(sprintf('%s importing %s', ref($self), $file));
+
+      my $data = $file->slurp_utf8;
+      my $ih   = JSON::PP->new->utf8->allow_blessed->decode($data);
+      $sources->{ $ih->{handle} } =
+        App::Schierer::HPFan::Model::Gramps::Source->new(data => $ih);
     }
     $self->logger->info(
       sprintf('imported %s sources.', scalar keys %{$sources}));
   }
 
   method _import_notes {
-    my $all_entries = $dbh->selectcol_arrayref("SELECT handle FROM note");
+    my $rule = Path::Iterator::Rule->new;
+    $rule->file->readable->nonempty->name('*.json');
+    $rule->file->nonempty;
+    my $iter = $rule->iter(
+      $gramps_export->child('notes'),
+      {
+        follow_symlinks => 0,
+        sorted          => 1,
+      }
+    );
 
-    foreach my $handle (@$all_entries) {
-      $notes->{$handle} =
-        App::Schierer::HPFan::Model::Gramps::Note->new(handle => $handle);
-      $notes->{$handle}->set_dbh($dbh);
-      $notes->{$handle}->parse_json_data;
+    while (defined(my $file = $iter->())) {
+      # work around for UTF8 filenames not importing correctly by default.
+      $file = Path::Tiny::path(Encode::decode('utf8', $file));
+      $self->logger->debug(sprintf('%s importing %s', ref($self), $file));
+
+      my $data = $file->slurp_utf8;
+      my $ih   = JSON::PP->new->utf8->allow_blessed->decode($data);
+      $notes->{ $ih->{handle} } =
+        App::Schierer::HPFan::Model::Gramps::Note->new(data => $ih);
     }
 
     $self->logger->info(sprintf('imported %s notes.', scalar keys %{$notes}));
   }
 
   method _import_repositories {
-    my $all_entries = $dbh->selectcol_arrayref("SELECT handle FROM repository");
+    my $rule = Path::Iterator::Rule->new;
+    $rule->file->readable->nonempty->name('*.json');
+    $rule->file->nonempty;
+    my $iter = $rule->iter(
+      $gramps_export->child('repositories'),
+      {
+        follow_symlinks => 0,
+        sorted          => 1,
+      }
+    );
 
-    foreach my $handle (@$all_entries) {
-      $repositories->{$handle} =
-        App::Schierer::HPFan::Model::Gramps::Repository->new(handle => $handle);
-      $repositories->{$handle}->set_dbh($dbh);
-      $repositories->{$handle}->parse_json_data;
+    while (defined(my $file = $iter->())) {
+      # work around for UTF8 filenames not importing correctly by default.
+      $file = Path::Tiny::path(Encode::decode('utf8', $file));
+      $self->logger->debug(sprintf('%s importing %s', ref($self), $file));
+
+      my $data = $file->slurp_utf8;
+      my $ih   = JSON::PP->new->utf8->allow_blessed->decode($data);
+      $repositories->{ $ih->{handle} } =
+        App::Schierer::HPFan::Model::Gramps::Repository->new(data => $ih);
     }
+
     $self->logger->info(
       sprintf('imported %s repositories.', scalar keys %{$repositories}));
   }
 
   method _import_events () {
-    my $all_entries = $dbh->selectcol_arrayref("SELECT handle FROM event");
+    my $rule = Path::Iterator::Rule->new;
+    $rule->file->readable->nonempty->name('*.json');
+    $rule->file->nonempty;
+    my $iter = $rule->iter(
+      $gramps_export->child('events'),
+      {
+        follow_symlinks => 0,
+        sorted          => 1,
+      }
+    );
 
-    foreach my $handle (@$all_entries) {
-      $events->{$handle} =
-        App::Schierer::HPFan::Model::Gramps::Event->new(handle => $handle);
-      $events->{$handle}->set_dbh($dbh);
-      $events->{$handle}->parse_json_data;
+    while (defined(my $file = $iter->())) {
+      # work around for UTF8 filenames not importing correctly by default.
+      $file = Path::Tiny::path(Encode::decode('utf8', $file));
+      $self->logger->debug(sprintf('%s importing %s', ref($self), $file));
+
+      my $data = $file->slurp_utf8;
+      my $ih   = JSON::PP->new->utf8->allow_blessed->decode($data);
+      $events->{ $ih->{handle} } =
+        App::Schierer::HPFan::Model::Gramps::Event->new(data => $ih);
     }
+
 
     $self->logger->info(sprintf('imported %s events.', scalar keys %{$events}));
   }

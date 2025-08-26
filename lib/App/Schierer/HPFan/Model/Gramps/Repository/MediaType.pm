@@ -2,7 +2,7 @@ use v5.42;
 use utf8::all;
 use experimental qw(class);
 
-class App::Schierer::HPFan::Model::Gramps::Source::MediaType :
+class App::Schierer::HPFan::Model::Gramps::Repository::MediaType :
   isa(App::Schierer::HPFan::Logger) {
   use Carp ();
   use Readonly;

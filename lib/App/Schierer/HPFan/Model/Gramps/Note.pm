@@ -6,7 +6,7 @@ require App::Schierer::HPFan::Model::Gramps::Note::Text;
 require App::Schierer::HPFan::Model::Gramps::Note::Type;
 
 class App::Schierer::HPFan::Model::Gramps::Note :
-  isa(App::Schierer::HPFan::Model::Gramps::Generic) {
+  isa(App::Schierer::HPFan::Logger) {
   use List::AllUtils qw( any );
   use Carp;
   use overload
@@ -17,53 +17,33 @@ class App::Schierer::HPFan::Model::Gramps::Note :
     'fallback' => 1,
     'nomethod' => sub { croak "No overload method for $_[3]" };
 
+    field $data : param;
+
+    field $change     : reader //= undef;
+    field $format     : reader //= undef;
+    field $gramps_id  : reader //= undef;
+    field $handle     : reader //= undef;
+    field $private    : reader //= undef;
+    field $text       : reader //= undef;
+    field $type       : reader //= undef;
+
+    field $tag_list = [];
+
+    method tag_list   { [ $tag_list->@* ] }
+
   ADJUST {
-    my @desired = qw(
-      handle  gramps_id   format
-      change  private     json_data );
+    $change     = $data->{change};
+    $format     = $data->{format};
+    $gramps_id  = $data->{gramps_id};
+    $handle     = $data->{handle};
+    $private    = $data->{private};
+    $text       = App::Schierer::HPFan::Model::Gramps::Note::Text->new($data->{text}->%*);
+    $type       = App::Schierer::HPFan::Model::Gramps::Note::Type->new($data->{type}->%*);
 
-    my @names;
-    push @names, @desired;
-    push @names, keys $self->ALLOWED_FIELD_NAMES->%*;
-    foreach my $tn (@names) {
-      if (any { $_ eq $tn } @desired) {
-        $self->ALLOWED_FIELD_NAMES->{$tn} = 1;
-      }
-      else {
-        $self->ALLOWED_FIELD_NAMES->{$tn} = undef;
-      }
+    foreach my $item ($data->{tag_list}->@*) {
+      push @$tag_list, $item;
     }
-  }
 
-  method styles { my $hash = JSON::PP->new->decode($self->json_data); }
-
-  method gramps_id { $self->_get_field('gramps_id') }
-  method format    { $self->_get_field('format') }
-
-  method parse_json_data {
-    my $hash = JSON::PP->new->decode($self->json_data);
-    $self->logger->debug(sprintf(
-      'hash for tag "%s" is: %s',
-      $self->handle, Data::Printer::np($hash),
-    ));
-
-  }
-
-  method text {
-    my $hash = JSON::PP->new->decode($self->json_data);
-    my $tn   = $hash->{'text'} if exists $hash->{'text'};
-    return App::Schierer::HPFan::Model::Gramps::Note::Text->new($tn->%*)
-      if defined($tn);
-    return undef;
-  }
-
-  method type {
-    my $hash = JSON::PP->new->decode($self->json_data);
-    if (exists $hash->{'type'}) {
-      return App::Schierer::HPFan::Model::Gramps::Note::Type->new(
-        $hash->{'type'}->%*);
-    }
-    return undef;
   }
 
   method to_string {

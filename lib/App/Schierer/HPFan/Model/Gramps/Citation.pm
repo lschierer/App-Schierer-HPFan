@@ -1,49 +1,60 @@
 use v5.42;
 use utf8::all;
 use experimental qw(class);
-require App::Schierer::HPFan::Model::Gramps::Object::Reference;
-require App::Schierer::HPFan::Model::Gramps::Source::Reference;
 require App::Schierer::HPFan::Model::CustomDate;
 
 class App::Schierer::HPFan::Model::Gramps::Citation :
-  isa(App::Schierer::HPFan::Model::Gramps::Generic) {
+  isa(App::Schierer::HPFan::Logger) {
   use List::AllUtils qw( any );
   use Carp;
 
   ADJUST {
-    my @desired = qw(
-      handle  gramps_id   page  confidence  source_handle
-      change  private   json_data );
-    my @names;
-    push @names, @desired;
-    push @names, keys $self->ALLOWED_FIELD_NAMES->%*;
-    foreach my $tn (@names) {
-      if (any { $_ eq $tn } @desired) {
-        $self->ALLOWED_FIELD_NAMES->{$tn} = 1;
-      }
-      else {
-        $self->ALLOWED_FIELD_NAMES->{$tn} = undef;
-      }
+
+  }
+
+  field $data : param;
+
+  field $change         : reader //= undef;
+  field $confidence     : reader //= undef;
+  field $date           : reader //= undef;
+  field $gramps_id      : reader //= undef;
+  field $handle         : reader //= undef;
+  field $page           : reader //= undef;
+  field $private        : reader //= undef;
+  field $source_handle  : reader //= undef;
+
+
+  field $attribute_list   = [];
+  field $note_list        = [];
+  field $tag_list         = [];
+
+  method attribute_list { [ $attribute_list->@* ] }
+  method note_list      { [ $note_list->@* ] }
+  method tag_list      { [ $tag_list->@* ] }
+
+  ADJUST {
+    $change         = $data->{change};
+    $confidence     = $data->{confidence};
+    $date           = App::Schierer::HPFan::Model::CustomDate->new( text => $data->{date});
+    $gramps_id      = $data->{gramps_id};
+    $handle         = $data->{handle};
+    $page           = $data->{page};
+    $private        = $data->{private};
+    $source_handle  = $data->{source_handle};
+
+    foreach my $item ($data->{attribute_list}->@*) {
+      push @$attribute_list, $item;
+    }
+
+    foreach my $item ($data->{note_list}->@*) {
+      push @$note_list, $item;
+    }
+
+    foreach my $item ($data->{tag_list}->@*) {
+      push @$tag_list, $item;
     }
   }
 
-  method gramps_id  { $self->_get_field('gramps_id') }
-  method page       { $self->_get_field('page') }
-  method confidence { $self->_get_field('confidence') }
-
-  method source_handle {
-    return App::Schierer::HPFan::Model::Gramps::Source::Reference->new(
-      ref => $self->_get_field('source_handle'));
-  }
-
-  method parse_json_data {
-    #trust DBH::SQLite to have already handle UTF8.
-    my $hash = JSON::PP->new->decode($self->json_data);
-    if (reftype($hash) eq 'HASH') {
-      $self->logger->info("got hash " . Data::Printer::np($hash));
-
-    }
-  }
 
 }
 1;
