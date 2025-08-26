@@ -1,0 +1,43 @@
+#!/usr/bin/env perl
+use v5.42;
+use experimental qw(class);
+use utf8::all;
+use File::FindLib 'lib';
+use Getopt::Long;
+use Carp;
+
+require App::Schierer::HPFan::Data;
+
+my $debug = 0;
+my $help = 0;
+my $dbfile = './share/grampsdb/sqlite.db';
+my $output = './share/data/gramps';
+
+GetOptions(
+  'db=s'        => \$dbfile,
+  'output=s'    => \$output,
+  'debug'       => \$debug,
+  'help'        => \$help,
+) or die "Error in command line arguments\n";
+
+if ($help) {
+    print <<HELP;
+Usage: $0 [options]
+
+Options:
+  --db=dbFile     path to the Gramps SQLite Database file
+  --output=Dir    path to the output directory
+  --debug         enable debugging
+  --help          Display this help message
+
+HELP
+exit 0;
+}
+
+my $processer = App::Schierer::HPFan::Data->new(
+  debug       => $debug,
+  gramps_db   => $dbfile,
+  output      => $output,
+);
+
+$processer->execute();

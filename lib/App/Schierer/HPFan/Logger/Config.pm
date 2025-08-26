@@ -39,7 +39,7 @@ package App::Schierer::HPFan::Logger::Config {
 
   sub getLogDir {
     my $home    = File::HomeDir->my_home;
-    my $segment = $dist_name =~ s/::/-/r;
+    my $segment = $dist_name =~ s/::/-/gr;
     my $logDir  = Path::Tiny::path($home)->child("/var/log/Perl/dist/$segment");
     return $logDir;
   }

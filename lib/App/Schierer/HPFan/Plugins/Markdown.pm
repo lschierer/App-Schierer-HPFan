@@ -3,7 +3,6 @@ use experimental qw(class);
 use utf8::all;
 use File::FindLib 'lib';
 use Mojo::File;
-use Path::Iterator::Rule;
 require Pandoc;
 require Data::Printer;
 require Scalar::Util;

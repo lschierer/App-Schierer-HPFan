@@ -26,7 +26,7 @@ BEGIN { use_ok('App::Schierer::HPFan::Model::Gramps') };
 my $lc = App::Schierer::HPFan::Logger::Config->new('App-Schierer-HPFan');
 my $log4perl_logger = $lc->init('testing');
 
-my $gramps_file = './share/potter_universe.gramps';
+my $gramps_file = './share/data/gramps';
 my $gramps_db = './share/grampsdb/sqlite.db';
 
 my $gramps = App::Schierer::HPFan::Model::Gramps->new(
@@ -69,7 +69,7 @@ for my $p (values %{ $gramps->people }) {
 
   # event refs can be objects (Event::Reference) or bare handles
   my %seen_e;
-  for my $eref (@{ $p->event_refs // [] }) {
+  for my $eref (@{ $p->event_ref_list // [] }) {
     my $eh =
       (ref($eref) && $eref->can('ref')) ? ($eref->ref // '') :
       ref($eref) eq 'HASH'              ? ($eref->{ref} // '') :
@@ -81,7 +81,7 @@ for my $p (values %{ $gramps->people }) {
 
   ## tag refs may be objects, hashes, or strings; normalize the same way
   my %seen_t;
-  for my $tref (@{ $p->tag_refs // [] }) {
+  for my $tref (@{ $p->tag_list // [] }) {
     my $th = ref($tref) eq 'HASH' ? ($tref->{ref} // '') :
                                   "$tref";
     next unless length $th;

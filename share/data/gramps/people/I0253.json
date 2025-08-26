@@ -1,0 +1,120 @@
+{
+   "_class" : "Person",
+   "address_list" : [],
+   "alternate_names" : [],
+   "attribute_list" : [],
+   "birth_ref_index" : 2,
+   "change" : 1755361209,
+   "citation_list" : [
+      "f14e5eb6c7d1f399ede8ff8ceb3"
+   ],
+   "death_ref_index" : -1,
+   "event_ref_list" : [
+      {
+         "_class" : "EventRef",
+         "attribute_list" : [],
+         "citation_list" : [],
+         "note_list" : [],
+         "private" : false,
+         "ref" : "ff6751988b95bd4cc55ae7b37a7",
+         "role" : {
+            "_class" : "EventRoleType",
+            "string" : "",
+            "value" : 1
+         }
+      },
+      {
+         "_class" : "EventRef",
+         "attribute_list" : [],
+         "citation_list" : [],
+         "note_list" : [],
+         "private" : false,
+         "ref" : "ff6753234ee47847742422fd08c",
+         "role" : {
+            "_class" : "EventRoleType",
+            "string" : "",
+            "value" : 1
+         }
+      },
+      {
+         "_class" : "EventRef",
+         "attribute_list" : [],
+         "citation_list" : [],
+         "note_list" : [],
+         "private" : false,
+         "ref" : "f14e5ed29c1204cd6f1ad8d5282",
+         "role" : {
+            "_class" : "EventRoleType",
+            "string" : "",
+            "value" : 1
+         }
+      }
+   ],
+   "family_list" : [
+      "ff6754c723a2a9b203592888f72"
+   ],
+   "gender" : 0,
+   "gramps_id" : "I0253",
+   "handle" : "f14e5d5cc384cfb76406590c5bc",
+   "lds_ord_list" : [],
+   "media_list" : [],
+   "note_list" : [],
+   "parent_family_list" : [],
+   "person_ref_list" : [],
+   "primary_name" : {
+      "_class" : "Name",
+      "call" : "",
+      "citation_list" : [],
+      "date" : {
+         "_class" : "Date",
+         "calendar" : 0,
+         "dateval" : [
+            0,
+            0,
+            0,
+            false
+         ],
+         "format" : null,
+         "modifier" : 0,
+         "newyear" : 0,
+         "quality" : 0,
+         "sortval" : 0,
+         "text" : ""
+      },
+      "display_as" : 0,
+      "famnick" : "",
+      "first_name" : "Sybill",
+      "group_as" : "",
+      "nick" : "",
+      "note_list" : [],
+      "private" : false,
+      "sort_as" : 0,
+      "suffix" : "",
+      "surname_list" : [
+         {
+            "_class" : "Surname",
+            "connector" : "",
+            "origintype" : {
+               "_class" : "NameOriginType",
+               "string" : "",
+               "value" : 3
+            },
+            "prefix" : "",
+            "primary" : true,
+            "surname" : "Trelawney"
+         }
+      ],
+      "title" : "",
+      "type" : {
+         "_class" : "NameType",
+         "string" : "",
+         "value" : 2
+      }
+   },
+   "private" : false,
+   "tag_list" : [
+      "ed628bd2be366112813f145329a",
+      "ed5f2966ec73e6e477d5090556e"
+   ],
+   "urls" : []
+}

@@ -8,7 +8,6 @@ require YAML::PP;
 require Mojolicious::Controller;
 require Mojolicious::Plugin;
 require App::Schierer::HPFan::Model::Gramps;
-require App::Schierer::HPFan::Schema::Gramps;
 use namespace::clean;
 
 package App::Schierer::HPFan::Controller::ControllerBase {
@@ -39,26 +38,11 @@ package App::Schierer::HPFan::Controller::ControllerBase {
     );
 
     my $gramps_export =
-      $app->config('distDir')->child('potter_universe.gramps');
+      $app->config('distDir')->child('share/data/gramps');
     my $gramps_db = $app->config('distDir')->child('grampsdb/sqlite.db');
 
     my $dist_dir = $self->config('distDir');
     my $db_file  = $dist_dir->child('grampsdb/sqlite.db');
-
-    my $schema;
-    $self->helper(
-      schema => sub {
-        # Connect once and cache the schema object.
-        return $schema //= App::Schierer::HPFan::Schema::Gramps->connect(
-          "dbi:SQLite:dbname=$gramps_db",
-          '', '',
-          {
-            AutoCommit => 1,
-            RaiseError => 1,
-          }
-        );
-      }
-    );
 
     my $gramps = App::Schierer::HPFan::Model::Gramps->new(
       gramps_export => $gramps_export,

@@ -1,32 +1,167 @@
 use v5.42;
-require Log::Log4perl;
 use utf8::all;
+use experimental qw(class);
+require App::Schierer::HPFan::Model::Gramps::Event::Reference;
+require App::Schierer::HPFan::Model::Gramps::Person::Reference;
 
-package App::Schierer::HPFan::Model::Gramps::Person {
-  use Mojo::Base -base, -signatures;
-  use JSON::PP;
+class App::Schierer::HPFan::Model::Gramps::Person :
+  isa( App::Schierer::HPFan::Logger) {
   use Carp;
+  use List::AllUtils qw( any );
+  use App::Schierer::HPFan::Model::Gramps::Name;
 
-  our $logger = Log::Log4perl->get_logger(__PACKAGE__);
+  field $data :param //= undef;
 
-  has 'result';    # Will hold the DBIx::Class result object
+  field $handle          : reader //= undef;
+  field $gender          : reader //= 'U';
+  field $gramps_id       : reader //= undef;
+  field $given_name      //= undef;
+  field $surname         //= undef;
 
-  sub new($class, $result_obj) {
-    return $class->SUPER::new(result => $result_obj);
+
+  field $death_ref_index //= undef;
+  field $birth_ref_index //= undef;
+
+  field $addresses      = [];
+  field $attributes     = [];
+  field $citation_list  = [];
+  field $event_ref_list     = [];
+  field $family_list    = [];
+  field $note_list      = [];
+  field $parent_family_list = [];
+  field $person_refs    = [];
+  field $tag_list       = [];
+  field $urls           = [];
+
+  method event_ref_list      { [ @$event_ref_list     ] }
+  method addresses       { [ @$addresses      ] }
+  method attributes      { [ @$attributes     ] }
+  method urls            { [ @$urls           ] }
+  method family_list     { [ @$family_list  ] }
+  method parent_family_list  { [ @$parent_family_list ] }
+  method person_refs     { [ @$person_refs    ] }
+  method note_list       { [ @$note_list      ] }
+  method citation_list   { [ @$citation_list  ] }
+  method tag_list        { [ @$tag_list       ] }
+
+  ADJUST {
+    $birth_ref_index  = (defined($data) and exists $data->{birth_ref_index} ) ? $data->{birth_ref_index} : undef;
+    $death_ref_index  = $data->{death_ref_index};
+    $gender     = $data->{gender} == 1 ? 'M' : $data->{gender} == 0 ? 'F' : 'U';
+    $gramps_id  = $data->{gramps_id};
+    $handle     = $data->{handle};
+
+    foreach my $item ($data->{citation_list}->@*){
+      push @$citation_list, $item;
+    }
+
+    foreach my $item ($data->{family_list}->@*){
+      push @$family_list, $item;
+    }
+
+    foreach my $item ($data->{note_list}->@*){
+      push @$note_list, $item;
+    }
+
+    foreach my $item ($data->{parent_family_list}->@*){
+      push @$parent_family_list, $item;
+    }
+
+    foreach my $item ($data->{tag_list}->@*){
+      push @$tag_list, $item;
+    }
+
   }
 
-  sub data($self) {
-    return $self->result->data;
+  method names() {
+    my @names;
+
+    return \@names;
+  }    # Return copy
+
+
+
+
+  method primary_name() {
+    # Return the first non-alternate name, or first name if all are alternate
+    for my $name ($self->names->@*) {
+      return $name unless $name->alt;
+    }
+    return scalar(@{ $self->names }) ? $self->names->[0] : undef;
   }
 
-  sub set_data($self, $hashref) {
-    $self->result->data($hashref);
+  method get_surname() {
+    my $last;
+    my $name = $self->primary_name();
+    $self->logger->debug(sprintf(
+      'picked name "%s" as primary for "%s"', $name, $self->id));
+    foreach my $sn (@{ $name->surnames }) {
+      if ($sn->prim) {
+        $last = $sn;
+        last;
+      }
+    }
+    if (not defined $last && scalar @{ $name->surnames }) {
+      $last = $name->surnames->[0];
+    }
+    return $last;
   }
 
-  sub save($self) {
-    $self->result->update;
+  method display_name() {
+    my $name = $self->primary_name();
+    unless ($name) {
+      $self->warning("No name available for " . $self->handle);
+      return " ";
+    }
+    $self->logger->debug(sprintf(
+      'picked name "%s" as primary for "%s"', $name, $self->id));
+    my $last;
+
+    foreach my $sn (@{ $name->surnames }) {
+      if ($sn->primary) {
+        $last = $sn;
+        last;
+      }
+    }
+    if (not defined $last && scalar @{ $name->surnames }) {
+      $last = $name->surnames->[0];
+    }
+    my $formatted = sprintf('%s %s %s %s',
+      $name->display,
+      $last->prefix  ? $last->prefix  : '',
+      $last->surname ? $last->surname : 'Unknown',
+      $name->suffix  ? $name->suffix  : '',
+    );
+    $formatted =~ s/^\s+|\s+$//g;
+    $formatted =~ s/\s+/ /g;
+    return $formatted;
   }
 
+  method to_string() {
+    my $primary  = $self->primary_name;
+    my $name_str = $primary ? $primary->to_string : "Unknown";
+    return
+      sprintf("Person[%s]: %s (%s)", $self->handle, $name_str, $self->gender);
+  }
+
+  method to_hash {
+    return {
+      id             => $gramps_id,
+      handle         => $handle,
+      gender         => $gender,
+      names          => $self->names,
+      events         => $event_ref_list,
+      addresses      => $addresses,
+      attributes     => $attributes,
+      urls           => $urls,
+      child_of       => $parent_family_list,
+      family_list    => $family_list,
+      persons    => $person_refs,
+      notes      => $note_list,
+      citations  => $citation_list,
+      tags       => $tag_list,
+    };
+  }
 }
+
 1;
-__END__

@@ -1,0 +1,81 @@
+{
+   "_class" : "Person",
+   "address_list" : [],
+   "alternate_names" : [],
+   "attribute_list" : [],
+   "birth_ref_index" : -1,
+   "change" : 1755361209,
+   "citation_list" : [
+      "ede41e1d235707161a4598d7b3d"
+   ],
+   "death_ref_index" : -1,
+   "event_ref_list" : [],
+   "family_list" : [
+      "ede420deba944c5189751e52e7d"
+   ],
+   "gender" : 1,
+   "gramps_id" : "I0236",
+   "handle" : "ede41c970a57bf6d0572efc03c9",
+   "lds_ord_list" : [],
+   "media_list" : [],
+   "note_list" : [],
+   "parent_family_list" : [
+      "eddcdf4b4504723c2f77ec56f8b"
+   ],
+   "person_ref_list" : [],
+   "primary_name" : {
+      "_class" : "Name",
+      "call" : "",
+      "citation_list" : [],
+      "date" : {
+         "_class" : "Date",
+         "calendar" : 0,
+         "dateval" : [
+            0,
+            0,
+            0,
+            false
+         ],
+         "format" : null,
+         "modifier" : 0,
+         "newyear" : 0,
+         "quality" : 0,
+         "sortval" : 0,
+         "text" : ""
+      },
+      "display_as" : 0,
+      "famnick" : "",
+      "first_name" : "Cyrille",
+      "group_as" : "",
+      "nick" : "",
+      "note_list" : [],
+      "private" : false,
+      "sort_as" : 0,
+      "suffix" : "",
+      "surname_list" : [
+         {
+            "_class" : "Surname",
+            "connector" : "",
+            "origintype" : {
+               "_class" : "NameOriginType",
+               "string" : "",
+               "value" : 1
+            },
+            "prefix" : "",
+            "primary" : true,
+            "surname" : "Lestrange"
+         }
+      ],
+      "title" : "",
+      "type" : {
+         "_class" : "NameType",
+         "string" : "",
+         "value" : 2
+      }
+   },
+   "private" : false,
+   "tag_list" : [
+      "ed628949497529bfaef5db0538d"
+   ],
+   "urls" : []
+}

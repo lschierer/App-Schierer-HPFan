@@ -1,0 +1,111 @@
+{
+   "_class" : "Person",
+   "address_list" : [],
+   "alternate_names" : [],
+   "attribute_list" : [],
+   "birth_ref_index" : 0,
+   "change" : 1755361209,
+   "citation_list" : [
+      "ed59398a9c92811e304558645aa",
+      "ed5a51b21493f3e67687a68f816",
+      "f1081c58728595f1a04db157c1"
+   ],
+   "death_ref_index" : -1,
+   "event_ref_list" : [
+      {
+         "_class" : "EventRef",
+         "attribute_list" : [],
+         "citation_list" : [],
+         "note_list" : [],
+         "private" : false,
+         "ref" : "ed595f2c730513ca316b8db9370",
+         "role" : {
+            "_class" : "EventRoleType",
+            "string" : "",
+            "value" : 1
+         }
+      },
+      {
+         "_class" : "EventRef",
+         "attribute_list" : [],
+         "citation_list" : [],
+         "note_list" : [],
+         "private" : false,
+         "ref" : "ed63b5686ceda502c6c04bb08e",
+         "role" : {
+            "_class" : "EventRoleType",
+            "string" : "",
+            "value" : 1
+         }
+      }
+   ],
+   "family_list" : [],
+   "gender" : 1,
+   "gramps_id" : "I0039",
+   "handle" : "ed595eef6bc1f64a358897e1b1e",
+   "lds_ord_list" : [],
+   "media_list" : [],
+   "note_list" : [
+      "ed5a52251bc4dc39b590f54d2e8"
+   ],
+   "parent_family_list" : [
+      "ed595e8477739aa07deb8bd96ed"
+   ],
+   "person_ref_list" : [],
+   "primary_name" : {
+      "_class" : "Name",
+      "call" : "Draco",
+      "citation_list" : [],
+      "date" : {
+         "_class" : "Date",
+         "calendar" : 0,
+         "dateval" : [
+            0,
+            0,
+            0,
+            false
+         ],
+         "format" : null,
+         "modifier" : 0,
+         "newyear" : 0,
+         "quality" : 0,
+         "sortval" : 0,
+         "text" : ""
+      },
+      "display_as" : 0,
+      "famnick" : "",
+      "first_name" : "Draco Lucius",
+      "group_as" : "",
+      "nick" : "",
+      "note_list" : [],
+      "private" : false,
+      "sort_as" : 0,
+      "suffix" : "",
+      "surname_list" : [
+         {
+            "_class" : "Surname",
+            "connector" : "",
+            "origintype" : {
+               "_class" : "NameOriginType",
+               "string" : "",
+               "value" : 1
+            },
+            "prefix" : "",
+            "primary" : true,
+            "surname" : "Malfoy"
+         }
+      ],
+      "title" : "",
+      "type" : {
+         "_class" : "NameType",
+         "string" : "",
+         "value" : 2
+      }
+   },
+   "private" : false,
+   "tag_list" : [
+      "ed628949497529bfaef5db0538d",
+      "ed5f2929ec81c675417baaa694a"
+   ],
+   "urls" : []
+}

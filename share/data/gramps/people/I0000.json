@@ -1,0 +1,123 @@
+{
+   "_class" : "Person",
+   "address_list" : [],
+   "alternate_names" : [],
+   "attribute_list" : [],
+   "birth_ref_index" : 1,
+   "change" : 1755361209,
+   "citation_list" : [],
+   "death_ref_index" : -1,
+   "event_ref_list" : [
+      {
+         "_class" : "EventRef",
+         "attribute_list" : [],
+         "citation_list" : [],
+         "note_list" : [],
+         "private" : false,
+         "ref" : "ed5c8bd259e2e17d3ae4c9a1cad",
+         "role" : {
+            "_class" : "EventRoleType",
+            "string" : "",
+            "value" : 6
+         }
+      },
+      {
+         "_class" : "EventRef",
+         "attribute_list" : [],
+         "citation_list" : [],
+         "note_list" : [],
+         "private" : false,
+         "ref" : "ed592a4f06c7e34e27695dfeb73",
+         "role" : {
+            "_class" : "EventRoleType",
+            "string" : "",
+            "value" : 1
+         }
+      },
+      {
+         "_class" : "EventRef",
+         "attribute_list" : [],
+         "citation_list" : [],
+         "note_list" : [],
+         "private" : false,
+         "ref" : "ed63b5686ceda502c6c04bb08e",
+         "role" : {
+            "_class" : "EventRoleType",
+            "string" : "",
+            "value" : 1
+         }
+      }
+   ],
+   "family_list" : [
+      "ed5c8e794f832259343e3e4c05f"
+   ],
+   "gender" : 1,
+   "gramps_id" : "I0000",
+   "handle" : "ed5923a76c6bb8880c28c319e9",
+   "lds_ord_list" : [],
+   "media_list" : [],
+   "note_list" : [],
+   "parent_family_list" : [
+      "ed59312dc737e38d031951e2757",
+      "ed5d8562bc6271d5cd5dcc32a94"
+   ],
+   "person_ref_list" : [],
+   "primary_name" : {
+      "_class" : "Name",
+      "call" : "Harry",
+      "citation_list" : [
+         "f0f5242b3954943489b092dd6a3"
+      ],
+      "date" : {
+         "_class" : "Date",
+         "calendar" : 0,
+         "dateval" : [
+            0,
+            0,
+            0,
+            false
+         ],
+         "format" : null,
+         "modifier" : 0,
+         "newyear" : 0,
+         "quality" : 0,
+         "sortval" : 0,
+         "text" : ""
+      },
+      "display_as" : 0,
+      "famnick" : "",
+      "first_name" : "Harry James",
+      "group_as" : "",
+      "nick" : "",
+      "note_list" : [],
+      "private" : false,
+      "sort_as" : 0,
+      "suffix" : "",
+      "surname_list" : [
+         {
+            "_class" : "Surname",
+            "connector" : "",
+            "origintype" : {
+               "_class" : "NameOriginType",
+               "string" : "",
+               "value" : 3
+            },
+            "prefix" : "",
+            "primary" : true,
+            "surname" : "Potter"
+         }
+      ],
+      "title" : "",
+      "type" : {
+         "_class" : "NameType",
+         "string" : "",
+         "value" : 2
+      }
+   },
+   "private" : false,
+   "tag_list" : [
+      "ed5f283475c2bd8d650cc02c9c8",
+      "ed628bd2be366112813f145329a"
+   ],
+   "urls" : []
+}

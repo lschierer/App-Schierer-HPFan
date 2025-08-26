@@ -2,7 +2,9 @@ use v5.42.0;
 use experimental qw(class);
 use utf8::all;
 require Path::Tiny;
+require Path::Iterator::Rule;
 require XML::LibXML;
+require JSON::PP;
 require GraphViz;
 require DBI;
 require DBD::SQLite;
@@ -45,8 +47,8 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
   ADJUST {
     # Do not assume we are passed a Path::Tiny object;
     $gramps_export = Path::Tiny::path($gramps_export);
-    if (!$gramps_export->is_file) {
-      $self->logger->logcroak("gramps_export $gramps_export is not a file.");
+    if (!$gramps_export->is_dir) {
+      $self->logger->logcroak("gramps_export $gramps_export is not a directory.");
     }
     $gramps_db = Path::Tiny::path($gramps_db);
     if (!$gramps_db->is_file) {
@@ -95,7 +97,7 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
 
       # ---- events → people
       my %seen_e;
-      for my $eref (@{ $person->event_refs // [] }) {
+      for my $eref (@{ $person->event_ref_list // [] }) {
         # $eref is App::…::Event::Reference
         my $eh = eval { $eref->ref } // '';
         next unless length $eh;
@@ -107,7 +109,7 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
       # if your person->tag_refs returns objects too, extract their handles;
       # otherwise if they’re already strings, this is fine
       my %seen_t;
-      for my $tref ($person->tag_refs->@*) {
+      for my $tref ($person->tag_list->@*) {
         my $th =
              ref($tref)
           && ref($tref) eq 'HASH'
@@ -313,14 +315,25 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
   }
 
   method _import_people () {
-    my $all_entries = $dbh->selectcol_arrayref("SELECT handle FROM person");
+    my $rule = Path::Iterator::Rule->new;
+    $rule->file->readable->nonempty->name('*.json');
+    $rule->file->nonempty;
+    my $iter = $rule->iter(
+      $gramps_export->child('people'),
+      {
+        follow_symlinks => 0,
+        sorted          => 1,
+      }
+    );
 
-    foreach my $handle (@$all_entries) {
-      $self->logger->debug("importing person with handle '$handle'");
-      $people->{$handle} =
-        App::Schierer::HPFan::Model::Gramps::Person->new(handle => $handle);
-      $people->{$handle}->set_dbh($dbh);
-      $people->{$handle}->parse_json_data;
+    while (defined(my $file = $iter->())) {
+      # work around for UTF8 filenames not importing correctly by default.
+      $file = Path::Tiny::path(Encode::decode('utf8', $file));
+      $self->logger->debug(sprintf('%s importing %s', ref($self), $file));
+
+      my $data   = $file->slurp_utf8;
+      my $ih = JSON::PP->new->utf8->allow_blessed->decode($data);
+      $people->{ $ih->{gramps_id} } = App::Schierer::HPFan::Model::Gramps::Person->new( data => $ih);
     }
 
     $self->logger->info(sprintf('imported %s people.', scalar keys %{$people}));
