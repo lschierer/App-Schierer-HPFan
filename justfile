@@ -25,18 +25,21 @@ css:
 ts:
   pnpm build:ts
 
+build-data:
+  ./scripts/preprocess_gramps_db
+
 build: install css ts
   ./scripts/generate_config_secret.sh
   ./Build manifest
   ./Build
 
-quickdev:
+quickdev: build-data
   export MOJO_RENDERER_DEBUG=1 ; morbo -w templates -w share -w public -w lib ./bin/app_schierer_hpfan -m 'development'
 
-deploy-dev:
+deploy-dev: install build-data build
   pnpm cdk --profile personal deploy --app scripts/aws-schierer-hpfan.ts --context env=dev
 
-deploy-prod:
+deploy-prod: install build-data build
   pnpm cdk --profile personal deploy --app scripts/aws-schierer-hpfan.ts --context env=prod
 
 gramps-backup:
