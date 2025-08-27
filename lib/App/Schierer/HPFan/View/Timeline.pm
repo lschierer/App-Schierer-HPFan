@@ -178,8 +178,8 @@ class App::Schierer::HPFan::View::Timeline
       }
       $self->logger->debug(sprintf('categorizing event %s.', $event->id));
 
-      if(defined($event->sources) && scalar( @{ $event->sources } )){
-        push @{$footnotes->{$event->id}}, $event->sources->@*;
+      if (defined($event->sources) && scalar(@{ $event->sources })) {
+        push @{ $footnotes->{ $event->id } }, $event->sources->@*;
       }
 
       my $category = get_category_for_event($self, $event, $self->logger);
@@ -425,12 +425,15 @@ class App::Schierer::HPFan::View::Timeline
       $cc->cdata_noxmlesc($event->description);
     }
 
-    if(defined($event->sources) && scalar(@{ $event->sources })){
-      $div->tag('div',
-        class=>'sources spectrum-Body spectrum-Body--sizeS spectrum-Body--serif',
+    if (defined($event->sources) && scalar(@{ $event->sources })) {
+      $div->tag(
+        'div',
+        class =>
+          'sources spectrum-Body spectrum-Body--sizeS spectrum-Body--serif',
 
-      )->cdata_noxmlesc(sprintf('<a  href="#footnotes-%s" class="%s">Sources and References</a>',
-         $event->id, 'spectrum-Link spectrum-Link--quiet spectrum-Link--primary',
+      )->cdata_noxmlesc(sprintf(
+        '<a  href="#footnotes-%s" class="%s">Sources and References</a>',
+        $event->id, 'spectrum-Link spectrum-Link--quiet spectrum-Link--primary',
       ));
     }
 

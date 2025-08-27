@@ -19,14 +19,18 @@ class App::Schierer::HPFan::Model::Gramps::Family::Relationship :
   field $_class : param = undef;            # from Gramps JSON
   field $string : param = undef;            # custom label (when value==0)
   field $value  : param = undef;            # numeric enum
+  field $ROLE_MAP;
 
-  # Shared built-in role map; 0 is “custom” (use $string)
-  Readonly::Hash my %ROLE_MAP => (
-    0 => 'Married',
-    1 => 'Unmarried',
-    2 => 'Civil Union',
-    3 => 'Unknown',
-  );
+  ADJUST {
+    # Shared built-in role map; 0 is “custom” (use $string)
+    Readonly::Hash my %rm1 => (
+      0 => 'Married',
+      1 => 'Unmarried',
+      2 => 'Civil Union',
+      3 => 'Unknown',
+    );
+    $ROLE_MAP = \%rm1;
+  }
 
   # ---- Rendering ----
   method to_string {
@@ -36,8 +40,8 @@ class App::Schierer::HPFan::Model::Gramps::Family::Relationship :
     }
 
     # built-in mapping
-    if (defined $value && exists $ROLE_MAP{$value}) {
-      return $ROLE_MAP{$value};
+    if (defined $value && exists $ROLE_MAP->{$value}) {
+      return $ROLE_MAP->{$value};
     }
 
     # unknown value? warn in dev, but don’t leak UI details
@@ -55,8 +59,9 @@ class App::Schierer::HPFan::Model::Gramps::Family::Relationship :
   method _sortValue {
     my $sortValue;
     if (defined($value)) {
-      if (exists $ROLE_MAP{$value}) {
-        $sortValue = firstidx { $_ eq $ROLE_MAP{$value} } sort values %ROLE_MAP;
+      if (exists $ROLE_MAP->{$value}) {
+        $sortValue =
+          firstidx { $_ eq $ROLE_MAP->{$value} } sort values %$ROLE_MAP;
       }
       else {
         $self->logger->dev_guard("Missing Sort Map for value $value");
@@ -128,8 +133,8 @@ class App::Schierer::HPFan::Model::Gramps::Family::Relationship :
     }
 
     # String comparison
-    if (defined($value) && exists $ROLE_MAP{$value}) {
-      my $sr = $ROLE_MAP{$value};
+    if (defined($value) && exists $ROLE_MAP->{$value}) {
+      my $sr = $ROLE_MAP->{$value};
       return $sr eq $other;
     }
 

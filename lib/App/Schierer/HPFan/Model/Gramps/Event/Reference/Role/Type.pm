@@ -12,13 +12,13 @@ class App::Schierer::HPFan::Model::Gramps::Event::Reference::Role::Type :
 
   use overload
     'cmp'      => \&_comparison,
-    'eq'       => \&_equality,              # string equality
-    '""'       => \&to_string,              # used for concat too
-    'bool'     => sub { $_[0]->_isTrue },
+    'eq'       => \&_equality,
+    '""'       => \&to_string,
+    'bool'     => \&_isTrue,
     'fallback' => 1;
 
-  field $_class : param = undef;            # from Gramps JSON
-  field $string : param = undef;            # custom label (when value==0)
+  field $_class : param = undef;    # from Gramps JSON
+  field $string : param = undef;    # custom label (when value==0)
   field $value  : param = undef;
   field $ROLE_MAP;
 
@@ -83,8 +83,10 @@ class App::Schierer::HPFan::Model::Gramps::Event::Reference::Role::Type :
 
   # ---- Comparisons ----
   method _comparison($other, $swap = 0) {
-    # Same class comparison
-    if (ref($other) && $other->isa(__CLASS__)) {
+    my ($a, $b) = $swap ? ($other, $self) : ($self, $other);
+
+    if (blessed($a) && $a->isa(__CLASS__) && blessed($b) && $b->isa(__CLASS__))
+    {
       my $cmp = $self->_sortValue <=> $other->_sortValue;
       if ($cmp == 0 && defined($string)) {
         return $string cmp $other->string;
@@ -122,37 +124,32 @@ class App::Schierer::HPFan::Model::Gramps::Event::Reference::Role::Type :
   }
 
   method _equality($other, $swap = 0) {
-    return 0 unless defined($other);
+    my ($a, $b) = $swap ? ($other, $self) : ($self, $other);
+
+    return 0 unless (defined($a) && defined($b));
 
     # Same class comparison
-    if (ref($other) && $other->isa(__CLASS__)) {
-      return $self->_comparison($other, $swap) == 0;
+    if (blessed($a) && $a->isa(__CLASS__) && blessed($b) && $b->isa(__CLASS__))
+    {
+      return $a->_comparison($b, $swap) == 0;
     }
 
     # Numeric comparison
-    if (Scalar::Util::looks_like_number($other)) {
-      return $self->_sortValue == $other;
+    if (Scalar::Util::looks_like_number($b)) {
+      return $a->_sortValue == $b;
+    }
+    elsif (Scalar::Util::looks_like_number($a)) {
+      return $b->_sortValue == $a;
     }
 
-    # String comparison
-    if (defined($value) && exists $ROLE_MAP->{$value}) {
-      my $sr = $ROLE_MAP->{$value};
-      $self->logger->debug(sprintf(
-        '%s comparing _sortValue to string, %s to %s',
-        ref($self), $sr, $other
-      ));
-      return $sr eq $other;
-    }
+    return "$a" cmp "$b";
+  }
 
-    if (defined($string)) {
-      $self->logger->debug(sprintf(
-        '%s comparing custom string, %s to %s',
-        ref($self), $string, $other
-      ));
-      return $string eq $other;
-    }
-
-    return 0;
+  method _isTrue {
+    return
+         defined($self)
+      && blessed($self)
+      && blessed($self) eq __CLASS__;
   }
 
 }

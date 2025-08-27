@@ -99,9 +99,9 @@ class App::Schierer::HPFan::Model::History::Gramps :
     my @description;
     if (my $person = $self->_primary_person_for($e)) {
       my $fn = App::Schierer::HPFan::Model::History::Gramps::footnote->new(
-        event   => $e,
-        people  => [$person],
-        gramps  => $gramps,
+        event  => $e,
+        people => [$person],
+        gramps => $gramps,
       );
 
       # handle date
@@ -150,9 +150,9 @@ class App::Schierer::HPFan::Model::History::Gramps :
       my @citations;
       my @description;
       my $fn = App::Schierer::HPFan::Model::History::Gramps::footnote->new(
-        event   => $e,
-        people  => [$person],
-        gramps  => $gramps,
+        event  => $e,
+        people => [$person],
+        gramps => $gramps,
       );
 
       # set up date
@@ -203,7 +203,8 @@ class App::Schierer::HPFan::Model::History::Gramps :
       my $note = $gramps->notes->{$nr};
       if ($note->isa('App::Schierer::HPFan::Model::Gramps::Note')) {
         if (defined($note->gramps_id) && length($note->gramps_id)) {
-          push @return, $note->text->raw if (defined($note->text->raw) && length($note->text->raw));
+          push @return, $note->text->raw
+            if (defined($note->text->raw) && length($note->text->raw));
           $self->logger->debug(sprintf(
             'pushed new note to description for %s', $e->gramps_id));
 

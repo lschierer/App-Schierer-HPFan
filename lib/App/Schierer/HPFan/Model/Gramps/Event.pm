@@ -18,14 +18,14 @@ class App::Schierer::HPFan::Model::Gramps::Event :
 
   field $data : param;
 
-  field $change       : reader //= undef;
-  field $date         : reader //= undef;
-  field $description  : reader //= undef;
-  field $gramps_id    : reader //= undef;
-  field $handle       : reader //= undef;
-  field $place        : reader //= undef;
-  field $private      : reader //= 0;
-  field $type         : reader //= undef;
+  field $change      : reader //= undef;
+  field $date        : reader //= undef;
+  field $description : reader //= undef;
+  field $gramps_id   : reader //= undef;
+  field $handle      : reader //= undef;
+  field $place       : reader //= undef;
+  field $private     : reader //= 0;
+  field $type        : reader //= undef;
 
   field $place_ref : reader = undef;
 
@@ -34,20 +34,21 @@ class App::Schierer::HPFan::Model::Gramps::Event :
   field $note_list      = [];
   field $tag_list       = [];
 
-  method attribute_list   { [ $attribute_list->@* ] }
-  method citation_list    { [ $citation_list->@* ] }
-  method note_list        { [ $note_list->@* ] }
-  method tag_list()       { [ $tag_list->@* ] }
+  method attribute_list { [$attribute_list->@*] }
+  method citation_list  { [$citation_list->@*] }
+  method note_list      { [$note_list->@*] }
+  method tag_list()     { [$tag_list->@*] }
 
   ADJUST {
-    $change       = $data->{change};
-    $date         = App::Schierer::HPFan::Model::CustomDate->new( text => $data->{date});
-    $description  = $data->{description};
-    $gramps_id    = $data->{gramps_id};
-    $handle       = $data->{handle};
-    $place        = $data->{place};
-    $private      = $data->{private};
-    $type         = App::Schierer::HPFan::Model::Gramps::Event::Type->new($data->{type}->%*);
+    $change = $data->{change};
+    $date = App::Schierer::HPFan::Model::CustomDate->new(text => $data->{date});
+    $description = $data->{description};
+    $gramps_id   = $data->{gramps_id};
+    $handle      = $data->{handle};
+    $place       = $data->{place};
+    $private     = $data->{private};
+    $type =
+      App::Schierer::HPFan::Model::Gramps::Event::Type->new($data->{type}->%*);
 
     foreach my $item ($data->{attribute_list}->@*) {
       push @$attribute_list, $item;
@@ -83,15 +84,15 @@ class App::Schierer::HPFan::Model::Gramps::Event :
 
   method to_hash {
     my $hr = $self->SUPER::to_hash;
-    $hr->{id}          = $self->gramps_id;
-    $hr->{type}        = $self->type;
-    $hr->{date}        = $self->date;
-    $hr->{place_ref}   = $place_ref;
-    $hr->{description} = $self->description;
-    $hr->{attribute_list}   = [$attribute_list->@*];
-    $hr->{citation_list}    = [$citation_list->@*];
-    $hr->{note_list}        = [$note_list->@*];
-    $hr->{tag_list}         = [$tag_list->@*];
+    $hr->{id}             = $self->gramps_id;
+    $hr->{type}           = $self->type;
+    $hr->{date}           = $self->date;
+    $hr->{place_ref}      = $place_ref;
+    $hr->{description}    = $self->description;
+    $hr->{attribute_list} = [$attribute_list->@*];
+    $hr->{citation_list}  = [$citation_list->@*];
+    $hr->{note_list}      = [$note_list->@*];
+    $hr->{tag_list}       = [$tag_list->@*];
     return $hr;
   }
 

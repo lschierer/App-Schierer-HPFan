@@ -10,29 +10,28 @@ class App::Schierer::HPFan::Model::Gramps::Repository :
 
   field $data : param;
 
-  field $change       : reader //= undef;
-  field $gramps_id    : reader //= undef;
-  field $handle       : reader //= undef;
-  field $name         : reader //= undef;
-  field $private      : reader //= undef;
-  field $type         : reader //= undef;
+  field $change    : reader //= undef;
+  field $gramps_id : reader //= undef;
+  field $handle    : reader //= undef;
+  field $name      : reader //= undef;
+  field $private   : reader //= undef;
+  field $type      : reader //= undef;
 
-
-  field $note_list  = [];
+  field $note_list = [];
   field $tag_list  = [];
-  field $urls     = [];
+  field $urls      = [];
 
-  method note_list  { [ $note_list->@* ] }
-  method tag_list  { [ $tag_list->@* ] }
-  method urls { [ $urls->@* ] }
+  method note_list { [$note_list->@*] }
+  method tag_list  { [$tag_list->@*] }
+  method urls      { [$urls->@*] }
 
   ADJUST {
-    $change     = $data->{change};
-    $gramps_id  = $data->{gramps_id};
-    $handle     = $data->{handle};
-    $name       = $data->{name};
-    $private    = $data->{private};
-    $type       = $data->{type};
+    $change    = $data->{change};
+    $gramps_id = $data->{gramps_id};
+    $handle    = $data->{handle};
+    $name      = $data->{name};
+    $private   = $data->{private};
+    $type      = $data->{type};
 
     foreach my $item ($data->{note_list}->@*) {
       push @$note_list, $item;
@@ -46,7 +45,6 @@ class App::Schierer::HPFan::Model::Gramps::Repository :
       push @$urls, App::Schierer::HPFan::Model::Gramps::Url->new($item->%*);
     }
   };
-
 
 }
 1;

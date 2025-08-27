@@ -9,7 +9,6 @@ class App::Schierer::HPFan::Model::Gramps::Name :
   use Carp;
   use overload
     '""'       => \&to_string,
-    '.'        => \&to_string,
     'bool'     => sub { $_[0]->_isTrue() },
     'fallback' => 0;
 

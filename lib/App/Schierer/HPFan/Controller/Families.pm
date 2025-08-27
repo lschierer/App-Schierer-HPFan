@@ -66,11 +66,8 @@ package App::Schierer::HPFan::Controller::Families {
     my %family_names;
     foreach my $person (sort { return $a->gramps_id cmp $b->gramps_id; }
       values %{ $app->gramps->people }) {
-      $logger->debug(
-        sprintf(
-          'inspecting %s for presence of family name', $person->gramps_id
-        )
-      );
+      $logger->debug(sprintf('inspecting %s for presence of family name',
+        $person->gramps_id));
       my $name = $person->primary_name;
       if ($name) {
         my $sn = $name->primary_surname;
@@ -261,7 +258,7 @@ package App::Schierer::HPFan::Controller::Families {
 
       # Find this person's child_ref to check if they're a foster child
       my $person_child_ref;
-      foreach my $child_ref (@{ $family->child_refs }) {
+      foreach my $child_ref (@{ $family->child_ref_list }) {
         if ($child_ref->ref eq $person->handle) {
           $person_child_ref = $child_ref;
           last;
@@ -271,17 +268,17 @@ package App::Schierer::HPFan::Controller::Families {
       next unless $person_child_ref;    # Safety check
 
       # Check if this person is a foster child
-      my $father_rel = $person_child_ref->father_rel // '';
-      my $mother_rel = $person_child_ref->mother_rel // '';
+      my $frel = $person_child_ref->frel // '';
+      my $mrel = $person_child_ref->mrel // '';
 
       # If they're a foster child to both parents, skip this family
-      next if ($father_rel eq 'Foster' && $mother_rel eq 'Foster');
+      next if ($frel eq 'Foster' && $mrel eq 'Foster');
 
  # Check if non-foster father is in our member list
  # that assignment test will return falsy if $family->father_handle is undefined
  # The parentheses around the assignment are important -
  # without them, the precedence would be wrong
-      if ($father_rel ne 'Foster'
+      if ($frel ne 'Foster'
         && (my $father_handle = $family->father_handle)) {
         if (exists $member_lookup->{$father_handle}) {
           return 1;
@@ -289,7 +286,7 @@ package App::Schierer::HPFan::Controller::Families {
       }
 
       # Check if non-foster mother is in our member list
-      if ($mother_rel ne 'Foster'
+      if ($mrel ne 'Foster'
         && (my $mother_handle = $family->mother_handle)) {
         if (exists $member_lookup->{$mother_handle}) {
           return 1;
@@ -336,7 +333,7 @@ package App::Schierer::HPFan::Controller::Families {
       my $family = $self->app->gramps->families->{$family_handle};
       next unless $family;
 
-      foreach my $child_ref ($family->child_refs->@*) {
+      foreach my $child_ref ($family->child_ref_list->@*) {
         my $child_handle = $child_ref->ref;
         my $child        = $member_lookup->{$child_handle};
         next unless $child;    # Child not in this family name

@@ -8,16 +8,17 @@ class App::Schierer::HPFan::Model::Gramps::Url :
   isa(App::Schierer::HPFan::Logger) {
   use Carp;
   use overload
-    '<=>' => \&_comparison,
-    '=='  => \&_equality,
-    '!='  => \&_inequality,
-    '""'  => \&as_string;
+    'cmp'      => \&_comparison,
+    'eq'       => \&_equality,
+    '""'       => sub { $_[0]->to_string },
+    'bool'     => sub { $_[0]->_isTrue },
+    'fallback' => 1;
 
-  field $_class       : param //= undef;
-  field $desc         : reader : param //= undef;
-  field $path         : reader : param //= undef;
-  field $private      : reader : param //= 0;
-  field $type         : reader : param //= undef;
+  field $_class  : param //= undef;
+  field $desc    : reader : param //= undef;
+  field $path    : reader : param //= undef;
+  field $private : reader : param //= 0;
+  field $type    : reader : param //= undef;
 
   method href {
     return URI->new($path);
@@ -25,8 +26,7 @@ class App::Schierer::HPFan::Model::Gramps::Url :
 
   ADJUST {
     if (not defined($path)) {
-      $self->logger->logcroak(
-        'path must be provided.');
+      $self->logger->logcroak('path must be provided.');
     }
   }
 

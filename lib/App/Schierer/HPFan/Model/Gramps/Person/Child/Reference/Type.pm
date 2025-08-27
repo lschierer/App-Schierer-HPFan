@@ -10,15 +10,15 @@ class App::Schierer::HPFan::Model::Gramps::Person::Child::Reference::Type :
   use Scalar::Util   qw(blessed looks_like_number);
   use List::AllUtils qw( firstidx );
   use overload
-    'cmp'      => \&_comparison,
-    'eq'       => \&_equality,              # string equality
-    '""'       => \&to_string,              # used for concat too
+    'cmp'      => sub { $_[0]->_comparison($_[1], $_[2]) },
+    'eq'       => sub { $_[0]->_equality($_[1], $_[2]) },
+    '""'       => sub { $_[0]->to_string },
     'bool'     => sub { $_[0]->_isTrue },
     'fallback' => 1;
 
-  field $_class : param = undef;            # from Gramps JSON
-  field $string : param : reader = '';      # custom label (when value==0)
-  field $value  : param = undef;            # numeric enum
+  field $_class : param = undef;          # from Gramps JSON
+  field $string : param : reader = '';    # custom label (when value==0)
+  field $value  : param = undef;          # numeric enum
 
   field $ROLE_MAP;
 
@@ -54,7 +54,7 @@ class App::Schierer::HPFan::Model::Gramps::Person::Child::Reference::Type :
   }
 
   method to_hash {
-    my $r = $self->SUPER::to_hash;
+    my $r = {};
     if (defined($value)) {
       $r->{value} = exists $ROLE_MAP->{$value} ? $ROLE_MAP->{$value} : $value;
     }

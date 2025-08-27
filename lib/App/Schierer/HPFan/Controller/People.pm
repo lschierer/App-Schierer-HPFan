@@ -234,28 +234,30 @@ s/<svg /<svg preserveAspectRatio="xMidYMid meet" width="100%" height="100%" /;
       my $child_ref;
       my $person_handle = $person->handle;
       $logger->debug("person_handle is $person_handle");
-      foreach my $cr (@{ $family->child_refs() }) {
-        $logger->debug("cr is a " . Scalar::Util::blessed($cr));
+      foreach my $cr (@{ $family->child_ref_list }) {
+        $logger->debug("cr is a " . blessed($cr));
         my $ch = $cr->ref;
-        unless ($ch) {
-          $logger->logcroak("no ref in cr: " . Data::Printer::np($cr));
-          next;
-        }
-        if ($ch eq $person_handle) {
+        $logger->debug("ch is $ch");
+        if ($cr->ref eq $person_handle) {
+          $logger->debug("Found person with handle " . $person_handle);
           $child_ref = $cr;
           last;
         }
       }
+      $logger->debug(
+        sprintf('finished family child ref list iteration with child_ref %s',
+          $child_ref)
+      );
 
-      if (defined($child_ref)) {
-        if (  ($child_ref->father_rel && $child_ref->father_rel eq 'Foster')
-          and ($child_ref->mother_rel && $child_ref->mother_rel eq 'Foster')) {
-          next;
-        }
-      }
-      else {
+      unless (defined($child_ref)) {
         $logger->warn(
           "child_ref is not defined for family " . $family->gramps_id);
+      }
+
+      $logger->debug("checking to ensure not foster");
+      if (  ($child_ref->frel && $child_ref->frel eq 'Foster')
+        and ($child_ref->mrel && $child_ref->mrel eq 'Foster')) {
+        next;
       }
 
       # Create invisible family node as connection point

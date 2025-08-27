@@ -53,11 +53,11 @@
                 Unknown
               <% } %>
           </li>
-          <% if(scalar @{$f->child_refs() }) { %>
+          <% if(scalar @{$f->child_ref_list() }) { %>
             <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
               <strong>Children</strong>:
               <ul>
-              <% foreach my $cr (@{$f->child_refs() }) { %>
+              <% foreach my $cr (@{$f->child_ref_list() }) { %>
                   <% my $child = gramps->find_person_by_handle($cr->ref); %>
                   <% if($child) { %>
                     <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
@@ -80,17 +80,17 @@
         <ul>
           <% foreach my $f (@childof) { %>
             <% my $childref; %>
-            <% foreach my $cr ( @{ $f->child_refs() } ) { %>
+            <% foreach my $cr ( @{ $f->child_ref_list } ) { %>
               <% if ($cr->ref eq $person->handle ) { %>
                 <% $childref = $cr; last; %>
               <% } %>
             <% } %>
             <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
-              <strong>Family</strong>: <%= $f->rel_type ? $f->rel_type : 'Unknown' %>
+              <strong>Family</strong>: <%= $f->type ? $f->type : 'Unknown' %>
               <ul>
                 <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
                   <% my $father = gramps->find_person_by_handle($f->father_handle); %>
-                  <strong><%= $childref->father_rel ? $childref->father_rel . ' ' : '' %>Father</strong>:
+                  <strong><%= $childref->frel ? $childref->frel . ' ' : '' %>Father</strong>:
                   <% if($father) { %>
                     <% my $fatherLink = link_target_for_person($father); %>
                     <a href="<%= $fatherLink %>" class="spectrum-Link spectrum-Link--primary">
@@ -102,7 +102,7 @@
                 </li>
                 <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
                   <% my $mother = gramps->find_person_by_handle($f->mother_handle); %>
-                  <strong><%= $childref->mother_rel ? $childref->mother_rel . ' ' : '' %>Mother</strong>:
+                  <strong><%= $childref->mrel ? $childref->mrel . ' ' : '' %>Mother</strong>:
                   <% if($mother) { %>
                     <% my $motherLink = link_target_for_person($mother); %>
                     <a href="<%= $motherLink %>" class="spectrum-Link spectrum-Link--primary">

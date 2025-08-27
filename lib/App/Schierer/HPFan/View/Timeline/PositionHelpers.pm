@@ -327,9 +327,15 @@ class App::Schierer::HPFan::View::Timeline::PositionHelpers
           "description list found, shortening line size for " . $event->id);
         $tc = $short_chars_per_line;
       }
+      if (my $pc =()= $event->description =~ m{<p\b}gi) {
+        $self->logger->debug("$pc paragrahs found for " . $event->id);
+        #there is *always* one paragraph for the description.
+        $pc = $pc - 1;
+        $lines += $pc unless $pc < 0;
+      }
       if ($event->description =~ m{<blockquote\b}i) {
         $self->logger->debug(
-          "blockquote found, shortening line size for" . $event->id);
+          "blockquote found, shortening line size for " . $event->id);
         $tc = $short_chars_per_line;
       }
 

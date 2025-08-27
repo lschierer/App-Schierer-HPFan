@@ -17,28 +17,30 @@ class App::Schierer::HPFan::Model::Gramps::Note :
     'fallback' => 1,
     'nomethod' => sub { croak "No overload method for $_[3]" };
 
-    field $data : param;
+  field $data : param;
 
-    field $change     : reader //= undef;
-    field $format     : reader //= undef;
-    field $gramps_id  : reader //= undef;
-    field $handle     : reader //= undef;
-    field $private    : reader //= undef;
-    field $text       : reader //= undef;
-    field $type       : reader //= undef;
+  field $change    : reader //= undef;
+  field $format    : reader //= undef;
+  field $gramps_id : reader //= undef;
+  field $handle    : reader //= undef;
+  field $private   : reader //= undef;
+  field $text      : reader //= undef;
+  field $type      : reader //= undef;
 
-    field $tag_list = [];
+  field $tag_list = [];
 
-    method tag_list   { [ $tag_list->@* ] }
+  method tag_list { [$tag_list->@*] }
 
   ADJUST {
-    $change     = $data->{change};
-    $format     = $data->{format};
-    $gramps_id  = $data->{gramps_id};
-    $handle     = $data->{handle};
-    $private    = $data->{private};
-    $text       = App::Schierer::HPFan::Model::Gramps::Note::Text->new($data->{text}->%*);
-    $type       = App::Schierer::HPFan::Model::Gramps::Note::Type->new($data->{type}->%*);
+    $change    = $data->{change};
+    $format    = $data->{format};
+    $gramps_id = $data->{gramps_id};
+    $handle    = $data->{handle};
+    $private   = $data->{private};
+    $text =
+      App::Schierer::HPFan::Model::Gramps::Note::Text->new($data->{text}->%*);
+    $type =
+      App::Schierer::HPFan::Model::Gramps::Note::Type->new($data->{type}->%*);
 
     foreach my $item ($data->{tag_list}->@*) {
       push @$tag_list, $item;

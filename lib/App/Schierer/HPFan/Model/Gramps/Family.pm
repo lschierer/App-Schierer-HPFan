@@ -33,7 +33,8 @@ class App::Schierer::HPFan::Model::Gramps::Family :
     $handle        = $data->{handle};
     $mother_handle = $data->{mother_handle};
     $private       = $data->{private};
-    $type          = $data->{type};
+    $type = App::Schierer::HPFan::Model::Gramps::Family::Relationship->new(
+      $data->{type}->%*);
 
     foreach my $item ($data->{attribute_list}->@*) {
       push @$attribute_list, $item;
@@ -66,12 +67,6 @@ class App::Schierer::HPFan::Model::Gramps::Family :
   method attribute_list { [$attribute_list->@*] }
   method note_list      { [$note_list->@*] }
   method tag_list       { [$tag_list->@*] }
-
-  method rel_type {
-    my $hash = JSON::PP->new->decode($self->json_data);
-    return App::Schierer::HPFan::Model::Gramps::Family::Relationship->new(
-      $hash->{'type'}->%*);
-  }
 
   method has_parent($person_handle) {
     return 1 if $father_handle && $father_handle eq $person_handle;

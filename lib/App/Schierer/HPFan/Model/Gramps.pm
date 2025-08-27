@@ -509,7 +509,6 @@ class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
         App::Schierer::HPFan::Model::Gramps::Event->new(data => $ih);
     }
 
-
     $self->logger->info(sprintf('imported %s events.', scalar keys %{$events}));
   }
 

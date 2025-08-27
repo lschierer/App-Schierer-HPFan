@@ -7,7 +7,6 @@ class App::Schierer::HPFan::Model::Gramps::Surname :
   use Carp;
   use overload
     '""'       => \&to_string,
-    '.'        => \&to_string,
     'bool'     => sub { $_[0]->_isTrue() },
     'cmp'      => \&_equality,
     'fallback' => 0;
