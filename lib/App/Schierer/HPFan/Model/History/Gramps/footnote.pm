@@ -50,7 +50,7 @@ class App::Schierer::HPFan::Model::History::Gramps::footnote
         : scalar(@$repos) ? first { defined($_->name) && length($_->name) } @$repos : 'Unknown';
 
       $title = sprintf('<dt class="%s">%s</dd>',
-        'spectrum-Heading spectrum-Heading--sizeS  spectrum-Heading-emphasized',
+        'spectrum-Heading spectrum-Heading--sizeXS spectrum-Heading-emphasized',
         $title
       );
 
@@ -60,11 +60,11 @@ class App::Schierer::HPFan::Model::History::Gramps::footnote
         $source->author // 'Unknown'
         );
 
-      my $page = defined($cite->page) && length($cite->page) ? sprintf('<dd class="%s">%s</dd>',
+      my $page = defined($cite->page) && length($cite->page) ? sprintf('<dd class="%s">Page: %s</dd>',
       'spectrum-Body spectrum-Body--serif spectrum-Detail--sizeS',
       $cite->page) : '' ;
 
-      my $date = defined($cite->date) ? sprintf('<dd class="%s">%s</dd>',
+      my $date = defined($cite->date) && $cite->date->year != 9999 ? sprintf('<dd class="%s">%s</dd>',
       'spectrum-Body spectrum-Body--serif spectrum-Body--sizeS',
       $cite->date) : '' ;
       push @$result, join '', ($title, $author, $date, $page, );

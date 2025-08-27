@@ -22,7 +22,7 @@ iconify-icon {
   --mod-heading-margin-end: 0;
   --mod-heading-margin-start: 0;
   --mod-heading-serif-font-family: "EB Garamond", serif;
-  --gb: var(--spectrum-blue-600);
+  --gb: var(--spectrum-indigo-900);
   --ireland: var(--spectrum-green-600);
   --magical: var(--spectrum-fuchsia-600);
   --religious: var(--spectrum-orange-600);
@@ -114,6 +114,12 @@ iconify-icon.color-female {
 
 iconify-icon.color-male {
   color: var(--color-male);
+}
+
+iconify-icon.return {
+  display: inline-block;
+  max-height: 1em;
+  max-width: 0.5em;
 }
 
 /* category based styling */

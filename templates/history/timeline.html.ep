@@ -20,6 +20,31 @@
     <div class="timeline-card">
       <%== $svg %>
     </div>
+    <div class="footnotes">
+      <% my @keys = sort keys $footnotes->%*; %>
+      <ol>
+      <% foreach my $key (keys $footnotes->%*){ %>
+        <li id="footnotes-<%= $key %>">
+          <% foreach my $line ($footnotes->{$key}->@*) { %>
+            <% if( defined($line) && length($line) ) { %>
+              <%== $line %>
+            <% } else { %>
+              <!-- Data::Printer::np($line) -->
+              Citation Needed.
+            <% } %>
+          <% } %>
+          <a
+            href="#return-<%= $key %>"
+            class="spectrum-Link spectrum-Link--quiet spectrum-Link--primary" >
+            <span class="spectrum-Body spectrum-Body--sizeS">
+              Return to Timeline
+              <iconify-icon icon="icon-park-outline:return" class="return" width="none"></iconify-icon>
+            </span>
+          </a>
+        </li>
+      <% } %>
+      </ol>
+    </div>
   <% } else { %>
     <!-- No events available -->
   <% } %>

@@ -176,9 +176,10 @@ class App::Schierer::HPFan::View::Timeline
         $self->logger->warn(sprintf('Skipping invalid event: %s', ref($event)));
         next;
       }
+      $self->logger->debug(sprintf('categorizing event %s.', $event->id));
 
       if(defined($event->sources) && scalar( @{ $event->sources } )){
-        $footnotes->{$event->id} = $event->sources;
+        push @{$footnotes->{$event->id}}, $event->sources->@*;
       }
 
       my $category = get_category_for_event($self, $event, $self->logger);
@@ -242,7 +243,7 @@ class App::Schierer::HPFan::View::Timeline
         # 3 is the minumum spot at which we can draw a node circle.
         my $miny =
           defined($previous_pos->{$category})
-          ? $previous_pos->{$category}->{y} + $vfr * $fr_scaling_factor
+          ? int($previous_pos->{$category}->{y} + $vfr * $fr_scaling_factor)
           : 3;
         if ($miny > $pos->{y}) {
           my $dy = $miny - $pos->{y};
@@ -373,6 +374,7 @@ class App::Schierer::HPFan::View::Timeline
 
     # a rectangle creates from the top left corner.
     $group->rectangle(
+      id     => sprintf('return-%s', $event->id),
       x      => $pos->{x} - $width / 2,
       y      => $pos->{y} - $height / 2,
       width  => $width,
@@ -427,8 +429,8 @@ class App::Schierer::HPFan::View::Timeline
       $div->tag('div',
         class=>'sources spectrum-Body spectrum-Body--sizeS spectrum-Body--serif',
 
-      )->cdata_noxmlesc(sprintf('<a href="#footnotes-%s" class="%s">Sources and References</a>',
-        $event->id, 'spectrum-Link spectrum-Link--quiet spectrum-Link--primary',
+      )->cdata_noxmlesc(sprintf('<a  href="#footnotes-%s" class="%s">Sources and References</a>',
+         $event->id, 'spectrum-Link spectrum-Link--quiet spectrum-Link--primary',
       ));
     }
 
