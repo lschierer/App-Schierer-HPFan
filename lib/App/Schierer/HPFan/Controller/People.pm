@@ -135,6 +135,12 @@ package App::Schierer::HPFan::Controller::People {
         $c->stash(title    => $person->display_name());
         $c->stash(chart    => $c->generate_ancestor_chart($person));
 
+        my @tags;
+        foreach my $tr ($person->tag_list->@*){
+          push @tags, $c->app->gramps->tags->{$tr}->name;
+        }
+        $c->stash(tags  =>\@tags);
+
         my @events = @{ $c->app->gramps->find_events_for_person($person) };
         $logger->debug("recieved events " . Data::Printer::np(@events));
         $c->stash(events => \@events);

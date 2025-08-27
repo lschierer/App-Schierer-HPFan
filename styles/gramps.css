@@ -8,6 +8,69 @@
   --mod-heading-margin-start: 0px;
 }
 
+div.basic-info {
+  max-height: 10vh;
+}
+
+div.spectrum-Card-preview {
+  background-color: var(--spectrum-gray-300);
+}
+
+div.spectrum-Card-content ul {
+  columns: 2;
+  column-gap: 2em;
+  max-width: 50vw;
+}
+
+div.spectrum-Card-body.gryffindor {
+  background-color: var(--spectrum-red-900);
+
+  --mod-body-font-color: var(--spectrum-gray-200);
+  --spectrum-card-title-font-color: var(--spectrum-gray-200);
+}
+
+div.spectrum-Card-body.hufflepuff {
+  background-color: var(--spectrum-yellow-300);
+
+  --mod-body-font-color: var(--spectrum-gray-900);
+  --spectrum-card-title-font-color: var(--spectrum-gray-900);
+}
+
+div.spectrum-Card-body.ravenclaw {
+  background-color: var(--spectrum-blue-1000);
+
+  --mod-body-font-color: var(--spectrum-gray-200);
+  --spectrum-card-title-font-color: var(--spectrum-gray-200);
+}
+
+div.spectrum-Card-body.slytherin {
+  background-color: var(--spectrum-chartreuse-800);
+
+  --mod-body-font-color: var(--spectrum-gray-900);
+  --spectrum-card-title-font-color: var(--spectrum-gray-900);
+}
+
+iconify-icon.color-female {
+  color: var(--color-female);
+}
+
+iconify-icon.color-male {
+  color: var(--color-male);
+}
+
+iconify-icon {
+  display: block;
+  height: 100%;
+  width: 5em;
+  box-sizing: border-box;
+}
+
+ul.bio {
+  padding-left: 2em;
+
+  --mod-body-margin-end: 1px;
+}
+
 .timeline-card {
   margin: 1px 0;
   min-width: 1vw;
@@ -37,29 +100,4 @@ svg .family-node.junction {
   color: var(--spectrum-blue-400);
   stroke: var(--spectrum-blue-400);
   fill-opacity: 0;
-}
-
-div.basic-info {
-  max-height: 10vh;
-}
-
-iconify-icon.color-female {
-  color: var(--color-female);
-}
-
-iconify-icon.color-male {
-  color: var(--color-male);
-}
-
-iconify-icon {
-  display: block;
-  height: 100%;
-  width: 5em;
-  box-sizing: border-box;
-}
-
-ul.bio {
-  padding-left: 2em;
-
-  --mod-body-margin-end: 1px;
 }

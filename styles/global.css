@@ -118,8 +118,9 @@ div.title-section {
   box-sizing: border-box;
 
   & h1 {
-    margin: var(--size-5);
+    margin: clamp(0.25vh, 1vh, var(--size-5));
     box-sizing: border-box;
+    max-height: 100%;
   }
 }
 
@@ -132,6 +133,7 @@ footer {
 div.spectrum-SplitView.spectrum-SplitView--horizontal {
   box-sizing: border-box;
   grid-row-end: span 1;
+  flex-shrink: 1;
   height: var(--main-height);
   width: 100vw;
 }

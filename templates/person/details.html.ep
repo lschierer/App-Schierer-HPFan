@@ -1,3 +1,4 @@
+% use List::AllUtils qw( first any );
 % my $iconName = 'tdesign:user-unknown';
 % my $iconClass = 'icon1';
 % if($person->gender eq 'M') { $iconName = 'ion-male'; $iconClass = 'color-male'; }
@@ -5,6 +6,7 @@
 % my @families = @{ gramps->find_families_as_parent($person) };
 % my @childof = @{ gramps->find_families_as_child($person) };
 % my $staticContent = stash('staticContent') // undef;
+% my $house = first { $_ =~ /(Gryffindor|Hufflepuff|Ravenclaw|Slytherin)/i } @$tags;
 
 <link rel="stylesheet" href="/css/gramps.css" />
 
@@ -12,7 +14,7 @@
   <div class="spectrum-Card-preview">
     <iconify-icon icon="<%= $iconName %>" class="<%= $iconClass %>" width="none"></iconify-icon>
   </div>
-  <div class="spectrum-Card-body">
+  <div class="spectrum-Card-body <%= lc($house) %>">
     <div class="spectrum-Card-header">
       <div class="spectrum-Card-title">
         Basic Information
@@ -22,13 +24,13 @@
       <div class="spectrum-Card-description">
         <!-- there are <%= scalar @{ $events } %> events -->
         <ul class="bio">
-          <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
+          <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeS">
             <strong>ID</strong>: <%= $person->gramps_id %>
           </li>
           <% foreach my $event (@{ $events }) { %>
             <!-- <%= $event ? ref $event : 'undefined event'; %> -->
-            <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
-            <strong><%= $event->type %></strong>: <%= $event->date ? $event->date->to_string : 'Unknown' %>
+            <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeS">
+            <strong><%= $event->type %></strong>: <%= $event->date ? $event->date->year == 9999 ? 'Unknown' : $event->date->to_string : 'Unknown' %>
             </li>
           <% } %>
         </ul>
