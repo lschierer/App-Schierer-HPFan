@@ -92,6 +92,60 @@ class App::Schierer::HPFan::Model::History::Gramps :
     elsif ($event->type eq 'Death') {
       $self->process_death_event($event);
     }
+    elsif ($event->type eq 'Property') {
+      $self->process_property_event($event);
+    }
+  }
+
+  method process_property_event ($e) {
+    my @citations;
+    my @description;
+    if (my $person = $self->_primary_person_for($e)) {
+      my $fn = App::Schierer::HPFan::Model::History::Gramps::footnote->new(
+        event  => $e,
+        people => [$person],
+        gramps => $gramps,
+      );
+
+      # handle date
+      my @dklparts;
+      push @dklparts, $e->date->qualifiers
+        if (defined $e->date->qualifiers && length($e->date->qualifiers));
+      push @dklparts, $e->date->modifiers
+        if (defined $e->date->modifiers
+        && length($e->date->modifiers));
+
+      # set up description
+      push @description, $e->description
+        if (defined($e->description) && length($e->description));
+      my $note_text = $self->_notes_for_event($e);
+      push @description, $note_text->@* if (scalar @$note_text);
+
+      # final object
+      $events->{ $e->gramps_id } =
+        App::Schierer::HPFan::Model::History::Event->new(
+        id          => $e->gramps_id,
+        blurb       => sprintf('Property Grant to %s', $person->display_name()),
+        description => $mv->format_string(
+          join('\n', @description),
+          {
+            asXHTML      => 1,
+            sizeTemplate => 'timeline',
+          }
+        ),
+        event_class => 'magical',
+        origin      => 'Gramps',
+        sortval     => $e->date->sortval,
+        type        => 'Property',
+        sources     => $fn->footnote,
+        );
+      $events->{ $e->gramps_id }->set_date($e->date);
+    }
+    else {
+      $self->logger->warn(sprintf(
+        'Property event %s cannot be matched with a person.',
+        $e->gramps_id));
+    }
   }
 
   method process_birth_event ($e) {

@@ -15,6 +15,7 @@ class App::Schierer::HPFan::Data : isa(App::Schierer::HPFan::Logger) {
   use Carp;
   use Log::Log4perl;
   use List::AllUtils         qw( first any );
+  use List::MoreUtils qw(arrayify);
   use DBD::SQLite::Constants qw/:dbd_sqlite_string_mode/;
   our $VERSION = 'v0.0.1';
 
@@ -84,6 +85,7 @@ class App::Schierer::HPFan::Data : isa(App::Schierer::HPFan::Logger) {
     $self->get_source_data();
     $self->get_event_data();
     $self->get_note_data();
+    $self->get_tag_data();
   }
 
   method get_person_data {
@@ -152,18 +154,29 @@ class App::Schierer::HPFan::Data : isa(App::Schierer::HPFan::Logger) {
   method get_tag_data {
     my $tags = $output->child('tags');
     $tags->mkdir({ mode => 0750 });
+    my $tagObject = [];
 
     $self->logger->info("starting processing of tag table");
-    $self->_get_data_with_gramps_id('tag', $tags);
+    my $sql    = "SELECT handle,name FROM tag";
+    my $result = $dbh->selectall_hashref($sql, 'handle');
+    #@$tagObject = arrayify $result->@*;
+    #my $hash = JSON::PP->new->utf8->pretty->canonical->encode($tagObject);
+    $self->logger->debug(
+      sprintf('result of tags query is %s', Data::Printer::np($result)));
+    foreach my $key (keys $result->%*) {
+      my $entry_target = $tags->child("${key}.json");
+      $entry_target->spew_utf8(JSON::PP->new->utf8->pretty->canonical->encode($result->{$key}));
+    }
+
     $self->logger->debug("finished processing of tag table");
   }
 
   method get_repository_data {
-    my $repositorys = $output->child('repositories');
-    $repositorys->mkdir({ mode => 0750 });
+    my $repositories = $output->child('repositories');
+    $repositories->mkdir({ mode => 0750 });
 
     $self->logger->info("starting processing of repository table");
-    $self->_get_data_with_gramps_id('repository', $repositorys);
+    $self->_get_data_with_gramps_id('repository', $repositories);
     $self->logger->debug("finished processing of repository table");
   }
 

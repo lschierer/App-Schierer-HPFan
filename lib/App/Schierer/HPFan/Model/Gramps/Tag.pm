@@ -9,41 +9,20 @@ class App::Schierer::HPFan::Model::Gramps::Tag :
   use List::AllUtils qw( any );
   use Carp;
 
+  field $data :param;
+
+  field $handle : reader //= undef;
+  field $name   : reader //= undef;
+
   ADJUST {
-    my @desired = qw(
-      handle  name  color   priority
-      change  json_data );
-
-    my @names;
-    push @names, @desired;
-    push @names, keys $self->ALLOWED_FIELD_NAMES->%*;
-    foreach my $tn (@names) {
-      if (any { $_ eq $tn } @desired) {
-        $self->ALLOWED_FIELD_NAMES->{$tn} = 1;
-      }
-      else {
-        $self->ALLOWED_FIELD_NAMES->{$tn} = undef;
-      }
-    }
-  }
-
-  method name     { $self->_get_field('name') }
-  method color    { $self->_get_field('color') }
-  method priority { $self->_get_field('priority') }
-
-  method parse_json_data {
-    my $hash = JSON::PP->new->decode($self->json_data);
-    $self->logger->debug(sprintf(
-      'hash for tag "%s" is: %s',
-      $self->handle, Data::Printer::np($hash),
-    ));
+    $handle = $data->{handle};
+    $name   = $data->{name};
   }
 
   method to_hash {
     my $hr = $self->SUPER::to_hash;
-    $hr->{name}     = $self->name;
-    $hr->{color}    = $self->color;
-    $hr->{priority} = $self->priority;
+    $hr->{name}     = $name;
+    $hr->{handle}   = $handle;
     return $hr;
   }
 
