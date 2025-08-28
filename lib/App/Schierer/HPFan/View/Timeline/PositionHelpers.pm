@@ -23,7 +23,7 @@ class App::Schierer::HPFan::View::Timeline::PositionHelpers
   field $used_positions = [];
   field $boxes : reader = {};
   field $event_by_id : reader //= {};
-  field $cat_by_id //= {};
+  field $cat_by_id : reader //= {};
 
   field $detail_width  : param : writer;
   field $detail_height : param : writer;
@@ -33,6 +33,8 @@ class App::Schierer::HPFan::View::Timeline::PositionHelpers
   field $ymax          : writer;
   field $xmax          : writer;
   field $pad = 5;
+
+  field $nominal_pos : reader = {};
 
   method set_events ($events) {
     for my $ev (@$events) {

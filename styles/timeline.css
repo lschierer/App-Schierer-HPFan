@@ -19,6 +19,7 @@ iconify-icon {
   height: auto;
   font-optical-sizing: auto;
 
+  --timeline-column-width: 40em;
   --mod-heading-margin-end: 0;
   --mod-heading-margin-start: 0;
   --mod-heading-serif-font-family: "EB Garamond", serif;
@@ -39,6 +40,15 @@ div.timeline-card svg .spectrum-Detail--sizeM {
   --mod-detail-font-size: 12px;
 }
 
+.timeline.node-label div {
+  background: transparent;
+  text-align: center;
+  width: 100%;
+  opacity: 1;
+  border-left: 1.5px solid var(--category-color);
+  border-right: 1.5px solid var(--category-color);
+}
+
 div.timeline-card svg .spectrum-Heading--sizeS,
 div.timeline-card svg .spectrum-Body--sizeS,
 div.timeline-card svg .spectrum-Detail--sizeS {
@@ -47,7 +57,19 @@ div.timeline-card svg .spectrum-Detail--sizeS {
   --mod-detail-font-size: 10px;
 }
 
-foreignObject div.spectrum-Body {
+foreignObject div#details-nodes {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(min(100%, 100%/5), 100%/5, var(--timeline-column-width)), 1fr)
+  );
+  gap: 5px;
+  grid-auto-flow: row;
+  place-items: start center;
+  place-content: space-between space-between;
+
   --mod-body-margin-end: 0;
 }
 
@@ -179,12 +201,11 @@ circle {
   stroke: var(--category-color);
 }
 
-.node rect {
-  fill: var(--category-color);
-  fill-opacity: 0.1;
-}
-
 .timeline.node-label {
+  background-color: var(--category-color);
+  opacity: 0.5;
+  height: auto;
+  width: fit-content;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -193,10 +214,8 @@ circle {
   padding: 2px;
   overflow-wrap: break-word;
   overflow: hidden;
-  stroke-width: 1;
   text-wrap: pretty;
-  height: 99%;
-  width: 99%;
+  break-inside: avoid;
 }
 
 .timeline.detail-edge {
@@ -204,9 +223,4 @@ circle {
   stroke-linecap: round;
   stroke: var(--category-color);
   stroke-width: 0.75px;
-}
-
-.timeline.node-label div {
-  text-align: center;
-  width: 100%;
 }

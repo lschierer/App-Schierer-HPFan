@@ -132,40 +132,47 @@ class App::Schierer::HPFan::View::Timeline
   }
 
   method _draw_all_detail_boxes_from_boxes {
-    for my $cat (sort keys $ph->boxes->%*) {
-      my $lane = $ph->boxes->{$cat};
+    my $fox = scalar(keys $categories->%*) * 10 + 5;
+    my $fo = $text_group->foreignObject(
+      x       => $fox,
+      y       => 3,
+      width   => $xmax - $fox,
+      height  => $self->viewheight - 3,
+    );
+    my $div = $fo->tag('div',
+      id    => 'details-nodes',
+      xmlns => 'http://www.w3.org/1999/xhtml',
+    );
 
-      for my $pos (@$lane) {
-        my $id = $pos->{id};
-        if (not defined($id)) {
-          $self->logger->error(
-            'no id in pos: ' . Data::Printer::np($pos, multiline => 0));
-          next;
-        }
-        my $event = $ph->event_by_id->{$id};
-        unless ($event) {
-          $self->logger->warn("No event found for id=$id; skipping draw");
-          next;
-        }
-        my $category      = $pos->{category};
-        my $sv            = $event->sortval;
-        my $dot_node_name = "dot_${category}_${sv}";
-        my $rail_node     = $rails->{$category}->{$dot_node_name};
-        $self->logger->debug(sprintf(
-          'rail node %s %s is %s',
+    my @sortedEvents = sort {
+      my $svc = $a->sortval <=> $b->sortval;
+      if ($svc == 0) {
+        return $a->date cmp $b->date;
+      }
+      return $svc;
+    } grep {
+      Scalar::Util::reftype($_) eq 'OBJECT'
+        && $_->isa('App::Schierer::HPFan::Model::History::Event')
+    } $events->@*;
+
+    foreach my $event (  @sortedEvents ) {
+      my $pos = $ph->nominal_pos->{$event->id};
+      my $category = $ph->cat_by_id->{$event->id};
+      my $sv            = $event->sortval;
+      my $dot_node_name = "dot_${category}_${sv}";
+      my $rail_node     = $rails->{$category}->{$dot_node_name};
+      $self->logger->debug(sprintf(
+        'rail node %s %s is %s',
+        $category, $sv, Data::Printer::np($rail_node, multiline => 0)
+      ));
+      if (not defined $rail_node, or not defined $rail_node->{x}) {
+        $self->logger->error(sprintf(
+          'rail node for %s %s is missing or invalid: %s',
           $category, $sv, Data::Printer::np($rail_node, multiline => 0)
         ));
-        if (not defined $rail_node, or not defined $rail_node->{x}) {
-          $self->logger->error(sprintf(
-            'rail node for %s %s is missing or invalid: %s',
-            $category, $sv, Data::Printer::np($rail_node, multiline => 0)
-          ));
-          next;
-        }
-
-        # draw the box content
-        $self->_create_detail_node_for_event($event, $pos, $rail_node);
+        next;
       }
+      $self->_create_detail_node_for_event($div, $event, $pos, $rail_node);
     }
   }
 
@@ -241,6 +248,7 @@ class App::Schierer::HPFan::View::Timeline
         $pos = $ph->_get_normalized_position($ymax, $category, $sv);
         # y cordinates go down from upper left corner
         # 3 is the minumum spot at which we can draw a node circle.
+        $pos->{id} = $sv;
         my $miny =
           defined($previous_pos->{$category})
           ? int($previous_pos->{$category}->{y} + $vfr * $fr_scaling_factor)
@@ -266,7 +274,10 @@ class App::Schierer::HPFan::View::Timeline
 
         if (defined $previous_pos->{$category}) {
           my $prev = $previous_pos->{$category};
+          my $cl = $category =~ s/ /_/gr;
           $edges_group->line(
+            id    => sprintf('%-category-lane-%s-%s',
+            $cl, $previous_pos->{id}, $dot_node_name),
             x1    => $pos->{x},
             y1    => $prev->{y} + 3,
             x2    => $pos->{x},
@@ -292,113 +303,40 @@ class App::Schierer::HPFan::View::Timeline
         ymax          => $ymax,
         xmax          => $xmax,
       );
-      my $detail_pos = $ph->find_detail_position($event, $pos, $dot_node_name);
-      # Draw dashed line from timeline dot to detail box$categories,
-      # Draw the line to the corner, not the center.
+      my $detail_pos = {
+        id        => $event->id,
+        x         => $pos->{x} + 100,
+        y         => $pos->{y},
+        node      => $dot_node_name,
+        type      => 'detail',
+        category  => $ph->cat_by_id->{$event->id},
+      };
+
+      $ph->nominal_pos->{$event->id} = $detail_pos;
 
     }
     $self->logger->trace("svg is currently " . $graph->xmlify);
   }
 
-  method _create_detail_node_for_event ($event, $pos, $node_pos) {
+  method _create_detail_node_for_event ($fo, $event, $pos, $node_pos) {
 
-    my $category = $pos->{category};
+    my $category = $pos->{category} // 'generic';
 
     $edges_group->line(
+      id    => sprintf('line-%s',$event->id),
       x1    => $node_pos->{x},
       y1    => $node_pos->{y},
-      x2    => $pos->{x} - $pos->{width} / 2,
-      y2    => $pos->{y} - $pos->{height} / 2,
+      x2    => $pos->{x},
+      y2    => $pos->{y},
       class => "timeline detail-edge $category",
     );
 
-    my $height = $pos->{height} // $detail_height;
-    my $width  = $pos->{width}  // $detail_width;
-    if (not defined($pos->{height}) or $pos->{height} < 3) {
-      $self->dev_guard(sprintf(
-        'detail node with no height for event %s: %s',
-        $event->id, Data::Printer::np($pos, multiline => 0)
-      ));
-    }
-
-    # 1) Split event_class into tokens (whitespace-separated)
-    my @parts = grep {length} split /\s+/, ($event->event_class // '');
-
-    # “whitespace count + 1” stops; ensure at least 1 stop
-    my $n_stops = @parts ? (@parts + 1) : 1;
-
-    # 2) Build style that maps tokens to --stop-i using your CSS palette vars
-    # e.g. "--stop-1: var(--england); --stop-2: var(--scotland); ..."
-    my $style = join '; ',
-      map { my $i = $_ + 1; "--stop-$i: var(--$parts[$_])" } (0 .. $#parts);
-
-    (my $safe_id = $event->id // 'evt') =~ s/[^A-Za-z0-9_.:-]+/_/g;
-    my $grad_id = "grad_$safe_id";
-
-    my $group = $text_group->tag(
-      'g',
-      x      => $pos->{x} - $width / 2,
-      y      => $pos->{y} - $height / 2,
-      width  => $width,
-      height => $height,
-      id     => $event->id,
-      class  => sprintf('timeline node %s', $event->event_class),
-      (length $style ? (style => $style) : ()),
-    );
-
-    my $defs = $group->tag('defs');
-    my $lg   = $defs->tag(
-      'linearGradient',
-      id                => $grad_id,
-      x1                => '0%',
-      y1                => '0%',
-      x2                => '100%',
-      y2                => '0%',
-      gradientUnits     => 'objectBoundingBox',
-      gradientTransform => 'rotate(175)'          # adjust angle as you like
-    );
-
-    # Build evenly spaced stops. Each stop uses --stop-i with fallbacks.
-    for my $i (1 .. $n_stops) {
-      my $offset =
-        ($n_stops == 1)
-        ? '15%'
-        : sprintf('%.3f%%', ($i - 1) * 100 / ($n_stops - 1));
-
-      $lg->tag(
-        'stop',
-        offset       => $offset,
-        'stop-color' => "var(--stop-$i, var(--category-color, currentColor))",
-      );
-    }
-
-    # a rectangle creates from the top left corner.
-    $group->rectangle(
-      id     => sprintf('return-%s', $event->id),
-      x      => $pos->{x} - $width / 2,
-      y      => $pos->{y} - $height / 2,
-      width  => $width,
-      height => $height,
-      rx     => 0.1,
-      ry     => 0.1,
-      (scalar @parts ? (fill => "url(#$grad_id)",) : ()),
-    );
-
-    my $fo = $group->foreignObject(
-      x      => $pos->{x} - $width / 2,
-      y      => $pos->{y} - $height / 2,
-      width  => $width,
-      height => $height,
-    );
-
-    $fo->comment(sprintf('event %s sortval %s', $event->id, $event->sortval));
-
     my $div = $fo->tag(
       'div',
-      id    => sprintf('fo-div-%s', $event->id),
-      xmlns => 'http://www.w3.org/1999/xhtml',
-      class => sprintf('timeline node-label %s', $event->event_class),
+      id    => sprintf('event-div-%s', $event->id),
+      class => sprintf('timeline node-label %s',  $event->event_class),
     );
+    $div->comment(sprintf('event %s sortval %s', $event->id, $event->sortval));
 
     $div->tag('div',
       class => 'spectrum-Heading spectrum-Heading--sizeM '
@@ -418,11 +356,10 @@ class App::Schierer::HPFan::View::Timeline
         $event->description, $event->id
       ));
 
-      my $cc = $div->tag('div',
+      $div->tag('div',
         class =>
           'description spectrum-Body spectrum-Body--sizeS spectrum-Body--serif'
-      );
-      $cc->cdata_noxmlesc($event->description);
+      )->cdata_noxmlesc($event->description);
     }
 
     if (defined($event->sources) && scalar(@{ $event->sources })) {
