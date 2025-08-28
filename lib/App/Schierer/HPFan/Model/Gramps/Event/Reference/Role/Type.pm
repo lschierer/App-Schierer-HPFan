@@ -142,7 +142,7 @@ class App::Schierer::HPFan::Model::Gramps::Event::Reference::Role::Type :
       return $b->_sortValue == $a;
     }
 
-    return "$a" cmp "$b";
+    return "$a" eq "$b";
   }
 
   method _isTrue {

@@ -7,6 +7,7 @@
 % my @childof = @{ gramps->find_families_as_child($person) };
 % my $staticContent = stash('staticContent') // undef;
 % my $house = first { $_ =~ /(Gryffindor|Hufflepuff|Ravenclaw|Slytherin)/i } @$tags;
+% $house = '' unless defined($house);
 
 <link rel="stylesheet" href="/css/gramps.css" />
 
