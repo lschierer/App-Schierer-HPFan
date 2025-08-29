@@ -57,7 +57,7 @@ if ( ! $DEV  ) && ( ! $PROD ) ; then
 fi
 
 # Get all cluster ARNs
-CLUSTERS=$(aws --profile personal --region us-east-2 ecs list-clusters | jq -r '.clusterArns[]')
+CLUSTERS=$(aws --profile personal --region us-east-2 ecs list-clusters | jq -r '.clusterArns[]' | grep HPFan)
 
 # Loop through each cluster
 for CLUSTER in $CLUSTERS; do
