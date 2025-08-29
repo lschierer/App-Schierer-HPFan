@@ -42,7 +42,9 @@ package App::Schierer::HPFan::Plugins::StaticPages {
           if ($rp =~ qr{/$}) {
             my $canonical = $rp;
             $canonical =~ s{/$}{};
-            return $c->redirect_to($canonical, 301);
+            if(length($canonical)){
+              return $c->redirect_to($canonical, 301);
+            }
           }
           return $c->render_markdown_file($static_entry->{path});
         }
