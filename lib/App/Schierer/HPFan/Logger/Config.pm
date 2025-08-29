@@ -57,13 +57,13 @@ package App::Schierer::HPFan::Logger::Config {
     my $target = $self->getLogDir();
     $target->mkdir({ mode => 0755 });
 
-    Log::Log4perl::Config->utf8(1);
     if ($mode =~ /production/i) {
       Log::Log4perl::init_and_watch($config_file->absolute->canonpath, 10);
     }
     else {
       Log::Log4perl::init($config_file->absolute->canonpath);
     }
+    Log::Log4perl::Config->utf8(1);
     $logger = Log::Log4perl->get_logger($dist_name);
     $logger->info("logging initialized using $cf for mode $mode");
     return $logger;
