@@ -11,6 +11,7 @@ require App::Schierer::HPFan::Logger::MojoLog4Perl;
 
 package App::Schierer::HPFan {
   use Mojo::Base 'Mojolicious', -strict, -signatures;
+  use Mojo::Base 'App::Schierer::HPFan::Logger::MojoLog4Perl', -role;
   use Carp;
   use Env qw(DEPLOYMENT_TIME HOSTNAME IMAGE_TAG IMAGE_URI);
   our $VERSION = 'v0.00.1';

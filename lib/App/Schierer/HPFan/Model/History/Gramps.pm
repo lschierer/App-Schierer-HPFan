@@ -94,9 +94,12 @@ class App::Schierer::HPFan::Model::History::Gramps :
     }
     elsif ($event->type eq 'Property') {
       $self->process_property_event($event);
-    }else {
-      $self->logger->debug(sprintf('unsupported event type %s for event %s',
-      $event->type, $event->gramps_id));
+    }
+    else {
+      $self->logger->debug(sprintf(
+        'unsupported event type %s for event %s',
+        $event->type, $event->gramps_id
+      ));
     }
   }
 
@@ -127,8 +130,9 @@ class App::Schierer::HPFan::Model::History::Gramps :
       # final object
       $events->{ $e->gramps_id } =
         App::Schierer::HPFan::Model::History::Event->new(
-        id          => $e->gramps_id,
-        blurb       => sprintf('Property Grant to %s', join(', ', map {$_->display_name()} @$people)),
+        id    => $e->gramps_id,
+        blurb => sprintf('Property Grant to %s',
+          join(', ', map { $_->display_name() } @$people)),
         description => $mv->format_string(
           join('\n', @description),
           {
@@ -287,15 +291,16 @@ class App::Schierer::HPFan::Model::History::Gramps :
             'potential match: %s and %s', $er->ref, $e->handle));
           if ($er->role eq 'Primary') {
             $self->logger->debug(sprintf(
-  'returning person %s as primary for event %s based on reference %s',
+'returning person %s as primary for event %s based on reference %s',
               $person->gramps_id, $e->gramps_id, $er->ref,
             ));
             push @$people, $person;
           }
           else {
             $self->logger->debug(sprintf(
-              'er role %s ref %s rejected; %s handle %s is not the primary for event %s.',
-              $er->role, $er->ref, $person->gramps_id, $person->handle, $e->gramps_id
+'er role %s ref %s rejected; %s handle %s is not the primary for event %s.',
+              $er->role,       $er->ref, $person->gramps_id,
+              $person->handle, $e->gramps_id
             ));
           }
         }
@@ -320,8 +325,9 @@ class App::Schierer::HPFan::Model::History::Gramps :
           }
           else {
             $self->logger->debug(sprintf(
-              'er role %s ref %s rejected; %s handle %s is not the primary for event %s.',
-              $er->role, $er->ref, $person->gramps_id, $person->handle, $e->gramps_id
+'er role %s ref %s rejected; %s handle %s is not the primary for event %s.',
+              $er->role,       $er->ref, $person->gramps_id,
+              $person->handle, $e->gramps_id
             ));
           }
         }

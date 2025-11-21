@@ -15,7 +15,7 @@ class App::Schierer::HPFan::Data : isa(App::Schierer::HPFan::Logger) {
   use Carp;
   use Log::Log4perl;
   use List::AllUtils         qw( first any );
-  use List::MoreUtils qw(arrayify);
+  use List::MoreUtils        qw(arrayify);
   use DBD::SQLite::Constants qw/:dbd_sqlite_string_mode/;
   our $VERSION = 'v0.0.1';
 
@@ -165,7 +165,8 @@ class App::Schierer::HPFan::Data : isa(App::Schierer::HPFan::Logger) {
       sprintf('result of tags query is %s', Data::Printer::np($result)));
     foreach my $key (keys $result->%*) {
       my $entry_target = $tags->child("${key}.json");
-      $entry_target->spew_utf8(JSON::PP->new->utf8->pretty->canonical->encode($result->{$key}));
+      $entry_target->spew_utf8(
+        JSON::PP->new->utf8->pretty->canonical->encode($result->{$key}));
     }
 
     $self->logger->debug("finished processing of tag table");

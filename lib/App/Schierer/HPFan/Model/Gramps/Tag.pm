@@ -9,7 +9,7 @@ class App::Schierer::HPFan::Model::Gramps::Tag :
   use List::AllUtils qw( any );
   use Carp;
 
-  field $data :param;
+  field $data : param;
 
   field $handle : reader //= undef;
   field $name   : reader //= undef;
@@ -21,8 +21,8 @@ class App::Schierer::HPFan::Model::Gramps::Tag :
 
   method to_hash {
     my $hr = $self->SUPER::to_hash;
-    $hr->{name}     = $name;
-    $hr->{handle}   = $handle;
+    $hr->{name}   = $name;
+    $hr->{handle} = $handle;
     return $hr;
   }
 
