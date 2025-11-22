@@ -12,21 +12,26 @@ require App::Schierer::HPFan::Logger::MojoLog4Perl;
 package App::Schierer::HPFan {
   use Mojo::Base 'Mojolicious', -strict, -signatures;
   use Mojo::Base 'App::Schierer::HPFan::Logger::MojoLog4Perl', -role;
+  use Log::Any::Adapter;
+  use Log::Log4perl;
   use Carp;
   use Env qw(DEPLOYMENT_TIME HOSTNAME IMAGE_TAG IMAGE_URI);
   our $VERSION = 'v0.00.1';
 
 # This method will run once at server start
-  sub startup ($self) {
-
+  sub startup ($app) {
+    $app->logger->debug('setting up logging');
+    Log::Any::Adapter->set('Log4perl');
+    $app->plugin('Log::Any' => { logger => 'Log::Log4perl' });
+    $app->log->info(sprintf('Mojolicious Logging initialized'));
     # Load configuration from config file
-    my $config  = $self->plugin('NotYAMLConfig');
+    my $config  = $app->plugin('NotYAMLConfig');
     my $distDir = Mojo::File::Share::dist_dir('App::Schierer::HPFan');
-    my $mode    = $self->mode;
-    $self->config(distDir        => $distDir);
-    $self->config(APP_START_TIME => time());
+    my $mode    = $app->mode;
+    $app->config(distDir        => $distDir);
+    $app->config(APP_START_TIME => time());
     Env::import();
-    $self->config(
+    $app->config(
       'HPFAN-Environment' => {
         DEPLOYMENT_TIME => $DEPLOYMENT_TIME,
         HOSTNAME        => $HOSTNAME,
@@ -36,23 +41,17 @@ package App::Schierer::HPFan {
     );
 
     # Configure the application
-    $self->secrets($config->{secrets});
-    $self->plugin('DefaultHelpers');
+    $app->secrets($config->{secrets});
+    $app->plugin('DefaultHelpers');
 
-    my $lc = App::Schierer::HPFan::Logger::Config->new('App-Schierer-HPFan');
-    my $log4perl_logger = $lc->init($mode);
-    my $app_log         = App::Schierer::HPFan::Logger::MojoLog4Perl->new(
-      l4p => Log::Log4perl->get_logger('App-Schierer-HPFan'),);
-    $self->log($app_log);
-
-    $self->helper(
+    $app->helper(
       logger => sub ($c, $cat) {
         if (length($cat) == 0) {
-          $self->log->error('got a logger request with zero length cat!');
+          $app->log->error('got a logger request with zero length cat!');
           $cat = 'App-Schierer-HPFan-Unknown';
         }
         else {
-          $self->log->info("got a cat '$cat'");
+          $app->log->info("got a cat '$cat'");
         }
         Log::Log4perl::Config->utf8(1);
         my $logger = Log::Log4perl->get_logger($cat);
@@ -60,48 +59,48 @@ package App::Schierer::HPFan {
       }
     );
 
-    $self->log->info("Mojolicious Logging initialized");
+    $app->log->info("Mojolicious Logging initialized");
 
-    foreach my $envkey (keys %{ $self->config->{'HPFAN-Environment'} }) {
+    foreach my $envkey (keys %{ $app->config->{'HPFAN-Environment'} }) {
       if (defined $envkey) {
-        my $envValue = $self->config->{'HPFAN-Environment'}->{$envkey}
+        my $envValue = $app->config->{'HPFAN-Environment'}->{$envkey}
           // 'Undefined';
-        $self->log->info("HPFAN-Environnment variable $envkey is $envValue");
+        $app->log->info("HPFAN-Environnment variable $envkey is $envValue");
       }
       else {
-        $self->log->warn('undefined envkey in HPFAN-Environment!');
+        $app->log->warn('undefined envkey in HPFAN-Environment!');
       }
     }
 
     # Set namespaces
-    push @{ $self->routes->namespaces },  'App::Schierer::HPFan::Controller';
-    push @{ $self->plugins->namespaces }, 'App::Schierer::HPFan::Plugins';
-    push @{ $self->plugins->namespaces }, 'App::Schierer::HPFan::Controller';
-    push @{ $self->preload_namespaces },  'App::Schierer::HPFan::Controller';
+    push @{ $app->routes->namespaces },  'App::Schierer::HPFan::Controller';
+    push @{ $app->plugins->namespaces }, 'App::Schierer::HPFan::Plugins';
+    push @{ $app->plugins->namespaces }, 'App::Schierer::HPFan::Controller';
+    push @{ $app->preload_namespaces },  'App::Schierer::HPFan::Controller';
 
     # Register infrastructure plugins in specific order
 
     # First Plugins that provide helpers but do not define routes
     # Markdown
-    $self->plugin('App::Schierer::HPFan::Plugins::Markdown');
+    $app->plugin('App::Schierer::HPFan::Plugins::Markdown');
     # Navigation
-    $self->plugin('App::Schierer::HPFan::Plugins::Navigation');
+    $app->plugin('App::Schierer::HPFan::Plugins::Navigation');
 
     # Then Controller Plugins
-    $self->plugin(
+    $app->plugin(
       'Module::Loader' => {
         plugin_namespaces => ['App::Schierer::HPFan::Controller']
       }
     );
     # Helper for the class list tables
-    $self->plugin('App::Schierer::HPFan::Plugins::ClassLists');
+    $app->plugin('App::Schierer::HPFan::Plugins::ClassLists');
 
     # Last the Static Pages
-    $self->plugin('App::Schierer::HPFan::Plugins::StaticPages');
+    $app->plugin('App::Schierer::HPFan::Plugins::StaticPages');
     # Register last for lowest priority
 
     if ($mode eq 'development') {
-      $self->app->hook(
+      $app->app->hook(
         before_render => sub ($c, $args) {
           $c->log->info(
             sprintf
@@ -116,7 +115,7 @@ package App::Schierer::HPFan {
         }
       );
 
-      $self->app->hook(
+      $app->app->hook(
         after_render => sub ($c, $output, $format) {
           $c->log->info(
             sprintf 'after_render %s bytes=%d format=%s',
@@ -128,7 +127,7 @@ package App::Schierer::HPFan {
       );
     }
     else {
-      $self->log->info("Running in mode $mode");
+      $app->log->info("Running in mode $mode");
     }
 
   }
