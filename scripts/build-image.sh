@@ -1,4 +1,5 @@
 #!/bin/bash -x
+set -eo pipefail
 
 AWS_REGION='us-east-2';
 AWS_ACCOUNT_ID='699040795025';

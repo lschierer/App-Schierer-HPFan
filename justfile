@@ -14,6 +14,7 @@ install:
   mise trust
   mise install
   pnpm install
+  rm -f *META* MANIFEST
   perl Build.PL
   ./Build installdeps
   mkdir -p public/images/HPNOFP
