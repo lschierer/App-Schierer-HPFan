@@ -14,7 +14,8 @@ package App::Schierer::HPFan::Controller::Bookmarks {
 
   my $logger;
 
-  sub register($self, $app, $config) {
+  sub register($c, $app, $config) {
+    $c->SUPER::register($app, $config);
     $logger = $app->logger(__PACKAGE__);
     $logger->info(sprintf(
       'register function for %s with logging category %s.',
@@ -31,7 +32,7 @@ package App::Schierer::HPFan::Controller::Bookmarks {
     my $BookmarksTree = {};
     while (my $file_path = $iter->()) {
       $file_path = Mojo::File->new($file_path);
-      $self->process_bookmark_file($app, $file_path, $baseRoute,
+      $c->process_bookmark_file($app, $file_path, $baseRoute,
         $BookmarksTree);
 
     }

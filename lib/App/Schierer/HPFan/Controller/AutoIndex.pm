@@ -11,7 +11,8 @@ package App::Schierer::HPFan::Controller::AutoIndex {
 
   my $logger;
 
-  sub register($self, $app, $config) {
+  sub register($c, $app, $config) {
+    $c->SUPER::register($app, $config);
     $logger = $app->logger(__PACKAGE__);
     $logger->info(sprintf(
       'register function for %s with logging category %s.',
@@ -20,7 +21,7 @@ package App::Schierer::HPFan::Controller::AutoIndex {
 
     $app->helper(
       generate_directory_index => sub ($c, $path) {
-        my $i = $self->_generate_directory_index($path, $app);
+        my $i = $c->_generate_directory_index($path, $app);
         $logger->debug(sprintf(
           'generated index: %s for "%s"', Data::Printer::np($i), $path
         ));
@@ -63,7 +64,7 @@ package App::Schierer::HPFan::Controller::AutoIndex {
 
       # Add to navigation
       $app->add_navigation_item({
-        title => $self->_titleize_path($dir_path->basename),
+        title => $c->_titleize_path($dir_path->basename),
         path  => $web_path,
         order => 1,
       });

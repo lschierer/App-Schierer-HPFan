@@ -11,16 +11,18 @@ use namespace::clean;
 
 package App::Schierer::HPFan::Controller::People {
   use Mojo::Base 'App::Schierer::HPFan::Controller::ControllerBase';
+  use Mojo::Base 'App::Schierer::HPFan::Logger::MojoLog4Perl', -role;
+  use Mojo::Base 'App::Schierer::HPFan::Role::Gramps', -role;
   use Carp;
 
-  my $logger;
 
   sub register($self, $app, $config //= {}) {
-    $logger = $app->logger(__PACKAGE__);
-    $logger->info(sprintf(
+    $self->SUPER::register($app, $config);
+    my $register_message = sprintf(
       'register function for %s with logging category %s.',
-      __PACKAGE__, $logger->category()
-    ));
+      __PACKAGE__, $self->logger->category());
+    $self->logger->info($register_message);
+    say $register_message;
 
     $app->helper(
       people => sub ($c) {
@@ -43,7 +45,7 @@ package App::Schierer::HPFan::Controller::People {
     $app->helper(
       link_target_for_person => sub ($c, $person) {
         unless (defined $person) {
-          $logger->error("cannot return link for undefined person!!");
+          $self->logger->error("cannot return link for undefined person!!");
           return '';
         }
         my $name = $person->primary_name();
@@ -68,23 +70,18 @@ package App::Schierer::HPFan::Controller::People {
         return $route;
       }
     );
-
-    $app->plugins->on(
-      'gramps_initialized' => sub($c, $gramps) {
-        $logger->debug(__PACKAGE__ . ' gramps_initialized sub start');
-        $self->_register_routes($app);
-      }
-    );
+    $self->ensure_ready();
+    $self->_register_routes($app);
 
     if ($app->config('gramps_initialized')) {
-      $logger->debug(__PACKAGE__ . ' detects gramps_initialized from config');
+      $self->logger->debug(__PACKAGE__ . ' detects gramps_initialized from config');
       $self->_register_routes($app);
     }
   }
 
   sub _register_routes ($self, $app) {
 
-    $logger->debug(__PACKAGE__ . '_register_routes start');
+    $self->logger->debug(__PACKAGE__ . '_register_routes start');
     foreach my $person (sort { return $a->gramps_id cmp $b->gramps_id }
       values %{ $app->gramps->people }) {
 
@@ -92,7 +89,7 @@ package App::Schierer::HPFan::Controller::People {
       my $rn    = $route =~ s/ /_/gr;
       my $title = $person->display_name();
 
-      $logger->debug(sprintf(
+      $self->logger->debug(sprintf(
         'adding route %s for %s with id %s',
         $route, $title, $person->gramps_id
       ));
@@ -110,7 +107,7 @@ package App::Schierer::HPFan::Controller::People {
   }
 
   sub person_details ($c) {
-    $logger->debug("start of person_details method");
+    $c->logger->debug("start of person_details method");
 
     my $rp = $c->req->url->path->to_string;
     # Remove trailing slash from pages
@@ -124,10 +121,10 @@ package App::Schierer::HPFan::Controller::People {
     my $staticContent;
 
     if ($id) {
-      $logger->debug("person_details detects id $id");
+      $c->logger->debug("person_details detects id $id");
       my $person = $c->app->person_by_id($id);
       if ($person) {
-        $logger->debug("found person for id $id");
+        $c->logger->debug("found person for id $id");
 
         $c->stash(person   => $person);
         $c->stash(layout   => 'default');
@@ -142,7 +139,7 @@ package App::Schierer::HPFan::Controller::People {
         $c->stash(tags => \@tags);
 
         my @events = @{ $c->app->gramps->find_events_for_person($person) };
-        $logger->debug("recieved events " . Data::Printer::np(@events));
+        $c->logger->debug("recieved events " . Data::Printer::np(@events));
         $c->stash(events => \@events);
 
         my $route = $c->link_target_for_person($person);
@@ -161,7 +158,7 @@ package App::Schierer::HPFan::Controller::People {
           $c->stash(staticContent => $content);
         }
         else {
-          $logger->debug("static content not found at $staticContent");
+          $c->logger->debug("static content not found at $staticContent");
         }
 
         return $c->render;
@@ -170,7 +167,7 @@ package App::Schierer::HPFan::Controller::People {
     return $c->reply->not_found;
   }
 
-  sub generate_ancestor_chart($self, $person) {
+  sub generate_ancestor_chart($c, $person) {
     my $graph = GraphViz->new(
       directed => 1,
       title    => "Ancestor Chart for "
@@ -187,17 +184,17 @@ package App::Schierer::HPFan::Controller::People {
       },
 
     );
-    $logger->debug('Graphviz initialized');
+    $c->logger->debug('Graphviz initialized');
 
     my %visited;
     my %generation_map;    # Track generation levels
 
     # Build the tree and track generations
-    $self->_add_ancestors_to_graph($graph, $person, \%visited, 0,
+    $c->_add_ancestors_to_graph($graph, $person, \%visited, 0,
       \%generation_map);
-    $logger->debug("ready to render svg " . Data::Printer::np($graph));
+    $c->logger->debug("ready to render svg " . Data::Printer::np($graph));
     my $svg = $graph->as_svg;
-    $logger->debug(sprintf('generated svg'));
+    $c->logger->debug(sprintf('generated svg'));
     $svg =~ s/(stroke|fill)="black"//g;
     $svg =~ s/(stroke|fill)="none"//g;
     $svg =~ s/<svg ([^>]*)width="[^"]*"/<svg $1/;
@@ -207,10 +204,10 @@ s/<svg /<svg preserveAspectRatio="xMidYMid meet" width="100%" height="100%" /;
     return $svg;
   }
 
-  sub _add_ancestors_to_graph($self, $graph, $person, $visited, $generation,
+  sub _add_ancestors_to_graph($c, $graph, $person, $visited, $generation,
     $generation_map) {
     my $person_id = $person->handle;
-    $logger->debug(sprintf('person with person id %s', $person->gramps_id));
+    $c->logger->debug(sprintf('person with person id %s', $person->gramps_id));
     return if $visited->{$person_id};
     $visited->{$person_id} = 1;
 
@@ -219,7 +216,7 @@ s/<svg /<svg preserveAspectRatio="xMidYMid meet" width="100%" height="100%" /;
     # Determine gender-based styling
 
     my $gender = $person->gender;
-    $logger->debug(
+    $c->logger->debug(
       "detected gender $gender for person id " . $person->gramps_id);
 
     # Add person node
@@ -227,7 +224,7 @@ s/<svg /<svg preserveAspectRatio="xMidYMid meet" width="100%" height="100%" /;
     $graph->add_node(
       $person_id,
       label => $label,
-      href  => $self->link_target_for_person($person),
+      href  => $c->link_target_for_person($person),
       class => $gender eq 'M' ? 'color-male'
       : $gender eq 'F' ? 'color-female'
       :                  '',
@@ -235,32 +232,32 @@ s/<svg /<svg preserveAspectRatio="xMidYMid meet" width="100%" height="100%" /;
 
     # Process families (parents)
     foreach my $family_handle ($person->parent_family_list->@*) {
-      my $family = $self->app->gramps->families->{$family_handle};
+      my $family = $c->app->gramps->families->{$family_handle};
       next unless $family;
       my $child_ref;
       my $person_handle = $person->handle;
-      $logger->debug("person_handle is $person_handle");
+      $c->logger->debug("person_handle is $person_handle");
       foreach my $cr (@{ $family->child_ref_list }) {
-        $logger->debug("cr is a " . blessed($cr));
+        $c->logger->debug("cr is a " . blessed($cr));
         my $ch = $cr->ref;
-        $logger->debug("ch is $ch");
+        $c->logger->debug("ch is $ch");
         if ($cr->ref eq $person_handle) {
-          $logger->debug("Found person with handle " . $person_handle);
+          $c->logger->debug("Found person with handle " . $person_handle);
           $child_ref = $cr;
           last;
         }
       }
-      $logger->debug(
+      $c->logger->debug(
         sprintf('finished family child ref list iteration with child_ref %s',
           $child_ref)
       );
 
       unless (defined($child_ref)) {
-        $logger->warn(
+        $c->logger->warn(
           "child_ref is not defined for family " . $family->gramps_id);
       }
 
-      $logger->debug("checking to ensure not foster");
+      $c->logger->debug("checking to ensure not foster");
       if (  ($child_ref->frel && $child_ref->frel eq 'Foster')
         and ($child_ref->mrel && $child_ref->mrel eq 'Foster')) {
         next;
@@ -284,10 +281,10 @@ s/<svg /<svg preserveAspectRatio="xMidYMid meet" width="100%" height="100%" /;
 
       # Add parents and connect to family point
       if (my $father_handle = $family->father_handle) {
-        my $father = $self->people->{$father_handle};
+        my $father = $c->people->{$father_handle};
         if ($father) {
-          $logger->debug("found father $father_handle " . $father->gramps_id);
-          $self->_add_ancestors_to_graph($graph, $father, $visited,
+          $c->logger->debug("found father $father_handle " . $father->gramps_id);
+          $c->_add_ancestors_to_graph($graph, $father, $visited,
             $generation + 1,
             $generation_map);
           $graph->add_edge($father->handle, $family_node,
@@ -296,10 +293,10 @@ s/<svg /<svg preserveAspectRatio="xMidYMid meet" width="100%" height="100%" /;
       }
 
       if (my $mother_handle = $family->mother_handle) {
-        my $mother = $self->people->{$mother_handle};
+        my $mother = $c->people->{$mother_handle};
         if ($mother) {
-          $logger->debug("found mother $mother_handle " . $mother->gramps_id);
-          $self->_add_ancestors_to_graph($graph, $mother, $visited,
+          $c->logger->debug("found mother $mother_handle " . $mother->gramps_id);
+          $c->_add_ancestors_to_graph($graph, $mother, $visited,
             $generation + 1,
             $generation_map);
           $graph->add_edge($mother->handle, $family_node,

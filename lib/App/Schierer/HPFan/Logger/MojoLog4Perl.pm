@@ -10,6 +10,11 @@ require File::HomeDir::Tiny;
 require Data::Printer;
 use Carp;
 
+
+has logger => sub ($self) {
+  return __PACKAGE__->get_logger($self);
+};
+
 sub logFileLocation {
   my $mode = $ENV{'MOJO_MODE'} // 'production';
   say "mode is $mode";
@@ -40,14 +45,14 @@ sub appender_setup {
 
 our $logLevels = {
   'App::LinkChecker::Command'                                         => 'WARN',
-  'App::Schierer::HPFan'                                              => 'WARN',
+  'App::Schierer::HPFan'                                              => 'DEBUG',
   'App::Schierer::HPFan::Controller::AutoIndex'                       => 'WARN',
   'App::Schierer::HPFan::Controller::Bookmarks'                       => 'WARN',
-  'App::Schierer::HPFan::Controller::ControllerBase'                  => 'WARN',
-  'App::Schierer::HPFan::Controller::Families'                        => 'WARN',
+  'App::Schierer::HPFan::Controller::ControllerBase'                  => 'DEBUG',
+  'App::Schierer::HPFan::Controller::Families'                        => 'DEBUG',
   'App::Schierer::HPFan::Controller::History'                         => 'WARN',
   'App::Schierer::HPFan::Controller::HPNOFP'                          => 'WARN',
-  'App::Schierer::HPFan::Controller::People'                          => 'WARN',
+  'App::Schierer::HPFan::Controller::People'                          => 'DEBUG',
   'App::Schierer::HPFan::Data'                                        => 'WARN',
   'App::Schierer::HPFan::Logger'                                      => 'WARN',
   'App::Schierer::HPFan::Logger::Config'                              => 'WARN',
@@ -87,9 +92,10 @@ our $logLevels = {
   'App::Schierer::HPFan::Model::History::Gramps::footnote'     => 'WARN',
   'App::Schierer::HPFan::Model::History::YAML'                 => 'WARN',
   'App::Schierer::HPFan::Plugins::ClassLists'                  => 'WARN',
-  'App::Schierer::HPFan::Plugins::Markdown'                    => 'WARN',
-  'App::Schierer::HPFan::Plugins::Navigation'                  => 'WARN',
   'App::Schierer::HPFan::Plugins::StaticPages'                 => 'WARN',
+  'App::Schierer::HPFan::Role::Gramps'                         => 'DEBUG',
+  'App::Schierer::HPFan::Role::Markdown'                       => 'WARN',
+  'App::Schierer::HPFan::Role::Navigation'                     => 'WARN',
   'App::Schierer::HPFan::View::Markdown'                       => 'WARN',
   'App::Schierer::HPFan::View::Timeline'                       => 'WARN',
   'App::Schierer::HPFan::View::Timeline::PositionHelpers'      => 'WARN',
@@ -97,7 +103,7 @@ our $logLevels = {
   'Test::Package'                                              => 'DEBUG',
 };
 
-sub logger ($class, $caller = undef) {
+sub get_logger ($class, $caller = undef) {
   state $I_Have_Init;
   $caller //= 'undef::package';
 
@@ -126,6 +132,7 @@ sub logger ($class, $caller = undef) {
 
   # NOW safe to get loggers and log - Log4perl is initialized
   my $l4p = Log::Log4perl->get_logger($class);
+  $class = ref($class) ? blessed($class) : $class;
   my $ll = exists $logLevels->{$class} ? Log::Log4perl::Level::to_priority($logLevels->{$class}) : $default;
   $l4p->level($ll);
   $l4p->debug(

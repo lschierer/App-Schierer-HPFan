@@ -13,6 +13,9 @@ use namespace::clean;
 package App::Schierer::HPFan::Controller::ControllerBase {
   use Mojo::Base 'Mojolicious::Controller';
   use Mojo::Base 'Mojolicious::Plugin', -role, -signatures;
+  use Mojo::Base 'App::Schierer::HPFan::Logger::MojoLog4Perl', -role;
+  use Mojo::Base 'App::Schierer::HPFan::Role::Markdown', -role;
+  use Mojo::Base 'App::Schierer::HPFan::Role::Navigation', -role;
   use Log::Log4perl;
   use Carp;
 
@@ -22,7 +25,7 @@ package App::Schierer::HPFan::Controller::ControllerBase {
 
   my $logger;
 
-  sub register($self, $app, $config //= {}) {
+  sub register($c, $app, $config //= {}) {
     $logger = $app->logger(__PACKAGE__);
     $logger->info(sprintf(
       'register function for %s with logging category %s.',
@@ -32,101 +35,13 @@ package App::Schierer::HPFan::Controller::ControllerBase {
     my $routes = $app->routes;
 
     $routes->get('/favicon.svg')->to(
-      cb => sub ($c) {
+      cb => sub ($self) {
         $c->reply->static('images/favicon.svg');
       }
     );
 
-    my $dist_dir = $app->config('distDir');
-    my $db_file  = $dist_dir->child('grampsdb/sqlite.db');
-
-    my $gramps_export = $app->config('distDir')->child('data/gramps');
-    my $gramps_db     = $app->config('distDir')->child('grampsdb/sqlite.db');
-
-    my $gramps = App::Schierer::HPFan::Model::Gramps->new(
-      gramps_export => $gramps_export,
-      gramps_db     => $gramps_db,
-    );
-
-    state $initialized = do {
-      $logger->info("⚙️  Running gramps import...");
-      $gramps->execute_import();
-      $gramps->build_indexes();
-      $logger->info("✅ gramps import completed.");
-
-      $app->helper(gramps => sub { return $gramps });
-
-      $app->helper(
-        person_house => sub ($c, $person) {
-          my %by_handle =
-            %{ $gramps->tags };    # handle => Tag (assumes ->name or similar)
-
-          for my $th (@{ $person->tag_list // [] }) {
-            my $tag  = $by_handle{$th} or next;
-            my $name = $tag->name // '';
-            $name =~ s/^\s+|\s+$//g;
-
-            # exact house names
-            return $name
-              if $name =~ /^(?:Gryffindor|Hufflepuff|Ravenclaw|Slytherin)$/;
-
-            # "House: Gryffindor" etc.
-            if ($name =~
-              /^House:\s*(Gryffindor|Hufflepuff|Ravenclaw|Slytherin)\b/i) {
-              return ucfirst lc $1;
-            }
-          }
-
-          return 'Unknown House';
-        }
-      );
-
-      $app->helper(
-        person_blood_status => sub ($c, $person) {
-          my %by_handle =
-            %{ $gramps->tags };    # handle => Tag (assumes ->name or similar)
-
-          for my $th (@{ $person->tag_list // [] }) {
-            my $tag  = $by_handle{$th} or next;
-            my $name = $tag->name // '';
-            $name =~ s/^\s+|\s+$//g;
-
-            # exact house names
-            return $name
-              if $name =~
-              /^(?:pure-blood|half-blood|1st gen magical|hag|non-magical)$/;
-          }
-
-          return 'Unknown Status';
-        }
-      );
-
-      $app->helper(
-        person_economic_status => sub ($c, $person) {
-          my %by_handle =
-            %{ $gramps->tags };    # handle => Tag (assumes ->name or similar)
-
-          for my $th (@{ $person->tag_list // [] }) {
-            my $tag  = $by_handle{$th} or next;
-            my $name = $tag->name // '';
-            $name =~ s/^\s+|\s+$//g;
-
-            # exact house names
-            return $name
-              if $name =~ /^(?:Lower Class|Upper Class|Middle Class)$/;
-          }
-
-          return 'Unknown';
-        }
-      );
-
-      $app->plugins->emit(gramps_initialized => $gramps);
-      $app->config(gramps_initialized => 1);
-      1;
-    };
-
     $routes->get('/health')->to(
-      cb => sub($c) {
+      cb => sub($self) {
         my $APP_START_TIME = $app->config->{'APP_START_TIME'};
         $c->render(
           json => {

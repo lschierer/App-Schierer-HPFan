@@ -12,11 +12,13 @@ require App::Schierer::HPFan::Logger::MojoLog4Perl;
 package App::Schierer::HPFan {
   use Mojo::Base 'Mojolicious', -strict, -signatures;
   use Mojo::Base 'App::Schierer::HPFan::Logger::MojoLog4Perl', -role;
+  use Mojo::Loader      qw(find_modules load_class);
   use Log::Any::Adapter;
   use Log::Log4perl;
   use Carp;
   use Env qw(DEPLOYMENT_TIME HOSTNAME IMAGE_TAG IMAGE_URI);
   our $VERSION = 'v0.00.1';
+  use diagnostics;
 
 # This method will run once at server start
   sub startup ($app) {
@@ -24,11 +26,13 @@ package App::Schierer::HPFan {
     Log::Any::Adapter->set('Log4perl');
     $app->plugin('Log::Any' => { logger => 'Log::Log4perl' });
     $app->log->info(sprintf('Mojolicious Logging initialized'));
+
     # Load configuration from config file
     my $config  = $app->plugin('NotYAMLConfig');
     my $distDir = Mojo::File::Share::dist_dir('App::Schierer::HPFan');
     my $mode    = $app->mode;
     $app->config(distDir        => $distDir);
+
     $app->config(APP_START_TIME => time());
     Env::import();
     $app->config(
@@ -43,23 +47,7 @@ package App::Schierer::HPFan {
     # Configure the application
     $app->secrets($config->{secrets});
     $app->plugin('DefaultHelpers');
-
-    $app->helper(
-      logger => sub ($c, $cat) {
-        if (length($cat) == 0) {
-          $app->log->error('got a logger request with zero length cat!');
-          $cat = 'App-Schierer-HPFan-Unknown';
-        }
-        else {
-          $app->log->info("got a cat '$cat'");
-        }
-        Log::Log4perl::Config->utf8(1);
-        my $logger = Log::Log4perl->get_logger($cat);
-        return $logger;
-      }
-    );
-
-    $app->log->info("Mojolicious Logging initialized");
+    $app->defaults(layout => 'default');
 
     foreach my $envkey (keys %{ $app->config->{'HPFAN-Environment'} }) {
       if (defined $envkey) {
@@ -81,22 +69,22 @@ package App::Schierer::HPFan {
     # Register infrastructure plugins in specific order
 
     # First Plugins that provide helpers but do not define routes
-    # Markdown
-    $app->plugin('App::Schierer::HPFan::Plugins::Markdown');
-    # Navigation
-    $app->plugin('App::Schierer::HPFan::Plugins::Navigation');
-
-    # Then Controller Plugins
-    $app->plugin(
-      'Module::Loader' => {
-        plugin_namespaces => ['App::Schierer::HPFan::Controller']
-      }
-    );
     # Helper for the class list tables
     $app->plugin('App::Schierer::HPFan::Plugins::ClassLists');
 
-    # Last the Static Pages
-    $app->plugin('App::Schierer::HPFan::Plugins::StaticPages');
+    # Then Controller Plugins
+    my @controllerplugins = find_modules 'App::Schierer::HPFan::Controller';
+    foreach my $module (sort @controllerplugins) {
+      #next if ($module eq 'App::Schierer::HPFan::Controller::ControllerBase');
+      say "loading module $module";
+      if(my $e = load_class($module)){
+        my $errmessage = sprintf('loading module "%s" failed: %s', $module, $e);
+        print STDERR $errmessage;
+        $app->log->error($errmessage);
+        croak($errmessage);
+      }
+    }
+
     # Register last for lowest priority
 
     if ($mode eq 'development') {

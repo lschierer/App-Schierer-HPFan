@@ -8,48 +8,48 @@ require YAML::PP;
 
 package App::Schierer::HPFan::Plugins::StaticPages {
   use Mojo::Base 'Mojolicious::Plugin';
+  use Mojo::Base 'App::Schierer::HPFan::Logger::MojoLog4Perl', -role;
+  use Mojo::Base 'App::Schierer::HPFan::Role::Markdown', -role;
+  use Mojo::Base 'App::Schierer::HPFan::Role::Navigation', -role;
   use Carp;
 
   my %static_routes;
 
-  my $logger;
-
-  sub register ($self, $app, $config) {
-    $logger = $app->logger(__PACKAGE__);
-    $logger->info(sprintf(
+  sub register ($plugin, $app, $config) {
+    $plugin->logger->info(sprintf(
       'register function for %s with logging category %s.',
-      __PACKAGE__, $logger->category()
+      __PACKAGE__, $plugin->logger->category()
     ));
 
     # Add helper to check if a static route exists
     $app->helper(
-      static_route_name_for => sub ($c, $path) {
+      static_route_name_for => sub ($self, $path) {
         return $static_routes{$path};    # undef if not present
       }
     );
 
-    foreach my $static_entry ($self->build_routes($app)) {
-      $logger->info(sprintf(
+    foreach my $static_entry ($plugin->build_routes($app)) {
+      $plugin->logger->info(sprintf(
         'Adding route "%s" for file "%s"',
         $static_entry->{route},
         $static_entry->{path}
       ));
       $app->routes->get($static_entry->{route})->to(
-        cb => sub ($c) {
-          my $rp = $c->req->url->path->to_string;
+        cb => sub ($self) {
+          my $rp = $self->req->url->path->to_string;
 
           # Remove trailing slash from pages
           if ($rp =~ qr{/$}) {
             my $canonical = $rp;
             $canonical =~ s{/$}{};
             if (length($canonical)) {
-              return $c->redirect_to($canonical, 301);
+              return $self->redirect_to($canonical, 301);
             }
           }
-          return $c->render_markdown_file($static_entry->{path});
+          return $self->render_markdown_file($static_entry->{path});
         }
       );
-      $app->add_navigation_item({
+      $plugin->add_navigation_item({
         title => $static_entry->{file}->{title},
         path  => $static_entry->{path},
         order => $static_entry->{file}->{order},
@@ -71,21 +71,21 @@ package App::Schierer::HPFan::Plugins::StaticPages {
       my $file_path     = Mojo::File->new($file);
       my $relative_path = $file_path->to_rel($pages_dir);
       my $route_path    = $self->file_path_to_route($relative_path);
-      $logger->debug(
+      $self->logger->debug(
         "Considering static route: $route_path for file: $relative_path");
 
-      my $parsedFile = $app->parse_markdown_frontmatter($file_path);
+      my $parsedFile = $self->parse_markdown_frontmatter($file_path);
       if ($parsedFile) {
         my $normalized_route = lc($route_path);
         my $has_conflict     = 0;
 
-        my $existing_nav = $app->get_existing_navigation_items() || {};
-        $logger->debug(sprintf('comparing against %s existing nav entries.',
+        my $existing_nav = $self->get_existing_navigation_items() || {};
+        $self->logger->debug(sprintf('comparing against %s existing nav entries.',
           scalar keys %$existing_nav));
         foreach my $existing_path (keys %$existing_nav) {
           if (fc($existing_path) eq fc($normalized_route)) {
             $has_conflict = 1;
-            $logger->debug(sprintf(
+            $self->logger->debug(sprintf(
               'Skipping static page navigation for "%s"'
                 . ' - conflicts with existing "%s"',
               $route_path, $existing_path,
@@ -95,7 +95,7 @@ package App::Schierer::HPFan::Plugins::StaticPages {
         }
 
         unless ($has_conflict) {
-          $logger->debug(
+          $self->logger->debug(
             sprintf('Registering "%s" as static route, no conflicts present',
               $route_path)
           );

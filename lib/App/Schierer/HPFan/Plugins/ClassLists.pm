@@ -7,12 +7,13 @@ require Date::Manip;
 
 package App::Schierer::HPFan::Plugins::ClassLists {
   use Mojo::Base 'Mojolicious::Plugin', -strict, -signatures;
+  use Mojo::Base 'App::Schierer::HPFan::Logger::MojoLog4Perl', -role;
   use Mojo::Util qw(xml_escape);
 
   my $logger;
 
   sub register($self, $app, $config) {
-    $logger = $app->logger(__PACKAGE__);
+    $logger = $self->get_logger(__PACKAGE__);
     $logger->info(sprintf(
       'register function for %s with logging category %s.',
       __PACKAGE__, $logger->category()

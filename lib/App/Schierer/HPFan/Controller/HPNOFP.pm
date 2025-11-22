@@ -21,6 +21,7 @@ package App::Schierer::HPFan::Controller::HPNOFP {
   my $logger;
 
   sub register($self, $app, $config //= {}) {
+    $self->SUPER::register($app, $config);
     $logger = $app->logger(__PACKAGE__);
     $logger->info(sprintf(
       'register function for %s with logging category %s.',
