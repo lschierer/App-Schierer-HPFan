@@ -449,3 +449,21 @@ items:
       [Hogwarts]: /Harrypedia/Hogwarts/
       [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
       [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>
+  - title:
+      name: Bones to Bones
+      link: https://web.archive.org/web/20141212152447/http://www.sugarquill.net/read.php?storyid=1590
+    author:
+      name: >-
+        Ashtur an'Vangan
+      link: https://web.archive.org/web/20141212152447/http://www.sugarquill.net/index.php?action=profile&id=590
+    dates:
+      updated: 2004-04-28
+      published: 2003-12-14
+    comments: |-
+      This is an alternate take on the canonical fifth year events, primarily to provide [Susan] [Bones]' point of view instead of [Harry]'s.
+      It offers an interesting insight into both [Susan] and [Amelia] while changing next to nothing. configs:
+
+      [Susan]: </Harrypedia/people/Bones/Susan>
+      [Bones]: </Harrypedia/people/Bones>
+      [Amelia]: </Harrypedia/people/Bones/Amelia Susan>
+      [Harry]: </Harrypedia/people/Potter/Harry James>
