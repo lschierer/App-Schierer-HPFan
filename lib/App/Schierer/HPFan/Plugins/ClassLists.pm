@@ -13,7 +13,7 @@ package App::Schierer::HPFan::Plugins::ClassLists {
   my $logger;
 
   sub register($self, $app, $config) {
-    $self->log_info(sprintf('register function for %s.',__PACKAGE__ ));
+    $self->log_info(sprintf('register function for %s.', __PACKAGE__));
 
     my $ClassLists = {};
     $app->plugins->on(

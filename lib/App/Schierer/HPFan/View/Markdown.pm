@@ -8,15 +8,13 @@ require Path::Tiny;
 use XML::LibXML;
 require Mojo::DOM58;
 
-class App::Schierer::HPFan::View::Markdown
-  {
+class App::Schierer::HPFan::View::Markdown {
 
   require App::Schierer::HPFan::Role::Logging;
 
-
   method logger {
-   state $l4p //= App::Schierer::HPFan::Role::Logging::get_logger(__CLASS__);
-   return $l4p;
+    state $l4p //= App::Schierer::HPFan::Role::Logging::get_logger(__CLASS__);
+    return $l4p;
   }
 
   field $markdownHome : param //= undef;

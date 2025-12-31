@@ -6,10 +6,9 @@ class App::Schierer::HPFan::Model::Base;
 use Carp;
 require App::Schierer::HPFan::Role::Logging;
 
-
 method logger {
- state $l4p //= App::Schierer::HPFan::Role::Logging::get_logger(__CLASS__);
- return $l4p;
+  state $l4p //= App::Schierer::HPFan::Role::Logging::get_logger(__CLASS__);
+  return $l4p;
 }
 
 1;

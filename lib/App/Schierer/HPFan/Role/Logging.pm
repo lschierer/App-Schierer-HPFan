@@ -9,7 +9,7 @@ use Mojo::Loader        qw(find_modules);
 use File::HomeDir::Tiny ();
 require Data::Printer;
 use List::AllUtils qw( uniq );
-use Scalar::Util qw(blessed);
+use Scalar::Util   qw(blessed);
 use Carp;
 
 my $logLevelOverrides;
@@ -177,30 +177,30 @@ BEGIN {
 
   #(ALL|FATAL|TRACE|DEBUG|INFO|WARN|ERROR|FATAL|OFF)
   $logLevelOverrides = {
-    'App::Schierer::HPFan'                                  => 'DEBUG',
-    'App::Schierer::HPFan::Controller::AutoIndex'           => 'INFO',
-    'App::Schierer::HPFan::Controller::Bookmarks'           => 'WARN',
-    'App::Schierer::HPFan::Controller::ControllerBase'      => 'INFO',
-    'App::Schierer::HPFan::Controller::Families'            => 'WARN',
-    'App::Schierer::HPFan::Controller::History'             => 'DEBUG',
-    'App::Schierer::HPFan::Controller::HPNOFP'              => 'WARN',
-    'App::Schierer::HPFan::Controller::Harrypedia'          => 'DEBUG',
-    'App::Schierer::HPFan::Controller::People'              => 'DEBUG',
-    'App::Schierer::HPFan::Logger'                          => 'WARN',
-    'App::Schierer::HPFan::Logger::Config'                  => 'WARN',
-    'App::Schierer::HPFan::Model::CustomDate'               => 'WARN',
-    'App::Schierer::HPFan::Model::Gramps'                   => 'WARN',
-    'App::Schierer::HPFan::Model::Gramps::Citation'         => 'WARN',
-    'App::Schierer::HPFan::Model::Gramps::Event'            => 'WARN',
-    'App::Schierer::HPFan::Model::Gramps::Family'           => 'WARN',
-    'App::Schierer::HPFan::Model::Gramps::Person'           => 'DEBUG',
-    'App::Schierer::HPFan::Plugins::ClassLists'             => 'WARN',
-    'App::Schierer::HPFan::Role::Gramps'                    => 'DEBUG',
-    'App::Schierer::HPFan::Role::Markdown'                  => 'WARN',
-    'App::Schierer::HPFan::Role::Navigation'                => 'WARN',
-    'App::Schierer::HPFan::Role::StaticPages'               => 'WARN',
-    'Test::Package'                                         => 'TRACE',
-    'Test'                                                  => 'TRACE',
+    'App::Schierer::HPFan'                             => 'DEBUG',
+    'App::Schierer::HPFan::Controller::AutoIndex'      => 'INFO',
+    'App::Schierer::HPFan::Controller::Bookmarks'      => 'WARN',
+    'App::Schierer::HPFan::Controller::ControllerBase' => 'INFO',
+    'App::Schierer::HPFan::Controller::Families'       => 'WARN',
+    'App::Schierer::HPFan::Controller::History'        => 'DEBUG',
+    'App::Schierer::HPFan::Controller::HPNOFP'         => 'WARN',
+    'App::Schierer::HPFan::Controller::Harrypedia'     => 'DEBUG',
+    'App::Schierer::HPFan::Controller::People'         => 'DEBUG',
+    'App::Schierer::HPFan::Logger'                     => 'WARN',
+    'App::Schierer::HPFan::Logger::Config'             => 'WARN',
+    'App::Schierer::HPFan::Model::CustomDate'          => 'WARN',
+    'App::Schierer::HPFan::Model::Gramps'              => 'WARN',
+    'App::Schierer::HPFan::Model::Gramps::Citation'    => 'WARN',
+    'App::Schierer::HPFan::Model::Gramps::Event'       => 'WARN',
+    'App::Schierer::HPFan::Model::Gramps::Family'      => 'WARN',
+    'App::Schierer::HPFan::Model::Gramps::Person'      => 'DEBUG',
+    'App::Schierer::HPFan::Plugins::ClassLists'        => 'WARN',
+    'App::Schierer::HPFan::Role::Gramps'               => 'DEBUG',
+    'App::Schierer::HPFan::Role::Markdown'             => 'WARN',
+    'App::Schierer::HPFan::Role::Navigation'           => 'WARN',
+    'App::Schierer::HPFan::Role::StaticPages'          => 'WARN',
+    'Test::Package'                                    => 'TRACE',
+    'Test'                                             => 'TRACE',
   };
 
   if ($App::Schierer::HPFan::Role::Logging::DEBUG_LOGGING) {

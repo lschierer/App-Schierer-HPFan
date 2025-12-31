@@ -2,7 +2,7 @@ package App::Schierer::HPFan::Role::StaticPages;
 use v5.42.0;
 use experimental qw(class);
 use utf8::all;
-use Mojo::Base -role,                                    -signatures;
+use Mojo::Base -role, -signatures;
 require Data::Printer;
 require HTML::Element;
 require Log::Log4perl;

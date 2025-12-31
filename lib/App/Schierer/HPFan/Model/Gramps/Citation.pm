@@ -3,7 +3,8 @@ use utf8::all;
 use experimental qw(class);
 require App::Schierer::HPFan::Model::CustomDate;
 
-class App::Schierer::HPFan::Model::Gramps::Citation : isa(App::Schierer::HPFan::Model::Base) {
+class App::Schierer::HPFan::Model::Gramps::Citation :
+  isa(App::Schierer::HPFan::Model::Base) {
   use List::AllUtils qw( any );
   use Carp;
 

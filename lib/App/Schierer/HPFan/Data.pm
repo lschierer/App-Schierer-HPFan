@@ -11,7 +11,7 @@ require XML::LibXML;
 require App::Schierer::HPFan::Role::Logging;
 use namespace::autoclean;
 
-class App::Schierer::HPFan::Data  {
+class App::Schierer::HPFan::Data {
   use Carp;
   use Log::Log4perl;
   use List::AllUtils         qw( first any );
@@ -24,10 +24,10 @@ class App::Schierer::HPFan::Data  {
   field $output    : param;
   field $debug     : param = 0;
 
- method logger {
-  state $l4p //= App::Schierer::HPFan::Role::Logging::get_logger(__CLASS__);
-  return $l4p;
- }
+  method logger {
+    state $l4p //= App::Schierer::HPFan::Role::Logging::get_logger(__CLASS__);
+    return $l4p;
+  }
 
   ADJUST {
     # Do not assume we are passed a Path::Tiny object;

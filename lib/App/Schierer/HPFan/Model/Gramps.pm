@@ -20,7 +20,8 @@ require App::Schierer::HPFan::Model::Gramps::Surname;
 require App::Schierer::HPFan::Model::Gramps::Person;
 require App::Schierer::HPFan::Model::Gramps::Tag;
 
-class App::Schierer::HPFan::Model::Gramps :isa(App::Schierer::HPFan::Model::Base) {
+class App::Schierer::HPFan::Model::Gramps :
+  isa(App::Schierer::HPFan::Model::Base) {
 # PODNAME: App::Schierer::HPFan::Model::Gramps
   use Carp;
   use DBD::SQLite::Constants qw/:dbd_sqlite_string_mode/;
@@ -29,8 +30,6 @@ class App::Schierer::HPFan::Model::Gramps :isa(App::Schierer::HPFan::Model::Base
   field $gramps_export : param;
   field $gramps_db     : param;
   field $dbh;
-
-
 
   field $tags         : reader = {};
   field $events       : reader = {};

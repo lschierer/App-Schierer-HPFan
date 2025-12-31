@@ -6,8 +6,7 @@ require Scalar::Util;
 require HTML::Strip;
 require App::Schierer::HPFan::View::Timeline::PositionHelpers;
 
-class App::Schierer::HPFan::View::Timeline
-   {
+class App::Schierer::HPFan::View::Timeline {
   use List::AllUtils qw( any min max firstidx );
   use Scalar::Util   qw(blessed);
   #something about this package requies that it be used not just required
@@ -19,13 +18,12 @@ class App::Schierer::HPFan::View::Timeline
   use App::Schierer::HPFan::View::Timeline::Utilities
     qw(get_category_for_event);
 
-    require App::Schierer::HPFan::Role::Logging;
+  require App::Schierer::HPFan::Role::Logging;
 
-
-    method logger {
-     state $l4p //= App::Schierer::HPFan::Role::Logging::get_logger(__CLASS__);
-     return $l4p;
-    }
+  method logger {
+    state $l4p //= App::Schierer::HPFan::Role::Logging::get_logger(__CLASS__);
+    return $l4p;
+  }
 
   field $name : param //= 'Timeline';
 
