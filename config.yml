@@ -1,0 +1,7 @@
+stage: localDev
+css_dir: share/styles
+typescript_dir: src/ts  
+markdown_dir: share/pages
+pandoc_modules: []
+worker_threads: 4
+log_config: {}
