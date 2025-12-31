@@ -16,10 +16,10 @@ package App::Schierer::HPFan::Controller::Bookmarks {
 
   sub register($c, $app, $config) {
     $c->SUPER::register($app, $config);
-    $logger = $app->logger(__PACKAGE__);
+    $logger = Log::Log4perl->get_logger(__PACKAGE__);
     $logger->info(sprintf(
-      'register function for %s with logging category %s.',
-      __PACKAGE__, $logger->category()
+      'register function for %s.',
+      __PACKAGE__
     ));
 
     my $distDir      = $app->config('distDir');
@@ -32,8 +32,7 @@ package App::Schierer::HPFan::Controller::Bookmarks {
     my $BookmarksTree = {};
     while (my $file_path = $iter->()) {
       $file_path = Mojo::File->new($file_path);
-      $c->process_bookmark_file($app, $file_path, $baseRoute,
-        $BookmarksTree);
+      $c->process_bookmark_file($app, $file_path, $baseRoute, $BookmarksTree);
 
     }
     my @BookmarksKeys = sort keys %{$BookmarksTree};

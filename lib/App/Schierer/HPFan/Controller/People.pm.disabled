@@ -1,0 +1,310 @@
+use v5.42.0;
+use experimental qw(class);
+use utf8::all;
+use File::FindLib 'lib';
+require Data::Printer;
+require GraphViz;
+require Mojolicious::Controller;
+require Mojolicious::Plugin;
+require App::Schierer::HPFan::Model::Gramps;
+use namespace::clean;
+
+package App::Schierer::HPFan::Controller::People {
+  use Mojo::Base 'App::Schierer::HPFan::Controller::ControllerBase';
+  #use Mojo::Base 'App::Schierer::HPFan::Role::Gramps',         -role;
+  use Carp;
+
+  sub register($self, $app, $config //= {}) {
+  #  $self->SUPER::register($app, $config);
+  #  my $register_message = sprintf('registering controller for %s.', __PACKAGE__);
+  #  $self->log_info($register_message);
+  #  say $register_message;
+
+  #  $app->helper(
+  #    people => sub ($c) {
+  #      return $app->gramps->people;
+  #    }
+  #  );
+
+  #  $app->helper(
+  #    person_by_handle => sub($c, $handle) {
+  #      return $app->gramps->find_person_by_handle($handle);
+  #    }
+  #  );
+
+  #  $app->helper(
+  #    person_by_id => sub($c, $id) {
+  #      return $app->gramps->find_person_by_id($id);
+  #    }
+  #  );
+
+  #  $app->helper(
+  #    link_target_for_person => sub ($c, $person) {
+  #      unless (defined $person) {
+  #        $self->log_error("cannot return link for undefined person!!");
+  #        return '';
+  #      }
+  #      my $name = $person->primary_name();
+  #      my $last;
+  #      if ($name) {
+  #        $last = $name->primary_surname;
+  #      }
+
+  #      my $route = sprintf('%s %s/%s %s',
+  #        $last->prefix  ? $last->prefix  : '',
+  #        $last->surname ? $last->surname : 'Unknown',
+  #        $name
+  #        ? $name->display ne 'Unknown'
+  #            ? $name->display
+  #            : $person->gramps_id
+  #        : $person->gramps_id,
+  #        $name->suffix ? $name->suffix : '',
+  #      );
+  #      $route =~ s/^\s+|\s+$//g;
+  #      $route = '/Harrypedia/people/' . $route;
+
+  #      return $route;
+  #    }
+  #  );
+  #  $self->ensure_ready();
+  #  $self->_register_routes($app);
+
+  #  if ($app->config('gramps_initialized')) {
+  #    $self->log_debug(
+  #      __PACKAGE__ . ' detects gramps_initialized from config');
+  #    $self->_register_routes($app);
+  #  }
+  }
+
+  sub _register_routes ($self, $app) {
+
+  #  $self->log_debug(__PACKAGE__ . '_register_routes start');
+  #  foreach my $person (sort { return $a->gramps_id cmp $b->gramps_id }
+  #    values %{ $app->gramps->people }) {
+
+  #    my $route = $app->link_target_for_person($person) // '/';
+  #    my $rn    = $route =~ s/ /_/gr;
+  #    my $title = $person->display_name();
+
+  #    $self->log_debug(sprintf(
+  #      'adding route %s for %s with id %s',
+  #      $route, $title, $person->gramps_id
+  #    ));
+
+  #    $app->routes->get($route,=> { id => $person->gramps_id, })
+  #      ->to(controller => 'People', action => 'person_details')
+  #      ->name($rn);
+  #    $app->add_navigation_item({
+  #      title => $title,
+  #      path  => $route,
+  #      order => 1,
+  #    });
+  #  }
+
+  }
+
+  sub person_details ($c) {
+  #  $c->log_debug("start of person_details method");
+
+  #  my $rp = $c->req->url->path->to_string;
+  #  # Remove trailing slash from pages
+  #  if ($rp =~ qr{/$}) {
+  #    my $canonical = $rp;
+  #    $canonical =~ s{/$}{};
+  #    return $c->redirect_to($canonical, 301);
+  #  }
+
+  #  my $id = $c->param('id');
+  #  my $staticContent;
+
+  #  if ($id) {
+  #    $c->log_debug("person_details detects id $id");
+  #    my $person = $c->app->person_by_id($id);
+  #    if ($person) {
+  #      $c->log_debug("found person for id $id");
+
+  #      $c->stash(person   => $person);
+  #      $c->stash(layout   => 'default');
+  #      $c->stash(template => 'person/details');
+  #      $c->stash(title    => $person->display_name());
+  #      $c->stash(chart    => $c->generate_ancestor_chart($person));
+
+  #      my @tags;
+  #      foreach my $tr ($person->tag_list->@*) {
+  #        push @tags, $c->app->gramps->tags->{$tr}->name;
+  #      }
+  #      $c->stash(tags => \@tags);
+
+  #      my @events = @{ $c->app->gramps->find_events_for_person($person) };
+  #      $c->log_debug("recieved events " . Data::Printer::np(@events));
+  #      $c->stash(events => \@events);
+
+  #      my $route = $c->link_target_for_person($person);
+  #      $staticContent = $c->app->config('distDir')->child("pages${route}");
+  #      if (-d $staticContent) {
+  #        $staticContent = sprintf('%s/index.md', $staticContent);
+  #      }
+  #      else {
+  #        $staticContent = sprintf('%s.md', $staticContent);
+  #      }
+  #      if (-f -r $staticContent) {
+  #        my $markdown = Mojo::File->new($staticContent)->slurp('UTF-8');
+  #        #get rid of front matter, just discard it.
+  #        $markdown =~ s/^---\s*\n(.*?)\n---\s*\n//s;
+  #        my $content = $c->render_markdown_snippet($markdown);
+  #        $c->stash(staticContent => $content);
+  #      }
+  #      else {
+  #        $c->log_debug("static content not found at $staticContent");
+  #      }
+
+  #      return $c->render;
+  #    }
+  #  }
+  #  return $c->reply->not_found;
+  }
+
+  sub generate_ancestor_chart($c, $person) {
+  #my $graph = GraphViz->new(
+  #  directed => 1,
+  #  title    => "Ancestor Chart for "
+  #    . $person->display_name(),    # this line doesn't seem to get used??
+  #  layout  => 'dot',
+  #  rankdir => 'TB',          # top to bottom seems to do what I want better??
+  #  bgcolor => 'transparent'
+  #  ,    # Transparent background -- this line isn't used, but doesn't matter
+  #  node => {
+  #    fillcolor => 'transparent'
+  #    ,   # Transparent background -- this line isn't used, but doesn't matter
+  #    shape => 'box',
+  #    style => 'filled',
+  #  },
+
+  #  );
+  #  $c->log_debug('Graphviz initialized');
+
+  #  my %visited;
+  #  my %generation_map;    # Track generation levels
+
+  #  # Build the tree and track generations
+  #  $c->_add_ancestors_to_graph($graph, $person, \%visited, 0,
+  #    \%generation_map);
+  #  $c->log_debug("ready to render svg " . Data::Printer::np($graph));
+  #  my $svg = $graph->as_svg;
+  #  $c->log_debug(sprintf('generated svg'));
+  #  $svg =~ s/(stroke|fill)="black"//g;
+  #  $svg =~ s/(stroke|fill)="none"//g;
+  #  $svg =~ s/<svg ([^>]*)width="[^"]*"/<svg $1/;
+  #  $svg =~ s/<svg ([^>]*)height="[^"]*"/<svg $1/;
+  #  $svg =~ s/<svg /<svg preserveAspectRatio="xMidYMid meet" width="100%" height="100%" /;
+  #  return $svg;
+  }
+
+  sub _add_ancestors_to_graph($c, $graph, $person, $visited, $generation,
+    $generation_map) {
+  #  my $person_id = $person->handle;
+  #  $c->log_debug(sprintf('person with person id %s', $person->gramps_id));
+  #  return if $visited->{$person_id};
+  #  $visited->{$person_id} = 1;
+
+  #  $generation_map->{$person_id} = $generation;
+
+  #  # Determine gender-based styling
+
+  #  my $gender = $person->gender;
+  #  $c->log_debug(
+  #    "detected gender $gender for person id " . $person->gramps_id);
+
+  #  # Add person node
+  #  my $label = $person->display_name();
+  #  $graph->add_node(
+  #    $person_id,
+  #    label => $label,
+  #    href  => $c->link_target_for_person($person),
+  #    class => $gender eq 'M' ? 'color-male'
+  #    : $gender eq 'F' ? 'color-female'
+  #    :                  '',
+  #  );
+
+  #  # Process families (parents)
+  #  foreach my $family_handle ($person->parent_family_list->@*) {
+  #    my $family = $c->app->gramps->families->{$family_handle};
+  #    next unless $family;
+  #    my $child_ref;
+  #    my $person_handle = $person->handle;
+  #    $c->log_debug("person_handle is $person_handle");
+  #    foreach my $cr (@{ $family->child_ref_list }) {
+  #      $c->log_debug("cr is a " . blessed($cr));
+  #      my $ch = $cr->ref;
+  #      $c->log_debug("ch is $ch");
+  #      if ($cr->ref eq $person_handle) {
+  #        $c->log_debug("Found person with handle " . $person_handle);
+  #        $child_ref = $cr;
+  #        last;
+  #      }
+  #    }
+  #    $c->log_debug(
+  #      sprintf('finished family child ref list iteration with child_ref %s',
+  #        $child_ref)
+  #    );
+
+  #    unless (defined($child_ref)) {
+  #      $c->log_warn(
+  #        "child_ref is not defined for family " . $family->gramps_id);
+  #    }
+
+  #    $c->log_debug("checking to ensure not foster");
+  #    if (  ($child_ref->frel && $child_ref->frel eq 'Foster')
+  #      and ($child_ref->mrel && $child_ref->mrel eq 'Foster')) {
+  #      next;
+  #    }
+
+  #    # Create invisible family node as connection point
+  #    my $family_node = "family_$family_handle";
+  #    $graph->add_node(
+  #      $family_node,
+  #      shape  => 'point',
+  #      width  => 0.05,
+  #      height => 0.05,
+  #      class  => 'family-node junction',
+  #    );
+
+  #    # Connect child to family point
+  #    $graph->add_edge($family_node, $person_id,
+  #        class => $gender eq 'M' ? 'color-male'
+  #      : $gender eq 'F' ? 'color-female'
+  #      :                  '',);
+
+  #    # Add parents and connect to family point
+  #    if (my $father_handle = $family->father_handle) {
+  #      my $father = $c->people->{$father_handle};
+  #      if ($father) {
+  #        $c->log_debug(
+  #          "found father $father_handle " . $father->gramps_id);
+  #        $c->_add_ancestors_to_graph($graph, $father, $visited,
+  #          $generation + 1,
+  #          $generation_map);
+  #        $graph->add_edge($father->handle, $family_node,
+  #          class => 'color-male',);
+  #      }
+  #    }
+
+  #    if (my $mother_handle = $family->mother_handle) {
+  #      my $mother = $c->people->{$mother_handle};
+  #      if ($mother) {
+  #        $c->log_debug(
+  #          "found mother $mother_handle " . $mother->gramps_id);
+  #        $c->_add_ancestors_to_graph($graph, $mother, $visited,
+  #          $generation + 1,
+  #          $generation_map);
+  #        $graph->add_edge($mother->handle, $family_node,
+  #          class => 'color-female',);
+  #      }
+  #    }
+  #  }
+  }
+
+}
+1;
+
+__END__

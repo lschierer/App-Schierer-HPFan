@@ -7,7 +7,7 @@ require Data::Printer;
 require App::Schierer::HPFan::Model::Gramps::Repository::Reference;
 
 class App::Schierer::HPFan::Model::Gramps::Source :
-  isa(App::Schierer::HPFan::Logger) {
+  isa(App::Schierer::HPFan::Model::Base) {
   use Carp;
   use List::AllUtils qw( any );
 

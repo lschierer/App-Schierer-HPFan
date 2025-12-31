@@ -10,19 +10,18 @@ use namespace::clean;
 
 package App::Schierer::HPFan::Controller::Families {
   use Mojo::Base 'App::Schierer::HPFan::Controller::ControllerBase';
-  use Mojo::Base 'App::Schierer::HPFan::Logger::MojoLog4Perl', -role;
-  use Mojo::Base 'App::Schierer::HPFan::Role::Gramps', -role;
+  use Mojo::Base 'App::Schierer::HPFan::Role::Gramps',         -role;
   require Data::Printer;
   use Carp;
 
   my $logger;
 
   sub register($self, $app, $config //= {}) {
-    $logger = $app->logger(__PACKAGE__);
+    $logger = Log::Log4perl->get_logger(__PACKAGE__);
     $self->SUPER::register($app, $config);
     $logger->info(sprintf(
-      'register function for %s with logging category %s.',
-      __PACKAGE__, $logger->category()
+      'register function for %s.',
+      __PACKAGE__
     ));
 
     $app->helper(

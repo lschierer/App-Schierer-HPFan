@@ -12,24 +12,22 @@ use namespace::clean;
 
 package App::Schierer::HPFan::Controller::ControllerBase {
   use Mojo::Base 'Mojolicious::Controller';
-  use Mojo::Base 'Mojolicious::Plugin', -role, -signatures;
-  use Mojo::Base 'App::Schierer::HPFan::Logger::MojoLog4Perl', -role;
-  use Mojo::Base 'App::Schierer::HPFan::Role::Markdown', -role;
-  use Mojo::Base 'App::Schierer::HPFan::Role::Navigation', -role;
-  use Log::Log4perl;
+  use Mojo::Base 'Mojolicious::Plugin',                        -role, -signatures;
+  use Mojo::Base 'App::Schierer::HPFan::Role::Logging',        -role;
+  use Mojo::Base 'App::Schierer::HPFan::Role::Markdown',       -role;
+  use Mojo::Base 'App::Schierer::HPFan::Role::Navigation',     -role;
+  use Mojo::Base 'App::Schierer::HPFan::Role::StaticPages',    -role;
   use Carp;
 
   sub getBase ($self) {
     return "/" . __PACKAGE__;
   }
 
-  my $logger;
 
   sub register($c, $app, $config //= {}) {
-    $logger = $app->logger(__PACKAGE__);
-    $logger->info(sprintf(
-      'register function for %s with logging category %s.',
-      __PACKAGE__, $logger->category()
+    $c->log_info(sprintf(
+      'register function for %s.',
+      __PACKAGE__
     ));
 
     my $routes = $app->routes;

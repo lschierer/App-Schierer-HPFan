@@ -4,7 +4,7 @@ use utf8::all;
 use experimental qw(class);
 
 class App::Schierer::HPFan::Model::Gramps::Person::Child::Reference::Type :
-  isa(App::Schierer::HPFan::Logger) {
+  isa(App::Schierer::HPFan::Model::Base) {
   use Carp ();
   use Readonly;
   use Scalar::Util   qw(blessed looks_like_number);

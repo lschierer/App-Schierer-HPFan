@@ -20,16 +20,17 @@ require App::Schierer::HPFan::Model::Gramps::Surname;
 require App::Schierer::HPFan::Model::Gramps::Person;
 require App::Schierer::HPFan::Model::Gramps::Tag;
 
-class App::Schierer::HPFan::Model::Gramps : isa(App::Schierer::HPFan::Logger) {
+class App::Schierer::HPFan::Model::Gramps :isa(App::Schierer::HPFan::Model::Base) {
 # PODNAME: App::Schierer::HPFan::Model::Gramps
   use Carp;
-  use Log::Log4perl;
   use DBD::SQLite::Constants qw/:dbd_sqlite_string_mode/;
   our $VERSION = 'v0.0.1';
 
   field $gramps_export : param;
   field $gramps_db     : param;
   field $dbh;
+
+
 
   field $tags         : reader = {};
   field $events       : reader = {};

@@ -8,10 +8,10 @@ require GraphViz;
 require JSON::PP;
 require Path::Tiny;
 require XML::LibXML;
-require App::Schierer::HPFan::Logger::Config;
+require App::Schierer::HPFan::Role::Logging;
 use namespace::autoclean;
 
-class App::Schierer::HPFan::Data : isa(App::Schierer::HPFan::Logger) {
+class App::Schierer::HPFan::Data  {
   use Carp;
   use Log::Log4perl;
   use List::AllUtils         qw( first any );
@@ -23,21 +23,11 @@ class App::Schierer::HPFan::Data : isa(App::Schierer::HPFan::Logger) {
   field $gramps_db : param;
   field $output    : param;
   field $debug     : param = 0;
-  field $logger;
 
-  ADJUST {
-    my $lc =
-      App::Schierer::HPFan::Logger::Config->new('App::Schierer::HPFan::Data');
-
-    if ($debug) {
-      my $log4perl_logger = $lc->init('development');
-    }
-    else {
-      my $log4perl_logger = $lc->init('testing');
-    }
-
-    $logger = Log::Log4perl->get_logger(__CLASS__);
-  }
+ method logger {
+  state $l4p //= App::Schierer::HPFan::Role::Logging::get_logger(__CLASS__);
+  return $l4p;
+ }
 
   ADJUST {
     # Do not assume we are passed a Path::Tiny object;

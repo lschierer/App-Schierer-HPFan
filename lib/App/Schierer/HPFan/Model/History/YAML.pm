@@ -9,7 +9,7 @@ require Path::Iterator::Rule;
 require App::Schierer::HPFan::Model::CustomDate;
 
 class App::Schierer::HPFan::Model::History::YAML :
-  isa(App::Schierer::HPFan::Logger) {
+  isa(App::Schierer::HPFan::Model::Base) {
   use Carp;
   use Readonly;
 

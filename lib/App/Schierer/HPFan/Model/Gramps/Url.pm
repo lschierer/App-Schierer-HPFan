@@ -5,7 +5,7 @@ require Date::Manip;
 require URI;
 
 class App::Schierer::HPFan::Model::Gramps::Url :
-  isa(App::Schierer::HPFan::Logger) {
+  isa(App::Schierer::HPFan::Model::Base) {
   use Carp;
   use overload
     'cmp'      => \&_comparison,

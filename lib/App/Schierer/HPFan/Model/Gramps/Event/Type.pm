@@ -4,7 +4,7 @@ use experimental qw(class);
 use Readonly;
 
 class App::Schierer::HPFan::Model::Gramps::Event::Type :
-  isa(App::Schierer::HPFan::Logger) {
+  isa(App::Schierer::HPFan::Model::Base) {
   use Carp;
   use overload
     '""'       => \&to_string,

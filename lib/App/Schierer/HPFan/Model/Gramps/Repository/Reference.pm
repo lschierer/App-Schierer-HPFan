@@ -5,7 +5,7 @@ require Scalar::Util;
 require App::Schierer::HPFan::Model::Gramps::Repository::MediaType;
 
 class App::Schierer::HPFan::Model::Gramps::Repository::Reference :
-  isa(App::Schierer::HPFan::Logger) {
+  isa(App::Schierer::HPFan::Model::Base) {
   use Carp;
 
   field $data : param;

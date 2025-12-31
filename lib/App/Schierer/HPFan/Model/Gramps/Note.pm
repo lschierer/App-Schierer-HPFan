@@ -6,7 +6,7 @@ require App::Schierer::HPFan::Model::Gramps::Note::Text;
 require App::Schierer::HPFan::Model::Gramps::Note::Type;
 
 class App::Schierer::HPFan::Model::Gramps::Note :
-  isa(App::Schierer::HPFan::Logger) {
+  isa(App::Schierer::HPFan::Model::Base) {
   use List::AllUtils qw( any );
   use Carp;
   use overload

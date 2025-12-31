@@ -7,22 +7,18 @@ require Date::Manip;
 
 package App::Schierer::HPFan::Plugins::ClassLists {
   use Mojo::Base 'Mojolicious::Plugin', -strict, -signatures;
-  use Mojo::Base 'App::Schierer::HPFan::Logger::MojoLog4Perl', -role;
+  use Mojo::Base 'App::Schierer::HPFan::Role::Logging', -role;
   use Mojo::Util qw(xml_escape);
 
   my $logger;
 
   sub register($self, $app, $config) {
-    $logger = $self->get_logger(__PACKAGE__);
-    $logger->info(sprintf(
-      'register function for %s with logging category %s.',
-      __PACKAGE__, $logger->category()
-    ));
+    $self->log_info(sprintf('register function for %s.',__PACKAGE__ ));
 
     my $ClassLists = {};
     $app->plugins->on(
       'gramps_initialized' => sub($c, $gramps) {
-        $logger->debug(__PACKAGE__ . ' gramps_initialized sub start');
+        $self->log_debug(__PACKAGE__ . ' gramps_initialized sub start');
         $ClassLists = $self->buildClassLists($app);
       }
     );

@@ -7,7 +7,7 @@ require App::Schierer::HPFan::View::Markdown;
 require App::Schierer::HPFan::Model::History::Gramps::footnote;
 
 class App::Schierer::HPFan::Model::History::Gramps :
-  isa(App::Schierer::HPFan::Logger) {
+  isa(App::Schierer::HPFan::Model::Base) {
   use Carp;
   use Readonly;
 

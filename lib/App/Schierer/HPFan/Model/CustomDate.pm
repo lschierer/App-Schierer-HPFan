@@ -6,7 +6,7 @@ require Date::Calc::Object;
 require Scalar::Util;
 
 class App::Schierer::HPFan::Model::CustomDate :
-  isa(App::Schierer::HPFan::Logger) {
+  isa(App::Schierer::HPFan::Model::Base) {
   use Date::Calc   qw(Date_to_Days);
   use Scalar::Util qw( blessed looks_like_number);
   use Carp;

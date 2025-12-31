@@ -8,7 +8,7 @@ require Data::Printer;
 require Gedcom;
 require Log::Log4perl;
 
-class App::Schierer::HPFan::Model::Gedcom : isa(App::Schierer::HPFan::Logger) {
+class App::Schierer::HPFan::Model::Gedcom : isa(App::Schierer::HPFan::Model::Base) {
   field $gedcom_parser;
   field $filename : param;
   use Carp;

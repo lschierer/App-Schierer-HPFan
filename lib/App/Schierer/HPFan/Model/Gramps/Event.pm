@@ -5,7 +5,7 @@ require App::Schierer::HPFan::Model::Gramps::Event::Type;
 require App::Schierer::HPFan::Model::CustomDate;
 
 class App::Schierer::HPFan::Model::Gramps::Event :
-  isa(App::Schierer::HPFan::Logger) {
+  isa(App::Schierer::HPFan::Model::Base) {
   use Carp;
   use List::AllUtils qw( any );
   use overload

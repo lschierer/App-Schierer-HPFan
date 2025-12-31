@@ -5,7 +5,7 @@ require App::Schierer::HPFan::Model::Gramps::Person::Child::Reference;
 require App::Schierer::HPFan::Model::Gramps::Family::Relationship;
 
 class App::Schierer::HPFan::Model::Gramps::Family :
-  isa(App::Schierer::HPFan::Logger) {
+  isa(App::Schierer::HPFan::Model::Base) {
   use List::AllUtils qw( any );
   use Carp;
 

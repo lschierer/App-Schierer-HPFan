@@ -8,7 +8,7 @@ require DateTime::Format::DateManip;
 require Date::Calc::Object;
 
 class App::Schierer::HPFan::Model::History::Event
-  : isa(App::Schierer::HPFan::Logger) {
+  : isa(App::Schierer::HPFan::Model::Base) {
   use Carp;
   use Readonly;
   use Date::Calc   qw(Date_to_Days);

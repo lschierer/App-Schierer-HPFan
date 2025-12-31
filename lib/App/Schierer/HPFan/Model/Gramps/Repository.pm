@@ -5,7 +5,7 @@ require Date::Manip;
 require App::Schierer::HPFan::Model::Gramps::Url;
 
 class App::Schierer::HPFan::Model::Gramps::Repository :
-  isa(App::Schierer::HPFan::Logger) {
+  isa(App::Schierer::HPFan::Model::Base) {
   use Carp;
 
   field $data : param;

@@ -4,7 +4,7 @@ use experimental qw(class);
 require App::Schierer::HPFan::Model::Gramps::Event::Reference::Role::Type;
 
 class App::Schierer::HPFan::Model::Gramps::Event::Reference :
-  isa(App::Schierer::HPFan::Logger) {
+  isa(App::Schierer::HPFan::Model::Base) {
   use Carp;
 
   field $data : param;

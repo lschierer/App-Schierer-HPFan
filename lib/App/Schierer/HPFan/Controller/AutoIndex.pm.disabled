@@ -13,10 +13,10 @@ package App::Schierer::HPFan::Controller::AutoIndex {
 
   sub register($c, $app, $config) {
     $c->SUPER::register($app, $config);
-    $logger = $app->logger(__PACKAGE__);
+    $logger = Log::Log4perl->get_logger(__PACKAGE__);
     $logger->info(sprintf(
-      'register function for %s with logging category %s.',
-      __PACKAGE__, $logger->category()
+      'register function for %s.',
+      __PACKAGE__
     ));
 
     $app->helper(

@@ -17,16 +17,15 @@ require App::Schierer::HPFan::Model::History::YAML;
 
 package App::Schierer::HPFan::Controller::History {
   use Mojo::Base 'App::Schierer::HPFan::Controller::ControllerBase';
-  use Mojo::Base 'App::Schierer::HPFan::Logger::MojoLog4Perl', -role;
-  use Mojo::Base 'App::Schierer::HPFan::Role::Gramps', -role;
+  use Mojo::Base 'App::Schierer::HPFan::Role::Gramps',         -role;
   my $logger;
 
   sub register($self, $app, $config) {
     $self->SUPER::register($app, $config);
-    $logger = $app->logger(__PACKAGE__);
+    $logger = Log::Log4perl->get_logger(__PACKAGE__);
     $logger->info(sprintf(
-      'register function for %s with logging category %s.',
-      __PACKAGE__, $logger->category()
+      'register function for %s.',
+      __PACKAGE__
     ));
 
     state $timeline_cache = {

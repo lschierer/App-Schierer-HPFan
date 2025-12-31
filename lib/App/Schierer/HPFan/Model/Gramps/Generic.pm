@@ -9,7 +9,7 @@ require XML::LibXML;
 require JSON::PP;
 
 class App::Schierer::HPFan::Model::Gramps::Generic :
-  isa(App::Schierer::HPFan::Logger) {
+  isa(App::Schierer::HPFan::Model::Base) {
   use Carp;
   use overload
     '<=>' => \&_comparison,
