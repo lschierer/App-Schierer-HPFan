@@ -8,10 +8,17 @@ install:
 build-data:
     ./scripts/preprocess_gramps_db
 
+css:
+    pnpm build:css
+
+typescript:
+    pnpm build:ts
+
 # Build the project
 build: install
     ./Build
-    pnpm run build
+    pnpm build:css
+    pnpm build:ts
 
 tidy:
     find lib -name '*.pm' -exec perltidy -b -pro=.perltidyrc {} \;
@@ -32,7 +39,10 @@ clean:
 
 # Development server
 dev: build build-data
-    ./Build && perl bin/server.pl
+    perl bin/server.pl
+
+quickdev:
+    watchexec -w bin -w lib -w ../PAGI-WebServer/lib -w templates -w public/css -w public/js -r perl bin/server.pl
 
 # Production server
 prod: build build-data
