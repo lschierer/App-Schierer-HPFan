@@ -51,6 +51,11 @@ class App::Schierer::HPFan::Model::Gramps::Surname :
 
     return join(" ", @parts);
   }
+
+  method _isTrue {
+    return 1 if $surname || $prefix || $connector;
+    return 0;
+  }
 }
 
 1;

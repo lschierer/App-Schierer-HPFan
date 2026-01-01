@@ -1,0 +1,120 @@
+[% IF is_unknown -%]
+<div class="spectrum-Card">
+  <div class="spectrum-Card-body">
+    <div class="spectrum-Card-header">
+      <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeL">
+        Genealogical Gaps
+      </div>
+    </div>
+    <div class="spectrum-Card-content">
+      <p class="spectrum-Body spectrum-Body--sizeM">
+        This page lists [% member_count %] people with unknown or missing surname information.
+        These individuals need additional research to complete their genealogical records.
+      </p>
+    </div>
+  </div>
+</div>
+[% ELSE -%]
+<div class="spectrum-Card">
+  <div class="spectrum-Card-body">
+    <div class="spectrum-Card-header">
+      <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeL">
+        [% surname %] Family
+      </div>
+    </div>
+    <div class="spectrum-Card-content">
+      <p class="spectrum-Body spectrum-Body--sizeM">
+        [% member_count %] [% member_count == 1 ? 'person' : 'people' %] with the surname [% surname %].
+      </p>
+    </div>
+  </div>
+</div>
+[% END -%]
+
+<h2 class="spectrum-Heading spectrum-Heading--serif spectrum-Heading--heavy spectrum-Heading--sizeXL">Family Members</h2>
+
+[% BLOCK render_person_node -%]
+  <li class="family-tree-person">
+    [% IF person.link -%]
+      <a href="[% person.link %]" class="spectrum-Link spectrum-Link--primary">
+        [% iconClass = person.gender == 'M' ? 'color-male' : person.gender == 'F' ? 'color-female' : 'icon1' -%]
+        [% iconName = person.gender == 'M' ? 'ion-male' : person.gender == 'F' ? 'ion-female' : 'tdesign:user-unknown' -%]
+        <iconify-icon icon="[% iconName %]" class="[% iconClass %]" width="1em" height="1em"></iconify-icon>
+        <span class="person-name">[% person.display_name %]</span>
+      </a>
+    [% ELSE -%]
+      <span class="spectrum-Body">
+        <iconify-icon icon="tdesign:user-unknown" class="icon1" width="1em" height="1em"></iconify-icon>
+        <span class="person-name">[% person.display_name %]</span>
+      </span>
+    [% END -%]
+
+    [% IF children.size > 0 -%]
+      <ul class="family-tree-children">
+        [% FOREACH child IN children -%]
+          [% INCLUDE render_person_node person=child.person children=child.children -%]
+        [% END -%]
+      </ul>
+    [% END -%]
+  </li>
+[% END -%]
+
+<div class="family-tree-container">
+  [% IF family_tree.size > 0 -%]
+    <ul class="family-tree-root">
+      [% FOREACH root IN family_tree -%]
+        [% INCLUDE render_person_node person=root.person children=root.children -%]
+      [% END -%]
+    </ul>
+  [% ELSE -%]
+    <p class="spectrum-Body spectrum-Body--sizeM">No family members found.</p>
+  [% END -%]
+</div>
+
+[% IF static_content -%]
+  <hr role="separator" class="spectrum-Divider spectrum-Divider--sizeM" />
+  <h2 class="spectrum-Heading spectrum-Heading--serif spectrum-Heading--heavy spectrum-Heading--sizeXL">Additional Information</h2>
+  [% static_content %]
+[% END -%]
+
+<style>
+.family-tree-container {
+  margin: 2em 0;
+}
+
+.family-tree-root,
+.family-tree-children {
+  list-style: none;
+  padding-left: 0;
+}
+
+.family-tree-children {
+  margin-left: 2em;
+  margin-top: 0.5em;
+  border-left: 2px solid var(--spectrum-gray-300);
+  padding-left: 1.5em;
+}
+
+.family-tree-person {
+  margin: 0.5em 0;
+  position: relative;
+}
+
+.family-tree-person::before {
+  content: '';
+  position: absolute;
+  left: -1.5em;
+  top: 1em;
+  width: 1em;
+  height: 2px;
+  background: var(--spectrum-gray-300);
+}
+
+.family-tree-root > .family-tree-person::before {
+  display: none;
+}
+
+.person-name {
+  margin-left: 0.5em;
+}
+</style>

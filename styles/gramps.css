@@ -84,6 +84,11 @@ ul.bio {
   box-sizing: border-box;
 }
 
+svg.family-tree polygon {
+  fill: none;
+  fill-opacity: 0;
+}
+
 svg .color-male {
   color: var(--color-male);
   stroke: var(--color-male);

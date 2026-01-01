@@ -390,7 +390,7 @@ class App::Schierer::HPFan::View::Timeline::PositionHelpers {
 
   }
 
-  method _count_overlaps ($lane,) {
+  method _count_overlaps ($lane) {
     my @idx = grep {
       my $b = $lane->[$_];
       $b && defined $b->{y} && defined $b->{height}

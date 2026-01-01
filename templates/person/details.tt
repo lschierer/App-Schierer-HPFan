@@ -1,0 +1,131 @@
+[% iconName = 'tdesign:user-unknown' -%]
+[% iconClass = 'icon1' -%]
+[% IF person.gender == 'M' -%]
+  [% iconName = 'ion-male' -%]
+  [% iconClass = 'color-male' -%]
+[% ELSIF person.gender == 'F' -%]
+  [% iconName = 'ion-female' -%]
+  [% iconClass = 'color-female' -%]
+[% END -%]
+
+[% house = '' -%]
+[% FOREACH tag IN tags -%]
+  [% IF tag.match('Gryffindor|Hufflepuff|Ravenclaw|Slytherin') -%]
+    [% house = tag -%]
+    [% LAST -%]
+  [% END -%]
+[% END -%]
+
+<link rel="stylesheet" href="/css/gramps.css" />
+
+<div class="basic-info spectrum-Card spectrum-Card--horizontal" id="[% person.gramps_id %]" role="figure">
+  <div class="spectrum-Card-preview">
+    <iconify-icon icon="[% iconName %]" class="[% iconClass %]" width="none"></iconify-icon>
+  </div>
+  <div class="spectrum-Card-body [% house.lower %]">
+    <div class="spectrum-Card-header">
+      <div class="spectrum-Card-title">
+        Basic Information
+      </div>
+    </div>
+    <div class="spectrum-Card-content">
+      <div class="spectrum-Card-description">
+        <ul class="bio">
+          <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeS">
+            <strong>ID</strong>: [% person.gramps_id %]
+          </li>
+          [% FOREACH event IN events -%]
+            <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeS">
+            <strong>[% event.type %]</strong>: [% IF event.date; event.date.year == 9999 ? 'Unknown' : event.date.to_string; ELSE; 'Unknown'; END %]
+            </li>
+          [% END -%]
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+[% IF families.size > 0 OR childof.size > 0 -%]
+    <h2 class="spectrum-Heading spectrum-Heading--serif spectrum-Heading--heavy spectrum-Heading--sizeXL">Families</h2>
+    [% IF families.size > 0 -%]
+        <h3 class="spectrum-Heading spectrum-Heading--serif spectrum-Heading--heavy spectrum-Heading--sizeL">Married</h3>
+        <ul>
+        [% FOREACH f IN families -%]
+          <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
+            [% spouse = f.spouse -%]
+            <strong>Spouse</strong>:
+              [% IF spouse -%]
+                <a href="[% spouse.link %]" class="spectrum-Link spectrum-Link--primary">
+                  [% spouse.display_name %]
+                </a>
+              [% ELSE -%]
+                Unknown
+              [% END -%]
+          </li>
+          [% IF f.children.size > 0 -%]
+            <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
+              <strong>Children</strong>:
+              <ul>
+              [% FOREACH child IN f.children -%]
+                  [% IF child -%]
+                    <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
+                      <a href="[% child.link %]" class="spectrum-Link spectrum-Link--primary">
+                        [% child.display_name %]
+                      </a>
+                    </li>
+                  [% END -%]
+              [% END -%]
+              </ul>
+            </li>
+          [% END -%]
+        [% END -%]
+        </ul>
+    [% END -%]
+    [% IF childof.size > 0 -%]
+        <h3 class="spectrum-Heading spectrum-Heading--serif spectrum-Heading--heavy spectrum-Heading--sizeL">Parents</h3>
+        <ul>
+          [% FOREACH f IN childof -%]
+            <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
+              <strong>Family</strong>: [% f.type || 'Unknown' %]
+              <ul>
+                <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
+                  [% father = f.father -%]
+                  <strong>[% f.frel ? f.frel _ ' ' : '' %]Father</strong>:
+                  [% IF father -%]
+                    <a href="[% father.link %]" class="spectrum-Link spectrum-Link--primary">
+                      [% father.display_name %]
+                    </a>
+                  [% ELSE -%]
+                    Unknown
+                  [% END -%]
+                </li>
+                <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
+                  [% mother = f.mother -%]
+                  <strong>[% f.mrel ? f.mrel _ ' ' : '' %]Mother</strong>:
+                  [% IF mother -%]
+                    <a href="[% mother.link %]" class="spectrum-Link spectrum-Link--primary">
+                      [% mother.display_name %]
+                    </a>
+                  [% ELSE -%]
+                    Unknown
+                  [% END -%]
+                </li>
+              </ul>
+            </li>
+          [% END -%]
+        </ul>
+    [% END -%]
+[% END -%]
+[% IF family_tree -%]
+<h2 class="spectrum-Heading spectrum-Heading--serif spectrum-Heading--heavy spectrum-Heading--sizeXL">Ancestors</h2>
+<div class="family-tree-card">
+  [% family_tree %]
+</div>
+[% END -%]
+<div class="timeline-card">
+  [% chart %]
+</div>
+<hr role="separator" class="spectrum-Divider spectrum-Divider--sizeM" />
+[% IF static_content -%]
+  <h2 class="spectrum-Heading spectrum-Heading--serif spectrum-Heading--heavy spectrum-Heading--sizeXL">Analysis</h2>
+  [% static_content %]
+[% END -%]

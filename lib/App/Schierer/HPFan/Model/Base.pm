@@ -11,5 +11,13 @@ method logger {
   return $l4p;
 }
 
+method _isTrue {
+  return 1;
+}
+
+method dev_guard ($message) {
+  $self->logger->warn("DEV_GUARD: $message");
+}
+
 1;
 __END__

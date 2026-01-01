@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="/css/global_header.css" />
+<header class="header">
+  <!-- Mobile menu button (hidden on desktop) -->
+  <button class="mobile-menu-button" id="mobile-menu-toggle">
+    <span class="hamburger-icon">☰</span>
+  </button>
+
+  <!-- Logo/Title section -->
+  <div class="site-title-section">
+    <div class="logo-container">
+      <a href="/" class="site-title spectrum-Link spectrum-Link--quiet spectrum-Link--secondary">
+        [% IF site_logo -%]
+          [% site_logo %]
+        [% END -%]
+      </a>
+    </div>
+    <div class="title-container">
+      <a href="/" class="site-title spectrum-Link spectrum-Link--quiet spectrum-Link--secondary">
+        <span class="site-title spectrum-Heading">Luke's HP Site</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Desktop navigation (hidden on mobile) -->
+  <nav class="navigation">
+    [% FOREACH section IN ['Harrypedia', 'Fan Fiction', 'Searches', 'Bookmarks'] -%]
+      <div class="nav-item">
+        <a href="/[% section %]" class="spectrum-Link spectrum-Link--primary spectrum-Link--quiet">
+          <span class="spectrum-Heading spectrum-Heading--serif spectrum-Heading--sizeXS">
+            [% section %]
+          </span>
+        </a>
+      </div>
+    [% END -%]
+  </nav>
+
+  <!-- Social icons -->
+  <div class="social">
+    <div class="social-icon">
+      <a class="social-icons nav-item spectrum-Link spectrum-Link--primary spectrum-Link--quiet" href="https://github.com/lschierer/App-Schierer-HPFan">
+        <iconify-icon id="github" class="social-icons nav-item" icon="codicon:github" height="none"></iconify-icon>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu overlay (shown when button is clicked) -->
+<div class="mobile-menu" id="mobile-menu">
+  <nav>
+    [% IF mobile_navigation -%]
+      [% mobile_navigation %]
+    [% END -%]
+  </nav>
+</div>
+
+<script type="module">
+document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('active');
+});
+</script>

@@ -49,7 +49,10 @@ class App::Schierer::HPFan::Model::Gramps::Generic :
   }
 
   method date {
-    my $hash = JSON::PP->new->decode($self->json_data);
+    my $json_data = $self->json_data;
+    return undef unless defined $json_data && length($json_data) > 0;
+
+    my $hash = JSON::PP->new->decode($json_data);
     my $d    = $hash->{'date'} if exists $hash->{'date'};
     my $r;
     if (defined $d && exists $d->{dateval} && $d->{dateval}->[2] > 0) {
@@ -98,7 +101,10 @@ class App::Schierer::HPFan::Model::Gramps::Generic :
   method note_refs {
     my $items = [];
     if (exists $self->ALLOWED_FIELD_NAMES->{'json_data'}) {
-      my $hash = JSON::PP->new->decode($self->json_data);
+      my $json_data = $self->json_data;
+      return $items unless defined $json_data && length($json_data) > 0;
+
+      my $hash = JSON::PP->new->decode($json_data);
       foreach my $item ($hash->{'note_list'}->@*) {
         if (ref($item) eq 'OBJECT') {
           my $temp =
@@ -122,7 +128,10 @@ class App::Schierer::HPFan::Model::Gramps::Generic :
   method citation_refs {
     my $items = [];
     if (exists $self->ALLOWED_FIELD_NAMES->{'json_data'}) {
-      my $hash = JSON::PP->new->decode($self->json_data);
+      my $json_data = $self->json_data;
+      return $items unless defined $json_data && length($json_data) > 0;
+
+      my $hash = JSON::PP->new->decode($json_data);
       foreach my $item ($hash->{'citation_list'}->@*) {
         push @$items,
           App::Schierer::HPFan::Model::Gramps::Reference->new($item->%*);
@@ -134,7 +143,10 @@ class App::Schierer::HPFan::Model::Gramps::Generic :
   method tag_refs {
     my $items = [];
     if (exists $self->ALLOWED_FIELD_NAMES->{'json_data'}) {
-      my $hash = JSON::PP->new->decode($self->json_data);
+      my $json_data = $self->json_data;
+      return $items unless defined $json_data && length($json_data) > 0;
+
+      my $hash = JSON::PP->new->decode($json_data);
       foreach my $item ($hash->{'tag_list'}->@*) {
         push @$items,
           App::Schierer::HPFan::Model::Gramps::Reference->new($item->%*);

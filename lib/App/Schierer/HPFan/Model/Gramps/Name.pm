@@ -104,6 +104,11 @@ class App::Schierer::HPFan::Model::Gramps::Name :
 
     return $name;
   }
+
+  method _isTrue {
+    return 1 if $first_name || $call || $nick || @$surnames;
+    return 0;
+  }
 }
 
 1;
