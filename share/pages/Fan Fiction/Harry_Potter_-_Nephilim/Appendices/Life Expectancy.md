@@ -3,7 +3,8 @@ title: >-
   Life Expectancy
 author: Luke Schierer
 collection: Nephilim
-order: 100
+sidebar:
+  order: 100
 ---
 
 | Average Power Level | US Males 1900 | US Males 2001 | US Male Nephilim 1900 |
