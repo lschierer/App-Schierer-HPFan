@@ -20,6 +20,7 @@ my $build = Module::Build->new(
     'DateTime::Format::DateManip'    => '0',
     'DBD::SQLite'                    => '0',
     'DBI'                            => '0',
+    'Devel::Local'                   => '0',
     'Encode'                         => '0',
     'Exporter'                       => '0',
     'File::FindLib'                  => '0',

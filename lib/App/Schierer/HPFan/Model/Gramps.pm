@@ -124,6 +124,7 @@ class App::Schierer::HPFan::Model::Gramps :
   }
 
   method find_person_by_handle ($handle) {
+    return unless defined $handle;
     return $people->{$handle};
   }
 

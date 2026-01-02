@@ -4,6 +4,7 @@ use v5.42.0;
 use strict;
 use warnings;
 use Moo;
+use Future::AsyncAwait;
 use Path::Tiny;
 use Encode qw(encode_utf8);
 use Log::Log4perl qw(get_logger);
@@ -29,6 +30,26 @@ has gramps => (
     is => 'ro',
     required => 1,
 );
+
+async sub register_routes ($self, $nav, $router) {
+    $router->get('/Harrypedia/History' => async sub {
+        my ($scope, $receive, $send) = @_;
+
+        my $html = $self->timeline_handler;
+        my $bytes = encode_utf8($html);
+
+        await $send->({
+            type => 'http.response.start',
+            status => 200,
+            headers => [['content-type', 'text/html; charset=utf-8']],
+        });
+        await $send->({
+            type => 'http.response.body',
+            body => $bytes,
+            more => 0,
+        });
+    });
+}
 
 has timeline_cache => (
     is => 'rw',

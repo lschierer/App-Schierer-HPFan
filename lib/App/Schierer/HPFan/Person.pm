@@ -5,6 +5,8 @@ use warnings;
 use v5.42.0;
 use utf8::all;
 use Moo;
+with 'App::Schierer::HPFan::Role::GrampsMoo';
+use Future::AsyncAwait;
 use Path::Tiny;
 use Encode qw(encode_utf8);
 use URI::Escape qw(uri_escape_utf8);
@@ -17,11 +19,6 @@ use Log::Log4perl qw(get_logger);
 has logger => (
   is => 'ro',
   default => sub { get_logger(__PACKAGE__) },
-);
-
-has gramps => (
-    is => 'lazy',
-    writer => '_set_gramps',
 );
 
 has template => (
@@ -37,6 +34,99 @@ has navigation => (
     is => 'ro',
     predicate => 'has_navigation',
 );
+
+has family_handler => (
+    is => 'ro',
+    required => 1,
+);
+
+async sub register_routes ($self, $nav, $router) {
+    # Register person routes (higher priority than markdown)
+    $router->get('/Harrypedia/people/*' => async sub {
+        my ($scope, $receive, $send) = @_;
+        await $self->handle_person_route($scope, $receive, $send);
+    });
+}
+
+async sub handle_person_route ($self, $scope, $receive, $send) {
+    my $path = $scope->{path};
+    my ($surname, $given_name) = $path =~ m{^/Harrypedia/people/([^/]+)/(.+)$};
+
+    if ($surname && $given_name) {
+        # URL decode the names
+        $surname =~ s/%([0-9A-Fa-f]{2})/chr(hex($1))/eg;
+        $given_name =~ s/%([0-9A-Fa-f]{2})/chr(hex($1))/eg;
+
+        eval {
+            my $html = $self->render_person_page($surname, $given_name, '', $path);
+            if ($html) {
+                my $bytes = encode_utf8($html);
+                await $send->({
+                    type => 'http.response.start',
+                    status => 200,
+                    headers => [['content-type', 'text/html; charset=utf-8']],
+                });
+                await $send->({
+                    type => 'http.response.body',
+                    body => $bytes,
+                    more => 0,
+                });
+                return;
+            }
+        };
+
+        if ($@) {
+            warn "Error rendering person page: $@";
+            await $send->({
+                type => 'http.response.start',
+                status => 500,
+                headers => [['content-type', 'text/plain']],
+            });
+            await $send->({
+                type => 'http.response.body',
+                body => "Internal Server Error: $@",
+                more => 0,
+            });
+            return;
+        }
+    }
+
+    # Try as family listing
+    my ($surname_only) = $path =~ m{^/Harrypedia/people/([^/]+)$};
+    if ($surname_only) {
+        $surname_only =~ s/%([0-9A-Fa-f]{2})/chr(hex($1))/eg;
+
+        eval {
+            my $html = await $self->family_handler->render_family_page($surname_only, '', $path);
+            if ($html) {
+                my $bytes = encode_utf8($html);
+                await $send->({
+                    type => 'http.response.start',
+                    status => 200,
+                    headers => [['content-type', 'text/html; charset=utf-8']],
+                });
+                await $send->({
+                    type => 'http.response.body',
+                    body => $bytes,
+                    more => 0,
+                });
+                return;
+            }
+        };
+    }
+
+    # Not found
+    await $send->({
+        type => 'http.response.start',
+        status => 404,
+        headers => [['content-type', 'text/plain']],
+    });
+    await $send->({
+        type => 'http.response.body',
+        body => 'Person or Family Not Found',
+        more => 0,
+    });
+}
 
 sub _build_gramps {
     my $self = shift;
@@ -66,71 +156,6 @@ sub _build_template {
         template_dir => 'templates',
         include_path => ['templates', 'templates/partials']
     );
-}
-
-sub get_person_by_name {
-    my ($self, $surname, $given_name) = @_;
-
-    $self->logger->debug("Looking for person: $given_name $surname");
-
-    # Search through all people
-    my $people = $self->gramps->people;
-
-    for my $person (values %$people) {
-        my $primary_name = $person->primary_name;
-        next unless $primary_name;
-
-        my $p_surname_obj = $primary_name->primary_surname;
-        my $p_surname = $p_surname_obj ? $p_surname_obj->surname : '';
-        my $p_given = $primary_name->first_name // '';
-
-        if ($p_surname eq $surname && $p_given eq $given_name) {
-            $self->logger->debug("Found person: " . $person->gramps_id);
-            return $person;
-        }
-    }
-
-    $self->logger->warn("Person not found: $given_name $surname");
-    return;
-}
-
-sub link_for_person {
-    my ($self, $person) = @_;
-    return '' unless $person;
-
-    my $primary_name = $person->primary_name;
-    return '' unless $primary_name;
-
-    my $surname_obj = $primary_name->primary_surname;
-    my $surname = $surname_obj ? uri_escape_utf8($surname_obj->surname) : '';
-    my $given = uri_escape_utf8($primary_name->first_name // '');
-
-    return "/Harrypedia/people/$surname/$given";
-}
-
-sub display_name_for_person {
-    my ($self, $person) = @_;
-    return 'Unknown' unless $person;
-
-    my $primary_name = $person->primary_name;
-    return 'Unknown' unless $primary_name;
-
-    my $given = $primary_name->first_name // '';
-    my $surname_obj = $primary_name->primary_surname;
-    my $surname = $surname_obj ? $surname_obj->surname : '';
-
-    my $name = join(' ', grep { $_ } ($given, $surname));
-    return $name || 'Unknown';
-}
-
-sub prepare_person_data {
-    my ($self, $person) = @_;
-
-    return {
-        gramps_id    => $person->gramps_id,
-        gender       => $person->gender,
-        display_name => $self->display_name_for_person($person),
-    };
 }
 
 sub prepare_family_as_parent {

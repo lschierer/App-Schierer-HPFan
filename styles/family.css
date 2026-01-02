@@ -41,3 +41,25 @@ iconify-icon {
   height: var(--mod-icon-inline-size);
   box-sizing: border-box;
 }
+
+/* Gender-specific link styling for family trees */
+.spectrum-Link--secondary {
+  color: var(--spectrum-gray-800);
+}
+
+.family-tree-person .spectrum-Link {
+  text-decoration: none;
+}
+
+.family-tree-person .spectrum-Link:hover {
+  text-decoration: underline;
+}
+
+/* Apply gender colors to links in family tree */
+.family-tree-person .spectrum-Link iconify-icon.color-male + .person-info .person-name {
+  color: var(--color-male);
+}
+
+.family-tree-person .spectrum-Link iconify-icon.color-female + .person-info .person-name {
+  color: var(--color-female);
+}

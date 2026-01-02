@@ -5,6 +5,8 @@ use warnings;
 use v5.42.0;
 use utf8::all;
 use Moo;
+with 'App::Schierer::HPFan::Role::GrampsMoo';
+use Future::AsyncAwait;
 use Path::Tiny;
 use Encode qw(encode_utf8);
 use URI::Escape qw(uri_escape_utf8);
@@ -15,10 +17,6 @@ use Log::Log4perl qw(get_logger);
 has logger => (
     is => 'ro',
     default => sub { get_logger(__PACKAGE__) },
-);
-
-has gramps => (
-    is => 'lazy',
 );
 
 has template => (
@@ -35,25 +33,40 @@ has navigation => (
     predicate => 'has_navigation',
 );
 
-sub _build_gramps {
-    my $self = shift;
+async sub register_routes ($self, $nav, $router) {
+    # Add special "Unknown" surname route
+    $nav->add_route('/Harrypedia/people/Unknown', 'Genealogical Gaps - Unknown Surnames', { order => 999 });
 
-    $self->logger->info("Initializing Gramps model...");
+    # Register routes for all family surnames and their members
+    my $surnames = await $self->get_all_surnames();
+    for my $surname (@$surnames) {
+        my $route_path = '/Harrypedia/people/' . $surname;
+        $nav->add_route($route_path, "$surname Family", { order => 100 });
 
-    my $gramps = App::Schierer::HPFan::Model::Gramps->new(
-        gramps_export => path('share/data/gramps'),
-        gramps_db     => path('share/grampsdb/sqlite.db'),
-    );
+        # Register individual family members
+        my $family_members = await $self->get_people_by_surname($surname);
+        for my $person (@$family_members) {
+            my $primary_name = $person->primary_name;
+            next unless $primary_name;
 
-    $self->logger->info("Importing Gramps data...");
-    $gramps->execute_import();
+            my $given = $primary_name->first_name // '';
+            next unless $given;
 
-    $self->logger->info("Building Gramps indexes...");
-    $gramps->build_indexes();
+            my $person_route = "/Harrypedia/people/$surname/$given";
+            $nav->add_route($person_route, $given, { order => 110 });
+        }
+    }
 
-    $self->logger->info("Gramps initialization complete");
+    # Register people with unknown surnames
+    my $unknown_people = await $self->get_people_with_unknown_surname();
+    for my $person (@$unknown_people) {
+        my $primary_name = $person->primary_name;
+        my $given = $primary_name ? ($primary_name->first_name // '') : '';
 
-    return $gramps;
+        my $display_name = $given || $person->gramps_id || 'Unknown';
+        my $person_route = "/Harrypedia/people/Unknown/$display_name";
+        $nav->add_route($person_route, $display_name, { order => 110 });
+    }
 }
 
 sub _build_template {
@@ -63,73 +76,6 @@ sub _build_template {
         template_dir => 'templates',
         include_path => ['templates', 'templates/partials']
     );
-}
-
-# Get all unique surnames from the database
-sub get_all_surnames {
-    my ($self) = @_;
-
-    my $people = $self->gramps->people();
-    my %surnames;
-
-    for my $person (values %$people) {
-        my $primary_name = $person->primary_name();
-        next unless $primary_name;
-
-        my $surname_obj = $primary_name->primary_surname();
-        if ($surname_obj && $surname_obj->surname) {
-            my $surname = $surname_obj->surname;
-            $surnames{$surname} = 1;
-        }
-    }
-
-    return [sort keys %surnames];
-}
-
-# Get all people with a given surname
-sub get_people_by_surname {
-    my ($self, $surname) = @_;
-
-    my $people = $self->gramps->people();
-    my @family_members;
-
-    for my $person (values %$people) {
-        my $primary_name = $person->primary_name();
-        next unless $primary_name;
-
-        my $surname_obj = $primary_name->primary_surname();
-        my $person_surname = $surname_obj ? ($surname_obj->surname // '') : '';
-
-        if ($person_surname eq $surname) {
-            push @family_members, $person;
-        }
-    }
-
-    return \@family_members;
-}
-
-# Get people with unknown/missing surnames
-sub get_people_with_unknown_surname {
-    my ($self) = @_;
-
-    my $people = $self->gramps->people();
-    my @unknown;
-
-    for my $person (values %$people) {
-        my $primary_name = $person->primary_name();
-
-        if (!$primary_name) {
-            push @unknown, $person;
-            next;
-        }
-
-        my $surname_obj = $primary_name->primary_surname();
-        if (!defined($surname_obj) || !$surname_obj->surname || $surname_obj->surname eq '') {
-            push @unknown, $person;
-        }
-    }
-
-    return \@unknown;
 }
 
 # Build family tree starting from root ancestors
@@ -292,43 +238,17 @@ sub _compare_birth_dates {
     return $date_a->year <=> $date_b->year;
 }
 
-# Prepare person data for template
-sub prepare_person_data {
-    my ($self, $person) = @_;
-
-    my $primary_name = $person->primary_name;
-    my $given = $primary_name ? ($primary_name->first_name // '') : '';
-    my $surname_obj = $primary_name ? $primary_name->primary_surname : undef;
-    my $surname = $surname_obj ? ($surname_obj->surname // '') : '';
-
-    my $display_name = join(' ', grep { $_ } ($given, $surname)) || 'Unknown';
-
-    my $link = '';
-    if ($surname && $given) {
-        my $surname_enc = uri_escape_utf8($surname);
-        my $given_enc = uri_escape_utf8($given);
-        $link = "/Harrypedia/people/$surname_enc/$given_enc";
-    }
-
-    return {
-        gramps_id    => $person->gramps_id,
-        display_name => $display_name,
-        link         => $link,
-        gender       => $person->gender,
-    };
-}
-
 # Render family listing page
-sub render_family_page {
+async sub render_family_page {
     my ($self, $surname, $static_content, $current_path) = @_;
 
     my $is_unknown = ($surname eq 'Unknown');
     my $family_members;
 
     if ($is_unknown) {
-        $family_members = $self->get_people_with_unknown_surname();
+        $family_members = await $self->get_people_with_unknown_surname();
     } else {
-        $family_members = $self->get_people_by_surname($surname);
+        $family_members = await $self->get_people_by_surname($surname);
     }
 
     return unless @$family_members;

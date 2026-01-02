@@ -3,8 +3,7 @@
   <% my $gender = $node->{person}->gender; %>
   <% my $genderClass = $gender eq 'M' ? 'color-male' : $gender eq 'F' ? 'color-female' : ''; %>
   <a class="<%= $genderClass %> spectrum-TreeView-itemLink"
-    href="<%= link_target_for_person($node->{person}); %>"
-    class="spectrum-TreeView-itemLink">
+    href="<%= link_target_for_person($node->{person}); %>">
     <iconify-icon
     class="spectrum-Icon spectrum-Icon--small spectrum-TreeView-itemIndicator tree-toggle"
     aria-hidden="true" role="img" focusable="false"

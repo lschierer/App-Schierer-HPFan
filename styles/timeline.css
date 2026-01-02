@@ -6,7 +6,7 @@
 @import url("@spectrum-css/button");
 @import url("@spectrum-css/divider");
 
-iconify-icon {
+.timeline-card iconify-icon {
   margin-right: 1.5rem;
   font-size: 2rem;
 }
