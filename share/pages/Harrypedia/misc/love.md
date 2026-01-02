@@ -71,10 +71,10 @@ attacking [Snape].[^230804-2]
     Kindle Locations 9396-9398. Pottermore Limited. American Kindle Edition.
 
 [James]: /Harrypedia/people/Potter/James/
-[lily]: </Harrypedia/people/Evans/Lily J/>
-[Snape]: /Harrypedia/people/Snape/Severus/
+[lily]: </Harrypedia/people/Evans/Lily J>
+[Snape]: /Harrypedia/people/Snape/Severus
 
-[Draco]: </Harrypedia/people/Malfoy/Draco Lucius/>/
+[Draco]: </Harrypedia/people/Malfoy/Draco Lucius>
 
 [^221206-2]: 
     Anelli, Melissa and Emerson Spartz.
@@ -89,8 +89,8 @@ This is not, however, the only example. Mrs. Rowling will then go on to pair
 [Ron] with [Hermione], pushing the idea that opposites attract, despite the
 fact that bickering and fighting is not the basis for a healthy relationship.
 
-[Ron]: </Harrypedia/people/Weasley/Ronald Bilius/>/
-[Hermione]: </Harrypedia/people/Granger/Hermione Jean/>/
+[Ron]: </Harrypedia/people/Weasley/Ronald Bilius>
+[Hermione]: </Harrypedia/people/Granger/Hermione Jean>
 
 We see very little of [Ginny] in most of the series, too little really.
 However, we see enough to further substantiate the theme that love is only
@@ -103,6 +103,6 @@ handle being unable to handle your emotions is to dive into a different
 relationship? (Interestingly, both [Ron] and [Hermione] kinda sorta try
 this in book six, it does not go well).
 
-[Ginny]: </Harrypedia/people/Weasley/Ginevra Molly/>/
+[Ginny]: </Harrypedia/people/Weasley/Ginevra Molly>
 
 [^221206-6]: citation needed.
