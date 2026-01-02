@@ -1,5 +1,9 @@
 /* Navigation Tree Visibility Rules */
 
+.spectrum-TreeView iconify-icon {
+  font-size: inherit;
+}
+
 /* Hide items that shouldn't be visible in current context */
 .spectrum-TreeView-item.nav-hidden {
   display: none;
