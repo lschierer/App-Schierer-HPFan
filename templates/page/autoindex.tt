@@ -1,0 +1,5 @@
+[% IF entries.size > 0 %]
+  [% INCLUDE 'partials/directory-list.tt' %]
+[% ELSE %]
+  <!-- No files present -->
+[% END %]

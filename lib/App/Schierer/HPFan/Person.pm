@@ -225,14 +225,14 @@ sub generate_timeline {
     eval {
         my $events = $self->gramps->find_events_for_person($person);
 
-        if (@$events) {
-            my $timeline = App::Schierer::HPFan::View::Timeline->new(
-                name   => $self->display_name_for_person($person),
-                events => $events,
-            );
+        #if (@$events) {
+        #    my $timeline = App::Schierer::HPFan::View::Timeline->new(
+        #        name   => $self->display_name_for_person($person),
+        #        events => $events,
+        #    );
 
-            return $timeline->render();
-        }
+        #    return $timeline->render();
+        #}
     };
 
     if ($@) {

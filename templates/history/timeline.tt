@@ -1,45 +1,45 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>[% title %]</title>
-    <meta charset="utf-8">
-    <style>
-        .timeline-container { margin: 20px; }
-        .footnotes { margin-top: 40px; }
-        .footnote { margin-bottom: 10px; }
-    </style>
-</head>
-<body>
-    <h1>[% title %]</h1>
-    
-    <div class="timeline-container">
-        <p>Note that the tool creating this timeline fills in unknown fields in dates. 
-           Dates that have had fields filled in are marked as '(Estimated)'.</p>
-        
-        [% IF timeline && timeline.size && timeline.size > 0 %]
-            [% svg %]
-            
-            [% IF footnotes && footnotes.keys && footnotes.keys.size > 0 %]
-                <div class="footnotes">
-                    <h2>Footnotes</h2>
-                    [% FOREACH key IN footnotes.keys.sort %]
-                        <div class="footnote">
-                            <strong>[% key %].</strong>
-                            [% FOREACH line IN footnotes.$key %]
-                                [% IF line.defined && line.length > 0 %]
-                                    [% line %]
-                                [% ELSE %]
-                                    Citation Needed.
-                                [% END %]
-                            [% END %]
-                            <a href="#return-[% key %]">Return to Timeline</a>
-                        </div>
-                    [% END %]
-                </div>
-            [% END %]
-        [% ELSE %]
-            <p>No timeline events available.</p>
-        [% END %]
+<div class="banner spectrum-AlertBanner is-open spectrum-AlertBanner--info">
+  <div class="spectrum-AlertBanner-body">
+    <iconify-icon icon="octicon:info-16"></iconify-icon>
+    <div class="spectrum-AlertBanner-content">
+      <p class="spectrum-AlertBanner-text">
+        Note that the tool creating this timeline fills in unknown fields
+        in dates. Dates that have had fields filled in are marked as '(Estimated)'.
+      </p>
     </div>
-</body>
-</html>
+  </div>
+</div>
+
+<section class="timeline">
+  [% IF timeline.size > 0 %]
+    <div class="timeline-card">
+      [% svg %]
+    </div>
+    <div class="footnotes">
+      <ol>
+      [% FOREACH key IN footnotes.keys.sort %]
+        <li id="footnotes-[% key %]">
+          [% FOREACH line IN footnotes.$key %]
+            [% IF line AND line.length %]
+              [% line %]
+            [% ELSE %]
+              <!-- No citation -->
+              Citation Needed.
+            [% END %]
+          [% END %]
+          <a
+            href="#return-[% key %]"
+            class="spectrum-Link spectrum-Link--quiet spectrum-Link--primary" >
+            <span class="spectrum-Body spectrum-Body--sizeS">
+              Return to Timeline
+              <iconify-icon icon="icon-park-outline:return" class="return" width="none"></iconify-icon>
+            </span>
+          </a>
+        </li>
+      [% END %]
+      </ol>
+    </div>
+  [% ELSE %]
+    <p>No events available to display.</p>
+  [% END %]
+</section>

@@ -1,19 +1,33 @@
 package App::Schierer::HPFan::History;
 
+use v5.42.0;
 use strict;
 use warnings;
 use Moo;
-use DBI;
-use Template;
 use Path::Tiny;
 use Encode qw(encode_utf8);
+use Log::Log4perl qw(get_logger);
 
-has dbh => (
-    is => 'lazy',
-);
+# Load the models and view
+use lib '../App-Schierer-HPFan/lib';
+require App::Schierer::HPFan::Model::History::YAML;
+require App::Schierer::HPFan::Model::History::Gramps;
+require App::Schierer::HPFan::View::Timeline;
+require App::Schierer::HPFan::Model::Gramps;
 
 has template => (
-    is => 'lazy',
+    is => 'ro',
+    required => 1,
+);
+
+has navigation => (
+    is => 'ro',
+    required => 1,
+);
+
+has gramps => (
+    is => 'ro',
+    required => 1,
 );
 
 has timeline_cache => (
@@ -22,114 +36,88 @@ has timeline_cache => (
     clearer => 'clear_timeline_cache',
 );
 
-sub _build_dbh {
-    my $self = shift;
-    my $dbh = DBI->connect(
-        "dbi:SQLite:dbname=share/grampsdb/sqlite.db",
-        "", "",
-        {
-            RaiseError => 1,
-            sqlite_unicode => 1,
-        }
-    );
-    return $dbh;
-}
-
-sub _build_template {
-    my $self = shift;
-    return Template->new({
-        INCLUDE_PATH => 'templates',
-        ENCODING => 'utf8',
-    });
-}
-
 sub build_timeline {
     my ($self) = @_;
-    
-    # Initialize cache if needed
-    $self->timeline_cache({ built => 0, events => [] }) unless $self->timeline_cache;
-    
-    return $self->timeline_cache->{events} if $self->timeline_cache->{built};
-    
-    # Get events from database (simplified version)
-    my $sth = $self->dbh->prepare(
-        "SELECT e.gramps_id, e.description, e.json_data
-         FROM event e 
-         WHERE e.description IS NOT NULL 
-         ORDER BY e.gramps_id"
-    );
-    $sth->execute();
-    
-    my @events;
-    while (my $row = $sth->fetchrow_hashref) {
-        push @events, {
-            id => $row->{gramps_id},
-            type => 'Event',
-            date => 'Unknown',
-            description => $row->{description} || '',
-        };
+
+    my $logger = get_logger(__PACKAGE__);
+
+    # Return cached if already built
+    if ($self->timeline_cache->{built}) {
+        $logger->debug('Returning cached timeline');
+        return $self->timeline_cache->{events};
     }
-    
-    $self->timeline_cache->{events} = \@events;
+
+    my @all_events;
+
+    # Get events from YAML files
+    $logger->info('Building History timeline from YAML');
+    my $yaml_events = App::Schierer::HPFan::Model::History::YAML->new(
+        SourceDir => path('share/history')
+    );
+    $yaml_events->process();
+    my $ye = $yaml_events->events;
+    $logger->info(sprintf('Received %s events from YAML', scalar @$ye));
+    push @all_events, @$ye;
+
+    # Get events from Gramps database
+    $logger->info('Building History timeline from Gramps');
+    my $gramps_events = App::Schierer::HPFan::Model::History::Gramps->new(
+        gramps => $self->gramps
+    );
+    $gramps_events->process();
+    my $ge = $gramps_events->events;
+    $logger->info(sprintf('Received %s events from Gramps', scalar @$ge));
+    push @all_events, @$ge;
+
+    # Cache the results
+    $self->timeline_cache->{events} = \@all_events;
     $self->timeline_cache->{built} = 1;
-    
-    # Return a copy to avoid reference issues
-    return [@events];
+
+    $logger->info(sprintf('History timeline built: %d items', scalar @all_events));
+
+    return \@all_events;
 }
 
 sub timeline_handler {
     my ($self) = @_;
-    
-    # Always rebuild for now to avoid cache issues
-    $self->clear_timeline_cache;
-    my $timeline = $self->build_timeline;
-    
-    # Create simple SVG timeline (basic implementation)
-    my $svg = $self->create_timeline_svg($timeline);
-    my $footnotes = {};
-    
-    # Prepare template variables
-    my $vars = {
-        svg => $svg,
-        timeline => $timeline || [],
-        footnotes => $footnotes || {},
-        title => 'Timeline of Relevant Events',
-    };
-    
-    # Process template
-    my $output = '';
-    $self->template->process('history/timeline.tt', $vars, \$output)
-        or die $self->template->error();
-    
-    return $output;
-}
 
-sub create_timeline_svg {
-    my ($self, $events) = @_;
-    
-    # Handle undefined or empty events
-    $events = [] unless defined $events;
-    return '<p>No events to display</p>' unless @$events;
-    
-    # Simple SVG timeline - basic implementation
-    my $height = 50 + (scalar @$events * 30);
-    my $width = 800;
-    
-    my $svg = qq{<svg width="$width" height="$height" xmlns="http://www.w3.org/2000/svg">};
-    $svg .= qq{<line x1="50" y1="30" x2="50" y2="} . ($height - 20) . qq{" stroke="black" stroke-width="2"/>};
-    
-    my $y = 50;
-    for my $event (@$events) {
-        $svg .= qq{<circle cx="50" cy="$y" r="5" fill="blue"/>};
-        $svg .= qq{<text x="70" y="} . ($y + 5) . qq{" font-family="Arial" font-size="12">};
-        $svg .= qq{$event->{id}: $event->{description}};
-        $svg .= qq{</text>};
-        $y += 30;
-    }
-    
-    $svg .= qq{</svg>};
-    
-    return $svg;
+    my $logger = get_logger(__PACKAGE__);
+
+    # Build timeline
+    my $timeline = $self->build_timeline;
+    $logger->debug(sprintf('timeline_handler retrieved %s events', scalar @$timeline));
+
+    # Create Timeline view
+    my $timeline_view = App::Schierer::HPFan::View::Timeline->new(
+        events => $timeline
+    );
+    my $svg = $timeline_view->create();
+    my $footnotes = $timeline_view->footnotes;
+
+    # Render navigation
+    my $navigation_html = $self->navigation->render('/Harrypedia/History');
+
+    # Prepare template variables
+    my $current_year = (localtime)[5] + 1900;
+    my $vars = {
+        svg          => $svg,
+        timeline     => $timeline,
+        footnotes    => $footnotes,
+        title        => 'Timeline of Relevant Events',
+        current_year => $current_year,
+        css_files    => ['/css/navigation.css', '/css/timeline.css'],
+        sidebar      => 1,
+        navigation   => $navigation_html,
+    };
+
+    # Render with layout
+    my $html = $self->template->render(
+        'history/timeline.tt',
+        $vars,
+        { layout => 'layouts/default.tt' }
+    );
+
+    return $html;
 }
 
 1;

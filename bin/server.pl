@@ -12,6 +12,7 @@ use PAGI::WebServer::Template;
 require App::Schierer::HPFan::Person;
 require App::Schierer::HPFan::Family;
 require App::Schierer::HPFan::History;
+require App::Schierer::HPFan::ClassLists;
 use PAGI::Server;
 use Future::AsyncAwait;
 use Path::Tiny;
@@ -39,7 +40,16 @@ my $person_handler = App::Schierer::HPFan::Person->new(
     navigation => $nav,
     gramps => $family_handler->gramps,  # Share gramps instance
 );
-my $history_handler = App::Schierer::HPFan::History->new;
+my $history_handler = App::Schierer::HPFan::History->new(
+    template   => $template,
+    navigation => $nav,
+    gramps     => $family_handler->gramps,  # Share gramps instance
+);
+
+# Create class lists handler
+my $classlists_handler = App::Schierer::HPFan::ClassLists->new(
+    gramps => $family_handler->gramps,  # Share gramps instance
+);
 
 # Register base navigation routes
 sub register_markdown_routes {
@@ -56,14 +66,24 @@ sub register_markdown_routes {
             $route =~ s/\.md$//;
             $route =~ s|/index$||;  # Remove /index for index files
 
-            # Generate title from filename
-            my $title = $path->basename;
-            $title =~ s/\.md$//;
-            $title =~ s/[-_]/ /g;
-            $title =~ s/\b(\w)/\U$1/g;  # Capitalize words
+            # Parse frontmatter to get title and order
+            my $content = $path->slurp_utf8;
+            my ($frontmatter, $markdown_content) = $markdown->parse_frontmatter($content);
 
-            # Add route to navigation with lower priority
-            $nav->add_route($route, $title, { order => 50 });
+            # Use title from frontmatter, or generate from filename
+            my $title = $frontmatter->{title};
+            if (!$title) {
+                $title = $path->basename;
+                $title =~ s/\.md$//;
+                $title =~ s/[-_]/ /g;
+                $title =~ s/\b(\w)/\U$1/g;  # Capitalize words
+            }
+
+            # Get order from frontmatter (sidebar.order), or use default
+            my $order = $frontmatter->{sidebar}{order} // 50;
+
+            # Add route to navigation
+            $nav->add_route($route, $title, { order => $order });
         },
         { recurse => 1 }
     );
@@ -261,7 +281,83 @@ $router->get('/Harrypedia/people/*' => async sub {
         }
     }
 
-    # Person/Family not found
+    # Person/Family not found - check for markdown fallback
+    my $path_for_md = $path;
+    $path_for_md =~ s|^/||;  # Remove leading slash
+
+    # Try exact path first
+    my $md_file = $pages_dir->child("$path_for_md.md");
+
+    # If not found, try as directory with index.md
+    if (!$md_file->exists) {
+        $md_file = $pages_dir->child($path_for_md, 'index.md');
+    }
+
+    if ($md_file->exists) {
+        my ($frontmatter, $content_html) = $markdown->render_with_frontmatter($md_file->stringify);
+
+        # Use title from frontmatter or generate from path
+        my $title = $frontmatter->{title};
+        if (!$title) {
+            $title = $path_for_md;
+            $title =~ s|/| - |g;
+            $title =~ s/[-_]/ /g;
+            $title =~ s/\b(\w)/\U$1/g;
+        }
+
+        # Check if autoindex is requested
+        if ($frontmatter->{autoindex}) {
+            use PAGI::WebServer::AutoIndex;
+            my $autoindex = PAGI::WebServer::AutoIndex->new(
+                pages_dir => $pages_dir,
+                markdown  => $markdown,
+            );
+            my $entries = $autoindex->generate_directory_index($md_file->parent);
+            if ($entries && @$entries) {
+                my $autoindex_html = $template->render('partials/directory-list.tt', { entries => $entries });
+                $content_html .= "\n<hr class=\"spectrum-Divider spectrum-Divider--sizeM\">\n" . $autoindex_html;
+            }
+        }
+
+        # Post-process class list tables if present
+        if ($content_html =~ /<classlisttable/i) {
+            $content_html = $classlists_handler->render_classlist_tables($content_html);
+        }
+
+        my $current_year = (localtime)[5] + 1900;
+        my $navigation_html = $nav->render($path);
+
+        my $vars = {
+            content        => $content_html,
+            title          => $title,
+            current_year   => $current_year,
+            css_files      => ['/css/navigation.css', '/css/directory-list.css'],
+            sidebar        => 1,
+            navigation     => $navigation_html,
+        };
+
+        my $html = $template->render(
+            'page/markdown.tt',
+            $vars,
+            { layout => 'layouts/default.tt' }
+        );
+
+        my $bytes = encode_utf8($html);
+
+        await $send->({
+            type    => 'http.response.start',
+            status  => 200,
+            headers => [['content-type', 'text/html; charset=utf-8']],
+        });
+        await $send->({
+            type => 'http.response.body',
+            body => $bytes,
+            more => 0,
+        });
+        return;
+    }
+
+    # No markdown file either - return 404
     await $send->({
         type => 'http.response.start',
         status => 404,
@@ -332,13 +428,35 @@ $router->get(
     }
 
     if ($md_file->exists) {
-      my $content_html = $markdown->render($md_file->stringify);
+      my ($frontmatter, $content_html) = $markdown->render_with_frontmatter($md_file->stringify);
 
-      # Generate title from path
-      my $title = $path;
-      $title =~ s|/| - |g;
-      $title =~ s/[-_]/ /g;
-      $title =~ s/\b(\w)/\U$1/g;
+      # Use title from frontmatter or generate from path
+      my $title = $frontmatter->{title};
+      if (!$title) {
+        $title = $path;
+        $title =~ s|/| - |g;
+        $title =~ s/[-_]/ /g;
+        $title =~ s/\b(\w)/\U$1/g;
+      }
+
+      # Check if autoindex is requested
+      if ($frontmatter->{autoindex}) {
+        use PAGI::WebServer::AutoIndex;
+        my $autoindex = PAGI::WebServer::AutoIndex->new(
+          pages_dir => $pages_dir,
+          markdown  => $markdown,
+        );
+        my $entries = $autoindex->generate_directory_index($md_file->parent);
+        if ($entries && @$entries) {
+          my $autoindex_html = $template->render('partials/directory-list.tt', { entries => $entries });
+          $content_html .= "\n<hr class=\"spectrum-Divider spectrum-Divider--sizeM\">\n" . $autoindex_html;
+        }
+      }
+
+      # Post-process class list tables if present
+      if ($content_html =~ /<classlisttable/i) {
+        $content_html = $classlists_handler->render_classlist_tables($content_html);
+      }
 
       # Get current year for footer
       my $current_year = (localtime)[5] + 1900;
@@ -351,7 +469,7 @@ $router->get(
         content        => $content_html,
         title          => $title,
         current_year   => $current_year,
-        css_files      => ['/css/navigation.css'],
+        css_files      => ['/css/navigation.css', '/css/directory-list.css'],
         sidebar        => 1,
         navigation     => $navigation_html,
       };
@@ -377,6 +495,54 @@ $router->get(
       });
     }
     else {
+      # Check if this is a gap directory (no index.md but has children)
+      my $dir_path = $pages_dir->child($path);
+      if ($dir_path->is_dir && $dir_path->children) {
+        use PAGI::WebServer::AutoIndex;
+        my $autoindex = PAGI::WebServer::AutoIndex->new(
+          pages_dir => $pages_dir,
+          markdown  => $markdown,
+        );
+        my $entries = $autoindex->generate_directory_index($dir_path);
+
+        # Generate title from path
+        my $title = $path;
+        $title =~ s|/| - |g;
+        $title =~ s/[-_]/ /g;
+        $title =~ s/\b(\w)/\U$1/g;
+
+        my $current_year = (localtime)[5] + 1900;
+        my $navigation_html = $nav->render($path);
+
+        my $vars = {
+          entries        => $entries,
+          title          => $title,
+          current_year   => $current_year,
+          css_files      => ['/css/navigation.css', '/css/directory-list.css'],
+          sidebar        => 1,
+          navigation     => $navigation_html,
+        };
+
+        my $html = $template->render(
+          'page/autoindex.tt',
+          $vars,
+          { layout => 'layouts/default.tt' }
+        );
+
+        my $bytes = encode_utf8($html);
+
+        await $send->({
+          type    => 'http.response.start',
+          status  => 200,
+          headers => [['content-type', 'text/html; charset=utf-8']],
+        });
+        await $send->({
+          type => 'http.response.body',
+          body => $bytes,
+          more => 0,
+        });
+        return;
+      }
       await $send->({
         type    => 'http.response.start',
         status  => 404,

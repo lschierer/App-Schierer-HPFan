@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "spectrum-design-data": {
+      "command": "npx",
+      "args": ["@adobe/spectrum-design-data-mcp"]
+    }
+  }
+}
