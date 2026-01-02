@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>[% title %]</title>
+    <meta charset="utf-8">
+    <style>
+        .timeline-container { margin: 20px; }
+        .footnotes { margin-top: 40px; }
+        .footnote { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h1>[% title %]</h1>
+    
+    <div class="timeline-container">
+        <p>Note that the tool creating this timeline fills in unknown fields in dates. 
+           Dates that have had fields filled in are marked as '(Estimated)'.</p>
+        
+        [% IF timeline && timeline.size && timeline.size > 0 %]
+            [% svg %]
+            
+            [% IF footnotes && footnotes.keys && footnotes.keys.size > 0 %]
+                <div class="footnotes">
+                    <h2>Footnotes</h2>
+                    [% FOREACH key IN footnotes.keys.sort %]
+                        <div class="footnote">
+                            <strong>[% key %].</strong>
+                            [% FOREACH line IN footnotes.$key %]
+                                [% IF line.defined && line.length > 0 %]
+                                    [% line %]
+                                [% ELSE %]
+                                    Citation Needed.
+                                [% END %]
+                            [% END %]
+                            <a href="#return-[% key %]">Return to Timeline</a>
+                        </div>
+                    [% END %]
+                </div>
+            [% END %]
+        [% ELSE %]
+            <p>No timeline events available.</p>
+        [% END %]
+    </div>
+</body>
+</html>

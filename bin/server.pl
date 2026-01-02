@@ -10,6 +10,7 @@ use PAGI::WebServer::Markdown;
 use PAGI::WebServer::Navigation;
 require App::Schierer::HPFan::Person;
 require App::Schierer::HPFan::Family;
+require App::Schierer::HPFan::History;
 use PAGI::Server;
 use Future::AsyncAwait;
 use Path::Tiny;
@@ -18,15 +19,21 @@ use IO::Async::Loop;
 my $framework = PAGI::WebServer->new(config_file => 'config.yml');
 
 $framework->setup_logging;
-
-my $markdown = PAGI::WebServer::Markdown->new;
-my $pages_dir = path('share/pages');
-
 # Create navigation
 my $nav = PAGI::WebServer::Navigation->new;
 
+my $markdown = PAGI::WebServer::Markdown->new;
+
 # Create family handler (initialize gramps once)
 my $family_handler = App::Schierer::HPFan::Family->new(navigation => $nav);
+
+# Create person handler with navigation (shares gramps with family handler)
+my $person_handler = App::Schierer::HPFan::Person->new(
+    navigation => $nav,
+    gramps => $family_handler->gramps,  # Share gramps instance
+);
+my $history_handler = App::Schierer::HPFan::History->new;
+my $pages_dir = path('share/pages');
 
 # Register base navigation routes
 $nav->add_route('/Harrypedia', 'Harrypedia', { order => 1 });
@@ -47,11 +54,7 @@ for my $surname (@$surnames) {
     $nav->add_route($route_path, "$surname Family", { order => 100 });
 }
 
-# Create person handler with navigation (shares gramps with family handler)
-my $person_handler = App::Schierer::HPFan::Person->new(
-    navigation => $nav,
-    gramps => $family_handler->gramps,  # Share gramps instance
-);
+
 
 # Create router
 my $router = PAGI::WebServer::Router->new;
@@ -300,6 +303,25 @@ $router->get(
 );
 
 # Create event loop and server
+# Add History timeline route
+$router->get('/Harrypedia/History' => async sub {
+    my ($scope, $receive, $send) = @_;
+
+    my $html = $history_handler->timeline_handler;
+    my $bytes = encode_utf8($html);
+
+    await $send->({
+        type => 'http.response.start',
+        status => 200,
+        headers => [['content-type', 'text/html; charset=utf-8']],
+    });
+    await $send->({
+        type => 'http.response.body',
+        body => $bytes,
+        more => 0,
+    });
+});
+
 my $loop = IO::Async::Loop->new;
 
 my $server = PAGI::Server->new(
