@@ -165,7 +165,8 @@ sub prepare_family_as_parent {
 
   my $spouse_obj = $self->gramps->find_spouse($person, $family);
 
-  my $spouse = $spouse_obj
+  my $spouse =
+    $spouse_obj
     ? {
     display_name => $self->display_name_for_person($spouse_obj),
     link         => $self->link_for_person($spouse_obj),
@@ -206,14 +207,16 @@ sub prepare_family_as_child {
   my $father_obj = $self->gramps->find_person_by_handle($family->father_handle);
   my $mother_obj = $self->gramps->find_person_by_handle($family->mother_handle);
 
-  my $father = $father_obj
+  my $father =
+    $father_obj
     ? {
     display_name => $self->display_name_for_person($father_obj),
     link         => $self->link_for_person($father_obj),
     }
     : undef;
 
-  my $mother = $mother_obj
+  my $mother =
+    $mother_obj
     ? {
     display_name => $self->display_name_for_person($mother_obj),
     link         => $self->link_for_person($mother_obj),

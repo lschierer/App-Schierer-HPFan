@@ -4,6 +4,7 @@ use v5.42.0;
 use strict;
 use warnings;
 use Moo;
+with 'App::Schierer::HPFan::Role::GrampsMoo';
 use Future::AsyncAwait;
 use Path::Tiny;
 use Encode        qw(encode_utf8);
@@ -22,11 +23,6 @@ has template => (
 );
 
 has navigation => (
-  is       => 'ro',
-  required => 1,
-);
-
-has gramps => (
   is       => 'ro',
   required => 1,
 );

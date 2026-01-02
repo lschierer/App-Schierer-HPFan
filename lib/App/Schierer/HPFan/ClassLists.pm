@@ -4,14 +4,10 @@ use v5.42.0;
 use strict;
 use warnings;
 use Moo;
+with 'App::Schierer::HPFan::Role::GrampsMoo';
 use Mojo::DOM;
 use Mojo::Util    qw(xml_escape);
 use Log::Log4perl qw(get_logger);
-
-has gramps => (
-  is       => 'ro',
-  required => 1,
-);
 
 has class_lists => (is => 'lazy',);
 
@@ -63,63 +59,6 @@ sub _build_class_lists {
   }
 
   return \%ClassLists;
-}
-
-sub person_house {
-  my ($self, $person) = @_;
-
-  my %by_handle = %{ $self->gramps->tags };
-
-  for my $th (@{ $person->tag_list // [] }) {
-    my $tag  = $by_handle{$th} or next;
-    my $name = $tag->name // '';
-    $name =~ s/^\s+|\s+$//g;
-
-    # exact house names
-    return $name
-      if $name =~ /^(?:Gryffindor|Hufflepuff|Ravenclaw|Slytherin)$/;
-
-    # "House: Gryffindor" etc.
-    if ($name =~ /^House:\s*(Gryffindor|Hufflepuff|Ravenclaw|Slytherin)\b/i) {
-      return ucfirst lc $1;
-    }
-  }
-
-  return 'Unknown House';
-}
-
-sub person_blood_status {
-  my ($self, $person) = @_;
-
-  my %by_handle = %{ $self->gramps->tags };
-
-  for my $th (@{ $person->tag_list // [] }) {
-    my $tag  = $by_handle{$th} or next;
-    my $name = $tag->name // '';
-    $name =~ s/^\s+|\s+$//g;
-
-    return $name
-      if $name =~ /^(?:pure-blood|half-blood|1st gen magical|hag|non-magical)$/;
-  }
-
-  return 'Unknown Status';
-}
-
-sub person_economic_status {
-  my ($self, $person) = @_;
-
-  my %by_handle = %{ $self->gramps->tags };
-
-  for my $th (@{ $person->tag_list // [] }) {
-    my $tag  = $by_handle{$th} or next;
-    my $name = $tag->name // '';
-    $name =~ s/^\s+|\s+$//g;
-
-    return $name
-      if $name =~ /^(?:Lower Class|Upper Class|Middle Class)$/;
-  }
-
-  return 'Unknown';
 }
 
 sub render_classlist_tables {
