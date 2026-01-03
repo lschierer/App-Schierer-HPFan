@@ -4,7 +4,7 @@ use v5.42.0;
 use strict;
 use warnings;
 use Moo;
-with 'App::Schierer::HPFan::Role::GrampsMoo';
+with 'App::Schierer::HPFan::Role::Gramps';
 use Mojo::DOM;
 use Mojo::Util    qw(xml_escape);
 use Log::Log4perl qw(get_logger);

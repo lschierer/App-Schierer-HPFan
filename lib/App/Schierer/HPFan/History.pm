@@ -4,7 +4,7 @@ use v5.42.0;
 use strict;
 use warnings;
 use Moo;
-with 'App::Schierer::HPFan::Role::GrampsMoo';
+with 'App::Schierer::HPFan::Role::Gramps';
 use Future::AsyncAwait;
 use Path::Tiny;
 use Encode        qw(encode_utf8);
