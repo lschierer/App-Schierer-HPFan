@@ -11,7 +11,7 @@
 
 /* Hide collapsed child groups */
 .spectrum-TreeView.nav-collapsed {
-  display: none;
+  display: none !important;
 }
 
 ul.spectrum-TreeView {
