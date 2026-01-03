@@ -192,6 +192,54 @@ $router->get(
   }
 );
 
+# Add route for JS files
+$router->get(
+  '/js/*' => async sub {
+    my ($scope, $receive, $send) = @_;
+
+    my $path = $scope->{path};
+    my ($filename) = $path =~ m{^/js/(.+)$};
+
+    if ($filename) {
+      my $js_file = path('public/js')->child($filename);
+
+      if ($js_file->exists && $js_file->is_file) {
+        my $content = $js_file->slurp_utf8;
+        my $bytes   = encode_utf8($content);
+
+        # Determine content type based on file extension
+        my $content_type = $filename =~ /\.js$/ ? 'application/javascript; charset=utf-8' 
+                         : $filename =~ /\.map$/ ? 'application/json; charset=utf-8'
+                         : 'text/plain; charset=utf-8';
+
+        await $send->({
+          type    => 'http.response.start',
+          status  => 200,
+          headers => [['content-type', $content_type]],
+        });
+        await $send->({
+          type => 'http.response.body',
+          body => $bytes,
+          more => 0,
+        });
+        return;
+      }
+    }
+
+    # JS file not found
+    await $send->({
+      type    => 'http.response.start',
+      status  => 404,
+      headers => [['content-type', 'text/plain']],
+    });
+    await $send->({
+      type => 'http.response.body',
+      body => 'JS Not Found',
+      more => 0,
+    });
+  }
+);
+
 # Add dynamic route for markdown files
 $router->get(
   '*' => async sub {
