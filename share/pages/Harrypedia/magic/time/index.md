@@ -2,8 +2,6 @@
 collection: Harrypedia
 title: Time
 author: Luke Schierer
-sidebar:
-  order: 1
 ---
 
 Time travel is fascinating, complex, and confusing. It is perhaps not

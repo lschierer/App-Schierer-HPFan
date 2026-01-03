@@ -1,6 +1,8 @@
 ---
 title: People
 author: Luke Schierer
+sidebar:
+  order: 1
 ---
 I initially started keeping my notes on people and relationships in Harry
 Potter in [Gramps] however, this required a jumping through a lot of hoops to

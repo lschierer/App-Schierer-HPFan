@@ -2,8 +2,6 @@
 collection: Harrypedia
 title: The Mind Arts
 author: Luke Schierer
-sidebar:
-  order: 1
 ---
 
 For lack of a better word, I am going to call [Occlumency][] and [Legilimency][]

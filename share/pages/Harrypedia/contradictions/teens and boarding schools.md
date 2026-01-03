@@ -12,8 +12,8 @@ This age bias in the movies stands out most clearly in the depictions of the [Qu
 
 <div class="img-compare">
 
-![Oliver-Wood-Keeping](/assets/OliverWoodKeeping.png)
-![Ron Weasley Keeping](/assets/RonWeasleyKeeping.png)
+![Oliver-Wood-Keeping](/images/OliverWoodKeeping.png)
+![Ron Weasley Keeping](/images/RonWeasleyKeeping.png)
 
 </div>
 

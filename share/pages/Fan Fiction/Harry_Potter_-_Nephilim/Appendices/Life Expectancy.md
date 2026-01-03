@@ -80,7 +80,7 @@ remain in the magical world. This is something to keep in mind when the books de
 so many characters as appearing old. People _did_ age faster in earlier centuries,
 due to hardship, poor diet, disease, and a variety of other causes. While the magical
 world may have eliminated much of the mundane disease, the impression is that the
-other problems remain prevelant.
+other problems remain prevalent.
 
 This gives our central characters life expectancies as follows:
 

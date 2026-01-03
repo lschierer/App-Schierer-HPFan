@@ -3,7 +3,7 @@ collection: Harrypedia
 title: Magic in the Harry Potter Universe
 author: Luke Schierer
 sidebar:
-  order: 1
+  order: 6
 ---
 
 ### World-building

@@ -3,7 +3,7 @@ collection: Harrypedia
 title: Non-Human Spirituous Apparitions
 author: Luke Schierer
 sidebar:
-  order: 1
+  order: 3
 ---
 
 Various fans trying to make sense of the various bits of information provided by

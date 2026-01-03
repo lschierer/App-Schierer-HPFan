@@ -1,8 +1,6 @@
 ---
 collection: Harrypedia
 title: Dark Magic
-sidebar:
-  order: 1
 ---
 
 ### Definition

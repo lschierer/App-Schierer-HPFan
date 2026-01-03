@@ -1,8 +1,7 @@
 ---
 collection: Harrypedia
 title: Contradictions in Cannon
-sidebar:
-  order: 1
+
 ---
 
 As stated in my [Introduction][] to this reference, I have found it necessary
