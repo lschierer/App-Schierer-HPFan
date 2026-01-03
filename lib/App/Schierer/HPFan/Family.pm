@@ -31,6 +31,11 @@ has navigation => (
   predicate => 'has_navigation',
 );
 
+has site_logo => (
+  is      => 'ro',
+  default => '',
+);
+
 async sub register_routes ($self, $nav, $router) {
   # Add special "Unknown" surname route
   $nav->add_route(
@@ -52,10 +57,23 @@ async sub register_routes ($self, $nav, $router) {
       next unless $primary_name;
 
       my $given = $primary_name->first_name // '';
-      next unless $given;
 
-      my $person_route = "/Harrypedia/people/$surname/$given";
-      $nav->add_route($person_route, $given, { order => 110 });
+      # For people with unknown given names, use gramps_id in URL
+      my $identifier;
+      my $display_name;
+      if ($given) {
+        $identifier = $given;
+        $display_name = $given;
+      }
+      else {
+        # No given name - use gramps_id in URL for disambiguation
+        # but show human-friendly name like "Unknown (I0209)"
+        $identifier = $person->gramps_id;
+        $display_name = $identifier ? "Unknown ($identifier)" : 'Unknown';
+      }
+
+      my $person_route = "/Harrypedia/people/$surname/$identifier";
+      $nav->add_route($person_route, $display_name, { order => 110 });
     }
   }
 
@@ -302,6 +320,7 @@ async sub render_family_page {
     css_files    => ['/css/gramps.css', '/css/navigation.css'],
     sidebar      => 1,
     navigation   => $navigation_html,
+    site_logo    => $self->site_logo,
   };
 
   # Render template with layout

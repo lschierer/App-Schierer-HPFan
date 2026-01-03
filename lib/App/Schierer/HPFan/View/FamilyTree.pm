@@ -144,14 +144,33 @@ sub _add_person_node {
     my $given       = $primary_name->first_name // '';
     my $surname_obj = $primary_name->primary_surname;
     my $surname     = $surname_obj ? $surname_obj->surname : '';
-    $display_name = join(' ', grep {$_} ($given, $surname)) || 'Unknown';
+
+    # Build display name - use "Unknown (ID)" format when surname but no given name
+    if ($surname && !$given) {
+      my $gramps_id = $person->gramps_id // '';
+      my $unknown_with_id = $gramps_id ? "Unknown ($gramps_id)" : "Unknown";
+      $display_name = "$unknown_with_id $surname";
+    }
+    else {
+      $display_name = join(' ', grep {$_} ($given, $surname)) || 'Unknown';
+    }
 
     # Build URL to person's detail page
-    if ($surname && $given) {
+    if ($surname) {
       use URI::Escape qw(uri_escape_utf8);
       my $surname_enc = uri_escape_utf8($surname);
-      my $given_enc   = uri_escape_utf8($given);
-      $url = "/Harrypedia/people/$surname_enc/$given_enc";
+
+      if ($given) {
+        my $given_enc = uri_escape_utf8($given);
+        $url = "/Harrypedia/people/$surname_enc/$given_enc";
+      }
+      else {
+        # No given name - use gramps_id in URL
+        my $gramps_id = $person->gramps_id // '';
+        if ($gramps_id) {
+          $url = "/Harrypedia/people/$surname_enc/$gramps_id";
+        }
+      }
     }
   }
 

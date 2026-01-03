@@ -38,6 +38,21 @@ has family_handler => (
   required => 1,
 );
 
+has pages_dir => (
+  is      => 'ro',
+  default => sub { path('share/pages') },
+);
+
+has markdown => (
+  is       => 'ro',
+  required => 1,
+);
+
+has site_logo => (
+  is      => 'ro',
+  default => '',
+);
+
 async sub register_routes ($self, $nav, $router) {
   # Register person routes (higher priority than markdown)
   $router->get(
@@ -50,44 +65,79 @@ async sub register_routes ($self, $nav, $router) {
 
 async sub handle_person_route ($self, $scope, $receive, $send) {
   my $path = $scope->{path};
-  my ($surname, $given_name) = $path =~ m{^/Harrypedia/people/([^/]+)/(.+)$};
+  my ($surname, $identifier) = $path =~ m{^/Harrypedia/people/([^/]+)/(.+)$};
 
-  if ($surname && $given_name) {
+  if ($surname && $identifier) {
     # URL decode the names
     $surname    =~ s/%([0-9A-Fa-f]{2})/chr(hex($1))/eg;
-    $given_name =~ s/%([0-9A-Fa-f]{2})/chr(hex($1))/eg;
+    $identifier =~ s/%([0-9A-Fa-f]{2})/chr(hex($1))/eg;
 
-    eval {
-      my $html = $self->render_person_page($surname, $given_name, '', $path);
-      if ($html) {
-        my $bytes = encode_utf8($html);
+    # Determine if identifier is a gramps_id or a given name
+    my $person;
+    my $given_name;
+    if ($identifier =~ /^I\d+$/) {
+      # Looks like a gramps_id (e.g., I0209)
+      $person = $self->gramps->find_person_by_id($identifier);
+      # Extract given name from person if found
+      if ($person && $person->primary_name) {
+        $given_name = $person->primary_name->first_name // $identifier;
+      }
+      else {
+        $given_name = $identifier;
+      }
+    }
+    else {
+      # Regular given name
+      $given_name = $identifier;
+      $person = $self->get_person_by_name($surname, $given_name);
+    }
+
+    if ($person) {
+      # Check for static markdown content for this person
+      my $static_content = '';
+      # Try both the identifier and given name for markdown file
+      for my $name_variant ($identifier, $given_name) {
+        my $person_md =
+          $self->pages_dir->child("Harrypedia", "people", $surname,
+          "$name_variant.md");
+        if ($person_md->exists) {
+          $static_content = $self->markdown->render($person_md->stringify);
+          last;
+        }
+      }
+
+      eval {
+        my $html = $self->render_person_page_from_object($person, $static_content, $path);
+        if ($html) {
+          my $bytes = encode_utf8($html);
+          await $send->({
+            type    => 'http.response.start',
+            status  => 200,
+            headers => [['content-type', 'text/html; charset=utf-8']],
+          });
+          await $send->({
+            type => 'http.response.body',
+            body => $bytes,
+            more => 0,
+          });
+          return;
+        }
+      };
+
+      if ($@) {
+        warn "Error rendering person page: $@";
         await $send->({
           type    => 'http.response.start',
-          status  => 200,
-          headers => [['content-type', 'text/html; charset=utf-8']],
+          status  => 500,
+          headers => [['content-type', 'text/plain']],
         });
         await $send->({
           type => 'http.response.body',
-          body => $bytes,
+          body => "Internal Server Error: $@",
           more => 0,
         });
         return;
       }
-    };
-
-    if ($@) {
-      warn "Error rendering person page: $@";
-      await $send->({
-        type    => 'http.response.start',
-        status  => 500,
-        headers => [['content-type', 'text/plain']],
-      });
-      await $send->({
-        type => 'http.response.body',
-        body => "Internal Server Error: $@",
-        more => 0,
-      });
-      return;
     }
   }
 
@@ -254,38 +304,10 @@ sub generate_family_tree {
   return $svg;
 }
 
-sub generate_timeline {
-  my ($self, $person) = @_;
+sub render_person_page_from_object {
+  my ($self, $person, $static_content, $current_path) = @_;
 
   my $logger = get_logger(__PACKAGE__);
-
-  eval {
-    my $events = $self->gramps->find_events_for_person($person);
-
-    #if (@$events) {
-    #    my $timeline = App::Schierer::HPFan::View::Timeline->new(
-    #        name   => $self->display_name_for_person($person),
-    #        events => $events,
-    #    );
-
-    #    return $timeline->render();
-    #}
-  };
-
-  if ($@) {
-    $self->logger->error("Error generating timeline: $@");
-  }
-
-  return '<p>No timeline available</p>';
-}
-
-sub render_person_page {
-  my ($self, $surname, $given_name, $static_content, $current_path) = @_;
-
-  my $logger = get_logger(__PACKAGE__);
-
-  my $person = $self->get_person_by_name($surname, $given_name);
-  return unless $person;
 
   # Get events
   my $events = $self->gramps->find_events_for_person($person);
@@ -311,7 +333,6 @@ sub render_person_page {
 
   # Generate family tree and timeline
   my $family_tree = $self->generate_family_tree($person);
-  my $chart       = $self->generate_timeline($person);
 
   # Get current year for footer
   my $current_year = (localtime)[5] + 1900;
@@ -333,7 +354,6 @@ sub render_person_page {
     families       => \@families,
     childof        => \@childof,
     family_tree    => $family_tree,
-    chart          => $chart,
     static_content => $static_content,
     # Layout variables
     title        => $display_name,
@@ -341,6 +361,7 @@ sub render_person_page {
     css_files    => ['/css/gramps.css', '/css/navigation.css'],
     sidebar      => 1,
     navigation   => $navigation_html,
+    site_logo    => $self->site_logo,
   };
 
   $self->logger->debug("Rendering template with "
@@ -354,6 +375,15 @@ sub render_person_page {
     { layout => 'layouts/default.tt' });
 
   return $html;
+}
+
+sub render_person_page {
+  my ($self, $surname, $given_name, $static_content, $current_path) = @_;
+
+  my $person = $self->get_person_by_name($surname, $given_name);
+  return unless $person;
+
+  return $self->render_person_page_from_object($person, $static_content, $current_path);
 }
 
 1;

@@ -1,0 +1,59 @@
+<article>
+  [% IF comments %]
+    [% comments %]
+  [% END %]
+
+  [% IF items.size > 0 %]
+    <dl class="bookmark-items">
+      [% FOREACH item IN items %]
+        <dt class="spectrum-Heading spectrum-Heading--sizeM">
+          [% IF item.title.link %]
+            <a class="spectrum-Link spectrum-Link--primary spectrum-Link--quiet" href="[% item.title.link %]">
+          [% END %]
+            <cite>
+              [% item.title.name %]
+            </cite>
+          [% IF item.title.link %]
+            </a>
+          [% END %]
+        </dt>
+        <dd>
+          <span class="spectrum-Detail spectrum-Detail--sizeM spectrum-Detail-strong">Author: </span>
+          [% IF item.author.link %]
+            <a class="spectrum-Link spectrum-Link--primary spectrum-Link--quiet" href="[% item.author.link %]">
+          [% END %]
+            <span class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeXS">
+              [% item.author.name %]
+            </span>
+          [% IF item.author.link %]
+            </a>
+          [% END %]
+        </dd>
+        <dd>
+          <span class="spectrum-Detail spectrum-Detail--sizeM spectrum-Detail-strong">Date(s): </span><br/>
+          <ul class="dateList">
+            [% FOREACH date_type IN ['series_start', 'published', 'updated', 'completed'] %]
+              [% IF item.dates.$date_type %]
+                [%
+                  printLabel = date_type.replace('_', ' ');
+                  words = printLabel.split(' ');
+                  printLabel = words.map('ucfirst').join(' ');
+                %]
+                <li class="spectrum-Detail spectrum-Detail--sizeM">
+                  <span class="spectrum-Detail-strong">[% printLabel %]:</span>
+                  <span class="spectrum-Detail--light">[% item.dates.$date_type || 'N/A' %]</span>
+                </li>
+              [% END %]
+            [% END %]
+          </ul>
+        </dd>
+        <dd>
+          <span class="spectrum-Detail spectrum-Detail--sizeM spectrum-Detail-strong">Comments: </span>
+          [% item.comments_html %]
+        </dd>
+      [% END %]
+    </dl>
+  [% ELSE %]
+    <!-- No Items Present -->
+  [% END %]
+</article>

@@ -19,6 +19,8 @@ build: install
     ./Build
     pnpm build:css
     pnpm build:ts
+    mkdir -p public/images/HPNOFP
+    find share/HPNOFP/src/OEBPS/ \( -name '*.jpg' -o -name '*.gif' \) -exec cp "{}" public/images/HPNOFP/ \;
 
 tidy:
     find lib -name '*.pm' -exec perltidy -b -pro=.perltidyrc {} \;
@@ -42,7 +44,7 @@ dev: build build-data
     perl bin/server.pl
 
 quickdev:
-    watchexec -w bin -w lib -w ../PAGI-WebServer/lib -w templates -w public/css -w public/js -r perl bin/server.pl
+    watchexec -w bin -w lib -w ../PAGI-WebServer/lib -w templates -w public/css -w public/js -w share/pages -w share/Bookmarks -w share/history -w share/HPNOFP -r ./bin/server.pl
 
 # Production server
 prod: build build-data

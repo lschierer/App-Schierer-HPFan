@@ -198,10 +198,22 @@ sub link_for_person ($self, $person) {
   return '' unless $primary_name;
 
   my $surname_obj = $primary_name->primary_surname;
-  my $surname     = $surname_obj ? uri_escape_utf8($surname_obj->surname) : '';
-  my $given       = uri_escape_utf8($primary_name->first_name // '');
+  my $surname     = $surname_obj ? $surname_obj->surname : '';
+  my $given       = $primary_name->first_name // '';
 
-  return "/Harrypedia/people/$surname/$given";
+  return '' unless $surname;  # Need at least a surname
+
+  my $surname_enc = uri_escape_utf8($surname);
+
+  if ($given) {
+    my $given_enc = uri_escape_utf8($given);
+    return "/Harrypedia/people/$surname_enc/$given_enc";
+  }
+  else {
+    # No given name - use gramps_id
+    my $gramps_id = $person->gramps_id // '';
+    return $gramps_id ? "/Harrypedia/people/$surname_enc/$gramps_id" : '';
+  }
 }
 
 sub display_name_for_person ($self, $person) {
@@ -214,6 +226,13 @@ sub display_name_for_person ($self, $person) {
   my $surname_obj = $primary_name->primary_surname;
   my $surname     = $surname_obj ? $surname_obj->surname : '';
 
+  # If we have surname but no given name, use "Unknown (ID)" format
+  if ($surname && !$given) {
+    my $gramps_id = $person->gramps_id // '';
+    my $unknown_with_id = $gramps_id ? "Unknown ($gramps_id)" : "Unknown";
+    return "$unknown_with_id $surname";
+  }
+
   my $name = join(' ', grep {$_} ($given, $surname));
   return $name || 'Unknown';
 }
@@ -224,13 +243,32 @@ sub prepare_person_data ($self, $person) {
   my $surname_obj  = $primary_name ? $primary_name->primary_surname    : undef;
   my $surname      = $surname_obj  ? ($surname_obj->surname // '')     : '';
 
-  my $display_name = join(' ', grep {$_} ($given, $surname)) || 'Unknown';
+  # Build display name - use "Unknown (ID)" format when surname but no given name
+  my $display_name;
+  if ($surname && !$given) {
+    my $gramps_id = $person->gramps_id // '';
+    my $unknown_with_id = $gramps_id ? "Unknown ($gramps_id)" : "Unknown";
+    $display_name = "$unknown_with_id $surname";
+  }
+  else {
+    $display_name = join(' ', grep {$_} ($given, $surname)) || 'Unknown';
+  }
 
+  # Build link - use gramps_id when no given name
   my $link = '';
-  if ($surname && $given) {
+  if ($surname) {
     my $surname_enc = uri_escape_utf8($surname);
-    my $given_enc   = uri_escape_utf8($given);
-    $link = "/Harrypedia/people/$surname_enc/$given_enc";
+    if ($given) {
+      my $given_enc = uri_escape_utf8($given);
+      $link = "/Harrypedia/people/$surname_enc/$given_enc";
+    }
+    else {
+      # No given name - use gramps_id in URL
+      my $gramps_id = $person->gramps_id // '';
+      if ($gramps_id) {
+        $link = "/Harrypedia/people/$surname_enc/$gramps_id";
+      }
+    }
   }
 
   # Get birth and death dates

@@ -121,9 +121,6 @@
   [% family_tree %]
 </div>
 [% END -%]
-<div class="timeline-card">
-  [% chart %]
-</div>
 <hr role="separator" class="spectrum-Divider spectrum-Divider--sizeM" />
 [% IF static_content -%]
   <h2 class="spectrum-Heading spectrum-Heading--serif spectrum-Heading--heavy spectrum-Heading--sizeXL">Analysis</h2>

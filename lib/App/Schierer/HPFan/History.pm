@@ -27,6 +27,11 @@ has navigation => (
   required => 1,
 );
 
+has site_logo => (
+  is      => 'ro',
+  default => '',
+);
+
 async sub register_routes ($self, $nav, $router) {
   $router->get(
     '/Harrypedia/History' => async sub {
@@ -126,6 +131,7 @@ sub timeline_handler {
     css_files    => ['/css/navigation.css', '/css/timeline.css'],
     sidebar      => 1,
     navigation   => $navigation_html,
+    site_logo    => $self->site_logo,
   };
 
   # Render with layout

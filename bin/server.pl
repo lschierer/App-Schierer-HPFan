@@ -13,6 +13,8 @@ require App::Schierer::HPFan::Person;
 require App::Schierer::HPFan::Family;
 require App::Schierer::HPFan::History;
 require App::Schierer::HPFan::ClassLists;
+require App::Schierer::HPFan::Bookmarks;
+require App::Schierer::HPFan::HPNOFP;
 use PAGI::Server;
 use Future::AsyncAwait;
 use Path::Tiny;
@@ -29,27 +31,61 @@ my $template = PAGI::WebServer::Template->new(
 );
 my $pages_dir = path('share/pages');
 
+# Load site logo SVG
+my $logo_file = path('public/images/LukeHPSite.svg');
+my $site_logo = '';
+if ($logo_file->exists) {
+  my $svg_content = $logo_file->slurp_utf8;
+  # Strip XML declaration and DOCTYPE
+  $svg_content =~ s/^<\?xml[^?]*\?>\s*//;
+  $svg_content =~ s/^<!DOCTYPE[^>]*>\s*//;
+  # Add class="site-logo" to svg element
+  $svg_content =~ s/<svg/<svg class="site-logo"/;
+  $site_logo = $svg_content;
+}
+
 # Create navigation
 my $nav = PAGI::WebServer::Navigation->new;
 
 # Create family handler (initialize gramps once)
-my $family_handler = App::Schierer::HPFan::Family->new(navigation => $nav);
+my $family_handler = App::Schierer::HPFan::Family->new(
+  navigation => $nav,
+  site_logo  => $site_logo,
+);
 
 # Create person handler with navigation (shares gramps with family handler)
 my $person_handler = App::Schierer::HPFan::Person->new(
   navigation     => $nav,
   gramps         => $family_handler->gramps,    # Share gramps instance
   family_handler => $family_handler,
+  markdown       => $markdown,
+  site_logo      => $site_logo,
 );
 my $history_handler = App::Schierer::HPFan::History->new(
   template   => $template,
   navigation => $nav,
   gramps     => $family_handler->gramps,        # Share gramps instance
+  site_logo  => $site_logo,
 );
 
 # Create class lists handler
 my $classlists_handler = App::Schierer::HPFan::ClassLists->new(
   gramps => $family_handler->gramps,            # Share gramps instance
+);
+
+# Create bookmarks handler
+my $bookmarks_handler = App::Schierer::HPFan::Bookmarks->new(
+  template   => $template,
+  navigation => $nav,
+  markdown   => $markdown,
+  site_logo  => $site_logo,
+);
+
+# Create HPNOFP handler
+my $hpnofp_handler = App::Schierer::HPFan::HPNOFP->new(
+  template   => $template,
+  navigation => $nav,
+  site_logo  => $site_logo,
 );
 
 # Register base navigation routes
@@ -81,11 +117,14 @@ async sub register_markdown_routes {
         $title =~ s/\b(\w)/\U$1/g;    # Capitalize words
       }
 
-      # Get order from frontmatter (sidebar.order), or use default
-      my $order = $frontmatter->{sidebar}{order} // 50;
+      # Get order from frontmatter (sidebar.order) - only if explicitly set
+      my $options = {};
+      if (defined $frontmatter->{sidebar}{order}) {
+        $options->{order} = $frontmatter->{sidebar}{order};
+      }
 
-      # Add route to navigation
-      $nav->add_route($route, $title, { order => $order });
+      # Add route to navigation (will default to 999 if no order specified)
+      $nav->add_route($route, $title, $options);
     },
     { recurse => 1 }
   );
@@ -93,13 +132,8 @@ async sub register_markdown_routes {
 
 await register_markdown_routes($nav, $pages_dir);
 
-$nav->add_route('/Harrypedia',        'Harrypedia',  { order => 1 });
-$nav->add_route('/Harrypedia/people', 'People',      { order => 1 });
-$nav->add_route('/Harrypedia/places', 'Places',      { order => 2 });
-$nav->add_route('/Harrypedia/events', 'Events',      { order => 3 });
-$nav->add_route('/Fan Fiction',       'Fan Fiction', { order => 2 });
-$nav->add_route('/Searches',          'Searches',    { order => 3 });
-$nav->add_route('/Bookmarks',         'Bookmarks',   { order => 4 });
+# Note: Most routes are now registered by markdown files with frontmatter controlling order.
+# Only add fallback routes here if they don't already exist (no markdown file).
 
 # Create router
 my $router = PAGI::WebServer::Router->new;
@@ -112,6 +146,12 @@ await $person_handler->register_routes($nav, $router);
 
 # Register history routes
 await $history_handler->register_routes($nav, $router);
+
+# Register bookmarks routes
+await $bookmarks_handler->register_routes($nav, $router);
+
+# Register HPNOFP routes
+await $hpnofp_handler->register_routes($nav, $router);
 
 # Add route for root
 $router->get(
@@ -208,7 +248,7 @@ $router->get(
         my $bytes   = encode_utf8($content);
 
         # Determine content type based on file extension
-        my $content_type = $filename =~ /\.js$/ ? 'application/javascript; charset=utf-8' 
+        my $content_type = $filename =~ /\.js$/ ? 'application/javascript; charset=utf-8'
                          : $filename =~ /\.map$/ ? 'application/json; charset=utf-8'
                          : 'text/plain; charset=utf-8';
 
@@ -235,6 +275,57 @@ $router->get(
     await $send->({
       type => 'http.response.body',
       body => 'JS Not Found',
+      more => 0,
+    });
+  }
+);
+
+# Add route for image files
+$router->get(
+  '/images/*' => async sub {
+    my ($scope, $receive, $send) = @_;
+
+    my $path = $scope->{path};
+    my ($filename) = $path =~ m{^/images/(.+)$};
+
+    if ($filename) {
+      my $img_file = path('public/images')->child($filename);
+
+      if ($img_file->exists && $img_file->is_file) {
+        my $content = $img_file->slurp_raw;  # Binary content for images
+
+        # Determine content type based on file extension
+        my $content_type = $filename =~ /\.jpe?g$/i ? 'image/jpeg'
+                         : $filename =~ /\.png$/i   ? 'image/png'
+                         : $filename =~ /\.gif$/i   ? 'image/gif'
+                         : $filename =~ /\.svg$/i   ? 'image/svg+xml'
+                         : $filename =~ /\.webp$/i  ? 'image/webp'
+                         : $filename =~ /\.ico$/i   ? 'image/x-icon'
+                         : 'application/octet-stream';
+
+        await $send->({
+          type    => 'http.response.start',
+          status  => 200,
+          headers => [['content-type', $content_type]],
+        });
+        await $send->({
+          type => 'http.response.body',
+          body => $content,
+          more => 0,
+        });
+        return;
+      }
+    }
+
+    # Image file not found
+    await $send->({
+      type    => 'http.response.start',
+      status  => 404,
+      headers => [['content-type', 'text/plain']],
+    });
+    await $send->({
+      type => 'http.response.body',
+      body => 'Image Not Found',
       more => 0,
     });
   }
@@ -306,6 +397,7 @@ $router->get(
         css_files    => ['/css/navigation.css', '/css/directory-list.css'],
         sidebar      => 1,
         navigation   => $navigation_html,
+        site_logo    => $site_logo,
       };
 
       # Render with layout
@@ -352,6 +444,7 @@ $router->get(
           css_files    => ['/css/navigation.css', '/css/directory-list.css'],
           sidebar      => 1,
           navigation   => $navigation_html,
+          site_logo    => $site_logo,
         };
 
         my $html = $template->render('page/autoindex.tt', $vars,

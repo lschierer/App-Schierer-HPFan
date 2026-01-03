@@ -14,7 +14,7 @@
   display: none !important;
 }
 
-ul.spectrum-TreeView {
+div#nav ul.spectrum-TreeView {
   /* should match div#nav in global.css */
   max-inline-size: max(250px, 20vw);
 

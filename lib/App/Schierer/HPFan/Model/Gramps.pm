@@ -221,10 +221,12 @@ class App::Schierer::HPFan::Model::Gramps :
     }
     my $spouse;
     if ($person->handle eq $family->father_handle) {
-      $spouse = $people->{ $family->mother_handle };
+      my $mother_handle = $family->mother_handle;
+      $spouse = $people->{$mother_handle} if defined $mother_handle;
     }
     else {
-      $spouse = $people->{ $family->father_handle };
+      my $father_handle = $family->father_handle;
+      $spouse = $people->{$father_handle} if defined $father_handle;
     }
     return $spouse;
   }
