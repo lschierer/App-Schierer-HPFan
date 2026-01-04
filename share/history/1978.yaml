@@ -4,13 +4,13 @@ events:
     description: |
       end of [Lily], [James], [Sirius] [Snape] et al. end their seventh year at [Hogwarts].
 
-      [Lily]: <./people/Evans/Lily J/>
+      [Lily]: </Harrypedia/people/Evans/Lily J/>
 
-      [James]: <./people/Potter/James>
+      [James]: </Harrypedia/people/Potter/James>
 
-      [Sirius]: <./people/Black/Sirius III>
+      [Sirius]: </Harrypedia/people/Black/Sirius III>
 
-      [Snape]: <./people/Snape/Severus>
+      [Snape]: </Harrypedia/people/Snape/Severus>
 
       [Hogwarts]: <./Hogwarts/>
     source: computed/inferred from other material
