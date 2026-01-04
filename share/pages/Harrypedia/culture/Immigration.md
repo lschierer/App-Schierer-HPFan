@@ -158,10 +158,12 @@ their static society, they have options:
 
 Instead I suspect that some percentage of the magical culture actively _desires_ a permanent underclass that cannot succeed.[^240508-4] They _intend_ the first generation "emigrants" to become the next generation of peasant workers in their shops, manufactories/workshops; to fill the secretarial and clerical positions in the [Ministry]. While this may not be formally slavery, it is still repugnant.
 
-[^240508-4]: See also [Class and Blood](Class_and_Blood) and [Class Consciousness](./Class_Consciousness)
+[^240508-4]: See also [Class and Blood] and [Class Consciousness]
 
-[Ministry]: Government
-[MACUSA]: ../MACUSA
+[Class Consciousness]: /Harrypedia/culture/Class_Consciousness
+[Class and Blood]: /Harrypedia/culture/Class_and_Blood
+[Ministry]: ./Government
+[MACUSA]: /Harrypedia/MACUSA
 
 [Harry]: </Harrypedia/people/Potter/Harry James>
 
@@ -202,5 +204,5 @@ Instead I suspect that some percentage of the magical culture actively _desires_
 [^240508-1]: It is worth noting that nearly every author who spends significant time trying to build upon the backstory decides that there is a a _treaty_ between the magical population and the monarch of Britain to establish the [ISWS], the [Ministry of Magic], or both. A monarch does not sign a treaty with his/her subjects. The [Magna Carta] for example was a _charter_ not a _treaty_.
 
 [Magna Carta]: https://www.parliament.uk/magnacarta/
-[ISWS]: ./International Statute of Secrecy
-[Ministry of Magic]: ./Government
+[ISWS]: </Harrypedia/culture/International Statute of Secrecy>
+[Ministry of Magic]: /Harrypedia/culture/Government

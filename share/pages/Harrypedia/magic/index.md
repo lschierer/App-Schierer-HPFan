@@ -75,7 +75,7 @@ We seem to have:
       Rowling's descriptions. How does the secret move into the other souls
       after the death of the first secret keeper? What is the mechanism that
       makes untransmittable knowledge now something "stored in your soul"?
-  - [Serpensortia](./magic/spells/serpensortia)
+  - [Serpensortia](/Harrypedia/magic/spells/serpensortia)
   - turning vinegar into wine is taught in charms class.[^210820-1]
     - some speculate that this only works with wine based vinegar, because the
       spell is reversing oxidation, not actually transfiguring. Under this

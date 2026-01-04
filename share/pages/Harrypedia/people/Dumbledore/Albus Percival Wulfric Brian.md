@@ -279,7 +279,7 @@ excuse to prevent [Sirius][SB3] from being able to adopt [Harry]?
     _[Harry Potter and the Goblet of Fire](https://www.librarything.com/work/113)_
     © 2003 Pottermore Publishing American Kindle Edition. Locations 8831-8833.
 
-[Occlumency]: /Harrypedia/magic/The_Mind_Arts/Occlumency/
+[Occlumency]: </Harrypedia/magic/The Mind Arts/Occlumency>
 
 Other acts Dumbledore would have to defend by saying it was not his actions in
 any sense. Dumbledore directed [Snape][SS] to teach [Occlumency][], and claims
@@ -732,7 +732,7 @@ scenes? Is his public face at all related to his private goals?
     _["For the Greater Good:" In Defense of Albus Dumbledore](http://www.mugglenet.com/2017/08/greater-good-defense-albus-dumbledore/)_
     Published 2017-08-02. Last viewed 2019-03-01.
 
-[ADdwr]: <./Dealing with Riddle/>
-[ADtoh]: ./treatment_of_harry/
-[ADmm]: ./manipulator/
-[ADi]: ./inaction/
+[ADdwr]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/Dealing with Riddle>
+[ADtoh]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/treatment_of_harry>
+[ADmm]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/manipulator>
+[ADi]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/inaction>

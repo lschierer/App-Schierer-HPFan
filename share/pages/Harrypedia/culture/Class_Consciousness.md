@@ -6,7 +6,7 @@ author: Luke Schierer
 
 I wrote an entire page on [class and blood].
 
-[class and blood]: Class_and_Blood/
+[class and blood]: /Harrypedia/culture/Class_and_Blood
 
 Beyond those notes, I think it really interesting when Mrs. Rowling states that
 a [Malfoy] ancestor argued against the ISWS, was active in "high-born Muggle
@@ -21,8 +21,8 @@ of wealth, but interacting with the muggle economy will always be, in a sense,
 free money to those with the most ambition and the fewest moral scruples, those
 willing to "use any means to achieve their ends."[^210420-14]
 
-[Malfoy]: /Harrypedia/people/Malfoy/
-[Malfoys]: /Harrypedia/people/Malfoy/
+[Malfoy]: /Harrypedia/people/Malfoy
+[Malfoys]: /Harrypedia/people/Malfoy
 
 [^210420-14]: 
     Mrs. J. K. Rowling. _Harry Potter and the Sorcerer's Stone_

@@ -27,6 +27,6 @@ have seen no canonical documentation for the belief.
 [HPWLB]: https://harrypotter.fandom.com/wiki/Lavender_Brown
 [Harry Potter Wiki]: https://harrypotter.fandom.com/wiki/
 [The Harry Potter Lexicon]: https://www.hp-lexicon.org/
-[Hermione]: <../Granger/Hermione Jean/>
-[Greyback]: ../Greyback/Fenrir/
+[Hermione]: </Harrypedia/people/Granger/Hermione Jean/>
+[Greyback]: /Harrypedia/people/Greyback/Fenrir/
 [dh]: https://www.librarything.com/work/3577382

@@ -17,13 +17,13 @@ author: Luke Schierer
 - We are informed that "tomorrow" is [Harry]'s 11th birthday. Given that per [chapter two], the [first chapter] was ten years ago, we can now confidently say that the events depicted occurred after [Harry]'s first birthday.[^240424-3]
 - The description of the birthday presents. The [Dursleys] give [Harry] "gifts" just to drive home that he is not worthy of _actual_ presents.
 
-[chapter two]: <Chapter 02/>
-[first chapter]: <Chapter 01/>
-[Dursley]: /Harrypedia/people/Dursley/Vernon/
-[Dudley]: /Harrypedia/people/Dursley/Dudley/
-[Dursleys]: /Harrypedia/people/Dursley/
+[chapter two]: <Chapter 02>
+[first chapter]: <Chapter 01>
+[Dursley]: /Harrypedia/people/Dursley/Vernon
+[Dudley]: /Harrypedia/people/Dursley/Dudley
+[Dursleys]: /Harrypedia/people/Dursley
 
-[Harry]: </Harrypedia/people/Potter/Harry James/>/
-[obscurials]: /Harrypedia/beings/obscurus//
+[Harry]: </Harrypedia/people/Potter/Harry James>
+[obscurials]: /Harrypedia/beings/obscurus
 
 [^240424-3]: This will be confirmed in book seven when we seen an excerpt of a letter describing that birthday.

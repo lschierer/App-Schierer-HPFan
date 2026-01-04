@@ -20,7 +20,7 @@ sentient, it is the _right_ definition.
 
 [Non-Beings]: /Harrypedia/non-beings/
 [Animals]: /Harrypedia/animals/
-[Vegetation]: /Harrypedia/vegitation/
+[Vegetation]: /Harrypedia/vegetation/
 
 [^211111-1]: document some animal/vegitable grey area
 

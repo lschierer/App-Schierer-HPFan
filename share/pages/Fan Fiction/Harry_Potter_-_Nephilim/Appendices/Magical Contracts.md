@@ -260,7 +260,7 @@ make it a distinct category of event worth separate consideration.
     Interestingly, the nephil medical community noted that the children themselves while insisting on sleeping in the same *bed* did nothing otherwise age inappropriate.  One writes that the boy in particular 'was first confused and then enraged at the suggestion that he might even be tempted.  These emotions had every appearance of being genuine even when the subject was scanned with [legilimency].'  This appears to confirm the natural law restrictions on even these unusual SSM events, allowing for the so called 'phased activation' understanding. 
   - This is _not_ universally true of normal contractual marriages, where examples exist of contracts that operated for years without anyone other than the participants being aware that a contract was in place.
 
-[Limitations on Relationships]: <../Magical Contracts#Limitations on Relationships>
+[Limitations on Relationships]: <./Magical Contracts#Limitations on Relationships>
 
 [AA]: <./Points of Divergence>
 [AB]: <./Rules of Magic>

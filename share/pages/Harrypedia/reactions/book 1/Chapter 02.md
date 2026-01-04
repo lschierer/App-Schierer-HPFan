@@ -16,18 +16,18 @@ author: Luke Schierer
 - As critical as I am of the [Dursleys], I read the threat to keep him locked in the cupboard "until Christmas" as simple blustering. The use of hyperbole is fairly common in every day speech.
 - Again at the end of this chapter we have descriptions of what we in retrospect know are witches and wizards, but who are _not_ wearing robes, simply oddly dressed.
 
-[Dursleys]: /Harrypedia/people/Dursley/
-[Dursley]: /Harrypedia/people/Dursley/Vernon/
+[Dursleys]: /Harrypedia/people/Dursley
+[Dursley]: /Harrypedia/people/Dursley/Vernon
 
-[^240424-2]: see [Comparing how old students are in UK and US/Harrypedia/Hogwarts/comparitive_class_ages/)
+[^240424-2]: see [Comparing how old students are in UK and US/Harrypedia/Hogwarts/comparitive_class_ages)
 
-[Dudley]: /Harrypedia/people/Dursley/Dudley/
-[Dursley]: /Harrypedia/people/Dursley/
-[Petunia]: /Harrypedia/people/Evans/Petunia/
+[Dudley]: /Harrypedia/people/Dursley/Dudley
+[Dursley]: /Harrypedia/people/Dursley
+[Petunia]: /Harrypedia/people/Evans/Petunia
 [bowl cut]: https://en.wikipedia.org/wiki/Bowl_cut
 [crew cut]: https://en.wikipedia.org/wiki/Crew_cut
-[Dudley]: /Harrypedia/people/Dursley/Dudley/
+[Dudley]: /Harrypedia/people/Dursley/Dudley
 
-[Harry]: </Harrypedia/people/Potter/Harry James/>/
-[Lily]: </Harrypedia/people/Evans/Lily J/>
-[James]: /Harrypedia/people/Potter/James/
+[Harry]: </Harrypedia/people/Potter/Harry James>
+[Lily]: </Harrypedia/people/Evans/Lily J>
+[James]: /Harrypedia/people/Potter/James
