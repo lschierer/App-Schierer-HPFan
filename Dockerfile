@@ -87,7 +87,7 @@ RUN rm -rf /var/lib/apt/lists/*
 RUN fc-cache -f -v
 
 # Install Pandoc
-RUN curl -L https://github.com/jgm/pandoc/releases/download/3.2/pandoc-3.2-1-arm64.deb -o /tmp/pandoc.deb \
+RUN curl -L https://github.com/jgm/pandoc/releases/download/3.8.3/pandoc-3.8.3-1-arm64.deb -o /tmp/pandoc.deb \
   && dpkg -i /tmp/pandoc.deb \
   && rm /tmp/pandoc.deb
 
