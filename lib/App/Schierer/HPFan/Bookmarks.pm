@@ -70,7 +70,7 @@ sub process_bookmark_file {
 
     my $content;
     eval {
-        my $yaml_str = $file->slurp_utf8;
+        my $yaml_str = $file->slurp_raw;
         $content = Load($yaml_str);
     };
     if ($@) {

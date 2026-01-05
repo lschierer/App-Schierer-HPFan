@@ -5,8 +5,8 @@ use warnings;
 use v5.42.0;
 use utf8::all;
 use Moo;
-with 'App::Schierer::HPFan::Role::Gramps';
 use Future::AsyncAwait;
+use FindBin;
 use Path::Tiny;
 use Encode      qw(encode_utf8);
 use URI::Escape qw(uri_escape_utf8);
@@ -38,20 +38,14 @@ has family_handler => (
   required => 1,
 );
 
-has pages_dir => (
-  is      => 'ro',
-  default => sub { path('share/pages') },
-);
-
-has markdown => (
-  is       => 'ro',
-  required => 1,
-);
-
 has site_logo => (
   is      => 'ro',
   default => '',
 );
+
+# Compose roles after attributes are declared
+with 'App::Schierer::HPFan::Role::Gramps';
+with 'PAGI::WebServer::Role::MarkdownPages';
 
 async sub register_routes ($self, $nav, $router) {
   # Register person routes (higher priority than markdown)
@@ -165,6 +159,40 @@ async sub handle_person_route ($self, $scope, $receive, $send) {
         return;
       }
     };
+  }
+
+  # Try markdown fallback before returning 404
+  my $md_path = $path;
+  $md_path =~ s|^/||;  # Remove leading slash
+  my $md_file = $self->pages_dir->child("$md_path.md");
+
+  if ($md_file->exists) {
+    # Use role's markdown rendering
+    my $navigation_html = '';
+    if ($self->has_navigation) {
+      $navigation_html = $self->navigation->render($path);
+    }
+
+    my $html = $self->render_markdown_page($md_file, $path, {
+      navigation => $navigation_html,
+      site_logo  => $self->site_logo,
+      css_files  => ['/css/navigation.css', '/css/gramps.css'],
+    });
+
+    if ($html) {
+      my $bytes = encode_utf8($html);
+      await $send->({
+        type    => 'http.response.start',
+        status  => 200,
+        headers => [['content-type', 'text/html; charset=utf-8']],
+      });
+      await $send->({
+        type => 'http.response.body',
+        body => $bytes,
+        more => 0,
+      });
+      return;
+    }
   }
 
   # Not found

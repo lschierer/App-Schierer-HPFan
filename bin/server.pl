@@ -58,7 +58,7 @@ my $person_handler = App::Schierer::HPFan::Person->new(
   navigation     => $nav,
   gramps         => $family_handler->gramps,    # Share gramps instance
   family_handler => $family_handler,
-  markdown       => $markdown,
+  template       => $template,
   site_logo      => $site_logo,
 );
 my $history_handler = App::Schierer::HPFan::History->new(
