@@ -13,8 +13,10 @@ our $VERSION = 'v0.03.0';
 sub build ($self) {
   $self->SUPER::build();
 
-  $self->load_controller('Bookmarks');
+  # it appears that the top one wins?
   $self->load_controller('Family');
+  $self->load_controller('Bookmarks');
+  $self->load_controller('Root');
   $self->load_module('Middleware' => {
           Static => { root => 'public', pass_through => 1, _order => 1 },
   });

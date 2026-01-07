@@ -1,12 +1,8 @@
 package App::Schierer::HPFan::Controller::Bookmarks;
 
 use v5.42.0;
-use strict;
-use warnings;
-use Moo;
-use experimental 'signatures';
+use Mooish::Base -standard;
 extends 'Thunderhorse::Controller';
-with 'WebFramework::Role::Navigation';
 with 'WebFramework::Role::Logger';
 
 use Path::Tiny;
@@ -194,7 +190,7 @@ sub bookmark_index ($self, $ctx, $entry, $all_routes) {
         current_year => $current_year,
         css_files => ['/css/navigation.css', '/css/directory-list.css'],
         sidebar => 1,
-        navigation => $navigation_html,
+        nav_html => $navigation_html,
         site_logo => $self->site_logo,
     };
 
@@ -231,7 +227,7 @@ sub bookmark_page ($self, $ctx, $entry) {
         current_year => $current_year,
         css_files => ['/css/navigation.css', '/css/bookmarks.css'],
         sidebar => 1,
-        navigation => $navigation_html,
+        nav_html => $navigation_html,
         site_logo => $self->site_logo,
     };
 

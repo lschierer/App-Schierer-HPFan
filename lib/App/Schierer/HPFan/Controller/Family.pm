@@ -1,14 +1,10 @@
 package App::Schierer::HPFan::Controller::Family;
 
-use strict;
-use warnings;
 use v5.42.0;
 use utf8::all;
-use Moo;
-use experimental 'signatures';
+use Mooish::Base -standard;
 extends 'Thunderhorse::Controller';
 with 'App::Schierer::HPFan::Role::Gramps';
-with 'WebFramework::Role::Navigation';
 with 'WebFramework::Role::Logger';
 
 use Future::AsyncAwait;
@@ -39,13 +35,6 @@ sub build ($self) {
 sub register_routes ($self, $router) {
     # Register catch-all route for family pages
 
-    $router->add('/Harrypedia/people', {
-        to => sub ($self, $ctx, @args) {
-            return $self->family_index($ctx);
-        },
-        action => 'http.get',
-    });
-
     $router->add('/Harrypedia/people/:surname', {
         to => sub ($self, $ctx, @args) {
             my $surname = $args[0] // 'Unknown';  # Try getting from args
@@ -65,7 +54,7 @@ async sub family_index ($self, $ctx) {
         current_year => (localtime)[5] + 1900,
         css_files => ['/css/gramps.css', '/css/navigation.css'],
         sidebar => 1,
-        navigation => $self->render_navigation($ctx->req->path),
+        nav_html => $self->render_navigation($ctx->req->path),
         site_logo => $self->site_logo,
     };
 
@@ -141,7 +130,7 @@ async sub family_page ($self, $ctx, $surname) {
         current_year   => $current_year,
         css_files      => ['/css/gramps.css', '/css/navigation.css'],
         sidebar        => 1,
-        navigation     => $navigation_html,
+        nav_html     => $navigation_html,
         site_logo      => $self->site_logo,
     };
 
