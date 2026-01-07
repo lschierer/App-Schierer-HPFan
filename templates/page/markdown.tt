@@ -1,1 +1,5 @@
-[% content %]
+[% WRAPPER layouts/default.tt %]
+<div class="markdown-content">
+    [% content %]
+</div>
+[% END %]

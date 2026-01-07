@@ -1,3 +1,4 @@
+[% WRAPPER layouts/default.tt %]
 [% IF is_unknown -%]
 <div class="spectrum-Card">
   <div class="spectrum-Card-body">
@@ -160,3 +161,4 @@ function toggleTreeNode(event) {
   }
 }
 </script>
+[% END %]

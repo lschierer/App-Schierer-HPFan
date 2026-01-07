@@ -1,29 +1,21 @@
-package App::Schierer::HPFan::Bookmarks;
+package App::Schierer::HPFan::Controller::Bookmarks;
 
 use v5.42.0;
 use strict;
 use warnings;
 use Moo;
+use experimental 'signatures';
+extends 'Thunderhorse::Controller';
+with 'WebFramework::Role::Navigation';
+with 'WebFramework::Role::Logger';
+
 use Path::Tiny;
 use YAML::XS qw(Load);
-use Log::Log4perl qw(get_logger);
 use Encode qw(encode_utf8);
-use Future::AsyncAwait;
 
-has template => (
-    is => 'ro',
-    required => 1,
-);
-
-has navigation => (
-    is => 'ro',
-    required => 1,
-);
-
-has markdown => (
-    is => 'ro',
-    required => 1,
-);
+sub build ($self){
+  $self->register_routes($self->router);
+}
 
 has site_logo => (
     is      => 'ro',
@@ -39,10 +31,7 @@ has bookmarks_tree => (
     is => 'lazy',
 );
 
-sub _build_bookmarks_tree {
-    my ($self) = @_;
-
-    my $logger = get_logger(__PACKAGE__);
+sub _build_bookmarks_tree ($self) {
     my %tree;
 
     my $iter = $self->bookmarks_dir->iterator({
@@ -57,16 +46,13 @@ sub _build_bookmarks_tree {
     }
 
     my @keys = sort keys %tree;
-    $logger->debug("Built bookmarks tree with " . scalar(@keys) . " entries");
+    $self->logger->debug("Built bookmarks tree with " . scalar(@keys) . " entries");
 
     return \%tree;
 }
 
-sub process_bookmark_file {
-    my ($self, $file, $tree) = @_;
-
-    my $logger = get_logger(__PACKAGE__);
-    $logger->debug("Processing bookmark file: $file");
+sub process_bookmark_file ($self, $file, $tree) {
+    $self->logger->debug("Processing bookmark file: $file");
 
     my $content;
     eval {
@@ -74,17 +60,17 @@ sub process_bookmark_file {
         $content = Load($yaml_str);
     };
     if ($@) {
-        $logger->error("Error parsing YAML file '$file': $@");
+        $self->logger->error("Error parsing YAML file '$file': $@");
         return;
     }
 
     unless (ref $content eq 'HASH') {
-        $logger->warn("Content is not a hash in '$file': " . ref($content));
+        $self->logger->warn("Content is not a hash in '$file': " . ref($content));
         return;
     }
 
     unless ($content->{name}) {
-        $logger->warn("'name' is required in '$file', ignoring");
+        $self->logger->warn("'name' is required in '$file', ignoring");
         return;
     }
 
@@ -119,7 +105,7 @@ sub process_bookmark_file {
         }
     }
 
-    $logger->debug("Route for '$file' is '$route' with title '$title'");
+    $self->logger->debug("Route for '$file' is '$route' with title '$title'");
 
     $tree->{$route} = {
         %$content,
@@ -129,10 +115,7 @@ sub process_bookmark_file {
     };
 }
 
-async sub register_routes {
-    my ($self, $nav, $router) = @_;
-
-    my $logger = get_logger(__PACKAGE__);
+sub register_routes ($self, $router) {
     my $tree = $self->bookmarks_tree;
     my @routes = sort keys %$tree;
 
@@ -141,33 +124,34 @@ async sub register_routes {
         my $entry = $tree->{$route};
 
         # Add to navigation
-        $nav->add_route($route, $entry->{title}, { order => 10 });
+        $self->add_navigation_route($route, $entry->{title}, { order => 10 });
 
         # Determine if this is an index or page route
         if ($entry->{path}->basename eq 'index.yaml') {
             # Index route - shows list of children
-            $router->get($route => async sub {
-                my ($scope, $receive, $send) = @_;
-                await $self->bookmark_index_handler($scope, $receive, $send, $entry, \@routes);
+            $router->add($route, {
+                to => sub ($self, $ctx) {
+                    return $self->bookmark_index($ctx, $entry, \@routes);
+                },
+                action => 'http.get',
             });
         }
         else {
             # Page route - shows bookmark items
-            $router->get($route => async sub {
-                my ($scope, $receive, $send) = @_;
-                await $self->bookmark_page_handler($scope, $receive, $send, $entry);
+            $router->add($route, {
+                to => sub ($self, $ctx) {
+                    return $self->bookmark_page($ctx, $entry);
+                },
+                action => 'http.get',
             });
         }
     }
 
-    $logger->info("Registered " . scalar(@routes) . " bookmark routes");
+    $self->logger->info("Registered " . scalar(@routes) . " bookmark routes");
 }
 
-async sub bookmark_index_handler {
-    my ($self, $scope, $receive, $send, $entry, $all_routes) = @_;
-
-    my $logger = get_logger(__PACKAGE__);
-    my $current_path = $scope->{path};
+sub bookmark_index ($self, $ctx, $entry, $all_routes) {
+    my $current_path = $ctx->req->path;
 
     # Find direct children of current path
     my @child_entries;
@@ -197,11 +181,11 @@ async sub bookmark_index_handler {
     # Render comments as markdown if present
     my $comments_html = '';
     if ($entry->{comments}) {
-        $comments_html = $self->markdown->pd->convert('markdown' => 'html', $entry->{comments});
+        $comments_html = $self->render_markdown_snippet(\$entry->{comments});
     }
 
     my $current_year = (localtime)[5] + 1900;
-    my $navigation_html = $self->navigation->render($current_path);
+    my $navigation_html = $self->render_navigation($current_path);
 
     my $vars = {
         items => \@child_entries,
@@ -214,31 +198,11 @@ async sub bookmark_index_handler {
         site_logo => $self->site_logo,
     };
 
-    my $html = $self->template->render(
-        'bookmarks/index.tt',
-        $vars,
-        { layout => 'layouts/default.tt' }
-    );
-
-    my $bytes = encode_utf8($html);
-
-    await $send->({
-        type => 'http.response.start',
-        status => 200,
-        headers => [['content-type', 'text/html; charset=utf-8']],
-    });
-    await $send->({
-        type => 'http.response.body',
-        body => $bytes,
-        more => 0,
-    });
+    return $self->render('bookmarks/index.tt', $vars);
 }
 
-async sub bookmark_page_handler {
-    my ($self, $scope, $receive, $send, $entry) = @_;
-
-    my $logger = get_logger(__PACKAGE__);
-    my $current_path = $scope->{path};
+sub bookmark_page ($self, $ctx, $entry) {
+    my $current_path = $ctx->req->path;
 
     # Get items array
     my @items = $entry->{items} ? @{ $entry->{items} } : ();
@@ -247,18 +211,18 @@ async sub bookmark_page_handler {
     # Render top-level comments as markdown if present
     my $comments_html = '';
     if ($entry->{comments}) {
-        $comments_html = $self->markdown->pd->convert('markdown' => 'html', $entry->{comments});
+        $comments_html = $self->render_markdown_snippet(\$entry->{comments});
     }
 
     # Render each item's comments as markdown
     for my $item (@items) {
         if ($item->{comments}) {
-            $item->{comments_html} = $self->markdown->pd->convert('markdown' => 'html', $item->{comments});
+            $item->{comments_html} = $self->render_markdown_snippet(\$item->{comments});
         }
     }
 
     my $current_year = (localtime)[5] + 1900;
-    my $navigation_html = $self->navigation->render($current_path);
+    my $navigation_html = $self->render_navigation($current_path);
 
     my $vars = {
         items => \@items,
@@ -271,24 +235,7 @@ async sub bookmark_page_handler {
         site_logo => $self->site_logo,
     };
 
-    my $html = $self->template->render(
-        'bookmarks/page.tt',
-        $vars,
-        { layout => 'layouts/default.tt' }
-    );
-
-    my $bytes = encode_utf8($html);
-
-    await $send->({
-        type => 'http.response.start',
-        status => 200,
-        headers => [['content-type', 'text/html; charset=utf-8']],
-    });
-    await $send->({
-        type => 'http.response.body',
-        body => $bytes,
-        more => 0,
-    });
+    return $self->render('bookmarks/page.tt', $vars);
 }
 
 1;

@@ -1,3 +1,4 @@
+[% WRAPPER layouts/default.tt %]
 <div class="bookmarks-index">
 
   [% IF comments %]
@@ -21,3 +22,4 @@
       <p>No bookmarks found in this directory.</p>
   [% END %]
 </div>
+[% END %]

@@ -10,7 +10,7 @@ use PAGI::WebServer::Markdown;
 use PAGI::WebServer::Navigation;
 use PAGI::WebServer::Template;
 require App::Schierer::HPFan::Person;
-require App::Schierer::HPFan::Family;
+require App::Schierer::HPFan::Controller::Family;
 require App::Schierer::HPFan::History;
 require App::Schierer::HPFan::ClassLists;
 require App::Schierer::HPFan::Bookmarks;
@@ -47,30 +47,29 @@ if ($logo_file->exists) {
 # Create navigation
 my $nav = PAGI::WebServer::Navigation->new;
 
-# Create family handler (initialize gramps once)
-my $family_handler = App::Schierer::HPFan::Family->new(
-  navigation => $nav,
-  site_logo  => $site_logo,
+# Create family controller
+my $family_controller = App::Schierer::HPFan::Controller::Family->new(
+  site_logo => $site_logo,
 );
 
-# Create person handler with navigation (shares gramps with family handler)
+# Create person handler with navigation (shares gramps with family controller)
 my $person_handler = App::Schierer::HPFan::Person->new(
   navigation     => $nav,
-  gramps         => $family_handler->gramps,    # Share gramps instance
-  family_handler => $family_handler,
+  gramps         => $family_controller->gramps,    # Share gramps instance
+  family_handler => $family_controller,
   template       => $template,
   site_logo      => $site_logo,
 );
 my $history_handler = App::Schierer::HPFan::History->new(
   template   => $template,
   navigation => $nav,
-  gramps     => $family_handler->gramps,        # Share gramps instance
+  gramps     => $family_controller->gramps,        # Share gramps instance
   site_logo  => $site_logo,
 );
 
 # Create class lists handler
 my $classlists_handler = App::Schierer::HPFan::ClassLists->new(
-  gramps => $family_handler->gramps,            # Share gramps instance
+  gramps => $family_controller->gramps,            # Share gramps instance
 );
 
 # Create bookmarks handler
@@ -139,7 +138,7 @@ await register_markdown_routes($nav, $pages_dir);
 my $router = PAGI::WebServer::Router->new;
 
 # Register family routes
-await $family_handler->register_routes($nav, $router);
+await $family_controller->register_routes($router);
 
 # Register person routes
 await $person_handler->register_routes($nav, $router);

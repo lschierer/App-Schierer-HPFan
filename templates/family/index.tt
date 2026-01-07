@@ -1,0 +1,9 @@
+[% WRAPPER layouts/default.tt %]
+<h1>Family Index</h1>
+<p>Browse families by surname:</p>
+<ul>
+[% FOREACH surname IN surnames %]
+    <li><a href="/Harrypedia/people/[% surname | uri %]">[% surname %] Family</a></li>
+[% END %]
+</ul>
+[% END %]
