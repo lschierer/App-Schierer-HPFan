@@ -83,7 +83,7 @@ async sub handle_person_route ($self, $scope, $receive, $send) {
     else {
       # Regular given name
       $given_name = $identifier;
-      $person = $self->get_person_by_name($surname, $given_name);
+      $person     = $self->get_person_by_name($surname, $given_name);
     }
 
     if ($person) {
@@ -101,7 +101,9 @@ async sub handle_person_route ($self, $scope, $receive, $send) {
       }
 
       eval {
-        my $html = $self->render_person_page_from_object($person, $static_content, $path);
+        my $html =
+          $self->render_person_page_from_object($person, $static_content,
+          $path);
         if ($html) {
           my $bytes = encode_utf8($html);
           await $send->({
@@ -163,7 +165,7 @@ async sub handle_person_route ($self, $scope, $receive, $send) {
 
   # Try markdown fallback before returning 404
   my $md_path = $path;
-  $md_path =~ s|^/||;  # Remove leading slash
+  $md_path =~ s|^/||;    # Remove leading slash
   my $md_file = $self->pages_dir->child("$md_path.md");
 
   if ($md_file->exists) {
@@ -173,11 +175,14 @@ async sub handle_person_route ($self, $scope, $receive, $send) {
       $navigation_html = $self->navigation->render($path);
     }
 
-    my $html = $self->render_markdown_page($md_file, $path, {
-      navigation => $navigation_html,
-      site_logo  => $self->site_logo,
-      css_files  => ['/css/navigation.css', '/css/gramps.css'],
-    });
+    my $html = $self->render_markdown_page(
+      $md_file, $path,
+      {
+        navigation => $navigation_html,
+        site_logo  => $self->site_logo,
+        css_files  => ['/css/navigation.css', '/css/gramps.css'],
+      }
+    );
 
     if ($html) {
       my $bytes = encode_utf8($html);
@@ -411,7 +416,8 @@ sub render_person_page {
   my $person = $self->get_person_by_name($surname, $given_name);
   return unless $person;
 
-  return $self->render_person_page_from_object($person, $static_content, $current_path);
+  return $self->render_person_page_from_object($person, $static_content,
+    $current_path);
 }
 
 1;

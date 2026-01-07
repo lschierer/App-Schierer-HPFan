@@ -17,9 +17,11 @@ sub build ($self) {
   $self->load_controller('Family');
   $self->load_controller('Bookmarks');
   $self->load_controller('Root');
-  $self->load_module('Middleware' => {
-          Static => { root => 'public', pass_through => 1, _order => 1 },
-  });
+  $self->load_module(
+    'Middleware' => {
+      Static => { root => 'public', pass_through => 1, _order => 1 },
+    }
+  );
 
 }
 

@@ -48,9 +48,8 @@ if ($logo_file->exists) {
 my $nav = PAGI::WebServer::Navigation->new;
 
 # Create family controller
-my $family_controller = App::Schierer::HPFan::Controller::Family->new(
-  site_logo => $site_logo,
-);
+my $family_controller =
+  App::Schierer::HPFan::Controller::Family->new(site_logo => $site_logo,);
 
 # Create person handler with navigation (shares gramps with family controller)
 my $person_handler = App::Schierer::HPFan::Person->new(
@@ -247,9 +246,10 @@ $router->get(
         my $bytes   = encode_utf8($content);
 
         # Determine content type based on file extension
-        my $content_type = $filename =~ /\.js$/ ? 'application/javascript; charset=utf-8'
-                         : $filename =~ /\.map$/ ? 'application/json; charset=utf-8'
-                         : 'text/plain; charset=utf-8';
+        my $content_type =
+            $filename =~ /\.js$/  ? 'application/javascript; charset=utf-8'
+          : $filename =~ /\.map$/ ? 'application/json; charset=utf-8'
+          :                         'text/plain; charset=utf-8';
 
         await $send->({
           type    => 'http.response.start',
@@ -291,16 +291,17 @@ $router->get(
       my $img_file = path('public/images')->child($filename);
 
       if ($img_file->exists && $img_file->is_file) {
-        my $content = $img_file->slurp_raw;  # Binary content for images
+        my $content = $img_file->slurp_raw;    # Binary content for images
 
         # Determine content type based on file extension
-        my $content_type = $filename =~ /\.jpe?g$/i ? 'image/jpeg'
-                         : $filename =~ /\.png$/i   ? 'image/png'
-                         : $filename =~ /\.gif$/i   ? 'image/gif'
-                         : $filename =~ /\.svg$/i   ? 'image/svg+xml'
-                         : $filename =~ /\.webp$/i  ? 'image/webp'
-                         : $filename =~ /\.ico$/i   ? 'image/x-icon'
-                         : 'application/octet-stream';
+        my $content_type =
+            $filename =~ /\.jpe?g$/i ? 'image/jpeg'
+          : $filename =~ /\.png$/i   ? 'image/png'
+          : $filename =~ /\.gif$/i   ? 'image/gif'
+          : $filename =~ /\.svg$/i   ? 'image/svg+xml'
+          : $filename =~ /\.webp$/i  ? 'image/webp'
+          : $filename =~ /\.ico$/i   ? 'image/x-icon'
+          :                            'application/octet-stream';
 
         await $send->({
           type    => 'http.response.start',

@@ -201,7 +201,7 @@ sub link_for_person ($self, $person) {
   my $surname     = $surname_obj ? $surname_obj->surname : '';
   my $given       = $primary_name->first_name // '';
 
-  return '' unless $surname;  # Need at least a surname
+  return '' unless $surname;    # Need at least a surname
 
   my $surname_enc = uri_escape_utf8($surname);
 
@@ -228,7 +228,7 @@ sub display_name_for_person ($self, $person) {
 
   # If we have surname but no given name, use "Unknown (ID)" format
   if ($surname && !$given) {
-    my $gramps_id = $person->gramps_id // '';
+    my $gramps_id       = $person->gramps_id // '';
     my $unknown_with_id = $gramps_id ? "Unknown ($gramps_id)" : "Unknown";
     return "$unknown_with_id $surname";
   }
@@ -243,10 +243,10 @@ sub prepare_person_data ($self, $person) {
   my $surname_obj  = $primary_name ? $primary_name->primary_surname    : undef;
   my $surname      = $surname_obj  ? ($surname_obj->surname // '')     : '';
 
-  # Build display name - use "Unknown (ID)" format when surname but no given name
+ # Build display name - use "Unknown (ID)" format when surname but no given name
   my $display_name;
   if ($surname && !$given) {
-    my $gramps_id = $person->gramps_id // '';
+    my $gramps_id       = $person->gramps_id // '';
     my $unknown_with_id = $gramps_id ? "Unknown ($gramps_id)" : "Unknown";
     $display_name = "$unknown_with_id $surname";
   }

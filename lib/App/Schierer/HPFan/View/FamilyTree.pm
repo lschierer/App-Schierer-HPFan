@@ -145,9 +145,9 @@ sub _add_person_node {
     my $surname_obj = $primary_name->primary_surname;
     my $surname     = $surname_obj ? $surname_obj->surname : '';
 
-    # Build display name - use "Unknown (ID)" format when surname but no given name
+ # Build display name - use "Unknown (ID)" format when surname but no given name
     if ($surname && !$given) {
-      my $gramps_id = $person->gramps_id // '';
+      my $gramps_id       = $person->gramps_id // '';
       my $unknown_with_id = $gramps_id ? "Unknown ($gramps_id)" : "Unknown";
       $display_name = "$unknown_with_id $surname";
     }
