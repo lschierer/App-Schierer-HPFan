@@ -1,3 +1,0 @@
-<link rel="stylesheet" href="/css/classlist.css" />
-
-<%== render_classlist_tables $content %>
