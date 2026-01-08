@@ -77,7 +77,8 @@ sub build ($self) {
             return $self->render('page/markdown.tt', $vars);
           }
           else {
-            return $self->render_markdown_page($entry->{path}, $route, { site_logo => $self->site_logo() });
+            return $self->render_markdown_page($entry->{path}, $route,
+              { site_logo => $self->site_logo() });
           }
 
         },
@@ -87,35 +88,40 @@ sub build ($self) {
   }
 
   $self->logger->info("Registered " . scalar(@routes) . " static Root routes");
-  
+
   # Add catch-all route for directory gaps (AutoIndex)
-  $self->router->add('*', {
-    to => sub ($self, $ctx, @args) {
-      return $self->handle_directory_gap($ctx);
-    },
-    action => 'http.get',
-  });
+  $self->router->add(
+    '*',
+    {
+      to => sub ($self, $ctx, @args) {
+        return $self->handle_directory_gap($ctx);
+      },
+      action => 'http.get',
+    }
+  );
 }
 
 sub handle_directory_gap ($self, $ctx) {
   my $path = $ctx->req->path;
-  $path =~ s|^/||;  # Remove leading slash
-  
+  $path =~ s|^/||;    # Remove leading slash
+
   my $dir_path = $self->base_dir->child($path);
-  
+
   # Check if this is a directory without index.md but has children
-  if ($dir_path->is_dir && $dir_path->children && !$dir_path->child('index.md')->exists) {
+  if ( $dir_path->is_dir
+    && $dir_path->children
+    && !$dir_path->child('index.md')->exists) {
     my $entries = $self->generate_directory_index($dir_path);
-    
+
     # Generate title from path
     my $title = $path || 'Home';
     $title =~ s|/| - |g;
     $title =~ s/[-_]/ /g;
     $title =~ s/\b(\w)/\U$1/g;
-    
-    my $current_year = (localtime)[5] + 1900;
+
+    my $current_year    = (localtime)[5] + 1900;
     my $navigation_html = $self->render_navigation($ctx->req->path);
-    
+
     my $vars = {
       entries      => $entries,
       title        => $title,
@@ -125,16 +131,19 @@ sub handle_directory_gap ($self, $ctx) {
       navigation   => $navigation_html,
       site_logo    => $self->site_logo(),
     };
-    
+
     return $self->render('page/autoindex.tt', $vars);
   }
-  
+
   # Not found
-  return $self->render('error.tt', {
-    title => 'Page Not Found',
-    message => 'The requested page was not found.',
-    current_year => (localtime)[5] + 1900,
-  });
+  return $self->render(
+    'error.tt',
+    {
+      title        => 'Page Not Found',
+      message      => 'The requested page was not found.',
+      current_year => (localtime)[5] + 1900,
+    }
+  );
 }
 
 sub _build_Root_Tree ($self) {

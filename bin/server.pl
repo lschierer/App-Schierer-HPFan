@@ -18,14 +18,14 @@ GetOptions(
   'mode=s'   => \$mode,
 ) or die "Error in command line arguments\n";
 
-unless($mode =~ /(development|staging|production)/ ){
+unless ($mode =~ /(development|staging|production)/) {
   croak("mode must be one of development|staging|production, not '$mode'.");
 }
 
-my $config_dir = 'share/conf';
+my $config_dir   = 'share/conf';
 my $local_config = App::Schierer::HPFan->getConfig($mode, $config_dir);
 
 App::Schierer::HPFan->new(
-  initial_config  => $local_config,
-  env             => $mode,
+  initial_config => $local_config,
+  env            => $mode,
 )->run;
