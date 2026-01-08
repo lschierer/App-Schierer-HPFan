@@ -1,6 +1,8 @@
-<link rel="stylesheet" href="/css/HPNOFP.css" />
-<img src="/images/HPNOFP/cover.jpg" class="cover-image"/>
+[% WRAPPER layouts/default.tt %]
+  <link rel="stylesheet" href="/css/HPNOFP.css" />
+  <img src="/images/HPNOFP/cover.jpg" class="cover-image"/>
 
-[% IF nav_html %]
-  [% nav_html %]
+  [% IF nav_html %]
+    [% nav_html %]
+  [% END %]
 [% END %]

@@ -1,33 +1,17 @@
-package App::Schierer::HPFan::HPNOFP;
+package App::Schierer::HPFan::Controller::HPNOFP;
 
 use v5.42.0;
-use strict;
-use warnings;
-use Moo;
+use utf8::all;
+use Mooish::Base -standard;
+extends 'Thunderhorse::Controller';
+with 'WebFramework::Role::Logger';
+
 use Path::Tiny;
 use Path::Iterator::Rule;
 use XML::LibXML;
 use HTML::HTML5::Writer;
 use HTML::Selector::XPath qw(selector_to_xpath);
-use Encode                qw(encode_utf8);
-use Future::AsyncAwait;
-use Log::Log4perl qw(get_logger);
-use Scalar::Util  qw(blessed);
-
-has logger => (
-  is      => 'ro',
-  default => sub { get_logger(__PACKAGE__) },
-);
-
-has template => (
-  is       => 'ro',
-  required => 1,
-);
-
-has navigation => (
-  is       => 'ro',
-  required => 1,
-);
+use Scalar::Util          qw(blessed);
 
 has site_logo => (
   is      => 'ro',
@@ -49,12 +33,9 @@ has nav_html => (
   default => '',
 );
 
-has pages => (is => 'lazy',);
+has pages => (is => 'lazy');
 
-sub _build_pages {
-  my ($self) = @_;
-
-  my $logger = $self->logger;
+sub _build_pages ($self) {
   my %pages;
 
   my $rule = Path::Iterator::Rule->new;
@@ -73,7 +54,7 @@ sub _build_pages {
     $route = $self->base_route . $route;
     $route =~ s{//}{/}g;
 
-    $logger->debug("Registering route '$route' for '$file_path'");
+    $self->logger->debug("Registering route '$route' for '$file_path'");
 
     $pages{$route} = $processed;
   }
@@ -81,23 +62,27 @@ sub _build_pages {
   return \%pages;
 }
 
-async sub register_routes {
-  my ($self, $nav, $router) = @_;
+sub build ($self) {
+  $self->register_routes($self->router);
+}
 
-  my $logger = $self->logger;
-  my $pages  = $self->pages;
+sub register_routes ($self, $router) {
+  my $pages = $self->pages;
 
   # Register base index route
-  $nav->add_route(
+  $self->add_navigation_route(
     $self->base_route,
     'Harry Potter and the Nightmares of Futures Past',
     { order => 1 }
   );
 
-  $router->get(
-    $self->base_route => async sub {
-      my ($scope, $receive, $send) = @_;
-      await $self->index_handler($scope, $receive, $send);
+  $router->add(
+    $self->base_route,
+    {
+      to => sub ($self, $ctx) {
+        return $self->index_handler($ctx);
+      },
+      action => 'http.get',
     }
   );
 
@@ -105,23 +90,24 @@ async sub register_routes {
   for my $route (sort keys %$pages) {
     my $content = $pages->{$route};
 
-    $nav->add_route($route, $content->{title},
+    $self->add_navigation_route($route, $content->{title},
       { order => $self->calculate_fanfiction_order($route) });
 
-    $router->get(
-      $route => async sub {
-        my ($scope, $receive, $send) = @_;
-        await $self->page_handler($scope, $receive, $send, $content);
+    $router->add(
+      $route,
+      {
+        to => sub ($self, $ctx) {
+          return $self->page_handler($ctx, $content);
+        },
+        action => 'http.get',
       }
     );
   }
 
-  $logger->info("Registered " . scalar(keys %$pages) . " HPNOFP routes");
+  $self->logger->info("Registered " . scalar(keys %$pages) . " HPNOFP routes");
 }
 
-sub calculate_fanfiction_order {
-  my ($self, $path) = @_;
-
+sub calculate_fanfiction_order ($self, $path) {
   # Remove the base path to work with just the relevant part
   my $relative_path = $path;
   $relative_path =~ s|^@{[$self->base_route]}/||;
@@ -157,77 +143,41 @@ sub calculate_fanfiction_order {
   return 500;
 }
 
-async sub index_handler {
-  my ($self, $scope, $receive, $send) = @_;
-
-  my $current_year    = (localtime)[5] + 1900;
-  my $navigation_html = $self->navigation->render($scope->{path});
+sub index_handler ($self, $ctx) {
+  my $current_path    = $ctx->req->path;
+  my $navigation_html = $self->render_navigation($current_path);
 
   my $vars = {
     title        => 'Harry Potter and the Nightmares of Futures Past',
-    current_year => $current_year,
+    current_year => (localtime)[5] + 1900,
     css_files    => ['/css/navigation.css', '/css/HPNOFP.css'],
     sidebar      => 1,
-    navigation   => $navigation_html,
-    nav_html     => $self->nav_html,
+    nav_html     => $navigation_html,
     site_logo    => $self->site_logo,
   };
 
-  my $html = $self->template->render('hpnofp/index.tt', $vars,
-    { layout => 'layouts/default.tt' });
-
-  my $bytes = encode_utf8($html);
-
-  await $send->({
-    type    => 'http.response.start',
-    status  => 200,
-    headers => [['content-type', 'text/html; charset=utf-8']],
-  });
-  await $send->({
-    type => 'http.response.body',
-    body => $bytes,
-    more => 0,
-  });
+  return $self->render('hpnofp/index.tt', $vars);
 }
 
-async sub page_handler {
-  my ($self, $scope, $receive, $send, $content) = @_;
-
-  my $current_year    = (localtime)[5] + 1900;
-  my $navigation_html = $self->navigation->render($scope->{path});
+sub page_handler ($self, $ctx, $content) {
+  my $current_path    = $ctx->req->path;
+  my $navigation_html = $self->render_navigation($current_path);
 
   my $vars = {
     content      => $content,
     title        => $content->{title},
-    current_year => $current_year,
+    current_year => (localtime)[5] + 1900,
     css_files    => ['/css/navigation.css', '/css/HPNOFP.css'],
     sidebar      => 1,
-    navigation   => $navigation_html,
+    nav_html     => $navigation_html,
     site_logo    => $self->site_logo,
   };
 
-  my $html = $self->template->render('hpnofp/page.tt', $vars,
-    { layout => 'layouts/default.tt' });
-
-  my $bytes = encode_utf8($html);
-
-  await $send->({
-    type    => 'http.response.start',
-    status  => 200,
-    headers => [['content-type', 'text/html; charset=utf-8']],
-  });
-  await $send->({
-    type => 'http.response.body',
-    body => $bytes,
-    more => 0,
-  });
+  return $self->render('hpnofp/page.tt', $vars);
 }
 
-sub process_xhtml_file {
-  my ($self, $file) = @_;
-
-  my $logger = $self->logger;
-  $logger->info("Processing XHTML file: $file");
+sub process_xhtml_file ($self, $file) {
+  $self->logger->info("Processing XHTML file: $file");
 
   my @warns;
   local $SIG{__WARN__} = sub { push @warns, @_ };
@@ -245,11 +195,11 @@ sub process_xhtml_file {
     my $err = $@;
     if (blessed($err) && $err->isa('XML::LibXML::Error')) {
       chomp(my $msg = $err->as_string);
-      $logger->error($msg);
+      $self->logger->error($msg);
     }
     else {
       chomp $err;
-      $logger->error("XML::LibXML load_html failed: $err");
+      $self->logger->error("XML::LibXML load_html failed: $err");
     }
     return undef;
   }
@@ -257,7 +207,7 @@ sub process_xhtml_file {
   # Log warnings
   for my $w (@warns) {
     chomp $w;
-    $logger->warn($w);
+    $self->logger->warn($w);
   }
 
   my $writer = HTML::HTML5::Writer->new(markup_declaration => 0);
@@ -266,13 +216,13 @@ sub process_xhtml_file {
 
   # Extract title from h2 tag
   my @h2nodes = $dom->findnodes('//h2');
-  $logger->debug("Found " . scalar(@h2nodes) . " h2 nodes in $name");
+  $self->logger->debug("Found " . scalar(@h2nodes) . " h2 nodes in $name");
 
   my $titleNode = $h2nodes[0];
   my $titleText = $titleNode ? $titleNode->textContent : undef;
   $titleText //= "Harry Potter and the Nightmares of Futures Past - $name";
 
-  $logger->debug("Using title: $titleText for $name");
+  $self->logger->debug("Using title: $titleText for $name");
 
   # Fix CSS links
   foreach my $linkNode ($dom->findnodes('//link[@href]')) {
@@ -328,13 +278,13 @@ sub process_xhtml_file {
 
   # Extract TOC navigation if this is the TOC file
   if ($titleText eq 'Table of Contents') {
-    $logger->debug("Found TOC file, extracting nav fragment");
+    $self->logger->debug("Found TOC file, extracting nav fragment");
 
     my $navXpath   = selector_to_xpath('.coverpage');
     my $navElement = $dom->findnodes($navXpath)->[0];
     if (!$navElement) {
       $navElement = $dom->findnodes('//main')->[0];
-      $logger->debug("No nav element found, using main element instead");
+      $self->logger->debug("No nav element found, using main element instead");
     }
 
     if ($navElement) {
@@ -352,7 +302,7 @@ sub process_xhtml_file {
       $self->nav_html($nav_html);
     }
     else {
-      $logger->warn("Could not find nav or main element in TOC file");
+      $self->logger->warn("Could not find nav or main element in TOC file");
     }
   }
 
@@ -376,3 +326,16 @@ sub process_xhtml_file {
 }
 
 1;
+
+__END__
+
+=head1 NAME
+
+App::Schierer::HPFan::Controller::HPNOFP - Controller for Harry Potter and the Nightmares of Futures Past
+
+=head1 DESCRIPTION
+
+Thunderhorse controller that processes and serves XHTML files from the HPNOFP
+ebook, converting them to HTML pages with proper navigation and styling.
+
+=cut
