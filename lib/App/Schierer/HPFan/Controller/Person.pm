@@ -1,73 +1,96 @@
-package App::Schierer::HPFan::Person;
+package App::Schierer::HPFan::Controller::Person;
 
-use strict;
-use warnings;
 use v5.42.0;
 use utf8::all;
-use Moo;
+use Mooish::Base -standard;
+extends 'Thunderhorse::Controller';
+with 'App::Schierer::HPFan::Role::Gramps';
+with 'WebFramework::Role::Logger';
+
 use Future::AsyncAwait;
-use FindBin;
 use Path::Tiny;
 use Encode      qw(encode_utf8);
 use URI::Escape qw(uri_escape_utf8);
-use App::Schierer::HPFan::Model::Gramps;
 use App::Schierer::HPFan::View::Timeline;
 use App::Schierer::HPFan::View::FamilyTree;
-use PAGI::WebServer::Template;
-use Log::Log4perl qw(get_logger);
-
-has logger => (
-  is      => 'ro',
-  default => sub { get_logger(__PACKAGE__) },
-);
-
-has template => (is => 'lazy',);
-
-has template_file => (
-  is      => 'ro',
-  default => 'person/details.tt'
-);
-
-has navigation => (
-  is        => 'ro',
-  predicate => 'has_navigation',
-);
-
-has family_handler => (
-  is       => 'ro',
-  required => 1,
-);
 
 has site_logo => (
   is      => 'ro',
   default => '',
 );
 
-# Compose roles after attributes are declared
-with 'App::Schierer::HPFan::Role::Gramps';
-with 'PAGI::WebServer::Role::MarkdownPages';
+has template_file => (
+  is      => 'ro',
+  default => 'person/details.tt'
+);
 
-async sub register_routes ($self, $nav, $router) {
-  # Register person routes (higher priority than markdown)
-  $router->get(
-    '/Harrypedia/people/*' => async sub {
-      my ($scope, $receive, $send) = @_;
-      await $self->handle_person_route($scope, $receive, $send);
-    }
-  );
+has pages_dir => (
+  default => sub {
+    my $self = shift;
+    use FindBin;
+    return path($FindBin::Bin)->parent->child('share/pages');
+  },
+  lazy => 1,
+  is   => 'ro',
+);
+
+sub build ($self) {
+  $self->ensure_ready();
+  $self->register_routes($self->router);
 }
 
-async sub handle_person_route ($self, $scope, $receive, $send) {
-  my $path = $scope->{path};
-  my ($surname, $identifier) = $path =~ m{^/Harrypedia/people/([^/]+)/(.+)$};
+async sub register_routes ($self, $router) {
+  # Register person routes (higher priority than markdown)
+  # Route with suffix for disambiguation
+  $router->add(
+    '/Harrypedia/people/:surname/:given/:suffix',
+    {
+      to => async sub ($self, $ctx, @args) {
+        my $surname = $args[0] // 'Unknown';
+        my $given   = $args[1] // 'Unknown';
+        my $suffix  = $args[2] // '';
+        return await $self->handle_person_route($ctx, $surname, $given,
+          $suffix);
+      },
+      action => 'http.get',
+    }
+  );
 
+  # Route without suffix
+  $router->add(
+    '/Harrypedia/people/:surname/:given',
+    {
+      to => async sub ($self, $ctx, @args) {
+        my $surname = $args[0] // 'Unknown';
+        my $given   = $args[1] // 'Unknown';
+        return await $self->handle_person_route($ctx, $surname, $given);
+      },
+      action => 'http.get',
+    }
+  );
+  foreach my $person (values $self->gramps->people->%*) {
+    $self->logger->debug(
+      sprintf('Person Controller got person "%s" from gramps model',
+        $person->display_name)
+    );
+    $self->add_navigation_route(
+      sprintf('/Harrypedia/people/%s', $person->name_as_link_path),
+      $person->display_name, { order => 20 });
+  }
+
+}
+
+async sub handle_person_route ($self, $ctx, $surname, $identifier, $suffix = '')
+{
+  my $path = $ctx->req->path;
+  my $person;
   if ($surname && $identifier) {
     # URL decode the names
     $surname    =~ s/%([0-9A-Fa-f]{2})/chr(hex($1))/eg;
     $identifier =~ s/%([0-9A-Fa-f]{2})/chr(hex($1))/eg;
+    $suffix     =~ s/%([0-9A-Fa-f]{2})/chr(hex($1))/eg if $suffix;
 
     # Determine if identifier is a gramps_id or a given name
-    my $person;
     my $given_name;
     if ($identifier =~ /^I\d+$/) {
       # Looks like a gramps_id (e.g., I0209)
@@ -81,59 +104,58 @@ async sub handle_person_route ($self, $scope, $receive, $send) {
       }
     }
     else {
-      # Regular given name
-      $given_name = $identifier;
-      $person     = $self->get_person_by_name($surname, $given_name);
+      # Regular given name - may include suffix like "Sirius II"
+      # Try to parse suffix from identifier if no explicit suffix parameter
+      if (!$suffix
+        && $identifier =~ /^(.+?)\s+(I+|IV|V|VI|IX|Jr\.?|Sr\.?|[IVX]+)$/i) {
+        $given_name = $1;
+        $suffix     = $2;
+      }
+      else {
+        $given_name = $identifier;
+      }
+
+      $person = $self->get_person_by_name($surname, $given_name, $suffix);
     }
 
     if ($person) {
       # Check for static markdown content for this person
       my $static_content = '';
-      # Try both the identifier and given name for markdown file
-      for my $name_variant ($identifier, $given_name) {
+
+      # Build list of possible markdown filenames to try
+      my @name_variants = ($identifier, $given_name);
+
+      # If person has a suffix, also try given_name with suffix
+      if ($person->primary_name && $person->primary_name->suffix) {
+        my $person_suffix = $person->primary_name->suffix;
+        push @name_variants, "$given_name $person_suffix";
+      }
+
+      # Try all name variants for markdown file
+      for my $name_variant (@name_variants) {
+        next unless $name_variant;
         my $person_md =
           $self->pages_dir->child("Harrypedia", "people", $surname,
           "$name_variant.md");
         if ($person_md->exists) {
-          $static_content = $self->markdown->render($person_md->stringify);
+          $static_content = $self->retrieve_rendered_markdown($person_md);
           last;
         }
       }
 
+      my $html;
       eval {
-        my $html =
+        $html =
           $self->render_person_page_from_object($person, $static_content,
           $path);
-        if ($html) {
-          my $bytes = encode_utf8($html);
-          await $send->({
-            type    => 'http.response.start',
-            status  => 200,
-            headers => [['content-type', 'text/html; charset=utf-8']],
-          });
-          await $send->({
-            type => 'http.response.body',
-            body => $bytes,
-            more => 0,
-          });
-          return;
-        }
       };
 
       if ($@) {
-        warn "Error rendering person page: $@";
-        await $send->({
-          type    => 'http.response.start',
-          status  => 500,
-          headers => [['content-type', 'text/plain']],
-        });
-        await $send->({
-          type => 'http.response.body',
-          body => "Internal Server Error: $@",
-          more => 0,
-        });
-        return;
+        $self->logger->error("Error rendering person page: $@");
+        return $self->render_error(500, "Internal Server Error: $@");
       }
+
+      return $html if $html;
     }
   }
 
@@ -142,25 +164,18 @@ async sub handle_person_route ($self, $scope, $receive, $send) {
   if ($surname_only) {
     $surname_only =~ s/%([0-9A-Fa-f]{2})/chr(hex($1))/eg;
 
-    eval {
-      my $html =
-        await $self->family_handler->render_family_page($surname_only, '',
-        $path);
-      if ($html) {
-        my $bytes = encode_utf8($html);
-        await $send->({
-          type    => 'http.response.start',
-          status  => 200,
-          headers => [['content-type', 'text/html; charset=utf-8']],
-        });
-        await $send->({
-          type => 'http.response.body',
-          body => $bytes,
-          more => 0,
-        });
-        return;
+    # Get the Family controller and delegate to it
+    my $family_controller = $self->app->get_controller('Family');
+    if ($family_controller) {
+      my $html;
+      eval {
+        $html = await $family_controller->family_page($ctx, $surname_only);
+      };
+      if ($@) {
+        $self->logger->error("Error rendering family page: $@");
       }
-    };
+      return $html if $html;
+    }
   }
 
   # Try markdown fallback before returning 404
@@ -169,83 +184,30 @@ async sub handle_person_route ($self, $scope, $receive, $send) {
   my $md_file = $self->pages_dir->child("$md_path.md");
 
   if ($md_file->exists) {
-    # Use role's markdown rendering
-    my $navigation_html = '';
-    if ($self->has_navigation) {
-      $navigation_html = $self->navigation->render($path);
-    }
+    my $navigation_html = $self->render_navigation($path);
 
-    my $html = $self->render_markdown_page(
-      $md_file, $path,
-      {
-        navigation => $navigation_html,
-        site_logo  => $self->site_logo,
-        css_files  => ['/css/navigation.css', '/css/gramps.css'],
-      }
-    );
+    # Render markdown content
+    my $content = $self->retrieve_rendered_markdown($md_file);
 
-    if ($html) {
-      my $bytes = encode_utf8($html);
-      await $send->({
-        type    => 'http.response.start',
-        status  => 200,
-        headers => [['content-type', 'text/html; charset=utf-8']],
-      });
-      await $send->({
-        type => 'http.response.body',
-        body => $bytes,
-        more => 0,
-      });
-      return;
-    }
+    my $vars = {
+      content => $content,
+      title   => $self->parse_markdown_frontmatter($md_file)->{title}
+        // (defined($person) ? $person->display_name : 'Unknown Person'),
+      current_year => (localtime)[5] + 1900,
+      css_files    => ['/css/navigation.css', '/css/gramps.css'],
+      sidebar      => 1,
+      nav_html     => $navigation_html,
+      site_logo    => $self->site_logo,
+    };
+
+    return $self->render('page/markdown.tt', $vars);
   }
 
   # Not found
-  await $send->({
-    type    => 'http.response.start',
-    status  => 404,
-    headers => [['content-type', 'text/plain']],
-  });
-  await $send->({
-    type => 'http.response.body',
-    body => 'Person or Family Not Found',
-    more => 0,
-  });
+  return $self->render_error(404, 'Person or Family Not Found');
 }
 
-sub _build_gramps {
-  my $self = shift;
-
-  $self->logger->info("Initializing Gramps model...");
-
-  my $gramps = App::Schierer::HPFan::Model::Gramps->new(
-    gramps_export => path('share/data/gramps'),
-    gramps_db     => path('share/grampsdb/sqlite.db'),
-  );
-
-  $self->logger->info("Importing Gramps data...");
-  $gramps->execute_import();
-
-  $self->logger->info("Building Gramps indexes...");
-  $gramps->build_indexes();
-
-  $self->logger->info("Gramps initialization complete");
-
-  return $gramps;
-}
-
-sub _build_template {
-  my $self = shift;
-
-  return PAGI::WebServer::Template->new(
-    template_dir => 'templates',
-    include_path => ['templates', 'templates/partials']
-  );
-}
-
-sub prepare_family_as_parent {
-  my ($self, $family, $person) = @_;
-
+sub prepare_family_as_parent ($self, $family, $person) {
   my $spouse_obj = $self->gramps->find_spouse($person, $family);
 
   my $spouse =
@@ -275,9 +237,7 @@ sub prepare_family_as_parent {
   };
 }
 
-sub prepare_family_as_child {
-  my ($self, $family, $person) = @_;
-
+sub prepare_family_as_child ($self, $family, $person) {
   # Find this person's child reference to get relationship types
   my $child_ref;
   for my $cr (@{ $family->child_ref_list // [] }) {
@@ -315,9 +275,7 @@ sub prepare_family_as_child {
   };
 }
 
-sub generate_family_tree {
-  my ($self, $person) = @_;
-
+sub generate_family_tree ($self, $person) {
   my $svg;
   eval {
     my $tree = App::Schierer::HPFan::View::FamilyTree->new(
@@ -337,11 +295,8 @@ sub generate_family_tree {
   return $svg;
 }
 
-sub render_person_page_from_object {
-  my ($self, $person, $static_content, $current_path) = @_;
-
-  my $logger = get_logger(__PACKAGE__);
-
+sub render_person_page_from_object ($self, $person, $static_content,
+  $current_path) {
   # Get events
   my $events = $self->gramps->find_events_for_person($person);
 
@@ -364,7 +319,7 @@ sub render_person_page_from_object {
   my @childof =
     map { $self->prepare_family_as_child($_, $person) } @$childof_raw;
 
-  # Generate family tree and timeline
+  # Generate family tree
   my $family_tree = $self->generate_family_tree($person);
 
   # Get current year for footer
@@ -373,11 +328,8 @@ sub render_person_page_from_object {
   # Prepare display name for title
   my $display_name = $self->display_name_for_person($person);
 
-  # Render navigation if available
-  my $navigation_html = '';
-  if ($self->has_navigation && $current_path) {
-    $navigation_html = $self->navigation->render($current_path);
-  }
+  # Render navigation
+  my $navigation_html = $self->render_navigation($current_path);
 
   # Prepare template variables
   my $vars = {
@@ -393,7 +345,7 @@ sub render_person_page_from_object {
     current_year => $current_year,
     css_files    => ['/css/gramps.css', '/css/navigation.css'],
     sidebar      => 1,
-    navigation   => $navigation_html,
+    nav_html     => $navigation_html,
     site_logo    => $self->site_logo,
   };
 
@@ -403,16 +355,12 @@ sub render_person_page_from_object {
       . scalar(@childof)
       . " parent families");
 
-  # Render template with layout
-  my $html = $self->template->render($self->template_file, $vars,
-    { layout => 'layouts/default.tt' });
-
-  return $html;
+  # Render template
+  return $self->render($self->template_file, $vars);
 }
 
-sub render_person_page {
-  my ($self, $surname, $given_name, $static_content, $current_path) = @_;
-
+sub render_person_page ($self, $surname, $given_name, $static_content,
+  $current_path) {
   my $person = $self->get_person_by_name($surname, $given_name);
   return unless $person;
 
@@ -421,3 +369,17 @@ sub render_person_page {
 }
 
 1;
+
+__END__
+
+=head1 NAME
+
+App::Schierer::HPFan::Controller::Person - Person detail page controller
+
+=head1 DESCRIPTION
+
+Thunderhorse controller for handling individual person detail pages from the
+genealogical database. Displays person information, events, family relationships,
+and family trees.
+
+=cut

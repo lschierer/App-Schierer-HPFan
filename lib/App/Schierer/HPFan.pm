@@ -13,7 +13,11 @@ our $VERSION = 'v0.03.0';
 sub build ($self) {
   $self->SUPER::build();
 
+  # Load modules first
+  $self->load_module('^App::Schierer::HPFan::Module::ClassLists');
+
   # it appears that the top one wins?
+  $self->load_controller('Person');
   $self->load_controller('Family');
   $self->load_controller('Bookmarks');
   $self->load_controller('Root');

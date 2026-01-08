@@ -1,23 +1,21 @@
-package App::Schierer::HPFan::ClassLists;
+package App::Schierer::HPFan::Module::ClassLists;
 
 use v5.42.0;
-use strict;
-use warnings;
-use Moo;
+use utf8::all;
+use Mooish::Base -standard;
 with 'App::Schierer::HPFan::Role::Gramps';
+with 'WebFramework::Role::Logger';
+extends 'Thunderhorse::Module';
+use Future::AsyncAwait;
+
 use Mojo::DOM;
-use Mojo::Util    qw(xml_escape);
-use Log::Log4perl qw(get_logger);
+use Mojo::Util qw(xml_escape);
 
-has class_lists => (is => 'lazy',);
+has class_lists => (is => 'lazy');
 
-sub _build_class_lists {
-  my ($self) = @_;
-
-  my $logger = get_logger(__PACKAGE__);
-
+sub _build_class_lists ($self) {
   my @events = values %{ $self->gramps->events };
-  $logger->debug(
+  $self->logger->debug(
     sprintf('buildClassList found %s events to filter.', scalar @events));
 
   my %ClassLists;
@@ -26,19 +24,19 @@ sub _build_class_lists {
   my @SortingEvents;
   foreach my $event (@events) {
     if ($event->type->to_string eq 'Hogwarts Sorting') {
-      $logger->debug(sprintf(
+      $self->logger->debug(sprintf(
         'pushing event %s with type %s', $event->handle, $event->type));
       push @SortingEvents, $event;
     }
   }
-  $logger->debug(
+  $self->logger->debug(
     sprintf('buildClassList found %s sorting events.', scalar @SortingEvents));
 
   # Build class lists by date
   foreach my $event (@SortingEvents) {
     my @matches;
     my $eventDate = $event->date->to_string;
-    $logger->debug(sprintf(
+    $self->logger->debug(sprintf(
       'event %s has date %s and type %s.',
       $event->handle, $eventDate, $event->type
     ));
@@ -50,7 +48,7 @@ sub _build_class_lists {
       push @matches, $person;
     }
 
-    $logger->debug(sprintf(
+    $self->logger->debug(sprintf(
       'buildClassList found %s people sorted in %s: %s',
       scalar @matches,
       $eventDate, join(', ', map { $_->display_name } @matches)
@@ -61,27 +59,37 @@ sub _build_class_lists {
   return \%ClassLists;
 }
 
-sub render_classlist_tables {
-  my ($self, $html) = @_;
+sub build ($self) {
+  $self->ensure_ready();
 
-  my $logger = get_logger(__PACKAGE__);
+  weaken $self;
 
+  # Register the render_classlist_tables helper method for controllers
+  $self->register(
+    controller => render_classlist_tables => async sub ($controller, $html) {
+      return await $self->_render_classlist_tables($html);
+    }
+  );
+}
+
+async sub _render_classlist_tables ($self, $html) {
   my $class_lists = $self->class_lists;
 
-  $logger->debug('ClassLists is ' . ref($class_lists));
+  $self->logger->debug('ClassLists is ' . ref($class_lists));
   if (scalar keys %$class_lists == 0) {
-    $logger->error('ClassLists has no keys!!');
+    $self->logger->error('ClassLists has no keys!!');
     return $html;
   }
 
   my $dom = Mojo::DOM->new($html);
 
-  # Find every <classlisttable year="YYYY">
+  # Find every <classlisttable year="YYYY"> or <ClassListTable year="YYYY">
+  # Note: Mojo::DOM normalizes HTML tag names to lowercase
   for my $node ($dom->find('classlisttable[year]')->each) {
     my $year = $node->attr('year') // '';
 
     my $matches = $class_lists->{ sprintf('%s-09-01', $year) } // [];
-    $logger->debug(sprintf(
+    $self->logger->debug(sprintf(
       'render_classlist_tables retrieved %s students in %s',
       scalar @$matches, $year
     ));
@@ -97,21 +105,25 @@ sub render_classlist_tables {
         '<th class="spectrum-Table-headCell">Blood Status</th>',
         '<th class="spectrum-Table-headCell">Economic Status</th>',
       );
-      my $tbody = join '', map {
-        my $name   = xml_escape($_->display_name // '');
-        my $gender = xml_escape($_->gender       // '');
-        my $house  = xml_escape($self->person_house($_));
-        my $blood  = xml_escape($self->person_blood_status($_));
-        my $econ   = xml_escape($self->person_economic_status($_));
 
-        qq{<tr class="spectrum-Table-row">
+      # Process each person asynchronously to get their data
+      my @rows;
+      for my $person (@$matches) {
+        my $name   = xml_escape($person->display_name // '');
+        my $gender = xml_escape($person->gender       // '');
+        my $house  = xml_escape(await $self->person_house($person));
+        my $blood  = xml_escape(await $self->person_blood_status($person));
+        my $econ   = xml_escape(await $self->person_economic_status($person));
+
+        push @rows, qq{<tr class="spectrum-Table-row">
                     <td class="spectrum-Table-cell">$name</td>
                     <td class="spectrum-Table-cell">$gender</td>
                     <td class="spectrum-Table-cell">$house</td>
                     <td class="spectrum-Table-cell">$blood</td>
                     <td class="spectrum-Table-cell">$econ</td>
-                  </tr>}
-      } @$matches;
+                  </tr>};
+      }
+      my $tbody = join '', @rows;
 
       $replacement = qq{
               <table id="$year" class="spectrum-Table spectrum-Table--sizeM spectrum-Table--compact spectrum-Table--quiet">
@@ -134,3 +146,25 @@ q{<div class="classlisttable-empty">No sorting records found for %s.</div>},
 }
 
 1;
+
+__END__
+
+=head1 NAME
+
+App::Schierer::HPFan::Module::ClassLists - Thunderhorse module for rendering Hogwarts class lists
+
+=head1 DESCRIPTION
+
+This module builds class lists from Gramps genealogical data (specifically Hogwarts
+Sorting events) and provides a helper method to post-process HTML content, replacing
+custom <classlisttable year="YYYY"> tags with rendered HTML tables.
+
+=head1 REGISTERED METHODS
+
+=head2 render_classlist_tables($html)
+
+Post-processes HTML content, replacing <classlisttable year="YYYY"> tags with
+tables showing students sorted in that year, including their house, blood status,
+and economic status.
+
+=cut

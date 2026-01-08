@@ -1,3 +1,4 @@
+[% WRAPPER layouts/default.tt %]
 <article>
   [% IF comments %]
     [% comments %]
@@ -57,3 +58,4 @@
     <!-- No Items Present -->
   [% END %]
 </article>
+[% END %]

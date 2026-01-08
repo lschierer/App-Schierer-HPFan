@@ -172,7 +172,7 @@ async sub get_people_with_unknown_surname ($self) {
   return \@unknown;
 }
 
-sub get_person_by_name ($self, $surname, $given_name) {
+sub get_person_by_name ($self, $surname, $given_name, $suffix = '') {
   my $people = $self->gramps->people;
 
   for my $person (values %$people) {
@@ -182,8 +182,17 @@ sub get_person_by_name ($self, $surname, $given_name) {
     my $p_surname_obj = $primary_name->primary_surname;
     my $p_surname     = $p_surname_obj ? $p_surname_obj->surname : '';
     my $p_given       = $primary_name->first_name // '';
+    my $p_suffix      = $primary_name->suffix     // '';
 
-    if ($p_surname eq $surname && $p_given eq $given_name) {
+    # Match surname and given name
+    next unless ($p_surname eq $surname && $p_given eq $given_name);
+
+    # If suffix is provided, use it for disambiguation
+    if ($suffix) {
+      return $person if $p_suffix eq $suffix;
+    }
+    else {
+      # If no suffix provided, return first match (existing behavior)
       return $person;
     }
   }
@@ -193,83 +202,23 @@ sub get_person_by_name ($self, $surname, $given_name) {
 
 sub link_for_person ($self, $person) {
   return '' unless $person;
-
-  my $primary_name = $person->primary_name;
-  return '' unless $primary_name;
-
-  my $surname_obj = $primary_name->primary_surname;
-  my $surname     = $surname_obj ? $surname_obj->surname : '';
-  my $given       = $primary_name->first_name // '';
-
-  return '' unless $surname;    # Need at least a surname
-
-  my $surname_enc = uri_escape_utf8($surname);
-
-  if ($given) {
-    my $given_enc = uri_escape_utf8($given);
-    return "/Harrypedia/people/$surname_enc/$given_enc";
-  }
-  else {
-    # No given name - use gramps_id
-    my $gramps_id = $person->gramps_id // '';
-    return $gramps_id ? "/Harrypedia/people/$surname_enc/$gramps_id" : '';
-  }
+  return sprintf('/Harrypedia/people/%s', $person->name_as_link_path);
 }
 
 sub display_name_for_person ($self, $person) {
   return 'Unknown' unless $person;
 
-  my $primary_name = $person->primary_name;
-  return 'Unknown' unless $primary_name;
+  # Use Person model's display_name method which includes suffix
+  my $display_name = $person->display_name;
+  return $display_name if $display_name;
 
-  my $given       = $primary_name->first_name // '';
-  my $surname_obj = $primary_name->primary_surname;
-  my $surname     = $surname_obj ? $surname_obj->surname : '';
-
-  # If we have surname but no given name, use "Unknown (ID)" format
-  if ($surname && !$given) {
-    my $gramps_id       = $person->gramps_id // '';
-    my $unknown_with_id = $gramps_id ? "Unknown ($gramps_id)" : "Unknown";
-    return "$unknown_with_id $surname";
-  }
-
-  my $name = join(' ', grep {$_} ($given, $surname));
-  return $name || 'Unknown';
+  return 'Unknown';
 }
 
 sub prepare_person_data ($self, $person) {
-  my $primary_name = $person->primary_name;
-  my $given        = $primary_name ? ($primary_name->first_name // '') : '';
-  my $surname_obj  = $primary_name ? $primary_name->primary_surname    : undef;
-  my $surname      = $surname_obj  ? ($surname_obj->surname // '')     : '';
-
- # Build display name - use "Unknown (ID)" format when surname but no given name
-  my $display_name;
-  if ($surname && !$given) {
-    my $gramps_id       = $person->gramps_id // '';
-    my $unknown_with_id = $gramps_id ? "Unknown ($gramps_id)" : "Unknown";
-    $display_name = "$unknown_with_id $surname";
-  }
-  else {
-    $display_name = join(' ', grep {$_} ($given, $surname)) || 'Unknown';
-  }
-
-  # Build link - use gramps_id when no given name
-  my $link = '';
-  if ($surname) {
-    my $surname_enc = uri_escape_utf8($surname);
-    if ($given) {
-      my $given_enc = uri_escape_utf8($given);
-      $link = "/Harrypedia/people/$surname_enc/$given_enc";
-    }
-    else {
-      # No given name - use gramps_id in URL
-      my $gramps_id = $person->gramps_id // '';
-      if ($gramps_id) {
-        $link = "/Harrypedia/people/$surname_enc/$gramps_id";
-      }
-    }
-  }
+  # Use the helper methods that properly handle suffixes
+  my $display_name = $self->display_name_for_person($person);
+  my $link         = $self->link_for_person($person);
 
   # Get birth and death dates
   my $events = $self->gramps->find_events_for_person($person);

@@ -26,11 +26,11 @@ sub _build_surnames ($self) {
 }
 
 sub build ($self) {
-  $self->register_routes($self->router);
   $self->ensure_ready();
+  $self->register_routes($self->router);
 }
 
-sub register_routes ($self, $router) {
+async sub register_routes ($self, $router) {
   # Register catch-all route for family pages
 
   $router->add(
@@ -43,6 +43,17 @@ sub register_routes ($self, $router) {
       action => 'http.get',
     }
   );
+  foreach my $surname (keys %{ await $self->get_all_surnames }) {
+    $self->logger->debug(
+      sprintf('Family Controller got surname "%s" from get_all_surnames',
+        $surname)
+    );
+    $self->add_navigation_route(
+      sprintf('/Harrypedia/people/%s', $surname),
+      sprintf('%s Family',             $surname),
+      { order => 20 }
+    );
+  }
 }
 
 async sub family_index ($self, $ctx) {
@@ -216,7 +227,7 @@ sub _get_children_in_family ($self, $person, $family_members) {
   my @children;
 
   # Get the target surname from the person
-  my $target_surname = $self->_get_person_surname($person);
+  my $target_surname = $person->get_surname // 'Unknown';
 
   my $families = $self->gramps->find_families_as_parent($person);
 
@@ -226,8 +237,10 @@ sub _get_children_in_family ($self, $person, $family_members) {
     my $mother = $self->gramps->find_person_by_handle($family->mother_handle);
 
     # Get surnames for both parents
-    my $father_surname = $father ? $self->_get_person_surname($father) : '';
-    my $mother_surname = $mother ? $self->_get_person_surname($mother) : '';
+    my $father_surname = $father ? $father->get_surname : '';
+    $father_surname //= 'Unknown';
+    my $mother_surname = $mother ? $mother->get_surname : '';
+    $mother_surname //= 'Unknown';
 
     # Determine if we should include children from this family
     my $include_children = 0;
@@ -264,19 +277,6 @@ sub _get_children_in_family ($self, $person, $family_members) {
   }
 
   return \@children;
-}
-
-# Helper to get a person's surname
-sub _get_person_surname ($self, $person) {
-  return '' unless $person;
-
-  my $primary_name = $person->primary_name;
-  return '' unless $primary_name;
-
-  my $surname_obj = $primary_name->primary_surname;
-  return '' unless defined($surname_obj);
-
-  return $surname_obj->surname // '';
 }
 
 # Compare two people by birth date

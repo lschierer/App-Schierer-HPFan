@@ -8,7 +8,8 @@ class App::Schierer::HPFan::Model::Gramps::Surname :
   use overload
     '""'       => \&to_string,
     'bool'     => sub { $_[0]->_isTrue() },
-    'cmp'      => \&_equality,
+    'cmp'      => \&_cmp,
+    'eq'       => \&_equality,
     'fallback' => 0;
 
   field $data : param;
@@ -38,8 +39,17 @@ class App::Schierer::HPFan::Model::Gramps::Surname :
     return join(' ', @parts);
   }
 
-  method _equality ($other, $swap = 0) {
+  method _cmp ($other, $swap = 0) {
     return $self->display_name cmp $other->display_name;
+  }
+
+  method _equality ($other, $swap = 0) {
+    if ( ref($other)
+      && blessed($other)
+      && $other->isa('App::Schierer::HPFan::Model::Gramps::Surname')) {
+      return $self->display_name eq $other->display_name;
+    }
+    return $self->display_name eq "$other";
   }
 
   method to_string() {

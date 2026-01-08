@@ -76,7 +76,7 @@ sub render_markdown_file ($self, $file_path, $opts = {}) {
   );
 }
 
-sub render_markdown_snippet ($self, $snippet) {
+sub retrieve_rendered_markdown ($self, $snippet) {
 
   if (not defined $snippet or length($snippet) == 0) {
     $self->logger->warn('snippet must be present!!');

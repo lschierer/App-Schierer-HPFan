@@ -120,7 +120,7 @@ sub register_routes ($self, $router) {
     my $entry = $tree->{$route};
 
     # Add to navigation
-    $self->add_navigation_route($route, $entry->{title}, { order => 10 });
+    $self->add_navigation_route($route, $entry->{title}, { order => 30 });
 
     # Determine if this is an index or page route
     if ($entry->{path}->basename eq 'index.yaml') {
@@ -184,7 +184,7 @@ sub bookmark_index ($self, $ctx, $entry, $all_routes) {
   # Render comments as markdown if present
   my $comments_html = '';
   if ($entry->{comments}) {
-    $comments_html = $self->render_markdown_snippet(\$entry->{comments});
+    $comments_html = $self->markdown_string_to_html($entry->{comments});
   }
 
   my $current_year    = (localtime)[5] + 1900;
@@ -215,14 +215,14 @@ sub bookmark_page ($self, $ctx, $entry) {
   # Render top-level comments as markdown if present
   my $comments_html = '';
   if ($entry->{comments}) {
-    $comments_html = $self->render_markdown_snippet(\$entry->{comments});
+    $comments_html = $self->markdown_string_to_html($entry->{comments});
   }
 
   # Render each item's comments as markdown
   for my $item (@items) {
     if ($item->{comments}) {
       $item->{comments_html} =
-        $self->render_markdown_snippet(\$item->{comments});
+        $self->markdown_string_to_html($item->{comments});
     }
   }
 

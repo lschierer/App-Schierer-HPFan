@@ -98,9 +98,9 @@ class App::Schierer::HPFan::Model::Gramps::Person :
     my $last;
     my $name = $primary_name;
     $self->logger->debug(sprintf(
-      'picked name "%s" as primary for "%s"', $name, $self->id));
+      'picked name "%s" as primary for "%s"', $name, $self->gramps_id));
     foreach my $sn (@{ $name->surnames }) {
-      if ($sn->prim) {
+      if ($sn->primary) {
         $last = $sn;
         last;
       }
@@ -138,6 +138,40 @@ class App::Schierer::HPFan::Model::Gramps::Person :
     );
     $formatted =~ s/^\s+|\s+$//g;
     $formatted =~ s/\s+/ /g;
+    return $formatted;
+  }
+
+  method name_as_link_path {
+    my $name = $primary_name;
+    unless ($name) {
+      $self->warning("No name available for " . $self->handle);
+      return " ";
+    }
+    $self->logger->debug(sprintf(
+      'picked name "%s" as primary for "%s"', $name, $gramps_id));
+    my $last;
+
+    foreach my $sn (@{ $name->surnames }) {
+      if ($sn->primary) {
+        $last = $sn;
+        last;
+      }
+    }
+    if (not defined $last && scalar @{ $name->surnames }) {
+      $last = $name->surnames->[0];
+    }
+    my $first = $name->display ? $name->display : $gramps_id;
+    if ($first =~ /Unknown/) {
+      $first = $gramps_id;
+    }
+    my $formatted = sprintf('%s %s/%s %s',
+      $last->prefix  ? $last->prefix  : '',
+      $last->surname ? $last->surname : 'Unknown',
+      $first, $name->suffix ? $name->suffix : '',
+    );
+    $formatted =~ s/^\s+|\s+$//g;
+    $formatted =~ s/\s+/ /g;
+    $formatted =~ s/\/\s+/\//g;
     return $formatted;
   }
 

@@ -1,3 +1,4 @@
+[% WRAPPER layouts/default.tt %]
 [% iconName = 'tdesign:user-unknown' -%]
 [% iconClass = 'icon1' -%]
 [% IF person.gender == 'M' -%]
@@ -15,8 +16,6 @@
     [% LAST -%]
   [% END -%]
 [% END -%]
-
-<link rel="stylesheet" href="/css/gramps.css" />
 
 <div class="basic-info spectrum-Card spectrum-Card--horizontal" id="[% person.gramps_id %]" role="figure">
   <div class="spectrum-Card-preview">
@@ -126,3 +125,4 @@
   <h2 class="spectrum-Heading spectrum-Heading--serif spectrum-Heading--heavy spectrum-Heading--sizeXL">Analysis</h2>
   [% static_content %]
 [% END -%]
+[% END %]
