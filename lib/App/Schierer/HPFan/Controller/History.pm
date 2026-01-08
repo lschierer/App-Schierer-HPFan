@@ -20,11 +20,6 @@ require App::Schierer::HPFan::Model::History::Gramps;
 require App::Schierer::HPFan::View::Timeline;
 require App::Schierer::HPFan::Model::Gramps;
 
-has site_logo => (
-    is      => 'ro',
-    default => '',
-);
-
 has timeline_cache => (
     is      => 'rw',
     default => sub { { built => 0, events => [] } },
@@ -75,7 +70,7 @@ async sub timeline_page ($self, $ctx) {
         css_files    => ['/css/navigation.css', '/css/timeline.css'],
         sidebar      => 1,
         nav_html     => $navigation_html,
-        site_logo    => $self->site_logo,
+        site_logo    => $self->site_logo(),
     };
 
     return $self->render('history/timeline.tt', $vars);

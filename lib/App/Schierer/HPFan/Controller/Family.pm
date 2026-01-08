@@ -12,11 +12,6 @@ use Path::Tiny;
 use Encode      qw(encode_utf8);
 use URI::Escape qw(uri_escape_utf8);
 
-has site_logo => (
-  is      => 'ro',
-  default => '',
-);
-
 has surnames => (is => 'lazy',);
 
 sub _build_surnames ($self) {
@@ -67,7 +62,7 @@ async sub family_index ($self, $ctx) {
     css_files    => ['/css/gramps.css', '/css/navigation.css'],
     sidebar      => 1,
     nav_html     => $self->render_navigation($ctx->req->path),
-    site_logo    => $self->site_logo,
+    site_logo    => $self->site_logo(),
   };
 
   return $self->render('family/index.tt', $vars);
@@ -149,7 +144,7 @@ async sub family_page ($self, $ctx, $surname) {
     css_files    => ['/css/gramps.css', '/css/navigation.css'],
     sidebar      => 1,
     nav_html     => $navigation_html,
-    site_logo    => $self->site_logo,
+    site_logo    => $self->site_logo(),
   };
 
   return $self->render('family/details.tt', $vars);

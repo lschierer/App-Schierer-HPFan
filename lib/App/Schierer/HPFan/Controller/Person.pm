@@ -14,11 +14,6 @@ use URI::Escape qw(uri_escape_utf8);
 use App::Schierer::HPFan::View::Timeline;
 use App::Schierer::HPFan::View::FamilyTree;
 
-has site_logo => (
-  is      => 'ro',
-  default => '',
-);
-
 has template_file => (
   is      => 'ro',
   default => 'person/details.tt'
@@ -197,7 +192,7 @@ async sub handle_person_route ($self, $ctx, $surname, $identifier, $suffix = '')
       css_files    => ['/css/navigation.css', '/css/gramps.css'],
       sidebar      => 1,
       nav_html     => $navigation_html,
-      site_logo    => $self->site_logo,
+      site_logo    => $self->site_logo(),
     };
 
     return $self->render('page/markdown.tt', $vars);
@@ -346,7 +341,7 @@ sub render_person_page_from_object ($self, $person, $static_content,
     css_files    => ['/css/gramps.css', '/css/navigation.css'],
     sidebar      => 1,
     nav_html     => $navigation_html,
-    site_logo    => $self->site_logo,
+    site_logo    => $self->site_logo(),
   };
 
   $self->logger->debug("Rendering template with "

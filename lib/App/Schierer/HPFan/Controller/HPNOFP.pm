@@ -13,11 +13,6 @@ use HTML::HTML5::Writer;
 use HTML::Selector::XPath qw(selector_to_xpath);
 use Scalar::Util          qw(blessed);
 
-has site_logo => (
-  is      => 'ro',
-  default => '',
-);
-
 has hpnofp_dir => (
   is      => 'ro',
   default => sub { path('share/HPNOFP/src/OEBPS') },
@@ -153,7 +148,7 @@ sub index_handler ($self, $ctx) {
     css_files    => ['/css/navigation.css', '/css/HPNOFP.css'],
     sidebar      => 1,
     nav_html     => $navigation_html,
-    site_logo    => $self->site_logo,
+    site_logo    => $self->site_logo(),
   };
 
   return $self->render('hpnofp/index.tt', $vars);
@@ -170,7 +165,7 @@ sub page_handler ($self, $ctx, $content) {
     css_files    => ['/css/navigation.css', '/css/HPNOFP.css'],
     sidebar      => 1,
     nav_html     => $navigation_html,
-    site_logo    => $self->site_logo,
+    site_logo    => $self->site_logo(),
   };
 
   return $self->render('hpnofp/page.tt', $vars);
