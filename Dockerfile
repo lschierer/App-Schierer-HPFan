@@ -19,9 +19,8 @@ RUN  pnpm install --frozen-lockfile --prod
 
 FROM perl:5.42 as builder
 
-WORKDIR /opt/App-Schierer-HPFan
-
-COPY . .
+# Install git first
+RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
 
 # dependencies for the graphics modules I need
 RUN apt-get update && apt-get install -y \
@@ -46,6 +45,26 @@ RUN fc-cache -f -v
 RUN apt-get install -y netcat-openbsd
 RUN cpanm utf8::all
 RUN cpanm Module::Build
+
+WORKDIR /opt
+
+# Clone PAGI-WebServer framework
+RUN git clone https://github.com/lschierer/PAGI-WebServer.git
+
+# Build and install PAGI-WebServer framework
+WORKDIR /opt/PAGI-WebServer
+RUN cpanm utf8::all Module::Build
+RUN perl Build.PL
+RUN cpanm --installdeps -n . || (mkdir -p /error-logs && cp /root/.cpanm/work/*/build.log /error-logs/ && false)
+RUN ./Build manifest
+RUN ./Build
+RUN ./Build install
+
+# Now build the main application
+WORKDIR /opt/App-Schierer-HPFan
+
+COPY . .
+
 RUN perl Build.PL
 RUN cpanm --installdeps -n . || (mkdir -p /error-logs && cp /root/.cpanm/work/*/build.log /error-logs/ && false)
 RUN ./Build manifest
@@ -60,24 +79,24 @@ WORKDIR /opt/App-Schierer-HPFan
 COPY --from=npmBuilder /app/node_modules ./
 
 # Create a non-root user
-# Mojolicious will create the log directory using Path::Tiny
+# The application will create the log directory using Path::Tiny
 # assuming the home directory exists.
 # First create the group
-RUN groupadd mojo
+RUN groupadd app
 # create the user:
 # -m create the home directory
 # -s set the default shell
 # -g set the default group
-RUN useradd -ms /bin/bash -g mojo mojo
-RUN usermod -aG sudo mojo
+RUN useradd -ms /bin/bash -g app app
+RUN usermod -aG sudo app
 
 # because of the way the CMD is written,
 # we might not actually be using the installed version
 # but might be using the version from here
-RUN chown -R mojo:mojo /opt/App-Schierer-HPFan
-RUN chown -R mojo:mojo /home/mojo
+RUN chown -R app:app /opt/App-Schierer-HPFan
+RUN chown -R app:app /home/app
 
-# create an init script to set /home/mojo/var permissions
+# create an init script to set /home/app/var permissions
 
 RUN apt-get update && apt-get install -y sudo gosu
 RUN apt-get update && apt-get install -y graphviz

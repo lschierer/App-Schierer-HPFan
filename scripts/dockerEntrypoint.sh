@@ -3,11 +3,11 @@ set -e
 
 # --- Initial setup as root ---
 # The log volume path, as mounted during `docker run` or by docker-compose
-LOG_VOLUME_PATH="/home/mojo/var"
+LOG_VOLUME_PATH="/home/app/var"
 # The working directory where your app expects to run
 APP_DIR="/opt/App-Schierer-HPFan"
 # Your non-privileged user
-APP_USER="mojo"
+APP_USER="app"
 
 echo "Running entrypoint script as root to set up permissions..."
 
