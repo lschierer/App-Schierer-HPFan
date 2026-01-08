@@ -47,6 +47,7 @@ my $build = Module::Build->new(
     'Log::Log4perl::Config'          => '0',
     'Log::Any::Adapter::Log4perl'    => '0',
     'Log::Any'                       => '0',
+    'Mojo::DOM'                      => '0',
     'PAGI::Server'                   => '0',
     #'PAGI::WebServer'                => '0',
     #'PAGI::WebServer::Router'        => '0',
