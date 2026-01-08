@@ -17,8 +17,8 @@ GetOptions(
   'mode=s'   => \$mode,
 ) or die "Error in command line arguments\n";
 
-unless ($mode =~ /(development|staging|production)/) {
-  croak("mode must be one of development|staging|production, not '$mode'.");
+unless ($mode =~ /(development|test|production)/) {
+  croak("mode must be one of development|test|production, not '$mode'.");
 }
 
 my $config_dir   = 'share/conf';
