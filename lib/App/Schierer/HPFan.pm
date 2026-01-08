@@ -15,7 +15,6 @@ sub build ($self) {
 
   # Load modules first
   $self->load_module('^App::Schierer::HPFan::Module::ClassLists');
-  $self->load_module('^WebFramework::Module::SiteLogo');
 
   # it appears that the top one wins?
   $self->load_controller('Person');
