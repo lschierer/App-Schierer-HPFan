@@ -1,3 +1,4 @@
+[% WRAPPER layouts/default.tt %]
 <div class="banner spectrum-AlertBanner is-open spectrum-AlertBanner--info">
   <div class="spectrum-AlertBanner-body">
     <iconify-icon icon="octicon:info-16"></iconify-icon>
@@ -43,3 +44,4 @@
     <p>No events available to display.</p>
   [% END %]
 </section>
+[% END %]
