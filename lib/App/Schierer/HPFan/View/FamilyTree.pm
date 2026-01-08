@@ -4,14 +4,9 @@ use strict;
 use warnings;
 use v5.42.0;
 use utf8::all;
-use Moo;
+use Mooish::Base -standard;
+with 'WebFramework::Role::Logger';
 use GraphViz2;
-use Log::Log4perl qw(get_logger);
-
-has logger => (
-  is      => 'ro',
-  default => sub { get_logger(__PACKAGE__) },
-);
 
 has gramps => (
   is       => 'ro',

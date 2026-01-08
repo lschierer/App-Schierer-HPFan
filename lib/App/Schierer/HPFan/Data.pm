@@ -8,12 +8,11 @@ require GraphViz;
 require JSON::PP;
 require Path::Tiny;
 require XML::LibXML;
-require App::Schierer::HPFan::Role::Logging;
+require Log::Handler;
 use namespace::autoclean;
 
 class App::Schierer::HPFan::Data {
   use Carp;
-  use Log::Log4perl;
   use List::AllUtils         qw( first any );
   use List::MoreUtils        qw(arrayify);
   use DBD::SQLite::Constants qw/:dbd_sqlite_string_mode/;
@@ -25,7 +24,7 @@ class App::Schierer::HPFan::Data {
   field $debug     : param = 0;
 
   method logger {
-    state $l4p //= App::Schierer::HPFan::Role::Logging::get_logger(__CLASS__);
+    state $l4p //= Log::Handler->create_logger(__CLASS__);
     return $l4p;
   }
 

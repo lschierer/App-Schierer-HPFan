@@ -7,13 +7,12 @@ require Pandoc;
 require Path::Tiny;
 use XML::LibXML;
 require Mojo::DOM58;
+require Log::Handler;
 
 class App::Schierer::HPFan::View::Markdown {
 
-  require App::Schierer::HPFan::Role::Logging;
-
   method logger {
-    state $l4p //= App::Schierer::HPFan::Role::Logging::get_logger(__CLASS__);
+    state $l4p //= Log::Handler->create_logger(__CLASS__);
     return $l4p;
   }
 

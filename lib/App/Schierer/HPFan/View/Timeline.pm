@@ -5,6 +5,7 @@ use experimental qw(class);
 require Scalar::Util;
 require HTML::Strip;
 require App::Schierer::HPFan::View::Timeline::PositionHelpers;
+require Log::Handler;
 
 class App::Schierer::HPFan::View::Timeline {
   use List::AllUtils qw( any min max firstidx );
@@ -18,10 +19,9 @@ class App::Schierer::HPFan::View::Timeline {
   use App::Schierer::HPFan::View::Timeline::Utilities
     qw(get_category_for_event);
 
-  require App::Schierer::HPFan::Role::Logging;
 
   method logger {
-    state $l4p //= App::Schierer::HPFan::Role::Logging::get_logger(__CLASS__);
+    state $l4p //= Log::Handler->create_logger(__CLASS__);
     return $l4p;
   }
 
