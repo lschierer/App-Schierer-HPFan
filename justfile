@@ -49,3 +49,11 @@ quickdev:
 # Production server
 prod: build build-data
     ./Build && perl bin/server.pl --mode production
+
+# Deploy to development environment
+deploy-dev: install build-data build
+    pnpm cdk --profile personal deploy --app scripts/aws-schierer-hpfan.ts --context env=dev
+
+# Deploy to production environment
+deploy-prod: install build-data build
+    pnpm cdk --profile personal deploy --app scripts/aws-schierer-hpfan.ts --context env=prod

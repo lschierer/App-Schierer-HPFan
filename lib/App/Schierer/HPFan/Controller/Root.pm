@@ -88,8 +88,16 @@ sub build ($self) {
             return $self->render('page/markdown.tt', $vars);
           }
           else {
+            my $fm   = $self->parse_markdown_frontmatter($entry->{path});
+            my $sidebar      = $fm->{layout} // 1;
+            $sidebar = 0 if ($sidebar =~ /splash/);
+
             return $self->render_markdown_page($entry->{path}, $route,
-              { site_logo => $self->site_logo() });
+              {
+                site_logo => $self->site_logo(),
+                sidebar      => $sidebar,
+                nav_html     => $self->render_navigation($entry->{route}),
+              });
           }
 
         },
@@ -174,7 +182,7 @@ sub _build_Root_Tree ($self) {
   while (defined(my $file = $next->())) {
     $file = Path::Tiny::path($file);
     $self->logger->debug("Root Controller iterating over '$file'");
-    
+
     # Fast frontmatter parsing - only read first 20 lines
     my $fm = $self->parse_markdown_frontmatter($file->absolute);
     unless ($fm) {

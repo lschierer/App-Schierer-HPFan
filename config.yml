@@ -1,4 +1,4 @@
-stage: localDev
+stage: staging
 css_dir: share/styles
 typescript_dir: src/ts
 markdown_dir: share/pages

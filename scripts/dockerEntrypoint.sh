@@ -37,4 +37,4 @@ echo "Executing application as user '$APP_USER' in directory '$PWD'..."
 pwd
 ls -l ./bin/server.pl
 
-exec gosu "$APP_USER" perl ./bin/server.pl
+exec gosu "$APP_USER" perl ./bin/server.pl --mode test
