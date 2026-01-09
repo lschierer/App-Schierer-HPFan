@@ -56,25 +56,25 @@ sub build ($self) {
       $route,
       {
         to => async sub ($self, $ctx) {
+          my $fm   = $self->parse_markdown_frontmatter($entry->{path});
+          my $title = $fm->{title};
+          if (!$title) {
+            my $path_for_title = $entry->{route};
+            $path_for_title =~ s|^/||;
+            $title = $path_for_title;
+            $title =~ s|/| - |g;
+            $title =~ s/[-_]/ /g;
+            $title =~ s/\b(\w)/\U$1/g;
+          }
+
+          my $current_year = (localtime)[5] + 1900;
+          my $sidebar      = $fm->{layout} // 1;
+          $sidebar = 0 if ($sidebar =~ /splash/);
+
           if (Path::Tiny::path($entry->{path})->slurp_utf8 =~ /classlisttable/i)
           {
-            my $fm   = $self->parse_markdown_frontmatter($entry->{path});
             my $html = $self->retrieve_rendered_markdown($entry->{path});
             $html = await $self->render_classlist_tables($html);
-
-            my $title = $fm->{title};
-            if (!$title) {
-              my $path_for_title = $entry->{route};
-              $path_for_title =~ s|^/||;
-              $title = $path_for_title;
-              $title =~ s|/| - |g;
-              $title =~ s/[-_]/ /g;
-              $title =~ s/\b(\w)/\U$1/g;
-            }
-
-            my $current_year = (localtime)[5] + 1900;
-            my $sidebar      = $fm->{layout} // 1;
-            $sidebar = 0 if ($sidebar =~ /splash/);
 
             my $vars = {
               content      => $html,
@@ -88,15 +88,13 @@ sub build ($self) {
             return $self->render('page/markdown.tt', $vars);
           }
           else {
-            my $fm   = $self->parse_markdown_frontmatter($entry->{path});
-            my $sidebar      = $fm->{layout} // 1;
-            $sidebar = 0 if ($sidebar =~ /splash/);
 
-            return $self->render_markdown_page($entry->{path}, $route,
+            return $self->render_markdown_page($entry->{path}, $entry->{route},
               {
                 site_logo => $self->site_logo(),
-                sidebar      => $sidebar,
-                nav_html     => $self->render_navigation($entry->{route}),
+                title     => $title,
+                sidebar   => $sidebar,
+                nav_html  => $self->render_navigation($entry->{route}),
               });
           }
 
@@ -110,7 +108,7 @@ sub build ($self) {
 
   # Add catch-all route for directory gaps (AutoIndex)
   $self->router->add(
-    '*',
+    '/*path',
     {
       to => sub ($self, $ctx, @args) {
         return $self->handle_directory_gap($ctx);
@@ -147,7 +145,7 @@ sub handle_directory_gap ($self, $ctx) {
       current_year => $current_year,
       css_files    => ['/css/navigation.css', '/css/directory-list.css'],
       sidebar      => 1,
-      navigation   => $navigation_html,
+      nav_html   => $navigation_html,
       site_logo    => $self->site_logo(),
     };
 
@@ -189,6 +187,10 @@ sub _build_Root_Tree ($self) {
       $self->logger->warn("No frontmatter available for '$file'");
       next;
     }
+    unless (ref($fm) eq 'HASH' && keys %$fm) {
+      $self->logger->warn("Empty frontmatter for '$file'");
+      next;
+    }
     my $title = $fm->{title} // $file->basename(qr/.md/);
     my $route;
     my $order;
@@ -221,7 +223,7 @@ sub _build_Root_Tree ($self) {
       order => $order,
     };
     $self->logger->debug(
-      sprintf('registering tree object %s', Data::Printer::np($tree{$route})));
+      sprintf('Registering route "%s" for file "%s"', $route, $file));
   }
   return \%tree;
 }
