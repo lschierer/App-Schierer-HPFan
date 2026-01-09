@@ -212,6 +212,7 @@ export class ThunderhorseStack extends Stack {
           IMAGE_TAG: props.imageTag,
           IMAGE_URI: `${repository.repositoryUri}:${props.imageTag}`,
           DEPLOYMENT_TIME: new Date().toISOString(),
+          APP_MODE: props.environment === "prod" ? "production" : "test",
         },
         healthCheck: {
           command: [

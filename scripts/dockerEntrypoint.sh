@@ -37,4 +37,8 @@ echo "Executing application as user '$APP_USER' in directory '$PWD'..."
 pwd
 ls -l ./bin/server.pl
 
-exec gosu "$APP_USER" perl ./bin/server.pl --mode test
+# Use APP_MODE environment variable if set, default to 'development'
+MODE="${APP_MODE:-development}"
+echo "Starting application in mode: $MODE"
+
+exec gosu "$APP_USER" perl ./bin/server.pl --mode "$MODE"
