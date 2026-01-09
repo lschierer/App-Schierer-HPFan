@@ -1,6 +1,7 @@
 ---
 collection: Harrypedia
-title: First-Generation “Immigrants”
+title: >-
+  First-Generation “Immigrants”
 author: Luke Schierer
 ---
 
