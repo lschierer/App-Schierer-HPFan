@@ -17,14 +17,6 @@ server:
   host: 0.0.0.0
   port: 3000
 
-# Template configuration
-template:
-  INCLUDE_PATH:
-    - templates
-    - templates/partials
-    - ../PAGI-WebServer/templates
-    - ../PAGI-WebServer/templates/partials
-
 # Directory paths
 css_dir: share/styles
 typescript_dir: src/ts

@@ -6,6 +6,7 @@ use Mooish::Base -standard;
 extends 'Thunderhorse::Controller';
 with 'App::Schierer::HPFan::Role::Gramps';
 with 'WebFramework::Role::Logger';
+with 'WebFramework::Role::Markdown';
 
 use Future::AsyncAwait;
 use Path::Tiny;
@@ -19,14 +20,12 @@ has template_file => (
   default => 'person/details.tt'
 );
 
-has pages_dir => (
+has app_config => (
+  is => 'ro',
   default => sub {
     my $self = shift;
-    use FindBin;
-    return path($FindBin::Bin)->parent->child('share/pages');
+    return $self->app->config;
   },
-  lazy => 1,
-  is   => 'ro',
 );
 
 sub build ($self) {

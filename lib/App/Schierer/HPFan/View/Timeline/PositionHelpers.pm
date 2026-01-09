@@ -23,7 +23,6 @@ class App::Schierer::HPFan::View::Timeline::PositionHelpers {
     return $l4p;
   }
 
-
   # hash at distance radius,
   # each containing an array of { x => $x, y => $y, radius => $r }
   field $used_positions = [];

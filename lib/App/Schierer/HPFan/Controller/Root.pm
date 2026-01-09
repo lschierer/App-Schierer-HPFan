@@ -5,11 +5,22 @@ use utf8::all;
 use Mooish::Base -standard;
 with 'App::Schierer::HPFan::Role::Gramps';
 with 'WebFramework::Role::Logger';
+with 'WebFramework::Role::Markdown';
+
 extends 'Thunderhorse::Controller';
 
 use Future::AsyncAwait;
 require Path::Tiny;
 require Path::Iterator::Rule;
+
+has app_config => (
+  is => 'ro',
+  default => sub {
+    my $self = shift;
+    return $self->app->config;
+  },
+);
+
 
 has base_dir => (
   is      => 'ro',
@@ -163,6 +174,8 @@ sub _build_Root_Tree ($self) {
   while (defined(my $file = $next->())) {
     $file = Path::Tiny::path($file);
     $self->logger->debug("Root Controller iterating over '$file'");
+    
+    # Fast frontmatter parsing - only read first 20 lines
     my $fm = $self->parse_markdown_frontmatter($file->absolute);
     unless ($fm) {
       $self->logger->warn("No frontmatter available for '$file'");

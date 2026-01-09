@@ -19,7 +19,6 @@ class App::Schierer::HPFan::View::Timeline {
   use App::Schierer::HPFan::View::Timeline::Utilities
     qw(get_category_for_event);
 
-
   method logger {
     state $l4p //= Log::Handler->create_logger(__CLASS__);
     return $l4p;

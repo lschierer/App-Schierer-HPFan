@@ -5,6 +5,7 @@ use utf8::all;
 use Mooish::Base -standard;
 extends 'Thunderhorse::Controller';
 with 'WebFramework::Role::Logger';
+with 'WebFramework::Role::Markdown';
 
 use Path::Tiny;
 use Path::Iterator::Rule;
@@ -12,6 +13,14 @@ use XML::LibXML;
 use HTML::HTML5::Writer;
 use HTML::Selector::XPath qw(selector_to_xpath);
 use Scalar::Util          qw(blessed);
+
+has app_config => (
+  is => 'ro',
+  default => sub {
+    my $self = shift;
+    return $self->app->config;
+  },
+);
 
 has hpnofp_dir => (
   is      => 'ro',

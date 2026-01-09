@@ -38,6 +38,7 @@ my $build = Module::Build->new(
     'HTML::HTML5::Writer'            => '0',
     'HTML::Strip'                    => '0',
     'HTML::TreeBuilder'              => '0',
+    'IO::Async::Timer::Countdown'    => '0',
     'JSON::PP'                       => '0',
     'List::AllUtils'                 => '0',
     'List::MoreUtils'                => '0',

@@ -4,10 +4,19 @@ use v5.42.0;
 use Mooish::Base -standard;
 extends 'Thunderhorse::Controller';
 with 'WebFramework::Role::Logger';
+with 'WebFramework::Role::Markdown';
 
 use Path::Tiny;
 use YAML::XS qw(Load);
 use Encode   qw(encode_utf8);
+
+has app_config => (
+  is => 'ro',
+  default => sub {
+    my $self = shift;
+    return $self->app->config;
+  },
+);
 
 sub build ($self) {
   $self->register_routes($self->router);
