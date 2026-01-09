@@ -6,7 +6,6 @@ require XML::LibXML;
 require GraphViz;
 require Data::Printer;
 require Gedcom;
-require Log::Log4perl;
 
 class App::Schierer::HPFan::Model::Gedcom :
   isa(App::Schierer::HPFan::Model::Base) {

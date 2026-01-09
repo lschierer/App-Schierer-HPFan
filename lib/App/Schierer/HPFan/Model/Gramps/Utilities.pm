@@ -6,13 +6,13 @@ package App::Schierer::HPFan::Model::Gramps::Utilities {
   use Readonly;
   use Scalar::Util   qw(blessed looks_like_number);
   use List::AllUtils qw( firstidx );
-  use Log::Log4perl;
   use Exporter qw(import);
+  require Log::Handler;
 
   our @EXPORT      = qw( event_role event_type );
   our %EXPORT_TAGS = (all_funcs => [@EXPORT]);
 
-  our $logger = Log::Log4perl->get_logger(__PACKAGE__);
+  our $logger //= Log::Handler->create_logger(__PACKAGE__);
 
   sub event_role ($self, $roleNumber) {
     Readonly::Hash my %ROLE_MAP => (
