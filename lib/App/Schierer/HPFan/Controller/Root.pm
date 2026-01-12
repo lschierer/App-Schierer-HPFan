@@ -99,7 +99,7 @@ sub build ($self) {
           }
 
         },
-        action => 'http.get',
+        action => 'http.*',
       }
     );
   }
@@ -113,7 +113,7 @@ sub build ($self) {
       to => sub ($self, $ctx, @args) {
         return $self->handle_directory_gap($ctx);
       },
-      action => 'http.get',
+      action => 'http.*',
     }
   );
 }

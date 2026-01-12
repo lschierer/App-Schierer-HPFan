@@ -44,7 +44,7 @@ async sub register_routes ($self, $router) {
         my $surname = $args[0] // 'Unknown';    # Try getting from args
         return $self->family_page($ctx, $surname);
       },
-      action => 'http.get',
+      action => 'http.*',
     }
   );
   foreach my $surname (keys %{ await $self->get_all_surnames }) {

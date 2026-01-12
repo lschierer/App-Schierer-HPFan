@@ -43,7 +43,7 @@ sub register_routes ($self, $router) {
       to => sub ($self, $ctx, @args) {
         return $self->timeline_page($ctx);
       },
-      action => 'http.get',
+      action => 'http.*',
     }
   );
 }

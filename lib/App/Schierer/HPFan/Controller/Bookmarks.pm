@@ -140,7 +140,7 @@ sub register_routes ($self, $router) {
           to => sub ($self, $ctx) {
             return $self->bookmark_index($ctx, $entry, \@routes);
           },
-          action => 'http.get',
+          action => 'http.*',
         }
       );
     }
@@ -152,7 +152,7 @@ sub register_routes ($self, $router) {
           to => sub ($self, $ctx) {
             return $self->bookmark_page($ctx, $entry);
           },
-          action => 'http.get',
+          action => 'http.*',
         }
       );
     }

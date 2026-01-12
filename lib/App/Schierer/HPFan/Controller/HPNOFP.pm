@@ -86,7 +86,7 @@ sub register_routes ($self, $router) {
       to => sub ($self, $ctx) {
         return $self->index_handler($ctx);
       },
-      action => 'http.get',
+      action => 'http.*',
     }
   );
 
@@ -103,7 +103,7 @@ sub register_routes ($self, $router) {
         to => sub ($self, $ctx) {
           return $self->page_handler($ctx, $content);
         },
-        action => 'http.get',
+        action => 'http.*',
       }
     );
   }

@@ -46,7 +46,7 @@ async sub register_routes ($self, $router) {
         return await $self->handle_person_route($ctx, $surname, $given,
           $suffix);
       },
-      action => 'http.get',
+      action => 'http.*',
     }
   );
 
@@ -59,7 +59,7 @@ async sub register_routes ($self, $router) {
         my $given   = $args[1] // 'Unknown';
         return await $self->handle_person_route($ctx, $surname, $given);
       },
-      action => 'http.get',
+      action => 'http.*',
     }
   );
   foreach my $person (values $self->gramps->people->%*) {
