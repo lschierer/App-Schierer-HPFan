@@ -13,8 +13,7 @@ pnpm i
 
 GIT_COMMIT=$(git rev-parse HEAD)
 BUILD_TIME=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-gsed -i -E "s/^(\s+)git-commit:.*/\1git-commit: ${GIT_COMMIT}/" config.yml ;
-gsed -i -E "s/^(\s+)build-time:.*/\1build-time: ${BUILD_TIME}/" config.yml ;
+# Note: config.yml is not used - app reads share/conf/$mode.yml instead
 
 
 # Create ECR repository (if it doesn't exist)

@@ -26,6 +26,7 @@ interface ThunderhorseStackProps extends StackProps {
   desiredCount: number;
   ecrRepositoryName: string;
   imageTag: string;
+  gitCommit?: string;
 }
 
 export class ThunderhorseStack extends Stack {
@@ -213,6 +214,7 @@ export class ThunderhorseStack extends Stack {
           IMAGE_URI: `${repository.repositoryUri}:${props.imageTag}`,
           DEPLOYMENT_TIME: new Date().toISOString(),
           APP_MODE: props.environment === "prod" ? "production" : "test",
+          GIT_COMMIT: props.gitCommit || "unknown",
         },
         healthCheck: {
           command: [
