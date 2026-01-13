@@ -16,6 +16,7 @@ modules:
 server:
   host: 0.0.0.0
   port: 3000
+  worker_threads: 4
 
 # Template configuration
 template:
@@ -32,9 +33,6 @@ markdown_dir: share/pages
 
 # Pandoc modules to load
 pandoc_modules: []
-
-# Worker thread configuration
-worker_threads: 4
 
 # Module-specific log levels
 log_config: {}
