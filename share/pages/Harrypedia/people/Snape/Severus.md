@@ -10,7 +10,7 @@ and champion it. This gives us the epilogue, with a child of [Harry][]'s named
 Albus Severus, the two characters that Mrs. Rowling most wants the reader to
 forgive.
 
-[Harry]: </Harrypedia/people/Potter/Harry James/>
+[Harry]: </Harrypedia/people/Potter/Harry James>
 
 The books are, however, not _really_ children's books at all. I disagree with
 classifying the latter books as such, and am restricting my own children's
@@ -43,10 +43,10 @@ needs of victims are not going to be addressed.
 [Dark Arts]: /Harrypedia/magic/dark/
 [Dark Magic]: /Harrypedia/magic/dark/
 [dark]: /Harrypedia/magic/dark/
-[Lily]: </Harrypedia/people/Evans/Lily J/>
-[Sirius]: </Harrypedia/people/Black/Sirius III/>
+[Lily]: </Harrypedia/people/Evans/Lily J>
+[Sirius]: </Harrypedia/people/Black/Sirius III>
 [McGonagall]: /Harrypedia/people/McGonagall/Minerva/
-[Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/>
+[Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
 
 As I said, we know little of Severus at school, but his memories from _the
 Deathly Hallows_ have a few things that are possibly suggestive. In one scene
@@ -132,7 +132,7 @@ Severus is showing evidence of denial about the strength of the attachment
 between [Lily][] and [James][], and a failure to understand what love really
 means.
 
-[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>
+[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
 
 Some writers have tried to give Severus a pass on this one. They rightly point
 out that there was no chance that [Riddle][] would spare the entire family, and
@@ -182,8 +182,8 @@ out the way Snape was poorly dressed as proof, but this could be simply
 symptomatic of the same cluelessness of non-magical fashion we see in other
 magical characters coupled with their extreme poverty.
 
-[Tobias]: ./Tobias/
-[Eileen]: Prince/Eileen/
+[Tobias]: /Harrypedia/people/Snape/Tobias
+[Eileen]: /Harrypedia/people/Prince/Eileen
 
 Regardless, Severus is now, supposedly, a spy for [Dumbledore][]. How much does
 he know? Does he know that Pettigrew is a Death Eater? Does he know this
@@ -213,7 +213,7 @@ especially critical to know the answer to these questions when Mrs. Rowling
 states in an interview that [Dumbledore][] thinks that dealing with horrible
 teachers is part of teaching his students about life.[^210412-6]
 
-[Slughorn]: </Harrypedia/people/Slughorn/Horace Eugene Flaccus/>
+[Slughorn]: </Harrypedia/people/Slughorn/Horace Eugene Flaccus>
 
 Irregardless of if he does ever actually teach, his behaviour during these "lab"
 classes is unacceptable. The labs are unsafe, and his treatment of the students
@@ -258,7 +258,7 @@ sequence, as Snape yells at [Harry][], looking for him to thank him "on bended
 knee"[^210510-6], and then later, with Fudge talking about the Order of Merlin,
 gives us a huge insight into Snape's character.[^210523-2]
 
-[Lupin]: </Harrypedia/people/Lupin/Remus John/>
+[Lupin]: </Harrypedia/people/Lupin/Remus John>
 
 As [Riddle][] returns, what does Snape know about his activities? What could
 he have told [Dumbledore][] but chooses to hold back? What does he tell
@@ -280,8 +280,8 @@ much worse would [Hogwarts][] have been had a different Death Eater been
 Headmaster? How much could Severus have done to curb problems that he did not
 do? We cannot know. We know he helped some at least.
 
-[Ron]: </Harrypedia/people/Weasley/Ronald Bilius/>
-[Ginny]: </Harrypedia/people/Weasley/Ginevra Molly/>
+[Ron]: </Harrypedia/people/Weasley/Ronald Bilius>
+[Ginny]: </Harrypedia/people/Weasley/Ginevra Molly>
 
 Severus is trying to reach [Harry][] when [Riddle][] decides [Harry][] must die.
 He (Severus) uses his the last of his strength to give [Harry][] memories
@@ -311,7 +311,7 @@ On a side note, it is widely speculated that Severus is [Draco][]'s godfather.
 [This][lc1] article does not specifically talk about that, but covers the
 available evidence as if it were.[^210517-6]
 
-[Draco]: </Harrypedia/people/Malfoy/Draco Lucius/>
+[Draco]: </Harrypedia/people/Malfoy/Draco Lucius>
 
 If you want a parallel but diverging view of Severus that allows for redeeming
 him more than this rant does, BajaB offers a fascinating take on him in
@@ -408,6 +408,6 @@ Oracle][ffnvo2]_.[^210603-1]
     I am not the only one to pick up on this. there are a number of
     fan fictions on what happens after Snape [dies][SnapeDies].
 
-[SnapeDies]: /Bookmarks/snapedies/
+[SnapeDies]: </Bookmarks/Bashing/After Snape Dies>
 [Harry Potter and the Order of the Phoenix]: https://www.librarything.com/work/115/book/225886709
 [Harry Potter and the Half-Blood Prince]: https://www.librarything.com/work/1133624/book/203684961

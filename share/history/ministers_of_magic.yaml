@@ -212,9 +212,9 @@ events:
 
       [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
 
-      [Dementors]: </Harrypedia/non-beings/dementor/>
+      [Dementors]: </Harrypedia/non-beings/dementor>
 
-      [Azkaban]: </Harrypedia/Azkaban/>
+      [Azkaban]: </Harrypedia/Azkaban>
     source: |
       * Mrs. J. K. Rowling.
         "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
@@ -228,9 +228,9 @@ events:
 
       [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
 
-      [International Confederation of Wizards]: <./culture/Government/>
+      [International Confederation of Wizards]: </Harrypedia/culture/Government>
 
-      [International Statute of Secrecy]: <./culture/>
+      [International Statute of Secrecy]: </Harrypedia/culture>
     source: |
       * Mrs. J. K. Rowling.
         "[Ministers of Magic](https://www.rowlingindex.org/work/msmpm/)"
