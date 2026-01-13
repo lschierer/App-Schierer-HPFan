@@ -10,13 +10,13 @@
   "devDependencies": {
     "@adobe/spectrum-design-data-mcp": "^1.0.12",
     "@tsconfig/node24": "^24.0.3",
-    "@types/node": "^25.0.3",
+    "@types/node": "^25.0.7",
     "@types/postcss-import": "^14.0.3",
     "@types/postcss-sorting": "^8.0.2",
-    "@typescript-eslint/parser": "^8.52.0",
+    "@typescript-eslint/parser": "^8.53.0",
     "autoprefixer": "^10.4.23",
     "aws-cdk": "^2.1100.3",
-    "aws-cdk-lib": "^2.234.0",
+    "aws-cdk-lib": "^2.234.1",
     "constructs": "^10.4.4",
     "cssnano": "^7.1.2",
     "esbuild": "^0.27.2",
@@ -35,7 +35,7 @@
     "postcss-import": "^16.1.1",
     "postcss-load-config": "^6.0.1",
     "postcss-nesting": "^13.0.2",
-    "postcss-preset-env": "^10.6.0",
+    "postcss-preset-env": "^10.6.1",
     "postcss-reporter": "^7.1.0",
     "postcss-sorting": "^9.1.0",
     "prettier": "^3.7.4",
@@ -47,7 +47,7 @@
     "ts-node": "^10.9.2",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.52.0"
+    "typescript-eslint": "^8.53.0"
   },
   "dependencies": {
     "@spectrum-css/alertbanner": "^3.2.0",
