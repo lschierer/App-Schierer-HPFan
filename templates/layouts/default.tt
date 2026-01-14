@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" class="spectrum spectrum--medium spectrum--light light-theme light">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
     <link rel="stylesheet" href="/css/global.css" />
@@ -10,7 +10,7 @@
 
     [% IF css_files -%]
       [% FOREACH css_file IN css_files -%]
-        <link rel="stylesheet" href="[% css_file %]">
+        <link rel="stylesheet" href="[% css_file %]" />
       [% END -%]
     [% END -%]
 

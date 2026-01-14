@@ -24,6 +24,6 @@ author: Luke Schierer
 [Dursleys]: /Harrypedia/people/Dursley
 
 [Harry]: </Harrypedia/people/Potter/Harry James>
-[obscurials]: /Harrypedia/beings/obscurus
+[obscurials]: /Harrypedia/beings/Obscurus
 
 [^240424-3]: This will be confirmed in book seven when we seen an excerpt of a letter describing that birthday.
