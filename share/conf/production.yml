@@ -1,0 +1,34 @@
+# PAGI WebServer Framework Configuration
+
+# Stage: localDev, staging, production
+stage: production
+
+modules:
+  "^WebFramework::Module::AutoIndex": {}
+  "^WebFramework::Module::Navigation": {}
+  "^WebFramework::Module::SiteLogo":
+    site_logo: public/images/LukeHPSite.svg
+  Template:
+    paths:
+      - templates
+      - templates/partials
+      - ../PAGI-WebServer/templates
+      - ../PAGI-WebServer/templates/partials
+    conf:
+      EVAL_PERL: 1
+# Server configuration
+server:
+  host: 0.0.0.0
+  port: 3000
+  worker_threads: 4
+
+# Directory paths
+css_dir: share/styles
+typescript_dir: src/ts
+markdown_dir: share/pages
+# relative to the public directory
+
+# Pandoc modules to load
+pandoc_modules: []
+
+log_base: Schierer-HPFan
