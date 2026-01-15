@@ -1,9 +1,13 @@
 # PAGI WebServer Framework Configuration
 
-# Stage: localDev, staging, production
-stage: staging
+# Stage: staging, staging, production
+stage: localDev
 
 modules:
+  "^WebFramework::Module::AutoIndex": {}
+  "^WebFramework::Module::Navigation": {}
+  "^WebFramework::Module::SiteLogo":
+    site_logo: public/images/LukeHPSite.svg
   Template:
     paths:
       - templates
@@ -22,9 +26,9 @@ server:
 css_dir: share/styles
 typescript_dir: src/ts
 markdown_dir: share/pages
+# relative to the public directory
 
 # Pandoc modules to load
 pandoc_modules: []
 
-# Module-specific log levels
-log_config: {}
+log_base: Schierer-HPFan

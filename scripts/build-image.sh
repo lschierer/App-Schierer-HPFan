@@ -35,11 +35,11 @@ while getopts "${OPTSTRING}" opt; do
   case ${opt} in
     d)
       DEV=true
-      gsed -i -E 's/localDev/staging/' config.yml
+      gsed -i -E 's/localDev/staging/' share/conf/test.yml
       ;;
     p)
       PROD=true
-      gsed -i -E 's/localDev/production/' config.yml
+      gsed -i -E 's/localDev/production/' share/conf/production.yml
       ;;
     \?)
       echo "Invalid option: -$OPTARG" >&2
@@ -48,10 +48,19 @@ while getopts "${OPTSTRING}" opt; do
   esac
 done
 
+if ( ! $DEV  ) && ( ! $PROD ) ; then
+  gsed -i -E 's/stage: .*$/stage: localDev/' share/conf/development.yml
+fi
+if ( $DEV  ) ; then
+  gsed -i -E 's/stage: .*$/stage: localDev/' share/conf/test.yml
+fi
+if ( $PROD  ) ; then
+  gsed -i -E 's/stage: .*$/stage: localDev/' share/conf/production.yml
+fi
+
 
 if ( ! $DEV  ) && ( ! $PROD ) ; then
   echo "local testing only, exiting without looking for cluster."
-  gsed -i -E 's/stage: .*$/stage: localDev/' config.yml
   podman build --platform linux/arm64 -t hpfan:latest ./
   exit 0;
 else
