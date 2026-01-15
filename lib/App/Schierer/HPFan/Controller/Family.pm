@@ -3,32 +3,16 @@ package App::Schierer::HPFan::Controller::Family;
 use v5.42.0;
 use utf8::all;
 use Mooish::Base -standard;
-extends 'Thunderhorse::Controller';
+extends 'WebFramework::Controller::Base';
 with 'App::Schierer::HPFan::Role::Gramps';
-with 'WebFramework::Role::Markdown';
 
 use Future::AsyncAwait;
 use Path::Tiny;
 use Encode      qw(encode_utf8);
 use URI::Escape qw(uri_escape_utf8);
 
-has app_config => (
-  is      => 'ro',
-  default => sub {
-    my $self = shift;
-    return $self->app->config;
-  },
-);
-
-has surnames => (is => 'lazy',);
-
-sub _build_surnames ($self) {
-  # This needs to be synchronous for controller initialization
-  # We'll load surnames when first accessed
-  return [];
-}
-
 sub build ($self) {
+  $self->SUPER::build();
   $self->ensure_ready();
   $self->register_routes($self->router);
 }
@@ -46,10 +30,12 @@ async sub register_routes ($self, $router) {
       action => 'http.*',
     }
   );
-  foreach my $surname (keys %{ await $self->get_all_surnames }) {
-    $self->log(debug =>
-      sprintf('Family Controller got surname "%s" from get_all_surnames',
-        $surname)
+
+  my $surnames = await $self->get_all_surnames;
+  $self->logger->debug(sprintf('retrieved %s surnames from Gramps role', scalar( @{ $surnames } ) ));
+  foreach my $surname ($surnames->@*) {
+    $self->logger->debug(
+      sprintf('Family Controller registering route for surname "%s"', $surname)
     );
     $self->add_navigation_route(
       sprintf('/Harrypedia/people/%s', $surname),
@@ -57,51 +43,6 @@ async sub register_routes ($self, $router) {
       { order => 20 }
     );
   }
-}
-
-async sub family_index ($self, $ctx) {
-  # Show index of all families
-  my $surnames = await $self->get_all_surnames();
-
-  my $vars = {
-    surnames     => $surnames,
-    title        => 'Family Index',
-    current_year => (localtime)[5] + 1900,
-    css_files    => ['/css/gramps.css', '/css/navigation.css'],
-    sidebar      => 1,
-    nav_html     => $self->render_navigation($ctx->req->path),
-    site_logo    => $self->site_logo(),
-  };
-
-  return $self->render('family/index.tt', $vars);
-}
-
-async sub handle_family_request ($self, $ctx) {
-  my $path = $ctx->req->path;
-
-  # Parse the path to extract surname and optional person identifier
-  if ($path =~ m{^/Harrypedia/people/([^/]+)(?:/([^/]+))?$}) {
-    my ($surname, $person_id) = ($1, $2);
-
-    if ($person_id) {
-      # This is a person page request - delegate to person controller
-      # For now, just return family page
-      return $self->family_page($ctx, $surname);
-    }
-    else {
-      # This is a family page request
-      return $self->family_page($ctx, $surname);
-    }
-  }
-
-  # Invalid path
-  return $self->render(
-    'error.tt',
-    {
-      title   => 'Page Not Found',
-      message => 'The requested family page was not found.',
-    }
-  );
 }
 
 async sub family_page ($self, $ctx, $surname) {
@@ -128,6 +69,17 @@ async sub family_page ($self, $ctx, $surname) {
     push @prepared_tree, $self->_prepare_tree_node($root);
   }
 
+  # Check for static markdown content for this family
+  my $static_content = '';
+  my $family_md = $self->pages_dir->child('Harrypedia', 'people', $surname, "index.md");
+  $family_md //= $self->pages_dir->child('Harrypedia', 'people', "${surname}.md");
+  if ($family_md->exists) {
+    $self->logger->debug("found static content at '$family_md'");
+    $static_content = $self->retrieve_rendered_markdown($family_md);
+  }else {
+    $self->logger->debug("no static content at '$family_md'");
+  }
+
   # Get current year for footer
   my $current_year = (localtime)[5] + 1900;
 
@@ -142,10 +94,11 @@ async sub family_page ($self, $ctx, $surname) {
 
   # Prepare template variables
   my $vars = {
-    surname      => $surname,
-    is_unknown   => $is_unknown,
-    family_tree  => \@prepared_tree,
-    member_count => scalar(@$family_members),
+    surname        => $surname,
+    is_unknown     => $is_unknown,
+    family_tree    => \@prepared_tree,
+    member_count   => scalar(@$family_members),
+    static_content => $static_content,
     # Layout variables
     title        => $title,
     current_year => $current_year,

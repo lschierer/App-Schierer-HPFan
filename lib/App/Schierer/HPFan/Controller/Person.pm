@@ -3,9 +3,9 @@ package App::Schierer::HPFan::Controller::Person;
 use v5.42.0;
 use utf8::all;
 use Mooish::Base -standard;
-extends 'Thunderhorse::Controller';
+extends 'WebFramework::Controller::Base';
 with 'App::Schierer::HPFan::Role::Gramps';
-with 'WebFramework::Role::Markdown';
+
 
 use Future::AsyncAwait;
 use Path::Tiny;
@@ -19,13 +19,7 @@ has template_file => (
   default => 'person/details.tt'
 );
 
-has app_config => (
-  is      => 'ro',
-  default => sub {
-    my $self = shift;
-    return $self->app->config;
-  },
-);
+
 
 sub build ($self) {
   $self->ensure_ready();
@@ -62,8 +56,7 @@ async sub register_routes ($self, $router) {
     }
   );
   foreach my $person (values $self->gramps->people->%*) {
-    $self->log(
-      debug => sprintf('Person Controller got person "%s" from gramps model',
+    $self->logger->debug(sprintf('Person Controller got person "%s" from gramps model',
         $person->display_name)
     );
     $self->add_navigation_route(
@@ -112,7 +105,7 @@ async sub handle_person_route ($self, $ctx, $surname, $identifier, $suffix = '')
     }
 
     if ($person) {
-$self->log(info => sprintf('Controller::Person found "%s" for request "%s"',
+$self->logger->info(sprintf('Controller::Person found "%s" for request "%s"',
 $person->display_name, $path));
 # Check for static markdown content for this person
       my $static_content = '';
@@ -146,33 +139,14 @@ $person->display_name, $path));
       };
 
       if ($@) {
-        $self->log(error => "Error rendering person page: $@");
+        $self->logger->error("Error rendering person page: $@");
         return $self->render_error(500, "Internal Server Error: $@");
       }
 
       return $html if $html;
     }
     else {
-      $self->log(error => "No person found for requested path '$path'");
-    }
-  }
-
-  # Try as family listing
-  my ($surname_only) = $path =~ m{^/Harrypedia/people/([^/]+)$};
-  if ($surname_only) {
-    $surname_only =~ s/%([0-9A-Fa-f]{2})/chr(hex($1))/eg;
-
-    # Get the Family controller and delegate to it
-    my $family_controller = $self->app->get_controller('Family');
-    if ($family_controller) {
-      my $html;
-      eval {
-        $html = await $family_controller->family_page($ctx, $surname_only);
-      };
-      if ($@) {
-        $self->log(error => "Error rendering family page: $@");
-      }
-      return $html if $html;
+      $self->logger->error("No person found for requested path '$path'");
     }
   }
 
@@ -286,7 +260,7 @@ sub generate_family_tree ($self, $person) {
   };
 
   if ($@) {
-    $self->log(error => "Error generating family tree: $@");
+    $self->logger->error("Error generating family tree: $@");
     return '<p>Family tree unavailable</p>';
   }
 
@@ -347,7 +321,7 @@ sub render_person_page_from_object ($self, $person, $static_content,
     site_logo    => $self->site_logo(),
   };
 
-  $self->log( debug =>
+  $self->logger->debug(
         "Rendering template with "
       . scalar(@families)
       . " families and "

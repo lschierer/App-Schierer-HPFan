@@ -19,8 +19,8 @@ sub build ($self) {
   say sprintf('logo file is "%s"', $self->app->config->{config}->{modules}->{"^WebFramework::Module::SiteLogo"}->{site_logo}) if $self->env eq 'development';
 
   # it appears that the top one wins?
-  $self->load_controller('Person');
   $self->load_controller('Family');
+  $self->load_controller('Person');
   $self->load_controller('History');
   $self->load_controller('Bookmarks');
   $self->load_controller('HPNOFP');

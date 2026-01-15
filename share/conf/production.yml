@@ -1,7 +1,7 @@
 # PAGI WebServer Framework Configuration
 
-# Stage: localDev, staging, production
-stage: production
+# Stage: production, staging, production
+stage: localDev
 
 modules:
   "^WebFramework::Module::AutoIndex": {}
@@ -32,3 +32,4 @@ markdown_dir: share/pages
 pandoc_modules: []
 
 log_base: Schierer-HPFan
+site_url: hp-fan.schierer.org

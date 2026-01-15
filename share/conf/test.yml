@@ -32,3 +32,4 @@ markdown_dir: share/pages
 pandoc_modules: []
 
 log_base: Schierer-HPFan
+site_url: dev.hp-fan.schierer.org
