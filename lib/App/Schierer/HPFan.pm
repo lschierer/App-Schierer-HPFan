@@ -16,7 +16,7 @@ sub build ($self) {
 
   # Load modules first
   $self->load_module('^App::Schierer::HPFan::Module::ClassLists');
-  say sprintf('logo file is "%s"', $self->app->config->{config}->{site_logo});
+  say sprintf('logo file is "%s"', $self->app->config->{config}->{modules}->{"^WebFramework::Module::SiteLogo"}->{site_logo}) if $self->env eq 'development';
 
   # it appears that the top one wins?
   $self->load_controller('Person');
