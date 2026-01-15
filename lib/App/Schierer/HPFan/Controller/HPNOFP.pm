@@ -4,7 +4,6 @@ use v5.42.0;
 use utf8::all;
 use Mooish::Base -standard;
 extends 'Thunderhorse::Controller';
-with 'WebFramework::Role::Logger';
 with 'WebFramework::Role::Markdown';
 
 use Path::Tiny;
@@ -15,7 +14,7 @@ use HTML::Selector::XPath qw(selector_to_xpath);
 use Scalar::Util          qw(blessed);
 
 has app_config => (
-  is => 'ro',
+  is      => 'ro',
   default => sub {
     my $self = shift;
     return $self->app->config;
@@ -58,7 +57,7 @@ sub _build_pages ($self) {
     $route = $self->base_route . $route;
     $route =~ s{//}{/}g;
 
-    $self->logger->debug("Registering route '$route' for '$file_path'");
+    $self->log(debug => "Registering route '$route' for '$file_path'");
 
     $pages{$route} = $processed;
   }
@@ -108,7 +107,7 @@ sub register_routes ($self, $router) {
     );
   }
 
-  $self->logger->info("Registered " . scalar(keys %$pages) . " HPNOFP routes");
+  $self->log(info => "Registered " . scalar(keys %$pages) . " HPNOFP routes");
 }
 
 sub calculate_fanfiction_order ($self, $path) {
@@ -181,8 +180,7 @@ sub page_handler ($self, $ctx, $content) {
 }
 
 sub process_xhtml_file ($self, $file) {
-  $self->logger->info("Processing XHTML file: $file");
-
+  $self->log(info => "Processing XHTML file: $file");
   my @warns;
   local $SIG{__WARN__} = sub { push @warns, @_ };
 
@@ -191,6 +189,7 @@ sub process_xhtml_file ($self, $file) {
     $dom = XML::LibXML->load_html(
       location => $file->stringify,
       recover  => 1,
+      suppress_errors => 1,
     );
     1;
   };
@@ -199,11 +198,11 @@ sub process_xhtml_file ($self, $file) {
     my $err = $@;
     if (blessed($err) && $err->isa('XML::LibXML::Error')) {
       chomp(my $msg = $err->as_string);
-      $self->logger->error($msg);
+      $self->log(error => $msg);
     }
     else {
       chomp $err;
-      $self->logger->error("XML::LibXML load_html failed: $err");
+      $self->log(error => "XML::LibXML load_html failed: $err");
     }
     return undef;
   }
@@ -211,7 +210,7 @@ sub process_xhtml_file ($self, $file) {
   # Log warnings
   for my $w (@warns) {
     chomp $w;
-    $self->logger->warn($w);
+    $self->log(warn => $w);
   }
 
   my $writer = HTML::HTML5::Writer->new(markup_declaration => 0);
@@ -220,13 +219,13 @@ sub process_xhtml_file ($self, $file) {
 
   # Extract title from h2 tag
   my @h2nodes = $dom->findnodes('//h2');
-  $self->logger->debug("Found " . scalar(@h2nodes) . " h2 nodes in $name");
+  $self->log(debug => "Found " . scalar(@h2nodes) . " h2 nodes in $name");
 
   my $titleNode = $h2nodes[0];
   my $titleText = $titleNode ? $titleNode->textContent : undef;
   $titleText //= "Harry Potter and the Nightmares of Futures Past - $name";
 
-  $self->logger->debug("Using title: $titleText for $name");
+  $self->log(debug => "Using title: $titleText for $name");
 
   # Fix CSS links
   foreach my $linkNode ($dom->findnodes('//link[@href]')) {
@@ -282,13 +281,13 @@ sub process_xhtml_file ($self, $file) {
 
   # Extract TOC navigation if this is the TOC file
   if ($titleText eq 'Table of Contents') {
-    $self->logger->debug("Found TOC file, extracting nav fragment");
+    $self->log(debug => "Found TOC file, extracting nav fragment");
 
     my $navXpath   = selector_to_xpath('.coverpage');
     my $navElement = $dom->findnodes($navXpath)->[0];
     if (!$navElement) {
       $navElement = $dom->findnodes('//main')->[0];
-      $self->logger->debug("No nav element found, using main element instead");
+      $self->log(debug => "No nav element found, using main element instead");
     }
 
     if ($navElement) {
@@ -306,7 +305,7 @@ sub process_xhtml_file ($self, $file) {
       $self->nav_html($nav_html);
     }
     else {
-      $self->logger->warn("Could not find nav or main element in TOC file");
+      $self->log(warn => "Could not find nav or main element in TOC file");
     }
   }
 

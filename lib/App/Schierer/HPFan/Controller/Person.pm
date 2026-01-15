@@ -5,7 +5,6 @@ use utf8::all;
 use Mooish::Base -standard;
 extends 'Thunderhorse::Controller';
 with 'App::Schierer::HPFan::Role::Gramps';
-with 'WebFramework::Role::Logger';
 with 'WebFramework::Role::Markdown';
 
 use Future::AsyncAwait;
@@ -21,7 +20,7 @@ has template_file => (
 );
 
 has app_config => (
-  is => 'ro',
+  is      => 'ro',
   default => sub {
     my $self = shift;
     return $self->app->config;
@@ -63,8 +62,8 @@ async sub register_routes ($self, $router) {
     }
   );
   foreach my $person (values $self->gramps->people->%*) {
-    $self->logger->debug(
-      sprintf('Person Controller got person "%s" from gramps model',
+    $self->log(
+      debug => sprintf('Person Controller got person "%s" from gramps model',
         $person->display_name)
     );
     $self->add_navigation_route(
@@ -113,7 +112,9 @@ async sub handle_person_route ($self, $ctx, $surname, $identifier, $suffix = '')
     }
 
     if ($person) {
-      # Check for static markdown content for this person
+$self->log(info => sprintf('Controller::Person found "%s" for request "%s"',
+$person->display_name, $path));
+# Check for static markdown content for this person
       my $static_content = '';
 
       # Build list of possible markdown filenames to try
@@ -145,11 +146,14 @@ async sub handle_person_route ($self, $ctx, $surname, $identifier, $suffix = '')
       };
 
       if ($@) {
-        $self->logger->error("Error rendering person page: $@");
+        $self->log(error => "Error rendering person page: $@");
         return $self->render_error(500, "Internal Server Error: $@");
       }
 
       return $html if $html;
+    }
+    else {
+      $self->log(error => "No person found for requested path '$path'");
     }
   }
 
@@ -166,7 +170,7 @@ async sub handle_person_route ($self, $ctx, $surname, $identifier, $suffix = '')
         $html = await $family_controller->family_page($ctx, $surname_only);
       };
       if ($@) {
-        $self->logger->error("Error rendering family page: $@");
+        $self->log(error => "Error rendering family page: $@");
       }
       return $html if $html;
     }
@@ -282,7 +286,7 @@ sub generate_family_tree ($self, $person) {
   };
 
   if ($@) {
-    $self->logger->error("Error generating family tree: $@");
+    $self->log(error => "Error generating family tree: $@");
     return '<p>Family tree unavailable</p>';
   }
 
@@ -343,7 +347,8 @@ sub render_person_page_from_object ($self, $person, $static_content,
     site_logo    => $self->site_logo(),
   };
 
-  $self->logger->debug("Rendering template with "
+  $self->log( debug =>
+        "Rendering template with "
       . scalar(@families)
       . " families and "
       . scalar(@childof)

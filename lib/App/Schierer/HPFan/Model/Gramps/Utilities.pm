@@ -1,18 +1,18 @@
-use v5.42;
-use utf8::all;
 
 package App::Schierer::HPFan::Model::Gramps::Utilities {
+  use v5.42;
+  use utf8::all;
+  use Mooish::Base -standard;
+  with 'WebFramework::Role::Logger';
   use Carp ();
   use Readonly;
   use Scalar::Util   qw(blessed looks_like_number);
   use List::AllUtils qw( firstidx );
-  use Exporter qw(import);
-  require Log::Handler;
+  use Exporter       qw(import);
 
   our @EXPORT      = qw( event_role event_type );
   our %EXPORT_TAGS = (all_funcs => [@EXPORT]);
 
-  our $logger //= Log::Handler->create_logger(__PACKAGE__);
 
   sub event_role ($self, $roleNumber) {
     Readonly::Hash my %ROLE_MAP => (

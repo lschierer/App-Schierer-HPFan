@@ -11,11 +11,12 @@ extends 'WebFramework::App';
 our $VERSION = 'v0.03.0';
 
 sub build ($self) {
+
   $self->SUPER::build();
 
   # Load modules first
   $self->load_module('^App::Schierer::HPFan::Module::ClassLists');
-  $self->load_module('^WebFramework::Module::AutoIndex');
+  say sprintf('logo file is "%s"', $self->app->config->{config}->{site_logo});
 
   # it appears that the top one wins?
   $self->load_controller('Person');
@@ -24,15 +25,11 @@ sub build ($self) {
   $self->load_controller('Bookmarks');
   $self->load_controller('HPNOFP');
   $self->load_controller('Root');
-  $self->load_module('Middleware' => {
-    #'^WebFramework::Middleware::Markdown' => {
-    #  path => 'share/pages',
-    #  pass_through => 1,
-    #  app_config => $self->config,
-    #  _order => 1
-    #},
-    Static => { root => 'public', pass_through => 1, _order => 2 },
-  });
+  $self->load_module(
+    'Middleware' => {
+      Static => { root => 'public', pass_through => 1 },
+    }
+  );
 
 }
 

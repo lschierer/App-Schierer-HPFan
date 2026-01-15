@@ -6,7 +6,6 @@ use warnings;
 use Moo;
 use experimental 'signatures';
 with 'App::Schierer::HPFan::Role::Gramps';
-with 'WebFramework::Role::Logger';
 extends 'Thunderhorse::Controller';
 
 use Future::AsyncAwait;
@@ -53,7 +52,7 @@ async sub timeline_page ($self, $ctx) {
 
   # Build timeline asynchronously
   my $timeline = await $self->build_timeline();
-  $self->logger->debug(
+  $self->log(debug =>
     sprintf('timeline_page retrieved %s events', scalar @$timeline));
 
   # Create Timeline view
@@ -85,35 +84,35 @@ async sub timeline_page ($self, $ctx) {
 async sub build_timeline ($self) {
   # Return cached if already built
   if ($self->timeline_cache->{built}) {
-    $self->logger->debug('Returning cached timeline');
+    $self->log(debug => 'Returning cached timeline');
     return $self->timeline_cache->{events};
   }
 
   my @all_events;
 
   # Get events from YAML files asynchronously
-  $self->logger->info('Building History timeline from YAML');
+  $self->log(info => 'Building History timeline from YAML');
   my $yaml_events = App::Schierer::HPFan::Model::History::YAML->new(
     SourceDir => path('share/history'));
   $yaml_events->process();
   my $ye = $yaml_events->events();
-  $self->logger->info(sprintf('Received %s events from YAML', scalar @$ye));
+  $self->log(info => sprintf('Received %s events from YAML', scalar @$ye));
   push @all_events, @$ye;
 
   # Get events from Gramps database asynchronously
-  $self->logger->info('Building History timeline from Gramps');
+  $self->log(info => 'Building History timeline from Gramps');
   my $gramps_events =
     App::Schierer::HPFan::Model::History::Gramps->new(gramps => $self->gramps);
   $gramps_events->process();
   my $ge = $gramps_events->events();
-  $self->logger->info(sprintf('Received %s events from Gramps', scalar @$ge));
+  $self->log(info => sprintf('Received %s events from Gramps', scalar @$ge));
   push @all_events, @$ge;
 
   # Cache the results
   $self->timeline_cache->{events} = \@all_events;
   $self->timeline_cache->{built}  = 1;
 
-  $self->logger->info(
+  $self->log(info =>
     sprintf('History timeline built: %d items', scalar @all_events));
 
   return \@all_events;

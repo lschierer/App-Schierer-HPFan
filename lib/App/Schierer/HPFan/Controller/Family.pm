@@ -5,7 +5,6 @@ use utf8::all;
 use Mooish::Base -standard;
 extends 'Thunderhorse::Controller';
 with 'App::Schierer::HPFan::Role::Gramps';
-with 'WebFramework::Role::Logger';
 with 'WebFramework::Role::Markdown';
 
 use Future::AsyncAwait;
@@ -14,7 +13,7 @@ use Encode      qw(encode_utf8);
 use URI::Escape qw(uri_escape_utf8);
 
 has app_config => (
-  is => 'ro',
+  is      => 'ro',
   default => sub {
     my $self = shift;
     return $self->app->config;
@@ -48,7 +47,7 @@ async sub register_routes ($self, $router) {
     }
   );
   foreach my $surname (keys %{ await $self->get_all_surnames }) {
-    $self->logger->debug(
+    $self->log(debug =>
       sprintf('Family Controller got surname "%s" from get_all_surnames',
         $surname)
     );

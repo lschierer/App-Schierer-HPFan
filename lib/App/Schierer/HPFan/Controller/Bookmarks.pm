@@ -3,7 +3,7 @@ package App::Schierer::HPFan::Controller::Bookmarks;
 use v5.42.0;
 use Mooish::Base -standard;
 extends 'Thunderhorse::Controller';
-with 'WebFramework::Role::Logger';
+
 with 'WebFramework::Role::Markdown';
 
 use Path::Tiny;
@@ -11,7 +11,7 @@ use YAML::XS qw(Load);
 use Encode   qw(encode_utf8);
 
 has app_config => (
-  is => 'ro',
+  is      => 'ro',
   default => sub {
     my $self = shift;
     return $self->app->config;
@@ -49,14 +49,13 @@ sub _build_bookmarks_tree ($self) {
   }
 
   my @keys = sort keys %tree;
-  $self->logger->debug(
-    "Built bookmarks tree with " . scalar(@keys) . " entries");
+  $self->log(debug => "Built bookmarks tree with " . scalar(@keys) . " entries");
 
   return \%tree;
 }
 
 sub process_bookmark_file ($self, $file, $tree) {
-  $self->logger->debug("Processing bookmark file: $file");
+  $self->log(debug => "Processing bookmark file: $file");
 
   my $content;
   eval {
@@ -64,17 +63,17 @@ sub process_bookmark_file ($self, $file, $tree) {
     $content = Load($yaml_str);
   };
   if ($@) {
-    $self->logger->error("Error parsing YAML file '$file': $@");
+    $self->log(error => "Error parsing YAML file '$file': $@");
     return;
   }
 
   unless (ref $content eq 'HASH') {
-    $self->logger->warn("Content is not a hash in '$file': " . ref($content));
+    $self->log(warn => "Content is not a hash in '$file': " . ref($content));
     return;
   }
 
   unless ($content->{name}) {
-    $self->logger->warn("'name' is required in '$file', ignoring");
+    $self->log(warn => "'name' is required in '$file', ignoring");
     return;
   }
 
@@ -110,7 +109,7 @@ sub process_bookmark_file ($self, $file, $tree) {
     }
   }
 
-  $self->logger->debug("Route for '$file' is '$route' with title '$title'");
+  $self->log(debug => "Route for '$file' is '$route' with title '$title'");
 
   $tree->{$route} = {
     %$content,
@@ -158,7 +157,7 @@ sub register_routes ($self, $router) {
     }
   }
 
-  $self->logger->info("Registered " . scalar(@routes) . " bookmark routes");
+  $self->log(info => "Registered " . scalar(@routes) . " bookmark routes");
 }
 
 sub bookmark_index ($self, $ctx, $entry, $all_routes) {

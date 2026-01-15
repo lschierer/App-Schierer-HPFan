@@ -12,7 +12,7 @@ require Log::Handler;
 class App::Schierer::HPFan::View::Markdown {
 
   method logger {
-    state $l4p //= Log::Handler->create_logger(__CLASS__);
+    state $l4p //= Log::Handler->new();
     return $l4p;
   }
 

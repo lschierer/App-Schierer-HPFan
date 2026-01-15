@@ -23,8 +23,10 @@ class App::Schierer::HPFan::Data {
   field $output    : param;
   field $debug     : param = 0;
 
+  our $l4p;
+
   method logger {
-    state $l4p //= Log::Handler->create_logger(__CLASS__);
+    $l4p //= Log::Handler->create_logger(__CLASS__);
     return $l4p;
   }
 

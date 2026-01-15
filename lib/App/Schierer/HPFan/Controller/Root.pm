@@ -4,9 +4,7 @@ use v5.42.0;
 use utf8::all;
 use Mooish::Base -standard;
 with 'App::Schierer::HPFan::Role::Gramps';
-with 'WebFramework::Role::Logger';
 with 'WebFramework::Role::Markdown';
-
 extends 'Thunderhorse::Controller';
 
 use Future::AsyncAwait;
@@ -14,13 +12,12 @@ require Path::Tiny;
 require Path::Iterator::Rule;
 
 has app_config => (
-  is => 'ro',
+  is      => 'ro',
   default => sub {
     my $self = shift;
     return $self->app->config;
   },
 );
-
 
 has base_dir => (
   is      => 'ro',
@@ -32,7 +29,7 @@ has base_dir => (
 
 sub build ($self) {
   my $build_start = sprintf('build method for "%s"', __PACKAGE__);
-  $self->logger->info($build_start);
+  $self->log(info => $build_start);
   my $tree   = $self->_build_Root_Tree;
   my @routes = sort keys %$tree;
 
@@ -56,7 +53,7 @@ sub build ($self) {
       $route,
       {
         to => async sub ($self, $ctx) {
-          my $fm   = $self->parse_markdown_frontmatter($entry->{path});
+          my $fm    = $self->parse_markdown_frontmatter($entry->{path});
           my $title = $fm->{title};
           if (!$title) {
             my $path_for_title = $entry->{route};
@@ -89,13 +86,16 @@ sub build ($self) {
           }
           else {
 
-            return $self->render_markdown_page($entry->{path}, $entry->{route},
+            return $self->render_markdown_page(
+              $entry->{path},
+              $entry->{route},
               {
                 site_logo => $self->site_logo(),
                 title     => $title,
                 sidebar   => $sidebar,
                 nav_html  => $self->render_navigation($entry->{route}),
-              });
+              }
+            );
           }
 
         },
@@ -104,7 +104,8 @@ sub build ($self) {
     );
   }
 
-  $self->logger->info("Registered " . scalar(@routes) . " static Root routes");
+  $self->log(
+    info => "Registered " . scalar(@routes) . " static Root routes");
 
   # Add catch-all route for directory gaps (AutoIndex)
   $self->router->add(
@@ -145,18 +146,19 @@ sub handle_directory_gap ($self, $ctx) {
       current_year => $current_year,
       css_files    => ['/css/navigation.css', '/css/directory-list.css'],
       sidebar      => 1,
-      nav_html   => $navigation_html,
+      nav_html     => $navigation_html,
       site_logo    => $self->site_logo(),
     };
 
     return $self->render('page/autoindex.tt', $vars);
   }
 
-  # Not found
+  # Not found - set status and render error template
+  $ctx->res->status(404);
   return $self->render(
     'error.tt',
     {
-      title        => 'Page Not Found',
+      title        => '404 - Page Not Found',
       message      => 'The requested page was not found.',
       current_year => (localtime)[5] + 1900,
     }
@@ -166,7 +168,8 @@ sub handle_directory_gap ($self, $ctx) {
 sub _build_Root_Tree ($self) {
   my %tree;
 
-  $self->logger->debug(sprintf('about to iterate over "%s"', $self->base_dir));
+  $self->log(
+    debug => sprintf('about to iterate over "%s"', $self->base_dir));
   my $rule = Path::Iterator::Rule->new;
   my $next = $rule->file->nonempty->name(qr/\.md/)->iter(
     $self->base_dir,
@@ -179,16 +182,16 @@ sub _build_Root_Tree ($self) {
   );
   while (defined(my $file = $next->())) {
     $file = Path::Tiny::path($file);
-    $self->logger->debug("Root Controller iterating over '$file'");
+    $self->log(debug => "Root Controller iterating over '$file'");
 
     # Fast frontmatter parsing - only read first 20 lines
     my $fm = $self->parse_markdown_frontmatter($file->absolute);
     unless ($fm) {
-      $self->logger->warn("No frontmatter available for '$file'");
+      $self->log(warn => "No frontmatter available for '$file'");
       next;
     }
     unless (ref($fm) eq 'HASH' && keys %$fm) {
-      $self->logger->warn("Empty frontmatter for '$file'");
+      $self->log(warn => "Empty frontmatter for '$file'");
       next;
     }
     my $title = $fm->{title} // $file->basename(qr/.md/);
@@ -222,8 +225,8 @@ sub _build_Root_Tree ($self) {
       route => $route,
       order => $order,
     };
-    $self->logger->debug(
-      sprintf('Registering route "%s" for file "%s"', $route, $file));
+    $self->log(
+      debug => sprintf('Registering route "%s" for file "%s"', $route, $file));
   }
   return \%tree;
 }
