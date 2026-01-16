@@ -31,17 +31,18 @@
           [% END %]
         </dd>
         <dd>
+          [% date_labels = {
+              series_start => 'Series Start',
+              published    => 'Published',
+              updated      => 'Updated',
+              completed    => 'Completed'
+          } %]
           <span class="spectrum-Detail spectrum-Detail--sizeM spectrum-Detail-strong">Date(s): </span><br/>
           <ul class="dateList">
             [% FOREACH date_type IN ['series_start', 'published', 'updated', 'completed'] %]
               [% IF item.dates.$date_type %]
-                [%
-                  printLabel = date_type.replace('_', ' ');
-                  words = printLabel.split(' ');
-                  printLabel = words.map('ucfirst').join(' ');
-                %]
                 <li class="spectrum-Detail spectrum-Detail--sizeM">
-                  <span class="spectrum-Detail-strong">[% printLabel %]:</span>
+                  <span class="spectrum-Detail-strong">[% date_labels.$date_type %]:</span>
                   <span class="spectrum-Detail--light">[% item.dates.$date_type || 'N/A' %]</span>
                 </li>
               [% END %]
