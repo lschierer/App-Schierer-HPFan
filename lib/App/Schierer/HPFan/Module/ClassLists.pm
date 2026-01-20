@@ -65,7 +65,7 @@ sub build ($self) {
   weaken $self;
 
   # Register the render_classlist_tables helper method for controllers
-  $self->register(
+  $self->add_method(
     controller => render_classlist_tables => async sub ($controller, $html) {
       return await $self->_render_classlist_tables($html);
     }
