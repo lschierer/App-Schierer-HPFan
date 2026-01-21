@@ -44,7 +44,7 @@ RUN fc-cache -f -v
 
 RUN apt-get install -y netcat-openbsd
 RUN cpanm utf8::all
-RUN cpanm Module::Build
+RUN cpanm -n Module::Build
 
 WORKDIR /opt
 
@@ -53,7 +53,7 @@ RUN git clone https://github.com/lschierer/PAGI-WebServer.git
 
 # Build and install PAGI-WebServer framework
 WORKDIR /opt/PAGI-WebServer
-RUN cpanm utf8::all Module::Build
+RUN cpanm -n utf8::all Module::Build
 RUN perl Build.PL
 RUN cpanm --installdeps -n . || (mkdir -p /error-logs && cp /root/.cpanm/work/*/build.log /error-logs/ && false)
 RUN ./Build manifest
