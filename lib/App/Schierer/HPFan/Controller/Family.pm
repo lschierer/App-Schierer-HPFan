@@ -108,7 +108,7 @@ async sub family_page ($self, $ctx, $surname) {
     site_logo    => $self->site_logo(),
   };
 
-  return $self->render('family/details.tt', $vars);
+  return $self->template('family/details.tt', $vars);
 }
 
 # Build family tree starting from root ancestors

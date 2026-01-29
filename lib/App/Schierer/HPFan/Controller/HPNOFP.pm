@@ -159,7 +159,7 @@ sub index_handler ($self, $ctx) {
     site_logo    => $self->site_logo(),
   };
 
-  return $self->render('hpnofp/index.tt', $vars);
+  return $self->template('hpnofp/index.tt', $vars);
 }
 
 sub page_handler ($self, $ctx, $content) {
@@ -176,7 +176,7 @@ sub page_handler ($self, $ctx, $content) {
     site_logo    => $self->site_logo(),
   };
 
-  return $self->render('hpnofp/page.tt', $vars);
+  return $self->template('hpnofp/page.tt', $vars);
 }
 
 sub process_xhtml_file ($self, $file) {

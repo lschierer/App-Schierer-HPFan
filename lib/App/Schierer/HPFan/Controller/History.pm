@@ -78,7 +78,7 @@ async sub timeline_page ($self, $ctx) {
     site_logo    => $self->site_logo(),
   };
 
-  return $self->render('history/timeline.tt', $vars);
+  return $self->template('history/timeline.tt', $vars);
 }
 
 async sub build_timeline ($self) {

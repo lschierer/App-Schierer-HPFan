@@ -61,7 +61,7 @@ async sub register_routes ($self, $router) {
     );
     $self->add_navigation_route(
       sprintf('/Harrypedia/people/%s', $person->name_as_link_path),
-      $person->display_name, { order => 20 });
+      $person->display_name, { order => 21 });
   }
 
 }
@@ -172,7 +172,7 @@ $person->display_name, $path));
       site_logo    => $self->site_logo(),
     };
 
-    return $self->render('page/markdown.tt', $vars);
+    return $self->template('page/markdown.tt', $vars);
   }
 
   # Not found
@@ -329,7 +329,7 @@ sub render_person_page_from_object ($self, $person, $static_content,
       . " parent families");
 
   # Render template
-  return $self->render($self->template_file, $vars);
+  return $self->template($self->template_file, $vars);
 }
 
 sub render_person_page ($self, $surname, $given_name, $static_content,

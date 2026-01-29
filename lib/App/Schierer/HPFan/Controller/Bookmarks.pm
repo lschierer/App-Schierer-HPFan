@@ -6,7 +6,7 @@ extends 'Thunderhorse::Controller';
 
 with 'WebFramework::Role::Markdown';
 
-use Path::Tiny;
+require Path::Tiny;
 use YAML::XS qw(Load);
 use Encode   qw(encode_utf8);
 
@@ -29,7 +29,7 @@ has site_logo => (
 
 has bookmarks_dir => (
   is      => 'ro',
-  default => sub { path('share/Bookmarks') },
+  default => sub { Path::Tiny::path('share/Bookmarks') },
 );
 
 has bookmarks_tree => (is => 'lazy',);
@@ -180,10 +180,14 @@ sub bookmark_index ($self, $ctx, $entry, $all_routes) {
 
     # This is a direct child
     my $entry_data = $tree->{$route};
+    my $type = $entry_data->{path}->basename eq 'index.yaml'
+      ? 'directory'
+      : 'file';
     push @child_entries,
       {
       title => $entry_data->{title} // $entry_data->{name},
       path  => $route,
+      type  => $type,
       };
   }
 
@@ -209,7 +213,7 @@ sub bookmark_index ($self, $ctx, $entry, $all_routes) {
     site_logo    => $self->site_logo,
   };
 
-  return $self->render('bookmarks/index.tt', $vars);
+  return $self->template('bookmarks/index.tt', $vars);
 }
 
 sub bookmark_page ($self, $ctx, $entry) {
@@ -248,7 +252,7 @@ sub bookmark_page ($self, $ctx, $entry) {
     site_logo    => $self->site_logo,
   };
 
-  return $self->render('bookmarks/page.tt', $vars);
+  return $self->template('bookmarks/page.tt', $vars);
 }
 
 1;

@@ -1,25 +1,16 @@
 [% WRAPPER layouts/default.tt %]
-<div class="bookmarks-index">
 
   [% IF comments %]
     [% comments %]
-    <hr role="separator" class="spectrum-Divider spectrum-Divider--sizeM" />
   [% END %]
 
   [% IF items.size > 0 %]
-    <div class="directory-list">
-      <ul class="directory-list">
-        [% FOREACH entry IN items %]
-          <li class="spectrum-Body spectrum-Body--sizeM spectrum-Body--serif">
-            <a class="spectrum-Link spectrum-Link--primary" href="[% entry.path %]">
-              [% entry.title %]
-            </a>
-          </li>
-        [% END %]
-      </ul>
+    <hr role="separator" class="spectrum-Divider spectrum-Divider--sizeM" />
+    <div class="directory-index">
+      [% INCLUDE partials/autoindex_list.tt entries=items %]
     </div>
   [% ELSE %]
       <p>No bookmarks found in this directory.</p>
   [% END %]
-</div>
+
 [% END %]

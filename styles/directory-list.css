@@ -1,5 +1,5 @@
-/* directory-list.css */
-.directory-list ul {
+/* directory-index.css */
+.directory-index ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15em, 0.33fr));
   gap: 1rem;
@@ -8,13 +8,13 @@
   margin: 0;
 }
 
-.directory-list li {
+.directory-index li {
   /* Optional: add some padding/styling to each item */
   padding: 0.5rem;
   border-radius: 4px;
 }
 
-.directory-list a {
+.directory-index a {
   display: block;
   text-decoration: none;
   color: inherit;

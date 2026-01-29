@@ -82,7 +82,7 @@ sub build ($self) {
               nav_html     => $self->render_navigation($entry->{route}),
             };
 
-            return $self->render('page/markdown.tt', $vars);
+            return $self->template('page/markdown.tt', $vars);
           }
           else {
 
@@ -144,18 +144,18 @@ sub handle_directory_gap ($self, $ctx) {
       entries      => $entries,
       title        => $title,
       current_year => $current_year,
-      css_files    => ['/css/navigation.css', '/css/directory-list.css'],
+      css_files    => ['/css/navigation.css', '/css/directory-list.css', ],
       sidebar      => 1,
       nav_html     => $navigation_html,
       site_logo    => $self->site_logo(),
     };
 
-    return $self->render('page/autoindex.tt', $vars);
+    return $self->template('page/autoindex.tt', $vars);
   }
 
   # Not found - set status and render error template
   $ctx->res->status(404);
-  return $self->render(
+  return $self->template(
     'error.tt',
     {
       title        => '404 - Page Not Found',
