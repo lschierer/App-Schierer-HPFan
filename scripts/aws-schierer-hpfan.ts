@@ -47,7 +47,7 @@ new ThunderhorseStack(app, `Hpfan-${environment}`, {
   appSubdomain: config.subdomain,
   hostedZoneId: hostedZoneId, // Your Route53 hosted zone ID
   zoneName: zoneName,
-  containerPort: 3000, // Port your Thunderhorse app listens on
+  containerPort: 3001, // Port your Thunderhorse app listens on
   cpu: config.cpu,
   memory: config.memory,
   desiredCount: config.desiredCount,
