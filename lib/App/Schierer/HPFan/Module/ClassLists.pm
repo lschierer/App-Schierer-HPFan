@@ -8,7 +8,7 @@ with 'WebFramework::Role::Logger';
 extends 'Thunderhorse::Module';
 use Future::AsyncAwait;
 
-use Mojo::DOM;
+use Mojo::DOM58;
 use HTML::Escape qw(escape_html);
 
 has class_lists => (is => 'lazy');
@@ -81,7 +81,7 @@ async sub _render_classlist_tables ($self, $html) {
     return $html;
   }
 
-  my $dom = Mojo::DOM->new($html);
+  my $dom = Mojo::DOM58->new($html);
 
   # Find every <classlisttable year="YYYY"> or <ClassListTable year="YYYY">
   # Note: Mojo::DOM normalizes HTML tag names to lowercase
