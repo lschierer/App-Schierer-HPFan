@@ -1,5 +1,4 @@
 ---
-title: Dursley
 author: Luke Schierer
 ---
 

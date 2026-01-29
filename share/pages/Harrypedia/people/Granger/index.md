@@ -1,5 +1,4 @@
 ---
-title: Granger
 author: Luke Schierer
 ---
 

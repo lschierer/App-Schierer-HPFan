@@ -1,5 +1,4 @@
 ---
-title: Zabini
 author: Luke Schierer
 ---
 We really only know of Blaize Zabini. We know his mother has been married seven

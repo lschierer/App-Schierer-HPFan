@@ -1,5 +1,4 @@
 ---
-title: McLaggen
 author: Luke Schierer
 ---
 The McLaggen family is apparently well connected, sufficiently so to impress

@@ -1,5 +1,4 @@
 ---
-title: Weasley
 author: Luke Schierer
 ---
 ### Weasley Ages

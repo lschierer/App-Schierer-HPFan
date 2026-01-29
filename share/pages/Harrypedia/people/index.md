@@ -1,5 +1,5 @@
 ---
-title: People
+title: People 
 author: Luke Schierer
 sidebar:
   order: 1

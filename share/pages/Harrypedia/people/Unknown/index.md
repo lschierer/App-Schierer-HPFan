@@ -1,5 +1,4 @@
 ---
-title: Genealogical Gaps - People with Unknown Surnames
 author: Luke Schierer
 ---
 

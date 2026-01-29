@@ -1,5 +1,4 @@
 ---
-title: Malfoy
 author: Luke Schierer
 ---
 Unlike the [Longbottom] family, there is a slight indication that the Malfoy

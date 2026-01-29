@@ -1,5 +1,4 @@
 ---
-title: Abbott
 author: Luke Schierer
 ---
 

@@ -1,5 +1,4 @@
 ---
-title: Peverell
 author: Luke Schierer
 ---
 ### Peverell Brothers

@@ -1,5 +1,4 @@
 ---
-title: Longbottom
 author: Luke Schierer
 ---
 Lots of fanfiction puts the Longbottom family into the nobility. I see no

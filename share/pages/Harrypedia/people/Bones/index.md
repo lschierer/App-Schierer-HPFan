@@ -1,5 +1,4 @@
 ---
-title: Bones
 author: Luke Schierer
 ---
 

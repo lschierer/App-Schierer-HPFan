@@ -1,5 +1,4 @@
 ---
-title: Black
 author: Luke Schierer
 ---
 

@@ -1,5 +1,4 @@
 ---
-title: Shacklebolt
 author: Luke Schierer
 ---
 This family is listed as a member of the so called "Sacred Twenty-Eight".[^221205-1]

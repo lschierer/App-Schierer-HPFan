@@ -1,5 +1,4 @@
 ---
-title: Potter
 author: Luke Schierer
 ---
 

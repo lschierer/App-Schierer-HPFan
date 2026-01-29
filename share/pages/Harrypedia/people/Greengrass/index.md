@@ -1,5 +1,4 @@
 --
-title: Greengrass
 author: Luke Schierer
 ---
 Per an interview, Daphne was part of Pansy Parkinson's "gang"[^200520-1]. This
