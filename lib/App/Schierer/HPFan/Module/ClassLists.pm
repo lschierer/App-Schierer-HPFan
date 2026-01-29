@@ -9,7 +9,7 @@ extends 'Thunderhorse::Module';
 use Future::AsyncAwait;
 
 use Mojo::DOM;
-use Mojo::Util qw(xml_escape);
+use HTML::Escape qw(escape_html);
 
 has class_lists => (is => 'lazy');
 
@@ -109,11 +109,11 @@ async sub _render_classlist_tables ($self, $html) {
       # Process each person asynchronously to get their data
       my @rows;
       for my $person (@$matches) {
-        my $name   = xml_escape($person->display_name // '');
-        my $gender = xml_escape($person->gender       // '');
-        my $house  = xml_escape(await $self->person_house($person));
-        my $blood  = xml_escape(await $self->person_blood_status($person));
-        my $econ   = xml_escape(await $self->person_economic_status($person));
+        my $name   = escape_html($person->display_name // '');
+        my $gender = escape_html($person->gender       // '');
+        my $house  = escape_html(await $self->person_house($person));
+        my $blood  = escape_html(await $self->person_blood_status($person));
+        my $econ   = escape_html(await $self->person_economic_status($person));
 
         push @rows, qq{<tr class="spectrum-Table-row">
                     <td class="spectrum-Table-cell">$name</td>

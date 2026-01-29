@@ -32,6 +32,7 @@ my $build = Module::Build->new(
     'Git::Repository::Log::Iterator' => '0',
     'GraphViz'                       => '0',
     'HTML::Entities'                 => '0',
+    'HTML::Escape'                   => '0',
     'HTML::HTML5::Writer'            => '0',
     'HTML::Selector::XPath'          => '0',
     'HTML::Strip'                    => '0',
