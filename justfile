@@ -52,6 +52,7 @@ prod: build build-data
 
 # Deploy to development environment
 deploy-dev: install build-data build
+    pnpm cdk --profile personal acknowledge 34892
     pnpm cdk --profile personal deploy --app scripts/aws-schierer-hpfan.ts --context env=dev
 
 # Deploy to production environment
