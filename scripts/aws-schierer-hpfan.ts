@@ -14,7 +14,7 @@ const app = new cdk.App();
 
 const envConfigs: Record<string, EnvConfig> = {
   dev: {
-    CidrRange: "10.233.0.0/24",
+    CidrRange: "10.233.0.0/27",
     subdomain: "dev",
     desiredCount: 1,
     cpu: 1024,
@@ -22,7 +22,7 @@ const envConfigs: Record<string, EnvConfig> = {
     imageTag: "latest",
   },
   prod: {
-    CidrRange: "10.239.0.0/24",
+    CidrRange: "10.233.0.32/27",
     subdomain: "www",
     desiredCount: 1,
     cpu: 1024,
