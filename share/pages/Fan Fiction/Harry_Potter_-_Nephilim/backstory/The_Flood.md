@@ -61,4 +61,4 @@ produce underground gardens to grow their food. Those loyal to the Lord were
 similarly incensed, and determined to ensure that the planned purification of
 the Earth's surface was accomplished despite them. They confused the thoughts of this community of nephilim, such that they forgot that the surface world existed at all. Thus it would be many thousands of years before this community, which time and inbreeding had twisted into dwarfs, again found the surface and began to interact with human history.
 
-[^211218-1]: Gen 6:1-8,10-13 NRSVCE
+[^211218-1]: Gen 6:1-8,10-13 NRSVCE <!-- cspell: disable-line -->

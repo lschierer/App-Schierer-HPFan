@@ -88,7 +88,7 @@ to make sense.
     sinful, but sometimes suboptimal (see the intro about this being bad
     theology but good fiction).
   - Sometimes it represents something the nephil has him/her self done
-    unintentionally that cannot be (or at least has not been) distinquished
+    unintentionally that cannot be (or at least has not been) distinguished
     from the above categories.
 
   I am _intentionally_ going to _frequently_ be vague and downright

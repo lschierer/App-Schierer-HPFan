@@ -29,7 +29,7 @@ what Ron talks about most), but rather the one revealing comment "you can tell
 _me_ the truth."[^220901=1] He is hurt that he has been left out, but as a
 particularly immature teen-aged boy, it is easier to be angry about
 [Harry's] fame than to broach the emotion filled subjected of "I think you
-betrayed me." Not that this excuses him, _our_ perspective outside the narative means that we know that [Harry] _did not_ betray Ron, and that Ron's distrust of
+betrayed me." Not that this excuses him, _our_ perspective outside the narrative means that we know that [Harry] _did not_ betray Ron, and that Ron's distrust of
 [Harry] is all that is actually standing between them.
 
 The anger with which Ron reacts when [Hermione] goes to the Ball with Krum
@@ -146,7 +146,7 @@ hard to feel confident that he has really matured past the jealousies that have
 up through the seventh book been a core part of his character.
 
 For all my criticism of Ron, there are places where I feel many authors go too
-far, one way or the other. On one hand, Ron is good at chess, therefor he is a
+far, one way or the other. On one hand, Ron is good at chess, therefore he is a
 master strategist who, with just a little extra reading (or maybe even with no
 extra study at all), is a master of military strategy, small unit tactics, and
 sometimes even related fields. On the other hand, because Hermione berates him

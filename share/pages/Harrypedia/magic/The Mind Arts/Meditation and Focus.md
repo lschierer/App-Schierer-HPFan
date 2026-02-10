@@ -41,7 +41,7 @@ Naturally the version [Sirius][] is criticising here is the version [Snape][]
 teaches, and apparently true [Occlumency]. What [Sirius][] is recommending is
 thus something related, but different. I suspect it would work well against
 [legitimacy][] but only if you knew it was being used against you. That
-being said, he is right that it _would_ have benifits for the boys' control over
+being said, he is right that it _would_ have benefits for the boys' control over
 their tempers.
 
 [Snape]: /Harrypedia/people/Snape/Severus

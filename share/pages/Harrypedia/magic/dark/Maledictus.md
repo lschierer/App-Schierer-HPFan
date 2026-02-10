@@ -3,7 +3,7 @@ title: Maledictus
 author: Luke Schierer
 ---
 
-A hereditary curse, affecting only human females.[^250808-1]  This curse causes the victim (and her female decendants)
+A hereditary curse, affecting only human females.[^250808-1]  This curse causes the victim (and her female descendants)
 to, over time shift from an [animagus]-like state of being able to shift to and from an animal form at will to being
 irrevocably transformed into that animal.  As the curse progresses, the transformation becomes increasingly less and
 less voluntary, particularly when asleep.  Despite having the form of an animal, the victim retains a human lifespan.

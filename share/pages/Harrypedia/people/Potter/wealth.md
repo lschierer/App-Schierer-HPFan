@@ -167,7 +167,7 @@ vault without forethought.[^210322-1]
     Location 1527 of 3996.
 
 [^200527-1]:
-    ivybelle. _Don't Touch Me_,
+    Isabelle. _Don't Touch Me_,
     [Archive of Our Own](https://archiveofourown.org/) last viewed 2020-05-27.
 
 [^200725-1]: Mrs. J. K. Rowling. _[Harry Potter and the Deathly Hallows]_ better citation needed.

@@ -78,7 +78,7 @@ In a world where magical contracts can in fact be binding, I can see how laws _m
     works that influence my thoughts on this include, but are not limited to:
 
     - Aealket. _[When is it a Contract](https://www.fanfiction.net/s/7382549)_
-      Pubished: 2011-09-14.
+      published: 2011-09-14.
     - Itsme66. _[The Mandatory Marriage Contract Fic](https://www.fanfiction.net/s/5695032)_
       Published: 2010-01-25. Updated: 2010-02-26.
     - questionablequotation.

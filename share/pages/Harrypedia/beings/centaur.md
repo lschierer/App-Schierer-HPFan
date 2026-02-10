@@ -4,7 +4,7 @@ title: Centaur
 author: Luke Schierer
 ---
 
-[Centaurs] refused to be classifed as [beings], insisting on being considered
+[Centaurs] refused to be classified as [beings], insisting on being considered
 [animals].[^231003-1]
 
 [beings]: /Harrypedia/beings/

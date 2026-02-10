@@ -49,7 +49,7 @@ attacking [Snape].[^230804-2]
 [^230804-2]: 
     In \_[Breaking Assumptions], the author presents an alternative theory,
     [Snape] may have been the instigator for the rocky relationship from the very
-    begining. [James]' pranks on [Snape] may, at first, have had nothing to do
+    beginning. [James]' pranks on [Snape] may, at first, have had nothing to do
     with [Lily] but rather with [Snape]'s constant snide remarks about [James]'
     family.
 

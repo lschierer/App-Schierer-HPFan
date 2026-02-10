@@ -13,12 +13,12 @@ collection: Nephilim
 > [!NOTE]
 > For things like a [hippogriff] to exist, I need non-Mendelian for at least magical animals, and I have decided to extend that to magic itself, and to any trait that is, or comes to be, sufficiently closely associated with magic. This is necessarily a blurry line.
 >
-> My non-Mendelian inheritance is necessarily arbitrary and entirely made up out of my own head, becuse none of my [source works] give us any details what so ever on the topic.
+> My non-Mendelian inheritance is necessarily arbitrary and entirely made up out of my own head, because none of my [source works] give us any details what so ever on the topic.
 
 ## The rules of magical inheritance as currently compiled
 
 1.  These rules must be applied as an ordered list, with earlier rules taking
-    precidence over later rules.
+    precedence over later rules.
 1.  Magical traits are almost always inherited following magical rules. However,
     periodically these rules stop working for no known reason. Whether or not these rules work is determined on a _per trait_ basis.
 1.  Any time these rules stop working, there is a significant drop in any behavior that cannot be
@@ -30,7 +30,7 @@ collection: Nephilim
 1.  For hereditary magical traits (including where appropriate, the ability to
     directly use magic), heredity is closely linked to gender. A male child will be more likely to inherit from his father, then next most likely to inherit from both parents, then from his mother. The reverse is true for a female child.
 1.  With any magical trait, there is a possibility of something truly bizarre
-    happening. Some scholars blame these bizzare occurances on angelic and/or
+    happening. Some scholars blame these bizarre occurrences on angelic and/or
     demonic intervention in heredity. Private revelation strongly supports this interpretation.
 1.  The ability to wield magic is not inherited as a single trait. Rather,
     there are 9 different traits associated with the ability to actively use magic (as differentiated from being passively magical). Interestingly, the magical community itself is either unaware or actively denies this knowledge.
@@ -53,7 +53,7 @@ collection: Nephilim
       changes induced by different magics requiring opposing emotional contexts
       might cancel each other out.
     - Intent matters,
-      - where malicous intent is present, we _tend_ to see the most crippling
+      - where malicious intent is present, we _tend_ to see the most crippling
         effects.
       - if the intent was preservation of self or others, or if there were
         strong elements of coercion involved, the corruption tends to be mitigated in odd unexpected ways.
@@ -92,7 +92,7 @@ There are in fact, though no-inworld scholar knows this, precise percentage base
     - a 6% chance of inheriting the sum total of both parents,
     - a 4% chance of a partial inheritance from just the opposite gender parent,
     - a 1% chance of something truly bizarre happening without any outside effect at all. Scholars are
-      **_sometimes_** right in attributing causes to these bizarre occurances when they are studied.
+      **_sometimes_** right in attributing causes to these bizarre occurrences when they are studied.
     - a 0.5% chance of becoming mundane (total loss of any behavior and ability not explicable by mundane
       natural philospophy). Scholars cannot distinguish this from the severe drop that occurs when a trait suddenly starts following Mendelian genetics.
     - Use of a corrupting magic sufficient to reach a change threshold

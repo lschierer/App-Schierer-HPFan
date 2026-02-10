@@ -15,14 +15,14 @@
 
 ### Speculation
 
-#### Socioeconmic Class
+#### Socioeconomic Class
 
 There is some discrepancy in the source material here. The first introduction
 of the Dursleys states that they "have everything they wanted,"[^220927-2] but
 they live in a reasonably sized house in a fairly standard suburban
-neighborhood. Indeed, in writing about Privet Drive, Mrs. Rowling would later
-state that she envisons the Dursleys as "smugly middle class,"[^220927-3] and
-admits that the house she describes is mentally modeled off "a rather small
+neighbourhood. Indeed, in writing about Privet Drive, Mrs. Rowling would later
+state that she envisions the Dursleys as "smugly middle class,"[^220927-3] and
+admits that the house she describes is mentally modelled off "a rather small
 three bedroomed house … near Bristol."[^220927-4] This is hardly the picture
 of the company director who has everything he wants.
 

@@ -4,7 +4,7 @@ there is some slight evidence that suggests that Professor Flitwick is redeemabl
 
 - We know of no examples of an unfair detention from Professor Flitwick.
 - We know of no example of Professor Flitwick giving in to the rumours
-  surrounding Harry and the Tri-Wizzard Tournament the way both Professors
+  surrounding Harry and the Tri-wizard Tournament the way both Professors
   [McGonagall] and [Sprout] did.
 - We do know that he utterly neglected [Luna Lovegood][Luna], but that could
   be because she never reported it to him. It is _possible_ that under a

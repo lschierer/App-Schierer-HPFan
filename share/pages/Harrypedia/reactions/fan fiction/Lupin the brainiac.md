@@ -4,7 +4,7 @@ title: Remus Lupin, Brains of the Marauders
 author: Luke Schierer
 ---
 
-One of the more common fannon ideas is that [Remus Lupin] was the most inteligent of the Marauders. This is sometimes stated explicitly, other times it is done by stating that "[Hermione] is [the younger generation's] [Remus]" or that "[Hermione] is a female [Remus]." Either way, there is a strong implication that he did the thinking and planning for [James] and [Sirius].
+One of the more common fannon ideas is that [Remus Lupin] was the most intelligent of the Marauders. This is sometimes stated explicitly, other times it is done by stating that "[Hermione] is [the younger generation's] [Remus]" or that "[Hermione] is a female [Remus]." Either way, there is a strong implication that he did the thinking and planning for [James] and [Sirius].
 
 The problem is that _[Lupin]_ states that [James] and [Sirius] were "the cleverest students in the school."[^240130-1] Supporting his admittedly biased statement, [McGonagall] describes the other two with these words: "Both very bright, of course exceptionally bright."[^240130-2] This flatly contradicts the idea that the pair of them were morons who relied on [Lupin] to do their thinking.
 

@@ -93,11 +93,11 @@ Pius Thicknesse's puppet government.
 [comparitive_class_ages]: ./comparitive_class_ages
 
 [^211001-1]:
-    Bakuraptor.
+    barrator.
     _[A Wizard's Guide to 'Banking'](https://www.fanfiction.net/s/12327848)_
     Published: 2017-01-18. Updated: 2021-07-21. Last Viewed: 2021-10-01.
 
-[^200819-4]: Several works have this idea, amoung them:
+[^200819-4]: Several works have this idea, among them:
 
     - AndrewWolfe. _[The Ghost of Privet Drive](https://archiveofourown.org/works/21500365)_
       [Archive of Our Own](https://archiveofourown.org) Last Updated 2020-08-14. Last Viewed 2020-08-19.

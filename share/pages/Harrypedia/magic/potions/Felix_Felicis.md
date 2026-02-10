@@ -9,7 +9,7 @@ spells: "Felix Felicis"
 ## Description
 
 Makes the drinker lucky for a finite time. They will experience extra-ordinary
-success in all endevours while under its effects. It causes giddiness,
+success in all endeavours while under its effects. It causes giddiness,
 recklessness, and dangerous overconfidence if taken in excess, and can even be
 highly toxic if sufficient quantities are imbibed. It requires six months to
 stew before being ready.

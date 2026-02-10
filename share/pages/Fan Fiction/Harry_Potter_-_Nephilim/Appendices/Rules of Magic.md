@@ -346,7 +346,7 @@ Nearly all nephilim communities categorise magic as follows:
 - Some potions additionally require chemical reactions not possible in nature.
   - This requires the potioneer to have abilities from the Powers to make a
     probabilistic reaction happen in the desired time frame.
-  - Alternately, the potioneeer can transmute the form of one ingredient to
+  - Alternately, the potioneer can transmute the form of one ingredient to
     make it chemically react the desired way.
 - Lastly, if a potion is to be stored, rather than used immediately, the
   effects must be locked in place _at the time it is brewed_, again an ability coming from the Powers.

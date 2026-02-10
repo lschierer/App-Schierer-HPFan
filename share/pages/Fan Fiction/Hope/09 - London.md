@@ -662,7 +662,7 @@ Olympe bit the inside of her lip hard to stop herself from laughing.
 
 “I know what it is,” Snape hissed.
 
-“Then get it; we’ll use it on the ferret, get him to confess that his story was as true as his innocence during the last battle, then Albus can fire him and we can move on,” Harry stated in a matter-of-fact voice. “That is,” he continued, his eyes gleaming, “if we can trust your batch of Veritaserum. Maybe we’d better request some from a reliable neutral source. Like Durmstang’s Potions Mistress.”
+“Then get it; we’ll use it on the ferret, get him to confess that his story was as true as his innocence during the last battle, then Albus can fire him and we can move on,” Harry stated in a matter-of-fact voice. “That is,” he continued, his eyes gleaming, “if we can trust your batch of Veritaserum. Maybe we’d better request some from a reliable neutral source. Like Durmstrang's Potions Mistress.”
 
 Snape’s face turned a dark puce, a colour Harry hadn’t seen since he had been leaving the Dursleys and “accidentally” let slip just how rich he was.
 
@@ -842,7 +842,7 @@ She nodded as the two of them vanished.
 
 “I’ve been keeping that in since yesterday,” she sighed in relief. “It was getting painful. And that’s not to mention the idea of dual Apparating three and a half thousand miles through Hogwarts’ wards.”
 
-“Gabrielle knows how ‘e does it,” Fleur said. “But she will not tell anyone. Not even me. Her loyalty to ‘arry overrides everyzing else.”
+“Gabrielle knows how ‘e does it,” Fleur said. “But she will not tell anyone. Not even me. Her loyalty to ‘Arry overrides everyzing else.”<!-- cspell: disable-line -->
 
 “Good,” Percy said softly. “We need Harry as he is now, more than ever.” He looked around and took a deep breath. “We’re in a bigger mess than he, or you, know.”
 
@@ -900,7 +900,7 @@ She nodded as the two of them vanished.
 
 “Well, this has been fascinating, but you have jobs to do,” Olympe said. “And I have paperwork to do.”
 
-“Come on, William,” Fleur said. “We’ll go for a walk and then see if we can meet Gabrielle and ‘arry later.”
+“Come on, William,” Fleur said. “We’ll go for a walk and then see if we can meet Gabrielle and ‘Arry later.”<!-- cspell: disable-line -->
 
 Slowly the room emptied, and Olympe sat back, her smile slowly fading. She was starting to get very worried about Albus. His behaviour was becoming more and more bizarre.
 
@@ -1068,7 +1068,7 @@ She felt herself blush as she looked at him. “Scamp.”
 
 “Drink?”
 
-“I vill ignore de Apparating,” Viktor muttered to himself. “Milk?”
+“I vill ignore de Apparating,” Viktor muttered to himself. “Milk?”<!-- cspell: disable-line -->
 
 Harry nodded and poured two glasses. The two Seekers settled themselves comfortably on the seats in front of the fireplace, facing each other.
 
@@ -1076,7 +1076,7 @@ Harry nodded and poured two glasses. The two Seekers settled themselves comforta
 
 “Explain what?”
 
-“I am no idiot, Harry” Viktor said. “I haff seen tings dat the uddhers do not. Veela and Harry are together, and I vant to know vhat Professor is doing vith Student.”
+“I am no idiot, Harry” Viktor said. “I haff seen tings dat the uddhers do not. Veela and Harry are together, and I vant to know vhat Professor is doing vith Student.” <!-- cspell: disable-line -->
 
 “I am Gabrielle’s Mate.”
 
@@ -1084,23 +1084,23 @@ Krum blinked. “By Veela choice?”
 
 Harry sighed and spent a few minutes explaining.
 
-“I knew dat you vere a goot mon,” Viktor said, a smile appearing on his face. “You are helpink your Mate learn for dis duel?”
+“I knew dat you vere a goot mon,” Viktor said, a smile appearing on his face. “You are helpink your Mate learn for dis duel?”<!-- cspell: disable-line -->
 
 Harry nodded. “Malfoy won’t know what hit him.”
 
-“Excellent,” Krum said, rubbing his hands together in unforced glee. “I vill help as vell.”
+“Excellent,” Krum said, rubbing his hands together in unforced glee. “I vill help as vell.”<!-- cspell: disable-line -->
 
 “I’m sorry, Viktor?”
 
-“Durmstrang used to teach the Dark Arts,” Krum explained. “I vas goot student at Durmstrang, despite being famous Quidditch star. Malfoy is Death Eater scum, and I vill tich Veela chick how to beat Dark Arts.”
+“Durmstrang used to teach the Dark Arts,” Krum explained. “I vas goot student at Durmstrang, despite being famous Quidditch star. Malfoy is Death Eater scum, and I vill tich Veela chick how to beat Dark Arts.”<!-- cspell: disable-line -->
 
 “Thank you,” Harry said with a smile.
 
-Krum nodded. “You know a lot, Harry Potter, bot I am var nastier dan you are, and I vill show her some tings that vould nevah occur to you.”
+Krum nodded. “You know a lot, Harry Potter, bot I am var nastier dan you are, and I vill show her some tings that vould nevah occur to you.”<!-- cspell: disable-line -->
 
 “You mind if I tag along?”
 
-“I vould not expect you to do anyting less.”
+“I vould not expect you to do anyting less.”<!-- cspell: disable-line -->
 
 “Now,” Harry said with a smile. “Fancy going for a fly before dinner?”
 

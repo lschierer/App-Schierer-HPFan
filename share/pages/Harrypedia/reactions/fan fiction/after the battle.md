@@ -21,7 +21,7 @@ In addition to the legitimate unanswered difficult questions that an author atte
   - One version of [Ginny] has her as utterly hurt and angry over the breakup. This version ignores the various statements in books six and seven, the few places that Mrs. Rowling does give us a glimpse into their relationship, where it states just how much insight [Ginny] has into [Harry]. I do not doubt that [Ginny] _was_ hurt and upset, I am firmly of the belief that the few scenes we have of them interacting in book seven clearly demonstrate that she did not _blame_ [Harry] for the separation.
   - A second version of [Ginny] falls back on the fan girl stereotype. This rarely results in a worthwhile story.
   - A third version presents [Ginny] as hopelessly dominated by her family. This never rings very true.
-  - The inverse is equally wierd. [Ginny] _is_ fiercely independent, but equally fiercely loves her family.
+  - The inverse is equally weird. [Ginny] _is_ fiercely independent, but equally fiercely loves her family.
 
 [horcrux]: /Harrypedia/magic/dark/Horcruxes/
 

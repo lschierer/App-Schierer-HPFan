@@ -66,7 +66,7 @@ would not only know this, but would be able to work around it. This would explai
     The idea that the pensieve can be used to invoke time was first
     suggested to me, in a different way, by _[Backward With Purpose Part I:
     Always and Always](https://www.fanfiction.net/s/4101650)_ by deadwoodpecker
-    Pubished 2008-02-28. Updated: 2018-09-28.
+    published 2008-02-28. Updated: 2018-09-28.
 
 [^221202-5]:
     Mrs. J. K. Rowling.

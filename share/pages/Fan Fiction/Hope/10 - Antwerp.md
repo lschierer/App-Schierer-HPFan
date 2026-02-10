@@ -1238,7 +1238,7 @@ The noise that they appeared in the midst of was incredible.
 
 “As our flying professor is currently being hunted for attempted rape and use of an Unforgivable,” she said smoothly, “it was decided that we would merge the Beauxbatons and Hogwarts classes.”
 
-“And ve decided dat Durmstrang shut participate as vell,” Viktor announced from behind him.
+“And ve decided dat Durmstrang shut participate as vell,” Viktor announced from behind him.<!-- cspell: disable-line -->
 
 “Which,” Minerva continued, “snowballed into an open house for the top three years who don’t have a class.”
 
@@ -1248,7 +1248,7 @@ Next to him, he could hear Aimée laughing softly.
 
 As the students started to move, he took a few steps back. “Viktor, Minerva, are you staying to help?”
 
-“I can not,” Viktor said apologetically. “I haff meetink.”
+“I can not,” Viktor said apologetically. “I haff meetink.”<!-- cspell: disable-line -->
 
 Harry nodded. “I’ll see you later?”
 

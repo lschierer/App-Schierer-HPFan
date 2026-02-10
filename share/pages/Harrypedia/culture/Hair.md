@@ -10,7 +10,7 @@ while [Draco Malfoy] does not[^220719-2]. As best I can tell from a cursory
 search, there is no non-magical historical basis for an association between
 hair length and societal status in Europe.[^220719-3] Thus if true, this
 would be something unique to the magical world, and more over, a uniqueness
-not substantiated by the cannonical works.
+not substantiated by the canonical works.
 
 [Lucius Malfoy]: </Harrypedia/people/Malfoy/Lucius Abraxas/>
 

@@ -17,13 +17,13 @@ is somewhat contradictory.[^240219-2]
 I personally think that it _is_ necessary to explain why elves so rarely rebel
 against this enslavement. It seems to me there are three reasonable explanations.
 
-One is that they are decendants of wild [Brownies] who are routinely tricked into
+One is that they are descendants of wild [Brownies] who are routinely tricked into
 magical contracts because wizarding law sees them as 1) wild manifestations of magic
 and not beings at all and 2) intruders into a wizard's home, and thus the contract a
 form of self defense.[^240219-3]
 
 A second is that the elves get _something_ from the magic that enslaves them.[^240220-1]
-Perhaps it is nurishment, perhaps it is lifespan, perhaps it is a source of power.
+Perhaps it is nourishment, perhaps it is lifespan, perhaps it is a source of power.
 This does not justify slavery. The relationship need not be one of master slave just
 because it _is_ one of master servant. One can recognize that the elf's payment is
 non-monetary but that the elf is still a _person._
@@ -41,11 +41,11 @@ harder because the _curse_ in question is lost and unrecorded by history.[^24021
     - [Moe64]. _[What We Do Today]_ Published: 2022-10-10. Updated: 2024-02-12.
 
 [^240219-2]:
-    In one extra-cannonical source she states House Elves live on
+    In one extra-canonical source she states House Elves live on
     average 200 years, while [Kreacher] is said (by her) to have lived
     over 600.
 
-[^240220-1]: This idea is used in, amoung others:
+[^240220-1]: This idea is used in, among others:
 
     - [James Spookie](https://www.fanfiction.net/u/649126/James-Spookie)
       _[The Forgotten Contract](https://www.fanfiction.net/s/7985543/)_

@@ -22,7 +22,7 @@ sentient, it is the _right_ definition.
 [Animals]: /Harrypedia/animals/
 [Vegetation]: /Harrypedia/vegetation/
 
-[^211111-1]: document some animal/vegitable grey area
+[^211111-1]: document some animal/vegetable grey area
 
 [^211111-2]: 
     [Harry Potter Wiki](https://harrypotter.fandom.com/wiki)

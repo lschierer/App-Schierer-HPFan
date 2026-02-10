@@ -34,14 +34,14 @@ some of the backstory it posits. He suggests that the Egyptian priest class
 delved deep into runic magic and soul magic, including Horcruxes and "the
 ancestor of the modern Killing Curse."[^210323-14] In my mind both the
 killing curse and horcruxes are evil, the first requiring hatred, the
-second requiring the remorseless killing of an innocent. DisobedianceWriter
+second requiring the remorseless killing of an innocent. DisobedianceWriter<!-- cspell: disable-line -->
 suggests that one could be created with any killing, I think Rowling's
 interview comments require something more gruesome.[^210323-15] Of
 particular note, the Valley of the Kings was in use from the 16th to the
 11th century BC.[^210323-13] For my purposes the overlap is actually useful.
 
 Despite the parts I dislike, I _do_ like the idea that the Egyptian priests
-played the ruling class, developed horcruxes, and that, unlike Itsme66's
+played the ruling class, developed horcruxes, and that, unlike Itsme66's<!-- cspell: disable-line -->
 theory, horcruxes do work. It keeps me more in line with cannon, but gets
 rid of the over convenient root of all evil version of Herpo. To mesh back
 in with cannon, it is my thought that, since Ancient Greece and Egypt had
@@ -49,7 +49,7 @@ at least some contact, Herpo stole the magic theory behind horcruxes from
 the Egyptians. Hence it being convenient that the two civilisations overlap
 in time.
 
-Several centuries later, Wong Shan-Hao (from Itsme66's work) attempted a
+Several centuries later, Wong Shan-Hao (from Itsme66's work) attempted a<!-- cspell: disable-line -->
 horcrux, but botched the creation, explaining the intact one on display in
 the Imperial Museum of Magic.[^210324-1] [Dumbledore]'s failure to know
 about and properly investigate what an intact horcrux is doing in the
@@ -213,7 +213,7 @@ I first read this in [The Thorny Rose 2][TTR213]:
 
 However I now know that this theory is more or less exactly what Mrs. Rowling
 intended:[^200731-2] a horcrux has to be intentional, the bit of soul in
-[Harry]'s scar is not, therefor he is not a true horcrux. Because he is not a
+[Harry]'s scar is not, therefore he is not a true horcrux. Because he is not a
 true horcrux, it cannot take him over the way a real one would. The pain is
 the bit of soul trying to rejoin the rest of [Riddle]; and the few times we see
 it actually influencing [Harry] it is because he is, independently, emotionally

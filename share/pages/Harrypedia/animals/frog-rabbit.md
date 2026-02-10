@@ -4,7 +4,7 @@ title: Frog-Rabbit
 author: Luke Schierer
 ---
 
-This creature is _probably_ entirely artificial.[^220725-4] Despite that, it is apparently listed as an ingrediant in the [Book of Potions][].[^220725-5]
+This creature is _probably_ entirely artificial.[^220725-4] Despite that, it is apparently listed as an ingredient in the [Book of Potions][].[^220725-5]
 
 [Book of Potions]: https://harrypotter.fandom.com/wiki/Wonderbook:_Book_of_Potions
 

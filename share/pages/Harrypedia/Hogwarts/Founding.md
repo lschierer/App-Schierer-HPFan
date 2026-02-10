@@ -233,7 +233,7 @@ non-magical population than Godric's in the south.
     the portrait tunnel, and pretty much his entire class, plus both Creevy boys
     seem to be there. Get a citation for this.
 
-[^200819-4]: Several works have this idea, amoung them:
+[^200819-4]: Several works have this idea, among them:
 
     - AndrewWolfe. _[The Ghost of Privet Drive](https://archiveofourown.org/works/21500365)_
       [Archive of Our Own](https://archiveofourown.org) Last Updated 2020-08-14. Last Viewed 2020-08-19.

@@ -91,7 +91,7 @@ but rather [Legilimency].
 [^20210922-1]:
     Mrs. J. K. Rowling. "[Draco
     Malfoy](https://www.wizardingworld.com/writing-by-jk-rowling/draco-malfoy)"
-    https://www.wizardingworld.com/ Originally Pubished 2020-08-10. Last
+    https://www.wizardingworld.com/ Originally published 2020-08-10. Last
     Viewed 2020-06-30.
 
 [WWJKRDM1]: https://www.rowlingindex.org/work/dmpm/
@@ -99,7 +99,7 @@ but rather [Legilimency].
 [^20200630-7]:
     Mrs. J. K. Rowling. "[Draco
     Malfoy](https://www.wizardingworld.com/writing-by-jk-rowling/draco-malfoy)"
-    https://www.wizardingworld.com/ Originally Pubished 2020-08-10. Last
+    https://www.wizardingworld.com/ Originally published 2020-08-10. Last
     Viewed 2020-06-30.
 
 [^20200630-4]:

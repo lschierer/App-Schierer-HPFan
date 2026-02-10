@@ -782,7 +782,7 @@ Moving through the crowd was a large shaven-haired man, a severe expression on h
 
 Harry moved in front of his Quidditch students, as he was eating lunch with them. Around him he could see members of the press and other students turning to watch.
 
-“Did you bring castle vith you to make Durmstrang look out of date?”
+“Did you bring castle vith you to make Durmstrang look out of date?”<!-- cspell: disable-line -->
 
 Harry shook his head. “Of course not.”
 
@@ -798,11 +798,11 @@ Harry nodded.
 
 Harry smiled. “It’s getting better, thanks.”
 
-“Good!” Viktor turned to the press. “Vithout Potter, I have no competition in the league; he needs to get vell soon so that I have a challenge again.”
+“Good!” Viktor turned to the press. “Vithout Potter, I have no competition in the league; he needs to get vell soon so that I have a challenge again.”<!-- cspell: disable-line -->
 
 “He beat you last time,” one of the journalists shouted.
 
-“And he is now out for a year,” Viktor agreed. “That is vhat it takes to beat Krum! Harry is the only player who understands.”
+“And he is now out for a year,” Viktor agreed. “That is vhat it takes to beat Krum! Harry is the only player who understands.”<!-- cspell: disable-line -->
 
 “So you two are friends?” another one asked.
 

@@ -2,7 +2,7 @@
 collection: Harrypedia
 type: "spell"
 title: Alohomora
-spells: "Alohomora"
+spells: Alohomora
 author: Luke Schierer
 ---
 

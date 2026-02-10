@@ -1432,7 +1432,7 @@ A couple moved in front of him, and before he knew it, he was dancing with Morga
 
 Charlie blinked.
 
-Morgana smiled and he found himself being led around the dance floor. He was a good dancer; he had practiced long and hard, but he had never had a partner who made him feel so graceful before. “We felt the magical signature as soon as you entered the room, as did many other people.”
+Morgana smiled and he found himself being led around the dance floor. He was a good dancer; he had practised long and hard, but he had never had a partner who made him feel so graceful before. “We felt the magical signature as soon as you entered the room, as did many other people.”
 
 “It worked then,” Charlie said in relief. “Fred and George worked out who you and Merlin were. You may be in disguise, but your dancing and attitudes can’t be hidden.”
 
@@ -1464,7 +1464,7 @@ She turned away and Fleur took her place.
 
 “I’ll say one thing for all of this,” Charlie said, an amused tone in his voice, “Harry gets to dance with some truly beautiful women.”
 
-“Why thank you,” Fleur purred back. “You are not zo bad yourself. ‘Arry is lucky to ‘ave friends like thees.”
+“Why thank you,” Fleur purred back. “You are not zo bad yourself. ‘Arry is lucky to ‘ave friends like thees.”<!-- cspell: disable-line -->
 
 “It feels good to be able to pay a little back,” Charlie explained. “We owe him so much that this is the very least we can do.”
 

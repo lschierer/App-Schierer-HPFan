@@ -342,7 +342,7 @@ She paused but didn’t look at him.
 
 She turned slowly. “Are you playing with me?” she asked softly, her eyes now full of pain.
 
-“Not anymore,” he said. “I had to know if you were serious about wanting me or not. I’m not sorry for putting you through that, because now I know that you are. You’re not exactly replusive, Gabrielle, and I do like you. Don’t think I’m over everything that has happened. I’m not, definitely not. All I’m saying is that, well, let’s see what happens between us. We can continue as we have been since we met, and see what develops.”
+“Not anymore,” he said. “I had to know if you were serious about wanting me or not. I’m not sorry for putting you through that, because now I know that you are. You’re not exactly repulsive, Gabrielle, and I do like you. Don’t think I’m over everything that has happened. I’m not, definitely not. All I’m saying is that, well, let’s see what happens between us. We can continue as we have been since we met, and see what develops.”
 
 “Really?” she asked, her expression turning to one of hope.
 

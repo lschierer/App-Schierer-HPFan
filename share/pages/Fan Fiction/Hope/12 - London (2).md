@@ -454,11 +454,11 @@ The Beauxbatons team spread out in front of him, the Durmstrang players behind t
 
 “This is sport at the highest level. It is addictive, it is competitive, and at the end, when you have put everything of yourself into it, you will feel like nothing before, like nothing you have ever imagined. You will feel and understand exactly why Viktor and I have dedicated everything we have to playing a game.
 
-“So tonight, I want you to go to your rooms and get a good night’s sleep. There are vials of dreamless sleep potion by your beds if you need them. Tomorrow, you’ll meet me here before breakfast. And that goes for you Durmstrang players as well. For tomorrow, you’re honourary members of Beauxbatons.
+“So tonight, I want you to go to your rooms and get a good night’s sleep. There are vials of dreamless sleep potion by your beds if you need them. Tomorrow, you’ll meet me here before breakfast. And that goes for you Durmstrang players as well. For tomorrow, you’re honorary members of Beauxbatons.
 
 “Viktor, anything to add?”
 
-Viktor grinned. “Potter tocks too much,” he grunted. “But he spiks vell. Sport is honourable combat. Do not lose dat honour tomorrow, and give it everythink. Dat vay, vin or lose, you vill be able to look in mirror and see a mon.” He paused and looked at Gabrielle. “Or wo-mon.”
+Viktor grinned. “Potter tocks too much,” he grunted. “But he spiks vell. Sport is honourable combat. Do not lose dat honour tomorrow, and give it everytink. Dat vay, vin or lose, you vill be able to look in mirror and see a mon.” He paused and looked at Gabrielle. “Or wo-mon.”<!-- cspell: disable-line -->
 
 Gabrielle smiled at him.
 
@@ -706,7 +706,7 @@ He led them through a maze of corridors to a large changing room. There were fif
 
 “Where are the changing rooms, Prof… Harry?” Gabrielle asked.
 
-“You show her,” Viktor muttered. “I vill take care of everyvon else.”
+“You show her,” Viktor muttered. “I vill take care of everyvon else.”<!-- cspell: disable-line -->
 
 Harry nodded and led Gabrielle across the hallway and down a corridor. As soon as the door shut behind him, Gabrielle reached up and wrapped her arms around his neck. “Hi,” she said softly.
 
@@ -772,7 +772,7 @@ He moved into the racing position himself and started to follow her. She led him
 
 He followed her, concentrating on closing the distance, and he slowly did – before he had to abruptly pull up to avoid hitting the ground, as she pulled off a picture book Wronski Feint. Harry laughed out loud, sped up near her, placed his feet on his broom and jumped across. He caught himself one handed on her broom, and heaved himself up to tap her shoulders, then let himself go. He somersaulted backward twice before calling for his broom and landing perfectly.
 
-“Just vait, Potter, until I tell everyvon you ver almost ploughed by Veela-chick!” Viktor shouted in between laughs.
+“Just vait, Potter, until I tell everyvon you ver almost ploughed by Veela-chick!” Viktor shouted in between laughs.<!-- cspell: disable-line -->
 
 Harry shot him the finger but grinned at the same time. “Okay people, we’re going to have lunch in the restaurant here, so everyone down!”
 
@@ -782,15 +782,15 @@ Harry looked at the players, and then cast a cleaning charm on the lot of them. 
 
 “What do you think?” Harry asked as Viktor wandered over to him, plate in hand.
 
-“You vill beat Hogvarts,” Viktor replied confidently. “Players are goot, more relaxed, and determined to vin. And Veela-chick is almost as goot as ve are – or vill be in a few years.”
+“You vill beat Hogvarts,” Viktor replied confidently. “Players are goot, more relaxed, and determined to vin. And Veela-chick is almost as goot as ve are – or vill be in a few years.”<!-- cspell: disable-line -->
 
 Harry nodded.
 
-“Besides, dey haf to vin, I haff money on dem mit Flint,” he finished with a large smile.
+“Besides, dey haf to vin, I haff money on dem mit Flint,” he finished with a large smile.<!-- cspell: disable-line -->
 
 Harry shook his head, laughing at the final comment. “The Durmstrang players have the best seats I could get for them,” he said. “They were supposed to be for VIPs and other non-imports from the Ministry, but I decided the kids deserved them more.”
 
-“Danke.”
+“Danke.”<!-- cspell: disable-line -->
 
 “This has been more fun than the summer camps.”
 
@@ -798,7 +798,7 @@ Harry shook his head, laughing at the final comment. “The Durmstrang players h
 
 “I might do something like this over the summer instead. Invite the best from all the big schools together and work with kids who actually want to learn. I’ll make it invite only, so no one can pay for their brat to get in.”
 
-Viktor’s eyes lit up. “You vill be needink help, no?”
+Viktor’s eyes lit up. “You vill be needink help, no?”<!-- cspell: disable-line -->
 
 “If you want,” Harry said with a smile. “I’ll probably be able to get a few more players involved.”
 
@@ -1640,7 +1640,7 @@ Viktor raised his hand.
 
 “Yes, Vik?” Gabrielle asked.
 
-“Vat dit hoppen?”
+“Vat dit hoppen?”<!-- cspell: disable-line -->
 
 Gabrielle looked at Harry. He looked back for a moment, then he nodded.
 
@@ -1662,7 +1662,7 @@ They all nodded.
 
 “To answer your question, Harry was drained after stopping the Killing Curses, so he took the easiest and quickest way to refill his well. He pulled from his surroundings, which just happened to include forty thousand witches and wizards.”
 
-“Oh,” Viktor said. He scratched the back of his neck. “Dat vill tich me to ask such qvestions,” he mumbled.
+“Oh,” Viktor said. He scratched the back of his neck. “Dat vill tich me to ask such qvestions,” he mumbled.<!-- cspell: disable-line -->
 
 “The thing I’m wondering is if Hermione actually heard all that,” Ron said with a grin.
 
@@ -1694,11 +1694,11 @@ Viktor blushed.
 
 Harry laughed softly, feeling Gabrielle laugh next to him.
 
-“She is von scary vitch,” Viktor admitted.
+“She is von scary vitch,” Viktor admitted.<!-- cspell: disable-line -->
 
 “It’s okay, Viktor, I’ll protect you from the nasty schoolgirl,” Katie said, rubbing his back.
 
-“Vill you? Really?” he asked.
+“Vill you? Really?” he asked.<!-- cspell: disable-line -->
 
 Katie opened her mouth, and then shut it as she looked at him. She blushed faintly and then nodded, ignoring the grins on the faces of everyone else present.
 

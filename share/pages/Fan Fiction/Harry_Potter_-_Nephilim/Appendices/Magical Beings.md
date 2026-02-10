@@ -23,17 +23,17 @@ A true squib is the result of the miniscule chance that for all magical traits, 
 
 Because it is possible for a child to inherit the sum of both parent's abilities, occasionally two such "squibs" marry and produce a child who _does_ meet the criteria for Hogwarts. This is where the so-called muggle born come from. Since this typically happens only generations later, it is rare that the child in question has any immediate connection to the family members who were cast out from the magical world.
 
-When the Church describes and categorizes magic, it does so in terms of the angelic chiors from whom the magic is derived.[^241123-2] Hogwarts is entirely unware of this classificaiton of magic, but _if_ Hogwarts _were_ aware of it, then it would be possible to quantify what the [Quill of Acceptance and Book of Admittance] are looking for in accidental magic.
+When the Church describes and categorizes magic, it does so in terms of the angelic chiors from whom the magic is derived.[^241123-2] Hogwarts is entirely unware of this classification of magic, but _if_ Hogwarts _were_ aware of it, then it would be possible to quantify what the [Quill of Acceptance and Book of Admittance] are looking for in accidental magic.
 
 Using the power levels from the Church's classification system, a child born with a power level of 2 or below in all categories of magic will be called a squib. A child with a 3 or below in all categories of magic will not be invited to any magical school, but might be able to effectively use some magic. Programs like Kwick Spell prey upon such people. These children are sometimes also called squibs, particularly by the families that are more self-obsessed with power and prestege.
 
 Hogwarts requires at least a 4 in each of the following categories: Dominions, Virtues, and Powers; at least a 4 in _one_ of Archangels or angels and at least a 3 in the other; and at least a 3 in each of Cherubim and Principalities. However, a child who got in just barely meeting these minimums would be very unlikely to get into NEWT level classes other than Muggle Studies.[^241125-6]
 
-[^241125-6]: At the NEWT level, Herbology, Care of Magical Creatures, and Potions all require significant abilties similar to those required for _any_ wandless/silent potions brewing. See the description of potions in [Rules of Magic][AB].
+[^241125-6]: At the NEWT level, Herbology, Care of Magical Creatures, and Potions all require significant abilities similar to those required for _any_ wandless/silent potions brewing. See the description of potions in [Rules of Magic][AB].
 
-Muggle Born nephilim are _usually_ relatively low powered, frequently a mix of 3s, 4s and 5s when they re-enter the magical world. The spread is because it is extremely uncommon for the child to suddenly meet the bar in all required categories at the same time. Rather, once ejected from the magical world, a child might have several 3s and even 4s, but if it is not enough to trigger an acceptance letter (in English terms), they are still not yet elegible for reentry into magical society.
+Muggle Born nephilim are _usually_ relatively low powered, frequently a mix of 3s, 4s and 5s when they re-enter the magical world. The spread is because it is extremely uncommon for the child to suddenly meet the bar in all required categories at the same time. Rather, once ejected from the magical world, a child might have several 3s and even 4s, but if it is not enough to trigger an acceptance letter (in English terms), they are still not yet eligible for reentry into magical society.
 
-While low power is the norm, there is always a base rate of something bizzare happening. Thus it is not totally unheard of for there to be a high powered muggle born student, and all but the most xenophobic members of magical society are happy to make exceptions for a first generation student who shows exceptional promise (power is always something the nephilim want). This is why a student like [Lily Evans] was so accepted, however the overall effect of the first [Riddle] war had a sufficiently negative effect on society, that [Hermione] did not experience the same acceptance.
+While low power is the norm, there is always a base rate of something bizarre happening. Thus it is not totally unheard of for there to be a high powered muggle born student, and all but the most xenophobic members of magical society are happy to make exceptions for a first generation student who shows exceptional promise (power is always something the nephilim want). This is why a student like [Lily Evans] was so accepted, however the overall effect of the first [Riddle] war had a sufficiently negative effect on society, that [Hermione] did not experience the same acceptance.
 
 This tendency for "first generation" students to be low powered feeds into the bias against them. The children of two high powered nephilim will more frequently be high powered themselves, and will sometimes exceed both parents. The child of a high powered nephilim and a low powered nephilim has a low but non-trivial chance however of producing a child of much lower power than his/her same gendered parent. When you add in the xenophobic culture that has developed following the Statute of Secrecy, it becomes no wonder that these "first generation" nephilim are persecuted.
 
@@ -75,14 +75,14 @@ have a strong distrust for the Church.
   power level (only including power levels where present at all).
 - European nephilim communities are obsessed with so called "purity of blood."
   Interestingly, any family that consists of unmixed nephilim heritage for approximately six generations tends to experience at least one instance of something that [Rules of Magic] and [magical rules of inheritance] would describe as "truly bizarre."[^241125-7]
-- There are a number of species that decend from the nephilim. Each is the
+- There are a number of species that descend from the nephilim. Each is the
   result of at least one hereditary "truly bizarre" mutation. Most had several things happen at once, a few had several different situations across history.
   - mermen - These were once a magically powerful people who used inheritances
     from the Dominions to transmute themselves to survive [the great Flood].
-  - dwarfs[^241125-8] - The dwarfs also decend from nephilim that were punished
+  - dwarfs[^241125-8] - The dwarfs also descend from nephilim that were punished
     for their actions at the time of [the great Flood]. At that time, they were one of the most diverse populations of nephilim (that is, they had a broad cross section of different powers).
   - goblins - people, descendant from the dwarfs, who are highly susceptible to
-    greed, envy, and wrath. Their form has been distorted by the sins of their forefathers centuries ago. Once, they would have ranked in this list below the veela. However, over the centuries a gradual increase in average effective inteligence.[^241125-9] Similarly, the physical changes wrought on them have "softened" and so they are less hideous than described by authors like Tolkien who have packaged aspects of the magical world as fiction. Overall, despite their flaws, these populations retained their
+    greed, envy, and wrath. Their form has been distorted by the sins of their forefathers centuries ago. Once, they would have ranked in this list below the veela. However, over the centuries a gradual increase in average effective intelligence.[^241125-9] Similarly, the physical changes wrought on them have "softened" and so they are less hideous than described by authors like Tolkien who have packaged aspects of the magical world as fiction. Overall, despite their flaws, these populations retained their
     cognative ability and magic. They are particularly strong inheritors from
     the Virtues, Powers, and Archangels, with lesser inheritances from the
     Principalities and angels. Their creation of the trolls at the beginning of the [goblin wars] explains why they were punished so harshly (as to have
@@ -113,10 +113,10 @@ have a strong distrust for the Church.
       herd, centaurs are capable of slightly more autonomy than pure veela are
       either as individuals or in groups (since veela have no herd, or in their
       case flock, effect).
-    - centaurs are unique amoung the decendants of the nephilim in that the
+    - centaurs are unique among the descendants of the nephilim in that the
       remain nearly unchanged, with inheritances only from two choirs, and little to no physical change since their inception.
   - veela - a people punished primarily with changes to their magic,
-    reproduction, and lifespan. The placement of veela on this list is highly controversial. In raw cognative ability, a veela is roughly equivalent to a normal human. The problem is in her emotional inteligence. Many veela have essentially no control over their emotions, and this triggers the magic of her punishment.
+    reproduction, and lifespan. The placement of veela on this list is highly controversial. In raw cognative ability, a veela is roughly equivalent to a normal human. The problem is in her emotional intelligence. Many veela have essentially no control over their emotions, and this triggers the magic of her punishment.
     - See [The Veela Curse][AI] for an in depth description.
     - Veela are also complex to categorize because the nature of the veela
       "curse" makes it difficult for researchers to distinguish between the so-called "full" and "partial" veela.
@@ -138,7 +138,7 @@ have a strong distrust for the Church.
 
 [^241125-7]:
     Author's note:
-    I'm building off of the statement from cannon that if magical users hadn't intermarried with muggles they would have all died out, and infering that most families simply hide their muggle connections, and/or that the "sacred 28" list simply omitted them in an act of historical revisionism. I'm also guessing there are some missing generations in the one family tree we have, that of the Potter family.
+    I'm building off of the statement from cannon that if magical users hadn't intermarried with muggles they would have all died out, and inferring that most families simply hide their muggle connections, and/or that the "sacred 28" list simply omitted them in an act of historical revisionism. I'm also guessing there are some missing generations in the one family tree we have, that of the Potter family.
 
 [^210916-2]:
     Author's note:

@@ -86,12 +86,12 @@ says he actually came to believe his moral reasoning had been flawed.
 Dumbledore's father went to prison for unilaterally using magic to punish some
 non-magical boys who so tramatized [Ariana][] Dumbledore that she lost control
 of her mental facualties, and with that, her control over her magic.[^221220-8]
-This belief that he had the right to vengance speaks to a belief in superiority
+This belief that he had the right to vengeance speaks to a belief in superiority
 that seems common to the wizarding world, we see it in the [Weasleys][] as well
 for example.[^221221-9] Dumbledore no doubt grew up seeing the world this way,
 instinctively believing those without magic to be lesser than him. I believe
 he took it a step further. I believe he saw those with lesser magical ability
-as lesser than him as well. He is a kind of ivory tower intelectual who views
+as lesser than him as well. He is a kind of ivory tower intellectual who views
 those who lack his achievements as perpetual children, irregardless of their
 actual age relative to himself. As he grows older, this is exacerbated Many
 of the adult decision makers he now works with were once his students, not his
@@ -194,7 +194,7 @@ that Dumbledore is ultimately a good, if flawed, person. I suspect that Ms.
 Venkatraman is right, that Dumbledore suffers in his conscience from the pain
 he causes, and he does _intend_ good. I differ from her in that I do not think
 that his _intent_ sufficient such that he _is_ in fact good (or at least, not
-wholely so). Dumbledore's unstated philosophy seems way too close to "the ends
+wholly so). Dumbledore's unstated philosophy seems way too close to "the ends
 justify the means," and I am far from convinced that it differs in any
 important detail. _[Keep Holding On][]_ summarized this well:
 
@@ -289,7 +289,7 @@ all of [Snape][SS]'s behaviour across the series. Again, this argument falls
 short. Dumbledore has assigned [Snape][SS] this role, and has ignored complaints
 about the way the role has been executed, not just once, but repeatedly. Thus
 Dumbledore is, in Catholic terms, guilty of (in this case) Immediate Material
-Cooperation with evil[^200624-1] (Dubmledore's protection of [Snape][SS] is
+Cooperation with evil[^200624-1] (Dumbledore's protection of [Snape][SS] is
 necessary for the act). Once [Snape][SS] is accused, Dumbledore's failure to
 investigate forces this determination (or at least Proximate Mediate Material
 Cooperation, which is still a guilt condition). This is just one example,

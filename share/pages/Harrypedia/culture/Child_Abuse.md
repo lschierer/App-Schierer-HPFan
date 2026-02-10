@@ -4,16 +4,16 @@ title: Child Abuse in the Wizarding World
 author: Luke Schierer
 ---
 
-I suspect there are two reasons why this is not far and away the single most contraversial topic in the entire series. Firstly, that we are, as a culture,
+I suspect there are two reasons why this is not far and away the single most controversial topic in the entire series. Firstly, that we are, as a culture,
 aclimatized by books like _Oliver Twist_ (and many of Dickens' other works), _Huckleberry Finn_, _The Little Match Girl_, _Jane Eyre_, _A Series of Unfortunate Events_, and many many others all feature characters that suffer abuse. It is not uncommon at all that a child protagonist has to deal with situations that should not exist. Secondly, because many (most?) of the authors commenting on the series are not actually analysing its moral message, but rather debating what constitutes a satisfying story.
 
-Mrs. Rowling, in writing the series, has chosen a writing style that, if is not in fact an example of an [unreliable narrator], certainly comes very close to it. _Nearly_ everything is told from [Harry]'s point of view, with extensive use of the third peson limited writing style and only minimal shifts to other perspectives. Thus, with few execptions, we know only what [Harry] knows,
+Mrs. Rowling, in writing the series, has chosen a writing style that, if is not in fact an example of an [unreliable narrator], certainly comes very close to it. _Nearly_ everything is told from [Harry]'s point of view, with extensive use of the third person limited writing style and only minimal shifts to other perspectives. Thus, with few exceptions, we know only what [Harry] knows,
 and, more importantly for this conversation, we view as remarkable only what he views as noteworthy.
 
 Thus staying out of [Vernon]'s reach barely deserves a comment[^240228-1], and we barely blink when [Petunia]'s frying pan comes close enough that [Harry]
 feels the need to duck.[^240228-2] The [Dursley]s _are_ abusive; for a variety of reasons Mrs. Rowling has simply chosen to understate that.
 
-The easy answer for this abuse is that the story demands it: I have observed that it is next to impossible to have child protagonists in conjuction with responsible adults. The [Dursley]'s casual abuse gives Mrs. Rowling _much_ greater flexibility to put [Harry] in situations that a responsible guardian ought to be objecting to. Stepping back from that easy answer however, what is the _in world_ logic for this? _Why_ are there no _other_ responsible adults
+The easy answer for this abuse is that the story demands it: I have observed that it is next to impossible to have child protagonists in conjunction with responsible adults. The [Dursley]'s casual abuse gives Mrs. Rowling _much_ greater flexibility to put [Harry] in situations that a responsible guardian ought to be objecting to. Stepping back from that easy answer however, what is the _in world_ logic for this? _Why_ are there no _other_ responsible adults
 who step in to intervene, or even attempt and fail to intervene, in [Harry]'s life?
 
 In giving us the [obscurial], Mrs. Rowling has created an answer to this question. The idea of abusing a child is deaply frightening to most of the

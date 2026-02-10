@@ -1,6 +1,6 @@
 
 Almost all of our facts about Lily come from [Snape]'s [Worst Memory], or his
-dying memory dump. I do not regard either as a wholely reliable and unbiased
+dying memory dump. I do not regard either as a wholly reliable and unbiased
 source. See my thoughts on the [pensieve].
 
 [pensieve]: /Harrypedia/magic/time/pensieve/

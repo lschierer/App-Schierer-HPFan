@@ -119,7 +119,7 @@ Ron and Hermione swung their heads to look at Jean.
 
 “So, what’s the problem?” Ron asked, moving back onto the matter at hand.
 
-“When Gabrielle realised that she had been saved by ‘Arry, she immediately decided that ‘e waz ‘er mate, and let herself be mated to ‘im.”
+“When Gabrielle realised that she had been saved by ‘Arry, she immediately decided that ‘e waz ‘er mate, and let herself be mated to ‘im.”<!-- cspell: disable-line -->
 
 Ron lowered his head and banged it softly against the table. “I really don’t want to know the answer to this, but what, exactly, does that mean?”
 
@@ -137,12 +137,13 @@ Hermione elbowed Ron firmly in the side. “You’ll have to excuse him; he hasn
 
 Jean tilted his head to one side and nodded. “There are two problems with your scenario,” he explained softly. “The first being that Harry appears immune to Veela powers, and the second that my daughter wants a full relationship with him. And my daughters are nothing if not headstrong.”
 
-“Papa!” Fleur complained for a second time. “We get it from you.” She turned to face Ron. “I tried to put ‘Arry under ze Veela spell, with Bill next to me. ‘E just looked at me and asked me to stop politely.”
+“Papa!” Fleur complained for a second time. “We get it from you.” She turned to face Ron. “I tried to put ‘Arry under ze Veela spell, with Bill next to me. ‘E just looked at me and asked me to stop politely.”<!-- cspell: disable-line -->
 
 “I didn’t think anyone could do that?” Ron half-stated, half-asked.
 
 “Occlumency,” Hermione explained, having put it together quickly. “He’s now a master at keeping his thoughts locked up. Even we have no idea what he’s thinking half the time.” She turned to face Jean again. “So the problems we have are: getting Harry and Gabrielle together, getting Harry to overlook the fact that he’s six years older than her, and persuading him to get into a relationship with her.”
 
+<!-- cspell: disable-next-line -->
 Jean nodded once, sharply. “Alors’, those are indeed the problems.”
 
 “Wait a second,” Ron interrupted. “Exactly why should we be doing this? What does Harry get out of it? He’d really hate being manipulated into a relationship, and well, it sounds like Gabrielle gets what she wants, but what about what Harry wants out of life?”
@@ -159,7 +160,7 @@ Jean nodded once, sharply. “Alors’, those are indeed the problems.”
 
 “Wonderful. Sometimes, I really hate the Wizarding world,” Ron sighed. “So, we just tell Harry what the problem is; he’s the most honourable bloke I’ve ever met, so he’ll do the right thing, and Gabrielle can be saved. He’ll give up his future for anyone who needs him.”
 
-“But Gabrielle wants ‘Arry as a lover, not as a man doing ‘is duty. She wants ‘im to be ‘appy as well.”
+“But Gabrielle wants ‘Arry as a lover, not as a man doing ‘is duty. She wants ‘im to be ‘appy as well.” <!-- cspell: disable-line -->
 
 “Well, that’s all very well and good,” Ron said dryly. “And I applaud the thought, but exactly how is she planning on winning Harry over? The last time I checked, Harry doesn’t exactly hang around with Beauxbatons’ students.”
 
@@ -167,6 +168,7 @@ Jean nodded once, sharply. “Alors’, those are indeed the problems.”
 
 “You seem to be very calm about this,” Ron grumbled.
 
+<!-- cspell: disable-next-line -->
 “Alors’, I am not. I have, however, had eight years to get used to this idea.” He turned to Bill. “Are you sure you want to get involved with a Veela?”
 
 “Papa!” Fleur complained for the third time.

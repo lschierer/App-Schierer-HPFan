@@ -203,7 +203,7 @@ we look at the the advice she gives to [Ginny] for dealing with a debilitating c
 
 [^230208-2]: 
     Ms. Davia Sills. "[Inducing Jealousy to Get Your Mate's Attention]"
-    _[Psycology Today]_ 2011-11-30. This is essentially written at a
+    _[psychology Today]_ 2011-11-30. This is essentially written at a
     lay-person, but it has the citations to back it up. From my perspective a
     more serious flaw is the secular approach, but for this purpose that might
     actually be better?
@@ -359,7 +359,7 @@ year, though it is anyone's guess which specific event would be one too many.
 [^210818-1]: Stories include:
 
     - kb0. _[Harry Potter: Air Elemental](https://www.fanfiction.net/s/11995519)_
-      Pubished: 2016-06-12. Updated: 2016-10-29.
+      published: 2016-06-12. Updated: 2016-10-29.
 
 [^200707-1]: 
     Yanna N.
