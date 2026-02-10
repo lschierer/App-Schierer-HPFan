@@ -212,7 +212,7 @@ Aimée smiled slowly. “Do you think she has the potential to do well?”
 
 “It is the position that is the hardest, but it’s also the most prominent. I’m sure that Gabrielle already has the mental strength and I can teach her everything else that she will need.”
 
-“What do you think of the interschool matches?”
+“What do you think of the inter-school matches?”
 
 “May I be blunt?” Harry asked, a smile hovering across his lips.
 
@@ -236,7 +236,7 @@ A butler seemed to materialise next to Jean. With a few deft twists of his wrist
 
 Harry watched, fascinated, as Jean first seemed to examine the wine against the white of the table cloth, before he swirled it gently. He started to move his hand, and paused, looking at Harry. “You’ve never tasted wine before serving it?”
 
-Harry shook his head. “I don’t drink much of it. Alcohol and atheltics do not go well together.”
+Harry shook his head. “I don’t drink much of it. Alcohol and athletics do not go well together.”
 
 Jean motioned to the butler, who smoothly walked around the table and poured a small amount into Harry’s glass.
 

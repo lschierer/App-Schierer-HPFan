@@ -69,7 +69,7 @@ Given the above articles, I talk some about [Harry]'s wand on the page
 dedicated to him. [Riddle]'s wand - I think it is fairly inevitable that he
 would have a yew wand, but I am somewhat surprised that he would have a phoenix
 feather core. While it does say it is the most capable, in a sense, it says
-dragon heartstring is the most powerful. Would [Riddle] value range and or
+dragon heart-string is the most powerful. Would [Riddle] value range and or
 power more? He would certainly dislike that the phoenix feather wand might
 sometimes act of its own accord.[^200806-5] Naturally eleven year old [Riddle]
 knows nothing of wand lore and so is not deciding this, yet still, the wand

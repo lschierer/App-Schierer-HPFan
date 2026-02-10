@@ -592,7 +592,7 @@ Fred and George were planning on meeting up with them later; they were going to 
 
 “Good morning,” Harry called as he appeared near to the doors, holding several brightly-coloured plastic hoops. All the students turned to face him, excited expressions on their faces. The feeling of excitement and anticipation in the air increased a bit.
 
-“Too early to be gut,” Viktor grunted. “Breakfast better be vorth it.”
+“Too early to be gut,” Viktor grunted. “Breakfast better be vorth it.” <!-- cspell: disable-line -->
 
 “Yeah,” Harry agreed. “I’ve not actually eaten where we’re going before, so I have no idea.”
 
@@ -610,11 +610,11 @@ The door swung open, and several house elves peered out excitedly. The first, in
 
 “Thank you, Matti,” Harry said. “Is everything ready?”
 
-“Things are being readiest,” Matti said. “We is being excitedest as well.”
+“Things are being readiest,” Matti said. “We is being excitedest as well.” <!-- cspell: disable-line -->
 
 “The outside looks excellent. You’ve done a fantastic job.”
 
-Matti beamed. “We is enjoyableing the work,” he said. “And we is being delighted to get rid of dankest. Follow Matti, food is being readiest.”
+Matti beamed. “We is enjoyableing the work,” he said. “And we is being delighted to get rid of dankest. Follow Matti, food is being readiest.” <!-- cspell: disable-line -->
 
 They all followed the elf into the bright and friendly entrance hall. The walls looked freshly painted, and the carpets were new. At the end, a large painting of a couple dressed in Wizarding robes looked down at them.
 

@@ -4,7 +4,7 @@ Despite being nearly universally portrayed as a pure-blood in fan fiction, she i
 I really want to like Professor McGonagall, but so much that happens at
 [Hogwarts] is troubling that I am conflicted about her. She is, in some ways,
 the quintessential Harry Potter Series [adult]. _The Board_[^190823-1] by
-[Clell65619][dmffan] shows a critical view of her that I am, despite myself,
+[Clell65619][dmffan] shows a critical view of her that I am, despite myself, <!-- cspell: disable-line -->
 really drawn to. This view is more or less seconded by _[When Is It a
 Contract][WIIAC]_ which focuses on the conflicts between her roles as Deputy and
 Head of House.[^210322-2]
@@ -66,8 +66,7 @@ purposefully going overboard to head off that type of behaviour. Better that
 [Harry] suffer rejection by his peers than mirror his father's early years in
 school.
 
-[James]: /Harrypedia/people/Potter/James/
-
+<!-- cspell: disable-next-line -->
 The exact situation in Worldmaker's _[Furious Angels][WMFA1]_ is different, but
 the description of McGonagall is spot on:
 
@@ -98,7 +97,6 @@ and over again across the series, [Hagrid] does not have a realistic risk
 evaluation for people without his half-giant heritage. McGonagall should know
 this, and should be able and willing to compensate for it.
 
-[Hagrid]: /Harrypedia/people/Hagrid/Rubeus/
 
 The only possible saving explanations for the detention are either that
 McGonagall had no choice, that [Dumbledore][AD1] in fact set it up and she was
@@ -166,6 +164,7 @@ as someone who would resist change simply because it is change, and would resist
 incorporating non-magical classes no matter how needed or useful they might be.
 
 [Snape]: /Harrypedia/people/Snape/Severus/
+[Hagrid]: /Harrypedia/people/Hagrid/Rubeus/
 [James]: /Harrypedia/people/Potter/James/
 [Neville]: /Harrypedia/people/Longbottom/Neville/
 [Draco]: </Harrypedia/people/Malfoy/Draco Lucius/>
@@ -192,7 +191,7 @@ incorporating non-magical classes no matter how needed or useful they might be.
     © 2000-2021. Last Viewed 2021-11-03.
 
 [^210922-2]: 
-    Worldmaker.
+    Worldmaker. <!-- cspell: disable-line -->
     _[Furious Angels](https://www.fanfiction.net/s/4175909)_
     [Chapter 16](https://www.fanfiction.net/s/4175909/16/Furious-Angels)
     Published: 2008-04-04. Updated: 2009-09-28.

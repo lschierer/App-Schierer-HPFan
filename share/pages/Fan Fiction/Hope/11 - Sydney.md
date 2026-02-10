@@ -892,7 +892,7 @@ Olympe reached into her desk and passed two tickets to Harry. “All this evenin
 
 Olympe smiled and then frowned. “Harry, what will you do if Albus sees through your disguise?”
 
-Harry smiled coldly. “He won’t. I’ve charmed the Great Hall. Tonight, Legilimency will not work, and people will be able to keep their privacy.”
+Harry smiled coldly. “He won’t. I’ve charmed the Great Hall. Tonight, legilimency will not work, and people will be able to keep their privacy.”
 
 “Excellent,” Olympe clapped her hands with approval. “Now, be off with you.”
 

@@ -6,7 +6,7 @@ author: Luke Schierer
 collection: Nephilim
 ---
 
-In those days, before [the great flood], the nephilim were a wild and undisiplined people, for none had as yet found his or her way to repentance or love of the Creator. The fallen had expected that the nephilim would dominate humanity, spreading their own corruption, both in vice, and in being, and in some places this did indeed occur. Thus communities grew where the entire population grew to be of the nephil, and to grow ever deep in wickedness.
+In those days, before [the great flood], the nephilim were a wild and undisciplined people, for none had as yet found his or her way to repentance or love of the Creator. The fallen had expected that the nephilim would dominate humanity, spreading their own corruption, both in vice, and in being, and in some places this did indeed occur. Thus communities grew where the entire population grew to be of the nephil, and to grow ever deep in wickedness.
 
 In other places however, the nephilim were distainful of the humans, and refused to be with them. They turned inward, focusing on their own abilities and powers. They shared the same fatal pride that caused the fallen angels to rebel, and in that pride, wished to demonstrate their own greatness. From them many things were made, some of which were destroyed by the waters of the flood, but some of which were preserved along side the other animals. Some of these creatures were terrible indeed, reflecting the wickedness of their creators. But even these fallen beings loved their children, and so some were made to delight, or to protect, things of great wonder also were made.
 

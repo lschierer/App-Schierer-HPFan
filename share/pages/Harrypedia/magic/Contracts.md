@@ -84,7 +84,7 @@ In a world where magical contracts can in fact be binding, I can see how laws _m
     - questionablequotation.
       _[Always Read the Fine Print](https://www.fanfiction.net/s/11118965)_
       Published: 2015-03-16.
-    - [divagonzo](https://archiveofourown.org/users/divagonzo/pseuds/divagonzo). _[Vows](https://archiveofourown.org/works/3993565)_ Last Updated: 2015-11-21. note, this work calls it "marriage bindings," but the concept is identical.
+    - [diagonal](https://archiveofourown.org/users/divagonzo/pseuds/divagonzo). _[Vows](https://archiveofourown.org/works/3993565)_ Last Updated: 2015-11-21. note, this work calls it "marriage bindings," but the concept is identical.
 
 [cbsmith17]: https://www.fanfiction.net/u/14755259/cbsmith17
 

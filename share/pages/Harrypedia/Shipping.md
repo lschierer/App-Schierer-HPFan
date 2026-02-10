@@ -28,7 +28,7 @@ dealing with [Harry] and [Hermione].
   unpopular opinions without drastically changing central characters. The exception is where it becomes a focus of the story and we start to see lots of scenes _about their relationship._ Then I think it is a case of the author
   exploring his own situation but trying not to stomp all over [Harry] as a recognisable character.
 - The writers that pair [Harry] with [Fleur], or [Nymphadora] are
-  essentially the same as the ones that write harem stories. I tend to avoid these. While a 3 year age gap is neglible in your late 20s, it is a wide chasm between teens. [Harry] may have needed to grow up fast in some ways,
+  essentially the same as the ones that write harem stories. I tend to avoid these. While a 3 year age gap is negligible in your late 20s, it is a wide chasm between teens. [Harry] may have needed to grow up fast in some ways,
   but he is not ever really going to be ready for a relationship with a much older woman while still a young student.
 - Harem stories vary in sophistication from pure smut to something that
   can be surprisingly worth reading, but nearly every case there is that

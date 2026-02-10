@@ -9,12 +9,12 @@ Legilimency might not be quite reading your thoughts like a book, but it
 certainly seems to come close. Though I have not seen it myself, this
 is apparently especially true if you include the _Fantastic Beasts and
 Where To Find Them_ movie.[^20200630-8] According to what I have read,
-Mrs. Rowling's comments on that movie indicate that Legilimency is not
+Mrs. Rowling's comments on that movie indicate that legilimency is not
 just a skill you can learn, but one that you can essentially be born with.
 
 Before reading that, my thoughts were certainly trending in the direction
 of the [dark arts]. The fact that [Dumbledore] makes fairly free use of
-Legilimency[^20200630-9] is really more proof of the morally ambiguous nature
+legilimency[^20200630-9] is really more proof of the morally ambiguous nature
 of [Dumbledore]; I am the last person to whitelist a practice just because
 he does it. Certainly the idea of intruding on a person's thoughts, memories
 and emotions is invasive. That by itself isn't enough to render it evil
@@ -33,7 +33,7 @@ Moreover the Devil can only corrupt, not create. The idea that you can be born
 with a _skill_ that is inherently immoral to use is repugnant. One that can
 only be used in specific context, in narrow ways, fine. Theology has to deal
 with concupiscense and chastity already afterall. But if [Queenie Goldstein]
-is born instinctively practicing Legilimency, there must be a moral context in
+is born instinctively practicing legilimency, there must be a moral context in
 which it is acceptable. A time, a place, and a method by which she can use her
 gift, even if she must (or at least should) learn to reign it in some or even
 most of the time.

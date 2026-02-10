@@ -77,7 +77,7 @@ some credit for that, I maintain however, that the above quote is indeed a fair
 summation of the man. I believe he would have, given time and stress, again
 lapsed. He was his fundamental nature to let people down.
 
-Worse, it was not just his wife he abandoned. His rationale is both pathetic and absurd. He states that because he is a warewolf, his child will probably be a warewolf, and will therefore be better off without his/her warewolf father. It would, apparently, be better that the child face the disease without the help from someone who can empathise with the pain of both the disease and the resulting social ostracism. As a werewolf himself, he apparently has nothing of value to offer his child on coping with the affliction. As a being, he is allowing those nights to define the totality of his contribution to the child's life. Like many before him, he has internalised the prejudice against himself, and become his own worst enemy.
+Worse, it was not just his wife he abandoned. His rationale is both pathetic and absurd. He states that because he is a warewolf, his child will probably be a warewolf, and will therefore be better off without his/her werewolf father. It would, apparently, be better that the child face the disease without the help from someone who can empathise with the pain of both the disease and the resulting social ostracism. As a werewolf himself, he apparently has nothing of value to offer his child on coping with the affliction. As a being, he is allowing those nights to define the totality of his contribution to the child's life. Like many before him, he has internalised the prejudice against himself, and become his own worst enemy.
 
 [Gryffindor]: /Harrypedia/Hogwarts/Gryffindor/
 
@@ -100,6 +100,7 @@ Worse, it was not just his wife he abandoned. His rationale is both pathetic and
     _Harry Potter and the Prisoner of Azkaban_
     p. 204, Location 2551 of 5714. Pottermore Limited. American Kindle Edition.
 
+<!-- cspell: disable -->
 [^211108-8]: 
     Any number of fan fiction works have this assumption. These
     include, but are not limited to:
@@ -109,3 +110,5 @@ Worse, it was not just his wife he abandoned. His rationale is both pathetic and
     - Bobmin356. _[Harry Potter and the Spiritus
       Crystalus](https://www.fanfiction.net/s/2379367)_
       Published: 2005-05-04. Updated: 2005-06-22. Last Viewed: 2021-11-08.
+
+<!-- cspell: enable -->

@@ -68,7 +68,7 @@ Harry followed her and hid a smile. A shed, it was not. Like the rest of the sch
 
 “We don’t,” Gabrielle sighed. “I believe that Madame Maxime will be talking to you about the best way to encourage competition between the students.”
 
-Harry nodded thoughtfully. He’d probably suggest a House type system, only without the Sorting Hat. The idea of interschool competition itself was a good one, but when you had houses sorted by personality, you didn’t get much of a diversity, which in itself had led to Slytherin being a breeding ground for Death Eaters.
+Harry nodded thoughtfully. He’d probably suggest a House type system, only without the Sorting Hat. The idea of inter-school competition itself was a good one, but when you had houses sorted by personality, you didn’t get much of a diversity, which in itself had led to Slytherin being a breeding ground for Death Eaters.
 
 “How are the students separated, for sleeping purposes?”
 

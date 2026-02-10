@@ -30,7 +30,7 @@ would be like in practice:
 
 [Harry] later figures out what this would be like to hold all the time:
 
-> Harry had been diligently practicing his clearing of the mind every spare
+> Harry had been diligently practising his clearing of the mind every spare
 > moment he had. He was proud of himself for a small break through he had
 > had yesterday. He had finally figured out how to find the dark blanket,
 > as he thought of it now, and still remain "normal". The result was
@@ -60,7 +60,7 @@ make sense.
 
 Thirdly, shutting down emotions, suppressing them, is not particularly
 healthy. While it is a common short term strategy, and can even be a
-viable one in the fact of a trama situation, long term it will cause
+viable one in the fact of a trauma situation, long term it will cause
 problems with your ability to form and maintain interpersonal
 relationships[^20200630-4], long term health problems (probably due to
 stress)[^20200630-5], and others that you can find on google. Basically, it
@@ -79,6 +79,7 @@ that way, but I think it is clear at this point that the author's intent
 for Occlumency is fairly clear. The problem then is not so much Occlumency,
 but rather [Legilimency].
 
+[Legilimency]: </Harrypedia/magic/The Mind Arts/Legilimency>
 [Harry]: </Harrypedia/people/Potter/Harry James>
 [James]: /Harrypedia/people/Potter/James
 [James Potter]: /Harrypedia/people/Potter/James

@@ -158,7 +158,7 @@ to create one big happy Weasley-Potter-Malfoy family.
 
 [^GWJob]: We need two citations:
 
-    - [Quidditch] player: [Leaky Cauldron interview] \* correspondant:
+    - [Quidditch] player: [Leaky Cauldron interview] \* correspondent:
       Screenshot of a Daily Prophet edition: https://imgur.com/a/AXutv
       and [Leaky Cauldron interview]
 

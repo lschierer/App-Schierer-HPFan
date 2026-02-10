@@ -624,7 +624,7 @@ Harry nodded, and they all stood, and moved over to the leather couches. Harry d
 
 “So how does this way of blocking the Bond work?” Harry asked.
 
-“It’s a spell that blocks the connection. The Mating Bond works vaguely like Legilimency, but at a much lower and gentler power. It’s very subtle. My spell mimics the effect of Occlumency, but incorporates a loop-back device, so Gabrielle’s magic will think that it is still in place.”
+“It’s a spell that blocks the connection. The Mating Bond works vaguely like legilimency, but at a much lower and gentler power. It’s very subtle. My spell mimics the effect of Occlumency, but incorporates a loop-back device, so Gabrielle’s magic will think that it is still in place.”
 
 “Do you want do to do it now?” Harry asked her.
 

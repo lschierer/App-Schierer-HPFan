@@ -1,7 +1,7 @@
 ---
 collection: Harrypedia
 title: Condescension
-author: "Luke Schierer"
+author: Luke Schierer
 ---
 
 There is no real doubt that most magical people consider themselves, their
@@ -19,6 +19,7 @@ is, in other ways it is not. There might be reasons for some of the traditions
 they have clung to, but like any people, some traditions are traditional simply
 because they _want to be different._[^220630-4]
 
+<!-- cspell: disable-next-line -->
 As an example of this, phoenixgirl26 in _[Observation][pgO1]_ has [Harry] adopt
 this attitude of superiority without question.[^220630-5] He then proceeds to
 instruct [Hermione] that robes have pockets _that might be used._ He had to be
@@ -61,13 +62,13 @@ of what is available or better.
 
 [^220719-4]: Works include but are not limited to:
 
-    - Bobmin356.
+    - Bobmin356. <!-- cspell: disable-line -->
       _[Mutant Storm](https://www.fanfiction.net/s/7404056)_
       Published: 2011-09-22. Last Updated: 2011-09-26. Last Viewed: 2022-07-19.
       Note, I actually really like this story because it's strengths overcome its flaws.
 
 [^220630-5]:
-    phoenixgirl26. _[Observation][pgO2]_
+    phoenixgirl26, _[Observation][pgO2]_ <!-- cspell: disable-line -->
     [Chapter 13](https://www.fanfiction.net/s/12954205/13/Observation)
     Published: 2018-05-31. Last Viewed: 2022-06-30.
 

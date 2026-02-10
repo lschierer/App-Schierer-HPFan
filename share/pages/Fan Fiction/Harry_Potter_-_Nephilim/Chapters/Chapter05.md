@@ -6,7 +6,7 @@ collection: Nephilim
 
 At first the changes were subtle, and because Harry and Dudley were in
 different classes for the first time, Harry at first thought that Dudley's
-abcense was responsible for the changes at school. In prior years, the teacher
+absence was responsible for the changes at school. In prior years, the teacher
 would frequently notice something was off about that Potter child. The
 oversized clothing, the odd high pitched whisper of a voice, the way he
 flinched if anyone came too close would all normally attract a conscientious

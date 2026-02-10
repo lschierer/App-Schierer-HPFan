@@ -51,7 +51,7 @@ some of these people are also in the [Gramps][] data I have
 
 One of the problems with the above sources is that I've ended up with 6 first
 generation wizards, 11 halfboods and 18 purebloods in [Harry][]'s class. This
-gives me a class that is 45% pureblooded, despite [Mr. Weasley][Arthur] being
+gives me a class that is 45% pure-blooded, despite [Mr. Weasley][Arthur] being
 quoted as saying that purebloods are dying out, and that most families are
 halfblooded.[^200817-1] Some of that may be the influence of the first
 Riddle war, where entire families were wiped out. I imagine the halfblooded
@@ -65,7 +65,7 @@ should be about 1000 students at Hogwarts,[^200817-2] then we should have
 muggleborn only 4%.
 
 That assumes that all 116 students killed by Riddle are halfblooded (or at
-least that the ones that were pureblooded would be in different years), which
+least that the ones that were pure-blooded would be in different years), which
 is probably not totally true but more nearly true than not. However, there is
 another interesting possibility. As best I can recall, _the Deathly Hallows_
 never says what happens to the first generation wizards who should have been

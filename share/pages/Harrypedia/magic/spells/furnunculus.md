@@ -2,7 +2,7 @@
 collection: Harrypedia
 type: "spell"
 title: Furnunculus
-spells: "Furnunculus"
+spells: Furnunculus
 author: Luke Schierer
 ---
 
@@ -12,7 +12,7 @@ Charm
 
 ## Description
 
-Documented as [Dark Magic][], this causes a person to break out in boils/pimples when it came in contact with their skin.
+Documented as [Dark Magic], this causes a person to break out in boils/pimples when it came in contact with their skin.
 
 [Dark Magic]: ../dark/
 

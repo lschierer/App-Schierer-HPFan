@@ -23,7 +23,7 @@ mini-rant on the [balance of power][].
 
 I think that "dark" _should_ be synonymous with "evil" but in practice probably
 simply means culturally frowned upon and/or legislatively proscribed and/or
-controlled. Parseltounge is "considered" the mark of a "dark
+controlled. parseltongue is "considered" the mark of a "dark
 wizard,[^221019-1] simply because of two known speakers being themselves "dark
 wizards," and despite the admittedly inconclusive evidence that it is normally
 an inherited trait.

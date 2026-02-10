@@ -4,7 +4,7 @@ title: The Mind Arts
 author: Luke Schierer
 ---
 
-For lack of a better word, I am going to call [Occlumency][] and [Legilimency][]
+For lack of a better word, I am going to call [Occlumency] and [Legilimency]
 "the Mind Arts," and not "the Mental Arts" because these are magics dealing with
 the mind, whereas "mental arts" could be almost anything _using_ your mind. I
 am trying to distinguish, however imperfectly, the mind as an object versus the
@@ -22,9 +22,9 @@ integrity of one's mind? This seems unacceptable. Look at the number of
 threats that people face in that society.
 
 - I cannot prove it from cannon sources, but I am fairly confident that
-  Professor Dumbledore uses [Legilimency] on students regularly. I started
+  Professor Dumbledore uses [legilimency] on students regularly. I started
   thinking that as soon as I re-read _The Chamber of Secrets_ after finding out
-  about [Legilimency].
+  about [legilimency].
 
 - Love potions can be made by young people. This is considered acceptable.
   "Mrs. Weasley was telling Hermione and Ginny about a love potion she’d made as

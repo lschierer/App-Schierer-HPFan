@@ -20,7 +20,7 @@ One thing of note, that I found in reading other people's ideas on this series.
 > friendly of beasts. Best stay close"
 >
 > Meaning Hagrid, the Acromantula Rancher, the Dragon Cuddler, the guy who
-> named a Cerberus Fluffy and does illegal "Harmless" crossbreeding, thought
+> named a Cerberus Fluffy and does illegal "Harmless" cross-breeding, thought
 > Goblins were dangerous.[^221109-2]
 
 [^221109-2]: 

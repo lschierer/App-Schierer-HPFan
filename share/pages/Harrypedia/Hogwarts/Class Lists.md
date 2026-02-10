@@ -64,7 +64,7 @@ Mrs. Rowling's original notes put Kevin Entwhistle in Ravenclaw[^20200701-3],
 but there are too many Ravenclaws and too many boys for her seeming desire for
 symmetry. Given my [argument about how students would be
 sorted][Class_and_Blood], I think he mutated to a Hufflepuff girl. Based on the
-same logic, Rivers is almost certainly a pure-blood, but might be a halfbood.
+same logic, Rivers is almost certainly a pure-blood, but might be a half-blood.
 
 [Class_and_Blood]: ../culture/Class_and_Blood
 

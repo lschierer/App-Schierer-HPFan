@@ -164,7 +164,7 @@ Harry laughed. “Look, let me introduce you to the staff and students here. We�
 
 “Sounds like a plan, oh Professorial one,” George said.
 
-Harry turned to face the entire student body and faculty. “Ladies and Gentleman,” he said, slipping easily into French. “In order to help us win the interschool tournament, I’ve enlisted a few very special friends. So, without further ado, let me introduce them to you. First, a team mate of mine from the Chudley Cannons, and before that, Puddlemere United. The England Keeper, Oliver Wood!”
+Harry turned to face the entire student body and faculty. “Ladies and Gentleman,” he said, slipping easily into French. “In order to help us win the inter-school tournament, I’ve enlisted a few very special friends. So, without further ado, let me introduce them to you. First, a team mate of mine from the Chudley Cannons, and before that, Puddlemere United. The England Keeper, Oliver Wood!”
 
 There was a moment of silence before the students and especially the ones who wanted to be Keepers, leapt to their feet and started to cheer.
 

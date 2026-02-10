@@ -22,9 +22,11 @@ That being said, I will admit that the books _are_ more than a bit absurd themse
 [James]: /Harrypedia/people/Potter/James/
 [Sirius]: </Harrypedia/people/Black/Sirius III/>
 
+<!-- cspell: disable -->
 [^250204-1]: Works including, but not limited to,
 
     - [Labgasod]. _[Three Hours](https://archiveofourown.org/works/51062065)_. Published: 2023-10-23. Completed: 2023-10-25.
     - [Labgasod]. _[Padfoot Saves the Day](https://archiveofourown.org/works/54718651/)_. Published: 2024-03-25 Completed: 2024-05-16.
 
 [Labgasod]: https://archiveofourown.org/users/Labgasod/pseuds/Labgasod
+<!-- cspell: enable -->

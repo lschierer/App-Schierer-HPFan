@@ -21,7 +21,7 @@ sidebar:
 > Footnotes on this page reference where I have reused ideas from others.
 > The footnotes are *not* part of the in-world text. 
 
-## **From:** \<redacted\> of the Archivio Apostolico Vaticano
+## **From:** \<redacted\> of the Archivio Apostolico Vaticano <!-- cspell: disable-line -->
 
 ## **To:** \<redacted\>, Provincial of the <redacted> Province
 
@@ -44,7 +44,7 @@ For obvious reasons it is difficult, even with the cooperation of one or more of
 ### Known Limits on Contract Magic
 
 * All magical contracts are originated by one or more of the nephilim, their descendant races, or some combination thereof. The individual or individuals creating the contract are called the "originating participants."  Full humans are unable to originate a magical contract. 
-* All magical contracts are created to effect some end.  There are examples of nephilim who have attempted to use the existence of fake contracts to trick or coherce behavior.  While this *does* occasionally work, nephilim are not immune from credulity, there exists ample evidence that a 'contract' without an *intended* effect **will not bind**.  Penalty clauses in such a contract will not trigger; where the form of the contract magic includes any sort of visible activation, this visible sign will not be present.
+* All magical contracts are created to effect some end.  There are examples of nephilim who have attempted to use the existence of fake contracts to trick or coerce behavior.  While this *does* occasionally work, nephilim are not immune from credulity, there exists ample evidence that a 'contract' without an *intended* effect **will not bind**.  Penalty clauses in such a contract will not trigger; where the form of the contract magic includes any sort of visible activation, this visible sign will not be present.
 * This end must be considered a net good by at least one of the originating participants, or the magic of the contract will fail. Note the _at least one_ element to this.  It is quite possible that _at least one_ party considers the instance of contract magic entirely evil.  It is however, necessary that _not all_ consider it evil.  The concept of 'least evil' is harder to evaluate.  It must be considered an _increase_ in good that the contract exists over the pre-existing state.  Such an increase is hard, but not *absolutely* irreconcilable with the concept of a decision categorized as the 'lesser of two evils' in that it is theoretically possible that 'no action' might be judged to constitute a greater evil by an originating participant.  Note that evidence *strongly* demonstrates that this judgement is *entirely* subjective, and *not* an absolute measure of goodness or evil.  
 * The end to be achieved must be possible, however it _may_ require additional participants. If additional participants are required to achieve a proposed end, the additional participants are contractees. Originating participants cannot contract arbitrary persons as contractees, only those related to the originating participants in certain ways can be bound. 
 * All contractees must themselves also be of the nephilim or one of their descendant races.  It is not possible to magically contract a full human to do, be, not do, or not be, just as it is not possible for a full human to be an original participant. 
@@ -115,7 +115,7 @@ Common ones include, but are not limited to:
   - the TriWizard champions process out of the room
   - engagement rings
   - being sorted by the Sorting Hat
-- Restating a previously expresssed limitation, contracts effect _something_. Person A agrees to do something _or be_ something for Person B. The contract may or may not be one sided. The contract may or may not have penalties. However, a contract in which neither party is obligated to perform or not perform some action cannot bind.
+- Restating a previously expressed limitation, contracts effect _something_. Person A agrees to do something _or be_ something for Person B. The contract may or may not be one sided. The contract may or may not have penalties. However, a contract in which neither party is obligated to perform or not perform some action cannot bind.
 - No contract may require a nephil to perform the marital act before the age
   of 14.[^230717-3] This would be a violation of natural law (this is thus not actually a distinct limitation).
 - 'Contract Magic' works _only_ on nephilim. It does not work on pure humans (again restating a limitation). Remember that contract magic works by inducing your own magic to act against you.
@@ -168,7 +168,7 @@ through with the marriage, but would provide a strong incentive to do so.
 A stronger contract might make you physically ill or even die if you failed
 to go through with the marriage.
 
-This becomes problematic when a nephil finds himself/herself bound to multiple different marriage contracts each of which requires that the contractee live with the other contractee and act on the marriage. With penalties that can and frequently do include death for non-compliance, and contracts written in ways that do _not_ include the monogamy proper to a true marriage, but rather allow for the pagan concept of multiple spouses, the contractee frequently experiences severe temptation. Careful and prudential judgement is needed to determine if, in any individual case, any of the nephilim in these relationships are operating under sufficient contract-induced duress as to impair their free choice. Part of this prudential judgement must include the reality that one or more of the participants may be poorly catechised or even entirely uncatecised as regards to a true and proper understanding of marriage. They may have approached the Church having grown in this understanding only after having been in relationship for some time, or because some subset of the participants is more catechised than other participants and desires guidance. Each situation will present unique challenges and careful consideration will need to be made of the particular participants, the precise contract(s) involved, and the pressures on them.
+This becomes problematic when a nephil finds himself/herself bound to multiple different marriage contracts each of which requires that the contractee live with the other contractee and act on the marriage. With penalties that can and frequently do include death for non-compliance, and contracts written in ways that do _not_ include the monogamy proper to a true marriage, but rather allow for the pagan concept of multiple spouses, the contractee frequently experiences severe temptation. Careful and prudential judgement is needed to determine if, in any individual case, any of the nephilim in these relationships are operating under sufficient contract-induced duress as to impair their free choice. Part of this prudential judgement must include the reality that one or more of the participants may be poorly catechised or even entirely un-catechised as regards to a true and proper understanding of marriage. They may have approached the Church having grown in this understanding only after having been in relationship for some time, or because some subset of the participants is more catechised than other participants and desires guidance. Each situation will present unique challenges and careful consideration will need to be made of the particular participants, the precise contract(s) involved, and the pressures on them.
 
 ### The TriWizard Contract and the Goblet of Fire
 
@@ -249,9 +249,9 @@ make it a distinct category of event worth separate consideration.
 - The SSM is _always_ created verbally, generally in the form of promises exchanged.
 - The SSM always produces a detectable effect, that is there is always a societally recognised sign produced that the Participants are in fact now married.
   - Where the SSM happens in modern European society, this frequently takes the form of wedding rings spontaneously appearing on the participants' fingers. These rings resist being removed.
-  - There are records of one or both families trying to suppress the signs associated with the SSM.  There are no records of this ever working for more than a few hours. There seems to be a compulsion to return anything taken to the participants, to allow them to live together, and to otherwise act as married.  This seems to violate the limitation that Contractees cannot be parents of Original Participants.  Church researchers have concluded that this is one of the ways in which an SSM is distinct from other Contracts.  When the 'signs' or 'tokens' are recognized *as being such* those so recognizing them appear to proverbally 'sign the contract.'  
+  - There are records of one or both families trying to suppress the signs associated with the SSM.  There are no records of this ever working for more than a few hours. There seems to be a compulsion to return anything taken to the participants, to allow them to live together, and to otherwise act as married.  This seems to violate the limitation that Contractees cannot be parents of Original Participants.  Church researchers have concluded that this is one of the ways in which an SSM is distinct from other Contracts.  When the 'signs' or 'tokens' are recognized *as being such* those so recognizing them appear to proverbially 'sign the contract.'  
   
-    There is one well documented example where a nephil grand father was able to retain a wedding ring that spontaneously appeared on his grand daughers hand for three days.  However, when his grand daughter claimed the ring as hers, he was observed to drop the ring repeatedly, as if it had suddenly become coated in soap.  Once *she* picked it up, he was thence forth *unable to take it from her* despite a number of witnesses seeing him attempt to remove it from her finger.  The three days he held it before knowing whose it was represents the longest time a SSM token has been documented as being withheld from its true owner *ever*.  
+    There is one well documented example where a nephil grand father was able to retain a wedding ring that spontaneously appeared on his grand daughters hand for three days.  However, when his grand daughter claimed the ring as hers, he was observed to drop the ring repeatedly, as if it had suddenly become coated in soap.  Once *she* picked it up, he was thence forth *unable to take it from her* despite a number of witnesses seeing him attempt to remove it from her finger.  The three days he held it before knowing whose it was represents the longest time a SSM token has been documented as being withheld from its true owner *ever*.  
   
     From this and a number of similar, if shorter duration, examples, researchers have concluded that the older generation is not bound by the contract's *existence* until they in some way *personally* act up and/or acknowledge it.  Only then does the contract have the ability to bind them.  This then fits within the limitations.  The older generation *binds themselves* to the contract as a second set of Originating Participants. 
  
@@ -274,6 +274,7 @@ make it a distinct category of event worth separate consideration.
 [Imperius]: /Harrypedia/magic/spells/imperio
 [legilimency]: </Harrypedia/magic/The Mind Arts/Legilimency>
 
+<!-- cspell: disable -->
 [^230103-2]:
     these include,
     but are not limited to:
@@ -286,6 +287,7 @@ make it a distinct category of event worth separate consideration.
       _[Always Read the Fine Print](https://www.fanfiction.net/s/11118965)_
       Published: 2015-03-16.
 
+<!-- cspell: enable -->
 [^230103-3]: I do not recall which TriWizard Fan Fiction I read this in.
 
 [^230711-1]:

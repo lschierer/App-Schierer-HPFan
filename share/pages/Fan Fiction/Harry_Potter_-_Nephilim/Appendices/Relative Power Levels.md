@@ -74,7 +74,7 @@ for her once there.
 #### Susan
 
 Susan represents a slightly stronger average student. Her scores are slightly shifted
-towards offence and defense, as befitting someone who comes from a family that [Riddle]
+towards offence and defence, as befitting someone who comes from a family that [Riddle]
 felt the need to attack personally. However, with an average of 6.77, she does not have
 the history-making scores that characters like [Dumbledore] or [Harry] do.
 
@@ -86,7 +86,7 @@ the history-making scores that characters like [Dumbledore] or [Harry] do.
 
 #### Fleur
 
-As you can see, Fluer is fairly strong, so it was no surprise that the Goblet
+As you can see, Fleur is fairly strong, so it was no surprise that the Goblet
 chose her. Several of her scores are qualified in that her ability to use them
 is limited by her veela nature. Unfortunately for her, the Goblet was not
 designed to consider that.
@@ -236,7 +236,7 @@ Slughorn's class is because:
 > in the cannon universe, Harry will find all sorts of self-crafted spells in the margins
 > of Snape's _potions_ text book. Snape was not focused on _potions_ in _Potions_ class,
 > he was busy crafting his own spells, many of which were dark in nature.
-> The **_true_** potions afficianado would have been fully focused on his/her work, not
+> The **_true_** potions aficionado would have been fully focused on his/her work, not
 > on something else.
 
 ### Weasley

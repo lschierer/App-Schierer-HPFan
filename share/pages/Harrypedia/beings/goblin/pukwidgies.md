@@ -9,4 +9,4 @@ Found in North America, they have a grey skin tone, and large ears. They "hunt w
 [^221121-1]: 
     Mrs. J. K. Rowling.
     "[Ilvermorny](https://www.rowlingindex.org/work/pmilv/)"
-    Pubished 2016-06-29. [The J.K. Rowling Index](https://www.rowlingindex.org)
+    Published 2016-06-29. [The J.K. Rowling Index](https://www.rowlingindex.org)

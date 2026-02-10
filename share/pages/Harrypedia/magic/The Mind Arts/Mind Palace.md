@@ -5,7 +5,7 @@ title: |
 author: Luke Schierer
 ---
 
-A proposed defence against [Legilimency][], I have heard this one called a variety
+A proposed defence against [Legilimency], I have heard this one called a variety
 of things. The basic idea is to visualise something familiar and "hide" or
 "store" your memories "within" this location or structure. "Sorting" or
 "organising" your memories this way supposedly makes it harder for an attacker

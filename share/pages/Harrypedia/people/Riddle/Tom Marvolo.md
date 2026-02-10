@@ -1,7 +1,7 @@
 - Born to Merope Gaunt.[^20210827-1]
 - Started Hogwarts: 1938-09-01[^20210827-3]
 - Finished Hogwarts: 1945-06-??[^20210827-4]
-- Worked at Borgin and Burkes.[^20210827-5]
+- Worked at Borgin and Burke's.[^20210827-5]
 - Murder of Hepzibah Smith.[^20210827-6]
 - 10 years later interviews with Dumbledore.[^20210827-7]
 - Nott, Rosier, Mulciber, Dolohov are already Death Eaters.[^20210827-10]
