@@ -1,3 +1,5 @@
+# cspell: disable
+
 # Install dependencies
 install:
     mise install
@@ -28,6 +30,10 @@ tidy:
     perltidy -b -pro=.perltidyrc Build.PL
     perltidy -b -pro=.perltidyrc bin/server.pl
     find . -name '*.bak' -delete
+
+spelling:
+    pnpm tsx scripts/fix-spelling.ts
+    pnpm cspell share/pages
 
 # Run tests
 test:

@@ -1,0 +1,54 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		},
+		{
+			"path": "./share/pages",
+			"name": "Pages"
+		}
+		
+	],
+
+	"settings": {
+		"LSP": {
+			"LSP-eslint": {
+				"enabled": true,
+				"settings": {
+					"useFlatConfig": true,
+				}
+			},
+			"LSP-cspell": {
+				"enabled": true,
+				"settings": {
+					"cSpell.enabled": true,
+					"cSpell.showStatus": true,
+					"cSpell.useGitignore": true,	
+					"cSpell.diagnosticLevel": "Warning",
+				}
+			}
+		},
+	},
+	"required_packages": [
+			"BracketHighlighter",
+			"Dictionary",
+			"Dockerfile Syntax Highlighting",
+			"EditorConfig",
+			"FileManager",
+			"Google Dictionary",
+			"LSP",
+			"LSP-eslint",
+			"LSP-json",
+			"LSP-typescript",
+			"LSP-cspell",
+			"Markdown Extended",
+			"MarkdownFootnotes",
+			"MarkdownPreview",
+			"NeoVintageous",
+			"Package Control",
+			"PerlTidy",
+			"Project Specific Syntax Settings",
+			"SideBarEnhancements",
+		],
+}

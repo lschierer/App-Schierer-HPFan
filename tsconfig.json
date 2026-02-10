@@ -26,5 +26,5 @@
     "declarationDir": "./public/types",
   },
   "exclude": ["**/node_modules/**", "**/cdk.out/**"],
-  "include": ["./lib/**/*.ts", "./scripts/*.ts", "./infrastructure/**/*.ts"],
+  "include": ["./lib/**/*.ts", "./scripts/*.ts", "./infrastructure/**/*.ts","./types/**/*.ts"],
 }
