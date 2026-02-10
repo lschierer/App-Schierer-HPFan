@@ -83,7 +83,7 @@ willing to use that "not a bad mind" mentioned above away from Ron's influence).
 
 [^200731-3]: 
     Mrs. J. K. Rowling et al.
-    "[Anelli, Melissa, John Noe and Sue Upton.
+    "[Anelli, Melissa, John Noe and Sue Upton.<!-- cspell: disable-line -->
     "PotterCast Interviews J.K. Rowling, part one." PotterCast #130, 17
     December 2007.](http://www.accio-quote.org/articles/2007/1217-pottercast-anelli.html)"
     [Accio-Quote](http://www.accio-quote.org/) Last viewed 2020-07-31.
@@ -231,7 +231,7 @@ in the cupboard. Since both are speculation, we do not know which.
 [^200710-2]: Mrs. J. K. Rowling. _Harry Potter and the Sorcerer's Stone_ p. 208. Pottermore Limited. American Kindle Edition.
 
 [^200710-3]: 
-    Tom Kristal.
+    Tom Kristal.<!-- cspell: disable-line -->
     _[Prongs Final Prank](https://www.fanfiction.net/s/4279550/1/Prongs-Final-Prank)_
     [FanFiction by FictionPress](https://www.fanfiction.net/) Published 2008-03-26.
     Last Viewed 2020-07-10.

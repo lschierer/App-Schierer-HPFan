@@ -55,24 +55,24 @@ Some fanfiction works that have built on this team:
 > teachers also neglected to think of how these events might have scarred
 > us.[^211102-1]
 
-[Dealing_with_Riddle]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/>dealing_with_riddle/
-[Grindelwald]: /Harrypedia/people/Grindelwald/Gellert/
-[TMR1]: </Harrypedia/people/Riddle/Tom Marvolo/>
-[HJP1]: </Harrypedia/people/Potter/Harry James/>
-[DF1]: /Harrypedia/people/Dursley/
-[AD1]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/>
-[Bill Weasley]: </Harrypedia/people/Weasley/William Arthur/>
-[Hogwarts]: /Harrypedia/Hogwarts/
+[Dealing_with_Riddle]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/dealing_with_riddle>
+[Grindelwald]: /Harrypedia/people/Grindelwald/Gellert
+[TMR1]: </Harrypedia/people/Riddle/Tom Marvolo>
+[HJP1]: </Harrypedia/people/Potter/Harry James>
+[DF1]: /Harrypedia/people/Dursley
+[AD1]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
+[Bill Weasley]: </Harrypedia/people/Weasley/William Arthur>
+[Hogwarts]: /Harrypedia/Hogwarts
 
 [^211102-1]: 
-    Venquine1990.
+    Venquine1990. <!-- cspell: disable-line -->
     _[Dumbledore's Folly](https://www.fanfiction.net/s/13948448)_
     "[Chapter 11. Punishment In Mind - Part 02](https://www.fanfiction.net/s/13948448/11/Dumbledore-s-Folly)"
     Published: 2021-08-31. Updated: 2021-10-31. Last Viewed: 2021-11-02.
 
 [^211015-2]: 
     gredandforgerock.
-    _[Remus Lupin: Savior](https://www.fanfiction.net/s/7013332)_
+    _[Remus Lupin: Savior](https://www.fanfiction.net/s/7013332)_ <!-- cspell: disable-line -->
     [Chapter 8](https://www.fanfiction.net/s/7013332/8/Remus-Lupin-Savior)
     Published: 2011-05-22. Updated: 2021-10-15. Last Viewed: 2021-10-15.
 

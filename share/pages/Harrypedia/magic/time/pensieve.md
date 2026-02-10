@@ -52,7 +52,23 @@ time for details to fill in, there _aren't any_. Anything that he himself does
 not provide is simply not present.
 
 However, I suspect that a _truly_ skilled practitioner of the [mind magics]
-would not only know this, but would be able to work around it. This would explain why [Dumbledore] says that [Slughorn]'s attempt is "crudely done."[^240422-2] Instead of trying to replace the memory with totally false imagined scene, he or she might, for example, splice two memories. Or perhaps judiciously change a single word here or there to subtly influence the perception that the viewer has of the memory, without preventing the pensieve from finding enough in the memory to locate it in time. To carefully edit only where the memory is most conscious, most present, and thus where details from history are least needed. The pensieve then would be merely a non-interactive holodeck viewer of such a modified detail, with no need to link it in time, since the practitioner edited a segment from which no details are missing. This would not be a "crude" modification, but rather one that [Dumbledore] might term more elegant, but, per his comments to [Harry] probably poses more risks to the practitioner's actual ability to recollect the unmodified event.[^221202-13] It is important to note that if this is either known to be true or speculated to be possible in world, then memories would not be considered admissible evidence in a responsible court.
+would not only know this, but would be able to work around it. This would
+explain why [Dumbledore] says that [Slughorn]'s attempt is "crudely done."
+[^240422-2] Instead of trying to replace the memory with totally false
+imagined scene, he or she might, for example, splice two memories. Or perhaps
+judiciously change a single word here or there to subtly influence the
+perception that the viewer has of the memory, without preventing the pensieve
+from finding enough in the memory to locate it in time. To carefully edit
+only where the memory is most conscious, most present, and thus where details
+from history are least needed. The pensieve then would be merely a
+non-interactive holodeck viewer of such a modified detail, with no need to
+link it in time, since the practitioner edited a segment from which no
+details are missing. This would not be a "crude" modification, but rather one
+that [Dumbledore] might term more elegant, but, per his comments to
+[Harry] probably poses more risks to the practitioner's actual ability to
+recollect the unmodified event.[^221202-13] It is important to note that if
+this is either known to be true or speculated to be possible in world, then
+memories would not be considered admissible evidence in a responsible court.
 
 [mind magics]: </Harrypedia/magic/The Mind Arts>
 [Slughorn]: </Harrypedia/people/Slughorn/Horace Eugene Flaccus>
@@ -65,7 +81,7 @@ would not only know this, but would be able to work around it. This would explai
 [^221202-10]:
     The idea that the pensieve can be used to invoke time was first
     suggested to me, in a different way, by _[Backward With Purpose Part I:
-    Always and Always](https://www.fanfiction.net/s/4101650)_ by deadwoodpecker
+    Always and Always](https://www.fanfiction.net/s/4101650)_ by deadwoodpecker <!-- cspell: disable-line -->
     published 2008-02-28. Updated: 2018-09-28.
 
 [^221202-5]:

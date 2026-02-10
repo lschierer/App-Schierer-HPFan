@@ -29,7 +29,7 @@ Vanish spills, stains, and other messes.
     <dd>citation needed.</dd>
 
     <dt>Secondary Cannon</dt>
-    <dd>[magicscrapbook](https://magicscrapbook.tumblr.com/)
+    <dd>[magicscrapbook](https://magicscrapbook.tumblr.com/) <!-- cspell: disable-line -->
         "[‘Book of Spells’ transcript](https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript)"
         Last Viewed 2021-09-30.</dd>
 
@@ -39,6 +39,6 @@ Vanish spills, stains, and other messes.
 
 [^221215-1]: This myth is exemplified in:
 
-    - Luiz4200.
+    - Luiz4200. <!-- cspell: disable-line -->
       _[Another Perspective](https://www.fanfiction.net/s/8066097)_
       Published 2012-06-30. Updated: 2012-06-30.

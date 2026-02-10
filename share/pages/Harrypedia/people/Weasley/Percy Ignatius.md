@@ -23,7 +23,7 @@ this, he continues to work for the Ministry throughout the period of
 
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>
 
-This Percy is well represented in works such as, but not limited to, sbmcneil's _[Remember][]_.
+This Percy is well represented in works such as, but not limited to, sbmcneil's _[Remember][]_. <!-- cspell: disable-line -->
 
 [Remember]: https://www.fanfiction.net/s/4936039
 

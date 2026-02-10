@@ -65,15 +65,15 @@ understand the difference.
 [A Study of Resonance]: https://archiveofourown.org/works/38041177
 
 [^221122-6]: 
-    mymovingfingerwrites. _[A Study of Resonance][]_
+    mymovingfingerwrites. _[A Study of Resonance][]_ <!-- cspell: disable-line -->
     Published: 2022-03-29. Updated: 20222-11-17.
 
 [Amelia]: </Harrypedia/people/Bones/Amelia Susan/>
 
 [^221122-3]: including but not limited to
 
-    - Scarlet*Gryphon
-      *[For the Want of a Groundskeeper](https://archiveofourown.org/works/21541015)\_
+    - Scarlet\*Gryphon
+      _[For the Want of a Groundskeeper](https://archiveofourown.org/works/21541015)\_
       Published: 2019-11-24. Completed: 2019-11-24.
 
 One work does have what may be a workable definition. It says that "dark" and
@@ -89,7 +89,7 @@ this difference. If so, it will prove a fatal flaw to the theory, for it means
 that there will be no examples of "dark" magic that do not strongly tend towards
 evil, and my overall thoughts on the matter will stand essentially uncontested.
 
-[^230124-1]: AliceMoonflowyr. _[The Black Wind][]_ Published 2022-01-10. Updated: 2022-09-21.
+[^230124-1]: AliceMoonflowyr. _[The Black Wind][]_ Published 2022-01-10. Updated: 2022-09-21. <!-- cspell: disable-line -->
 
 [The Black Wind]: https://archiveofourown.org/works/36341272
 [cruciatus]: /Harrypedia/magic/spells/cruciatus/
@@ -107,7 +107,7 @@ personality, but properly used it is fine.[^230201-4] I could deal with the
 idea that it is morally wrong but safe to use (except for the moral effects on
 your soul), but this last theory to me is not really tenable.
 
-[^230201-1]: Labgasod. _[How?][]_ Published: 2023-01-03 Updated:2023-02-01.
+[^230201-1]: Labgasod. _[How?][]_ Published: 2023-01-03 Updated:2023-02-01. <!-- cspell: disable-line -->
 
 [^230201-2]: I recall reading this, but not which work I read it in.
 

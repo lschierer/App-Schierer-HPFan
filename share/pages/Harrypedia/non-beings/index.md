@@ -8,8 +8,8 @@ sidebar:
 
 Various fans trying to make sense of the various bits of information provided by
 Mrs. Rowling have come up with the concept of "Non-Human Spirituous Apparitions"
-or "non-beings" to cover [boggarts][], [dementors][], [poltergeists][] and
-possibly [banshees][].[^211020-8] I agree the description and concepts they
+or "non-beings" to cover [boggarts], [dementors], [poltergeists] and
+possibly [banshees].[^211020-8] I agree the description and concepts they
 have come up with fits well with what Mrs. Rowling has provided for us. It is,
 however, philosophically unacceptable to me at a really fundamental level.
 
@@ -27,7 +27,7 @@ killed, only driven away.
 [balance of power]: /Harrypedia/balance/
 
 There are two basic problems. The first is that they disrupt the overall
-[balance of power][] in the world Mrs. Rowling has created. The other problem
+[balance of power] in the world Mrs. Rowling has created. The other problem
 is _that they are created_. If they are created but never go away, then for
 any sufficiently long time, they will overwhelm us by simple population
 density. There will be too many of them to drive away no matter even if every
@@ -40,7 +40,7 @@ something that _increases_ in numbers cannot and does not also _decrease_
 in numbers.
 
 [^211020-9]: 
-    Mr. Eric Betz.
+    Mr. Eric Betz. <!-- cspell: disable-line -->
     "[What will happen to the planets when the Sun becomes a red
     giant?](https://astronomy.com/magazine/ask-astro/2020/09/what-will-happen-to-the-planets-when-the-sun-becomes-a-red-giant)"
     [Astronomy Magazine](https://astronomy.com/) September 2020 Issue, Published
@@ -48,7 +48,7 @@ in numbers.
 
 [^211020-8]: [Harry Potter Wiki](https://harrypotter.fandom.com/wiki/)
 
-    - "[Amortality](https://harrypotter.fandom.com/wiki/Amortality)
+    - "[Amortality](https://harrypotter.fandom.com/wiki/Amortality) 
       Last Edited: 2021-09-06. Last Viewed: 2021-10-20.
     - "[Non-Human Spiritous Apparition](https://harrypotter.fandom.com/wiki/Non-Human_Spiritous_Apparition)"
       Last Edited: 2021-10-11. Last Viewed: 2021-10-20.

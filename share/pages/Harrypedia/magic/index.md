@@ -41,7 +41,7 @@ We seem to have:
     > have adopted it as a useful tool in the last century, many spells are
     > cast simply by pointing the finger or through hand gestures.[^210304-5]
   - Mrs. Rowling published a Book of Spells only available on
-    Playstation.[^210406-44] There seems to be a [transcript
+    Play-station.[^210406-44] There seems to be a [transcript
     available][BoST], and mentions a fair number of [spells].
   - I am putting together my own book of spells [here][spells]. I am not
     trying to build a useful spell book, but rather a reference of names and
@@ -85,7 +85,7 @@ We seem to have:
   - What role do the ingredients play in potions?
   - > It is often asked whether a Muggle could create a magic potion, given a
     > Potions book and the right ingredients. The answer, unfortunately, is no.
-    > There is always some element of wandwork necessary to make a
+    > There is always some element of wand-work necessary to make a
     > potion[^210702-4]
   - I am compiling of [list of these as well][Potions].
 - [Runes]
@@ -118,13 +118,13 @@ We seem to have:
     Same page through [2012-02-04](https://web.archive.org/web/20120204062053/http://www.jkrowling.com/textonly/en/faq_poll.cfm)
 
 [^210823-6]:
-    Kratos1989.
+    Kratos1989. <!-- cspell: disable-line -->
     _[Head Start](https://www.fanfiction.net/s/13492410)_
     [Book 1, Chapter 10](https://www.fanfiction.net/s/13492410/11/Head-Start)
     Updated: 2021-08-23. Published: 2020-02-03. Last Viewed: 2021-08-23.
 
 [^210823-5]:
-    Kratos1989.
+    Kratos1989. <!-- cspell: disable-line -->
     _[Head Start](https://www.fanfiction.net/s/13492410)_
     [Book 1, Chapter 10](https://www.fanfiction.net/s/13492410/11/Head-Start)
     Updated: 2021-08-23. Published: 2020-02-03. Last Viewed: 2021-08-23.
@@ -141,7 +141,7 @@ We seem to have:
     p. 18. Pottermore Publishing. © 2016 American Kindle Edition.
 
 [^210709-1]:
-    CmptrWz.
+    CmptrWz. <!-- cspell: disable-line -->
     _[For Want of an Outfit](https://archiveofourown.org/works/28507302)_
     [Chapter 19](https://archiveofourown.org/works/28507302/chapters/76593785)
     [Archive of Our Own](https://archiveofourown.org)
@@ -159,7 +159,7 @@ We seem to have:
     p. 137. Pottermore Limited. American Kindle Edition.
 
 [^210406-44]:
-    [magicscrapbook](https://magicscrapbook.tumblr.com/)
+    [magicscrapbook](https://magicscrapbook.tumblr.com/) <!-- cspell: disable-line -->
     "[‘Book of Spells’ transcript](https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript)"
     Last Viewed 2021-05-12.
 
@@ -186,7 +186,7 @@ The question then becomes did the Weasleys not fix his eyesight because
     mention very hard, to make"[^210302-3] where "very expensive" means "a
     couple of thousand Galleons."[^210302-4]
   - Simply costly:
-    - mymovingfingerwrites. _[A Study of Resonance](https://archiveofourown.org/works/38041177)_
+    - mymovingfingerwrites. _[A Study of Resonance](https://archiveofourown.org/works/38041177)_ <!-- cspell: disable-line -->
       [Chapter 2](https://archiveofourown.org/works/38041177/chapters/95298757)
       Published: 2022-03-29. Updated: 2022-11-17.
 - it is painful to do[^210923-1]
@@ -212,11 +212,12 @@ The question then becomes did the Weasleys not fix his eyesight because
     that a muggleborn might show up in his shop with.
 
 [^221122-1]:
-    Scarlet*Gryphon
-    *[For the Want of a Groundskeeper](https://archiveofourown.org/works/21541015)\_
+    Scarlet\*Gryphon
+    _[For the Want of a Groundskeeper](https://archiveofourown.org/works/21541015)_
     Published: 2019-11-24. Completed: 2019-11-24.
 
-[^221122-2]: I know I have read a story with this, need to refind.
+
+[^221122-2]: I know I have read a story with this, need to re-find.
 
 #### Lifespan
 
@@ -245,7 +246,7 @@ examinations are conducted by at least one examiner who also conducted
     Published: 2008-02-19. Updated: 2008-03-02.
 
 [^210923-1]:
-    - Hippothestrowl.
+    - Hippothestrowl. <!-- cspell: disable-line -->
       _[Broken Utterly!](https://www.fanfiction.net/s/13507747)_
       [Chapter 2](https://www.fanfiction.net/s/13507747/2/Broken-Utterly)
       Published: 2020-02-23. Updated: 2020-12-09.
@@ -465,7 +466,7 @@ have read ia number of different ideas about it. See the full article on the
 [^200731-5]: Mrs. J. K. Rowling. _Harry Potter and the Order of the Phoenix_
 
 [^200731-6]:
-    Radaslab.
+    Radaslab. <!-- cspell: disable-line -->
     _[Not Normal](https://www.fanfiction.net/s/7144149)_
     [Fanfiction.net](https://www.fanfiction.net/)
     [Chapter 59](https://www.fanfiction.net/s/7144149/59/Not-Normal) Published 2011-07-04,
@@ -493,6 +494,6 @@ have read ia number of different ideas about it. See the full article on the
     Pottermore Limited. American Kindle Edition. Approx Location 4405 of 4470.
 
 [^210302-5]:
-    Sunlesswarmth. _[BrokenProphecy](https://www.fanfiction.net/s/13712386)_
+    Sunlesswarmth. _[BrokenProphecy](https://www.fanfiction.net/s/13712386)_ <!-- cspell: disable-line -->
     [Chapter 3](https://www.fanfiction.net/s/13712386/3/Broken-Prophecy)
     Published 2020-10-04. Updated 2020-12-01. Last Viewed 2021-03-02.

@@ -21,7 +21,7 @@ the last mention.
 Thus my conclusion is that while the common theme in fanfiction that he only
 talks about goblin wars is heavily overstated, Binns is _not_ adequately
 covering history. He is not only soporific in tone, he is probably covering his few
-topics in minute detail, rather than canvasing the breadth of history across the
+topics in minute detail, rather than canvassing the breadth of history across the
 five years of having a captive audience.
 
 [^20210521-5]: 

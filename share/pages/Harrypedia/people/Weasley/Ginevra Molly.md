@@ -28,7 +28,7 @@ Ginny's behaviour is unexplained, to my knowledge, by cannon sources.
 > someone whose father runs The Quibbler.”[^20210513-1]
 
 When reading this keep in mind that this is filtered through [Hermione][].
-While it looks fairly harsh, PercabethHinny noted in _Discovering the Truth_
+While it looks fairly harsh, PercabethHinny noted in _Discovering the Truth_ <!-- cspell: disable-line -->
 that [Hermione][] _might_ be misrepresenting Ginny's actual words (emphasis
 mine).[^20210513-2]
 
@@ -40,7 +40,7 @@ mine).[^20210513-2]
     Kindle Locations 2746-2749. Pottermore Limited. American Kindle Edition.
 
 [^20210513-2]:
-    PercabethHinny.
+    PercabethHinny. <!-- cspell: disable-line -->
     _[Discovering the Truth](https://www.wattpad.com/story/51615824-discovering-the-truth-harry-potter)_
     Last Updated: 2019-05-22. Last Viewed: 2021-05-13.
 

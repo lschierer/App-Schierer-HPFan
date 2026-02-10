@@ -101,7 +101,7 @@ A second possibility:
 
 > Dementors fed on happy memories. That was what they did. When you spent any amount of time in Azkaban, they sucked your happy memories out of you. You could recover them, of course. It was possible to entirely recover from even an extended trip to Azkaban, in fact, given time and support and a great deal of chocolate, but the key word there was time. Nearly a full year had passed between when Sirius escaped from Azkaban and when Harry had met him, during which time Sirius had been propelled entirely or almost entirely by hatred of Wormtail. Harry's parents were probably the subject of Sirius' worst memory, the image of them lying dead which (having been among Snape's memories) haunted Harry as well. Them he could not forget, any more than he could forget his raging need for Peter Pettigrew to be dead. That wasn't a happy memory. But Harry? Harry had been one year old when Sirius lost him, a tiny ball of green-eyed joy who chased James' cat on his toy broomstick and couldn't pronounce 'Moony' properly. Harry would probably have been, in his entirety, a happy memory ...[^230203-1]
 
-[^230203-1]: slythernim. _[Messing With Time][]_ Published: 2019-06-23. Updated: 2023-01-17.
+[^230203-1]: slythernim. _[Messing With Time][]_ Published: 2019-06-23. Updated: 2023-01-17. <!-- cspell: disable-line -->
 
 [Messing With Time]: https://archiveofourown.org/works/19334905
 

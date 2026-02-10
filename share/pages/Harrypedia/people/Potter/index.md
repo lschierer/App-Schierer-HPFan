@@ -16,7 +16,7 @@ author: Luke Schierer
   notoriously poor? The above page on [wealth][] goes into some depth on this.
 - While Mrs. Rowling posted a graphical family tree on the Pottermore website[^241222-1] for a while, I am assuming it is incomplete. There are two things of note.
   - She has referenced Potters not mentioned in it as part of other articles. I believe she was attempting to represent only direct ancestors of [Harry] and his family. Aunts and uncles may have existed at any level of the tree, but are not shown.
-  - She uses two different colored lines, and we know that [Iolanthe] was the _granddauter_ of [Ignotus], not his daughter as a literal reading of the graphic would indicate. Thus I believe that the places that we see the lighter coloured line, as we do between the two of them, indicates that more than one generation is passing between the names shown.
+  - She uses two different coloured lines, and we know that [Iolanthe] was the _granddaughter_ of [Ignotus], not his daughter as a literal reading of the graphic would indicate. Thus I believe that the places that we see the lighter coloured line, as we do between the two of them, indicates that more than one generation is passing between the names shown.
 
 [Harry]: </Harrypedia/people/Potter/Harry James/>
 [Ignotus]: /Harrypedia/people/Peverell/ignotus/

@@ -26,7 +26,7 @@
     _[Harry Potter and the Half-Blood Prince](https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince)_
     page 366. © 2005 American Kindle Edition.
 
-[^200714-1]: [Harry Potter Wiki](https://harrypotter.fandom.com). [Screenshot of the old potermore fact file for Dumbledore](https://harrypotter.fandom.com/wiki/Main_Page?file=Albus+Dumbledore+Fact+File+-+PM+via+Internet+Archive.png) Last viewed 2020-07-14
+[^200714-1]: [Harry Potter Wiki](https://harrypotter.fandom.com). [Screenshot of the old Pottermore fact file for Dumbledore](https://harrypotter.fandom.com/wiki/Main_Page?file=Albus+Dumbledore+Fact+File+-+PM+via+Internet+Archive.png) Last viewed 2020-07-14
 
 [^200720-6]: Mrs. J. K. Rowling. _Harry Potter and the Prisoner of Azkaban_ (p. 362). Pottermore Limited. American Kindle Edition.
 
@@ -65,7 +65,7 @@ envisions Dumbledore as (my words) misguided, and perhaps ruthless, but not
 evil.[^180702-2] There is some truth to this. Personally, I am convinced that
 Dumbledore believes some form of [Utilitarianism][IEPU2]. Whether he absorbed
 this from [Gellert Grindelwald][GG],[^221221-6] or learned it from his own
-parents is more than I am perpared to say. It even is possible that
+parents is more than I am prepared to say. It even is possible that
 [Grindelwald][GG] got the idea from _Dumbledore_. Moreover, for all that "the
 Greater Good" would become [Grindelwald][GG]'s slogan,[^221221-7] I do not
 believe that Dumbledore ever, if at all, fully abandoned his internal
@@ -84,8 +84,8 @@ says he actually came to believe his moral reasoning had been flawed.
     Pottermore Publishing Limited. American Kindle Edition. Page 173.
 
 Dumbledore's father went to prison for unilaterally using magic to punish some
-non-magical boys who so tramatized [Ariana][] Dumbledore that she lost control
-of her mental facualties, and with that, her control over her magic.[^221220-8]
+non-magical boys who so traumatized [Ariana][] Dumbledore that she lost control
+of her mental faculties, and with that, her control over her magic.[^221220-8]
 This belief that he had the right to vengeance speaks to a belief in superiority
 that seems common to the wizarding world, we see it in the [Weasleys][] as well
 for example.[^221221-9] Dumbledore no doubt grew up seeing the world this way,
@@ -188,17 +188,17 @@ phoenix _should_ be a moral indicator, then I would be forced to conclude that
 either Fawkes is held in bondage in some way[^210914-3], or that Mrs. Rowling
 has misrepresented phoenix-kind.
 
-Ms. Richa Venkatraman wrote a defence of Dumbledore on MuggleNet[^190301-1] in
+Ms. Richa Venkatraman wrote a defence of Dumbledore on MuggleNet[^190301-1] in <!-- cspell: disable-line -->
 which she seems to express well the view that [Harry] himself has in the book,
 that Dumbledore is ultimately a good, if flawed, person. I suspect that Ms.
-Venkatraman is right, that Dumbledore suffers in his conscience from the pain
+Venkatraman is right, that Dumbledore suffers in his conscience from the pain <!-- cspell: disable-line -->
 he causes, and he does _intend_ good. I differ from her in that I do not think
 that his _intent_ sufficient such that he _is_ in fact good (or at least, not
 wholly so). Dumbledore's unstated philosophy seems way too close to "the ends
 justify the means," and I am far from convinced that it differs in any
 important detail. _[Keep Holding On][]_ summarized this well:
 
-> The man sitting across from him, looking old and weary, had been involved in so many battles, so many wars, and had seen an infinite amount of casualties. He had defeated Grindelwald and had led the fight against Voldemort during the First War, and was gearing up for a second one. And it was because of all of this, Sirius realized, it was because of all the bloodshed, carnage, and violence he'd witnessed, that he was now numb to it. He could deliver platitudes, speak words of supposed wisdom to those who were grieving, but could not truly feel the losses anymore. His thoughts were always about the bigger picture, about who could be sacrificed to achieve the goal of defeating Voldemort. At that instant Sirius knew Albus still had a heart, still had a conscience, but it had been ravaged and spoiled by all it had seen.[^230216-1]
+> The man sitting across from him, looking old and weary, had been involved in so many battles, so many wars, and had seen an infinite amount of casualties. He had defeated Grindelwald and had led the fight against Voldemort during the First War, and was gearing up for a second one. And it was because of all of this, Sirius realized, it was because of all the bloodshed, carnage, and violence he'd witnessed, that he was now numb to it. He could deliver platitudes, speak words of supposed wisdom to those who were grieving, but could not truly feel the losses any more. His thoughts were always about the bigger picture, about who could be sacrificed to achieve the goal of defeating Voldemort. At that instant Sirius knew Albus still had a heart, still had a conscience, but it had been ravaged and spoiled by all it had seen.[^230216-1]
 
 [Keep Holding On]: https://www.fanfiction.net/s/13056322
 
@@ -239,7 +239,7 @@ back to is echoed in at least one fan fiction I have read:
 
 > No, he could not admit he knew anything about the abuse. He could not
 > admit that he had actually planned for it, to keep young Harry humble
-> and meek; that he was now trying to duplicate it through Serverus'
+> and meek; that he was now trying to duplicate it through Severus'
 > good offices.
 >
 > The world did not need another Voldemort: a powerful magical user working at
@@ -413,7 +413,7 @@ whole [Riddle][TMR1] situation [reeks][ADdwr].
 [^210915-1]: I am not the first to note this. find citations.
 
 [^210915-2]: 
-    PadyandMoony.
+    PadyandMoony. <!-- cspell: disable-line -->
     _[Overdue Protection](https://www.fanfiction.net/s/7434492)_
     [Chapter 4](https://www.fanfiction.net/s/7434492/4/Overdue-Protection)
     Published: 2011-10-03. Updated: 2011-11-05.
@@ -425,7 +425,7 @@ whole [Riddle][TMR1] situation [reeks][ADdwr].
     https://iep.utm.edu Last Viewed: 2021-09-14
 
 [^210914-5]: 
-    Fr. John Hardon.
+    Fr. John Hardon. <!-- cspell: disable-line -->
     "[Double Effect](https://www.catholicculture.org/culture/library/dictionary/index.cfm?id=33215##)"
     _[Modern Catholic Dictionary](https://www.catholicculture.org/culture/library/dictionary/)_
     © Eternal Life
@@ -443,22 +443,22 @@ Will](https://archiveofourown.org/works/16234799)_ put it
 well:[^200720-1]
 
 > “Power is always useless when it is just possessed, merely collected
-> like a bauble. The honors were meant for a protector. One must wonder
+> like a bauble. The honors were meant for a protector. One must wonder <!-- cspell: disable-line -->
 > how you ended up with them.”[^200720-6]
 
 > “Mimicry may be the highest form of flattery,” she replied
 > pointedly, “but mockery is just an insult. Goodness is not served by
 > denying innocents their rightful protections in order to advance your
 > own agenda. Goodness is not served by denying justice to those who have
-> been wronged in order to purchase personal favors to be named at a later
+> been wronged in order to purchase personal favors to be named at a later <!-- cspell: disable-line -->
 > date. Goodness is not served when knowledge is hidden and innovation
-> stifled in order to preserve the oppression which allows you to keep ahold
-> of all your worthless titles and stolen honors. You are not a good man,
+> stifled in order to preserve the oppression which allows you to keep ahold <!-- cspell: disable-line -->
+> of all your worthless titles and stolen honors. You are not a good man, <!-- cspell: disable-line -->
 > Albus, warlock of Britannia.”[^200720-7]
 
 > “Warlock fits you better than you know,” she stated in echoing
 > tones. “The wizards of Britannia claimed it as a martial title for
-> honoring feats of battle, but it has a far older meaning to Mother
+> honoring feats of battle, but it has a far older meaning to Mother <!-- cspell: disable-line -->
 > Magic, as a title for those who had forsaken their oaths of fidelity and
 > protection, just as you have done.” She sliced her hands through the
 > air as he opened his mouth to refute that accusation. “You will not
@@ -542,7 +542,7 @@ not or would not. That is a far cry from actually disagreeing.
 
 On the other hand Dumbledore himself was a half blood.[^200812-7] I think his
 blood status was too well known for him to get significant power in the pure
-blood dominated society of the early 1900s.[^220916-3] He wouldi not become
+blood dominated society of the early 1900s.[^220916-3] He would not become
 Headmaster until the 1960s or early 1970s, I suspect he had been passed over at
 least once. It was his defeat of Grindelwald that gave him the stature to
 overcome his background and gain ground in the Wizengamot, to have become
@@ -598,8 +598,8 @@ he played off one faction against another, manipulated people behind the
 scenes? Is his public face at all related to his private goals?
 
 [^210706-1]: 
-    KafkaExMachina.
-    _[Divination is a Wooly Subject](https://www.fanfiction.net/s/5251162)_
+    KafkaExMachina. <!-- cspell: disable-line -->
+    _[Divination is a Wooly Subject](https://www.fanfiction.net/s/5251162)_ <!-- cspell: disable-line -->
     Published 2009-07-26. Last Viewed: 2021-07-06.
     Others have also done this, but this one does a nicely done and brief
     synopsis of the view.
@@ -615,8 +615,8 @@ scenes? Is his public face at all related to his private goals?
     Last Viewed 2020-07-21.
 
 [^191025-1]: 
-    Fibinaci.
-    _[Padfoot, Docteur D'Amour](https://www.fanfiction.net/s/4510080/6/Padfoot-Docteur-D-amour)_
+    Fibinaci. <!-- cspell: disable-line -->
+    _[Padfoot, Docteur D'Amour](https://www.fanfiction.net/s/4510080/6/Padfoot-Docteur-D-amour)_ <!-- cspell: disable-line -->
     Chapter 6. Last viewed 2020-09-08.
 
 [^210318-7]: 
@@ -667,22 +667,22 @@ scenes? Is his public face at all related to his private goals?
     Last Viewed 2020-08-13. Chapter 10.
 
 [^200720-1]: 
-    Magi Silverwolf. _[The Greater Will](https://archiveofourown.org/works/16234799)_
+    Magi Silverwolf. _[The Greater Will](https://archiveofourown.org/works/16234799)_ <!-- cspell: disable-line -->
     [Archive of Our Own](https://archiveofourown.org/). Published 2018-10-08.
     Last Viewed 2020-07-20.
 
 [^200720-6]: 
-    Magi Silverwolf. _[The Greater Will](https://archiveofourown.org/works/16234799)_
+    Magi Silverwolf. _[The Greater Will](https://archiveofourown.org/works/16234799)_ <!-- cspell: disable-line -->
     [Archive of Our Own](https://archiveofourown.org/). Published 2018-10-08.
     Last Viewed 2020-07-20.
 
 [^200720-7]: 
-    Magi Silverwolf. _[The Greater Will](https://archiveofourown.org/works/16234799)_
+    Magi Silverwolf. _[The Greater Will](https://archiveofourown.org/works/16234799)_ <!-- cspell: disable-line -->
     [Archive of Our Own](https://archiveofourown.org/). Published 2018-10-08.
     Last Viewed 2020-07-20.
 
 [^200720-8]: 
-    Magi Silverwolf. _[The Greater Will](https://archiveofourown.org/works/16234799)_
+    Magi Silverwolf. _[The Greater Will](https://archiveofourown.org/works/16234799)_ <!-- cspell: disable-line -->
     [Archive of Our Own](https://archiveofourown.org/). Published 2018-10-08.
     Last Viewed 2020-07-20.
 
@@ -708,7 +708,7 @@ scenes? Is his public face at all related to his private goals?
 
 [^200624-1]: 
     Cooperation with evil is discussed in formal terms
-    by the Seido Foundation in "Morality of Cooperation in Evil" at
+    by the Seido Foundation in "Morality of Cooperation in Evil" at <!-- cspell: disable-line -->
     https://www.ewtn.com/catholicism/library/morality-of-cooperation-in-evil-9965
     Last Viewed 2020-06-24. There is a handy chart that will help
     you navigate a decision tree for which formal term to use at
@@ -728,8 +728,8 @@ scenes? Is his public face at all related to his private goals?
     Last viewed 2018-07-02.
 
 [^190301-1]: 
-    Ms. Richa Venkatraman.
-    _["For the Greater Good:" In Defense of Albus Dumbledore](http://www.mugglenet.com/2017/08/greater-good-defense-albus-dumbledore/)_
+    Ms. Richa Venkatraman. <!-- cspell: disable-line -->
+    _["For the Greater Good:" In Defense of Albus Dumbledore](http://www.mugglenet.com/2017/08/greater-good-defense-albus-dumbledore/)_ <!-- cspell: disable-line -->
     Published 2017-08-02. Last viewed 2019-03-01.
 
 [ADdwr]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/Dealing with Riddle>

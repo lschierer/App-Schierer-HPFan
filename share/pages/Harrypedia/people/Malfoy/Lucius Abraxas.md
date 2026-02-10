@@ -38,7 +38,7 @@ _real_ data on his skill as a father outside of [Draco][]'s behaviour however,
 and that is … not good. How much of that is because of actual bad parenting,
 and how much of that is because you simply _cannot_ be an actually good parent
 when you think that you as a family _deserve_ aristocratic privilege? Not
-privilege, but the kind of privilege that makes for the stereotypes of french
+privilege, but the kind of privilege that makes for the stereotypes of French
 nobility at the time of the French Revolution. When you think that kind of
 behaviour is _correct_ (and Lucius does), is it _possible_ to teach good
 behaviour?

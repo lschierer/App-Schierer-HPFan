@@ -45,7 +45,7 @@ Interestingly, I have noted a similar issue with girls in at least one fan
 fiction.[^220726-8] The key consideration is that girls' growth drastically
 slows in their 15th year and is essentially flat-lined by 16.[^220726-9]
 Interestingly, for UK Girls, the 9th percentile of height at age 16 is
-approximtely 5'1".[^220726-10] Depending on how short percentile-wise someone
+approximately 5'1".[^220726-10] Depending on how short percentile-wise someone
 has to be before being generally described _as_ "short," authors need to be
 really careful with their descriptions. On the other hand, a girl's waist size
 apparently increases every year through out her teen years.[^220726-11] If the
@@ -63,27 +63,27 @@ explain what the author was _trying_ to convey in my one example.
     Published: 2021-02-09. Last Viewed: 2022-07-26
 
 [^220726-10]: 
-    [Royal College of Peadiatrics and Child Health](https://www.rcpch.ac.uk/).
+    [Royal College of Paediatrics and Child Health](https://www.rcpch.ac.uk/).
     "[GIRLS UK Growth chart 2-18 years](https://www.rcpch.ac.uk/sites/default/files/Girls_2-18_years_growth_chart.pdf)"
     © Copyright RCPCH 2012
 
 [^220726-9]: 
-    [Royal College of Peadiatrics and Child Health](https://www.rcpch.ac.uk/).
+    [Royal College of Paediatrics and Child Health](https://www.rcpch.ac.uk/).
     "[GIRLS UK Growth chart 2-18 years](https://www.rcpch.ac.uk/sites/default/files/Girls_2-18_years_growth_chart.pdf)"
     © Copyright RCPCH 2012
 
 [^220622-1]: 
-    [Royal College of Peadiatrics and Child Health](https://www.rcpch.ac.uk/).
+    [Royal College of Paediatrics and Child Health](https://www.rcpch.ac.uk/).
     "[BOYS UK Growth chart 2-18 years](https://www.rcpch.ac.uk/sites/default/files/Boys_2-18_years_growth_chart.pdf)"
     © Copyright RCPCH 2012
 
 [^220622-2]: 
-    [Royal College of Peadiatrics and Child Health](https://www.rcpch.ac.uk/).
+    [Royal College of Paediatrics and Child Health](https://www.rcpch.ac.uk/).
     "[BOYS UK Growth chart 2-18 years](https://www.rcpch.ac.uk/sites/default/files/Boys_2-18_years_growth_chart.pdf)"
     © Copyright RCPCH 2012
 
 [^220622-3]: 
-    [Royal College of Peadiatrics and Child Health](https://www.rcpch.ac.uk/).
+    [Royal College of Paediatrics and Child Health](https://www.rcpch.ac.uk/).
     "[BOYS UK Growth chart 2-18 years](https://www.rcpch.ac.uk/sites/default/files/Boys_2-18_years_growth_chart.pdf)"
     © Copyright RCPCH 2012. See the section on Predicting height based on
     parents.

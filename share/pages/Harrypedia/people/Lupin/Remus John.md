@@ -77,14 +77,17 @@ some credit for that, I maintain however, that the above quote is indeed a fair
 summation of the man. I believe he would have, given time and stress, again
 lapsed. He was his fundamental nature to let people down.
 
-Worse, it was not just his wife he abandoned. His rationale is both pathetic and absurd. He states that because he is a warewolf, his child will probably be a warewolf, and will therefore be better off without his/her werewolf father. It would, apparently, be better that the child face the disease without the help from someone who can empathise with the pain of both the disease and the resulting social ostracism. As a werewolf himself, he apparently has nothing of value to offer his child on coping with the affliction. As a being, he is allowing those nights to define the totality of his contribution to the child's life. Like many before him, he has internalised the prejudice against himself, and become his own worst enemy.
+Worse, it was not just his wife he abandoned. His rationale is both pathetic and absurd. He states that because he is a werewolf, his child will probably be a werewolf, and will therefore be better off without his/her werewolf father. It would, apparently, be better that the child face the disease without the help from someone who can empathise with the pain of both the disease and the resulting social ostracism. As a werewolf himself, he apparently has nothing of value to offer his child on coping with the affliction. As a being, he is allowing those nights to define the totality of his contribution to the child's life. Like many before him, he has internalised the prejudice against himself, and become his own worst enemy.
 
 [Gryffindor]: /Harrypedia/Hogwarts/Gryffindor/
 
+<!-- cspell: disable -->
 [^211202-3]: Any number of works have Harry call him out on this.
 
     - marylou _[Massacre in the Dungeons](https://www.fanfiction.net/s/12065437)_
       Published: 2016-07-23. Updated: 2017-07-04. Last Viewed: 2021-12-02.
+
+<!-- cspell: enable -->
 
 [^20210519-12]: 
     Ian Hycrest. "[FanFiction.net Profile Page](https://www.fanfiction.net/u/12433161/Ian-Hycrest)"

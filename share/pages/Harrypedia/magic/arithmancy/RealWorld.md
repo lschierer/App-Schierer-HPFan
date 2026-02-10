@@ -39,7 +39,7 @@ Thus I expect that in Rowling's universe, the following numbers would be "magica
 [thirty-three]: https://www.biblestudy.org/bibleref/meaning-of-numbers-in-bible/33.html
 
 [^220728-1]: 
-    Mr. Jake Ashcraft.
+    Mr. Jake Ashcraft. <!--cspell: disable-line -->
     "[What Is the Significance of Biblical Numerology?](https://www.christianity.com/wiki/christian-terms/what-is-the-significance-of-biblical-numerology.html)"
     Published 2021-04-15. [Christianity.com](https://www.christianity.com).
 

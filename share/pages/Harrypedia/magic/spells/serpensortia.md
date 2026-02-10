@@ -24,7 +24,7 @@ Transfiguration (Conjuring)
 
 The transcription of the [Book of Spells][] references a "Principle of
 Artificianimate Quasi-Dominance" and goes on to state that for poorly understood
-and entirely unstated reasons, birds and snakes are easier to conjur than
+and entirely unstated reasons, birds and snakes are easier to conjure than
 anything else.[^210930-21] I do not feel this rather hand-wavy
 quasi-explanation truly addresses Mr. Hycrest's objections above.
 
@@ -37,7 +37,7 @@ quasi-explanation truly addresses Mr. Hycrest's objections above.
     Published: 2019-08-27. Updated: 2020-01-14. Last Viewed: 2021-06-29.
 
 [^210930-21]: 
-    [magicscrapbook](https://magicscrapbook.tumblr.com/)
+    [magicscrapbook](https://magicscrapbook.tumblr.com/) <!-- cspell: disable-line -->
     "[‘Book of Spells’ transcript](https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript)"
     Last Viewed 2021-09-30.
 
@@ -47,7 +47,7 @@ Primary Cannon
 : citation needed.
 
 Secondary Cannon
-: [magicscrapbook](https://magicscrapbook.tumblr.com/)
+: [magicscrapbook](https://magicscrapbook.tumblr.com/) <!-- cspell: disable-line -->
 "[‘Book of Spells’ transcript](https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript)"
 Last Viewed 2021-09-30.
 

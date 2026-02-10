@@ -156,7 +156,7 @@ really bad at maths.[^220713-5]
 [HPPoA]: https://www.librarything.com/work/2742161
 
 [^220713-1]:
-    [The Internaltional Football Association Board](https://www.theifab.com/). "[LAW 1 THE FIELD OF PLAY](https://www.theifab.com/laws/latest/the-field-of-play)"
+    [The International Football Association Board](https://www.theifab.com/). "[LAW 1 THE FIELD OF PLAY](https://www.theifab.com/laws/latest/the-field-of-play)"
     ® 2022.
 
 [^220705-1]: Mr. Robbie Gonzalez. "[Free Throws Should Be Easy. Why Do Basketball Players Miss?](https://www.wired.com/story/almost-impossible-free-throws/)" [Wired](https://www.wired.com/) 2019-03-28. Last Viewed: 2022-07-05.

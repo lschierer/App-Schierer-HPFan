@@ -14,7 +14,7 @@ subtle manipulations? Ian Hycrest, writing as Kingsley, describes this sort of
 [Dumbledore][AD1] thus:
 
 > It's difficult to try to put into words just how much we all trusted and
-> relied on Albus Dumbledore. He was our leader, our counselor, our guide. For
+> relied on Albus Dumbledore. He was our leader, our counsellor, our guide. For
 > decades, he had shaped magical society, to the point that to many people, the
 > idea of defying him was unimaginable. And yet, he was careful to never be too
 > overt, at least not until the end. All it required was a word here, a
@@ -61,7 +61,7 @@ make the next removal harder (thus I think he _was_ in fact able to resist
 
 [^211203-1]: 
     Many works do this, but it can all be summarised with this one:
-    KafkaExMachina. _[Divination is a Wooly Subject](https://www.fanfiction.net/s/5251162)_
+    KafkaExMachina. _[Divination is a Wooly Subject](https://www.fanfiction.net/s/5251162)_ <!-- cspell: disable-line -->
     Published: 2009-07-26. Last Viewed: 2021-12-03.
 
 [^20210629-1]: 

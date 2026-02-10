@@ -1,6 +1,6 @@
 
 There are two competing arguments for Charlie's birthday. I am currently foregoing
-Troels Forchhammer's "[The Age of the Weasleys][TAW]" in favor of Philip Legge's
+Troels Forchhammer's "[The Age of the Weasleys][TAW]" in favour of Philip Legge's <!-- cspell: disable-line -->
 "[Quidditch Through the (Weasleys’) Ages][QTWA]". Both are well reasoned, but
 the latter seems to fit better to me.[^221202-3] At some point I need to sit
 down and closely compare them and _prove_ one of the two wrong, but I have not

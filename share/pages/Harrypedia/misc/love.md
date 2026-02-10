@@ -27,7 +27,7 @@ personality, something that [Lily] herself remarks on when she objects who is
 he to "let" her do anything?[^221206-5] Despite this, Mrs. Rowling says that
 [Lily] "might even have grown to love him romantically (she certainly loved him
 as a friend) if he had not loved [Dark Magic] so much, and been drawn to such
-loathesome people and acts."[^221206-6]
+loathsome people and acts."[^221206-6]
 
 While I certainly believe that [Lily] did consider [Snape] a friend, and
 did love him as such, I do _not_ think that could have grown into romantic love
@@ -56,7 +56,7 @@ attacking [Snape].[^230804-2]
 [Breaking Assumptions]: https://www.fanfiction.net/s/8678515
 
 [^221206-1]: 
-    Ms. Melissa Anelli and Mrs. J. K. Rowling.
+    Ms. Melissa Anelli and Mrs. J. K. Rowling. <!-- cspell: disable-line -->
     "[J.K. Rowling Web Chat Transcript][LCRWC]"
     [The Leaky Cauldron](http://www.the-leaky-cauldron.org) 2007-07-30
 
@@ -77,7 +77,7 @@ attacking [Snape].[^230804-2]
 [Draco]: </Harrypedia/people/Malfoy/Draco Lucius>
 
 [^221206-2]: 
-    Anelli, Melissa and Emerson Spartz.
+    Anelli, Melissa and Emerson Spartz. <!-- cspell: disable-line -->
     "[The Leaky Cauldron and MuggleNet interview Joanne Kathleen Rowling: Part Two][LCMIp2]"
     [Accio Quote](http://www.accio-quote.org/), 2005-07-16
 

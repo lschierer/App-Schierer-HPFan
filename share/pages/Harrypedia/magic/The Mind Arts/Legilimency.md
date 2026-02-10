@@ -32,20 +32,20 @@ free will, and sufficient free will to turn towards God and respond to grace.
 Moreover the Devil can only corrupt, not create. The idea that you can be born
 with a _skill_ that is inherently immoral to use is repugnant. One that can
 only be used in specific context, in narrow ways, fine. Theology has to deal
-with concupiscense and chastity already afterall. But if [Queenie Goldstein]
-is born instinctively practicing legilimency, there must be a moral context in
+with concupiscence and chastity already after all. But if [Queenie Goldstein]
+is born instinctively practising legilimency, there must be a moral context in
 which it is acceptable. A time, a place, and a method by which she can use her
 gift, even if she must (or at least should) learn to reign it in some or even
 most of the time.
 
 Still, whether or not Legilimency is not itself inherently evil, and given that
-[Occlumency] is inherently flawed, the methods of defense against it that are
+[Occlumency] is inherently flawed, the methods of defence against it that are
 presented to us by Mrs. Rowling are woefully insufficient. There has to be
 something that you can do to defend your privacy, and potentially even the
 integrity of your mind, without risking damage to yourself.
 
 Lastly, as I discuss when considering [Mental Shields] as an alternative to
-[Occlumency], using Legilimency must in some way undermine any defenses you
+[Occlumency], using Legilimency must in some way undermine any defences you
 may have against being yourself attacked with it. Whatever [Snape] does to
 protect his own thoughts, when he is attacking [Harry]'s mind, he feels the
 need to take the extra step of removing certain thoughts to make them that much
@@ -74,10 +74,14 @@ are not made more aware of it.[^221216-1]
 [Queenie Goldstein]: /Harrypedia/people/Goldstein/Queenie
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
 
+<!-- cspell: disable -->
+
 [^221216-1]: works include, but not limited to:
 
     - JadeSeraph. _[Soul Nexus](https://www.fanfiction.net/s/3577157)_ Published 2007-06-05. Updated: 2008-08-27.
     - Matthew Schooke. _[Harry Potter and the Nightmares of Futures Past](https://github.com/IntermittentlyRupert/hpnofp-ebook)_ Updated: 2022-04-24.
+
+<!-- cspell: enable -->
 
 [^20200630-8]:
     Kelly West.

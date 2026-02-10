@@ -12,7 +12,7 @@ Charm
 
 ## Description
 
-Speculated charm that might be part of making the marader's map.
+Speculated charm that might be part of making the marauder's map.
 
 ## Found in
 
@@ -23,5 +23,5 @@ Secondary Cannon
 : citation needed.
 
 Fan Fiction:
-: Secre. _[I Did Nothing](https://www.fanfiction.net/s/9920072)_
+: Secre. _[I Did Nothing](https://www.fanfiction.net/s/9920072)_ <!-- cspell: disable-line -->
 Published: 2013-12-12. Last Updated: 2018-09-18. Last Viewed: 2021-08-30.

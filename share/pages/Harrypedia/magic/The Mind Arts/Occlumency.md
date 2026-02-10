@@ -102,6 +102,8 @@ but rather [Legilimency].
     https://www.wizardingworld.com/ Originally published 2020-08-10. Last
     Viewed 2020-06-30.
 
+<!-- cspell: disable -->
+
 [^20200630-4]:
     Sanjay Srivastava, Maya Tamir, Kelly M. McGonigal, Oliver P.
     John, and James J. Gross. "[The Social Costs of Emotional Suppression:
@@ -114,6 +116,8 @@ but rather [Legilimency].
     interactions](https://www.psych.rochester.edu/research/jamiesonlab/wp-content/uploads/2014/01/peters.pdf)"
     International Journal of Psychophysiology 94 (2014) 100-107. Last
     Viewed 2020-06-30.
+
+<!-- cspell: enable -->
 
 [^20200630-5]:
     Lucy E Cousins. "[ARE THERE DOWNSIDES TO ALWAYS TRYING TO BE

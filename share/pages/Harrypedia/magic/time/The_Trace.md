@@ -125,7 +125,7 @@ more for muggle born witches and wizards rather than any real restriction. See
 [^200731-5]: Mrs. J. K. Rowling. _Harry Potter and the Order of the Phoenix_
 
 [^200731-6]: 
-    Radaslab.
+    Radaslab. <!-- cspell: disable-line -->
     _[Not Normal](https://www.fanfiction.net/s/7144149)_
     [Fanfiction.net](https://www.fanfiction.net/)
     [Chapter 59](https://www.fanfiction.net/s/7144149/59/Not-Normal) Published 2011-07-04,
@@ -153,6 +153,6 @@ more for muggle born witches and wizards rather than any real restriction. See
     Pottermore Limited. American Kindle Edition. Approx Location 4405 of 4470.
 
 [^210302-5]: 
-    Sunlesswarmth. _[BrokenProphecy](https://www.fanfiction.net/s/13712386)_
+    Sunlesswarmth. _[BrokenProphecy](https://www.fanfiction.net/s/13712386)_ <!-- cspell: disable-line -->
     [Chapter 3](https://www.fanfiction.net/s/13712386/3/Broken-Prophecy)
     Published 2020-10-04. Updated 2020-12-01. Last Viewed 2021-03-02.

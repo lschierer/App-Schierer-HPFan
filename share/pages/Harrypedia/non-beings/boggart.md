@@ -4,7 +4,7 @@ title: Boggarts
 author: Luke Schierer
 ---
 
-In creating the Boggart, Mrs. Rowling seems to have lifted a word out of Celtic
+In creating the boggart, Mrs. Rowling seems to have lifted a word out of Celtic
 mythology,[^211021-10] only to then entirely disregard the backstory that
 mythology would normally imply.
 

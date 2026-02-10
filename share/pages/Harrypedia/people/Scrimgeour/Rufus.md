@@ -1,4 +1,4 @@
 
-See notes on the [McLaggen][] family.
+See notes on the [McLaggen] family.
 
 [McLaggen]: ../McLaggen/

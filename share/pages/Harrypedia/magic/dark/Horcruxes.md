@@ -59,7 +59,7 @@ and failure to act.
 [Bill]: </Harrypedia/people/Weasley/William Arthur/>
 
 [^210324-1]: 
-    Adapted from Itsme66.
+    Adapted from Itsme66. <!-- cspell: disable-line -->
     _[The Mandatory Marriage Contract Fic](https://www.fanfiction.net/s/5695032)_
     [Chapter 2](https://www.fanfiction.net/s/5695032/2/The-Mandatory-Marriage-Contract-Fic)
     Last Updated: 2010-02-26. Published: 2010-01-25. Last Viewed 2021-03-23.
@@ -68,7 +68,7 @@ and failure to act.
 
 [^210323-15]: 
     Mrs. J. K. Rowling et al.
-    "[Anelli, Melissa, John Noe and Sue Upton. "PotterCast Interviews J.K. Rowling, part one." PotterCast #130, 17 December 2007.](http://www.accio-quote.org/articles/2007/1217-pottercast-anelli.html)"
+    "[Anelli, Melissa, John Noe and Sue Upton. "PotterCast Interviews J.K. Rowling, part one." PotterCast #130, 17 December 2007.](http://www.accio-quote.org/articles/2007/1217-pottercast-anelli.html)" <!-- cspell: disable-line -->
     [Accio-Quote](http://www.accio-quote.org/) Last viewed 2020-07-31.
 
 [^210323-14]: 
@@ -83,8 +83,8 @@ and failure to act.
     "[Valley of the Kings](https://en.wikipedia.org/wiki/Valley_of_the_Kings)"
     Last Edited: 2021-03-22. Last Viewed: 2021-03-23.
 
-[^210323-12]: 
-    Itsme66.
+[^210323-12]:  
+    Itsme66. <!-- cspell: disable-line -->
     _[The Mandatory Marriage Contract Fic](https://www.fanfiction.net/s/5695032)_
     [Chapter 2](https://www.fanfiction.net/s/5695032/2/The-Mandatory-Marriage-Contract-Fic)
     Last Updated: 2010-02-26. Published: 2010-01-25. Last Viewed 2021-03-23.
@@ -96,7 +96,7 @@ and failure to act.
 
 [^210323-10]: 
     Mrs. J. K. Rowling et al.
-    "[Anelli, Melissa, John Noe and Sue Upton. "PotterCast Interviews J.K. Rowling, part one." PotterCast #130, 17 December 2007.](http://www.accio-quote.org/articles/2007/1217-pottercast-anelli.html)"
+    "[Anelli, Melissa, John Noe and Sue Upton. "PotterCast Interviews J.K. Rowling, part one." PotterCast #130, 17 December 2007.](http://www.accio-quote.org/articles/2007/1217-pottercast-anelli.html)" <!-- cspell: disable-line -->
     [Accio-Quote](http://www.accio-quote.org/) Last viewed 2020-07-31.
 
 [^210323-9]: 
@@ -106,7 +106,7 @@ and failure to act.
 
 [^200731-1]: 
     Mrs. J. K. Rowling et al.
-    "[Anelli, Melissa, John Noe and Sue Upton. "PotterCast Interviews J.K. Rowling, part one." PotterCast #130, 17 December 2007.](http://www.accio-quote.org/articles/2007/1217-pottercast-anelli.html)"
+    "[Anelli, Melissa, John Noe and Sue Upton. "PotterCast Interviews J.K. Rowling, part one." PotterCast #130, 17 December 2007.](http://www.accio-quote.org/articles/2007/1217-pottercast-anelli.html)" <!-- cspell: disable-line -->
     [Accio-Quote](http://www.accio-quote.org/) Last viewed 2020-07-31.
 
 ### Effects on the Creator
@@ -149,8 +149,8 @@ has since published online do, I similarly do not recall seeing it.
       Published: 2009-05-24. Updated: 2016-06-22.
 
 [^210810-1]: 
-    Maher, Michael, and Joseph Bolland. "Soul." The Catholic
-    Encyclopedia. Vol. 14. New York: Robert Appleton Company, 1912.
+    Maher, Michael, and Joseph Bolland. "Soul." <!-- cspell: disable-line -->
+    The Catholic Encyclopedia. Vol. 14. New York: Robert Appleton Company, 1912.
     2021-08-10 http://www.newadvent.org/cathen/14153a.htm.
 
 [^210810-2]: 
@@ -241,7 +241,7 @@ scar really fall into the "nonsense" section below.
 [TTR213]: http://www.siye.co.uk/viewstory.php?sid=129781&textsize=1&chapter=13
 
 [^210330-46]: 
-    White Angel of Auralon.
+    White Angel of Auralon. <!-- cspell: disable-line -->
     _[Champion](https://www.fanfiction.net/s/8754033)_
     [FanFiction](https://www.fanfiction.net) Originally Published:
     2012-12-01. Updated: 2013-10-27. Last Viewed: 2021-03-30.
@@ -253,13 +253,13 @@ scar really fall into the "nonsense" section below.
     Published: 2013-12-29. Updated: 2014-02-23. Last Viewed: 2021-03-11.
 
 [^200731-2]: 
-    Mrs. J. K. Rowling et al. "[Anelli, Melissa, John Noe and Sue
+    Mrs. J. K. Rowling et al. "[Anelli, Melissa, John Noe and Sue <!-- cspell: disable-line -->
     Upton. "PotterCast Interviews J.K. Rowling, part one." PotterCast #130,
     17 December 2007.](http://www.accio-quote.org/articles/2007/1217-pottercast-anelli.html)"
     [Accio-Quote](http://www.accio-quote.org/) Last viewed 2020-07-31.
 
 [^210323-1]: 
-    Mrs. J. K. Rowling et al. "[Anelli, Melissa, John Noe and Sue
+    Mrs. J. K. Rowling et al. "[Anelli, Melissa, John Noe and Sue <!-- cspell: disable-line -->
     Upton. "PotterCast Interviews J.K. Rowling, part one." PotterCast #130,
     17 December 2007.](http://www.accio-quote.org/articles/2007/1217-pottercast-anelli.html)"
     [Accio-Quote](http://www.accio-quote.org/) Last viewed 2020-07-31.
@@ -275,7 +275,24 @@ scar really fall into the "nonsense" section below.
 
 ### Destroying
 
-Mrs. Rowling accepts a fallacy here: that sometimes an evil can be so great, so powerful, that only another evil can destroy it. Despite having said that love is one of the most powerful magics,[^240506-1] she will allow only dark things to harm this example of deep evil: [basilisk] venom, [fiendfire], or [the killing curse]. The same fallacy is found in Robert Jordan's [Wheel of Time] series, where the evil taint left by the Dark One can only be purged by the "opposing" evil found in Shadar Logoth.[^240506-2] The problem with the [Wheel of Time] version is that it presupposes that two evils can be different in nature or kind. Not only is this is a prime example of the problems with the lack of [balance] in her universe, it begs the question _why should a horcrux react badly to an evil substance?_ That is, [basilisk] venom may be massively destructive to all that is good, healthy, and in right order, but it could have equally followed that the horcrux would have fed off the evil nature of the venom, becoming stronger by imbibing of its evil power. Had she taken this more balanced approach to her world building, you would need something minimally morally neutral and ideally morally cleansing to destroy that which is morally tainted. Thus a muggle blast furnace or a volcano[^240506-3] would work just fine.
+Mrs. Rowling accepts a fallacy here: that sometimes an evil can be so great,
+so powerful, that only another evil can destroy it. Despite having said that
+love is one of the most powerful magics,[^240506-1] she will allow only dark
+things to harm this example of deep evil: [basilisk] venom, [fiendfire], or
+[the killing curse]. The same fallacy is found in Robert Jordan's [Wheel of
+Time] series, where the evil taint left by the Dark One can only be purged by
+the "opposing" evil found in Shadar Logoth.[^240506-2] The problem with the <!--cspell: disable-line -->
+[Wheel of Time] version is that it presupposes that two evils can be
+different in nature or kind. Not only is this is a prime example of the
+problems with the lack of [balance] in her universe, it begs the
+question _why should a horcrux react badly to an evil substance?_ That is,
+[basilisk] venom may be massively destructive to all that is good, healthy,
+and in right order, but it could have equally followed that the horcrux would
+have fed off the evil nature of the venom, becoming stronger by imbibing of
+its evil power. Had she taken this more balanced approach to her world
+building, you would need something minimally morally neutral and ideally
+morally cleansing to destroy that which is morally tainted. Thus a muggle
+blast furnace or a volcano[^240506-3] would work just fine.
 
 [^240506-3]: a volcano is used in some fan fictions picking upon the [Lord of the Rings] analogy.
 
@@ -368,7 +385,7 @@ before that, so that it is something he tried for, but ultimately could not
 do.
 
 On the opposite side of the spectrum, souls are clearly not really
-_splitable_ at all. If the soul was _truly_ split, then the horcrux would
+_splittable_ at all. If the soul was _truly_ split, then the horcrux would
 not anchor you to this life, the death of one half would simply not affect
 the other. That is probably where the idea that a horcrux gets consumed in
 a resurrection comes from, because the author implicitly assumes that there
@@ -434,7 +451,7 @@ this theory to work, [Riddle][] ought to have been at [eleven][], or
       Last Viewed: 2022-07-28.
 
 [^210324-5]: 
-    Yunaine. _[Public
+    Yunaine. _[Public <!--cspell: disable-line -->
     Safety](https://www.fanfiction.net/s/10387771)_ Published: 2014-05-29.
     Last Viewed: 2021-03-24.
 

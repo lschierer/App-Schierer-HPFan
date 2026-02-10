@@ -25,7 +25,7 @@ sensory deprivation, he is acutely aware when [Dumbledore] pokes him with a
 [wand], despite being in the form of a chair.[^221220-3]
 
 Did [Slughorn], who certainly did not intend to damage himself, purposefully
-only incompletely transfigure himself? Or is Sovran's theory of sensory
+only incompletely transfigure himself? Or is Sovran's theory of sensory <!-- cspell: disable-line -->
 deprivation entirely uncanonical, despite its logical soundness?
 
 [^221220-3]: 
@@ -35,9 +35,9 @@ deprivation entirely uncanonical, despite its logical soundness?
 
 [Harry Potter and the Half-Blood Prince]: https://www.librarything.com/work/1133624/book/203684961
 
-[^221220-1]: Sovran. _[Meaning of One, Part One]: Stone and Fire_. Published 2006-07-06. Updated: 2007-04-02.
+[^221220-1]: Sovran. _[Meaning of One, Part One]: Stone and Fire_. Published 2006-07-06. Updated: 2007-04-02. <!-- cspell: disable-line -->
 
-[^221220-2]: Sovran. _[Meaning of One, Part One]: Stone and Fire_. Published 2006-07-06. Updated: 2007-04-02.
+[^221220-2]: Sovran. _[Meaning of One, Part One]: Stone and Fire_. Published 2006-07-06. Updated: 2007-04-02. <!-- cspell: disable-line -->
 
 [Meaning of One, Part One]: https://www.siye.co.uk/siye/series.php?seriesid=54
 [Egyptians]: /Harrypedia/Egypt/

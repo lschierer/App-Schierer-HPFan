@@ -72,7 +72,7 @@ after she herself has fallen out with [Snape]?
 > “Black and Potter. Ringleaders of their little gang. Both very bright, of course exceptionally bright, in fact but I don’t think we’ve ever had such a pair of troublemakers”[^210128-19]
 
 It is interesting that so many people assume that James was a total idiot. I do not think that a realistic take on his character - I do not think anyone would say that [McGonagall] is given to false or light praise. We know he was good
-at transfiguration, but I think most people dismiss that because his only known accomplishment is the animagus transformation, and [Pettigrew] also accomplished that. My take is that it is actually a testament to James' skills that he was able to coach the unskilled [Pettigrew] through the process. I take it as a given that [Sirius] did not have the patience even pre-Azkaban, to help their slower less capable roommate through this achievement. I also wonder what other classes he took, and which ones he did how well at. Did he take Ancient Runes or Arithmancy? Who was top of the year at Defence? James' father was famous for potion making, perhaps James did not inherit all of his father's skills, but it seems unlikely that he did _poorly_ at the subject - his father would have tutored him over the summers should he have needed it. [Snape] and [Lily] are prodigies, and [Snape] seems to expect _everyone_ to find potions as intuitive as he does, so I take any disparagement he makes with a fairly large and active amount of suspicion.
+at transfiguration, but I think most people dismiss that because his only known accomplishment is the animagus transformation, and [Pettigrew] also accomplished that. My take is that it is actually a testament to James' skills that he was able to coach the unskilled [Pettigrew] through the process. I take it as a given that [Sirius] did not have the patience even pre-Azkaban, to help their slower less capable room-mate through this achievement. I also wonder what other classes he took, and which ones he did how well at. Did he take Ancient Runes or Arithmancy? Who was top of the year at Defence? James' father was famous for potion making, perhaps James did not inherit all of his father's skills, but it seems unlikely that he did _poorly_ at the subject - his father would have tutored him over the summers should he have needed it. [Snape] and [Lily] are prodigies, and [Snape] seems to expect _everyone_ to find potions as intuitive as he does, so I take any disparagement he makes with a fairly large and active amount of suspicion.
 
 [McGonagall]: /Harrypedia/people/McGonagall/Minerva/
 [Pettigrew]: /Harrypedia/people/Pettigrew/Peter/
@@ -200,7 +200,7 @@ If either or both of these is true, James might well have been something of a pe
     p. 354. Pottermore Limited. American Kindle Edition.
 
 [^210318-5]: 
-    CmptrWz. _[For Want of an Outfit](https://archiveofourown.org/works/28507302)_.
+    CmptrWz. _[For Want of an Outfit](https://archiveofourown.org/works/28507302)_. <!-- cspell: disable-line -->
     [Chapter 10](https://archiveofourown.org/works/28507302/chapters/73098891)
     [Archive of Our Own](https://archiveofourown.org/).
     Published: 2021-01-02. Updated: 2021-03-12. Last Viewed: 2021-03-18.
@@ -215,11 +215,11 @@ If either or both of these is true, James might well have been something of a pe
 
 [^210128-28]: 
     Wizarding World characters, names and related indicia are ™ and © of Warner Bros. Entertainment Inc. All rights reserved.
-    Archived version of [Pottermore](https://www.pottermore.com), article [In defense of young James Potter](https://web.archive.org/web/20190405052528/https://www.pottermore.com/features/in-defence-of-young-james-potter), archived 2019-041-05. Last Viewed 2021-01-28.
+    Archived version of [Pottermore](https://www.pottermore.com), article [In defence of young James Potter](https://web.archive.org/web/20190405052528/https://www.pottermore.com/features/in-defence-of-young-james-potter), archived 2019-041-05. Last Viewed 2021-01-28.
 
 [^210128-27]: 
     Wizarding World characters, names and related indicia are ™ and © of Warner Bros. Entertainment Inc. All rights reserved.
-    Archived version of [Pottermore](https://www.pottermore.com), article [In defense of young James Potter](https://web.archive.org/web/20190405052528/https://www.pottermore.com/features/in-defence-of-young-james-potter), archived 2019-041-05. Last Viewed 2021-01-28.
+    Archived version of [Pottermore](https://www.pottermore.com), article [In defence of young James Potter](https://web.archive.org/web/20190405052528/https://www.pottermore.com/features/in-defence-of-young-james-potter), archived 2019-041-05. Last Viewed 2021-01-28.
 
 [^210128-25]: 
     Wizarding World characters, names and related indicia are ™ and © of Warner Bros. Entertainment Inc. All rights reserved.

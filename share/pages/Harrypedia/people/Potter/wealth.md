@@ -22,52 +22,52 @@
 #### speculation
 
 One of the things that has bothered me since I read the seventh book is
-[Harry][]'s inheritance. When I started reading fan fiction, and from author's
+[Harry]'s inheritance. When I started reading fan fiction, and from author's
 notes started learning more about the interviews and comments that Mrs. Rowling
-has given over the years, it has bothered me even more. [Bellatrix][] has a
+has given over the years, it has bothered me even more. [Bellatrix] has a
 vault deep deep in the caverns under [Gringotts], and while it has lots of gold
 in it, it also seems to function as a storage room for heirlooms.[^200725-1]
-[Harry][] on the other hand has a low security vault in the upper levels of the
+[Harry] on the other hand has a low security vault in the upper levels of the
 caverns, containing only gold.[^200725-2] The contents of [Harry]'s vault are
-not really important until the seventh book when we have [Bellatrix][]'s to
+not really important until the seventh book when we have [Bellatrix]'s to
 compare against. Even then, it might not be important, except that we find
 out, also in the seventh book, that 1) the house in Godric's Hollow is still
 mostly standing (part of one side is missing the roof, but that's about it) and 2) it has become a monument of sorts.
 
-Now we know that [Harry][]'s parents had taken the family in hiding, and I
-believe we read somewhere that they had not just defied [Riddle][] the
+Now we know that [Harry]'s parents had taken the family in hiding, and I
+believe we read somewhere that they had not just defied [Riddle] the
 requisite three times, but had had several close calls _after_ the prophesy is
 given as he hunted for them. If this is true, it is safe to say that the
 Godric's Hollow house probably was not their original residence when they first
 got married. But even if some prior residence was destroyed as a total loss, two
 adults do not, even with an infant, live full time in hiding in a house with
 nothing around them. In fact, we _know_ they did not. They had ornaments of
-some sort to pack away after [Harry][]'s birthday, as well as a vase that
-[Petunia][] sent for the prior Christmas.[^210902-1] The vase she did not like
+some sort to pack away after [Harry]'s birthday, as well as a vase that
+[Petunia] sent for the prior Christmas.[^210902-1] The vase she did not like
 was probably not the highest priority as they fled from residence to residence,
 so what else did they have? Books, furniture, probably some photographs, maybe
 some pictures, the point is Potters would have possessed _things._ What became
 of their personal property? Why is it that per the "extra" non-book content we
-have that it seems that [Harry][] inherited [Grimmauld Place] from [Sirius][],
+have that it seems that [Harry] inherited [Grimmauld Place] from [Sirius],
 but nothing but gold from his parents?
 
-[James][] came from an old family. A family like the Potters should have had
+[James] came from an old family. A family like the Potters should have had
 land, even if the house on it was destroyed. Fleeing and hiding from
-[Riddle][] was not the time to dispose of it, in fact I suspect that [James][]
+[Riddle] was not the time to dispose of it, in fact I suspect that [James]
 would have intended to rebuild. Even if he did not, the middle of a war you
 are losing is not the time to sell your land. Even if he did sell the land,
 why is there no high security vault with heirlooms? Perhaps the Potters were
-not as rich as the [Blacks][] or the [Lestranges][], but Mrs. Rowling describes
+not as rich as the [Blacks] or the [Lestranges], but Mrs. Rowling describes
 them as well off,[^221129-1] old, and influential. There should have been
 heirlooms, and I doubt they were all kept in the house - particularly if the
 family was being hunted.
 
 Fan fiction authors seem to largely agree with me.[^211117-1] Some solve this
-by giving [Harry][] such a vault that he gets access to when he is either
-emancipated or turns seventeen. Others say that [Dumbledore][] essentially
-stole everything. Still others make [James][] a fool who liquidated everything
-to fund the Order of the Phoenix, only for [Harry][] to discover [Dumbledore][]
-is in fact evil. Whichever you chose, [Harry][] should have inherited more
+by giving [Harry] such a vault that he gets access to when he is either
+emancipated or turns seventeen. Others say that [Dumbledore] essentially
+stole everything. Still others make [James] a fool who liquidated everything
+to fund the Order of the Phoenix, only for [Harry] to discover [Dumbledore]
+is in fact evil. Whichever you chose, [Harry] should have inherited more
 than he seems to have. One interesting twist is that the second vault may
 require something (a ring or a key) to unlock that was itself locked in the
 vault in question, because _everything_ the Potters owned was placed in the
@@ -100,7 +100,7 @@ vault without forethought.[^210322-1]
 [^211117-1]:
     There are too many of these to even begin to guess where I first
     got the idea, and too many variations on it for _anyone_ to come up with
-    something truly original. Speculations on how [Gringotts][] works is
+    something truly original. Speculations on how [Gringotts] works is
     really outside the scope of a page on the Potters.
 
 [Harry Potter and the Sorcerer's Stone]: https://www.goodreads.com/book/show/3.Harry_Potter_and_the_Sorcerer_s_Stone
@@ -131,7 +131,7 @@ vault without forethought.[^210322-1]
 
 [^210517-8]: One work suggesting that Harry has been squashed:
 
-    - FMPtrumpets.
+    - FMPtrumpets.<!-- cspell: disable-line -->
       \_[How is this My Life?](https://archiveofourown.org/works/31033985)
       [Archive of Our Own](https://archiveofourown.org/)
       Published: 2021-05-02 Updated: 2021-05-16 Last Viewed: 2021-05-17
@@ -157,7 +157,7 @@ vault without forethought.[^210322-1]
     [ArchiveOfOurOwn](https://archiveofourown.org) Published 2020-11-22. Updated 2021-03-05. Last Viewed 2021-03-22.
 
 [^200710-3]:
-    Tom Kristal.
+    Tom Kristal.<!-- cspell: disable-line -->
     _[Prongs Final Prank](https://www.fanfiction.net/s/4279550/1/Prongs-Final-Prank)_
     [FanFiction by FictionPress](https://www.fanfiction.net/) Published 2008-03-26.
     Last Viewed 2020-07-10.

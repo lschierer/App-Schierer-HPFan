@@ -13,7 +13,7 @@ magical and non-magical cultures. They seem to have been influential with
 government leaders, but not actually part of the magical government, ever
 since.[^210330-5]
 
-[Longbottom]: longbottom
+[Longbottom]: </Harrypedia/people/Longbottom>
 
 On a side note, "Malfoy" is essentially "Bad faith" in French. I highly doubt
 that Mrs. Rowling intended this to have any real meaning except foreshadowing
@@ -34,9 +34,9 @@ school.[^210816-3] This overlap is probably the reason why some authors have
 chosen to state that [Lucius][] may have inherited the relationship with
 [Riddle][] rather than having fostered it.
 
-[Riddle]: <Riddle/Tom Marvolo/>
+[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>
 [Lucius]: lucius_abraxas
-[History]: ../History/
+[History]: </Harrypedia/History>
 
 [^210816-3]: I cannot exactly document a negative for this one.
 
@@ -52,7 +52,7 @@ chosen to state that [Lucius][] may have inherited the relationship with
 [^210816-1]: See my [History][] page.
 
 [^210421-2]: 
-    Gemma Ethan Whitaker.
+    Gemma Ethan Whitaker. <!-- cspell: disable-line -->
     _[Of Hopes and Dreams](https://www.fanfiction.net/s/8569969)_
     [Chapter 3](https://www.fanfiction.net/s/8569969/3/Of-Hopes-and-Dreams)
     Published: 2012-09-30. Updated: 2013-08-01.

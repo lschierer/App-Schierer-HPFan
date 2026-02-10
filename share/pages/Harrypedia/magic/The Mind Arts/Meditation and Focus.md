@@ -5,7 +5,7 @@ title: |
 author: Luke Schierer
 ---
 
-This is probably the weekest attempt to dodge the problems of [Occlumency],
+This is probably the weakest attempt to dodge the problems of [Occlumency],
 but is still worth considering.
 
 > Sirius continued, "Now, meditation when taught is usually the act of

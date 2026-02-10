@@ -14,7 +14,7 @@ The problem with [Harry], [Ginny], or both having significant numbers of friends
   both deservedly hated and clearly a vice.
 - [Slytherin] house espouses achieving your ends "by any means."[^230210-4]
   - [Draco] steals - [Neville]'s remembral in book one; presents in the common room in book two for example.
-  - Their quidditch team is known for cheating.
+  - Their Quidditch team is known for cheating.
   - The Inquisitorial Squad in book five
 
 Ambition is not a bad thing. Cunning however, at least in English, _does_ have a shady slant to it. It implies, though not all definitions require, trickery and deceit. I can see someone like [Percy] or even [Ron] sorted into [Slytherin] for their ambition, or [Fred] and [George] for their willingness to deceive when pranking. Giving the [Sorting Hat] its due, I believe that [Percy] went to

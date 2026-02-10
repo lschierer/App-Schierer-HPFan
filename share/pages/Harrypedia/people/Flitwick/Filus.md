@@ -12,7 +12,7 @@ there is some slight evidence that suggests that Professor Flitwick is redeemabl
   reported with proof.[^20210322-3] We do not _know_ that this is the case, but
   it _could_ be, and it _fits_.
 - We do not know if he joined the Order of the Phoenix or not, but we know that
-  he did _not_ support the Pureblood Supremacists. Being anti-Dumbledore would
+  he did _not_ support the Pure-blood Supremacists. Being anti-Dumbledore would
   actually count as a positive in my book, so this could go either way as a
   positive or a negative.
 
@@ -22,5 +22,5 @@ there is some slight evidence that suggests that Professor Flitwick is redeemabl
 [Sprout]: /Harrypedia/people/Sprout/Pomona/
 
 [^20210322-3]: 
-    Aealket.
+    Aealket. <!-- cspell: disable-line -->      
     _[When Is It a Contract](https://www.fanfiction.net/s/7382549)_ Published 2011-09-14.

@@ -8,7 +8,7 @@ The ages for Bill and Charlie are hard. This is in part because of the Harry Per
 - [Harry] is born in 1980.
 - Per PotterMore[^20190327-1] [Ron] was born on 1980-03-01.
 - Per PotterMore[^20190327-2] [Fred] and [George] were born on 1978-04-01.
-- PotterMore does not list [Percy]'s birth year (his birthday is August 22)[^20190327-3]. I'm going to assume a [Hogwarts] cutoff of September 1.
+- PotterMore does not list [Percy]'s birth year (his birthday is August 22)[^20190327-3]. I'm going to assume a [Hogwarts] cut-off of September 1.
   [Percy] is in 5th year when [Harry] is in 1st, so [Percy] is 4 years
   older - 1976.
 - [Charlie] and [Bill] are harder. I'm going with the [Harry Potter

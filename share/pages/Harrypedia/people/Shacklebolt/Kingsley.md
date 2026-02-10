@@ -9,7 +9,7 @@ show him as ineffective, embroiled in corruption, or both.
 [apocryphally]: http://www.the-leaky-cauldron.org/2007/7/30/j-k-rowling-web-chat-transcript/
 
 [^221205-2]: 
-    Ms. Melissa Anelli and Mrs. J. K. Rowling.
+    Ms. Melissa Anelli and Mrs. J. K. Rowling. <!-- cspell: disable-line -->
     "[J.K. Rowling Web Chat Transcript](http://www.the-leaky-cauldron.org/2007/07/30/j-k-rowling-web-chat-transcript/)"
     [The Leaky-Cauldron](http://www.the-leaky-cauldron.org) 2007-07-30.
 

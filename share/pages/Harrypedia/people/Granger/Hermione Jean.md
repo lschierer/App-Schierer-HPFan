@@ -24,7 +24,7 @@ in the Department of Mysteries does even better.[^210324-2]
 
 [Notes]: /Harrypedia/
 
-Based on an interview she quotes, Ms. Onim asserts that Hermione is essentially
+Based on an interview she quotes, Ms. Onim asserts that Hermione is essentially <!-- cspell: disable-line -->
 a very flat character with the emotional maturity of a very young (she gives
 her credit for fourteen in one place, before pointing out a temper tantrum more
 appropriate for a four year old) girl.[^200706-4] I am not sure I would go
@@ -36,14 +36,43 @@ Another work, _[Of Hearts and Heroes]_ has a different but equally insightful ta
 >
 > The kids at her Muggle primary school didn’t like her. No one liked her. No, that wasn’t true. The teachers liked her. As long as Hermione knew all the answers and followed all the rules the teachers loved her. And when the teachers loved her, her parents didn’t look at her as if she were a … disappointment.[^241211-2]
 
-I find this particularly insightful, but it is important to remember that the author, here, is writing from Hermione's perspective, not a perspective of objective fact. I doubt her parents are/were _actually_ disappointed in her. Hermione read that in their reactions, but she is essentially an incredibly insecure young girl who does not _actually_ understand people, their motives or their reactions _nearly_ as well as she thinks they do. She _deeply_ craves acceptance and approval. Children _are_ often very cruel, and so I do not doubt that Hermione _did_ experience a great deal of difficulty in school. This probably _did_ lead to a cycle where her academic excellence lead to teasing which Hermione reacted badly to, which caused accidental magic, which caused further problems.
+I find this particularly insightful, but it is important to remember that the
+author, here, is writing from Hermione's perspective, not a perspective of
+objective fact. I doubt her parents are/were _actually_ disappointed in her.
+Hermione read that in their reactions, but she is essentially an incredibly
+insecure young girl who does not _actually_ understand people, their motives
+or their reactions _nearly_ as well as she thinks they do. She _deeply_
+craves acceptance and approval. Children _are_ often very cruel, and so I do
+not doubt that Hermione _did_ experience a great deal of difficulty in
+school. This probably _did_ lead to a cycle where her academic excellence
+lead to teasing which Hermione reacted badly to, which caused accidental
+magic, which caused further problems.
 
-Her parents may not have been disappointed in _her_, but they _were_ at a total loss at how to help her, and no doubt _were_ disappointed, or rather, upset with each failure. If her parents tried to coach her in getting along better with her classmates, Hermione probably _did_ detect disappointment with each failure. This may or may not actually have been in any way actually directed or intended as disappointment _in her_ though. We lack data, and even if I were not building off of fan fiction speculation, Hermione herself is an unreliable witness. Hermione _is_ very bright in some vectors of intelligence, but as Ms. Onim discusses, _not_ when it comes to interpersonal aspects.
+Her parents may not have been disappointed in _her_, but they _were_ at a
+total loss at how to help her, and no doubt _were_ disappointed, or rather,
+upset with each failure. If her parents tried to coach her in getting along
+better with her classmates, Hermione probably _did_ detect disappointment
+with each failure. This may or may not actually have been in any way actually
+directed or intended as disappointment _in her_ though. We lack data, and
+even if I were not building off of fan fiction speculation, Hermione herself
+is an unreliable witness. Hermione _is_ very bright in some vectors of
+intelligence, but as Ms. Onim discusses, _not_ when it comes to interpersonal <!-- cspell: disable-line -->
+aspects.
 
-Still, however her parents _actually intended_ in their reactions, it is entirely believable that Hermione _believes_ that her correct answers and the corresponding grades are the only source of approval in her life. This would explain the obsessive behaviours around them without introducing equally speculative abusive or neglectful parents. This also provides a believable segue into those works where Hermione has become what she is in part because she has historically bullied overworked school teachers into simply giving her the grades for her oversized papers rather than working with her to actually learn to write.
+Still, however her parents _actually intended_ in their reactions, it is
+entirely believable that Hermione _believes_ that her correct answers and the
+corresponding grades are the only source of approval in her life. This would
+explain the obsessive behaviours around them without introducing equally
+speculative abusive or neglectful parents. This also provides a believable
+segue into those works where Hermione has become what she is in part because
+she has historically bullied overworked school teachers into simply giving
+her the grades for her oversized papers rather than working with her to
+actually learn to write.
 
+<!-- cspell: disable-next-line -->
 [^241211-1]: [Emmilyne]. _[Of Hearts and Heroes]_. "[Chapter 47: And It All Came Tumbling Down](https://archiveofourown.org/works/4670303/chapters/10814993)" Published: 2015-08-28. Completed: 2015-09-06.
 
+<!-- cspell: disable-next-line -->
 [^241211-2]: [Emmilyne]. _[Of Hearts and Heroes]_. "[Chapter 47: And It All Came Tumbling Down](https://archiveofourown.org/works/4670303/chapters/10814993)" Published: 2015-08-28. Completed: 2015-09-06.
 
 [Of Hearts and Heroes]: https://archiveofourown.org/works/4670303/
@@ -202,7 +231,7 @@ Hermione _is_ a very shallow female in many ways, something we see when
 we look at the the advice she gives to [Ginny] for dealing with a debilitating crush. The boy you like is not paying attention to you? Date some other guys. The cynical part of me hears this as "Make him jealous." While that approach happens to work in this case, [Harry] _does_ get jealous of [Dean], it is not a smart strategy.[^230208-2]
 
 [^230208-2]: 
-    Ms. Davia Sills. "[Inducing Jealousy to Get Your Mate's Attention]"
+    Ms. Davia Sills. "[Inducing Jealousy to Get Your Mate's Attention]" <!-- cspell: disable-line -->
     _[psychology Today]_ 2011-11-30. This is essentially written at a
     lay-person, but it has the citations to back it up. From my perspective a
     more serious flaw is the secular approach, but for this purpose that might
@@ -361,12 +390,15 @@ year, though it is anyone's guess which specific event would be one too many.
     - kb0. _[Harry Potter: Air Elemental](https://www.fanfiction.net/s/11995519)_
       published: 2016-06-12. Updated: 2016-10-29.
 
+<!-- cspell: disable -->      
 [^200707-1]: 
     Yanna N.
     "[Veelas – What Exactly Are The Slavic Seductresses From Harry Potter?](https://www.slavorum.org/veelas-what-exactly-are-the-slavic-seductresses-from-harry-potter/)"
     [The Official Slavorum](https://www.slavorum.org/) Last Viewed 2020-07-07.
     [Wikipedia](https://en.wikipedia.org/) "[Samodiva \(folklore\)][Samodiva]"
     Last Viewed 2020-07-07.
+
+<!-- cspell: disable -->      
 
 [Samodiva]: https://en.wikipedia.org/wiki/Samodiva_(folklore)
 

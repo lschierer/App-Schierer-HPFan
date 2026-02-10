@@ -31,7 +31,7 @@ I think my biggest objections to Molly are as follows:
 - I dislike the fact that other than some presents in book six, we do not see
   any sort of birthday acknowledgement for the [Weasley] children, but do see
   her celebrating [Harry]'s in several books.[^240401-5]
-- I dislike the fact that she ignores [Ginny] and the twins whencommenting on
+- I dislike the fact that she ignores [Ginny] and the twins when commenting on
   Ron becoming a prefect.
 - I dislike the way she belittles the twin's dream of a joke shop. I have
   experienced myself the hurt that comes when a parent dismisses your career as
@@ -68,12 +68,12 @@ On the other hand, it is easy to be over sensitive.
   moment for [Ginny], but as per above, there are a number of possible
   explanations.
 - There is evidence that Ron and the twins (and perhaps Percy?) are
-  male-chauvinistists. It seems more likely they learned this from their
+  male-chauvinists. It seems more likely they learned this from their
   mother than their father.[^221202-2] I had noted [Ron]'s attitude myself,
   and once pointed out, the way the twins exclude [Ginny] from flying with
   them is much the same way of thinking. This one may have some validity. Any
   belief taken to an extreme will end up becoming a parody of the truth, but
-  [Molly] probably _has_ embrased a overly rigid and stereotyped distortion
+  [Molly] probably _has_ embraced a overly rigid and stereotyped distortion
   of the truth of gender and gender roles. See my own objection about her
   reliance on public perception, this really fits in with that.
 
@@ -125,13 +125,24 @@ excitement, she doesn't pick up on Molly's activity. I think Molly shushes
 answers, because [Ginny], unlike Molly, _wasn't_ quiet, and thus _did_ risk
 drawing attention from bystanders.
 
-In other words, this scene is precisely as innocent as it appears to most eleven
-year old readers encountering it for the first time. That being said, I have encountered one reasonably amusing alternative explanation. [RoseLilian], writes in one of her works that the [Ministry] arranges for a family to arrive towards the end of the boarding period, and to be purposefully noisy while actually being under charms to avoid attracting muggle attention. A magical child afraid or unsure of how to deal with the barrier will thus have a clear, friendly family to approach for help, being unaffected by spells that only target those without magic.[^240202-1] That we do not see such charms being cast is not really an objection, because, as previously noted, the book is from [Harry]'s point of view, and _he_ did not notice. It is also believable that as [Harry] starts to be in more danger, the [Ministry] would assign the task to someone else.
+In other words, this scene is precisely as innocent as it appears to most
+eleven year old readers encountering it for the first time. That being said,
+I have encountered one reasonably amusing alternative explanation.
+[RoseLilian] writes in one of her works that the [Ministry] arranges for a <!-- cspell: disable-line -->
+family to arrive towards the end of the boarding period, and to be
+purposefully noisy while actually being under charms to avoid attracting
+muggle attention. A magical child afraid or unsure of how to deal with the
+barrier will thus have a clear, friendly family to approach for help, being
+unaffected by spells that only target those without magic.[^240202-1] That we
+do not see such charms being cast is not really an objection, because, as
+previously noted, the book is from [Harry]'s point of view, and _he_ did not
+notice. It is also believable that as [Harry] starts to be in more danger,
+the [Ministry] would assign the task to someone else.
 
 [Ministry]: /Harrypedia/culture/Government/
 
 [^240202-1]: 
-    [RoseLilian].
+    [RoseLilian]. <!-- cspell: disable-line -->
     _[The difference a good solicitor makes]_
     [Chapter 5](https://www.fanfiction.net/s/13049901/5/The-difference-a-good-solicitor-makes)
     Published: 2018-08-29. Updated: 2021-04-20
@@ -194,7 +205,7 @@ influenced by the various depictions I have read.
   even if she does regret doing so later.
 - We are told that [Ginny] played [Quidditch] professionally after finishing
   school. I doubt Molly approved. I strongly suspect that she considers girls
-  playing [Quidditch] to be unlady-like.
+  playing [Quidditch] to be unladylike.
 
 [Arthur]: /Harrypedia/people/Weasley/Arthur/
 [Bill]: </Harrypedia/people/Weasley/William Arthur/>

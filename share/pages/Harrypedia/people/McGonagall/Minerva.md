@@ -215,7 +215,7 @@ incorporating non-magical classes no matter how needed or useful they might be.
 [dmffan]: https://deluded-musings.fanficauthors.net
 
 [^210322-2]: 
-    Aealket.
+    Aealket. <!-- cspell: disable-line -->
     _[When Is It a Contract](https://www.fanfiction.net/s/7382549)_ Published 2011-09-14.
 
 [WIIAC]: https://www.fanfiction.net/s/7382549

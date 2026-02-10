@@ -62,10 +62,13 @@ back.
 
 [^230210-2]: I have seen this done, but I don't have the particular works on hand as I write this.
 
+<!-- cspell: disable -->
 [^230210-3]: Works include, but not limited to:
 
     - pottermum. _[A Re-Telling][]_ Published: 2015-08-21. Updated: 2015-10-17.
     - xox-hattii-xox. _[Tied Together By A Red Ribbon][]_ Published: 2010-05-25.
+
+<!-- cspell: enable -->
 
 [Tied Together By A Red Ribbon]: https://www.fanfiction.net/s/5998296
 [A Re-Telling]: https://archiveofourown.org/works/4619982
