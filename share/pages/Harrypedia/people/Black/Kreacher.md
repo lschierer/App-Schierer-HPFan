@@ -1,4 +1,5 @@
-Kreacher is a [Black] family [House Elf], he died at age 666, sometime after the books end.[^240219-1]
+Kreacher is a [Black] family [House Elf], he died at age 666, sometime after the
+books end.[^240219-1]
 
 [^240219-1]:
     Mrs. J. K. Rowling. Quoted in

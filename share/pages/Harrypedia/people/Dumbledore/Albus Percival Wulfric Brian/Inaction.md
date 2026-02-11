@@ -6,15 +6,15 @@ author: Luke Schierer
 
 A recurring theme in fanfiction is Dumbledore's inaction. Not only is this a
 theme in fanfiction, I question it time and time again as Dumbledore [interacts
-with Riddle][Dealing_with_Riddle], with [Harry][HJP1] and the [Dursleys][DF1]
-, and even with [Grindelwald]. Dumbledore has three jobs, each of which is
-the sort of prestigious position that influences a signature line of a
-letter, in some cases even when _someone else_ is signing the letter in
-question.[^211015-1] What does he do with these positions to shape society?
-How does he use them to advance reform, battle injustice, or steer the
-wayward towards the light? Is the sum total of his accomplishments in his
-tenure as Headmaster at [Hogwarts] that he allowed one werewolf to be educated?
-Were there no other were-children in the many years he was there?
+with Riddle][Dealing_with_Riddle], with [Harry][HJP1] and the [Dursleys][DF1] ,
+and even with [Grindelwald]. Dumbledore has three jobs, each of which is the
+sort of prestigious position that influences a signature line of a letter, in
+some cases even when _someone else_ is signing the letter in
+question.[^211015-1] What does he do with these positions to shape society? How
+does he use them to advance reform, battle injustice, or steer the wayward
+towards the light? Is the sum total of his accomplishments in his tenure as
+Headmaster at [Hogwarts] that he allowed one werewolf to be educated? Were there
+no other were-children in the many years he was there?
 
 Some fanfiction works that have built on this team:
 
@@ -22,8 +22,8 @@ Some fanfiction works that have built on this team:
   might learn a second language at home, not every student at the school has
   that opportunity.
 - secondly on the idea that [Bill Weasley] can be trusted to investigate the
-  curse on the defence position, since [Dumbledore][AD1] has _already_ trusted him to
-  help with the wards on [Harry][HJP1]'s house (in this story).
+  curse on the defence position, since [Dumbledore][AD1] has _already_ trusted
+  him to help with the wards on [Harry][HJP1]'s house (in this story).
 
 > Albus was truly dumbfounded. He wasn't used to being talked to in the manner
 > these two were doing. He wasn't accustomed to others coming up with ideas with
@@ -55,7 +55,8 @@ Some fanfiction works that have built on this team:
 > teachers also neglected to think of how these events might have scarred
 > us.[^211102-1]
 
-[Dealing_with_Riddle]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/dealing_with_riddle>
+[Dealing_with_Riddle]:
+  </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/dealing_with_riddle>
 [Grindelwald]: /Harrypedia/people/Grindelwald/Gellert
 [TMR1]: </Harrypedia/people/Riddle/Tom Marvolo>
 [HJP1]: </Harrypedia/people/Potter/Harry James>
@@ -64,22 +65,25 @@ Some fanfiction works that have built on this team:
 [Bill Weasley]: </Harrypedia/people/Weasley/William Arthur>
 [Hogwarts]: /Harrypedia/Hogwarts
 
-[^211102-1]: 
+[^211102-1]:
     Venquine1990. <!-- cspell: disable-line -->
     _[Dumbledore's Folly](https://www.fanfiction.net/s/13948448)_
     "[Chapter 11. Punishment In Mind - Part 02](https://www.fanfiction.net/s/13948448/11/Dumbledore-s-Folly)"
     Published: 2021-08-31. Updated: 2021-10-31. Last Viewed: 2021-11-02.
 
-[^211015-2]: 
+[^211015-2]:
     gredandforgerock.
-    _[Remus Lupin: Savior](https://www.fanfiction.net/s/7013332)_ <!-- cspell: disable-line -->
+    _[Remus Lupin: Savior](https://www.fanfiction.net/s/7013332)_
+
+    <!-- cspell: disable-line -->
+
     [Chapter 8](https://www.fanfiction.net/s/7013332/8/Remus-Lupin-Savior)
     Published: 2011-05-22. Updated: 2021-10-15. Last Viewed: 2021-10-15.
 
-[^211015-1]: 
-    Mrs. J. K. Rowling.
-    _[Harry Potter and the Sorcerer's Stone]_
-    p. 51. © 1998 Pottermore Limited. American Kindle Edition.
-    (referring to the Hogwart's admission letter)
+[^211015-1]:
+    Mrs. J. K. Rowling. _[Harry Potter and the Sorcerer's Stone]_ p. 51. © 1998
+    Pottermore Limited. American Kindle Edition. (referring to the Hogwart's
+    admission letter)
 
-[Harry Potter and the Sorcerer's Stone]: https://www.goodreads.com/book/show/3.Harry_Potter_and_the_Sorcerer_s_Stone
+[Harry Potter and the Sorcerer's Stone]:
+  https://www.goodreads.com/book/show/3.Harry_Potter_and_the_Sorcerer_s_Stone

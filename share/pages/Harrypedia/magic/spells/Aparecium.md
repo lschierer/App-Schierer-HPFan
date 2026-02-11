@@ -1,8 +1,8 @@
 ---
 collection: Harrypedia
-type: "spell"
+type: 'spell'
 title: Aparecium
-spells: "Aparecium"
+spells: 'Aparecium'
 author: Luke Schierer
 ---
 
@@ -17,6 +17,9 @@ concealment charms.
 
 ## Found in
 
-[magicscrapbook](https://magicscrapbook.tumblr.com/) <!-- cspell: disable-line -->
-: "[‘Book of Spells’ transcript](https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript)"
+[magicscrapbook](https://magicscrapbook.tumblr.com/)
+
+<!-- cspell: disable-line --> :
+
+"[‘Book of Spells’ transcript](https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript)"
 Last Viewed 2021-09-30.

@@ -1,8 +1,8 @@
 ---
 collection: Harrypedia
-type: "spell"
+type: 'spell'
 title: Sectumsempra
-spells: "Sectumsempra"
+spells: 'Sectumsempra'
 author: Luke Schierer
 ---
 
@@ -32,4 +32,5 @@ a slashing curse where the wound resembles a sword cut.
 
 </dl>
 
-[Harry Potter and the Order of the Phoenix]: https://www.librarything.com/work/115
+[Harry Potter and the Order of the Phoenix]:
+  https://www.librarything.com/work/115

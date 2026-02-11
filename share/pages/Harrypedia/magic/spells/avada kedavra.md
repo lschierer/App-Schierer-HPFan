@@ -1,7 +1,7 @@
 ---
 collection: Harrypedia
-type: "spell"
-spells: "Avada Kedavra"
+type: 'spell'
+spells: 'Avada Kedavra'
 title: Avada Kedavra
 author: Luke Schierer
 ---
@@ -12,6 +12,7 @@ The Killing Curse
 
 ## Description
 
-A curse that kills instantly on impact, and cannot be blocked by any magical shield.
+A curse that kills instantly on impact, and cannot be blocked by any magical
+shield.
 
 ## Found in

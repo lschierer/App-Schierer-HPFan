@@ -12,9 +12,12 @@ _suggests_ otherwise:
 > At a recent International Symposium of Animagi, the Uagadou School Team
 > attracted a lot of press when their exhibition of synchronised transforming
 > caused a near riot. Many older and more experienced witches and wizards felt
-> threatened by fourteen-year-olds who could turn at will into elephants and <!--cspell: disable-line -->
-> cheetahs, and a formal complaint was lodged with the International
-> Confederation of Wizards by Adrian Tutley (Animagus: gerbil).[^210304-6]
+> threatened by fourteen-year-olds who could turn at will into elephants and
+>
+> <!--cspell: disable-line --> cheetahs, and a formal complaint was lodged with
+>
+> the International Confederation of Wizards by Adrian Tutley (Animagus:
+> gerbil).[^210304-6]
 
 If you do not choose your animal, a school team composed of people who are _all_
 dual animagi elephants and cheetahs is not really plausible. My guess is that
@@ -40,8 +43,8 @@ eyes.[^210618-9]
 [^211129-1]: Others have as well.
 
     - The Mad Mad Reviewer.
-      _[The Mad Mad Reviewer](https://www.fanfiction.net/s/12754810)_
-      Published: 2017-12-10. Last Viewed: 2021-11-29.
+      _[The Mad Mad Reviewer](https://www.fanfiction.net/s/12754810)_ Published:
+      2017-12-10. Last Viewed: 2021-11-29.
     - CmptrWz. <!--cspell: disable-line -->
       _[For Want of an Outfit](https://archiveofourown.org/works/28507302)_
       Published: 2021-01-02 Updated:2021-11-26 Last Viewed: 2021-11-29.
@@ -50,8 +53,8 @@ eyes.[^210618-9]
 
     - CmptrWz. <!--cspell: disable-line -->
       _[For Want of an Outfit](https://archiveofourown.org/works/28507302)_
-      [Archive of Our Own](https://archiveofourown.org/)
-      Published:2021-01-02 Updated:2021-05-14 Last Viewed: 2021-05-14
+      [Archive of Our Own](https://archiveofourown.org/) Published:2021-01-02
+      Updated:2021-05-14 Last Viewed: 2021-05-14
 
 [^210618-9]:
     Mrs. J. K. Rowling.

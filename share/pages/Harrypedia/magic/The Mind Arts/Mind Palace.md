@@ -11,7 +11,8 @@ of things. The basic idea is to visualise something familiar and "hide" or
 "organising" your memories this way supposedly makes it harder for an attacker
 to find them.
 
-The basic idea seems to be related to [Method of loci](https://en.wikipedia.org/wiki/Method_of_loci)
+The basic idea seems to be related to
+[Method of loci](https://en.wikipedia.org/wiki/Method_of_loci)
 
 Personally I do not fully get this one as a defence. The idea seems to be that
 the attacker will be fooled by the visualisation technique, and will see the

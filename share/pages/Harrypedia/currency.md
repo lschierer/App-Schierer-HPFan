@@ -6,8 +6,8 @@ author: Luke Schierer
 
 One of the recurring issues that I read about is the exchange rate between
 galleons and non-magical currencies. It seems that many people dislike the five
-pounds to the galleon answer that we were given in 2001.[^20210617-1] It is
-hard for me to say definitively how realistic that conversion rate is or is not,
+pounds to the galleon answer that we were given in 2001.[^20210617-1] It is hard
+for me to say definitively how realistic that conversion rate is or is not,
 however, I find that 1 gram of gold is
 
 > - Width: 8mm (0.32 inches)
@@ -21,8 +21,8 @@ know the price of gold per gram, over time. [BullionByPost][BBP1] provides a
 chart, in August of 1991, gold was approx £6.77/gram.[^20210617-3]
 
 It is important to note that Mrs. Rowling said the exchange rate
-varies.[^20210617-4] Gold is _**much**_ more expensive per gram now, so we
-would be looking at exchange rates of something more like 40:1 now, if not
+varies.[^20210617-4] Gold is _**much**_ more expensive per gram now, so we would
+be looking at exchange rates of something more like 40:1 now, if not
 higher.[^20210617-5] It is also important to know that her math is notoriously
 poor, and that 5:1 was an estimate.
 
@@ -38,35 +38,30 @@ amount.
 
 ---
 
-[^20210617-1]: 
+[^20210617-1]:
     Mrs. J. K. Rowling.
     "[Comic Relief live chat transcript, March 2001](http://web.archive.org/web/20091023035038/http://www.accio-quote.org/articles/2001/0301-comicrelief-staff.htm)"
     <http://www.accio-quote.org> 2001-03-01.
 
-[^20210617-4]: 
+[^20210617-4]:
     Mrs. J. K. Rowling.
     "[Comic Relief live chat transcript, March 2001](http://web.archive.org/web/20091023035038/http://www.accio-quote.org/articles/2001/0301-comicrelief-staff.htm)"
     <http://www.accio-quote.org> 2001-03-01.
 
-[^20210617-2]: 
-    [Money Metals Exchange][MMM].
-    "[1 Gram Gold Bar (In Assay)][1GGBIA]"
-    Last Viewed: 2021-06-17.
+[^20210617-2]:
+    [Money Metals Exchange][MMM]. "[1 Gram Gold Bar (In Assay)][1GGBIA]" Last
+    Viewed: 2021-06-17.
 
-[^20210617-3]: 
-    [Jewellery Quarter Bullion Ltd.][BBP1]
-    "[Gold Charts UK in GBP per Gram]"
+[^20210617-3]:
+    [Jewellery Quarter Bullion Ltd.][BBP1] "[Gold Charts UK in GBP per Gram]"
     Last Viewed 2021-06-17. My figure was from 1991-08-14 on that chart.
 
-[^20210617-5]: 
-    [Jewellery Quarter Bullion Ltd.][BBP1]
-    "[Gold Charts UK in GBP per Gram]"
+[^20210617-5]:
+    [Jewellery Quarter Bullion Ltd.][BBP1] "[Gold Charts UK in GBP per Gram]"
     Last Viewed 2021-06-17. My figure was from 1991-08-14 on that chart.
 
-[^20210617-6]: 
-    [USGB, LLC][USGBL]
-    "[How Big Is a Gold Bar?]"
-    Last Viewed: 2021-06-17.
+[^20210617-6]:
+    [USGB, LLC][USGBL] "[How Big Is a Gold Bar?]" Last Viewed: 2021-06-17.
 
 [USGBL]: https://www.usgoldbureau.com/
 [How Big Is a Gold Bar?]: https://www.usgoldbureau.com/gold-bar-sizes
@@ -74,4 +69,5 @@ amount.
 [BBP2]: https://www.bullionbypost.co.uk/gold-price/gold-charts/
 [MMM]: https://www.moneymetals.com/
 [1GGBIA]: https://www.moneymetals.com/1-gram-gold-bar/121
-[Gold Charts UK in GBP per Gram]: https://www.bullionbypost.co.uk/gold-price/gold-charts/
+[Gold Charts UK in GBP per Gram]:
+  https://www.bullionbypost.co.uk/gold-price/gold-charts/

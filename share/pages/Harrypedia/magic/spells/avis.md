@@ -1,8 +1,8 @@
 ---
 collection: Harrypedia
-type: "spell"
+type: 'spell'
 title: Avis
-spells: "Avis"
+spells: 'Avis'
 author: Luke Schierer
 ---
 
@@ -10,6 +10,9 @@ The small flock created are not actually real animals.
 
 ## Found in
 
-[magicscrapbook](https://magicscrapbook.tumblr.com/) <!-- cspell: disable-line -->
-: "[‘Book of Spells’ transcript](https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript)"
+[magicscrapbook](https://magicscrapbook.tumblr.com/)
+
+<!-- cspell: disable-line --> :
+
+"[‘Book of Spells’ transcript](https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript)"
 Last Viewed 2021-09-30.

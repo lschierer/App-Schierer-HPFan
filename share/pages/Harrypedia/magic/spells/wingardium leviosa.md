@@ -1,8 +1,8 @@
 ---
 collection: Harrypedia
-type: "spell"
+type: 'spell'
 title: Wingardium Leviosa
-spells: "Wingardium Leviosa"
+spells: 'Wingardium Leviosa'
 author: Luke Schierer
 ---
 
@@ -12,14 +12,16 @@ Charm
 
 ## Description
 
-Levitate objects, including living things. The effect of the spell depends on the weight of the object and the skill of the caster.
+Levitate objects, including living things. The effect of the spell depends on
+the weight of the object and the skill of the caster.
 
 ## Found in
 
-Primary Cannon
-: citation needed.
+Primary Cannon : citation needed.
 
-Secondary Cannon
-: [magicscrapbook](https://magicscrapbook.tumblr.com/) <!-- cspell: disable-line -->
+Secondary Cannon : [magicscrapbook](https://magicscrapbook.tumblr.com/)
+
+<!-- cspell: disable-line -->
+
 "[‘Book of Spells’ transcript](https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript)"
 Last Viewed 2021-09-30.

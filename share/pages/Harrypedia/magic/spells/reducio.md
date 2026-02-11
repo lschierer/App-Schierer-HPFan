@@ -1,8 +1,8 @@
 ---
 collection: Harrypedia
-type: "spell"
+type: 'spell'
 title: Reducio
-spells: "Reducio"
+spells: 'Reducio'
 author: Luke Schierer
 ---
 
@@ -18,10 +18,11 @@ Makes things shrink, and reverses [Engorgio][].
 
 ## Found in
 
-Primary Cannon
-: citation needed.
+Primary Cannon : citation needed.
 
-Secondary Cannon
-: [magicscrapbook](https://magicscrapbook.tumblr.com/) <!-- cspell: disable-line -->
+Secondary Cannon : [magicscrapbook](https://magicscrapbook.tumblr.com/)
+
+<!-- cspell: disable-line -->
+
 "[‘Book of Spells’ transcript](https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript)"
 Last Viewed 2021-09-30.

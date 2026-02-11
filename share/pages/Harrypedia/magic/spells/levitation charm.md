@@ -1,8 +1,8 @@
 ---
 collection: Harrypedia
-type: "spell"
+type: 'spell'
 title: Levitation Charm
-spells: "Levitation Charm"
+spells: 'Levitation Charm'
 author:
 ---
 

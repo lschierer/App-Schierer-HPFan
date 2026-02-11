@@ -1,4 +1,3 @@
-
 #### Snippet analysis
 
 > “There’s room in this one, there’s only Loony Lovegood in here — ”
@@ -27,10 +26,12 @@ Ginny's behaviour is unexplained, to my knowledge, by cannon sources.
 > long as there’s no proof at all. Well, I wouldn’t expect anything else from
 > someone whose father runs The Quibbler.”[^20210513-1]
 
-When reading this keep in mind that this is filtered through [Hermione][].
-While it looks fairly harsh, PercabethHinny noted in _Discovering the Truth_ <!-- cspell: disable-line -->
-that [Hermione][] _might_ be misrepresenting Ginny's actual words (emphasis
-mine).[^20210513-2]
+When reading this keep in mind that this is filtered through [Hermione][]. While
+it looks fairly harsh, PercabethHinny noted in _Discovering the Truth_
+
+<!-- cspell: disable-line --> that [Hermione][] _might_ be misrepresenting
+
+Ginny's actual words (emphasis mine).[^20210513-2]
 
 [Hermione]: <../Granger/Hermione Jean/>
 

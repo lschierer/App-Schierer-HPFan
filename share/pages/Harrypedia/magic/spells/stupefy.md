@@ -1,8 +1,8 @@
 ---
 collection: Harrypedia
-type: "spell"
+type: 'spell'
 title: Stupefy
-spells: "Stupefy"
+spells: 'Stupefy'
 author: Luke Schierer
 ---
 
@@ -16,10 +16,11 @@ Knock out spell, for both animals and people.
 
 ## Found in
 
-Primary Cannon
-: citation needed.
+Primary Cannon : citation needed.
 
-Secondary Cannon
-: [magicscrapbook](https://magicscrapbook.tumblr.com/) <!-- cspell: disable-line -->
+Secondary Cannon : [magicscrapbook](https://magicscrapbook.tumblr.com/)
+
+<!-- cspell: disable-line -->
+
 "[‘Book of Spells’ transcript](https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript)"
 Last Viewed 2021-09-30.

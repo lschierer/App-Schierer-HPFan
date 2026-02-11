@@ -1,8 +1,8 @@
 ---
 collection: Harrypedia
-type: "spell"
+type: 'spell'
 title: Protego
-spells: "Protego"
+spells: 'Protego'
 author: Luke Schierer
 ---
 
@@ -12,14 +12,16 @@ Charm
 
 ## Description
 
-The most basic of duelling spells, protects from most offensive spells. If cast strongly enough, can block physical attacks.
+The most basic of duelling spells, protects from most offensive spells. If cast
+strongly enough, can block physical attacks.
 
 ## Found in
 
-Primary Cannon
-: citation needed.
+Primary Cannon : citation needed.
 
-Secondary Cannon
-: [magicscrapbook](https://magicscrapbook.tumblr.com/) <!-- cspell: disable-line -->
+Secondary Cannon : [magicscrapbook](https://magicscrapbook.tumblr.com/)
+
+<!-- cspell: disable-line -->
+
 "[‘Book of Spells’ transcript](https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript)"
 Last Viewed 2021-09-30.

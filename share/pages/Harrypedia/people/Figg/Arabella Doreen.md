@@ -16,8 +16,8 @@ possibilities:
     effectively alerting the non-magical government.
   - Arabella is complicit in making things bad on [Dumbledore]'s orders.
 - If [Dumbledore] is not aware of how bad things are
-  - Arabella reports things regularly, but [Dumbledore] discounts her
-    reports. See above on her status as a squib.
+  - Arabella reports things regularly, but [Dumbledore] discounts her reports.
+    See above on her status as a squib.
   - Arabella is complicit in making things bad, and [Dumbledore] is wrong to
     have trusted her with this mission.
   - Arabella is herself not aware of how bad things are.
@@ -35,7 +35,10 @@ possibilities:
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/>
 [Harry]: </Harrypedia/people/Potter/Harry James/>
 
-[^20210831-1]: 
+[^20210831-1]:
     This view is taken by r2r4l in
-    _[Yet Another Harry Potter Goes To Hogwarts Story (YAHPGTHS)](<https://www.fan fiction.net/s/10789352>)_ <!-- cspell: disable-line -->
-    Published 2014-10-29. Updated: 2015-09-24. Last Viewed: 2021-08-31.
+    _[Yet Another Harry Potter Goes To Hogwarts Story (YAHPGTHS)](<https://www.fan fiction.net/s/10789352>)_
+
+    <!-- cspell: disable-line --> Published 2014-10-29. Updated: 2015-09-24.
+
+    Last Viewed: 2021-08-31.

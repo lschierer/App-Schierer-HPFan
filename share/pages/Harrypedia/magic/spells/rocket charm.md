@@ -1,8 +1,8 @@
 ---
 collection: Harrypedia
-type: "spell"
+type: 'spell'
 title: Rocket Charm
-spells: "Rocket Charm"
+spells: 'Rocket Charm'
 author: Luke Schierer
 ---
 

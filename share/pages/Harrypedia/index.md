@@ -9,11 +9,15 @@ _Speculation, Analysis and Reference Material for the Harry Potter Universe_
 
 ## Introduction to this Reference
 
-I probably still need to revisit the main page and move some of its content here.
+I probably still need to revisit the main page and move some of its content
+here.
 
 ## My Own Sources
 
-I will use the the following, in the following order of precedence. That is, facts found in secondary sources cannot contradict facts found in primary sources, nor can facts found in tertiary sources contradict either of the previous two.
+I will use the the following, in the following order of precedence. That is,
+facts found in secondary sources cannot contradict facts found in primary
+sources, nor can facts found in tertiary sources contradict either of the
+previous two.
 
 ### Primary Sources
 
@@ -23,7 +27,9 @@ Bloomsbury editions, [with corrections][]
 
 ### Almost Not Quite Primary Sources
 
-American Kindle editions (because these are easier to search and cite). The distinction matters because the American versions are in fact "translated" and there _are_ some differences.
+American Kindle editions (because these are easier to search and cite). The
+distinction matters because the American versions are in fact "translated" and
+there _are_ some differences.
 
 ### Secondary Sources
 

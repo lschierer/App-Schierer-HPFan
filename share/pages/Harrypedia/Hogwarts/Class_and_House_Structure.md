@@ -1,16 +1,17 @@
 ---
 collection: Harrypedia
 title: Class and House Structure
-author: "Luke Schierer"
+author: 'Luke Schierer'
 ---
 
 One of the interesting questions about [Hogwarts] is how you would handle an
 extra 29 or 30 students per house per year. At 10 students per house per year,
-the common rooms hold 70 students; at 35 they hold 245. The former figure is big enough it
-does not sound like it would really work - how would that many students actually
-survive trying to occupy that space as their primary place to relax every
-evening? The latter is frankly impossible. It means that each common room has
-nearly as many people as the entire school does at the 10/house/year figure.
+the common rooms hold 70 students; at 35 they hold 245. The former figure is big
+enough it does not sound like it would really work - how would that many
+students actually survive trying to occupy that space as their primary place to
+relax every evening? The latter is frankly impossible. It means that each common
+room has nearly as many people as the entire school does at the 10/house/year
+figure.
 
 Like I do when I look at teachers, I am tempted to use _[Stalky & Co.][]_ by
 Rudyard Kipling as a secondary source to course correct. That book had what
@@ -44,8 +45,8 @@ list. The problem I hit was two-fold. One, it is actually fairly difficult to
 get a description of the living conditions for the students from any
 authoritative source that is also easily found online. Two, having done so, it
 is fairly apparent that the current living conditions are unlikely to match
-those from the early 1900s; [Hogwarts] is likely to lag behind by _at least_ that
-much in its attitudes towards what is both acceptable and desirable. In "[A
+those from the early 1900s; [Hogwarts] is likely to lag behind by _at least_
+that much in its attitudes towards what is both acceptable and desirable. In "[A
 Brief History of Boarding Schools][BHBS1]" it is put this way:
 
 > In life, as in fiction, boarding schools were part of the backbone of the
@@ -79,20 +80,20 @@ _Stalky_ is in some transitional state between [Hogwarts] and this graduated
 approach to housing students.
 
 All of the schools I looked at talked about having a house master, a matron, and
-in some cases, an assistant or associate master in charge of each house. Most
-of them sounded like they had some equivalent of [Hogwarts]' prefects. It is
+in some cases, an assistant or associate master in charge of each house. Most of
+them sounded like they had some equivalent of [Hogwarts]' prefects. It is
 important to keep in mind however, that, as the Our Kids article states,
-_[Nicholas Nickleby][CDNN]_ is based on a school that really
-existed.[^210725-2] While that was an extreme that was unacceptable even
-then, I agree with the article's author that there was tremendous change in what
-was considered acceptable across the 1800s and 1900s. Hogwarts would not have
-changed at the same rate.
+_[Nicholas Nickleby][CDNN]_ is based on a school that really existed.[^210725-2]
+While that was an extreme that was unacceptable even then, I agree with the
+article's author that there was tremendous change in what was considered
+acceptable across the 1800s and 1900s. Hogwarts would not have changed at the
+same rate.
 
 That being said, the numbers _still do not work._ Even allowing for something
 more like a Charles Dickens school, _none_ of the schools, even in Mr. Dickens'
 novels, put nearly 250 students in a common room. _Something_, even if not the
-three common room split I propose above, has to be done to make [Hogwarts] work if
-you try to put it in context of a larger student body.
+three common room split I propose above, has to be done to make [Hogwarts] work
+if you try to put it in context of a larger student body.
 
 [Hogwarts]: ./
 [Stalky & Co.]: https://www.gutenberg.org/ebooks/3006
@@ -100,12 +101,12 @@ you try to put it in context of a larger student body.
 [BHBS1]: https://www.ourkids.net/school/brief-history-of-boarding
 [FBSU1]: https://britannia-study.com.my/school-type/famous-uk-boarding-schools
 
-[^210725-2]: 
+[^210725-2]:
     Our Kids™.
     "[A Brief History of Boarding Schools](https://www.ourkids.net/school/brief-history-of-boarding)"
     © 2020. [Our Kids](https://www.ourkids.net).
 
-[^210725-1]: 
+[^210725-1]:
     Our Kids™.
     "[A Brief History of Boarding Schools](https://www.ourkids.net/school/brief-history-of-boarding)"
     © 2020. [Our Kids](https://www.ourkids.net).

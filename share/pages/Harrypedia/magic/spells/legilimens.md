@@ -1,8 +1,8 @@
 ---
 collection: Harrypedia
-type: "spell"
+type: 'spell'
 title: Legilimens
-spells: "Legilimens"
+spells: 'Legilimens'
 author: Luke Schierer
 ---
 
@@ -12,7 +12,8 @@ Unknown
 
 ## Description
 
-[Legilimency] is the art, Legilimens is the person who practices it, as well as the spell to do so.
+[Legilimency] is the art, Legilimens is the person who practices it, as well as
+the spell to do so.
 
 This is extensively discussed as a [topic] under [the Mind Arts].
 

@@ -1,4 +1,3 @@
-
 Draco is a coward, a bully, and a very conflicted young man. Over the course of
 the last two books, he is essentially forced to face the fact that a world under
 the rule of a "Dark Lord" is not the utopia that he has been raised to believe
@@ -15,8 +14,8 @@ counting the epilogue, that we see him.
   > at him.[^211025-2]
 
   The passage continues, and Draco refuses to definitively identify either
-  [Ron][] or [Hermione][], even though neither of them are in any way
-  disguised, and his parents have already tentatively done so.
+  [Ron][] or [Hermione][], even though neither of them are in any way disguised,
+  and his parents have already tentatively done so.
 
 - In Chapter 31, we see a somewhat more assertive version of Draco.
 
@@ -35,8 +34,8 @@ counting the epilogue, that we see him.
 Why is Draco so hesitant in the first case, and so much more assertive in the
 second? Is it _really_ just that he is upset about the personal "insult" of
 losing his wand? If so, there is no true turning away from the violence and
-torture his family has embraced, for surely he _must_ know that the situation has
-not changed for the target ([Harry][]).
+torture his family has embraced, for surely he _must_ know that the situation
+has not changed for the target ([Harry][]).
 
 In the first scene, Draco's family is oppressed, his father is struggling for
 control with his aunt, and both (his father and aunt) in fear of [Riddle][]'s
@@ -53,16 +52,24 @@ back.
 [Goyle]: /Harrypedia/people/Goyle/Gregory/
 [Crabbe]: /Harrypedia/people/Crabbe/Vincent/
 
-[^230210-4]: Mrs. J. K. Rowling. Quoted at "[SORTING HAT SONGS][]" on [MuggleNet][]. Last Viewed: 2023-02-10.
+[^230210-4]:
+    Mrs. J. K. Rowling. Quoted at "[SORTING HAT SONGS][]" on [MuggleNet][]. Last
+    Viewed: 2023-02-10.
 
-[SORTING HAT SONGS]: https://www.mugglenet.com/harry-potter/little-things-harry-potter/sorting-hat-songs/
+[SORTING HAT SONGS]:
+  https://www.mugglenet.com/harry-potter/little-things-harry-potter/sorting-hat-songs/
 [MuggleNet]: https://www.mugglenet.com
 
-[^230210-1]: I have seen this done, but I don't have the particular works on hand as I write this.
+[^230210-1]:
+    I have seen this done, but I don't have the particular works on hand as I
+    write this.
 
-[^230210-2]: I have seen this done, but I don't have the particular works on hand as I write this.
+[^230210-2]:
+    I have seen this done, but I don't have the particular works on hand as I
+    write this.
 
 <!-- cspell: disable -->
+
 [^230210-3]: Works include, but not limited to:
 
     - pottermum. _[A Re-Telling][]_ Published: 2015-08-21. Updated: 2015-10-17.
@@ -73,14 +80,12 @@ back.
 [Tied Together By A Red Ribbon]: https://www.fanfiction.net/s/5998296
 [A Re-Telling]: https://archiveofourown.org/works/4619982
 
-[^211025-3]: 
-    Mrs. J. K. Rowling.
-    _[Harry Potter and the Deathly Hallows][HPDH]_
-    p. 259. Pottermore Publishing. American Kindle Edition.
+[^211025-3]:
+    Mrs. J. K. Rowling. _[Harry Potter and the Deathly Hallows][HPDH]_ p. 259.
+    Pottermore Publishing. American Kindle Edition.
 
-[^211025-2]: 
-    Mrs. J. K. Rowling.
-    _[Harry Potter and the Deathly Hallows][HPDH]_
-    p. 189. Pottermore Publishing. American Kindle Edition.
+[^211025-2]:
+    Mrs. J. K. Rowling. _[Harry Potter and the Deathly Hallows][HPDH]_ p. 189.
+    Pottermore Publishing. American Kindle Edition.
 
 [HPDH]: https://www.librarything.com/work/3577382/book/225886820

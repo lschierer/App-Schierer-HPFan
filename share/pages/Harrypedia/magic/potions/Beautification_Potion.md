@@ -2,13 +2,14 @@
 collection: Harrypedia
 title: Beautification Potion
 author: Luke Schierer
-type: "potion"
-spells: "Beautification Potion"
+type: 'potion'
+spells: 'Beautification Potion'
 ---
 
 ## Description
 
-Transforms the appearance of the drinker, making them seem to be attractive, even if they were not.
+Transforms the appearance of the drinker, making them seem to be attractive,
+even if they were not.
 
 ## Found in
 

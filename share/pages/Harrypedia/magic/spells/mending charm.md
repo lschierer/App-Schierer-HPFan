@@ -1,8 +1,8 @@
 ---
 collection: Harrypedia
-type: "spell"
+type: 'spell'
 title: Mending Charm
-spells: "Mending Charm"
+spells: 'Mending Charm'
 author:
 ---
 
@@ -14,8 +14,6 @@ Charm
 
 ## Found in
 
-Primary Cannon
-: citation needed.
+Primary Cannon : citation needed.
 
-Secondary Cannon
-: citation needed.
+Secondary Cannon : citation needed.

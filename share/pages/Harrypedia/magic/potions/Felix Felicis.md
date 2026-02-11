@@ -2,8 +2,8 @@
 collection: Harrypedia
 title: Felix Felicis
 author: Luke Schierer
-type: "potion"
-spells: "Felix Felicis"
+type: 'potion'
+spells: 'Felix Felicis'
 ---
 
 ## Description

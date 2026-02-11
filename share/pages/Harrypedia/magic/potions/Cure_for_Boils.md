@@ -2,8 +2,8 @@
 collection: Harrypedia
 title: Cure for Boils
 author: Luke Schierer
-type: "potion"
-spells: "Cure for Boils"
+type: 'potion'
+spells: 'Cure for Boils'
 ---
 
 ## Description

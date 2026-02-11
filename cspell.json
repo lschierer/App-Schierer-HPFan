@@ -28,5 +28,13 @@
       "languageId": "markdown",
       "locale": "en-GB"
     }
-  ]
+  ],
+  "overrides": [
+    {
+      "filename": "**/Fan Fiction/Hope/**/*.md",
+      "language": "en-GB,fr",
+      "dictionaries": ["en-gb", "fr-fr", "project-words", "user-words"]
+    }
+  ],
+  "import": ["@cspell/dict-fr-fr/cspell-ext.json"]
 }

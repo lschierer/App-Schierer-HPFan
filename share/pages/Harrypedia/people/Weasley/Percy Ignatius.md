@@ -1,14 +1,13 @@
-
-There are two possible Percy Weasleys, and unfortunately we do not have the
-data to know which is the real one.
+There are two possible Percy Weasleys, and unfortunately we do not have the data
+to know which is the real one.
 
 ### The Collaborator.
 
 The first is the collaborator. This Percy is wilfully ignorant of all that is
-going wrong in the Ministry until it is nearly too late. He blindly trusts
-that those in authority will, do, and have use that authority rightly. Because
-they use their authority correctly for the common good, they are justified in
-their actions. He has, after all, been raised in the shadow of [Dumbledore][]'s
+going wrong in the Ministry until it is nearly too late. He blindly trusts that
+those in authority will, do, and have use that authority rightly. Because they
+use their authority correctly for the common good, they are justified in their
+actions. He has, after all, been raised in the shadow of [Dumbledore][]'s
 utilitarianism, and so this is no surprise.
 
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/>
@@ -23,7 +22,8 @@ this, he continues to work for the Ministry throughout the period of
 
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>
 
-This Percy is well represented in works such as, but not limited to, sbmcneil's _[Remember][]_. <!-- cspell: disable-line -->
+This Percy is well represented in works such as, but not limited to, sbmcneil's
+_[Remember][]_. <!-- cspell: disable-line -->
 
 [Remember]: https://www.fanfiction.net/s/4936039
 
@@ -31,12 +31,12 @@ This Percy is well represented in works such as, but not limited to, sbmcneil's 
 
 The second is the infiltrator. This Percy, either of his own initiative, or at
 the direction of Dumbledore, _does_ know that something is wrong, but believes
-he can do more good estranged from his family than united with them. He
-secretly sabotages the work of the so called "muggleborn commission" or in
-other ways acts as an Order of the Phoenix spy within the Ministry. He is
-estranged from his family because he does not trust them to be able to
-_pretend_ to be estranged, and only by _being_ estranged can he manoeuvre himself
-into the position of trust necessary to be an effective spy/saboteur.
+he can do more good estranged from his family than united with them. He secretly
+sabotages the work of the so called "muggleborn commission" or in other ways
+acts as an Order of the Phoenix spy within the Ministry. He is estranged from
+his family because he does not trust them to be able to _pretend_ to be
+estranged, and only by _being_ estranged can he manoeuvre himself into the
+position of trust necessary to be an effective spy/saboteur.
 
 This Percy might not have felt able to explain all of this at their reunion at
 the room of requirement, and may have settled for appearing less than he is, so
@@ -49,6 +49,5 @@ sacrifice?
 ### Conclusion
 
 Both of these are almost equally possible. The second is far more satisfying,
-the former unfortunately somewhat more likely, and probably if I analyse
-deeply enough, more fitting with his character as (minimally) revealed in the
-books.
+the former unfortunately somewhat more likely, and probably if I analyse deeply
+enough, more fitting with his character as (minimally) revealed in the books.

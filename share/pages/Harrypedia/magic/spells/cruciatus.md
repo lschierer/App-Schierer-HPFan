@@ -1,8 +1,8 @@
 ---
 collection: Harrypedia
-type: "spell"
+type: 'spell'
 title: Cruciatus
-spells: "Cruciatus"
+spells: 'Cruciatus'
 author: Luke Schierer
 ---
 
@@ -16,8 +16,6 @@ torture the person
 
 ## Found in
 
-Primary Cannon
-: citation needed.
+Primary Cannon : citation needed.
 
-Secondary Cannon
-: citation needed.
+Secondary Cannon : citation needed.

@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: "spell"
+type: 'spell'
 title: Furnunculus
 spells: Furnunculus
 author: Luke Schierer
@@ -12,7 +12,8 @@ Charm
 
 ## Description
 
-Documented as [Dark Magic], this causes a person to break out in boils/pimples when it came in contact with their skin.
+Documented as [Dark Magic], this causes a person to break out in boils/pimples
+when it came in contact with their skin.
 
 [Dark Magic]: ../dark/
 
@@ -20,13 +21,10 @@ insert description
 
 ## Found in
 
-Primary Cannon
-: citation needed.
+Primary Cannon : citation needed.
 
-Secondary Cannon
-: citation needed.
+Secondary Cannon : citation needed.
 
-Tertiary Cannon
-: [Harry Potter Wiki](https://harrypotter.fandom.com/)
-"[Pimple Jinx](https://harrypotter.fandom.com/wiki/Pimple_Jinx)"
-Last Edited: 2022-01-28.
+Tertiary Cannon : [Harry Potter Wiki](https://harrypotter.fandom.com/)
+"[Pimple Jinx](https://harrypotter.fandom.com/wiki/Pimple_Jinx)" Last Edited:
+2022-01-28.

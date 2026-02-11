@@ -8,11 +8,11 @@ author: Luke Schierer
 
 Any number of fan fiction authors will come up with some alternate description
 of what [Harry][] looks like. This may be because he had a better childhood,
-took a healing potion, participated in a healing ritual, or underwent some
-other form of magical transformation. The results will vary considerably, and
-no doubt reflect that, generally female, author's personal idea of what is
-attractive in a male. Many of these are fairly unrealistic, especially when
-they place [Harry][] at something over six feet tall somewhere in his teens.
+took a healing potion, participated in a healing ritual, or underwent some other
+form of magical transformation. The results will vary considerably, and no doubt
+reflect that, generally female, author's personal idea of what is attractive in
+a male. Many of these are fairly unrealistic, especially when they place
+[Harry][] at something over six feet tall somewhere in his teens.
 
 [Harry]: </Harrypedia/people/Potter/Harry James/>/
 
@@ -27,15 +27,15 @@ percentile to hit that by age 15. So while it is not _impossible_ that the
 speculated healing ritual or potion has helped him to gain this height, in all
 likelihood both parents would have to be noticeably very tall people.[^220622-3]
 
-Given that we hear over and over again that [Harry][] _without_ extraordinary height
-looks just like [James][], this seems … unlikely. We ought to be reading that he
-"looks just like [James][], except shorter." Since we do not, my guess is that
-[James][] was _not_ exceptionally tall. While [James][] _is_ described as
-tall, and it is common for children to be taller than their parents, record
-breaking height is almost always commented on when describing someone.
-[James][] would need to be truly exceptionally tall to produce this six foot
-[Harry][], not simply "tall." Notice for example how both [Hagrid][] and
-[Flitwick][] are described.
+Given that we hear over and over again that [Harry][] _without_ extraordinary
+height looks just like [James][], this seems … unlikely. We ought to be reading
+that he "looks just like [James][], except shorter." Since we do not, my guess
+is that [James][] was _not_ exceptionally tall. While [James][] _is_ described
+as tall, and it is common for children to be taller than their parents, record
+breaking height is almost always commented on when describing someone. [James][]
+would need to be truly exceptionally tall to produce this six foot [Harry][],
+not simply "tall." Notice for example how both [Hagrid][] and [Flitwick][] are
+described.
 
 [James]: /Harrypedia/people/Potter/James/
 [Hagrid]: /Harrypedia/people/Hagrid/Rubeus/
@@ -52,37 +52,38 @@ apparently increases every year through out her teen years.[^220726-11] If the
 same is true of her bust size (which is awkward to google), then that may
 explain what the author was _trying_ to convey in my one example.
 
-[^220726-11]: 
+[^220726-11]:
     [HealthLine](https://www.healthline.com/)
     "[What Is the Average Waist Size for Women?](https://www.healthline.com/health/average-waist-size-for-women)"
-    Last Medically Reviewed 2019-06-12. (their version of a copyright date). Last Viewed: 2022-07-26
+    Last Medically Reviewed 2019-06-12. (their version of a copyright date).
+    Last Viewed: 2022-07-26
 
-[^220726-8]: 
+[^220726-8]:
     kb0. _[The Lost Year](https://www.fanfiction.net/s/13815274)_
     [Chapter 4](https://www.fanfiction.net/s/13815274/4/The-Lost-Year)
     Published: 2021-02-09. Last Viewed: 2022-07-26
 
-[^220726-10]: 
+[^220726-10]:
     [Royal College of Paediatrics and Child Health](https://www.rcpch.ac.uk/).
     "[GIRLS UK Growth chart 2-18 years](https://www.rcpch.ac.uk/sites/default/files/Girls_2-18_years_growth_chart.pdf)"
     © Copyright RCPCH 2012
 
-[^220726-9]: 
+[^220726-9]:
     [Royal College of Paediatrics and Child Health](https://www.rcpch.ac.uk/).
     "[GIRLS UK Growth chart 2-18 years](https://www.rcpch.ac.uk/sites/default/files/Girls_2-18_years_growth_chart.pdf)"
     © Copyright RCPCH 2012
 
-[^220622-1]: 
+[^220622-1]:
     [Royal College of Paediatrics and Child Health](https://www.rcpch.ac.uk/).
     "[BOYS UK Growth chart 2-18 years](https://www.rcpch.ac.uk/sites/default/files/Boys_2-18_years_growth_chart.pdf)"
     © Copyright RCPCH 2012
 
-[^220622-2]: 
+[^220622-2]:
     [Royal College of Paediatrics and Child Health](https://www.rcpch.ac.uk/).
     "[BOYS UK Growth chart 2-18 years](https://www.rcpch.ac.uk/sites/default/files/Boys_2-18_years_growth_chart.pdf)"
     © Copyright RCPCH 2012
 
-[^220622-3]: 
+[^220622-3]:
     [Royal College of Paediatrics and Child Health](https://www.rcpch.ac.uk/).
     "[BOYS UK Growth chart 2-18 years](https://www.rcpch.ac.uk/sites/default/files/Boys_2-18_years_growth_chart.pdf)"
     © Copyright RCPCH 2012. See the section on Predicting height based on

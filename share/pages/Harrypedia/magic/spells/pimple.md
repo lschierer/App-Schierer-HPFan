@@ -1,8 +1,8 @@
 ---
 collection: Harrypedia
-type: "spell"
+type: 'spell'
 title: Pimple
-spells: "Pimple"
+spells: 'Pimple'
 author:
 ---
 
@@ -16,8 +16,6 @@ insert description
 
 ## Found in
 
-Primary Cannon
-: citation needed.
+Primary Cannon : citation needed.
 
-Secondary Cannon
-: citation needed.
+Secondary Cannon : citation needed.

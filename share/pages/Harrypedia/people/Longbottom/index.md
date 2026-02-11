@@ -1,6 +1,7 @@
 ---
 author: Luke Schierer
 ---
+
 Lots of fanfiction puts the Longbottom family into the nobility. I see no
 indication of Augusta Longbottom being called "Lady Longbottom" outside of
 fanfiction. We have few descriptions of her, but her fox fur is described as

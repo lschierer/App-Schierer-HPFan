@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-title: "hags"
+title: 'hags'
 ---
 
 place holder

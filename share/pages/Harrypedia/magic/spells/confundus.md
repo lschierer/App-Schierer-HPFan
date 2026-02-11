@@ -1,19 +1,21 @@
 ---
 collection: Harrypedia
-type: "spell"
+type: 'spell'
 title: Confundus
-spells: "Confundus"
+spells: 'Confundus'
 author: Luke Schierer
 ---
 
-A somewhat vague description. Can it only be used to make someone forget something, or also to falsely remember something?
+A somewhat vague description. Can it only be used to make someone forget
+something, or also to falsely remember something?
 
 ## Found in
 
-Primary Cannon
-: citation needed.
+Primary Cannon : citation needed.
 
-Secondary Cannon
-: [magicscrapbook](https://magicscrapbook.tumblr.com/) <!-- cspell: disable-line -->
+Secondary Cannon : [magicscrapbook](https://magicscrapbook.tumblr.com/)
+
+<!-- cspell: disable-line -->
+
 "[‘Book of Spells’ transcript](https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript)"
 Last Viewed 2021-09-30.

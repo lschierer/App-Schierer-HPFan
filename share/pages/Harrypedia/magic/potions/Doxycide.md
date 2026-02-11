@@ -2,8 +2,8 @@
 collection: Harrypedia
 title: Doxycide
 author: Luke Schierer
-type: "potion"
-spells: "Doxycide"
+type: 'potion'
+spells: 'Doxycide'
 ---
 
 ## Description
