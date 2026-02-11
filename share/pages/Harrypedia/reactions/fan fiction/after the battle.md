@@ -68,12 +68,13 @@ pet peeves I have where I think authors frequently go wrong.
   - The inverse is equally weird. [Ginny] _is_ fiercely independent, but equally
     fiercely loves her family.
 
-[horcrux]: /Harrypedia/magic/dark/Horcruxes/
+[horcrux]: /Harrypedia/magic/dark/Horcruxes
 
-[Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/>/
-[Harry]: </Harrypedia/people/Potter/Harry James/>/ [Ginny]:
-</Harrypedia/people/Weasley/Ginevra Molly/>/ [Hogwarts]: /Harrypedia/Hogwarts//
-[Neville]: /Harrypedia/people/Longbottom/Neville/
+[Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
+[Harry]: </Harrypedia/people/Potter/Harry James>
+[Ginny]: </Harrypedia/people/Weasley/Ginevra Molly> 
+[Hogwarts]: /Harrypedia/Hogwarts
+[Neville]: /Harrypedia/people/Longbottom/Neville
 
 [^240424-4]:
     Mrs. J. K. Rowling. _[Harry Potter and the Deathly Hallows]_ better citation
@@ -83,5 +84,4 @@ pet peeves I have where I think authors frequently go wrong.
     Mrs. J. K. Rowling. _[Harry Potter and the Deathly Hallows]_ better citation
     needed.
 
-[Harry Potter and the Deathly Hallows]:
-  https://www.librarything.com/work/3577382
+[Harry Potter and the Deathly Hallows]: https://www.librarything.com/work/3577382

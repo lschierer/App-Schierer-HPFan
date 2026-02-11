@@ -1224,7 +1224,7 @@ directors. So, what happened in this meeting?”
 
 “I do not know,” Marjolaine Prévoyez complained. “I was not allowed to
 participate. Ever since that bloody Potter turned up, it has been horrendous
-here. All the students worship him, and I receive no respect anymore. I think it
+here. All the students worship him, and I receive no respect any more. I think it
 might have had something to do with the Quidditch Tournament.”
 
 “He has no respect for the value of our teaching,” Sibyll said coldly. “It is a

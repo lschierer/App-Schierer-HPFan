@@ -148,7 +148,7 @@ Hermione nodded fervently.
 ---
 
 Harry looked at his bed and frowned thoughtfully. Underwear, socks, suit, jeans,
-t-shirt, jacket, tuxedo, several shirts, and a pair of swim shorts were neatly
+t-shirt, jacket, dinner suit, several shirts, and a pair of swim shorts were neatly
 folded on his bed alongside three pairs of shoes. He couldn’t think of anything
 else he might need.
 
@@ -469,7 +469,7 @@ Jean smiled. “Gabrielle, will you show Harry to the kitchen and then meet us i
 the lounge?”
 
 “Of course, Papa,” Gabrielle said. “If you will accompany me, Harry, I will
-escort you to the kitchens, and then give you a quick tour of our chateau.”
+escort you to the kitchens, and then give you a quick tour of our château.”
 
 As Harry and Gabrielle walked out, Aimée turned to her oldest daughter. “Will
 you and William excuse us for a few minutes?”
@@ -514,7 +514,7 @@ you not? I know you far too well for you to hide something from me. Why?”
 “It’s not for my politics,” Jean said instantly, proving that he had at least
 learnt a few things in their marriage. “What does any man want for his daughter,
 but the best possible partner for her? There are not many chevaliers left in the
-world anymore, and I want the best one for my daughter.”
+world any more, and I want the best one for my daughter.”
 
 “She has you wrapped around her little finger,” she said with a slight smile.
 

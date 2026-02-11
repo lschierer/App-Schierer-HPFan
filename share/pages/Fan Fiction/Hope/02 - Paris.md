@@ -445,7 +445,7 @@ She ruthlessly thrust those feelings away. “I am sorry,” she said, looking d
 “We didn’t expect Professor Idiot to do something so stupid.”
 
 There was a pause, and she looked up hopefully. The passion seemed to leave his
-eyes, replaced by amusement. He leant against the doorframe and laughed under
+eyes, replaced by amusement. He leant against the door frame and laughed under
 his breath. “Professor Idiot?”
 
 “An informal nickname,” Gabrielle replied with a small smile. “Her real name is
@@ -1323,7 +1323,7 @@ very encouraging towards him and Gabrielle, and it didn’t really make sense.
 Even if she was older than normal, he was still a professor.
 
 He’d noticed that she was certainly interested in him. He’d dated enough girls
-to recognise the signs of that by now, and he wasn’t exactly fourteen anymore
+to recognise the signs of that by now, and he wasn’t exactly fourteen any more
 and a lonely virgin.
 
 Gabrielle herself wasn’t a problem. Apart from being the most beautiful girl he

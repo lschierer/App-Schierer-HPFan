@@ -53,9 +53,9 @@ Queen Elizabeth and thus take over the throne of England.[^230104-1]
     Mrs. J. K. Rowling. "[The Malfoy Family][]" _[The J.K. Rowling Index][]_
     2012-07-10.
 
-[The J.K. Rowling Index]: https://www.rowlingindex.org/
-[The Malfoy Family]: https://www.rowlingindex.org/work/pmmf/
-[Ginny]: </Harrypedia/people/Weasley/Ginevra Molly/>
+[The J.K. Rowling Index]: https://www.rowlingindex.org
+[The Malfoy Family]: https://www.rowlingindex.org/work/pmmf
 
-[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>/ [Draco]:
-</Harrypedia/people/Malfoy/Draco Lucius/>
+[Ginny]: </Harrypedia/people/Weasley/Ginevra Molly>
+[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo> 
+[Draco]: </Harrypedia/people/Malfoy/Draco Lucius>

@@ -126,10 +126,8 @@ from bystanders.
 
 In other words, this scene is precisely as innocent as it appears to most eleven
 year old readers encountering it for the first time. That being said, I have
-encountered one reasonably amusing alternative explanation. [RoseLilian] writes
-in one of her works that the [Ministry] arranges for a
-
-<!-- cspell: disable-line --> family to arrive towards the end of the boarding
+encountered one reasonably amusing alternative explanation. [This author] writes
+in one of her works that the [Ministry] arranges for a family to arrive towards the end of the boarding
 
 period, and to be purposefully noisy while actually being under charms to avoid
 attracting muggle attention. A magical child afraid or unsure of how to deal
@@ -148,7 +146,9 @@ notice. It is also believable that as [Harry] starts to be in more danger, the
     [Chapter 5](https://www.fanfiction.net/s/13049901/5/The-difference-a-good-solicitor-makes)
     Published: 2018-08-29. Updated: 2021-04-20
 
+[This author]: https://www.fanfiction.net/u/8209039/RoseLilian
 [RoseLilian]: https://www.fanfiction.net/u/8209039/RoseLilian
+
 [The difference a good solicitor makes]: https://www.fanfiction.net/s/13049901/
 
 [^211014-1]:

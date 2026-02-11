@@ -28,4 +28,4 @@ solidity to its moral framework.
 
 [Wednesday Addams]: https://en.wikipedia.org/wiki/Wednesday_Addams
 
-[Harry]: </Harrypedia/people/Potter/Harry James/>/
+[Harry]: </Harrypedia/people/Potter/Harry James>

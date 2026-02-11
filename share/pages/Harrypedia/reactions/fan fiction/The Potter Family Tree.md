@@ -16,7 +16,7 @@ certain that the information on this [Potter] specific page is partial, we can
 make certain conclusions. From the birth and death dates for [Dorea], we can
 conclude with a reasonable level of certitude that she does _not_ represent a
 missing generation in [Harry]'s family tree, despite our certainty that such
-generations exist. Rather, she must have married into an undescribed side branch
+generations exist. Rather, she must have married into an un-described side branch
 to the family. The dates provided simply do not allow for any other reasonable
 conclusion.
 

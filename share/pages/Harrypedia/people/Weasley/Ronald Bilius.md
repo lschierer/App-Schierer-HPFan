@@ -13,7 +13,7 @@ So really, for the first three books, Ron is pretty much the good guy. Yes,his
 comments about [Hermione] being a know-it-all were insensitive, but he did
 immediately felt guilty when he realized she heard them.[^240313-1] Recall that
 he _is_ only eleven, and all eleven year old children have quite a bit to learn
-about appropriate behavior. Similarly, he probably ought to be more studious,
+about appropriate behaviour. Similarly, he probably ought to be more studious,
 but honestly, how many of us at that age really cared about our school work as
 much as we ought? Hogwarts has appalling oversight for the students unless, like
 at least one of the movies, you add in mandatory study halls that are not

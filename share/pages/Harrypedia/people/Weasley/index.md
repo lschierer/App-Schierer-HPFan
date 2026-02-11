@@ -70,14 +70,17 @@ give much space for [Charlie]'s to move.
 [Quidditch]: /Harrypedia/Quidditch/
 [Gryffindor]: /Harrypedia/Hogwarts/Gryffindor/
 
-[Harry]: </Harrypedia/people/Potter/Harry James/>/ [Ginny]:
-</Harrypedia/people/Weasley/Ginevra Molly/> [Ron]:
-</Harrypedia/people/Weasley/Ronald Bilius/> [George]:
-/Harrypedia/people/Weasley/George/ [Fred]: /Harrypedia/people/Weasley/Fred/
-[Percy]: </Harrypedia/people/Weasley/Percy Ignatius/> [Charlie]:
-/Harrypedia/people/Weasley/Charlie/ [Bill]: </Harrypedia/people/Weasley/William
-Arthur/> [Arthur]: /Harrypedia/people/Weasley/Arthur/ [Molly]:
-/Harrypedia/people/Prewett/Molly/ [lexicon]: https://www.hp-lexicon.org
+[Harry]: </Harrypedia/people/Potter/Harry James> 
+[Ginny]: </Harrypedia/people/Weasley/Ginevra Molly> 
+[Ron]: </Harrypedia/people/Weasley/Ronald Bilius> 
+[George]: /Harrypedia/people/Weasley/George 
+[Fred]: /Harrypedia/people/Weasley/Fred
+[Percy]: </Harrypedia/people/Weasley/Percy Ignatius> 
+[Charlie]: /Harrypedia/people/Weasley/Charlie 
+[Bill]: </Harrypedia/people/Weasley/William Arthur> 
+[Arthur]: /Harrypedia/people/Weasley/Arthur 
+[Molly]: /Harrypedia/people/Prewett/Molly 
+[lexicon]: https://www.hp-lexicon.org
 
 [^20210601-3]:
     Mrs. J. K. Rowling.

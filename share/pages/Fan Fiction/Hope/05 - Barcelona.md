@@ -11,7 +11,7 @@ Well, it would have been serene if there weren’t over four hundred students, a
 with brooms, standing in small groups on the grass.
 
 Harry shook his head as he looked over them, feeling a little overwhelmed. He’d
-announced tryouts for the house teams and had said that the team for the
+announced try-outs for the house teams and had said that the team for the
 inter-school matches would be picked from the house teams.
 
 He certainly hadn’t expected nearly half of the school to turn up.
@@ -655,7 +655,7 @@ to pace.
 
 “No?” Ron gulped, suddenly looking nervous.
 
-“That you and Hermione don’t seem to realise that I’m not fifteen anymore. I’m a
+“That you and Hermione don’t seem to realise that I’m not fifteen any more. I’m a
 big boy, Ron. I’ve seen more countries than most people ever do. I’ve played in
 and won the World Cup of Quidditch, I’ve got more money than I can spend in
 several hundred lifetimes, and all of it is invested to earn more than
@@ -1943,7 +1943,7 @@ eyes equally, without hesitation, allowing him to see her as she was, without
 fear or hesitation.
 
 And he nodded slowly, accepting her explanations, and decided then to not be
-bothered by what happened anymore. It was a strange dichotomy that he hated
+bothered by what happened any more. It was a strange dichotomy that he hated
 being manipulated, yet that manipulation had led him here, to a beautiful girl
 who made no secret of loving him for himself, and not any of the public faces he
 had shown over the last few years. He knew that it would not matter if he wasn’t

@@ -35,13 +35,13 @@ jock.[^240130-3] This is a combination of hatred and self-delusion speaking.
 
 [Snape]: /Harrypedia/people/Snape/Severus/
 [James]: /Harrypedia/people/Potter/James/
-
-[Sirius]: </Harrypedia/people/Black/Sirius III/>/ [Lupin]:
-</Harrypedia/people/Lupin/Remus John/>/ [Remus]: </Harrypedia/people/Lupin/Remus
-John/>/ [Remus Lupin]: </Harrypedia/people/Lupin/Remus John/>/ [Hermione]:
-</Harrypedia/people/Granger/Hermione Jean/>/ [Harry Potter and the Prisoner of
-Azkaban]: https://www.librarything.com/work/2742161 [book seven]:
-https://www.librarything.com/work/3577382
+[Sirius]: </Harrypedia/people/Black/Sirius III>
+[Lupin]: </Harrypedia/people/Lupin/Remus John> 
+[Remus]: </Harrypedia/people/Lupin/Remus John> 
+[Remus Lupin]: </Harrypedia/people/Lupin/Remus John> 
+[Hermione]: </Harrypedia/people/Granger/Hermione Jean> 
+[Harry Potter and the Prisoner of Azkaban]: https://www.librarything.com/work/2742161 
+[book seven]: https://www.librarything.com/work/3577382
 
 [^240130-1]:
     Mrs. J. K. Rowling. _[Harry Potter and the Prisoner of Azkaban]_ p. 363,

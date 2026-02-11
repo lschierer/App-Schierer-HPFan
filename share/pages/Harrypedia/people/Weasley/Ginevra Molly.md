@@ -27,11 +27,7 @@ Ginny's behaviour is unexplained, to my knowledge, by cannon sources.
 > someone whose father runs The Quibbler.”[^20210513-1]
 
 When reading this keep in mind that this is filtered through [Hermione][]. While
-it looks fairly harsh, PercabethHinny noted in _Discovering the Truth_
-
-<!-- cspell: disable-line --> that [Hermione][] _might_ be misrepresenting
-
-Ginny's actual words (emphasis mine).[^20210513-2]
+it looks fairly harsh, as noted in _[Discovering the Truth]_, it possible that [Hermione][] _might_ be misrepresenting Ginny's actual words (emphasis mine).[^20210513-2]
 
 [Hermione]: <../Granger/Hermione Jean/>
 
@@ -42,8 +38,10 @@ Ginny's actual words (emphasis mine).[^20210513-2]
 
 [^20210513-2]:
     PercabethHinny. <!-- cspell: disable-line -->
-    _[Discovering the Truth](https://www.wattpad.com/story/51615824-discovering-the-truth-harry-potter)_
+    _[Discovering the Truth]_
     Last Updated: 2019-05-22. Last Viewed: 2021-05-13.
+
+[Discovering the Truth]: <https://www.wattpad.com/story/51615824-discovering-the-truth-harry-potter>    
 
 [^20210513-1]:
     Mrs. J. K. Rowling.

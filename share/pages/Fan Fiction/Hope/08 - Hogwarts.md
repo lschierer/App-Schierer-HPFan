@@ -817,7 +817,7 @@ sure that she was in earshot of the reporters.”
 
 “Just happened?” Aimée asked, a sceptical grin on her face.
 
-“Exactly,” Harry grinned. “And before you interrogate me anymore, it’s time to
+“Exactly,” Harry grinned. “And before you interrogate me any more, it’s time to
 follow the others in.”
 
 Harry, Jean and Aimée were at the back of the line as they trooped ceremoniously
@@ -1141,7 +1141,7 @@ normally not get involved, I will not have my children living in fear. I am
 doing what I can to offset their influence, but it is difficult. The faculty are
 split along two lines. Filius is firmly on my side, and I rely on him a lot.”
 
-Harry nodded. “I can’t let this go on anymore, Min.”
+Harry nodded. “I can’t let this go on any more, Min.”
 
 “No,” she agreed. “You wouldn’t.”
 
@@ -1974,7 +1974,7 @@ Harry laughed.
 “Don’t encourage her,” Aimée begged playfully. “Jean is not ready for this.”
 
 “I’m sorry, Papa,” Gabrielle apologised. “I promise to try not to scare you
-anymore.”
+any more.”
 
 Jean groaned and leant back in his chair. “Evil child.”
 

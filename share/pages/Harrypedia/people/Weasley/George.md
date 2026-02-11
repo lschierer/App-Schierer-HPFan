@@ -36,5 +36,5 @@ into them, must have done much to be proud of and much to regret.
     along for the ride. I cannot believe that George was that passive in his own
     life.
 
-[Fred]: /Harrypedia/people/Weasley/Fred/
-[Weasley]: /Harrypedia/people/Weasley/
+[Fred]: /Harrypedia/people/Weasley/Fred
+[Weasley]: /Harrypedia/people/Weasley

@@ -2167,7 +2167,7 @@ Harry nodded.
 was hoping that you’d be able to help us pick someone who’d actually be able to
 teach us properly.”
 
-“Professor Dumbledore and I don’t really get on anymore,” Harry said quietly.
+“Professor Dumbledore and I don’t really get on any more,” Harry said quietly.
 “But I’ll happily suggest someone to Professor McGonagall, and have a word with
 a few of the other Professors to see what we can do. The person I’m thinking of
 is an extremely good flying coach, and he might be able to sort out the mess

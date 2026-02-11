@@ -20,7 +20,7 @@ bank and the [Goblins] as a whole?
   EdStargazer offers a view where vaults are, with the exception of trust
   vaults, just vaults, and thus _do_ just differ in size and the nature of the
   protections on them. Gringotts as a bank _does_ offer other types of wealth
-  management services, and outside of uninventoried household furnishings, the
+  management services, and outside of un-inventoried household furnishings, the
   bulk of the Potter wealth is invested in such offerings. However, at this
   time, it generates little more than is needed for [Harry] to live off of
   comfortably but not extravagantly.

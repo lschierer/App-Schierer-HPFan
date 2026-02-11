@@ -284,11 +284,8 @@ do _not_ relax around them. [Snape] would have picked _anywhere_ else on the
 grounds. He would have _stayed inside_ rather than willingly putting himself at
 risk that way.
 
-On a side note, in his work _[Toxic]_, WitandAmbition makes very similar
-
-<!-- cspell: disable-line --> points, but focuses more on [Lily] and [Snape]
-
-starting further back in time to paint much the same picture.
+<!-- cspell: disable-next-line -->
+On a side note, in his work _[Toxic]_, WitandAmbition makes very similar points, but focuses more on [Lily] and [Snape] starting further back in time to paint much the same picture.
 
 [Toxic]: https://www.fanfiction.net/s/12795425/2/Toxic
 

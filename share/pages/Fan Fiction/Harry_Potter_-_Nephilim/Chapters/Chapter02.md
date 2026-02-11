@@ -160,7 +160,7 @@ risks the hard way.
 [^201214-2]:
     look up presbylaryngis for where I got this idea. It is primarily age
     related, but from what I read, can happen for other reasons. I realise this
-    is _extremely_ unlikely.
+    is _extremely_ unlikely. However, see [Appendix H]
 
 [^210208-2]:
     Kids in England start school at age four. See "[THE BRITISH EDUCATION
@@ -168,5 +168,6 @@ risks the hard way.
     last viewed 2021-02-08.
 
 [TBES]: https://www.learnenglish.de/culture/educationculture.html
+[Appendix H]: <../Appendices/Appendix_H>
 
 [^210208-1]: See note about Lily and free will in Chapter 1.

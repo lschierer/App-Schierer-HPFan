@@ -15,9 +15,9 @@ protected him from the worst of the effects of his upbringing.
 
 [Dursleys]: /Harrypedia/people/Dursley/
 
+<!-- cspell: disable-next-line -->
 [_Don't Touch Me_](https://archiveofourown.org/works/702684) by ivybelle
-
-<!-- cspell: disable-line --> explores as a one-shot from when Harry and [Ginny]
+explores as a one-shot from when Harry and [Ginny]
 
 are dating the idea that perhaps Harry is simply really really good at hiding
 his reactions.[^200527-1]
@@ -25,10 +25,8 @@ his reactions.[^200527-1]
 [Ginny]: </Harrypedia/people/Weasley/Ginevra Molly/>
 
 [^200527-1]:
-    ivybelle. _[Don't Touch Me](https://archiveofourown.org/works/702684)_,
-
-    <!-- cspell: disable-line -->
-
+    ivybelle.  <!-- cspell: disable-line -->
+    _[Don't Touch Me](https://archiveofourown.org/works/702684)_,
     [Archive of Our Own](https://archiveofourown.org/) last viewed 2020-05-27.
 
 ### Slytherin?

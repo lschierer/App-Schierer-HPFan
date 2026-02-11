@@ -42,6 +42,8 @@ ultimately be trusted to be real.
 [Kim]: https://www.gutenberg.org/ebooks/2226
 [Oliver Twist]: https://www.gutenberg.org/ebooks/730
 
+<!-- cspell: disable -->
+
 [^240319-1]:
     [A.S. Akkalon](https://www.asakkalon.com/author/iamalecia/)
     "[The problem with Harry Potter and why it doesn’t matter](https://www.asakkalon.com/problem-with-harry-potter/)"
@@ -51,3 +53,5 @@ ultimately be trusted to be real.
     [A.S. Akkalon](https://www.asakkalon.com/author/iamalecia/)
     "[The problem with Harry Potter and why it doesn’t matter](https://www.asakkalon.com/problem-with-harry-potter/)"
     _[A.S. Akkalon – Fantasy Author](https://www.asakkalon.com/)_ 2023-08-23
+
+<!-- cspell: enable -->

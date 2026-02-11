@@ -826,7 +826,7 @@ Harry shrugged, not sure what he could say to that.
 “Of course,” Harry said absently, as he looked around the grounds. “I wasn’t
 sure what to expect.”
 
-Olympe laughed at his expression. “This chateau was built before the French
+Olympe laughed at his expression. “This château was built before the French
 Revolution, and it was handed over to us in 1769. Obviously, it was added to by
 the Headmaster at the time, Gaston Robèrt, who spent the next twenty years
 adding the necessary magic to turn it into a full magical school. We moved from
@@ -1213,7 +1213,7 @@ And I know if I do that I will kill a part of him.
 “He has sacrificed everything so far in his life. He feels like an outcast in
 his own country, his family is dead, he has exactly two close friends, and a
 slightly wider circle of good friends, and he can’t even do the one thing he
-loves anymore.”
+loves any more.”
 
 She paused, tears in her eyes, her chest heaving. “So please, my darling court
 flower,” she whispered. “Don’t tell me I’m underestimating myself. I know

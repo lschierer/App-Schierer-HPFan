@@ -303,7 +303,7 @@ unconscious, onto the ground.
 
 He half smiled; abusing Draco always cheered him up, and the ferret had still
 not learnt that the sort of crap he had put up with as a student wasn’t going to
-work anymore.
+work any more.
 
 Still, it had only been a few years, and Draco was a notoriously slow learner.
 
@@ -514,7 +514,7 @@ She paused but didn’t look at him.
 She turned slowly. “Are you playing with me?” she asked softly, her eyes now
 full of pain.
 
-“Not anymore,” he said. “I had to know if you were serious about wanting me or
+“Not any more,” he said. “I had to know if you were serious about wanting me or
 not. I’m not sorry for putting you through that, because now I know that you
 are. You’re not exactly repulsive, Gabrielle, and I do like you. Don’t think I’m
 over everything that has happened. I’m not, definitely not. All I’m saying is

@@ -26,8 +26,8 @@ intelligence to understand your intent. This avoids many of the problems with
 the first version, where every animal, or some subset there of (some authors try
 to distinguish between magical and non-magical animals), is always intelligent.
 
-[Sirius]: </Harrypedia/people/Black/Sirius III/>/ [Azkaban]:
-/Harrypedia/azkaban/
+[Sirius]: </Harrypedia/people/Black/Sirius III/> 
+[Azkaban]: /Harrypedia/azkaban/
 
 [^240327-4]:
     Mrs. J. K. Rowling. _[Harry Potter and the Prisoner of Azkaban]_ Bloomsbury

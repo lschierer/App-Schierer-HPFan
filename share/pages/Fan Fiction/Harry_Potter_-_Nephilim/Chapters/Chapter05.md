@@ -23,7 +23,7 @@ ways to be disruptive. Last year, he had used his legilimency to redirect
 Dudley. The result was not that Dudley was behaving any better, rather, he was
 simply more random in his selection of a target. That was not ideal, but again,
 sometimes Harry just needed a break. Either way, this year it was not Dudley's
-behavior that determined his (Harry's) participation, it was something else. It
+behaviour that determined his (Harry's) participation, it was something else. It
 took a while for Harry to make the key connection: in any activity where the
 teacher worked down a checklist, timed swimming trials for example,[^210810-1]
 he would be called on. But in anything requiring teams, the teacher would

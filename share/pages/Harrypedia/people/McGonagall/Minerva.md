@@ -6,8 +6,7 @@ I really want to like Professor McGonagall, but so much that happens at
 [Hogwarts] is troubling that I am conflicted about her. She is, in some ways,
 the quintessential Harry Potter Series [adult]. _The Board_[^190823-1] by
 [Clell65619][dmffan] shows a critical view of her that I am, despite myself,
-
-<!-- cspell: disable-line --> really drawn to. This view is more or less
+really drawn to. This view is more or less
 
 seconded by _[When Is It a Contract][WIIAC]_ which focuses on the conflicts
 between her roles as Deputy and Head of House.[^210322-2]
@@ -190,12 +189,14 @@ incorporating non-magical classes no matter how needed or useful they might be.
 [Harry]: </Harrypedia/people/Potter/Harry James/>
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean/>
 
-[RBW1]: </Harrypedia/people/Weasley/Ronald Bilius/>/ [AD1]:
-</Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/> [Hogwarts]:
-/Harrypedia/Hogwarts/ [OCUC1]: https://www.fanfiction.net/s/13903544/ [CTB2]:
-https://archiveofourown.org/works/156533 [WMFA1]:
-https://www.fanfiction.net/s/4175909 [TBoB]:
-https://www.fanfiction.net/s/5435295
+[RBW1]: </Harrypedia/people/Weasley/Ronald Bilius/> 
+[AD1]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian> 
+[Hogwarts]: /Harrypedia/Hogwarts 
+
+[OCUC1]: https://www.fanfiction.net/s/13903544 
+[CTB2]: https://archiveofourown.org/works/156533 
+[WMFA1]: https://www.fanfiction.net/s/4175909 
+[TBoB]: https://www.fanfiction.net/s/5435295
 
 [^220729-2]:
     Darth Mars. _[The Bonds of Blood][TBoB]_

@@ -157,7 +157,7 @@ She didn’t pause as she walked straight to the main hall. With any luck, the
 students would just think she overslept slightly.
 
 She walked in and smiled to herself. The noise level didn’t dim, and no one was
-staring at her, well, not anymore than she was normally stared at. It was times
+staring at her, well, not any more than she was normally stared at. It was times
 like this that she wished she could just go up to Harry and kiss him, so that
 everyone would know that she belonged to him and only him.
 
@@ -1614,7 +1614,7 @@ him.
 “You’ve said you’re in love with me, but that can’t be true, because you only
 know a part of me. You know the side I show my friends, the side I show the
 public, but that isn’t me. I’ve shown you because I’ve always been alone, Gabby,
-and I don’t want to be alone anymore.
+and I don’t want to be alone any more.
 
 “I’m a man who is sometimes more comfortable with dead people than live ones,
 who likes history as much as he likes sports and who hides his true face from

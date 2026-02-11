@@ -27,10 +27,10 @@ collection: Nephilim
     periodically these rules stop working for no known reason. Whether or not
     these rules work is determined on a _per trait_ basis.
 1.  Any time these rules stop working, there is a significant drop in any
-    behavior that cannot be explained by normal (mundane) natural philosophy,
-    - Inexplicable behavior, while it might get vanishingly small, will never
+    behaviour that cannot be explained by normal (mundane) natural philosophy,
+    - Inexplicable behaviour, while it might get vanishingly small, will never
       _fully_ disappear.
-    - It takes multiple generations for any inexplicable behavior to reach the
+    - It takes multiple generations for any inexplicable behaviour to reach the
       point where it can be described as "vanishingly small."
 1.  Most magical creatures, including the nephilim, are a mix of magical and
     non-magical traits. For any given creature, the vast majority of traits seem
@@ -143,7 +143,7 @@ Each trait has:
 - a 1% chance of something truly bizarre happening without any outside effect at
   all. Scholars are **_sometimes_** right in attributing causes to these bizarre
   occurrences when they are studied.
-- a 0.5% chance of becoming mundane (total loss of any behavior and ability not
+- a 0.5% chance of becoming mundane (total loss of any behaviour and ability not
   explicable by mundane natural philosophy). Scholars cannot distinguish this
   from the severe drop that occurs when a trait suddenly starts following
   Mendelian genetics.

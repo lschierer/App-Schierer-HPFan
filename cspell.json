@@ -15,6 +15,11 @@
       "name": "user-words",
       "path": "~/.cspell/user-words.txt",
       "addWords": true
+    },
+    {
+      "name": "hope-ignored-words",
+      "path": "./share/pages/Fan Fiction/Hope/.cspell/ignored-words.txt",
+      "addWords": true
     }
   ],  
   "ignorePaths": [
@@ -33,7 +38,7 @@
     {
       "filename": "**/Fan Fiction/Hope/**/*.md",
       "language": "en-GB,fr",
-      "dictionaries": ["en-gb", "fr-fr", "project-words", "user-words"]
+      "dictionaries": ["en-gb", "fr-fr", "project-words", "user-words", "hope-ignored-words"]
     }
   ],
   "import": ["@cspell/dict-fr-fr/cspell-ext.json"]
