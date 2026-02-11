@@ -11,21 +11,22 @@ together and I started thinking about the Harry Potter universe in a different
 way. Mrs. L'Engle's theology in that book is _really really_ sketchy, but like
 many distortions of true Catholic thought, makes for interesting fiction. This
 is not really a cross-over, you will not see the characters from any of the
-non-Rowling works I am taking ideas from here. Similarly, much of the
-"theology" in this work is more like a comic book's depiction of Catholicism
-than a true representation. Mark Twain famously wrote that _[Huckleberry Finn]_
-has neither motive nor moral,[^230719-1] I will allow that I have the motive
-of entertaining at least myself.
+non-Rowling works I am taking ideas from here. Similarly, much of the "theology"
+in this work is more like a comic book's depiction of Catholicism than a true
+representation. Mark Twain famously wrote that _[Huckleberry Finn]_ has neither
+motive nor moral,[^230719-1] I will allow that I have the motive of entertaining
+at least myself.
 
 As I said, that book caused a me to think about the Harry Potter universe
-differently, but it was not until I was reading CmptrWz' _[For Want of
-an Outfit][FWoaO1]_ Chapters 30 through 35 that what I am trying for here
-_really_ came clear. Left unadulterated, Mrs. Rowling's Harry Potter universe
-has too few consequences. I harp on that theme in my [Harrypedia]. This
-fan fiction is a harsher universe. Magic, even if not "dark" and
-_intentionally_ harmful, cannot always be undone or fixed. There can be not
-only life-long repercussions, but _generational_ repercussions from the spells
-and potions that are so often carelessly used.
+differently, but it was not until I was reading CmptrWz' \_[For Want of an
+Outfit][FWoaO1]\_ Chapters 30 through 35 that
+
+what I am trying for here _really_ came clear. Left unadulterated, Mrs.
+Rowling's Harry Potter universe has too few consequences. I harp on that theme
+in my [Harrypedia]. This fan fiction is a harsher universe. Magic, even if not
+"dark" and _intentionally_ harmful, cannot always be undone or fixed. There can
+be not only life-long repercussions, but _generational_ repercussions from the
+spells and potions that are so often carelessly used.
 
 I am taking some things from _[Many Waters][MW2]_, some from C. S. Lewis' _[The
 Screwtape Letters][TSL]_, some from actual Catholic theology, some from various
@@ -43,13 +44,16 @@ the reader may well already be familiar with, and because I am _not_ an awesome
 writer actually capable of pulling off the vision in my head, I am going to set
 the stage and provide some of the world building in the form of Appendices that
 authors generally do not publish. These world building notes are useful to
-understand the story, but are hopefully not truly necessary. Most (everything in the backstory section) are written from the perspective of a researcher within the universe of the narrative. I have attempted to call out the places where that is not true.
+understand the story, but are hopefully not truly necessary. Most (everything in
+the backstory section) are written from the perspective of a researcher within
+the universe of the narrative. I have attempted to call out the places where
+that is not true.
 
 [Huckleberry Finn]: https://www.gutenberg.org/files/76/76-h/76-h.htm
 
 [^230719-1]:
-    Mark Twain. _[Adventures of Huckleberry Finn][Huckleberry Finn]_
-    Author's Notice. [Project Gutenberg] text #76.
+    Mark Twain. _[Adventures of Huckleberry Finn][Huckleberry Finn]_ Author's
+    Notice. [Project Gutenberg] text #76.
 
 [Project Gutenberg]: https://www.gutenberg.org/
 [Harrypedia]: /Harrypedia/
@@ -65,10 +69,12 @@ understand the story, but are hopefully not truly necessary. Most (everything in
 [WP3]: https://wikipedia.org/wiki/Ecclesiology
 
 [^211201-1]:
-    In _[Error of Soul](https://www.fanfiction.net/s/8490518)_
-    Materia-Blade has a line referring to magical folk as Nephilim. I came up
-    with this idea well before I found that work. Just goes to show that there
-    is nothing possible that _someone_ else hasn't also thought of.
+    In _[Error of Soul](https://www.fanfiction.net/s/8490518)_ the author has a
+    line referring to magical folk as Nephilim. I came up with this idea well
+    before I found that work.
+
+    Just goes to show that there is nothing possible that _someone_ else hasn't
+    also thought of.
 
 [^210408-1]:
     Mr. C. S. Lewis. _[The Screwtape Letters][TSL3]_. pp. 120-121.

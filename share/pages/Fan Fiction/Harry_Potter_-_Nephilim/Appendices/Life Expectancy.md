@@ -35,7 +35,11 @@ sidebar:
 |          9          |      58.3       |      82.8       |         177.60          |
 |         10          |      58.3       |      82.8       |         209.83          |
 
-The above table is in part based on Ms. Felicitie C. Bell, Mr. Michael L. Miller. "[Life Tables for the United States Social Security Area 1900-2100]" 2005-08. SSA Pub. No. 11-11536.
+<!-- cspell: disable-next-line -->
+
+The above table is in part based on Ms. Felicitie C. Bell, Mr. Michael L.
+Miller. "[Life Tables for the United States Social Security Area 1900-2100]"
+2005-08. SSA Pub. No. 11-11536.
 
 I'm using 1900's US numbers essentially because 1) I do not have UK numbers 2)
 1900's numbers seams to me a reasonable average between the effects of the magic
@@ -52,18 +56,18 @@ a = x-29.9+29.9e^0.183y
 
 where a is their estimated average lifespan, x is the life expectancy for a
 non-magical person, e is Euler's number, and y is the average of their nine
-power levels (excluding any zeros). For females, using the same variables,
-I settled on the formula
+power levels (excluding any zeros). For females, using the same variables, I
+settled on the formula
 
 ```
 a = x-22.39+22.39e^0.205y
 ```
 
 I chose the different formulas because while it does not fully remove the fact
-that women normally live longer than men, it does massively reduce the delta.
-I decided (while I have no proof of this) a large part of the difference between
-male and female humans has got to be either the effects of more guys involved
-in wars or disease (or both).
+that women normally live longer than men, it does massively reduce the delta. I
+decided (while I have no proof of this) a large part of the difference between
+male and female humans has got to be either the effects of more guys involved in
+wars or disease (or both).
 
 Looking at the above, Euphemia should have had a life expectancy of around 130
 years and Fleamont of around 111 years, yet they had James at around 68 and died
@@ -72,15 +76,15 @@ lifespan. The second says that these are _average_ numbers, and that there are
 still magical diseases that can drastically shorten them (since we know they
 died of dragon pox).
 
-The other interesting thing about this table is the implications of the magical world
-ignoring modern medical advances. You can see that the mundane world has already
-wiped out the difference in lifespan for first few power ranks, and in fact live
-_longer_ than rank one, two, or three powered nephilim do supposing such nephilim
-remain in the magical world. This is something to keep in mind when the books describe
-so many characters as appearing old. People _did_ age faster in earlier centuries,
-due to hardship, poor diet, disease, and a variety of other causes. While the magical
-world may have eliminated much of the mundane disease, the impression is that the
-other problems remain prevalent.
+The other interesting thing about this table is the implications of the magical
+world ignoring modern medical advances. You can see that the mundane world has
+already wiped out the difference in lifespan for first few power ranks, and in
+fact live _longer_ than rank one, two, or three powered nephilim do supposing
+such nephilim remain in the magical world. This is something to keep in mind
+when the books describe so many characters as appearing old. People _did_ age
+faster in earlier centuries, due to hardship, poor diet, disease, and a variety
+of other causes. While the magical world may have eliminated much of the mundane
+disease, the impression is that the other problems remain prevalent.
 
 This gives our central characters life expectancies as follows:
 
@@ -107,4 +111,5 @@ This gives our central characters life expectancies as follows:
 \* Fleur is quarter-veela, see [The Veela Curse].
 
 [The Veela Curse]: <./Veela Pathology>
-[Life Tables for the United States Social Security Area 1900-2100]: https://www.ssa.gov/oact/NOTES/pdf_studies/study120.pdf
+[Life Tables for the United States Social Security Area 1900-2100]:
+  https://www.ssa.gov/oact/NOTES/pdf_studies/study120.pdf

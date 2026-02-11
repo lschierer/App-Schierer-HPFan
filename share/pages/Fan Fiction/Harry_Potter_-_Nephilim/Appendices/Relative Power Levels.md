@@ -10,16 +10,17 @@ author: Luke Schierer
 collection: Nephilim
 ---
 
-The following represent estimates by researchers of the power levels of key figures in this historical chronicle.[^241125-10]
+The following represent estimates by researchers of the power levels of key
+figures in this historical chronicle.[^241125-10]
 
 [^241125-10]:
-    Author's note:
-    Per the inheritance rules, you can follow a different rule for inheritance in
-    each column. As an author this maximises my flexibility in one sense. As a
-    world builder, it comes closer to how real inheritance works. As a
-    documentation producer, it is nightmarish, because it makes understanding where
-    each character came from really complicated. Note, while I find it useful to
-    chart this out, **there is no in-world test that would reveal these numbers.**
+    Author's note: Per the inheritance rules, you can follow a different rule
+    for inheritance in each column. As an author this maximises my flexibility
+    in one sense. As a world builder, it comes closer to how real inheritance
+    works. As a documentation producer, it is nightmarish, because it makes
+    understanding where each character came from really complicated. Note, while
+    I find it useful to chart this out, **there is no in-world test that would
+    reveal these numbers.**
 
 ## Relative power of different characters in each class of power.
 
@@ -59,24 +60,25 @@ The following represent estimates by researchers of the power levels of key figu
 
 #### Hannah
 
-Hannah is a fairly average Hogwarts' student, her strong gift from the Powers will
-not make her particularly stand out in any single branch of magic studied there.
-She has the scores to get into NEWT level classes, but it probably will not be easy
-for her once there.
+Hannah is a fairly average Hogwarts' student, her strong gift from the Powers
+will not make her particularly stand out in any single branch of magic studied
+there. She has the scores to get into NEWT level classes, but it probably will
+not be easy for her once there.
 
-> **Note**
-> These scores correspond with someone who, in the cannon universe, has a panic attack
-> going into her OWL exams. She, unlike the more central characters, truly had to work
-> _really hard_ to get through those and into NEWT classes.
+> **Note** These scores correspond with someone who, in the cannon universe, has
+> a panic attack going into her OWL exams. She, unlike the more central
+> characters, truly had to work _really hard_ to get through those and into NEWT
+> classes.
 
 ### Bones
 
 #### Susan
 
-Susan represents a slightly stronger average student. Her scores are slightly shifted
-towards offence and defence, as befitting someone who comes from a family that [Riddle]
-felt the need to attack personally. However, with an average of 6.77, she does not have
-the history-making scores that characters like [Dumbledore] or [Harry] do.
+Susan represents a slightly stronger average student. Her scores are slightly
+shifted towards offence and defence, as befitting someone who comes from a
+family that [Riddle] felt the need to attack personally. However, with an
+average of 6.77, she does not have the history-making scores that characters
+like [Dumbledore] or [Harry] do.
 
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/>
@@ -95,66 +97,65 @@ designed to consider that.
 
 #### Albus
 
-The canonical books talk about Dumbledore as the most powerful wizard known,
-the only one Riddle fears, and yet Dumbledore cannot defeat Riddle. Why is
-this? Here I provide a possible explanation that is not simply lack of will to
-do so. The devil is in the details. Riddle is exceptionally strong in both
-offensive and defensive magic (Archangels and Angels), Dumbledore is only above
-average offensively, but is superlative in transmutation, and the manipulation
-of physics and chemistry, he is also hard to beat at binding the will and
+The canonical books talk about Dumbledore as the most powerful wizard known, the
+only one Riddle fears, and yet Dumbledore cannot defeat Riddle. Why is this?
+Here I provide a possible explanation that is not simply lack of will to do so.
+The devil is in the details. Riddle is exceptionally strong in both offensive
+and defensive magic (Archangels and Angels), Dumbledore is only above average
+offensively, but is superlative in transmutation, and the manipulation of
+physics and chemistry, he is also hard to beat at binding the will and
 augmenting nature. Unfortunately, Riddle actually equals or exceeds Dumbledore
-in the wand arts _except_ in transmutation and temporary augmentation
-(Virtues). Neither of these makes for an easy combat victory, and Riddle's
-strong offensive magic means that it essentially becomes a stand-off between
-the two. Dumbledore's great intelligence lets him use transmutation and
-out-of-the-box thinking to make up for a lack of directly offensive capability.
+in the wand arts _except_ in transmutation and temporary augmentation (Virtues).
+Neither of these makes for an easy combat victory, and Riddle's strong offensive
+magic means that it essentially becomes a stand-off between the two.
+Dumbledore's great intelligence lets him use transmutation and out-of-the-box
+thinking to make up for a lack of directly offensive capability.
 
 ### Dursley
 
 #### Dudley
 
 Dudley is a male child from a human father and a squibbish nephil mother. He
-stood a good chance of being born pure human. He has a _minuscule_ ability to perceive that
-magic exists, and essentially one totally uncontrolled ability from the
-Seraphim: Dudley is incredibly sensitive to the use of legilimency, he is
-practically an antenna for it. Since Harry is nearly always using legilimency
+stood a good chance of being born pure human. He has a _minuscule_ ability to
+perceive that magic exists, and essentially one totally uncontrolled ability
+from the Seraphim: Dudley is incredibly sensitive to the use of legilimency, he
+is practically an antenna for it. Since Harry is nearly always using legilimency
 (to detect people around him if nothing else), Dudley is _constantly_ reminded
 of Harry's presence magically. Since being reminded of Harry breaks the spell,
-Dudley is effectively a bubble in which Harry is detectable. This bubble
-extends to anyone that _Dudley_ is paying attention to. Dudley (unfortunately
-for Harry) rarely pays any attention to teachers.
+Dudley is effectively a bubble in which Harry is detectable. This bubble extends
+to anyone that _Dudley_ is paying attention to. Dudley (unfortunately for Harry)
+rarely pays any attention to teachers.
 
-> **Note**
-> Unfortunately, I need Dudley to do a fair amount of "Harry Hunting." He falls in that that 4% chance of a partial inheritance from just his mother.
+> **Note** Unfortunately, I need Dudley to do a fair amount of "Harry Hunting."
+> He falls in that that 4% chance of a partial inheritance from just his mother.
 
 ### Evans
 
 #### Lily
 
-Lily inherited the sum total of her parents, plus an unexpected something
-extra.
+Lily inherited the sum total of her parents, plus an unexpected something extra.
 
 ### Granger
 
 #### Hermione
 
 Hermione has very classic scores for the child of two squibs in the Seraphim,
-Thrones, and Principalities categories. Her scores in the Cherubim,
-Archangels, and Angels categories suggest her parents may not in fact _be_
-squibs however. With these scores, my guess is that they are themselves the
-children of squibs, but did not get the required scores to get noticed by the
-magical world. The key thing about Hermione though is the Dominions, Virtues,
-and Powers categories. These three scores all suggest that Hermione benefited
-from that 1% base rate of something bizarre happening.
+Thrones, and Principalities categories. Her scores in the Cherubim, Archangels,
+and Angels categories suggest her parents may not in fact _be_ squibs however.
+With these scores, my guess is that they are themselves the children of squibs,
+but did not get the required scores to get noticed by the magical world. The key
+thing about Hermione though is the Dominions, Virtues, and Powers categories.
+These three scores all suggest that Hermione benefited from that 1% base rate of
+something bizarre happening.
 
 ### Potter
 
 #### Euphemia
 
-We have no canonical background information on Euphemia except for the fact
-that she was either a pure-blood or a half-blood. Thus, I have moulded her to
-fit what I envision James to be. She is an incredibly eclectic mix of highs
-and lows, in terms of ability.
+We have no canonical background information on Euphemia except for the fact that
+she was either a pure-blood or a half-blood. Thus, I have moulded her to fit
+what I envision James to be. She is an incredibly eclectic mix of highs and
+lows, in terms of ability.
 
 #### Fleamont
 
@@ -165,15 +166,15 @@ Fleamont was an incredible duellist and a good potioneer.
 Harry is, as you can see, slightly above an average of his parents except in a
 couple of key categories where he straight up inherited the more powerful
 ability. As the child of two exceptionally powerful parents, even a partial
-inheritance can still result in someone really really powerful. These
-represent Harry's numbers at birth.
+inheritance can still result in someone really really powerful. These represent
+Harry's numbers at birth.
 
 #### James
 
-James really should not have existed at all. He was born, per cannon, after
-his parents were already old. In some places he he inherited the average of
-both parents, in others he inherited the sum total of both parents, and in a
-few places he has the stronger power.
+James really should not have existed at all. He was born, per cannon, after his
+parents were already old. In some places he he inherited the average of both
+parents, in others he inherited the sum total of both parents, and in a few
+places he has the stronger power.
 
 ### Prewett
 
@@ -194,8 +195,8 @@ We have next to no canonical information about Eileen Prince. We know that she
 was either unable or unwilling to protect her sun from the muggle Tobias Snape.
 I am assuming unable. With that in mind, I have given her a range of abilities
 that left her week in the wand-based subjects, particularly where it comes to
-the types of magic that would allow her to protect her son most effectively.
-She was probably good but not brilliant at Potions.
+the types of magic that would allow her to protect her son most effectively. She
+was probably good but not brilliant at Potions.
 
 ### Riddle
 
@@ -210,17 +211,16 @@ think, be too much of a spoiler.
 
 #### Severus
 
-Snape is a potions prodigy. He does his potions entirely instinctively, _and
-as such has no understanding of why other people do not find them just as
-easy_. Snape is not just picking his ingredients precisely right, and
-augmenting them exactly as needed, he is even manipulating chemistry at an
-instinctual unconscious level so that his cauldrons and fires are exactly what
-the potion needs. Snape has never needed an explanation of how to cut an
-ingredient, how to stir a potion, _why_ one stirs one way versus another way,
-or any of the other myriad details of potion making. He does not understand
-why anyone else might need these tedious lectures - they are self explanatory
-to anyone with half a brain. The only reason why Lily outshines him in
-Slughorn's class is because:
+Snape is a potions prodigy. He does his potions entirely instinctively, _and as
+such has no understanding of why other people do not find them just as easy_.
+Snape is not just picking his ingredients precisely right, and augmenting them
+exactly as needed, he is even manipulating chemistry at an instinctual
+unconscious level so that his cauldrons and fires are exactly what the potion
+needs. Snape has never needed an explanation of how to cut an ingredient, how to
+stir a potion, _why_ one stirs one way versus another way, or any of the other
+myriad details of potion making. He does not understand why anyone else might
+need these tedious lectures - they are self explanatory to anyone with half a
+brain. The only reason why Lily outshines him in Slughorn's class is because:
 
 1.  he is essentially lazy. The class comes easily to him, so he frequently
     tries just hard enough to show up everyone present _except_ Lily (he does
@@ -231,13 +231,12 @@ Slughorn's class is because:
 1.  he is distracted _by **Lily**_ whereas she feels only friendship for him and
     so is not distracted by him.
 
-> **Note**
-> While Snape does love potions, his true love is the Dark Arts. There is a reason why,
-> in the cannon universe, Harry will find all sorts of self-crafted spells in the margins
-> of Snape's _potions_ text book. Snape was not focused on _potions_ in _Potions_ class,
-> he was busy crafting his own spells, many of which were dark in nature.
-> The **_true_** potions aficionado would have been fully focused on his/her work, not
-> on something else.
+> **Note** While Snape does love potions, his true love is the Dark Arts. There
+> is a reason why, in the cannon universe, Harry will find all sorts of
+> self-crafted spells in the margins of Snape's _potions_ text book. Snape was
+> not focused on _potions_ in _Potions_ class, he was busy crafting his own
+> spells, many of which were dark in nature. The **_true_** potions aficionado
+> would have been fully focused on his/her work, not on something else.
 
 ### Weasley
 
@@ -251,18 +250,18 @@ parents.
 
 #### Charlie
 
-Reading the magic in magical creatures is key to Charlie's work. He is
-fortunate that he does not need to transfigure much, and reasonably (though not
-stellar) scores in locality magic means that he can help with the protections
-at the reserve.
+Reading the magic in magical creatures is key to Charlie's work. He is fortunate
+that he does not need to transfigure much, and reasonably (though not stellar)
+scores in locality magic means that he can help with the protections at the
+reserve.
 
 #### Fred
 
 I think Fred is slightly more perceptive than Ron. Fred and George understand
 how magic works, though they do not realise they do so. Fred is able to figure
-out potions but it takes a fair amount of trial and error to get the
-application of his magic right as he creates them for the first time. He does
-not have Ron's gift for locality based effects.
+out potions but it takes a fair amount of trial and error to get the application
+of his magic right as he creates them for the first time. He does not have Ron's
+gift for locality based effects.
 
 #### George
 
@@ -280,23 +279,25 @@ not know that he simply _isn't_ as capable as his older brothers.
 Ginny's brothers fear her temper for good reason. Ginny seventh child, and the
 first girl in generations. There is an implication that the Weasley family may
 have been cursed as part of a plot to isolate them by preventing them from
-making alliances by marriage. If so, it stands to reason that as the curse
-wears away, the child that breaks the curse might absorb some of the residual
-energy and become correspondingly more powerful. However, due to the maternal
-influence and despite her paternal influence, she is merely minimally
-acceptable in the Thrones category, making her somewhat vulnerable to mental magics.
+making alliances by marriage. If so, it stands to reason that as the curse wears
+away, the child that breaks the curse might absorb some of the residual energy
+and become correspondingly more powerful. However, due to the maternal influence
+and despite her paternal influence, she is merely minimally acceptable in the
+Thrones category, making her somewhat vulnerable to mental magics.
 
 #### Ronald
 
-Ron is an under-performer, he has the _ability_, but not the drive. That being said, Ron _is_ under-powered as compared to his brothers. If he knew that, his
-inferiority complex would be even worse than it is. Of particular note, like his siblings, note the influence of [Molly](#molly)'s low score from the Thrones.
+Ron is an under-performer, he has the _ability_, but not the drive. That being
+said, Ron _is_ under-powered as compared to his brothers. If he knew that, his
+inferiority complex would be even worse than it is. Of particular note, like his
+siblings, note the influence of [Molly](#molly)'s low score from the Thrones.
 
-> **Note**
-> Interestingly, even though I was not trying, he and Hermione came out with identical averages. Of
-> particular note with Ron, I do not see him as particularly perceptive about
-> people (low Seraphim). When, in the canon universe, Ron, Harry and Hermione are on the run in book seven, Ron
-> learns the spells to hide their campsite easily because that is a type of magic
-> that does in fact come naturally to him.
+> **Note** Interestingly, even though I was not trying, he and Hermione came out
+> with identical averages. Of particular note with Ron, I do not see him as
+> particularly perceptive about people (low Seraphim). When, in the canon
+> universe, Ron, Harry and Hermione are on the run in book seven, Ron learns the
+> spells to hide their campsite easily because that is a type of magic that does
+> in fact come naturally to him.
 
 ## Author's Notes on Implications
 
@@ -308,20 +309,21 @@ and yet makes Lily powerful enough to be scary.
 
 The other thing I have done is that the average of Riddle and Harry's abilities
 are both an 8, so that while they have different specific abilities, they are in
-a sense equally strong nephilim. You will see that really Harry is a much
-more balanced wizard, he has neither the highs nor the lows that Riddle has
-(though neither is an especially strong Cherubim). The one place that Harry
-shines that Riddle does not is the Principalities - population effects. This is
-probably counter-intuitive. Riddle works by intimidation, and while you _can_
-intimidate populations, that is not actually what he does. Instead he creates
-atrocities, and allows his _actions_ to act on the populace. Remember that the
-population effects from the Principalities are tied to locations, thus Harry is
+a sense equally strong nephilim. You will see that really Harry is a much more
+balanced wizard, he has neither the highs nor the lows that Riddle has (though
+neither is an especially strong Cherubim). The one place that Harry shines that
+Riddle does not is the Principalities - population effects. This is probably
+counter-intuitive. Riddle works by intimidation, and while you _can_ intimidate
+populations, that is not actually what he does. Instead he creates atrocities,
+and allows his _actions_ to act on the populace. Remember that the population
+effects from the Principalities are tied to locations, thus Harry is
 unconsciously enhancing his environment with magics that affect the people
 around him. However, he will not find out that is happening until he has
 travelled far enough to see what it looks like when people are _not_ affected by
 this magic.
 
-If you stack rank Riddle against Lily and James, the there are really four things that make Riddle so scary.
+If you stack rank Riddle against Lily and James, the there are really four
+things that make Riddle so scary.
 
 1. With an inheritance of 9 from the Seraphim, few people can defend against his
    legilimency, particularly when he employs it in mid duel.
@@ -341,12 +343,12 @@ them:
    would _not_ just have Harry resisting Riddle, because Harry also has Lily's
    protection augmenting his capabilities. Riddle never fully understood that
    protection, and taking Harry's blood does not fully bypass it.
-1. Lily's protection aside, you need to decide what theory of
-   [horcruxes][] you are using, and what affect that theory has on Riddle's
-   powers after the destruction of the diary. For this work, I think that both
-   the audience and the characters are in the dark about that answer, but
-   suffice to say that one way or another, you cannot suffer the destruction of
-   a [horcrux][] you have created without _suffering._
+1. Lily's protection aside, you need to decide what theory of [horcruxes][] you
+   are using, and what affect that theory has on Riddle's powers after the
+   destruction of the diary. For this work, I think that both the audience and
+   the characters are in the dark about that answer, but suffice to say that one
+   way or another, you cannot suffer the destruction of a [horcrux][] you have
+   created without _suffering._
 1. In the books, Harry _learns_ to resist the Imperius Curse, the fake Moody
    uses it several times on him before he can resist it easily. Even then, it
    takes Harry noticeable effort to resist Riddle's when they meet in the
