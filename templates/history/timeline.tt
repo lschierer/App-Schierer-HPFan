@@ -12,7 +12,15 @@
 </div>
 
 <section class="timeline">
-  [% IF timeline.size > 0 %]
+  [% IF loading %]
+    <!-- TIMELINE_PLACEHOLDER -->
+    <div id="loading-placeholder" class="timeline-card">
+      <div style="text-align: center; padding: 2rem;">
+        <iconify-icon icon="line-md:loading-loop" width="48"></iconify-icon>
+        <p>Loading timeline data...</p>
+      </div>
+    </div>
+  [% ELSIF svg %]
     <div class="timeline-card">
       [% svg %]
     </div>

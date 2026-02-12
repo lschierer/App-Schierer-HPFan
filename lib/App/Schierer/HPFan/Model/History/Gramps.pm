@@ -1,6 +1,7 @@
 use v5.42.0;
 use experimental qw(class);
 use utf8::all;
+use Future::AsyncAwait;
 require App::Schierer::HPFan::Model::History::Event;
 require App::Schierer::HPFan::Model::Gramps::Note;
 require App::Schierer::HPFan::View::Markdown;
@@ -47,6 +48,25 @@ class App::Schierer::HPFan::Model::History::Gramps :
 
     @events = sort { $a->gramps_id cmp $b->gramps_id } @events;
     foreach my $event (@events) {
+      $self->process_event($event);
+    }
+
+  }
+
+  async method process_async {
+    $self->logger->info('starting async processing of Gramps history.');
+
+    my @events = values $gramps->events->%*;
+    $self->logger->debug(sprintf(
+      'found %s events from gramps to filter.', scalar @events));
+
+    @events = sort { $a->gramps_id cmp $b->gramps_id } @events;
+    my $count = 0;
+    foreach my $event (@events) {
+      # Yield every 10 events to prevent stalling
+      if (++$count % 10 == 0) {
+        await Future->done;
+      }
       $self->process_event($event);
     }
 

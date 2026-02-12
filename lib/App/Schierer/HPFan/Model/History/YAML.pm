@@ -1,6 +1,7 @@
 use v5.42.0;
 use experimental qw(class);
 use utf8::all;
+use Future::AsyncAwait;
 
 require App::Schierer::HPFan::Model::History::Event;
 require YAML::PP;
@@ -56,6 +57,55 @@ class App::Schierer::HPFan::Model::History::YAML :
     );
 
     while (defined(my $file = $iter->())) {
+      # work around for UTF8 filenames not importing correctly by default.
+      $file = Path::Tiny::path(Encode::decode('utf8', $file));
+      $self->logger->debug(sprintf('%s importing %s', ref($self), $file));
+      my $basename = $file->basename('.yaml');
+      my $name     = $basename;
+
+      my $data   = $file->slurp_utf8;
+      my $object = YAML::PP->new(
+        schema       => [qw/ + Perl /],
+        yaml_version => ['1.2', '1.1'],
+      )->load_string($data);
+      if ($object) {
+        $self->logger->debug(
+          sprintf('object is %s', Data::Printer::np($object)));
+        unless (exists $object->{events}) {
+          $self->dev_guard('%s is missing an events key', $file);
+          next;
+        }
+        foreach my $index (0 .. scalar(@{ $object->{events} })) {
+          my $event = $object->{events}->[$index];
+          if (scalar keys %$event) {
+            $self->process_event($index, $event, $file);
+          }
+        }
+      }
+    }
+  }
+
+  async method process_async {
+    $self->logger->info('starting async processing of YAML history.');
+
+    my $rule = Path::Iterator::Rule->new();
+    $rule->name(qr/\.ya?ml$/);
+    $rule->file->nonempty;
+    my $iter = $rule->iter(
+      $SourceDir,
+      {
+        follow_symlinks => 0,
+        sorted          => 1,
+      }
+    );
+
+    my $count = 0;
+    while (defined(my $file = $iter->())) {
+      # Yield every 5 files to prevent stalling
+      if (++$count % 5 == 0) {
+        await Future->done;
+      }
+      
       # work around for UTF8 filenames not importing correctly by default.
       $file = Path::Tiny::path(Encode::decode('utf8', $file));
       $self->logger->debug(sprintf('%s importing %s', ref($self), $file));
