@@ -2,12 +2,13 @@
 title: >-
   Relative Power Levels
 sidebar:
-  order: 100
+  order: 3
 tableOfContents:
   minHeadingLevel: 2
   maxHeadingLevel: 5
 author: Luke Schierer
 collection: Nephilim
+template: appendix
 ---
 
 The following represent estimates by researchers of the power levels of key

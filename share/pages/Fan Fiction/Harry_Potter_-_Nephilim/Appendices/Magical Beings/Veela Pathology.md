@@ -2,12 +2,12 @@
 title: >-
   The Veela Curse
 author: Luke Schierer
-sidebar:
-  order: 100
+sidebar: 1
 collection: Nephilim
+template: appendix
 ---
 
-> **Note** For the purposes of this story, veela are "dark"
+> [!IMPORTANT] For the purposes of this story, veela are "dark"
 > creatures[^210126-4]. I have chosen to create a version of veela that
 > justifies the suspicion that [Molly], [Hermione][] and [Ginny][] view
 > [Fleur][] with.
@@ -25,7 +25,7 @@ At one point we (humanity and the nephilim community) knew which parts of this
 list came from enemy action and which parts of this list came from punishment
 inflicted upon the veela community for their many crimes. The incredibly harsh
 nature of their punishment was intended as a warning to the rest of the world to
-cease the making of humaniform beings, and the archangels made sure to make sure
+cease the making of humaniform beings, and the archangels made sure to ensure
 every nephil community knew what had been done and why. However, the nephilim
 are particularly good at ignoring and suppressing knowledge of things they do
 not want to acknowledge - see [Appendix G] on Original Sin. As this happened
@@ -59,7 +59,7 @@ of these traits appears to follow known rules of [Nephilim Inheritance]. This
 then is a second source of 'locked' traits in some the human forms of certain
 veela communities, as the 'locked' traits have, in some cases, been inherited
 from the _father_'s line, and pass on with probability separate from the veela
-curse itself.
+curse itself.  There is also one veela community, in France, where the hair and eye color of the veela are *unlocked* as *all* members of this community descend from a veela/nephil cross where the female child inherited her father's unlocked hair and eye color. 
 
 We stated that the magical traits of the veela curse inherit as single trait
 when the father is a nephil. This is true, however, this single trait appears
@@ -76,7 +76,7 @@ categorized entirely separately.
   in full from the mother, but the child _also_ appears to have some or all of
   the _father's_ abilities.
 - There are instances where the magical ability appears to have been inherited
-  _solely_ from the father, except that the individual still the mother's veela
+  _solely_ from the father, except that the individual still retains the mother's veela
   animagus form.
 
 Like magical ability, and unlike animagus form (see below), life expectancy
@@ -86,7 +86,7 @@ inherit either from the father or some hybrid of the two.
 
 A "full veela" is a veela with a full _human_ father and a full veela parent
 _or_ a full nephil father and a full veela mother who did _not_ inherit _any_
-magic from her father.
+magic from her father (he has no magic for her to inherit).
 
 A "half veela" is a veela with a full _nephil_ father and a veela (either a full
 veela _or_ a half veela) parent who (against the odds, see [Magical Beings]),
@@ -109,7 +109,7 @@ animal form (though in the modern age, most nephilim subconsciously suppress
 this ability and must re-gain it through one or more rituals, see [Rules of
 Magic]) the veela has no control, and is incapable of obtaining control. Her
 form will shift to that of a bird's any time her wrath, sloth, greed, or
-gluttony exceed her (incredibly minimal) control over them. This applies to
+gluttony (any one of these vices) exceed her (incredibly minimal) control over them. This applies to
 half-veela as well, there is no known instance of any female child of veela
 decent having _any_ other form.
 
@@ -125,11 +125,11 @@ to this day, particularly in parts of eastern Europe. Some centuries after the
 original veela were created, some veela came to realise that their culture was
 an evil one, and rebelled against both their upbringing and their own twisted
 nature. In reward for this, their form was shifted to that of an eagle, and
-their lifespan increased from the by about 20 years, making them almost, but not
+their lifespan increased by about 20 years, making them almost, but not
 quite, equal to the full humans, but still well below the nephilim from whom
 they descend. Later, as rewards for other acts of virtues, some of the eastern
 communities were transmuted from vultures to hawks, but were not granted
-additional lifespan.
+additional lifespan. 
 
 In the modern era, most hawk type veela are in Bulgaria and Romania, and all
 modern hawk type veela count at least one half-veela in their ancestry. Most
@@ -141,7 +141,7 @@ Per [the backstory], the fallen angels, full of wrath over their success in so
 thoroughly corrupting a community being undermined, the veela nature was further
 corrupted. Her vices, such as her temper, to get locked in place as a perpetual
 temptation for her, and her decedents, to fight hopelessly against. This can be
-considered an extreme case of concupiscence.
+considered an extreme case of concupiscence.  
 
 Thus, between this "revenge" against her and the consequences of her own vice
 normal to any nephil (see [Appendix H]), her concupiscence was vastly increased.
@@ -213,7 +213,7 @@ lives as a bird. This is also true of half-veela, though they _tend_ to have
 greater control over their temper, (and other vices) and thus tend to spend much
 more time in human form. In a sense, the full veela is becoming an animal. Had
 that process completed, if any veela ever did live her entire life as a bird, it
-is doubtful that her descendants would have an immortal soul at all.
+is doubtful that her descendants would have an immortal soul at all. Some scholars believe that every veela is preserved from spending *too* much time as an animal to preserve their ability to choose repentance. 
 
 Her inheritance from the Powers was restricted such that it _cannot_ combine
 with her inheritance from the Dominions. No full veela is capable of permanent
@@ -237,3 +237,10 @@ parent was.
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean>
 [Ginny]: </Harrypedia/people/Weasley/Ginevra Molly>
 [knffnm]: http://kokopelli.nsns.fanficauthors.net/Maskirovat/Maskirovat/
+
+[^210916-2]:
+    Author's note: This idea resembles that from Jeconais'
+    _[Hope](https://jeconais.fanficauthors.net/Hope)_ Last Updated: 2007-05-30.
+    Last Viewed: 2021-09-16. I have not copied it precisely as he came up with
+    it, my version is less voluntary, and does not include the death inducing
+    madness, nor the bond aspect.

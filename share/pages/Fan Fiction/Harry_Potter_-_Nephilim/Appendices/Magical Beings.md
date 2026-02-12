@@ -5,7 +5,17 @@ author: Luke Schierer
 sidebar:
   order: 100
 collection: Nephilim
+template: appendix
 ---
+
+### **From:** &lt;redacted&gt; of the Archivio Apostolico Vaticano <!-- cspell: disable-line -->
+
+### **To:** &lt;redacted&gt;, Provincial of the &lt;redacted&gt; Province
+
+### **Re:** Summary of Magical Beings, their kinds, and natures
+
+This document represents a summary of what is known from private revelation and empirical study both. No effort has been made to distinguish derivation in this document. 
+
 
 ### Overview
 
@@ -101,9 +111,8 @@ same gendered parent. When you add in the xenophobic culture that has developed
 following the Statute of Secrecy, it becomes no wonder that these "first
 generation" nephilim are persecuted.
 
-A _true_ "first generation" magical user would not be a nephilim at all, rather
-per my [base assumptions][AA], it would be _human_ who has interacted in an
-unholy union with a fallen angel. The child of that human/fallen angel would be
+A _true_ "first generation" magical user would not be a nephilim at all, rather, it would be _human_ who has interacted in an
+unholy union with a fallen angel.[^260211-1] The child of that human/fallen angel would be
 the true first generation nephil, and would have only one category of power, but
 would be _exceptionally_ strong in that one category.
 
@@ -118,10 +127,10 @@ Church.
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean>
 
 [^241123-2]: Or at least the in-world version of it, see [Rules of Magic].
+[^260211-1]: per my [base assumptions][AA]
 
 [Rules of Magic]: <./Rules of Magic>
-[Quill of Acceptance and Book of Admittance]:
-  https://www.rowlingindex.org/work/qaba/
+[Quill of Acceptance and Book of Admittance]: https://www.rowlingindex.org/work/qaba/
 [magical rules of inheritance]: ./Inheritance
 [its own rules]: ./Inheritance
 [Imperius]: /Harrypedia/magic/spells/imperio
@@ -149,79 +158,12 @@ Church.
 - There are a number of species that descend from the nephilim. Each is the
   result of at least one hereditary "truly bizarre" mutation. Most had several
   things happen at once, a few had several different situations across history.
-  - mermen - These were once a magically powerful people who used inheritances
-    from the Dominions to transmute themselves to survive [the great Flood].
-  - dwarfs[^241125-8] - The dwarfs also descend from nephilim that were punished
-    for their actions at the time of [the great Flood]. At that time, they were
-    one of the most diverse populations of nephilim (that is, they had a broad
-    cross section of different powers).
-  - goblins - people, descendant from the dwarfs, who are highly susceptible to
-    greed, envy, and wrath. Their form has been distorted by the sins of their
-    forefathers centuries ago. Once, they would have ranked in this list below
-    the veela. However, over the centuries a gradual increase in average
-    effective intelligence.[^241125-9] Similarly, the physical changes wrought
-    on them have "softened" and so they are less hideous than described by
-    authors like Tolkien who have packaged aspects of the magical world as
-    fiction. Overall, despite their flaws, these populations retained their
-    cognitive ability and magic. They are particularly strong inheritors from
-    the Virtues, Powers, and Archangels, with lesser inheritances from the
-    Principalities and angels. Their creation of the trolls at the beginning of
-    the [goblin wars] explains why they were punished so harshly (as to have
-    originally lost nearly all free will - 90% impact).
-  - hags - a people who are consumed by envy and lust. They have particularly
-    strong inheritances from the Thrones, reasonable inheritances from the
-    Virtues and Powers. Some have partial inheritances of random other types.
-    Hags are known for using infant sacrifice in evil magical rites. These sins
-    robbed their ancestors of all they can now value.
-  - centaurs - a nearly primordial people (inheriting from both the the Seraphim
-    and Cherubim) who, not just as individuals, but as a people, selfishly
-    abused divination magic until something truly bizarre happened.
-    - Their form transmuted to a half animal form to reflect the fact that their
-      free will is nearly gone. They now have a herd instinct that rules much of
-      their behaviour.
-    - They became nearly immune to the magic of the Thrones as practised by
-      other mortals. It is next to impossible to confound or imperious a centaur
-      for example. This is in part because they perceive the magic of the
-      attempt. This is a mitigation of their curse, which happened because while
-      divination is evil, their _intentions_ were not, and their _understanding_
-      of their act flawed.
-    - Centaur communities are almost universally violent, wrathful and even more
-      highly xenophobic people. This is in part because their herd instinct
-      cannot sense non-centaurs and they reject the personhood of those who do
-      not appear to their herd sense. It is in part because they depend so much
-      on that herd sense that they do not significantly develop individual self
-      control. They _could_ develop it, they (typically) _do not_.
-    - they remain addicted to divination, as such they perpetuate these effects
-      to the next generation endlessly.
-    - the ranking in this list between centaur and veela is debatable. Any
-      single centaur is probably less free than any single veela, but as a herd,
-      centaurs are capable of slightly more autonomy than pure veela are either
-      as individuals or in groups (since veela have no herd, or in their case
-      flock, effect).
-    - centaurs are unique among the descendants of the nephilim in that the
-      remain nearly unchanged, with inheritances only from two choirs, and
-      little to no physical change since their inception.
-  - veela - a people punished primarily with changes to their magic,
-    reproduction, and lifespan. The placement of veela on this list is highly
-    controversial. In raw cognitive ability, a veela is roughly equivalent to a
-    normal human. The problem is in her emotional intelligence. Many veela have
-    essentially no control over their emotions, and this triggers the magic of
-    her punishment.
-    - See [The Veela Curse][AI] for an in depth description.
-    - Veela are also complex to categorize because the nature of the veela
-      "curse" makes it difficult for researchers to distinguish between the
-      so-called "full" and "partial" veela.
-    - The veela is the only example of a "race" that is purely female, it
-      depends on cross breeding to survive. Due to the nature of its magic, any
-      female child is born veela. See [The Veela Curse][AI] for more details.
-  - giants - Church [records][Giants] show that the giants come from the
-    creators of the house elves. Behold in them what man would be if left
-    without his mind, the only hope they have is that their intellects are so
-    clouded that it is nearly impossible for them to actually commit a mortal
-    sin. Should any be willing to be missionary to the giants, the grace of
-    baptism would be nearly unopposed, because these beings have so little
-    ability to freely choose to do anything, and even less ability to understand
-    something is gravely wrong.
+  - [Merfolk](./Magical Beings/Merfolk)
+  - [Dwarfs](./Magical Beings/Dwarfs)[^241125-8]
+  - [Goblins](./Magical Beings/Goblins)
+  - [Hags](./Magical Beings/Hags)
+  - [Centaurs](./Magical Beings/Centaurs)
+  - [Veela](./Magical Beings/Veela)
 
 [^241125-9]:
     Author's note: The scholars here do not have the knowledge to be more
@@ -246,23 +188,18 @@ Church.
     revisionism. I'm also guessing there are some missing generations in the one
     family tree we have, that of the Potter family.
 
-[^210916-2]:
-    Author's note: This idea resembles that from Jeconais'
-    _[Hope](https://jeconais.fanficauthors.net/Hope)_ Last Updated: 2007-05-30.
-    Last Viewed: 2021-09-16. I have not copied it precisely as he came up with
-    it, my version is less voluntary, and does not include the death inducing
-    madness, nor the bond aspect.
+[veela]: <./Magical Beings/Veela>
+[giants]: <./Magical Beings/Giants>
 
 ### Other Races
 
 Other "races" are not really people at all, they have varying levels of
-intelligence, but are all effectively the same as meeting different qualities of
-AI players, as if you were encountering cyborgs.
+intelligence. Analogy is always suspect, but this one illustrates well.  If you were yourself *in* a game, these would be computer generated players controlled by artificial intelligence. Each displays at least some appearances of being a true being with the degree of mimicry varying considerably. 
 
 The creation of these "races" is an abomination, and the more nearly human, or
 in other words the more perfectly they simulate free will, the greater the
 abomination. This will definitely have had _Screwtape_ style bizarre effects on
-the perpetrators of these crimes against creation and their descendants. This is
+the perpetrators of these crimes against creation and their descendants (in some cases the Church *knows* this from history recorded in the archives).  This is
 true because of the moral confusion it causes - these "races" do not have
 immortal souls the way humans, angels, nephil, or the nephil descended races do,
 and yet they appear as if they should. It is true because their creation mocks
@@ -274,27 +211,29 @@ rage, and in the case of the house elves a "race" that can never be fully freed.
 - Acromantula - created from spiders (obviously) by an unknown nephil or group
   of nephilim. Acromantula are capable of learning human speech, but do not
   speak anything that could be defined as a language in the wild.[^210916-3]
-- Bowtruckle - created by the extreme use of magics on tree branches by an
-  unknown agency (may be directly demonic).
-- fairies/imps/doxies - created by the extreme use of magics on (different)
+- Bowtruckles - created by the extreme use of magics on tree branches by an
+  unknown agency. Some researchers speculate the power required exceeds that granted to any of the nephilim. 
+- Fairies/imps/doxies - created by the extreme use of magics on (different)
   insects, these beings appear humanoid, but still reproduce by laying eggs like
   insects. Unlike gnomes, they have some ability to form long term memories, but
   only very limited ability to learn from these experiences; their actions are
   guided by incredibly strong instinct rather than by reasoning. They are very
   like domesticated cats and dogs in this respect; a dog might remember its
   owner, but its behaviours will always be more governed by instinct than not.
-  It is known that, in addition to her crimes of enslavement, fairies and doxies
-  were created by the woman who became the first veela. It is unknown who first
+  It is known that, in addition to her other crimes, fairies and doxies
+  were created by the woman who became the first [veela]. It is unknown who first
   created imps.
-- ghoul - unknown origin. Often treated as a pet.[^210916-4]
-- gnomes - created by the extreme use of magics on clay figures, these beings
+- Ghouls - unknown origin. Often treated as a pet.[^210916-4]
+- Gnomes - created by the extreme use of magics on clay figures, these beings
   have no long term memory at all. It is unknown who created these.
 - house elves - created by the extreme use of magics on an unknown mammal (not a
   human), they are the most nearly human of all created beings. They are capable
   of learning, loyalty and betrayal; they have memories equivalent to ours. They
   closely mimic having true free will, just as some human scientists speculate
-  the highest animals do. When bound, and elf can "feed" on the bond, using its
-  master's magic to amplify its own. This stronger magic also slows the elf's
+  the highest animals do. House elves form symbiotic bonds with nephilim, the bond is, however, an unequal one.  The elf is very much *bound* to the nephil in question, unable to *unbind* itself of its own will, though it can be *freed*.  Unbound elves are omnivores with diets similar to monkeys, while bound elves may or may not eat at all, depending on the strength of the bond. When bound, and elf can "feed" on the bond, using its
+  master's magic to amplify its own. 
+
+  This stronger magic also slows the elf's
   ageing process. Any bond at all will slow an elf's ageing by a factor of 2
   (age half a year for each year you live). If the elf feels itself to be _part
   of the family_, the bond can slow ageing by an additional factor of 2 (each
@@ -307,26 +246,27 @@ rage, and in the case of the house elves a "race" that can never be fully freed.
   this life extending effect, only _disinterested_ work does. That is, only work
   done for work's sake, or work done altruistically has the life-extending
   effect. These effects, including the limitation on types of work, was
-  (cruelly) built into them to ensure that elves would remain loyal.
-
+  (cruelly) built into them to ensure that elves would remain loyal.  Some, but not all, elves evince an inability to disobey orders from the nephil to whom they are bound.  In some, this inability extends to those related to the bond holding nephil.  It is unclear if the inability to obey is genetic, or happens as an optional part of the bonding process.  If optional, it is unclear what effect, if any, the additional restrictions have on the elf, other than the obvious limitation of choice.  
+  
   The effects of the bond have, by and large, had the desired effect. Since the
   elf's base average lifespan is only twenty years, being unbound is a huge
   thing for elves. Elves have grown/matured enough to start working by age
   three, and reach full physical and mental maturity around age five, which is
   the earliest they can be bound. They were created by the ancestors of the
-  giants, before they lost their magic, but after they had already grown large
+  [giants], before they lost their magic, but after they had already grown large
   enough to need helpers with more nimble fingers.
   - a bound elf (1/2) who feels him/her self part of the family (divide by 2
     again), is critical to the family's well-being (another 1/2 on top), and is
     fully utilised (1/4) would thus age at a rate of 1/32nd normal. In other
     words they would live to on average 485 years old instead of 20 years (5
     years ageing at a normal rate before being bound, added to 15\*32).
-  - from this we can conclude that Dobby would be, in human terms, considered
+  - from this we can conclude that "Dobby", mentioned in your letter, would be, in human terms, considered
     very nearly suicidal in his desire for freedom. He was bound (factor of 2),
     and fully utilised (factor of 4 on top of that), but neither part of the
     family nor critical. He thus, prior to being freed, aged at a rate of 1/16
     normal (out of a possible 1/32th).
 
+- Pukwudgies - some researchers believe these are a highly mutated form of house elf.  Others that they represent a something totally different.  A few have suggested that they may in fact be miscategorised and that they *are* in fact a true 'race.'  Very little is known about them except that they exist solely in North America, and are found almost exclusively in the New England region even there. 
 - Leprechaun - created by the use of extreme magics on an unknown mammal, by an
   unknown being.
   > More intelligent than the fairy and less malicious than the imp, the pixie
@@ -338,14 +278,15 @@ rage, and in the case of the house elves a "race" that can never be fully freed.
   they were originally created for some type of combat. That being said, no real
   knowledge of their origin is known.
 - Sphinx - created by the extreme use of magic on a lion by an Egyptian nephil,
-  the only true unknown is how the sphinx survived the great Flood. We are
+  the only true unknown is how the sphinx survived the [great Flood]. We are
   fairly confident, mostly by process of elimination, that its creators did not.
 - trolls - created by the extreme use of magics on apes, the _most_ intelligent
   trolls might be able to perform similarly to a human with mental retardation
   capable of living in a group home. This is not a fair comparison however, the
   human is suffering from a disability; the troll is performing with unusual
-  _capability._ Believed to be created by the ancestors of the goblins.
+  _capability._ Believed to be created by the ancestors of the goblins, shortly after the [great Flood]
 
+[great Flood]: ../backstory/The_Flood
 [Many Waters]: https://wikipedia.org/wiki/Many_Waters
 [AA]: <./Points of Divergence>
 [AB]: <./Rules of Magic>
@@ -392,5 +333,4 @@ rage, and in the case of the house elves a "race" that can never be fully freed.
     _[Fantastic Beasts and Where to Find Them]_ Kindle Locations 265-266.
     Pottermore. American Kindle Illustrated Edition.
 
-[Fantastic Beasts and Where to Find Them]:
-  https://www.goodreads.com/book/show/41899.Fantastic_Beasts_and_Where_to_Find_Them
+[Fantastic Beasts and Where to Find Them]: https://www.goodreads.com/book/show/41899.Fantastic_Beasts_and_Where_to_Find_Them

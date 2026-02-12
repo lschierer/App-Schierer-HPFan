@@ -3,11 +3,12 @@ title: >-
   Rules of Magic
 author: Luke Schierer
 sidebar:
-  order: 100
+  order: 2
 tableOfContents:
   minHeadingLevel: 2
   maxHeadingLevel: 4
 collection: Nephilim
+template: appendix
 imports:
   - /components./PowerLevelTable.ts type="module"
 ---

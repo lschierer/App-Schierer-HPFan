@@ -2,6 +2,7 @@
 collection: Harrypedia
 title: Merpeople
 author: Luke Schierer
+autoindex: 1
 sidebar:
   order: 1
 ---

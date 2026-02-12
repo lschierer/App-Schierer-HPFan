@@ -3,29 +3,18 @@ title: >-
   Magical Contracts
 author: Luke Schierer
 collection: Nephilim
+template: appendix
 sidebar:
-  order: 100
+  order: 102
 ---
 
-> **Note** As stated in [Points of Divergence][AA], Mrs. Rowling has set up a
-> world in which magical contracts exist, and in which they can have unwilling
-> participants. This has been explored in a number of other fan fiction
-> works,[^230103-2] and while I do not want to rehash them, the idea is far too
-> useful and tempting for me to avoid. I am at heart more of a world builder
-> than a story teller, so I am going to define magical contracts rather more
-> than Mrs. Rowling did.
+### **From:** \<redacted\> of the Archivio Apostolico Vaticano <!-- cspell: disable-line -->
 
-> [!WARNING] Please be fully aware of the [Authors Notes on the index page](../)
-> Footnotes on this page reference where I have reused ideas from others. The
-> footnotes are _not_ part of the in-world text.
+### **To:** \<redacted\>, Provincial of the <redacted> Province
 
-## **From:** \<redacted\> of the Archivio Apostolico Vaticano <!-- cspell: disable-line -->
+### **Re:** Further on the Impact of Magic on Nephilim Free Will
 
-## **To:** \<redacted\>, Provincial of the <redacted> Province
-
-## **Re:** Further on the Impact of Magic on Nephilim Free Will
-
-## Definition, Scope, and Limitations
+### Definition, Scope, and Limitations
 
 As has been stated in other works on the nephilim, with rare exceptions all
 modern nephilim have a widely mixed heritage that includes powers that we

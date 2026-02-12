@@ -3,15 +3,12 @@ title: >-
   What are the Nephilim
 author: Luke Schierer
 collection: Nephilim
+template: appendix
 sidebar:
-  order: 100
+  order: 4
 ---
 
 ## historical origin of the nephilim
-
-> [!WARNING] Please be fully aware of the [Authors Notes on the index page](../)
-> Footnotes on this page reference where I have reused ideas from others. The
-> footnotes are _not_ part of the in-world text.
 
 <!-- cspell: disable-next-line --> 
 From: \<redacted\> of the Archivio Apostolico Vaticano
@@ -248,7 +245,7 @@ their "magic."  Conditions like bradycardia, gastroparesis, and others that are 
 [AD]: <./Relative Power Levels>
 [AE]: <./Life Expectancy>
 [AF]: <./Magical Contracts>
-[AG]: /.Appendix_G
+[AG]: ./Appendix_G
 [ab]: <./Rules of Magic>
 [af]: <./Magical Contracts>
 [Appendix I]: <./Veela Pathology/>

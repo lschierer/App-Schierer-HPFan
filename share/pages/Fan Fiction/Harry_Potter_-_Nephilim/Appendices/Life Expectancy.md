@@ -4,8 +4,13 @@ title: >-
 author: Luke Schierer
 collection: Nephilim
 sidebar:
-  order: 100
+  order: 5
+collection: Nephilim
+template: appendix
 ---
+> [!CAUTION] This Appendix is atypical in that it is written from the Author's perspective, not from a
+> researcher's perspective.
+
 
 | Average Power Level | US Males 1900 | US Males 2001 | US Male Nephilim 1900 |
 | :-----------------: | :-----------: | :-----------: | :-------------------: |
@@ -86,6 +91,8 @@ faster in earlier centuries, due to hardship, poor diet, disease, and a variety
 of other causes. While the magical world may have eliminated much of the mundane
 disease, the impression is that the other problems remain prevalent.
 
+Hogwarts' quill of acceptance and book of admittance do not work *precisely* way the nephilim think they do, working far more nearly based on the *actual* rules than they do on averages.  But if they *did* work on averages as believed by the nephilim, then it would be at about a minimum of 4 that a student would be accepted, with *perhaps* an occasional student who had an average of 3 allowed in.  These students are just starting to reach the point in the curve where life expectancy is still noticeably different than what modern medicine has achieved without magic.  Counteracting this, many of them will live significantly less healthy lifestyles based on antiquated information. Thus they *will* live the ranges shown, but will also *age* and *show* that age to reflect the wear their lifestyle has placed on their body. 
+
 This gives our central characters life expectancies as follows:
 
 |     Last Name     | First Name | Average Power | Life Expectancy |
@@ -111,5 +118,4 @@ This gives our central characters life expectancies as follows:
 \* Fleur is quarter-veela, see [The Veela Curse].
 
 [The Veela Curse]: <./Veela Pathology>
-[Life Tables for the United States Social Security Area 1900-2100]:
-  https://www.ssa.gov/oact/NOTES/pdf_studies/study120.pdf
+[Life Tables for the United States Social Security Area 1900-2100]: https://www.ssa.gov/oact/NOTES/pdf_studies/study120.pdf
