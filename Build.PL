@@ -1,6 +1,8 @@
+# cspell: disable
 use v5.42.0;
 use Module::Build;
 use lib '../PAGI-WebServer/lib';
+use Config;
 
 my $build = Module::Build->new(
   module_name       => 'App::Schierer::HPFan',
@@ -12,10 +14,12 @@ my $build = Module::Build->new(
   requires => {
     'perl'                           => '5.42.0',    # Minimum Perl version
     'Carp'                           => '0',
+    'CHI'                            => '0',
     'DBI'                            => '0',
     'DBD::SQLite'                    => '0',
     'DBD::SQLite::Constants'         => '0',
     'Data::Printer'                  => '0',
+    'Data::Serializer'               => '0',
     'Date::Calc::Object'             => '0',
     'Date::Manip'                    => '0',
     'DateTime'                       => '0',

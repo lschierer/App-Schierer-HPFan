@@ -1,4 +1,5 @@
 package App::Schierer::HPFan::Controller::Root;
+# cspell: disable
 
 use v5.42.0;
 use utf8::all;
@@ -215,7 +216,7 @@ sub _build_Root_Tree ($self) {
       $route =~ s/\/index$//;
     }
 
-    if (exists $fm->{sidebar} && exists $fm->{sidebar}->{order}) {
+    if (exists $fm->{sidebar} && ref($fm->{sidebar}) && exists $fm->{sidebar}->{order}) {
       $order = $fm->{sidebar}->{order};
     }
 

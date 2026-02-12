@@ -1,0 +1,59 @@
+[% WRAPPER layouts/default.tt %]
+
+	<div class="spectrum-AlertBanner is-open  spectrum-AlertBanner--warning">
+		<p class="spectrum-Alert-Banner-body"> 
+			This is a work of fiction. It is meant to entertain,
+	not instruct. It is not intended as a work of theology and, if it were, would
+	fail utterly, as much of it would be <em class="spectrum-Body-emphasized">really bad</em> theology. Again: it is meant
+	to entertain, not instruct.
+		</p>
+	</div>
+
+	<div class="spectrum-AlertBanner is-open  spectrum-AlertBanner--important">
+		<p class="spectrum-Alert-Banner-body"> 
+			I have chosen to base this off of several other works of fiction,
+	largely because mixing the ideas from Mrs. Rowling with those from these other
+	works is amusing. At times these choices constrain other choices I as an
+	author might have otherwise made differently. Some of the theology here-in is
+	<em class="spectrum-Body-emphasized">really bad</em> theology not because I <em class="spectrum-Body-emphasized">could not</em> imagine better, but because I
+	sourced it in. I cannot fix everything without destroying the crossover feel
+	that I am aiming for. In particular, much of the information in this section
+	comes from, or rather is based on, <em class="spectrum-Body-emphasized"><a class="spectrum-Link spectrum-Link--secondary spectrum-Link--quiet" href="https://en.wikipedia.org/wiki/Many_Waters">Many Waters</a></em>, although what I came
+	up with dovetails nicely (or at least I think it does) with a concept I get
+	from <em class="spectrum-Body-emphasized"><a class="spectrum-Link spectrum-Link--secondary spectrum-Link--quiet" href="https://archive.org/details/in.ernet.dli.2015.86985">The Screwtape Letters</a></em> concerning the morphology of angelic beings.
+		</p>
+	</div>
+
+	<div class="spectrum-AlertBanner is-open  spectrum-AlertBanner--tip">
+		<p class="spectrum-Alert-Banner-body"> 
+			Recall that these appendices are written from the perspective of an
+	in-world researcher. These in-world researchers are off stage both in the that
+	they do not appear in the story itself, but also in the sense that they are
+	not necessarily from the <em class="spectrum-Body-emphasized">present</em> as the characters in the story would
+	perceive time. Not all of these researchers have written in the same style,
+	nor have all aimed at, or achieved, any uniform level of professional
+	scholarly writing. Most of these researchers are religious figures working for
+	various in-world Vatican departments or commissions.
+		</p>
+	</div>
+
+	<div class="spectrum-AlertBanner is-open  spectrum-AlertBanner--note">
+		<p class="spectrum-Alert-Banner-body">
+			Footnotes are <em class="spectrum-Body-emphasized">not</em> part of the in-world document, despite any appearance to the contrary, and despite the fact that if this were a real document, it would have been written with real footnotes.
+		</p>
+	</div>
+
+	<hr class="spectrum-Divider spectrum-Divider--sizeM">
+
+	<section>
+		[% content %]	
+	</section>
+	[% IF entries.size > 0 %]
+	  <hr role="separator" class="spectrum-Divider spectrum-Divider--sizeM" />
+	  <div class="directory-index">
+	    [% INCLUDE partials/autoindex_list.tt entries=entries %]
+	  </div>
+	[% END %]
+
+
+[% END %]

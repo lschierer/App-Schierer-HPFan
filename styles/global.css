@@ -1,5 +1,8 @@
+/* cspell: disable */
+
 /* the props */
 @import url("@spectrum-css/tokens/dist/css/index.css");
+@import url("@spectrum-css/alertbanner");
 @import url("@spectrum-css/typography");
 @import url("@spectrum-css/icon");
 @import url("@spectrum-css/link");
@@ -70,6 +73,32 @@
   --mod-treeview-item-text-color-hover: var(--text-1);
   --mod-treeview-item-text-color-selected: var(--text-1);
 }
+
+div.spectrum-AlertBanner {
+  padding: 0 1.5rem;
+  margin: 1rem 5rem;
+}
+
+div.spectrum-AlertBanner.spectrum-AlertBanner--caution {
+  background-color: var(--spectrum-red-800);
+}
+
+div.spectrum-AlertBanner.spectrum-AlertBanner--warning {
+  background-color: var(--spectrum-orange-800);
+}
+
+div.spectrum-AlertBanner.spectrum-AlertBanner--important {
+  background-color: var(--spectrum-purple-800);
+}
+
+div.spectrum-AlertBanner.spectrum-AlertBanner--tip {
+  background-color: var(--spectrum-green-800);
+}
+
+div.spectrum-AlertBanner.spectrum-AlertBanner--note {
+  background-color: var(--spectrum-blue-800);
+}
+
 
 html {
   width: 100vw;
