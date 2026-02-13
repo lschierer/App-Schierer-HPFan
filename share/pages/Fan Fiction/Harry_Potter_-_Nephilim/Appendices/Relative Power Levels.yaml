@@ -1,0 +1,54 @@
+# cspell: disable-next-line
+columnorder:
+  Last Name: 1
+  First Name: 2
+  Seraphim: 3
+  Cherubim: 4
+  Thrones: 5
+  Dominions: 6
+  Virtues: 7
+  Powers: 8
+  Principalities: 9
+  Archangels: 10
+  Angels: 11
+  Average: 12
+rows:
+  - Last Name: Dumbledore
+    First Name: >-
+      [Albus](#albus)
+    Seraphim: 7
+    Cherubim: 7
+    Thrones: 9
+    Dominions: 10
+    Virtues: 10
+    Powers: 9
+    Principalities: 6
+    Archangels: 7
+    Angels: 9
+    Average: 8.22
+  - Last Name: Riddle
+    First Name: >-
+      [Tom](#tom) 
+    Seraphim: 9
+    Cherubim: 5
+    Thrones: 10
+    Dominions: 8
+    Virtues: 7
+    Powers: 9
+    Principalities: 5
+    Archangels: 10
+    Angels: 9
+    Average: 8.0
+  - Last Name: Potter
+    First Name: >-
+      [Harry](#harry)
+    Seraphim: 8
+    Cherubim: 6
+    Thrones: 9
+    Dominions: 8
+    Virtues: 7
+    Powers: 8
+    Principalities: 9
+    Archangels: 9
+    Angels: 8
+    Average: 8.0

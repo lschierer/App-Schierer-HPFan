@@ -24,10 +24,11 @@ figures in this historical chronicle.[^241125-10]
     reveal these numbers.**
 
 ## Relative power of different characters in each class of power.
+<yamltable source="./Relative Power Levels.yaml"></yamltable> <!-- cspell: disable-line -->
 
 | Last Name         | First Name            | Seraphim | Cherubim | Thrones | Dominions | Virtues | Powers | Principalities | Archangels | Angels | Average |
 | ----------------- | --------------------- | -------- | -------- | ------- | --------- | ------- | ------ | -------------- | ---------- | ------ | ------- |
-| Dumbledore        | [Albus](#albus)       | 7        | 7        | 9       | 10        | 10      | 9      | 6              | 7          | 9      | 8.22    |
+|         |        | 7        | 7        | 9       | 10        | 10      | 9      | 6              | 7          | 9      | 8.22    |
 | Riddle            | [Tom](#tom)           | 9        | 5        | 10      | 8         | 7       | 9      | 5              | 10         | 9      | 8.00    |
 | Potter            | [Harry](#harry)       | 8        | 6        | 9       | 8         | 7       | 8      | 9              | 9          | 8      | 8.00    |
 | Snape             | [Severus](#severus)   | 8        | 9        | 9       | 6         | 9       | 9      | 4              | 7          | 7      | 7.55    |
