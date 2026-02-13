@@ -1,15 +1,15 @@
 ---
-title: 'Backstory: The Dwarfs'
+title: The Dwarfs and the Goblins
 tableOfContents: false
 author: Luke Schierer
 collection: Nephilim
 sidebar:
-  order: 201
+  order: 4
 ---
 
 The Nephilim unknowingly locked in the underground refuge during [the Flood] did
 not immediately become dwarfs. Rather, this was a gradual process as the few
-clans intermarried and their isolated lifestyle gradually turned in on itself.
+clans intermarried and their isolated lifestyle gradually became inbred.
 As a people, they became very very greedy, consumed, in fact, with avarice. They
 learned much of the use of their power to work metal and gems in wondrous ways,
 such that when they _did_ rediscover the surface, they would quickly develop a
@@ -35,20 +35,20 @@ angels smote them in their shape saying to themselves that they no longer
 deserved to bear the shape they had blasphemed. Thus they were made deformed,
 and those who saw them from thenceforth would no longer call them dwarfs at all,
 but would name them goblins. So too they also smote them in their minds, saying
-to themselves that the evil ones had abused the mind no longer deserved its use,
-and they lost the imagination that allowed them to be artisans of such renown,
+to themselves that the evil ones had abused the mind and no longer deserved its use.
+They lost the imagination that allowed them to be artisans of such renown,
 while at the same time the desire for the works of their hands, works they could
 no longer perform, was trebled, so that it became a constant mental torment, the
 desire to own that which they could no longer produce.
 
 Thus the goblin wars started. The goblins, jealous of their dwarfish kin, first
-stole from, and later began to kill those who could still create. The Dwarfs,
+stole from, and later began to kill those who could still create. The dwarfs,
 while not as consumed by greed as the goblins, were themselves far from an
 *un*selfish people, and would retaliate. War developed, and dwarfs and goblins
 would wage subterranean warfare until at last the true dwarfs were wiped out. In
 the process of this however, two things would happen.
 
-First, the goblins lost control over the trolls, who now range free. Lacking
+First, the goblins lost control over the trolls, which began to range free. Lacking
 immortal souls and true free will, the trolls never rose above the level of
 wandering tribes. They have only the most rudimentary of languages, and some
 experts even refuse to grant that trollish communication is in fact true
@@ -56,10 +56,10 @@ language. They opine that "language" requires more than nouns and verbs (trolls
 lack all concepts of adjectives and adverbs except a highly simplistic concept
 of amount). Only the most intelligent of trolls are capable of learning to wield
 a weapon, even a club, without self injury, and only the truly exceptional can
-be trained to follow simple directions and act as "security trolls."
+be trained to follow simple directions and act as "security trolls" (humans exposed to trolls acting in this capacity question the sanity of the nephilim who employ trolls in this capacity).
 
 Secondly, some goblins and dwarfs had relations of a sort - war is never a
-pretty thing, and these _were_ once one people. Magic does strange things, so
+pretty thing, and these _were_ once one people. Additionally, magic does strange things, so
 some of these children were viable and even fertile. A few of them were
 sufficiently "dwarfish" that though they are still called goblins today, they
 _look_ rather less hideous than Tolkien (for example) describes, and are capable

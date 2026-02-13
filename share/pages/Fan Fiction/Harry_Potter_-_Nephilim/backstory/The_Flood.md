@@ -1,9 +1,9 @@
 ---
-title: 'Backstory: The Flood'
+title: The Flood
 author: Luke Schierer
 collection: nephilim
 sidebar:
-  order: 200
+  order: 3
 ---
 
 > When people began to multiply on the face of the ground, and daughters were

@@ -1,0 +1,69 @@
+# cspell: disable-next-line
+columnorder:
+  Power Level: 1
+  Ability Estimate: 2
+rows: 
+- Power Level: 1
+  Ability Estimate: |
+    **All** of the following:
+    
+    * Some single weak ability within this category.
+    * No conscious control over the ability
+- Power Level: 2
+  Ability Estimate: |
+    **One** of the following:
+
+    * Multiple barely detectable abilities within this category.
+    * Conscious control over a single weak ability within this category.
+    * No conscious control over a single moderate strength ability within this category.
+- Power Level: 3
+  Ability Estimate: Able to manipulate this category of magic with great difficulty/effort.
+- Power Level: 4
+  Ability Estimate: |
+    **All** of the following:
+
+    * Able to achieve minimally acceptable levels of proficiency in this category of magic.
+    * If some OWL test depended solely on this category of magic, expect to score in the P range.
+- Power Level: 5
+  Ability Estimate: |
+    **All** of the following:
+
+    * Expected to achieve acceptable levels of proficiency in this category of magic.
+    * If some OWL test depended solely on this category of magic, expect to score in the A range.
+- Power Level: 6
+  Ability Estimate: |
+    **All** of the following:
+
+    * Expected to be capable of more advanced learning in this category of magic.
+    * If some OWL test depended solely on this category of magic, expect to score in the E range.    
+    * If some NEWT test depended solely on this category of magic, expect to score in the A range.
+- Power Level: 7
+  Ability Estimate: |
+    **All** of the following:
+
+    * Expected to be capable of doing well in an advanced course on this category of magic.
+    * If some OWL test depended solely on this category of magic, expect to score in the O range.    
+    * If some NEWT test depended solely on this category of magic, expect to score in the E range.
+    * Possibly capable learning magics in this category beyond NEWT level.
+- Power Level: 8
+  Ability Estimate: |
+    **All** of the following:
+
+    * Expected to be capable of doing well in an advanced course on this category of magic.
+    * If some OWL test depended solely on this category of magic, expect to score in the O range.    
+    * If some NEWT test depended solely on this category of magic, expect to score in the 0 range.
+    * Capable learning magics in this category beyond NEWT level.
+- Power Level: 9
+  Ability Estimate: |
+    **All** of the following:
+
+    * Expected to learn OWL and NEWT level magics with relative ease.
+    * Expected to learn magics in this category beyond the NEWT level.
+    * Instinctual (unconscious) use of magic in this category is extremely common.
+- Power Level: 10
+  Ability Estimate: |
+    **All** of the following:
+
+    * Learning this category of magic is more about finding out what is possible and fine-tuning abilities you already have.  That is, the student is not really *taught* so much as *shown once*, followed by some minimal practice by the student.
+    * OWL and NEWT practicals will be easy, but theory portions may be difficult for this person, because their magic is in fact instinctual in this area.
+

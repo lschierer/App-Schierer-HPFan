@@ -1,7 +1,7 @@
 ---
-title: 'Backstory: Angels'
-sidebar:
-  order: 200
+title: 'Angels'
+sidebar: 
+  order: 1
 author: Luke Schierer
 collection: Nephilim
 ---
@@ -36,7 +36,7 @@ their rebellion. Thus there was war across creation, between those angels that
 rebelled, and those who obeyed.
 
 The Creator, delegated the bulk of the battle to the four lowest orders of
-angels. Their victories demonstrate both His power, not theirs, for they battle
+angels. Their victories demonstrate His power, not theirs, for they battle
 against orders of angels vastly superior in being to themselves. These victories
 also serve to glorify them through whom the Creator has acted, for the courage
 and steadfast faith in their Creator that has allowed them to serve as His
@@ -67,7 +67,7 @@ is true, good, and right. They were, and are, a fundamentally flawed thing.
 
 And yet, the Creator in His wisdom would not allow them to create a life that
 was wholly evil as they had desired. He would not be mocked by an anti-man to
-stand up against the centrepiece of His creation. Thus it came to pass that the
+stand up against the centrepiece of His creation. Thus Thus it came to pass that the
 Nephilim, flawed though they are, _can_ turn away from the evil they were
 created from and in. And some did.
 

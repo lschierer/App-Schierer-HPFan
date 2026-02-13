@@ -128,7 +128,7 @@ grows profoundly as he (or she) approaches his eleventh birthday.
 
 [^211219-2]: See the short synopsis about [the Flood] and about [Dwarfs].
 
-[Dwarfs]: ../backstory/The_Dwarfs
+[Dwarfs]: ../backstory/Dwarfs
 [the Flood]: ../backstory/The_Flood
 
 [^210918-1]:

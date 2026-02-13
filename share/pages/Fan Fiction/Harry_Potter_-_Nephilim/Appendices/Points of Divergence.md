@@ -119,11 +119,15 @@ make sense.
 
 #### Some Notable Differences from the actual Harry Potter universe
 
+Essentially I'm using _[Many Waters][MW]_ as the basis of an answer to the question "where does magic come from originally", though as explained above, I did change the answer provided there some. However, to make that origin story work a little better, and also to make real the idea of consequences, as explained in the [Introduction], I needed to diverge a little more than just answering an unasked question. 
+
 - Harry is noticeably out of character in this story. I will try to make him the
   exception rather than the norm. However, to the extent that characters are
   formed by their experiences across the actual Harry Potter series, they may
   end up in different places (emotionally/psychologically) between my first
   chapter and last, than they did between Mrs. Rowling's first book and last.
+- Those that call themselves witches _are not actually._ They are nephilim. That
+  is, you will encounter two sets of characters, those from the original Harry Potter, who will use 'witch' and 'wizard' as merely gendered versions of the same concept, and original characters to this work from my fictional clergy who will use 'witch' in the sense defined here, to strictly mean humans who have gained magic through demonic ritual.  See the next point.
 - Non-magical people, and all appendices, use the word "witch" to refer to those
   corrupted by union with fallen angels. They do gain power (magic) from this
   union, but are corrupted by it. Should they repent and receive forgiveness
@@ -133,8 +137,6 @@ make sense.
 - Following from the origin of magic I'm using, magic will follow somewhat
   different [rules][ab] than the Harry Potter books. This includes both the way
   the characters use magic and magical creatures.
-- Those that call themselves witches _are not actually._ They are nephilim. That
-  is, you will encounter two sets of characters, those from the original Harry Potter, who will use 'witch' and 'wizard' as merely gendered versions of the same concept, and original characters to this work from my fictional clergy who will use 'witch' in the sense defined here, to strictly mean humans who have gained magic through demonic ritual.  See the next point.
 - Modern day welders of magic, heavily influenced by paganism and by those who
   have given into temptation, have obscured the difference between those who
   inherit magic and those who have gained it through sin. They call all female

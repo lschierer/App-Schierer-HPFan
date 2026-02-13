@@ -22,4 +22,4 @@ originally lost nearly all free will - 90% impact).
 
 [dwarfs]: ./Dwarfs
 [veela]: ./Veela
-[goblin wars]: ../../backstory/The_Dwarfs
+[goblin wars]: ../../backstory/Dwarfs

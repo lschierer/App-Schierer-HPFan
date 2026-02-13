@@ -1,0 +1,208 @@
+# cspell: disable-next-line
+columnorder:
+  Angelic Choir: 1
+  Description: 2
+  Abilities Granted: 3
+rows:
+  - Angelic Choir: Seraphim
+    Description: These angels perceive God most directly, and know Him in and as Himself best.
+    Abilities Granted: |
+      * The resulting nephil does not appear to have any ability to perceive God.
+      * As man is a limited image of God, the nephil has the ability to perceive the
+        heart of the man/nephil. When used on other nephil, this allows access to
+        information about the person's physical state, their will, and their memories.
+        When used on humans, it allows only access to information about the person's
+        physical state. However, an astute judge of human nature can combine this with
+        situational awareness, historical information about the person, body language,
+        and similar data to make highly accurate guesses.
+  - Angelic Choir: Cherubim
+    Description: These angels perceive God only indirectly, but understand that perception best. Their work is the contemplation of God through His works.
+    Abilities Granted: |
+      The nephil inherits the the ability to perceive/detect what has been done with
+      magic, and what is possible with it. This is a more passive ability than is
+      inherited from any other choir, and could be confused with the mastery granted
+      by inheriting a power level of 10 from the other choirs. The difference is subtle but important.
+
+      * The Cherub's child gains no ability to *perform* magic in other categories, only to *understand what has been done*.
+      * The Cherub's child gains an ability that is *always* used instinctively.  While nephil with differing levels can perceive with differing levels of accuracy and clarity, neither will need nor benefit from instruction. 
+      * This makes this category distinct from all others where the nephil inheriting the category *does* benefit from instruction except at the extreme ends of the scale.
+      * Reiterating: you will find no class in any magical school about detecting "spell residue" or similar ideas, because you can either do this without training or you cannot.
+  - Angelic Choir: Thrones
+    Description: The Thrones contemplate Judgement.
+    Abilities Granted: |
+      - While the Thrones, like the Seraphim, are primarily contemplative, the
+        inheritance from them is, again like that from the Seraphim, much more active.
+        The nephil has the ability to bind the will of other nephilim, and to defend
+        against being so bound.
+      - This ability has marginal _at best_ effect on full humans. Despite this, the
+        magical population continues to use spells intended to change behaviour on
+        full humans as part of their attempts at preserving their so called
+        "International Statute of Secrecy."
+      - Careful investigation with the aid of the rare cooperative nephil has shown
+        that many of these behaviour altering spells have a secondary mode of
+        operation that affects brain chemistry that _does_ work on full humans
+        frequently in ways that mimic the effects of hallucinogenic drugs, alcohol, or
+        both.
+      - There is at least some data indicating that these secondary modes of operation
+        come from abilities in other categories automatically compensating for the
+        failure of abilities in this category. However, scholars are unwilling to
+        probe too deeply due to both the morally problematic nature of the research and the very real magical dangers involved. 
+      - Things like the imperious curse or the confundus charm fit in here.
+      - Magical contracts are very real,[^221119-1] and any clergy dealing with the
+        nephilim should be wary of the ways in which a nephil can be affected by them. Those nephilim with abilities in this category tend to
+          * have greater control over contracts they consciously enact
+          * enact contracts (both consciously and subconsciously) that are more strongly self-enforcing
+          * are, ironically, more *resistant* to being affected by contracts they are not a first party to authoring
+          * each of these tendencies *can* in fact be trained/strengthened through both instruction and practice. 
+
+      [^221119-1]:
+          As stated elsewhere in these Appendices, I believe the existence of magical
+          contracts is actually _implied_ by the canonical Harry Potter books.
+          However, I am not going to debate their canonicity here. For the purposes of
+          this work, they exist.
+  - Angelic Choir: Dominions
+    Description: These angels are responsible for ordering the work of all other angels. Their name implies actual, real authority.
+    Abilities Granted: |
+      - The relationship between the way Dominions operate and the abilities the
+        nephilim gain is indirect, and one of several places that suggests flawed
+        understanding.
+      - God creates by decree - He spoke and the world was made. The nephilim are not
+        capable of true creation, but have authority only over the _form_, but not the
+        _substance_, of the material world. They can thus by their magic transmute the
+        form of one thing to another.
+      - This will be temporary unless the change is "locked" in place through
+        combining this ability with that inherited from the Powers. No primordial
+        nephilim with the power to transmute has ever been observed to do anything
+        long lasting.
+      - No nephil has ever been observed to retroactively make a transmutation
+        permanent, it must be done _as the change is made, by the same nephil_.
+  - Angelic Choir: Virtues
+    Description: >-
+      The Virtues are responsible for enforcing the laws of physics. Traditional
+      sources tell us that they generally concern themselves primarily with
+      massively macroscopic effects.
+    Abilities Granted: |
+      - As related to the magic of the nephilim, this a better understanding appears
+        to be that actually _doing_ anything with the way physical laws work at a
+        microscopic and sub-microscopic level would be either catastrophic, unduly
+        influence free will for those affected by it, or both. As a result, the
+        nephilim appear to be either inherently unable, or Divinely restricted from,
+        doing anything at the microscopic level.
+      - Given the above limitation to the macroscopic, one _can_ understand the
+        nephilim as temporarily augmenting the nature of the natural world.
+      - Things like animation charms fit here, but so do things like levitation
+        charms.
+      - Interestingly, primordial nephilim and those who inherit from them appear to
+        gain a passive ability as well. When they simply touch or handle certain raw
+        materials (potions ingredients), these become "charged" with extra properties.
+      - Like the magic inherited from the Dominions, the magic inherited from the
+        Virtues is highly temporary. It appears to require continuous concentration on
+        the part of the nephilim.
+      - Nephilim communities with inheritance from a spectrum of choirs have devised
+        several ways around the time limitations. See latter sections for details.
+      - Nephilim have discovered an interesting aspect of this ability, it can be used to add a property to an object 
+        such that it has the ability to itself *store magic*.  Not in the unformed potential the way a battery allows 
+        any use of electricity, but rather in the formed potential that a shotgun shell has a certain stored potential 
+        to project the shotgun pellets, but limited potential to do anything *except* explode. 
+  - Angelic Choir: Powers
+    Description: >-
+      Powers are the first of the overtly militant angelic orders (looking from top
+      down). They protect the work of the Virtues from interference. This, to me,
+      implies that God providentially foresaw that giving angels free will would
+      entail a universe in which that free will was exercised in wrong ways.
+    Abilities Granted: |
+      - The nephil inherits the ability to affect time.
+      - Divination is _not_ included in this ability, that is something different.
+      - When used directly on the natural world:
+          - Nephilim are capable of short duration closed-loop time travel. 
+          - "short duration" meaning about one to two days backwards depending on both power level and training.
+            Longer durations appear to cost the user either physical health, actual longevity, or both, in 
+            proportion to the distance in time travelled. They have tried extensively to work around this. 
+          - "closed loop" meaning that, despite tails the nephilim tell each other, there is no *reliable* 
+            evidence that a nephil has *actually* managed to change anything - only to change things that 
+            *appeared* to have happened.  For example you hear something, misattribute a cause, go back, 
+            *change the cause*, **but the sound still happens**, and proceed forward to rejoin time where you left it. 
+          - various nephilim have managed to harm (and sometimes kill) their *future* selves, but when actually 
+            observed by *Church* chroniclers, no nephil has ever killed their *past* self. There are *stories* of
+            this happening, but even *their* research has no *actual* evidence that it has *actually* happened. 
+          - Nephilim can slow the passage of time on an object or person.  They *think* they can halt it entirely. 
+            The so called "stasis charm" is actually still allowing forward motion in time, but at about one one-millionth of a second per *hour*. 
+          - We suspect they could equally accelerate the passage of time, but the Church has not observed a nephil doing this. 
+      - Nephilim who inherit this in addition to some other ability quickly learn that
+        this ability combines with other powers.
+          - When used on a magical effect, you can make it last longer (even permanently)
+          - When used on a magical effect, you can make it last less time (a finite incantatem charm for example totally
+            cancels it).
+          - Interestingly, when used on an *object* that *contains* a magical effect, you can affect *either* the object containing, *or* the effect contained.
+      - The relationship to this and the parent angel's ability is indirect and
+        suggests a need for more research.
+  - Angelic Choir: Principalities
+    Description: >-
+      The principalities are concerned with groups of people - nations, cities,
+      clubs, ethnic groups. They are not concerned with the individual, but with the
+      common good.
+    Abilities Granted: |
+      - The nephil inherits the ability to create area effects on populations and
+        places (unplottable, "muggle repelling", so on).
+      - This differs from the Thrones in that the gifts from the Thrones affect
+        individuals regardless of location.
+      - A Thrones derived ability always affects a specific person regardless of
+        where that person is.
+      - A Principalities derived ability affects whoever happens to be in a specific
+        location, regardless of who that person is.
+      - The nephilim appear to have some ability to target what _kind_ of who is affected. Scholars record spells successfully affecting
+          - Anyone below a certain age.
+          - Anyone with a specific genetic trait.
+          - Any _nephilim_ with a specific intent.
+          - Anyone in a specific emotional state. Note the slight but key difference
+            from the proceeding. Most nephilim communities do not appear to be reliably
+            aware of this distinction.
+      - Like the magic of the Powers, these spells must be continuously powered,
+        except where similar workarounds have been developed using other classes of
+        abilities.
+  - Angelic Choir: Archangels
+    Description: >-
+      These angels are tasked with particular goals in particular times and places.
+      Heal this person, protect that person, deliver this message. They accomplish
+      concrete tasks on God's behalf, with whatever force is required to do so.
+    Abilities Granted: |
+      - The nephil's inheritance is again indirect.
+      - The Archangels exercise visible force, the nephil gains the ability to use
+        magic to enforce his will on others via external means.
+      - This should not be confused with the Thrones or Principalities. The magic
+        inherited from these choirs influence others _directly_. That magic is, for
+        lack of better phrasing, "inside your head." The magic inherited from the
+        Archangels is more like pushing someone, or pulling him/her into place.
+      - As implied above, Scholars have also observed some nephilim use spells that
+        superficially appears identical to that inherited from the Principalities, in
+        that it affects a location. However, the _mode_ of operation differs, again as
+        noted above.
+      - A primordial nephil from the Principalities would keep you out by making you
+        want to be somewhere else.
+      - A primordial nephil from the Archangels would physically stop you from going
+        there.
+      - The powers appear to combine in those who descend from both types
+        particularly well.
+      - Some of these magics appear to trigger corrupting changes with at very high
+        rates, to unusually severe degrees, or both.
+  - Angelic Choir: Angels
+    Description: >-
+      Also called Guardian Angels, these angels are tasked with the welfare of
+      specific individuals in a general sense. They differ from the Archangel who
+      has a particular goal to achieve in time and space in that the Guardian Angel
+      is concerned with the _moral_ state of its assigned person. The Guardian Angel
+      is concerned with salvation.
+    Abilities Granted: |
+      - The inheritance from the nephil is the ability to resist magical force, of any
+        kind, from any other class of magic.
+      - Shield spells, spells to undo effects (which differs from stopping the
+        duration very slightly but significantly), and healing spells.
+      - While this description sounds like it should be one of the safest categories
+        of magic, corrupting change has been observed even primordial nephil of this
+        type.
+      - Scholars have reasoned that defensive measure might still warp the mind/soul
+        of the user; it might effectively be resisting too much, or the wrong way. For
+        example in the physical world one can drown out a voice by being louder, by
+        covering one's ears, or by puncturing one's ear drums. While the last is
+        extreme, and only a crazy person would do it, remember that nephil do not
+        always understand how their magic affects them.

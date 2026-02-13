@@ -1,10 +1,10 @@
 ---
-title: 'Backstory: Giants'
+title: Giants
 tableOfContents: false
 author: Luke Schierer
 collection: Nephilim
 sidebar:
-  order: 210
+  order: 6
 ---
 
 For all that mythological accounts of giants go back beyond history, the reality

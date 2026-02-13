@@ -1,7 +1,7 @@
 ---
-title: 'Backstory: Angels'
+title: The early works of the Nephilim
 sidebar:
-  order: 200
+  order: 2
 author: Luke Schierer
 collection: Nephilim
 ---

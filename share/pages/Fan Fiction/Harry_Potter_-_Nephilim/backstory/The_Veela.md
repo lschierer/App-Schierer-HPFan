@@ -1,10 +1,10 @@
 ---
-title: 'Backstory: Veela'
+title: Veela
 tableOfContents: false
 author: Luke Schierer
 collection: Nephilim
 sidebar:
-  order: 210
+  order: 5
 ---
 
 After the flood, but still long before the days when men began to record his own
@@ -41,8 +41,7 @@ blasphemy, or rather, a pair of them.
 The girl, who by now had grown to be a woman, had also come to have a girl child
 of her own. Being in essence a creature of selfishness, she resolved not to be
 herself burdened by the care of the child. Being not fully consumed by evil, she
-could not bring herself to destroy her child, nor to abandon it however, and so
-she resolved to make servants to do the work for her. She took the fireflies of
+could not bring herself to destroy her child, nor to abandon it. She resolved to make servants to do the work for her. She took the fireflies of
 the region, and twisted them into human form, yet still with wings, to
 compensate for their tiny size. She took the beetle's, and likewise twisted
 them, intending them not to serve the child's needs, but to guard the child in
@@ -115,7 +114,7 @@ minor exceptions centuries later) and focused their efforts on preventing the
 enemy from making full use of the veela. See [Appendix I] for the resulting
 state.
 
-[dwarfs made trolls]: ./The_Dwarfs
+[dwarfs made trolls]: ./Dwarfs
 
 [^241120-5]:
     This battle happening entirely on the spiritual plane, and unknown to any

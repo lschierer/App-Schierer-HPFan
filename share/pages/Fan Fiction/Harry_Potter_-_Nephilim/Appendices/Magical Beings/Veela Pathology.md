@@ -1,8 +1,8 @@
 ---
-title: >-
-  The Veela Curse
+title: The Veela Curse
 author: Luke Schierer
-sidebar: 1
+sidebar: 
+  order: 500
 collection: Nephilim
 template: appendix
 ---
@@ -148,7 +148,7 @@ normal to any nephil (see [Appendix H]), her concupiscence was vastly increased.
 A full veela has perhaps 20% of the ability to go against her instincts that a
 full human does. A half-veela will _generally_ have much more free will, divine
 providence generally ensures that a being that is not bound by the limits here
-described for full veela inherits her father's self control.
+described for full veela inherits her father's self control.  How much more seems to vary and is difficult to precisely quantify. 
 
 Her reproductive system was warped such her body is sufficiently actively
 hostile to male sperm that female births outnumber male births by at least three
@@ -219,6 +219,8 @@ Her inheritance from the Powers was restricted such that it _cannot_ combine
 with her inheritance from the Dominions. No full veela is capable of permanent
 transmutation, and a "half-veela" is capable of it only to the extent her male
 parent was.
+
+The "half-veela" is more complicated to assess, as she may have inherited some degree of magical ability from her nephil father, and these abilities are *not* restricted by the pathology inherited from her mother.  The "half-veela" will in herself, and in her descendants, effectively have two magical inheritances each of which has a unique probability of being inherited by any daughter. 
 
 [Appendix A]: <./Points of Divergence>
 [Rules of Magic]: <./Rules of Magic>

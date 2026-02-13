@@ -31,7 +31,7 @@ spirits has aided the Church scholars in the classification of the magic the
 nephilim use, as their magic is inherited from those who have fallen into these
 snares. Thus we know that magic can be subdivided into nine aspects, each
 corresponding to one of the nine angelic choirs. Each choirs appears to grant a
-distinct ability to those who are corrupted by members of that choirs, these
+distinct ability to those who are corrupted by members of that choir, these
 abilities being inherited by their children. Further, should either the
 corrupted themselves, or their children, go on to procreate with others from a
 different "lineage," the powers will frequently combine in the next generation.
@@ -63,7 +63,7 @@ any given nephilim.
     - kb0. _[The Lost Year](https://www.fanfiction.net/s/13815274)_ Published:
       2021-02-09. Updated: 2021-03-24.
 
-<powerlevel-table></powerlevel-table> <!-- cspell: disable-line -->
+<yamltable source="./power level details.yaml"></yamltable> <!-- cspell: disable-line -->
 
 This begs the question "What do you mean by expected?" Obviously there is no
 standards body anywhere in the world that is grading students using these
@@ -75,12 +75,21 @@ from angels, and refuse to think of their abilities in terms of the angelic
 choirs.
 
 Given there is no objective standard based on these categories, scholars are
-attempting to describe a hypothetical situation. Given adequate but not
+attempting to describe a hypothetical situation. So called 'OWL' and 'NEWT' tests are reasonably standard across Europe and have reasonably equivalent tests in Africa, India, North and South America, and Australia.  They also happen to *roughly* correspond to the GCSEs and A-Levels used in the United Kingdom except that they are graded on a different scale.  'OWL' and 'NEWT' tests are graded on the scale:
+
+* T - Troll  (fail with distinction)
+* D - Dreadful (failing grade)
+* P - Poor (fail with the possibility to repeat)
+* A - Acceptable (lowest passing grade)
+* E - Exceeds Expectations
+* O - Outstanding
+
+For the purposes of this document, given adequate but not
 necessarily superlative instruction, someone who does not meet the goal
 described in a given power level is being lazy, suppressing their abilities, or
 both. They are neglecting their own strengths.
 
-### abilities by type
+### Abilities by Type
 
 Church scholars designate first generation nephilim the "primordial nephilim."
 By this we do not mean those from the prehistoric times, but rather, those that
@@ -103,191 +112,7 @@ is limited by the fact that the rate of new primordial nephilim is (thankfully)
 extraordinarily low, and that even when it does occur, the clergy are not always
 both able and sufficiently educated to collect meaningful data.
 
-#### Seraphim
-
-- These angels perceive God most directly, and know Him in and as Himself best.
-- The resulting nephil does not appear to have any ability to perceive God.
-- As man is a limited image of God, the nephil has the ability to perceive the
-  heart of the man/nephil. When used on other nephil, this allows access to
-  information about the person's physical state, their will, and their memories.
-  When used on humans, it allows only access to information about the person's
-  physical state. However, an astute judge of human nature can combine this with
-  situational awareness, historical information about the person, body language,
-  and similar data to make highly accurate guesses.
-
-#### Cherubim
-
-- These angels perceive God only indirectly, but understand that perception
-  best. Their work is the contemplation of God through His works.
-- The nephil inherits the the ability to perceive/detect what has been done with
-  magic, and what is possible with it. This is a more passive ability than is
-  inherited from any other choir, and could be confused with the mastery granted
-  by inheriting a power level of 10 from the other choirs. The difference is
-  that the Cherub's child really does not even need to be taught to the extent
-  they inherit. You will find no class in any magical school about detecting
-  "spell residue" or similar ideas, because you can either do this without
-  training or you cannot.
-
-#### Thrones
-
-- The Thrones contemplate Judgement.
-- While the Thrones, like the Seraphim, are primarily contemplative, the
-  inheritance from them is, again like that from the Seraphim, much more active.
-  The nephil has the ability to bind the will of other nephilim, and to defend
-  against being so bound.
-- This ability has marginal _at best_ effect on full humans. Despite this, the
-  magical population continues to use spells intended to change behaviour on
-  full humans as part of their attempts at preserving their so called
-  "International Statute of Secrecy."
-- Careful investigation with the aid of the rare cooperative nephil has shown
-  that many of these behaviour altering spells have a secondary mode of
-  operation that affects brain chemistry that _does_ work on full humans
-  frequently in ways that mimic the effects of hallucinogenic drugs, alcohol, or
-  both.
-- There is at least some data indicating that these secondary modes of operation
-  come from abilities in other categories automatically compensating for the
-  failure of abilities in this category. However, scholars are unwilling to
-  probe too deeply due to the danger to both the caster and the subject.
-- Things like the imperious curse or the confundus charm fit in here.
-- Magical contracts are very real,[^221119-1] and any clergy dealing with the
-  nephilim should be wary of the ways in which a nephil can be affected by them.
-
-#### Dominions
-
-- These angels are responsible for ordering the work of all other angels. Their
-  name implies actual, real authority.
-- The relationship between the way Dominions operate and the abilities the
-  nephilim gain is indirect, and one of several places that suggests flawed
-  understanding.
-- God creates by decree - He spoke and the world was made. The nephilim are not
-  capable of true creation, but have authority only over the _form_, but not the
-  substance, of the material world. They can thus by their magic transmute the
-  form of one thing to another.
-- This will be temporary unless the change is "locked" in place through
-  combining this ability with that inherited from the Powers. No primordial
-  nephilim with the power to transmute has ever been observed to do anything
-  long lasting.
-- No nephil has ever been observed to retroactively make a transmutation
-  permanent, it must be done _as the change is made, by the same nephil_.
-
-#### Virtues
-
-- The Virtues are responsible for enforcing the laws of physics. Traditional
-  sources tell us that they generally concern themselves primarily with
-  massively macroscopic effects.
-- As related to the magic of the nephilim, this a better understanding appears
-  to be that actually _doing_ anything with the way physical laws work at a
-  microscopic and sub-microscopic level would be either catastrophic, unduly
-  influence free will for those affected by it, or both. As a result, the
-  nephilim appear to be either inherently unable, or Divinely restricted from,
-  doing anything at the microscopic level.
-- Given the above limitation to the macroscopic, one _can_ understand the
-  nephilim as temporarily augmenting the nature of the natural world.
-- Things like animation charms fit here, but so do things like levitation
-  charms.
-- Interestingly, primordial nephilim and those who inherit from them appear to
-  gain a passive ability as well. When they simply touch or handle certain raw
-  materials (potions ingredients), these become "charged" with extra properties.
-- Like the magic inherited from the Dominions, the magic inherited from the
-  Virtues is highly temporary. It appears to require continuous concentration on
-  the part of the nephilim.
-- Nephilim communities with inheritance from a spectrum of choirs have devised
-  several ways around the time limitations. See latter sections for details.
-
-#### Powers
-
-- Powers are the first of the overtly militant angelic orders (looking from top
-  down). They protect the work of the Virtues from interference. This, to me,
-  implies that God providentially foresaw that giving angels free will would
-  entail a universe in which that free will was exercised in wrong ways.
-- The nephil inherits the ability to affect time.
-- When used directly on the natural world, this results in things like time
-  turners on one hand, but also stasis charms on the other.
-- Divination is _not_ included in this ability, that is something different.
-- Nephilim who inherit this in addition to some other ability quickly learn that
-  this ability combines with other powers.
-  - When used on a magical effect, you can make it last longer (even
-    permanently) or shorter (a finite incantatem charm for example totally
-    cancels it).
-  - The relationship to this and the parent angel's ability is indirect and
-    suggests a need for more research.
-
-#### Principalities
-
-- The principalities are concerned with groups of people - nations, cities,
-  clubs, ethnic groups. They are not concerned with the individual, but with the
-  common good.
-- The nephil inherits the ability to create area effects on populations and
-  places (unplottable, "muggle repelling", so on).
-- This differs from the Thrones in that the gifts from the Thrones affect
-  individuals regardless of location.
-  - A Thrones derived ability always affects a specific person regardless of
-    where that person is.
-  - A Principalities derived ability affects whoever happens to be in a specific
-    location, regardless of who that person is.
-- The nephilim appear to have some ability to target what _kind_ of who is
-  affected. Scholars record spells successfully affecting:
-  - Anyone below a certain age.
-  - Anyone with a specific genetic trait.
-  - Any _nephilim_ with a specific intent.
-  - Anyone in a specific emotional state. Note the slight but key difference
-    from the proceeding. Most nephilim communities do not appear to be reliably
-    aware of this distinction.
-- Like the magic of the Powers, these spells must be continuously powered,
-  except where similar workarounds have been developed using other classes of
-  abilities.
-
-#### Archangels
-
-- These angels are tasked with particular goals in particular times and places.
-  Heal this person, protect that person, deliver this message. They accomplish
-  concrete tasks on God's behalf, with whatever force is required to do so.
-- The nephil's inheritance is again indirect.
-- The Archangels exercise visible force, the nephil gains the ability to use
-  magic to enforce his will on others via external means.
-- This should not be confused with the Thrones or Principalities. The magic
-  inherited from these choirs influence others _directly_. That magic is, for
-  lack of better phrasing, "inside your head." The magic inherited from the
-  Archangels is more like pushing someone, or pulling him/her into place.
-- As implied above, Scholars have also observed some nephilim use spells that
-  superficially appears identical to that inherited from the Principalities, in
-  that it affects a location. However, the _mode_ of operation differs, again as
-  noted above.
-  - A primordial nephil from the Principalities would keep you out by making you
-    want to be somewhere else.
-  - A primordial nephil from the Archangels would physically stop you from going
-    there.
-  - The powers appear to combine in those who descend from both types
-    particularly well.
-- Some of these magics appear to trigger corrupting changes with at very high
-  rates, to unusually severe degrees, or both.
-
-#### Angels
-
-- Also called Guardian Angels, these angels are tasked with the welfare of
-  specific individuals in a general sense. They differ from the Archangel who
-  has a particular goal to achieve in time and space in that the Guardian Angel
-  is concerned with the _moral_ state of its assigned person. The Guardian Angel
-  is concerned with salvation.
-- The inheritance from the nephil is the ability to resist magical force, of any
-  kind, from any other class of magic.
-- Shield spells, spells to undo effects (which differs from stopping the
-  duration very slightly but significantly), and healing spells.
-- While this description sounds like it should be one of the safest categories
-  of magic, corrupting change has been observed even primordial nephil of this
-  type.
-- Scholars have reasoned that defensive measure might still warp the mind/soul
-  of the user; it might effectively be resisting too much, or the wrong way. For
-  example in the physical world one can drown out a voice by being louder, by
-  covering one's ears, or by puncturing one's ear drums. While the last is
-  extreme, and only a crazy person would do it, remember that nephil do not
-  always understand how their magic affects them.
-
-[^221119-1]:
-    As stated elsewhere in these Appendices, I believe the existence of magical
-    contracts is actually _implied_ by the canonical Harry Potter books.
-    However, I am not going to debate their canonicity here. For the purposes of
-    this work, they exist.
+<yamltable source="./Abilities by Choir.yaml"></yamltable> <!-- cspell: disable-line -->
 
 [^220628-4]:
     Dr. Andrew Sulavik.
@@ -335,7 +160,7 @@ Nearly all nephilim communities categorise magic as follows:
 - comes primarily from the Dominions, but is highly temporary unless you use
   abilities from the Powers to extend (perhaps infinitely) the duration _as you
   make the change_.
-- Nephilim scholars will teach students about Gramp's Law. Their understand is
+- Nephilim scholars will teach students about Gamp's Law. Their understanding is
   highly flawed. As a result of this flawed formulation, the "law" has
   exceptions, each of which also have exceptions, for example wine can be
   conjured.[^220718-1] These flaws stem from a few primary misconceptions:
@@ -379,6 +204,19 @@ Nearly all nephilim communities categorise magic as follows:
   Since many spells _can_ be used either offensively or defensively, but are not
   _inherently_ combat related, this class is pulling from all sorts of branches
   of magic.
+- As hinted above, some magic, has particular *counter*-magic, that is directly
+  reversing the effects.  For example, there is a curse that reverses the 
+  direction that the knee bends; one needs a counter-magic for this because the
+  curse is a form of permanent (Powers) reshaping (Dominions) of the structure
+  of the joint combined into a single act by the caster. It is specifically a
+  *curse* because it has *also* been 'hardened' against removal by an admixture
+  of additional magic. In this case, the joint has also been modified to act as
+  container for a magical contract (Virtues - container for magic; 
+  Thrones - contract) the act of attempting to heal the joint is explicitly the 
+  acceptance terms for the contract, in which you agree to *fail* at healing. 
+  With a better understanding of magic, one *could* attack **first** the contract
+  directly, reducing its operating period (to nil), **then** attempt to heal the
+  joint.  In fact, unknown to the nephilim this is precisely what the counter-curse does.
 
 [^241125-3]:
     I am mostly taking [Ishtar][]'s position from _[The Case of the Missing
@@ -419,11 +257,15 @@ Nearly all nephilim communities categorise magic as follows:
   configuration, and more, that this has _actually happened_ (and not some other
   quantum affect).
 - Conjuration will tend to be permanent.
-- The nephilim believe Gramp's Law again comes into play, but see the note above
-  about needing to understand your target down to the elemental level for it to
-  end up being digestible. A comfortable chair does not need to be so accurate,
-  because we expect it to remain a chair. A sandwich we expect our bodies to
-  _break down_ into the constituent molecules, which thus _have to be there_.
+- The nephilim believe Gramp's Law again comes into play, but there are actually two unrelated problems at work. 
+    1. See the note above about needing to understand your target down to the elemental level for it to
+       end up being digestible. A comfortable chair does not need to be so accurate,
+       because we expect it to remain a chair. A sandwich we expect our bodies to
+       _break down_ into the constituent molecules, which thus _have to be there_.
+    2. There's also an aspect of belief going on. Most nephil have been trained to believe that conjuration is a form of transfiguration, and that transfiguration of food is impossible.
+       They conclude from this chain of thought that conjuration of food is impossible, and in so doing, *make* it impossible *for them*.  
+- Nephil are taught conjuration of animals.  This only works for things that are in fact *animals* - that is, that lack immortal souls.  Even then, it does not reliably produce truly
+  living animals even, but more frequently only highly realistic puppets that will cease to operate when their "battery" runs out, but cannot (for example) digest food to "recharge."
 
 ### Vanishing
 
@@ -440,12 +282,10 @@ Nearly all nephilim communities categorise magic as follows:
   everything.
 - Vanishing is, highly problematic magic. When practised on a living thing, you
   are killing that thing. Fortunately, it is _impossible_ to vanish anything
-  that has an immortal soul, the magic simply will not work.[^241125-4]
-
-[^241125-4]:
-    Church officials worried about this for centuries, and some scholars to this
-    day refuse to accept the vision that revealed this titbit. Some continue to
-    worry about murder-by-vanishment.
+  that has an immortal soul, the magic simply will not work. Church officials worried about this for centuries, and some scholars to this
+  day refuse to accept the vision that revealed this titbit. Some continue to
+  worry about murder-by-vanishment.
+    
 
 ### Potions
 
@@ -456,7 +296,7 @@ Nearly all nephilim communities categorise magic as follows:
   instances of the same ingredient are actually precisely the same.
 - A strong ability inherited from the Cherubim will make you more able to
   discern the effects of the ingredients, including between instances of
-  supposedly identical ingredients.
+  supposedly identical ingredients. He or she will be able to do so even before adding the ingredients, but *not* before *intending* to do so. 
 - Thus the best potioneers strongly inherit from both the Cherubim and Virtues.
 - Some potions additionally require chemical reactions not possible in nature.
   - This requires the potioneer to have abilities from the Powers to make a
@@ -492,44 +332,27 @@ Nearly all nephilim communities categorise magic as follows:
 
 ### Runes
 
-- Runes were developed by the nephilim as an early way for individuals with
-  different powers to share those powers and achieve effects that neither could
-  alone.
-- Runes are Runes are _authored_ from powers inherited from the Virtues, you
-  augment reality to give your writing not just meaning, but power.
-- They are, however, _powered_ by the inheritance from the Powers, (investing an
-  element of long duration to the rune created).
-- Thus two people equally skilled at creating runes might not be equally skilled
-  at powering those runes, or vice versa.
-- While developed to achieve affects neither could alone, Runes work far better
-  when the scribe has both abilities.
+- Runes are a mental crutch used by the nephilim to aid them in triggering that ability inherited from the Virtues to make an object a container for magic, *and* to control **what** magic goes into a specific container.
+- Runes also allowed for early nephilim, before communities were so genetically mixed as to almost always have inherited all types of magic, to 'mix and match' magic.
+  - The rune carver would prepare containers using the Virtues. 
+  - Partners in the project, with other inheritances, would fill each container with the appropriate magic. 
+  - Runes can be combined into phrases allowing different containers with different magic to be joined together even when no single nephil has all the magic required. 
+  - Modern nephilim know that runes can be recharged but have forgotten that a rune can be carved in an empty/potential state as described here. that there is no *inherent* connection between the 'label' on the container and the contents of the container.  They erroneously think that a given rune *must* be filled with a particular magic. 
+- While runes *can* be combined across different nephil as described above, they work *better* if the container is filled with power at the same time it is created as a container, which of course necessitates that it be done by the same nephil. 
+- As stated, a rune *can* be recharged. However, it will not work as well if it has to be recharged from empty as if it is recharged from something less then empty. Runes are *not* like batteries that will have a degraded lifespan if not allowed to drain. They work *better* if they are continuously partly used then immediately refilled. 
 - Nephilim later found that Runes can be authored to _absorb_ power from the
   surrounding area to power connected sequences of runes.
-  - This was done by combining abilities from the Principalities, Virtues, and
-    Powers. using abilities inherited from the Principalities, instead of being
-    pre-charged via the Powers.
-  - This has a side effect of reducing the effect of any attempt to use other
-    magic in any way not connected to that rune sequence.
-  - For a school (like Hogwarts in England), nephilim children would be safer
-    when practising their magic because the effect of each spell would be
-    lessened.
-  - The hospital or clinic in the school would need to be shielded from most of
-    the runes protecting the rest of the school to ensure that injuries could
-    still be cured using magic at full efficacy.
-  - Overall, this effect would bolster the idea that schools are one of the
-    safest places in a given locality.
+  - A rune is a container. The container can contain a magical contract as well as a raw power.
+  - The nephil creating what they think of as the 'absorption' rune is creating a rune with a contract in it. The acceptance criteria of the contract is the use of magic within an area defined by an area effect defined with ability inherited from the Principalities.  So you need Thrones, Principalities, and Virtues to successfully carve an 'absorption' rune. 
+  - Unknown to almost all nephil, the founders used such runes *extensively* when building Hogwarts.  They did so *intentionally* having stumbled quite accidentally across the fact that they could build an absorption rune that would target *all* spells cast by anyone *who is a student.*  This solved a *very* real problem -- magic is inherently dangerous to learn. However, with the extensive use of these runes, every spell the students cast is drained of part of its power as they cast it.  This makes the spells by the students slightly, but noticeably, less dangerous than those cast by those of equal ability elsewhere. 
 - The use of runes persists into the modern era in part because the effects
   created by these "primordial" nephilim are still encountered by the "modern"
-  magical society, and in part because they remain an efficient and effective
-  way of combining one's own inheritance from the Powers with Virtues,
-  Dominions, Principalities, Angels, and/or Thrones. This is especially true
-  when, as is almost universally the case, the nephil in question does not even
-  understand these as the true way to classify magic.
+  magical society, and in part because of the ways these 'absorption' runes allow for incredibly powerful, long lasting, and effectively self-repairing defences. 
 
 ### Divination
 
 - This magic has two categories.
-  - Prophesy rarely magic at all. True prophecy occurs when a nephil is
+  - Prophesy is rarely magic at all. True prophecy occurs when a nephil is
     possessed by a fallen angel, who communicates some (usually cryptic)
     message. If they ever tell anything truthful, it is only because they judge
     it useful to lead us further into sin. Thus most prophesies are misleading,
@@ -537,7 +360,7 @@ Nearly all nephilim communities categorise magic as follows:
     Macbeth.[^20210902-5])
   - Users particularly skilled in the abilities from the Seraphim may be able to
     use these abilities to make incredibly accurate predictions about people
-    without crossing any lines. Knowing that someone is clumsy from their
+    without being possessed. Knowing that someone is clumsy from their
     memories, knowing that someone is afraid from their emotions, the user can
     predict some short term events and reactions in ways that might seem like
     divination. Practices like palm reading, tea leaves, and crystal gazing grew
@@ -593,7 +416,7 @@ Nearly all nephilim communities categorise magic as follows:
   of corrupting change.
   - This change may be physical, spiritual, mental, or any combination thereof.
     - Reduced ability to resist concupiscence is the most frequently observed
-      change.
+      change, but far from the only change. 
     - In some cases this has been significantly noticeable even within a single
       individual's lifespan.
     - In others it has been visible only by comparing across generations.
@@ -611,7 +434,9 @@ Nearly all nephilim communities categorise magic as follows:
       unconsciously and required both great training and great concentration to
       _not_ use this magic. That individual appeared to experience no effects
       from her use of legilimency except the loss of trust of those around her.
-      Scholars speculate that the lack of freedom involved is key.
+      Some Scholars speculate that the lack of freedom involved is key. Others think
+      that this child's lack of control was in fact the result of a *parent's* abuse of the magic, and
+      that the lack of trust the nephil experienced her whole life *was* the punishment. 
   - There is an unknown threshold where the risk changes from a risk of a
     _personally_ corrupting change to an _inheritable_ corrupting change. The
     purposes for which legilimency was used appear to be critical in determining
@@ -629,7 +454,7 @@ Nearly all nephilim communities categorise magic as follows:
 
 ### Contracts
 
-The history of the Church's interaction with the nephilim is repeat with
+The history of the Church's interaction with the nephilim is replete with
 examples of individuals who have been bound by magical contracts. There is more
 than sufficient documentary evidence to establish that at least some of these
 were created either without the subject's knowledge or even against the
@@ -659,8 +484,7 @@ Magically speaking, contracts can be generalised in a few ways, depending on its
 precise nature.
 
 - A written contract is (unknown to the nephilim) essentially a highly modern
-  form of runes. You use magic inherited from the Virtues to give your writing
-  power, in this case power inherited from the Thrones to compel the will of
+  form of runes. You use magic inherited from the Virtues make the writing, the paper, or both a container, in this case of power inherited from the Thrones to compel the will of
   those bound by the contract. The contract may be further infused by the Powers
   to give it duration, and (almost always) may depend on the existence of the
   paper/parchment contract to ensure its persistence. Some nephilim communities

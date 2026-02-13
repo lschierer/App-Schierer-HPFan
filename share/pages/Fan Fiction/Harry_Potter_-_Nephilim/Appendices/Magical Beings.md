@@ -299,7 +299,7 @@ rage, and in the case of the house elves a "race" that can never be fully freed.
 [AI]: <./Veela Pathology>
 [Appendix I]: <./Veela Pathology>
 [Flood]: ../backstory/The_Flood
-[goblin wars]: ../backstory/The_Dwarfs
+[goblin wars]: ../backstory/Dwarfs
 [Giants]: ../backstory/Giants
 [Molly]: /Harrypedia/people/Prewett/Molly
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean>

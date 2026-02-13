@@ -19,9 +19,7 @@ at least myself.
 
 As I said, that book caused a me to think about the Harry Potter universe
 differently, but it was not until I was reading CmptrWz' \_[For Want of an
-Outfit][FWoaO1]\_ Chapters 30 through 35 that
-
-what I am trying for here _really_ came clear. Left unadulterated, Mrs.
+Outfit][FWoaO1]\_ Chapters 30 through 35 that what I am trying for here _really_ came clear. Left unadulterated, Mrs.
 Rowling's Harry Potter universe has too few consequences. I harp on that theme
 in my [Harrypedia]. This fan fiction is a harsher universe. Magic, even if not
 "dark" and _intentionally_ harmful, cannot always be undone or fixed. There can
@@ -37,17 +35,6 @@ will, like _[Many Waters][MW3]_, be _really really_ bad theology, that's okay
 and in fact inevitable (I think) when you mix in the mythological and Harry
 Potter elements.
 
-A lot of authors will try to do almost all their world building within the
-narrative. I realise this is technically better, but it is also harder to do.
-Since I am pulling from several disparate, previously existing, universes that
-the reader may well already be familiar with, and because I am _not_ an awesome
-writer actually capable of pulling off the vision in my head, I am going to set
-the stage and provide some of the world building in the form of Appendices that
-authors generally do not publish. These world building notes are useful to
-understand the story, but are hopefully not truly necessary. Most (everything in
-the backstory section) are written from the perspective of a researcher within
-the universe of the narrative. I have attempted to call out the places where
-that is not true.
 
 [Huckleberry Finn]: https://www.gutenberg.org/files/76/76-h/76-h.htm
 

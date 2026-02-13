@@ -1,11 +1,14 @@
 ---
-title: >-
-  Backstory: The FSSP
+title: The FSSP
 sidebar:
   order: 250
 author: Luke Schierer
 collection: Nephilim
+template: appendix
 ---
+
+> [!CAUTION] This Appendix is atypical in that it is written from the Author's perspective, not from a
+> researcher's perspective.
 
 The Priestly Fraternity of St Peter is real,[^211219-4] as is the Parish of St
 John Fisher.[^211219-5] I am asserting a couple of historical fictions. I have
