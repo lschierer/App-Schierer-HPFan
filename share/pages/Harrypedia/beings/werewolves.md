@@ -17,14 +17,14 @@ claws, but an actual bite. We know it has to be a bite because [Lupin], while he
 fears that he might infect [Tonks] by accidentally biting her during the
 infection's active period, does _not_ fear kissing her. The implications are
 interesting. It means that transfer requires saliva to blood contact, whereas
-normally saliva transferable viri would absorb through the mouth and mucus
+normally saliva transferable viruses would absorb through the mouth and mucus
 membranes. This, along with the successful birth (ie without infection) of
 [Edward Lupin], strongly suggests that only saliva, and not other bodily fluids,
 can transfer the infection.
 
-I am fairly sure that this is where it _differs_ from a virus. Viri infect
+I am fairly sure that this is where it _differs_ from a virus. Viruses infect
 people by persisting either in a droplet or on a surface, until it is then
-absorbed by a cell that is "permissive to infection."[^240411-5] However, a viri
+absorbed by a cell that is "permissive to infection."[^240411-5] However, a viruses
 that replicates in ways that it will "shed" in saliva should be one such that
 those same cells are "permissive to infection." That is, if you have the virus
 in your saliva it is because your lungs, nasal cavity, or salivary glands are
@@ -73,9 +73,9 @@ lycanthropy.[^240411-8]
 [Edward Lupin]: </Harrypedia/people/Lupin/Edward Remus/>
 [Legilimency]: </Harrypedia/magic/The Mind Arts/Legilimency>
 
-[Lupin]: </Harrypedia/people/Lupin/Remus John/>/ [Tonks]:
-/Harrypedia/people/Tonks/Nymphadora// [Legilimency]:
-/Harrypedia/magic/spells/legilimens/
+[Lupin]: </Harrypedia/people/Lupin/Remus John/>
+[Tonks]: /Harrypedia/people/Tonks/Nymphadora//
+[Legilimency]: /Harrypedia/magic/spells/legilimens/
 
 [^210513-4]: citation needed
 
@@ -89,7 +89,6 @@ lycanthropy.[^240411-8]
     Updated/Reviewed 2023-07-08. Cited 2024-04-11.
 
 [A.D.A.M. Medical Encyclopedia]: https://medlineplus.gov/encyclopedia.html
-
 [^240411-2]:
     Mrs. J. K. Rowling. _[Harry Potter and the Half-Blood Prince]_ ©2006
     Bloomsbury Publishing PLC. pages 510-512.
@@ -100,13 +99,11 @@ lycanthropy.[^240411-8]
 
 [Harry Potter and the Half-Blood Prince]:
   https://www.librarything.com/work/1133624
-
 [^240411-4]:
     Mrs. J. K. Rowling. "[Werewolves](https://www.rowlingindex.org/work/pmww/)"
     [The J.K. Rowling Index]. Originally Published 2013-07-31.
 
 [The J.K. Rowling Index]: https://www.rowlingindex.org/
-
 [^240411-5]:
     [Jennifer Louten](https://pubmed.ncbi.nlm.nih.gov/?term=Louten%20J%5BAuthor%5D).
     "[Virus Transmission and Epidemiology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7148619/)"

@@ -51,7 +51,6 @@ author: Luke Schierer
     old-crow. _[The Core Wars]_ Published: 2022-11-04. Updated: 2023-01-03.
 
 [The Core Wars]: https://www.fanfiction.net/s/14156962
-
 [^221219-1]: This debunked idea was used in, possibly among others,
 
     - old-crow. _[The Core Wars](https://www.fanfiction.net/s/14156962)_
@@ -74,17 +73,18 @@ its own accord.[^200806-5] Naturally eleven year old [Riddle] knows nothing of
 wand lore and so is not deciding this, yet still, the wand must sense something
 of the wizard it is bonding with…
 
-[Harry]: </Harrypedia/people/Potter/Harry James/>/ [Fleur]:
-</Harrypedia/people/Delacour/Fleur Isabelle/>/ [James Potter]:
-/Harrypedia/people/Potter/James/ [Umbridge]:
-</Harrypedia/people/Umbridge/Dolores Jane/> [Riddle]:
-</Harrypedia/people/Riddle/Tom Marvolo/>/ [ww]: <https://www.wizardingworld.com
-"WizardingWorld"> [wand wood]: <https://www.rowlingindex.org/work/wwpm/ "Harry
-Potter wiki article on Wand Wood"> [size and flexibility]:
-<https://www.rowlingindex.org/work/wlfpm/ "WizardingWorld article on Wand
-length"> [the article on cores]: <https://www.rowlingindex.org/work/wcpm/
-"WizardingWorld article on Wand Cores"> [20210511-9]:
-https://harrypotter.fandom.com/wiki/Wand_wood
+[Harry]: </Harrypedia/people/Potter/Harry James/>/
+[Fleur]: </Harrypedia/people/Delacour/Fleur Isabelle/>/
+[James Potter]: /Harrypedia/people/Potter/James/
+[Umbridge]: </Harrypedia/people/Umbridge/Dolores Jane/>
+[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>/
+[ww]: <https://www.wizardingworld.com> "WizardingWorld Potter wiki article on Wand Wood"
+[size and flexibility]: <https://www.rowlingindex.org/work/wlfpm/> "WizardingWorld article on Wand length"
+[the article on cores]: <https://www.rowlingindex.org/work/wcpm> "WizardingWorld article on Wand Cores"
+[20210511-9]: https://harrypotter.fandom.com/wiki/Wand_wood
+[Wand Woods]: <https://www.rowlingindex.org/work/wwpm/> "Harry Potter wiki article on Wand Wood"
+[Wand Lengths & Flexibility]: <https://www.rowlingindex.org/work/wlfpm/>  "WizardingWorld article on Wand length"
+[Wand Cores]: <https://www.rowlingindex.org/work/wcpm/>  "WizardingWorld article on Wand length"
 
 [^210512-1]:
     Mrs. J. K. Rowling. _Harry Potter and the Sorcerer's Stone_ p. 82.
@@ -151,9 +151,4 @@ https://harrypotter.fandom.com/wiki/Wand_wood
     [The J.K. Rowling Index](https://www.rowlingindex.org/) Originally published
     2015-08-10. Last Viewed 2020-08-06.
 
-[Wand Woods]:
-  <https://www.rowlingindex.org/work/wwpm/ "Harry Potter wiki article on Wand Wood">
-[Wand Lengths & Flexibility]:
-  <https://www.rowlingindex.org/work/wlfpm/ "WizardingWorld article on Wand length">
-[Wand Cores]:
-  <https://www.rowlingindex.org/work/wcpm/ "WizardingWorld article on Wand Cores">
+

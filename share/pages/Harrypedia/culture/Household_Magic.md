@@ -41,11 +41,11 @@ the six years that [Harry] attends class.
 [Hagrid]: /Harrypedia/people/Hagrid/Rubeus/
 [Hogwarts]: /Harrypedia/Hogwarts/
 
-[Harry]: </Harrypedia/people/Potter/Harry James/>/ [Molly]:
-/Harrypedia/people/Prewett/Molly/ [Neville]:
-/Harrypedia/people/Longbottom/Neville/ [Ginny]:
-</Harrypedia/people/Weasley/Ginevra Molly/>/ [Lily Evens]:
-</Harrypedia/people/Evans/Lily J/>
+[Harry]: </Harrypedia/people/Potter/Harry James/>/
+[Molly]: /Harrypedia/people/Prewett/Molly/
+[Neville]: /Harrypedia/people/Longbottom/Neville/
+[Ginny]: </Harrypedia/people/Weasley/Ginevra Molly/>/
+[Lily Evens]: </Harrypedia/people/Evans/Lily J/>
 
 [^210329-24]:
     Mrs. J. K. Rowling. _Harry Potter and the Goblet of Fire_ Kindle Locations

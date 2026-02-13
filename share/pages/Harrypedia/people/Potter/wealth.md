@@ -1,3 +1,10 @@
+---
+title: Potter Wealth
+author: Luke Schierer
+sidebar: 
+  order: 99
+---
+
 #### facts
 
 - [Linfred] left a "significant" pile of gold to _each_ of his seven children on

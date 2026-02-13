@@ -85,16 +85,19 @@ it contradicts the origin stories).
 
 [Mr. Malfoy]: </Harrypedia/people/Malfoy/Lucius Abraxas/>
 
-[Harry]: </Harrypedia/people/Potter/Harry James/>/ [Henry]:
-/Harrypedia/people/Potter/henry/ [Sirius]: </Harrypedia/people/Black/Sirius
-III/>/ [Arthur]: /Harrypedia/people/Weasley/Arthur/ [Linfred]:
-/Harrypedia/people/Potter/ [Black]: /Harrypedia/people/Black/ [Potter]:
-/Harrypedia/people/Potter/ [Peverell]: /Harrypedia/people/Peverell/ [Malfoy]:
-/Harrypedia/people/Malfoy/ [GSP1]:
-https://aaran-st-vines.fanficauthors.net/Great_Scott_Potter_This_is_War/index/
-[Pottermore]: http://Pottermore.com/ [RNN1]:
-https://www.fanfiction.net/s/7144149 [RNN2]:
-https://www.fanfiction.net/s/7144149
+[Harry]: </Harrypedia/people/Potter/Harry James/>
+[Henry]: /Harrypedia/people/Potter/henry/
+[Sirius]: </Harrypedia/people/Black/Sirius III/>
+[Arthur]: /Harrypedia/people/Weasley/Arthur/
+[Linfred]: /Harrypedia/people/Potter/
+[Black]: /Harrypedia/people/Black/
+[Potter]: /Harrypedia/people/Potter/
+[Peverell]: /Harrypedia/people/Peverell/
+[Malfoy]: /Harrypedia/people/Malfoy/
+[GSP1]: https://aaran-st-vines.fanficauthors.net/Great_Scott_Potter_This_is_War/index/
+[Pottermore]: http://Pottermore.com/
+[RNN1]: https://www.fanfiction.net/s/7144149
+[RNN2]: https://www.fanfiction.net/s/7144149
 
 [^210517-15]: See my notes on the [Potter] family.
 

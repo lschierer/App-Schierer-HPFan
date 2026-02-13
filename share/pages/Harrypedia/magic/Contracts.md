@@ -14,12 +14,7 @@ at some of these, some of whom have done so quite well.[^240313-3]
 ## Analysis
 
 Given that magical contracts exist, you could even see the logic behind
-[cbsmith17]'s [unfinished story][ttpbc] in which they are used to _protect_
-
-<!--cspell: disable-line --> children from being trapped by still worse
-
-contracts. Magical society over the centuries has probably learned to its horror
-that marriage contracts are dangerous things. That would not stop someone like a
+[cbsmith17]'s [unfinished story][ttpbc] in which they are used to _protect_ children from being trapped by still worse contracts. Magical society over the centuries has probably learned to its horror that marriage contracts are dangerous things. That would not stop someone like a
 [Malfoy] from being short sighted in a desire to hurt an enemy. It is also
 probably something that magical society tried more than once, and probably
 eventually figured out _something_ around, since in non-magical society, they
@@ -136,15 +131,15 @@ that [Hermione] would inevitably do in such a situation would _certainly_
 uncover that there was no escape for not just [Harry] and [Hermione], but also
 for [Ginny].
 
-[Ginny]: </Harrypedia/people/Weasley/Ginevra Molly/>/ [Hermione]:
-</Harrypedia/people/Granger/Hermione Jean/>/ [Harry]:
-</Harrypedia/people/Potter/Harry James/>/ [Umbridge]:
-</Harrypedia/people/Umbridge/Dolores Jane/> [Malfoy]: /Harrypedia/people/Malfoy/
-[Molly]: /Harrypedia/people/Prewett/Molly/ [ttpbc]:
-https://www.fanfiction.net/s/13987875/ [Ministers of Magic]:
-https://www.rowlingindex.org/work/msmpm/ [the Goblet of Fire]:
-https://www.librarything.com/work/113
-
+[Ginny]: </Harrypedia/people/Weasley/Ginevra Molly/>/
+[Hermione]: </Harrypedia/people/Granger/Hermione Jean/>/
+[Harry]: </Harrypedia/people/Potter/Harry James/>/
+[Umbridge]: </Harrypedia/people/Umbridge/Dolores Jane/>
+[Malfoy]: /Harrypedia/people/Malfoy/
+[Molly]: /Harrypedia/people/Prewett/Molly/
+[ttpbc]: https://www.fanfiction.net/s/13987875/
+[Ministers of Magic]: https://www.rowlingindex.org/work/msmpm/
+[the Goblet of Fire]: https://www.librarything.com/work/113
 [Goblet of Fire]: https://www.librarything.com/work/113]
 
 [^240315-2]: this is noted in
@@ -191,14 +186,12 @@ https://www.librarything.com/work/113
 <!--cspell: enable -->
 
 [cbsmith17]: https://www.fanfiction.net/u/14755259/cbsmith17
-
 [^240313-4]:
     Mrs. J. K. Rowling. _[Short Stories from Hogwarts of Power, Politics and
     Pesky Poltergeists]_ Pottermore Publishing © 2016. page 7.
 
 [Short Stories from Hogwarts of Power, Politics and Pesky Poltergeists]:
   https://www.librarything.com/work/18275514
-
 [^240313-5]:
     [Wikipedia].
     "[Marriage settlement (England)](<https://en.wikipedia.org/wiki/Marriage_settlement_(England)>)"

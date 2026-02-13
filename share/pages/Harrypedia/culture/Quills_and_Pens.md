@@ -72,14 +72,11 @@ this line of thought; it is pure speculation.
 [parchment]: Parchment_and_Paper/
 [McGonagall]: /Harrypedia/people/McGonagall/Minerva/
 [Dip pen]: https://en.wikipedia.org/wiki/Dip_pen
-
-[Harry]: </Harrypedia/people/Potter/Harry James/>/ [Wikipedia]:
-https://en.wikipedia.org/
-
+[Harry]: </Harrypedia/people/Potter/Harry James/>/
+[Wikipedia]: https://en.wikipedia.org/
 [^231004-3]: See [wands]
 
 [wands]: /Harrypedia/magic/wands/
-
 [^231004-1]: citation needed.
 
 [^230804]: citation needed.
@@ -96,7 +93,6 @@ https://en.wikipedia.org/
     Viewed 2020-08-16.
 
 [Ink brush]: https://en.wikipedia.org/wiki/Ink_brush
-
 [^231004-2]:
     [Wikipedia](https://en.wikipedia.org/). "[Ink brush]" Last Edited:
     2023-07-11. Last Viewed: 2023-10-04.
