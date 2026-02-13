@@ -180,9 +180,9 @@ sub get_person_by_name ($self, $surname, $given_name, $suffix = '') {
     next unless $primary_name;
 
     my $p_surname_obj = $primary_name->primary_surname;
-    my $p_surname     = $p_surname_obj ? $p_surname_obj->surname : '';
-    my $p_given       = $primary_name->first_name // '';
-    my $p_suffix      = $primary_name->suffix     // '';
+    my $p_surname     = $p_surname_obj ? $p_surname_obj->display_name : '';
+    my $p_given       = $primary_name->display // '';
+    my $p_suffix      = $primary_name->suffix  // '';
 
     # Match surname and given name
     next unless ($p_surname eq $surname && $p_given eq $given_name);

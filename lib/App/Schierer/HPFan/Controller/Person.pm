@@ -172,7 +172,7 @@ $person->display_name, $path));
       site_logo    => $self->site_logo(),
     };
 
-    return $self->template('page/markdown.tt', $vars);
+    return $self->template('markdown.tt', $vars);
   }
 
   # Not found
