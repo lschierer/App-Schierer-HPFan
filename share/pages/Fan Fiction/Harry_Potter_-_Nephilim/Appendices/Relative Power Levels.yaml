@@ -15,7 +15,7 @@ columnorder:
 rows:
   - Last Name: Dumbledore
     First Name: >-
-      [Albus](#albus)
+      [Albus](#Albus)
     Seraphim: 7
     Cherubim: 7
     Thrones: 9
@@ -28,7 +28,7 @@ rows:
     Average: 8.22
   - Last Name: Riddle
     First Name: >-
-      [Tom](#tom) 
+      [Tom](#Tom) 
     Seraphim: 9
     Cherubim: 5
     Thrones: 10
@@ -41,7 +41,7 @@ rows:
     Average: 8.0
   - Last Name: Potter
     First Name: >-
-      [Harry](#harry)
+      [Harry](#Harry)
     Seraphim: 8
     Cherubim: 6
     Thrones: 9
@@ -52,3 +52,315 @@ rows:
     Archangels: 9
     Angels: 8
     Average: 8.0
+  - Last Name: Snape
+    First Name: >-
+      [Severus](#Severus)
+    Seraphim: 8
+    Cherubim: 9
+    Thrones: 9
+    Dominions: 6
+    Virtues: 9
+    Powers: 9
+    Principalities: 4
+    Archangels: 7
+    Angels: 7
+    Average: 7.56
+  - Last Name: Abbott
+    First Name: >-
+      [Hannah](#Hannah)
+    Seraphim: 5
+    Cherubim: 5
+    Thrones: 5
+    Dominions: 6
+    Virtues: 7
+    Powers: 8
+    Principalities: 5
+    Archangels: 6
+    Angels: 5
+    Average: 5.78
+  - Last Name: Bones
+    First Name: >-
+      [Susan](#Susan)
+    Seraphim: 6
+    Cherubim: 6
+    Thrones: 7
+    Dominions: 7
+    Virtues: 8
+    Powers: 5
+    Principalities: 6
+    Archangels: 8
+    Angels: 8
+    Average: 6.78
+  - Last Name: Potter
+    First Name: >-
+      [James](#James)
+    Seraphim: 8
+    Cherubim: 4
+    Thrones: 9
+    Dominions: 10
+    Virtues: 5
+    Powers: 9
+    Principalities: 8
+    Archangels: 9
+    Angels: 6
+    Average: 7.56
+  - Last Name: Potter
+    First Name: >-
+      [Euphemia](#Euphemia)
+    Seraphim: 3
+    Cherubim: 1
+    Thrones: 10
+    Dominions: 10
+    Virtues: 4
+    Powers: 9
+    Principalities: 2
+    Archangels: 9
+    Angels: 6
+    Average: 6.00
+  - Last Name: Potter
+    First Name: >-
+      [Fleamont](#Fleamont)
+    Seraphim: 7
+    Cherubim: 8
+    Thrones: 8
+    Dominions: 4
+    Virtues: 8
+    Powers: 7
+    Principalities: 6
+    Archangels: 9
+    Angels: 6
+    Average: 7.00
+  - Last Name: Prince
+    First Name: >-
+      [Eileen](#Eileen)
+    Seraphim: 2
+    Cherubim: 7
+    Thrones: 3
+    Dominions: 6
+    Virtues: 5
+    Powers: 4
+    Principalities: 3
+    Archangels: 4
+    Angels: 4
+    Average: 4.22
+  - Last Name: Evans
+    First Name: >-
+      [Lily](#Lily)
+    Seraphim: 7
+    Cherubim: 7
+    Thrones: 7
+    Dominions: 6
+    Virtues: 9
+    Powers: 7
+    Principalities: 9
+    Archangels: 6
+    Angels: 8
+    Average: 7.33
+  - Last Name: Evans
+    First Name: >-
+      Mrs.
+    Seraphim: 1
+    Cherubim: 2
+    Thrones: 1
+    Dominions: 2
+    Virtues: 3
+    Powers: 3
+    Principalities: 3
+    Archangels: 3
+    Angels: 3
+    Average: 2.33
+  - Last Name: Evans
+    First Name: >-
+      Mr.
+    Seraphim: 2
+    Cherubim: 1
+    Thrones: 1
+    Dominions: 2
+    Virtues: 3
+    Powers: 3
+    Principalities: 3
+    Archangels: 2
+    Angels: 3
+    Average: 2.22
+  - Last Name: Evans
+    First Name: >-
+      Petunia
+    Seraphim: 1
+    Cherubim: 1
+    Thrones: 1
+    Dominions: 0
+    Virtues: 0
+    Powers: 1
+    Principalities: 1
+    Archangels: 0
+    Angels: 0
+    Average: 0.56
+  - Last Name: Figg
+    First Name: >-
+      Arabella
+    Seraphim: 0
+    Cherubim: 2
+    Thrones: 0
+    Dominions: 1
+    Virtues: 2
+    Powers: 1
+    Principalities: 0
+    Archangels: 0
+    Angels: 0
+    Average: 0.67
+  - Last Name: Dursley
+    First Name: >-
+      [Dudley](#Dudley)
+    Seraphim: 1
+    Cherubim: 1
+    Thrones: 0
+    Dominions: 0
+    Virtues: 0
+    Powers: 0
+    Principalities: 0
+    Archangels: 0
+    Angels: 0
+    Average: 0.22
+  - Last Name: Granger
+    First Name: >-
+      [Hermione](#Hermione)
+    Seraphim: 4
+    Cherubim: 6
+    Thrones: 5
+    Dominions: 9
+    Virtues: 7
+    Powers: 8
+    Principalities: 5
+    Archangels: 6
+    Angels: 6
+    Average: 6.22
+  - Last Name: Weasley
+    First Name: >-
+      [Fred](#Fred)
+    Seraphim: 5
+    Cherubim: 9
+    Thrones: 4
+    Dominions: 7
+    Virtues: 8
+    Powers: 8
+    Principalities: 5
+    Archangels: 8
+    Angels: 9
+    Average: 7.00
+  - Last Name: Weasley
+    First Name: >-
+      [George](#George)
+    Seraphim: 5
+    Cherubim: 9
+    Thrones: 4
+    Dominions: 8
+    Virtues: 7
+    Powers: 8
+    Principalities: 6
+    Archangels: 8
+    Angels: 8
+    Average: 7.00
+  - Last Name: Weasley
+    First Name: >-
+      [Charlie](#Charlie)
+    Seraphim: 6
+    Cherubim: 9
+    Thrones: 4
+    Dominions: 5
+    Virtues: 8
+    Powers: 9
+    Principalities: 7
+    Archangels: 8
+    Angels: 7
+    Average: 7.00
+  - Last Name: Weasley
+    First Name: >-
+      [Bill](#Bill)
+    Seraphim: 6
+    Cherubim: 9
+    Thrones: 4
+    Dominions: 8
+    Virtues: 4
+    Powers: 9
+    Principalities: 9
+    Archangels: 7
+    Angels: 9
+    Average: 7.22
+  - Last Name: Weasley
+    First Name: >-
+      [Ron](#Ron)
+    Seraphim: 3
+    Cherubim: 6
+    Thrones: 3
+    Dominions: 6
+    Virtues: 6
+    Powers: 7
+    Principalities: 9
+    Archangels: 8
+    Angels: 8
+    Average: 6.22
+  - Last Name: Weasley
+    First Name: >-
+      [Percy](#Percy)
+    Seraphim: 3
+    Cherubim: 8
+    Thrones: 4
+    Dominions: 6
+    Virtues: 7
+    Powers: 7
+    Principalities: 7
+    Archangels: 7
+    Angels: 7
+    Average: 6.22
+  - Last Name: Weasley
+    First Name: >-
+      [Ginny](#Ginny)
+    Seraphim: 5
+    Cherubim: 8
+    Thrones: 4
+    Dominions: 9
+    Virtues: 9
+    Powers: 8
+    Principalities: 8
+    Archangels: 9
+    Angels: 8
+    Average: 7.56
+  - Last Name: Weasley
+    First Name: >-
+      [Arthur](#Arthur)
+    Seraphim: 5
+    Cherubim: 9
+    Thrones: 6
+    Dominions: 7
+    Virtues: 7
+    Powers: 8
+    Principalities: 8
+    Archangels: 7
+    Angels: 9
+    Average: 7.33
+  - Last Name: Weasley \(Prewett\)
+    First Name: >-
+      [Molly](#Molly)
+    Seraphim: 4
+    Cherubim: 8
+    Thrones: 2
+    Dominions: 8
+    Virtues: 8
+    Powers: 8
+    Principalities: 8
+    Archangels: 7
+    Angels: 8
+    Average: 6.78
+  - Last Name: Delacour
+    First Name: >-
+      [Fleur](#Fleur)
+    Seraphim: 5
+    Cherubim: 5
+    Thrones: 10
+    Dominions: 9\*
+    Virtues: 7\*
+    Powers: 8
+    Principalities: 8
+    Archangels: 7
+    Angels: 8
+    Average: 7.44

@@ -26,36 +26,6 @@ figures in this historical chronicle.[^241125-10]
 ## Relative power of different characters in each class of power.
 <yamltable source="./Relative Power Levels.yaml"></yamltable> <!-- cspell: disable-line -->
 
-| Last Name         | First Name            | Seraphim | Cherubim | Thrones | Dominions | Virtues | Powers | Principalities | Archangels | Angels | Average |
-| ----------------- | --------------------- | -------- | -------- | ------- | --------- | ------- | ------ | -------------- | ---------- | ------ | ------- |
-|         |        | 7        | 7        | 9       | 10        | 10      | 9      | 6              | 7          | 9      | 8.22    |
-| Riddle            | [Tom](#tom)           | 9        | 5        | 10      | 8         | 7       | 9      | 5              | 10         | 9      | 8.00    |
-| Potter            | [Harry](#harry)       | 8        | 6        | 9       | 8         | 7       | 8      | 9              | 9          | 8      | 8.00    |
-| Snape             | [Severus](#severus)   | 8        | 9        | 9       | 6         | 9       | 9      | 4              | 7          | 7      | 7.55    |
-| Abbott            | [Hannah](#hannah)     | 5        | 5        | 5       | 6         | 7       | 8      | 5              | 6          | 5      | 5.77    |
-| Bones             | [Susan](#susan)       | 6        | 6        | 7       | 7         | 8       | 5      | 6              | 8          | 8      | 6.77    |
-| Potter            | [James](#james)       | 8        | 4        | 9       | 10        | 5       | 9      | 8              | 9          | 6      | 7.55    |
-| Potter            | [Euphemia](#euphemia) | 3        | 1        | 10      | 10        | 4       | 9      | 2              | 9          | 6      | 6.00    |
-| Potter            | [Fleamont](#fleamont) | 7        | 8        | 8       | 4         | 8       | 7      | 6              | 9          | 6      | 7.00    |
-| Prince            | [Eileen](#eileen)     | 2        | 7        | 3       | 6         | 5       | 4      | 3              | 4          | 4      | 4.22    |
-| Evans             | [Lily](#lily)         | 7        | 7        | 7       | 6         | 9       | 7      | 9              | 6          | 8      | 7.33    |
-| Evans             | Mrs.                  | 1        | 2        | 1       | 2         | 3       | 3      | 3              | 3          | 3      | 2.33    |
-| Evans             | Mr.                   | 2        | 1        | 1       | 2         | 3       | 3      | 3              | 2          | 3      | 2.22    |
-| Evans             | Petunia               | 1        | 1        | 1       | 0         | 0       | 1      | 1              | 0          | 0      | 0.55    |
-| Figg              | Arabella              | 0        | 2        | 0       | 1         | 2       | 1      | 0              | 0          | 0      | 0.44    |
-| Dursley           | [Dudley](#dudley)     | 1        | 1        | 0       | 0         | 0       | 0      | 0              | 0          | 0      | 0.22    |
-| Granger           | [Hermione](#hermione) | 4        | 6        | 5       | 9         | 7       | 8      | 5              | 6          | 6      | 6.22    |
-| Weasley           | [Fred](#fred)         | 5        | 9        | 4       | 7         | 8       | 8      | 5              | 8          | 9      | 7.00    |
-| Weasley           | [George](#george)     | 5        | 9        | 4       | 8         | 7       | 8      | 5              | 7          | 9      | 7.00    |
-| Weasley           | [Charlie](#charlie)   | 6        | 9        | 4       | 5         | 8       | 9      | 7              | 8          | 7      | 7.00    |
-| Weasley           | [Bill](#bill)         | 6        | 9        | 4       | 8         | 4       | 9      | 9              | 7          | 9      | 7.22    |
-| Weasley           | [Ronald](#ronald)     | 3        | 6        | 4       | 6         | 6       | 7      | 9              | 8          | 8      | 6.22    |
-| Weasley           | [Percy](#percy)       | 3        | 8        | 3       | 6         | 7       | 7      | 7              | 7          | 7      | 6.11    |
-| Weasley           | [Ginny](#ginny)       | 5        | 8        | 4       | 9         | 9       | 8      | 8              | 9          | 8      | 7.55    |
-| Weasley           | Arthur                | 5        | 9        | 6       | 7         | 7       | 8      | 8              | 7          | 9      | 7.33    |
-| Weasley (Prewett) | [Molly](#molly)       | 4        | 8        | 2       | 8         | 8       | 8      | 8              | 8          | 8      | 6.88    |
-| Delacour          | [Fleur](#fleur)       | 5        | 5        | 10      | 9\*       | 7       | 8\*    | 8              | 7          | 8      | 7.44    |
-
 ## Specific notes
 
 ### Abbott
@@ -274,7 +244,8 @@ transmutation, he is not quite as good at potions (as compared to Fred).
 
 Percy studied so hard because he, unlike Ron, is determined _not_ to under
 perform. The characters do _not_ know about these power levels, so Percy does
-not know that he simply _isn't_ as capable as his older brothers.
+not know that he simply _isn't_ as capable as his older brothers. Percy believes
+that his older brothers must have worked just as hard, and he simply didn't notice. 
 
 #### Ginny
 
@@ -287,7 +258,7 @@ and become correspondingly more powerful. However, due to the maternal influence
 and despite her paternal influence, she is merely minimally acceptable in the
 Thrones category, making her somewhat vulnerable to mental magics.
 
-#### Ronald
+#### Ron
 
 Ron is an under-performer, he has the _ability_, but not the drive. That being
 said, Ron _is_ under-powered as compared to his brothers. If he knew that, his
