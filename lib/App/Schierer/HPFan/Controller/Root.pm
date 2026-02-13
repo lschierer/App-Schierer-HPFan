@@ -6,6 +6,7 @@ use utf8::all;
 use Mooish::Base -standard;
 with 'App::Schierer::HPFan::Role::Gramps';
 with 'WebFramework::Role::Markdown';
+with 'App::Schierer::HPFan::Role::YAMLTables';
 extends 'Thunderhorse::Controller';
 
 use Future::AsyncAwait;
@@ -45,68 +46,24 @@ sub build ($self) {
     elsif (defined($entry->{order})) {
       $self->add_navigation_route($route, $entry->{title},
         { order => $entry->{order} });
-    }
-    else {
-      $self->add_navigation_route($route, $entry->{title}, { order => 50 });
-    }
-
-    $self->router->add(
-      $route,
-      {
-        to => async sub ($self, $ctx) {
-          my $fm    = $self->parse_markdown_frontmatter($entry->{path});
-          my $title = $fm->{title};
-          if (!$title) {
-            my $path_for_title = $entry->{route};
-            $path_for_title =~ s|^/||;
-            $title = $path_for_title;
-            $title =~ s|/| - |g;
-            $title =~ s/[-_]/ /g;
-            $title =~ s/\b(\w)/\U$1/g;
-          }
-
-          my $current_year = (localtime)[5] + 1900;
-          my $sidebar      = $fm->{layout} // 1;
-          $sidebar = 0 if ($sidebar =~ /splash/);
-
-          if (Path::Tiny::path($entry->{path})->slurp_utf8 =~ /classlisttable/i)
-          {
-            my $html = $self->retrieve_rendered_markdown($entry->{path});
-            $html = await $self->render_classlist_tables($html);
-
-            my $vars = {
-              content      => $html,
-              title        => $title,
-              current_year => $current_year,
-              css_files    => ['/css/navigation.css'],
-              sidebar      => $sidebar,
-              nav_html     => $self->render_navigation($entry->{route}),
-            };
-
-            return $self->template('page/markdown.tt', $vars);
-          }
-          else {
-
-            return $self->render_markdown_page(
-              $entry->{path},
-              $entry->{route},
-              {
-                site_logo => $self->site_logo(),
-                title     => $title,
-                sidebar   => $sidebar,
-                nav_html  => $self->render_navigation($entry->{route}),
-              }
-            );
-          }
-
-        },
-        action => 'http.*',
       }
-    );
-  }
+      else {
+        $self->add_navigation_route($route, $entry->{title}, { order => 50 });
+      }
 
-  $self->log(
-    info => "Registered " . scalar(@routes) . " static Root routes");
+      $self->router->add(
+        $route,
+        {
+          to => async sub ($c, $ctx) {
+            return await $self->page_handler($ctx, $route, $entry);
+          },
+          action => 'http.*',
+        }
+      );
+    }
+
+    $self->log(
+      info => "Registered " . scalar(@routes) . " static Root routes");
 
   # Add catch-all route for directory gaps (AutoIndex)
   $self->router->add(
@@ -120,6 +77,71 @@ sub build ($self) {
   );
 }
 
+async sub page_handler ($self, $ctx, $route, $entry) {
+  my $fm    = $self->parse_markdown_frontmatter($entry->{path});
+  my $title = $fm->{title};
+  if (!$title) {
+    my $path_for_title = $entry->{route};
+    $path_for_title =~ s|^/||;
+    $title = $path_for_title;
+    $title =~ s|/| - |g;
+    $title =~ s/[-_]/ /g;
+    $title =~ s/\b(\w)/\U$1/g;
+  }
+
+  my $current_year = (localtime)[5] + 1900;
+  my $sidebar      = $fm->{layout} // 1;
+  $sidebar = 0 if ($sidebar =~ /splash/);
+
+  if (Path::Tiny::path($entry->{path})->slurp_utf8 =~ /classlisttable/i)
+  {
+    my $html = $self->retrieve_rendered_markdown($entry->{path});
+    $html = await $self->render_classlist_tables($html);
+
+    my $vars = {
+      content      => $html,
+      title        => $title,
+      current_year => $current_year,
+      css_files    => ['/css/navigation.css', '/css/classlist.css'],
+      sidebar      => $sidebar,
+      nav_html     => $self->render_navigation($entry->{route}),
+    };
+
+    return $self->template('markdown.tt', $vars);
+  }
+
+  if (Path::Tiny::path($entry->{path})->slurp_utf8 =~ /yamltable/i)
+  {
+    my $html = $self->retrieve_rendered_markdown($entry->{path});
+    $html = await $self->render_yaml_tables($html, $entry);
+
+    my $vars = {
+      content      => $html,
+      title        => $title,
+      current_year => $current_year,
+      css_files    => ['/css/navigation.css','/css/yamltable.css'],
+      sidebar      => $sidebar,
+      nav_html     => $self->render_navigation($entry->{route}),
+    };
+
+    return $self->template('markdown.tt', $vars);
+  }
+  else {
+
+    return $self->render_markdown_page(
+      $entry->{path},
+      $entry->{route},
+      {
+        site_logo => $self->site_logo(),
+        title     => $title,
+        sidebar   => $sidebar,
+        nav_html  => $self->render_navigation($entry->{route}),
+      }
+    );
+  }
+
+}
+
 sub handle_directory_gap ($self, $ctx) {
   my $path = $ctx->req->path;
   $path =~ s|^/||;    # Remove leading slash
@@ -130,7 +152,7 @@ sub handle_directory_gap ($self, $ctx) {
   if ( $dir_path->is_dir
     && $dir_path->children
     && !$dir_path->child('index.md')->exists) {
-    my $entries = $self->generate_directory_index($dir_path);
+      my $entries = $self->generate_directory_index($dir_path);
 
     # Generate title from path
     my $title = $path || 'Home';
@@ -171,19 +193,19 @@ sub _build_Root_Tree ($self) {
 
   $self->log(
     debug => sprintf('about to iterate over "%s"', $self->base_dir));
-  my $rule = Path::Iterator::Rule->new;
-  my $next = $rule->file->nonempty->name(qr/\.md/)->iter(
-    $self->base_dir,
-    {
-      depthfirst      => -1,
-      follow_symlinks =>  0,
-      report_symlinks =>  0,
-      sorted          =>  1,
-    }
-  );
-  while (defined(my $file = $next->())) {
-    $file = Path::Tiny::path($file);
-    $self->log(debug => "Root Controller iterating over '$file'");
+    my $rule = Path::Iterator::Rule->new;
+    my $next = $rule->file->nonempty->name(qr/\.md/)->iter(
+      $self->base_dir,
+      {
+        depthfirst      => -1,
+        follow_symlinks =>  0,
+        report_symlinks =>  0,
+        sorted          =>  1,
+      }
+    );
+    while (defined(my $file = $next->())) {
+      $file = Path::Tiny::path($file);
+      $self->log(debug => "Root Controller iterating over '$file'");
 
     # Fast frontmatter parsing - only read first 20 lines
     my $fm = $self->parse_markdown_frontmatter($file->absolute);
@@ -228,9 +250,9 @@ sub _build_Root_Tree ($self) {
     };
     $self->log(
       debug => sprintf('Registering route "%s" for file "%s"', $route, $file));
+    }
+    return \%tree;
   }
-  return \%tree;
-}
 
-1;
-__END__
+  1;
+  __END__

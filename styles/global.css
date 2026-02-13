@@ -49,15 +49,16 @@
   --logo-vertical-margin: 2px;
 
   /* customize the spectrum-css tokens */
-  --mod-button-background-color-default: var(--text-1);
-  --mod-button-content-color-default: var(--text-3);
+
+   --mod-button-background-color-default: var(--text-1);
+   --mod-button-content-color-default: var(--text-3);
   --mod-divider-background-color: var(--text-1);
   --mod-body-font-color: var(--text-1);
   --mod-splitview-content-color: var(--text-1);
   --mod-heading-font-color: var(--text-1);
   --mod-splitview-background-color: var(--surface-1);
   --mod-table-header-background-color-scrollable: var(--text-1);
-  --mod-table-header-background-color: var(--text-1);
+  --mod-table-header-background-color: var(--text-1); 
   /* stylelint-disable-next-line custom-property-pattern */
   --mod-table-header-background-color--quiet: var(--text-1);
   --mod-table-header-text-color: var(--text-2);
@@ -89,6 +90,8 @@ div.spectrum-AlertBanner.spectrum-AlertBanner--warning {
 
 div.spectrum-AlertBanner.spectrum-AlertBanner--important {
   background-color: var(--spectrum-purple-800);
+
+  --mod-link-text-color: var(--spectrum-cyan-300);
 }
 
 div.spectrum-AlertBanner.spectrum-AlertBanner--tip {
@@ -97,6 +100,8 @@ div.spectrum-AlertBanner.spectrum-AlertBanner--tip {
 
 div.spectrum-AlertBanner.spectrum-AlertBanner--note {
   background-color: var(--spectrum-blue-800);
+
+  --mod-link-text-color: var(--spectrum-cyan-300);
 }
 
 

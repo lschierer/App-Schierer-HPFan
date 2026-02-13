@@ -1,0 +1,11 @@
+@import url("@spectrum-css/tokens");
+@import url("@spectrum-css/typography");
+@import url("@spectrum-css/table");
+
+table.spectrum-Table {
+	--mod-table-border-radius: none;
+}
+
+table.spectrum-Table tr {
+--mod-table-divider-color: var(--spectrum-cyan-1200);
+}
