@@ -31,7 +31,7 @@ has base_dir => (
 
 sub build ($self) {
   my $build_start = sprintf('build method for "%s"', __PACKAGE__);
-  $self->log(info => $build_start);
+  $self->logger->info( $build_start);
   my $tree   = $self->_build_Root_Tree;
   my @routes = sort keys %$tree;
 
@@ -62,8 +62,7 @@ sub build ($self) {
       );
     }
 
-    $self->log(
-      info => "Registered " . scalar(@routes) . " static Root routes");
+    $self->logger->info("Registered " . scalar(@routes) . " static Root routes");
 
   # Add catch-all route for directory gaps (AutoIndex)
   $self->router->add(
@@ -191,8 +190,7 @@ sub handle_directory_gap ($self, $ctx) {
 sub _build_Root_Tree ($self) {
   my %tree;
 
-  $self->log(
-    debug => sprintf('about to iterate over "%s"', $self->base_dir));
+  $self->logger->debug(sprintf('about to iterate over "%s"', $self->base_dir));
     my $rule = Path::Iterator::Rule->new;
     my $next = $rule->file->nonempty->name(qr/\.md/)->iter(
       $self->base_dir,
@@ -205,16 +203,16 @@ sub _build_Root_Tree ($self) {
     );
     while (defined(my $file = $next->())) {
       $file = Path::Tiny::path($file);
-      $self->log(debug => "Root Controller iterating over '$file'");
+      $self->logger->debug( "Root Controller iterating over '$file'");
 
     # Fast frontmatter parsing - only read first 20 lines
     my $fm = $self->parse_markdown_frontmatter($file->absolute);
     unless ($fm) {
-      $self->log(warn => "No frontmatter available for '$file'");
+      $self->logger->warn( "No frontmatter available for '$file'");
       next;
     }
     unless (ref($fm) eq 'HASH' && keys %$fm) {
-      $self->log(warn => "Empty frontmatter for '$file'");
+      $self->logger->warn( "Empty frontmatter for '$file'");
       next;
     }
     my $title = $fm->{title} // $file->basename(qr/.md/);
@@ -248,8 +246,7 @@ sub _build_Root_Tree ($self) {
       route => $route,
       order => $order,
     };
-    $self->log(
-      debug => sprintf('Registering route "%s" for file "%s"', $route, $file));
+    $self->logger->debug(sprintf('Registering route "%s" for file "%s"', $route, $file));
     }
     return \%tree;
   }

@@ -1,4 +1,5 @@
 package App::Schierer::HPFan::Controller::Family;
+# cspell: disable
 
 use v5.42.0;
 use utf8::all;
@@ -18,19 +19,7 @@ sub build ($self) {
 }
 
 async sub register_routes ($self, $router) {
-  # Register catch-all route for family pages
-
-  $router->add(
-    '/Harrypedia/people/:surname',
-    {
-      to => sub ($self, $ctx, @args) {
-        my $surname = $args[0] // 'Unknown';    # Try getting from args
-        return $self->family_page($ctx, $surname);
-      },
-      action => 'http.*',
-    }
-  );
-
+  
   my $surnames = await $self->get_all_surnames;
   $self->logger->debug(sprintf('retrieved %s surnames from Gramps role', scalar( @{ $surnames } ) ));
   foreach my $surname ($surnames->@*) {
