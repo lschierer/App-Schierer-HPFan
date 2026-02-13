@@ -65,13 +65,16 @@ she would find membership in the Death Eaters _impressive_.[^221206-1]
 [swm]: /Harrypedia/people/Snape/Severus/swm/
 [James]: /Harrypedia/people/Potter/James/
 
+<!-- cspell: disable -->
+
 [^221206-1]:
-    Ms. Melissa Anelli and Mrs. J. K. Rowling. <!-- cspell: disable-line -->
+    Ms. Melissa Anelli and Mrs. J. K. Rowling. 
     "[J.K. Rowling Web Chat Transcript][LCRWC]"
     [The Leaky Cauldron](http://www.the-leaky-cauldron.org) 2007-07-30
 
-[LCRWC]:
-  http://www.the-leaky-cauldron.org/2007/07/30/j-k-rowling-web-chat-transcript/
+<!-- cspell: enable -->
+
+[LCRWC]: http://www.the-leaky-cauldron.org/2007/07/30/j-k-rowling-web-chat-transcript/
 
 These interview statements give credence to statements made by [Lupin] and
 [Sirius], who are in and of themselves, perhaps not the most unbiased of
@@ -311,8 +314,7 @@ Oracle][ffnvo2]_.[^210603-1]
 
 [ffnvo1]: https://www.fanfiction.net/s/4627044/4/Veritas-Oracle
 [ffnvo2]: https://www.fanfiction.net/s/4627044/
-[lc1]:
-  http://www.the-leaky-cauldron.org/features/essays/issue18/snapeandmalfoys/
+[lc1]: http://www.the-leaky-cauldron.org/features/essays/issue18/snapeandmalfoys/
 
 [^210603-1]:
     BajaB. _[Veritas Oracle](https://www.fanfiction.net/s/4627044/)_
@@ -339,8 +341,10 @@ Oracle][ffnvo2]_.[^210603-1]
     Page 34.
     https://www.goodreads.com/book/show/31538614-short-stories-from-hogwarts-of-power-politics-and-pesky-poltergeists
 
+<!-- cspell: disable -->
+
 [^210517-6]:
-    Maja AKA Praxagora. <!-- cspell: disable-line -->
+    Maja AKA Praxagora. 
     "[Snape and the Malfoys](http://www.the-leaky-cauldron.org/features/essays/issue18/snapeandmalfoys/)"
     [The Leaky Cauldron](http://www.the-leaky-cauldron.org/) Last Viewed
     2021-05-17.
@@ -402,7 +406,7 @@ Oracle][ffnvo2]_.[^210603-1]
     on what happens after Snape [dies][SnapeDies].
 
 [SnapeDies]: </Bookmarks/Bashing/After Snape Dies>
-[Harry Potter and the Order of the Phoenix]:
-  https://www.librarything.com/work/115/book/225886709
-[Harry Potter and the Half-Blood Prince]:
-  https://www.librarything.com/work/1133624/book/203684961
+[Harry Potter and the Order of the Phoenix]: https://www.librarything.com/work/115/book/225886709
+[Harry Potter and the Half-Blood Prince]: https://www.librarything.com/work/1133624/book/203684961
+
+<!-- cspell: enable -->

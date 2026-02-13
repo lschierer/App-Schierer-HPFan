@@ -50,8 +50,8 @@ females in the series at the expense of the males.[^20210927-2]
 [GAFRIW]: https://www.fanfiction.net/s/6126906
 [James]: /Harrypedia/people/Potter/James/
 
-[Harry]: <</Harrypedia/people/Potter/Harry James/>> [Lupin]:
-<</Harrypedia/people/Lupin/Remus John/>>
+[Harry]: </Harrypedia/people/Potter/Harry James> 
+[Lupin]: </Harrypedia/people/Lupin/Remus John>
 
 [^20210927-4]:
     gredandforgerock. _[I'm Where][GAFRIW]_

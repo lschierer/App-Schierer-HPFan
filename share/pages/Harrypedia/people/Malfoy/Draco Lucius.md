@@ -56,8 +56,7 @@ back.
     Mrs. J. K. Rowling. Quoted at "[SORTING HAT SONGS][]" on [MuggleNet][]. Last
     Viewed: 2023-02-10.
 
-[SORTING HAT SONGS]:
-  https://www.mugglenet.com/harry-potter/little-things-harry-potter/sorting-hat-songs/
+[SORTING HAT SONGS]: https://www.mugglenet.com/harry-potter/little-things-harry-potter/sorting-hat-songs/
 [MuggleNet]: https://www.mugglenet.com
 
 [^230210-1]:

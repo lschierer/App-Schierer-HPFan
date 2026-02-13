@@ -26,8 +26,7 @@
     Mrs. J. K. Rowling. _[Harry Potter and the Deathly Hallows]_ p. 87. © 2007
     Pottermore Publishing. American Kindle Edition.
 
-[Harry Potter and the Deathly Hallows]:
-  https://www.librarything.com/work/3577382/
+[Harry Potter and the Deathly Hallows]: https://www.librarything.com/work/3577382/
 
 The overall impression I get is that Remus is _familiar_ with the non-magical
 world, but that the movie over-emphasises the extent to which the magical

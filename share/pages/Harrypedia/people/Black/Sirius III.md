@@ -63,8 +63,7 @@ have ever gone down the tunnel!
     For one example, see Kindle Location 7647, Mrs. J. K. Rowling. _[Harry
     Potter and the Order of the Phoenix][]_ Bloomsbury UK (2003)
 
-[Harry Potter and the Order of the Phoenix]:
-  https://www.librarything.com/work/115/book/225886709
+[Harry Potter and the Order of the Phoenix]: https://www.librarything.com/work/115/book/225886709
 
 ### Effects of Azkaban
 
@@ -117,9 +116,9 @@ A second possibility:
 > pronounce 'Moony' properly. Harry would probably have been, in his entirety, a
 > happy memory ...[^230203-1]
 
-[^230203-1]:
+[^230203-1]: <!-- cspell: disable-next-line -->
     slythernim. _[Messing With Time][]_ Published: 2019-06-23. Updated:
-    2023-01-17. <!-- cspell: disable-line -->
+    2023-01-17. 
 
 [Messing With Time]: https://archiveofourown.org/works/19334905
 
@@ -219,7 +218,7 @@ that could mean before his curse _landed_ rather than before it was _cast_.
     a certain persuasiveness.
 
 [Abandoning Ship]: https://www.redhen-publications.com/abandoning.html
-[History]: /Harrypedia/History/
+[History]: /Harrypedia/History
 
 [^210517-4]:
     Some writers have speculated that long term exposure to dementors would
@@ -247,26 +246,26 @@ level upon him? Much of this hinges on the [effects of Azkaban][].
     Locations 9822-9830 of 13038. Pottermore Limited © 2005. American Kindle
     Edition.
 
-[Andromeda]: /Harrypedia/people/Black/Andromeda/
-[Arcturus]: </Harrypedia/people/Black/Arcturus II/>
-[Bellatrix]: /Harrypedia/people/Black/Bellatrix/
-[Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/>
-[Hagrid]: /Harrypedia/people/Hagrid/Rubeus/
-[Harry]: </Harrypedia/people/Potter/Harry James/>
-[Hermione]: </Harrypedia/people/Granger/Hermione Jean/>
-[History]: /Harrypedia/History/
-[James]: /Harrypedia/people/Potter/James/
-[Lily]: </Harrypedia/people/Evans/Lily J/>
-[Lupin]: </Harrypedia/people/Lupin/Remus John/>
-[Malfoy]: /Harrypedia/people/Malfoy/
-[Molly]: /Harrypedia/people/Prewett/Molly/
-[Orion]: /Harrypedia/people/Black/Orion/
-[Peter Pettigrew]: /Harrypedia/people/Pettigrew/Peter/
-[Peter]: /Harrypedia/people/Pettigrew/Peter/
-[Pettigrew]: /Harrypedia/people/Pettigrew/Peter/
-[Pollux]: /Harrypedia/people/Black/Pollux/
-[Regulus]: </Harrypedia/people/Black/Regulus Arcturus/>
-[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>
-[SWM]: /Harrypedia/people/Snape/Severus/swm/
-[Snape]: /Harrypedia/people/Snape/Severus/
-[Walburga]: /Harrypedia/people/Black/Walburga/
+[Andromeda]: /Harrypedia/people/Black/Andromeda
+[Arcturus]: </Harrypedia/people/Black/Arcturus II>
+[Bellatrix]: /Harrypedia/people/Black/Bellatrix
+[Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
+[Hagrid]: /Harrypedia/people/Hagrid/Rubeus
+[Harry]: </Harrypedia/people/Potter/Harry James>
+[Hermione]: </Harrypedia/people/Granger/Hermione Jean>
+[History]: /Harrypedia/History
+[James]: /Harrypedia/people/Potter/James
+[Lily]: </Harrypedia/people/Evans/Lily J>
+[Lupin]: </Harrypedia/people/Lupin/Remus John>
+[Malfoy]: /Harrypedia/people/Malfoy
+[Molly]: /Harrypedia/people/Prewett/Molly
+[Orion]: /Harrypedia/people/Black/Orion
+[Peter Pettigrew]: /Harrypedia/people/Pettigrew/Peter
+[Peter]: /Harrypedia/people/Pettigrew/Peter
+[Pettigrew]: /Harrypedia/people/Pettigrew/Peter
+[Pollux]: /Harrypedia/people/Black/Pollux
+[Regulus]: </Harrypedia/people/Black/Regulus Arcturus>
+[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
+[SWM]: /Harrypedia/people/Snape/Severus/swm
+[Snape]: /Harrypedia/people/Snape/Severus
+[Walburga]: /Harrypedia/people/Black/Walburgax

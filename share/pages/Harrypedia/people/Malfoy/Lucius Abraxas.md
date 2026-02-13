@@ -12,8 +12,7 @@ because the author objects to the more correct portrayal of Lucius as a villain.
 
 [^glm]: For example, see [this search][ao3glm].
 
-[ao3glm]:
-  https://archiveofourown.org/works?commit=Sort+and+Filter&work_search%5Bsort_column%5D=revised_at&work_search%5Bother_tag_names%5D=Good+Lucius+Malfoy&exclude_work_search%5Bcategory_ids%5D%5B%5D=23&work_search%5Bexcluded_tag_names%5D=&work_search%5Bcrossover%5D=&work_search%5Bcomplete%5D=&work_search%5Bwords_from%5D=&work_search%5Bwords_to%5D=&work_search%5Bdate_from%5D=&work_search%5Bdate_to%5D=&work_search%5Bquery%5D=&work_search%5Blanguage_id%5D=&tag_id=Harry+Potter+-+J*d*+K*d*+Rowling
+[ao3glm]: https://archiveofourown.org/works?commit=Sort+and+Filter&work_search%5Bsort_column%5D=revised_at&work_search%5Bother_tag_names%5D=Good+Lucius+Malfoy&exclude_work_search%5Bcategory_ids%5D%5B%5D=23&work_search%5Bexcluded_tag_names%5D=&work_search%5Bcrossover%5D=&work_search%5Bcomplete%5D=&work_search%5Bwords_from%5D=&work_search%5Bwords_to%5D=&work_search%5Bdate_from%5D=&work_search%5Bdate_to%5D=&work_search%5Bquery%5D=&work_search%5Blanguage_id%5D=&tag_id=Harry+Potter+-+J*d*+K*d*+Rowling
 [sin is real]: https://www.thecatholicthing.org/2015/10/16/the-reality-of-sin/
 
 - Lucius is a marked death eater

@@ -68,11 +68,7 @@ In the fan fiction work _[The Sound of Silence][BW95TSS1]_ [Dumbledore] states:
 Mrs. Rowling does not allow her version of [Dumbledore] to admit any such thing,
 but I think there is some element of truth to this take on his character. If,
 however, I am off base, it makes the next point even stronger. That being said,
-consider the following quote, this one from nonjon's
-
-<!-- cspell: disable-line -->
-
-_[Whatever Happened to the Likely Lad?]_:
+consider the following quote, this one from _[Whatever Happened to the Likely Lad?]_:
 
 > Harry nodded. "Now if he'd taken me to proper healers, they would have
 > recognized the taint and worked out a way to get it out of me. So naturally,
@@ -81,30 +77,13 @@ _[Whatever Happened to the Likely Lad?]_:
 > he knows, left untreated it'll just become more ingrained as a part of
 > me."[^221006-1]
 
-[Whatever Happened to the Likely Lad?]:
-  https://www.fanfiction.net/s/7395979/1/Whatever-Happened-to-the-Likely-Lad
-
-[^221006-1]:
-    nonjon. _[Whatever Happened to the Likely Lad?]_. Published 2011-09-19.
-
-    <!-- cspell: disable-line -->
-
-Here nonjon has [Harry] succinctly put forward the theory that the soul
-
-<!-- cspell: disable-line --> fragment that sought to attach itself to [Harry]
-
-is only irrevocably attached to him _because [Dumbledore] delayed treatment._
-Had medical help been sought promptly, [Harry] need not have faced that soul
+Here the author has [Harry] succinctly put forward the theory that the soul fragment that sought to attach itself to [Harry] is only irrevocably attached to him *because [Dumbledore] delayed treatment.* Had medical help been sought promptly, [Harry] need not have faced that soul
 crushing walk into the forest at the end of book seven, there would already have
 been one fewer soul fragments to handle. Is the _very limited_ protection that
 [Harry's] attempt at sacrifice provides worth that suffering? Even if it is, is
 it _morally permissible_ to _inflict_ that on a child?
 
-In the fan fiction work _[After Destiny][CAD1]_, cambangst presents a view of
-
-<!-- cspell: disable-line --> [Harry], [Ginny], and the other student fighters
-
-that is overly influenced by modern secular morality, but shows them struggling
+In the fan fiction work _[After Destiny][CAD1]_, another author presents a view of [Harry], [Ginny], and the other student fighters that is overly influenced by modern secular morality, but shows them struggling
 with the traumas they have faced in a way that I _do_ find very realistic. The
 following is part of an exchange between [Harry] and [Ginny].
 
@@ -238,16 +217,13 @@ of the thorny problem to confuse the listener.
     Mrs. J. K. Rowling. _[Harry Potter and the Deathly Hallows]_ Page 298. ©
     2007 Pottermore Publishing. American Kindle Edition.
 
-[Harry Potter and the Deathly Hallows]:
-  https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows
-[Harry Potter and the Sorcerer's Stone]:
-  https://www.goodreads.com/book/show/3.Harry_Potter_and_the_Sorcerer_s_Stone
-[Harry Potter and the Chamber of Secrets]:
-  https://www.goodreads.com/book/show/15881.Harry_Potter_and_the_Chamber_of_Secrets
-[Harry Potter and the Goblet of Fire]:
-  https://www.goodreads.com/book/show/6.Harry_Potter_and_the_Goblet_of_Fire
-[Harry Potter and the Order of the Phoenix]:
-  https://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix
+[Harry Potter and the Deathly Hallows]: https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows
+[Harry Potter and the Sorcerer's Stone]: https://www.goodreads.com/book/show/3.Harry_Potter_and_the_Sorcerer_s_Stone
+[Harry Potter and the Chamber of Secrets]: https://www.goodreads.com/book/show/15881.Harry_Potter_and_the_Chamber_of_Secrets
+[Harry Potter and the Goblet of Fire]: https://www.goodreads.com/book/show/6.Harry_Potter_and_the_Goblet_of_Fire
+[Harry Potter and the Order of the Phoenix]: https://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix
+
+<!-- cspell: disable --> 
 
 [^210912-13]:
     Mrs. J. K. Rowling. _[Harry Potter and the Order of the Phoenix]_ Locations
@@ -276,7 +252,7 @@ of the thorny problem to confuse the listener.
     agreeing with the author's own opinion on the subject.
 
 [^210912-1]:
-    cambangst. <!-- cspell: disable-line -->
+    cambangst. 
     _[After Destiny](https://fanfictalk.com/archive/viewstory.php?sid=721)_
     Published: 2017-03-13. Updated: 2021-07-17.
 
@@ -307,5 +283,11 @@ of the thorny problem to confuse the listener.
     2005-07-05. [Accio Quote](http://www.accio-quote.org/)
 
 [^210912-7]:
-    birdwoman95. <!-- cspell: disable-line -->
+    birdwoman95. 
     _[The Sound Of Silence](https://www.fanfiction.net/s/12175260)_ 2016-10-03.
+
+[Whatever Happened to the Likely Lad?]: https://www.fanfiction.net/s/7395979/1/Whatever-Happened-to-the-Likely-Lad
+
+[^221006-1]: nonjon. _[Whatever Happened to the Likely Lad?]_. Published 2011-09-19.
+
+<!-- cspell: enable -->

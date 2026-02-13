@@ -35,8 +35,7 @@ it. So I will summarise what we know. From these two books:
 - [Snape] confirms that belief as he reveals himself from under the invisibility
   cloak.
 
-[Harry Potter and the Prisoner of Azkaban]:
-  https://www.goodreads.com/book/show/5.Harry_Potter_and_the_Prisoner_of_Azkaban
+[Harry Potter and the Prisoner of Azkaban]: https://www.goodreads.com/book/show/5.Harry_Potter_and_the_Prisoner_of_Azkaban
 
 [^210921-5]:
     Mrs. J. K. Rowling. _[Harry Potter and the Prisoner of Azkaban]_ Page 357. ©
@@ -133,8 +132,7 @@ him.
   being arrogant.
 - [James] returns to tormenting [Snape] when [Lily] storms off.
 
-[Harry Potter and the Order of the Phoenix]:
-  https://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix
+[Harry Potter and the Order of the Phoenix]: https://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix
 
 [^210921-8]:
     Mrs. J. K. Rowling. _[Harry Potter and the Order of the Phoenix]_ Kindle
@@ -163,7 +161,7 @@ that [Lily] disliked him as much as it sounds. I am not the best at reading
 people, but I think [Harry] is worse, and, unfortunately, everything we know is
 filtered through his perceptions (or in this case lack thereof). [Snape] is
 inordinately focused on making sure that [Lily] sees [James] in a bad light.
-_Some_ of that is because _[Snap]_ is aware that [James] is a rival for her
+_Some_ of that is because _[Snape]_ is aware that [James] is a rival for her
 affections.
 
 There are, however, only two real possibilities here.
@@ -302,8 +300,7 @@ On a side note, in his work _[Toxic]_, WitandAmbition makes very similar points,
     [The J. K. Rowling Index](https://www.rowlingindex.org/) 2014-07-14.
 
 [RPM1]: https://www.pottermore.com
-[Harry Potter and the Deathly Hallows]:
-  https://www.librarything.com/work/3577382/book/225886820
+[Harry Potter and the Deathly Hallows]: https://www.librarything.com/work/3577382/book/225886820
 
 [^210921-9]:
     Mrs. J. K. Rowling. _[Harry Potter and the Deathly Hallows]_ p. 279.

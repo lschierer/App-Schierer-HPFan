@@ -49,11 +49,11 @@
     Hogwarts to the earliest Dumbledore could be headmaster and yet be winter
     _after_ [Remus][RL1] is bitten.
 
-[RL1]: </Harrypedia/people/Lupin/Remus John/>
-[James]: /Harrypedia/people/Potter/James/
-[Lily]: </Harrypedia/people/Evans/Lily J/>
-[TMR1]: </Harrypedia/people/Riddle/Tom Marvolo/>
-[H1]: /Harrypedia/History/
+[RL1]: </Harrypedia/people/Lupin/Remus John>
+[James]: /Harrypedia/people/Potter/James
+[Lily]: </Harrypedia/people/Evans/Lily J>
+[TMR1]: </Harrypedia/people/Riddle/Tom Marvolo>
+[H1]: /Harrypedia/History
 
 ### Character Analysis
 
@@ -66,29 +66,20 @@ dastardly person imaginable. Dumbledore is not a saintly figure either mind you,
 but rather a complex one who requires more careful analysis to understand his
 flaws in the right context.
 
+Musings of Apathy, in writing the original version of [Family Inseparable][FI], envisions Dumbledore as (my words) misguided, and perhaps ruthless, but not
+evil.[^180702-2] There is some truth to this. Personally, I am convinced that Dumbledore believes some form of [Utilitarianism][IEPU2]. Whether he absorbed
+this from [Gellert Grindelwald][GG],[^221221-6] or learned it from his own parents is more than I am prepared to say. It even is possible that [Grindelwald][GG] got the idea from _Dumbledore_. Moreover, for all that "the Greater Good" would become [Grindelwald][GG]'s slogan,[^221221-7] I do not believe that Dumbledore ever, if at all, fully abandoned his internal commitment to [Utilitarian][IEPU2] philosophy. Dumbledore may have had to learn to live
+with the "price of [his] shame,"[^210912-8] but I cannot find anywhere that says he actually came to believe his moral reasoning had been flawed.
+
 [FI]: https://musings-of-apathy.fanficauthors.net/Family_Inseparable/index/
 [HS]: </Harrypedia/people/Slughorn/Horace Eugene Flaccus/>
 [hogwarts]: /Harrypedia/Hogwarts/
-
-Musings of Apathy, in writing the original version of [Family Inseparable][FI],
-envisions Dumbledore as (my words) misguided, and perhaps ruthless, but not
-evil.[^180702-2] There is some truth to this. Personally, I am convinced that
-Dumbledore believes some form of [Utilitarianism][IEPU2]. Whether he absorbed
-this from [Gellert Grindelwald][GG],[^221221-6] or learned it from his own
-parents is more than I am prepared to say. It even is possible that
-[Grindelwald][GG] got the idea from _Dumbledore_. Moreover, for all that "the
-Greater Good" would become [Grindelwald][GG]'s slogan,[^221221-7] I do not
-believe that Dumbledore ever, if at all, fully abandoned his internal commitment
-to [Utilitarian][IEPU2] philosophy. Dumbledore may have had to learn to live
-with the "price of [his] shame,"[^210912-8] but I cannot find anywhere that says
-he actually came to believe his moral reasoning had been flawed.
 
 [^221221-6]:
     Mrs. J. K. Rowling. _[Harry Potter and the Deathly Hallows][]_ Pottermore
     Publishing Limited. American Kindle Edition. Page 243.
 
-[Harry Potter and the Deathly Hallows]:
-  https://www.librarything.com/work/3577382/book/225886820
+[Harry Potter and the Deathly Hallows]: https://www.librarything.com/work/3577382/book/225886820
 
 [^221221-7]:
     Mrs. J. K. Rowling. _[Harry Potter and the Deathly Hallows][]_ Pottermore
@@ -116,8 +107,7 @@ peers, far less ever adults over him.
     citation needed for Mr. Weasley's paternalistic attitude towards non-magic
     people
 
-[Saving the Saviour]:
-  https://www.fanfiction.net/s/11833745/14/Saving-the-Saviour
+[Saving the Saviour]: https://www.fanfiction.net/s/11833745/14/Saving-the-Saviour
 
 One of the things that really struck me as I started to really think about the
 Harry Potter books (as opposed to just enjoying them as stories), is just how
@@ -200,13 +190,9 @@ convince me that the phoenix _should_ be a moral indicator, then I would be
 forced to conclude that either Fawkes is held in bondage in some way[^210914-3],
 or that Mrs. Rowling has misrepresented phoenix-kind.
 
-Ms. Richa Venkatraman wrote a defence of Dumbledore on MuggleNet[^190301-1] in
-
-<!-- cspell: disable-line --> which she seems to express well the view that
-
-[Harry] himself has in the book, that Dumbledore is ultimately a good, if
+Ms. Venkatraman wrote a defence of Dumbledore on MuggleNet[^190301-1] in which she seems to express well the view that [Harry] himself has in the book, that Dumbledore is ultimately a good, if
 flawed, person. I suspect that Ms. Venkatraman is right, that Dumbledore suffers
-in his conscience from the pain <!-- cspell: disable-line --> he causes, and he
+in his conscience from the pain he causes, and he
 does _intend_ good. I differ from her in that I do not think that his _intent_
 sufficient such that he _is_ in fact good (or at least, not wholly so).
 Dumbledore's unstated philosophy seems way too close to "the ends justify the
@@ -250,8 +236,7 @@ effect defence (which can be valid), or is on the fact that _he_ did not commit
 evil, others did that. He would be wise enough to use the two defences in
 different circumstances across the books.
 
-[Society/utilitarianism]:
-  https://www.schierer.org/~luke/log/Society/utilitarianism/
+[Society/utilitarianism]: https://www.schierer.org/~luke/log/Society/utilitarianism/
 
 The principle of the double effect can be a valid defence.[^210914-5] It only
 actually applies to morally good and morally neutral acts done for good ends
@@ -622,11 +607,12 @@ What about the Wizengamot? Has he really done nothing with his seat? Or has he
 played off one faction against another, manipulated people behind the scenes? Is
 his public face at all related to his private goals?
 
+<!-- cspell: disable -->
+
 [^210706-1]:
     KafkaExMachina. <!-- cspell: disable-line -->
     _[Divination is a Wooly Subject](https://www.fanfiction.net/s/5251162)_
-
-    <!-- cspell: disable-line --> Published 2009-07-26. Last Viewed: 2021-07-06.
+    Published 2009-07-26. Last Viewed: 2021-07-06.
 
     Others have also done this, but this one does a nicely done and brief
     synopsis of the view.
@@ -642,15 +628,14 @@ his public face at all related to his private goals?
     2020-07-21.
 
 [^191025-1]:
-    Fibinaci. <!-- cspell: disable-line -->
+    Fibinaci. 
     _[Padfoot, Docteur D'Amour](https://www.fanfiction.net/s/4510080/6/Padfoot-Docteur-D-amour)_
-
-    <!-- cspell: disable-line --> Chapter 6. Last viewed 2020-09-08.
+    Chapter 6. Last viewed 2020-09-08.
 
 [^210318-7]:
     In the interview
     "[Barnes and Noble & Yahoo! chat with J.K. Rowling](https://www.hp-lexicon.org/source/interviews/bn/)
-    Mrs. Rowling states that Dumbledore 1) knows Snape is behaving badly and 2)
+    Mrs. Rowling states that Dumbledore 1\) knows Snape is behaving badly and 2\)
     purposefully allows it.
 
 [^200812-1]:
@@ -696,36 +681,24 @@ his public face at all related to his private goals?
 [^200720-1]:
     Magi Silverwolf.
     _[The Greater Will](https://archiveofourown.org/works/16234799)_
-
-    <!-- cspell: disable-line -->
-
     [Archive of Our Own](https://archiveofourown.org/). Published 2018-10-08.
     Last Viewed 2020-07-20.
 
 [^200720-6]:
     Magi Silverwolf.
     _[The Greater Will](https://archiveofourown.org/works/16234799)_
-
-    <!-- cspell: disable-line -->
-
     [Archive of Our Own](https://archiveofourown.org/). Published 2018-10-08.
     Last Viewed 2020-07-20.
 
 [^200720-7]:
     Magi Silverwolf.
     _[The Greater Will](https://archiveofourown.org/works/16234799)_
-
-    <!-- cspell: disable-line -->
-
     [Archive of Our Own](https://archiveofourown.org/). Published 2018-10-08.
     Last Viewed 2020-07-20.
 
 [^200720-8]:
     Magi Silverwolf.
     _[The Greater Will](https://archiveofourown.org/works/16234799)_
-
-    <!-- cspell: disable-line -->
-
     [Archive of Our Own](https://archiveofourown.org/). Published 2018-10-08.
     Last Viewed 2020-07-20.
 
@@ -773,12 +746,11 @@ his public face at all related to his private goals?
 [^190301-1]:
     Ms. Richa Venkatraman. <!-- cspell: disable-line -->
     _["For the Greater Good:" In Defense of Albus Dumbledore](http://www.mugglenet.com/2017/08/greater-good-defense-albus-dumbledore/)_
+    Published 2017-08-02. Last viewed 2019-03-01.
 
-    <!-- cspell: disable-line --> Published 2017-08-02. Last viewed 2019-03-01.
+<!-- cspell: enable -->
 
-[ADdwr]:
-  </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/Dealing with Riddle>
-[ADtoh]:
-  </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/treatment_of_harry>
+[ADdwr]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/Dealing with Riddle>
+[ADtoh]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/treatment_of_harry>
 [ADmm]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/manipulator>
 [ADi]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/inaction>

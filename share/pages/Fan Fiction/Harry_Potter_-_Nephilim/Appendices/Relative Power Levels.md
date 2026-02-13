@@ -282,7 +282,7 @@ and yet makes Lily powerful enough to be scary.
 
 The other thing I have done is that the average of Riddle and Harry's abilities
 are both an 8, so that while they have different specific abilities, they are in
-a sense equally strong nephilim. You will see that really Harry is a much more
+a sense equally strong nephil. You will see that really Harry is a much more
 balanced wizard, he has neither the highs nor the lows that Riddle has (though
 neither is an especially strong Cherubim). The one place that Harry shines that
 Riddle does not is the Principalities - population effects. This is probably

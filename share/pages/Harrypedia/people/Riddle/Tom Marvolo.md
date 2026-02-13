@@ -46,8 +46,7 @@
     Mrs. J. K. Rowling. _[Harry Potter and the Half-Blood Prince]_ p. 358.
     Pottermore Publishing. American Kindle Edition.
 
-[Harry Potter and the Half-Blood Prince]:
-  https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince
+[Harry Potter and the Half-Blood Prince]: https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince
 
 [^20210827-6]:
     Mrs. J. K. Rowling. _[Harry Potter and the Half-Blood Prince]_ p. 360.

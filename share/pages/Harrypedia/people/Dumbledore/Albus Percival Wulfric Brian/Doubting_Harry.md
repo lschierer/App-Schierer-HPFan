@@ -61,9 +61,7 @@ ways. Add in [Snape] effectively (though unconsciously, since I do not think
 [Snape] knows who [Tom Riddle] became) emphasising those similarities …
 
 A second parallel is set up in _[Perilous Journey]_. In this alternate universe,
-sbmcneil builds on the distance that [Dumbledore] places between
-
-<!-- cspell: disable-line --> himself and [Harry] in the canonical [Book 5].
+sbmcneil builds on the distance that [Dumbledore] places between himself and [Harry] in the canonical [Book 5].
 
 Here, [Dumbledore] fears that [Riddle] may actually _control_ [Harry], not just
 use the connection to spy on him or implant dreams. Can we say with certainty
@@ -72,11 +70,7 @@ fear, but it is _inferred_. [Dumbledore] admits he feared that [Riddle] would
 use the connection to "try and possess you."[^221109-1] Would not such a
 possession allow [Riddle] not just access to spy on [Dumbledore] but to
 manipulate [Harry]'s body, and perhaps even cast other spells through him? As
-you can see, sbmcneil's point of departure is truly very small.
-
-<!-- cspell: disable-line -->
-
-Given such a fear, that [Harry] would not be in full control of himself, even if
+you can see, sbmcneil's point of departure is truly very small.  Given such a fear, that [Harry] would not be in full control of himself, even if
 [Dumbledore] trusted _[Harry]'s_ ultimate goodness, he distrusts _[Riddle]'s_ to
 an equal extent. If he cannot trust who is in control of the body, and dare not
 let anyone know that such a possession is possible, then **functionally** he
@@ -98,12 +92,9 @@ let anyone know that such a possession is possible, then **functionally** he
     Mrs. J. K. Rowling. _[Harry Potter and the Deathly Hallows]_ p. 280.
     Pottermore Publishing. American Kindle Edition.
 
-[Harry Potter and the Deathly Hallows]:
-  https://www.librarything.com/work/3577382/
-[Harry Potter and the Order of the Phoenix]:
-  https://www.librarything.com/work/115/
-[Harry Potter and the Philosopher's Stone]:
-  https://www.librarything.com/work/5403381/
+[Harry Potter and the Deathly Hallows]: https://www.librarything.com/work/3577382/
+[Harry Potter and the Order of the Phoenix]: https://www.librarything.com/work/115/
+[Harry Potter and the Philosopher's Stone]: https://www.librarything.com/work/5403381/
 [Harry Potter and the Goblet of Fire]: https://www.librarything.com/work/113/
 
 [^20210901-2]:

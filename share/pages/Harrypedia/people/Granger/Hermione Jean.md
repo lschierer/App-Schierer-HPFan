@@ -9,8 +9,7 @@ only [Harry] only _really_ relates to Hermione, [Ginny], and [Luna]. [Ginny] and
 [Luna] are long enough topics to deserve their own pages.
 
 [Luna]: /Harrypedia/people/Lovegood/Luna/
-[The_Half_Blood_Prince]:
-  https://www.schierer.org/~luke/log/fiction/Harry_Potter/The_Half_Blood_Prince/
+[The_Half_Blood_Prince]: https://www.schierer.org/~luke/log/fiction/Harry_Potter/The_Half_Blood_Prince/
 
 #### Relating to other people's analysis
 
@@ -174,8 +173,7 @@ disagree?
     Mrs. J. K. Rowling. _[Harry Potter and the Deathly Hallows]_ Pottermore
     Publishing. American Kindle Edition. Page 245.
 
-[Harry Potter and the Deathly Hallows]:
-  https://www.librarything.com/work/3577382
+[Harry Potter and the Deathly Hallows]: https://www.librarything.com/work/3577382
 
 Overall, the list has Hermione unambiguously right one time, [Harry]
 unambiguously right 3 times, and the point contested between them another three
@@ -300,8 +298,7 @@ strategy.[^230208-2]
     From my perspective a more serious flaw is the secular approach, but for
     this purpose that might actually be better?
 
-[Inducing Jealousy to Get Your Mate's Attention]:
-  https://www.psychologytoday.com/us/blog/loves-evolver/201111/inducing-jealousy-get-your-mates-attention
+[Inducing Jealousy to Get Your Mate's Attention]: https://www.psychologytoday.com/us/blog/loves-evolver/201111/inducing-jealousy-get-your-mates-attention
 [Psycology Today]: https://www.psychologytoday.com/
 [Dean]: /Harrypedia/people/Thomas/Dean/
 
@@ -424,8 +421,7 @@ willing to forgive her because it is 1) female on male violence 2) against a
 disliked character 3) results in a favourable outcome 4) done to help someone
 she has feelings for([Ron]). None of these _actually_ justify her actions.
 
-[Offences against the Person Act of 1861]:
-  https://www.legislation.gov.uk/ukpga/Vict/24-25/100/enacted/data.pdf
+[Offences against the Person Act of 1861]: https://www.legislation.gov.uk/ukpga/Vict/24-25/100/enacted/data.pdf
 
 ### Conclusion
 
@@ -524,8 +520,7 @@ is anyone's guess which specific event would be one too many.
     Mrs. J. K. Rowling. _[Harry Potter and the Half-Blood Prince]_ Pottermore
     Limited. American Kindle Edition. page citation needed.
 
-[Harry Potter and the Half-Blood Prince]:
-  https://www.librarything.com/work/1133624
+[Harry Potter and the Half-Blood Prince]: https://www.librarything.com/work/1133624
 
 [^240417-3]:
     Mrs. J. K. Rowling. _[Harry Potter and the Half-Blood Prince]_ Pottermore

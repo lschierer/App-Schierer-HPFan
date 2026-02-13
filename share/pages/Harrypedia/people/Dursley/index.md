@@ -122,3 +122,11 @@ In short, as another (better) author puts it,
 While Mrs. Rowling may have chosen not to show us everything, she has shown
 enough that a reasonable adult should be able to see the forest as well as the
 trees.
+
+[^210604-1]: 
+    [sbmcneil](https://www.fanfiction.net/u/1816754/sbmcneil) 
+    Profile page.  Updated 2021-12-31.
+
+[^210128-2]:
+    Mrs. J. K. Rowling. _Harry Potter and the Deathly Hallows_. Better
+    citation needed.
