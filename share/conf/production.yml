@@ -1,7 +1,7 @@
 # PAGI WebServer Framework Configuration
 
 # Stage: production, staging, production
-stage: localDev
+stage: production
 
 modules:
   "^WebFramework::Module::AutoIndex": {}
