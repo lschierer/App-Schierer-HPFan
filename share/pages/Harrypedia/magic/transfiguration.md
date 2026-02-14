@@ -25,9 +25,7 @@ he is acutely aware when [Dumbledore] pokes him with a [wand], despite being in
 the form of a chair.[^221220-3]
 
 Did [Slughorn], who certainly did not intend to damage himself, purposefully
-only incompletely transfigure himself? Or is Sovran's theory of sensory
-
-<!-- cspell: disable-line --> deprivation entirely uncanonical, despite its
+only incompletely transfigure himself? Or is Sovran's theory of sensory deprivation entirely uncanonical, despite its
 
 logical soundness?
 

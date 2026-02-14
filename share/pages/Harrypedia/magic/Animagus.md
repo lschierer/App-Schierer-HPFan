@@ -12,12 +12,7 @@ _suggests_ otherwise:
 > At a recent International Symposium of Animagi, the Uagadou School Team
 > attracted a lot of press when their exhibition of synchronised transforming
 > caused a near riot. Many older and more experienced witches and wizards felt
-> threatened by fourteen-year-olds who could turn at will into elephants and
->
-> <!--cspell: disable-line --> cheetahs, and a formal complaint was lodged with
->
-> the International Confederation of Wizards by Adrian Tutley (Animagus:
-> gerbil).[^210304-6]
+> threatened by fourteen-year-olds who could turn at will into elephants and cheetahs, and a formal complaint was lodged with the International Confederation of Wizards by Adrian Tutley (Animagus: gerbil).[^210304-6]
 
 If you do not choose your animal, a school team composed of people who are _all_
 dual animagi elephants and cheetahs is not really plausible. My guess is that

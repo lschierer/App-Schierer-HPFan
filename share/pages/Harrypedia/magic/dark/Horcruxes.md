@@ -49,8 +49,7 @@ behind horcruxes from the Egyptians. Hence it being convenient that the two
 civilisations overlap in time.
 
 Several centuries later, Wong Shan-Hao (from Itsme66's work) attempted
-a<!-- cspell: disable-line --> horcrux, but botched the creation, explaining the
-intact one on display in the Imperial Museum of Magic.[^210324-1] [Dumbledore]'s
+a horcrux, but botched the creation, explaining the intact one on display in the Imperial Museum of Magic.[^210324-1] [Dumbledore]'s
 failure to know about and properly investigate what an intact horcrux is doing
 in the Imperial Museum is a testimony to his overall dependence on the prophecy,
 and failure to act.
@@ -67,10 +66,7 @@ and failure to act.
 
 [^210323-15]:
     Mrs. J. K. Rowling et al.
-    "[Anelli, Melissa, John Noe and Sue Upton. "PotterCast Interviews J.K. Rowling, part one." PotterCast #130, 17 December 2007.](http://www.accio-quote.org/articles/2007/1217-pottercast-anelli.html)"
-
-    <!-- cspell: disable-line --> [Accio-Quote](http://www.accio-quote.org/)
-
+    "[Anelli, Melissa, John Noe and Sue Upton. "PotterCast Interviews J.K. Rowling, part one." PotterCast #130, 17 December 2007.](http://www.accio-quote.org/articles/2007/1217-pottercast-anelli.html)" [Accio-Quote](http://www.accio-quote.org/)
     Last viewed 2020-07-31.
 
 [^210323-14]:
@@ -111,10 +107,7 @@ and failure to act.
 
 [^200731-1]:
     Mrs. J. K. Rowling et al.
-    "[Anelli, Melissa, John Noe and Sue Upton. "PotterCast Interviews J.K. Rowling, part one." PotterCast #130, 17 December 2007.](http://www.accio-quote.org/articles/2007/1217-pottercast-anelli.html)"
-
-    <!-- cspell: disable-line --> [Accio-Quote](http://www.accio-quote.org/)
-
+    "[Anelli, Melissa, John Noe and Sue Upton. "PotterCast Interviews J.K. Rowling, part one." PotterCast #130, 17 December 2007.](http://www.accio-quote.org/articles/2007/1217-pottercast-anelli.html)"[Accio-Quote](http://www.accio-quote.org/)
     Last viewed 2020-07-31.
 
 ### Effects on the Creator
@@ -286,12 +279,7 @@ is one of the most powerful magics,[^240506-1] she will allow only dark things
 to harm this example of deep evil: [basilisk] venom, [fiendfire], or [the
 killing curse]. The same fallacy is found in Robert Jordan's [Wheel of Time]
 series, where the evil taint left by the Dark One can only be purged by the
-"opposing" evil found in Shadar Logoth.[^240506-2] The problem with the
-
-<!--cspell: disable-line --> [Wheel of Time] version is that it presupposes that
-
-two evils can be different in nature or kind. Not only is this is a prime
-example of the problems with the lack of [balance] in her universe, it begs the
+"opposing" evil found in Shadar Logoth.[^240506-2] The problem with the [Wheel of Time] version is that it presupposes that two evils can be different in nature or kind. Not only is this is a prime example of the problems with the lack of [balance] in her universe, it begs the
 question _why should a horcrux react badly to an evil substance?_ That is,
 [basilisk] venom may be massively destructive to all that is good, healthy, and
 in right order, but it could have equally followed that the horcrux would have
@@ -433,10 +421,8 @@ murder, then he was at six soul parts. This is not a [stable number][], but also
 not a notably _unstable_ one.[^220728-5] For this theory to work, [Riddle][]
 ought to have been at [eleven][], or [thirteen][] parts.
 
-[eleven]:
-  https://www.biblestudy.org/bibleref/meaning-of-numbers-in-bible/11.html
-[thirteen]:
-  https://www.biblestudy.org/bibleref/meaning-of-numbers-in-bible/13.html
+[eleven]: https://www.biblestudy.org/bibleref/meaning-of-numbers-in-bible/11.html
+[thirteen]: https://www.biblestudy.org/bibleref/meaning-of-numbers-in-bible/13.html
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>
 [stable number]: /Harrypedia/magic/arithmancy/RealWorld/
 [Harry]: </Harrypedia/people/Potter/Harry James/>
@@ -455,7 +441,7 @@ ought to have been at [eleven][], or [thirteen][] parts.
 
 [^210324-5]:
     Yunaine.
-    _[Public <!--cspell: disable-line --> Safety](https://www.fanfiction.net/s/10387771)_
+    _[Public Safety](https://www.fanfiction.net/s/10387771)_
     Published: 2014-05-29. Last Viewed: 2021-03-24.
 
 [^210324-4]:

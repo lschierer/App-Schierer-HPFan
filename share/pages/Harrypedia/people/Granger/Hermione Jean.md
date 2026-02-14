@@ -27,12 +27,7 @@ Department of Mysteries does even better.[^210324-2]
 
 [Notes]: /Harrypedia/
 
-Based on an interview she quotes, Ms. Onim asserts that Hermione is essentially
-
-<!-- cspell: disable-line --> a very flat character with the emotional maturity
-
-of a very young (she gives her credit for fourteen in one place, before pointing
-out a temper tantrum more appropriate for a four year old) girl.[^200706-4] I am
+Based on an interview she quotes, [another author][o1] asserts that Hermione is essentially a very flat character with the emotional maturity of a very young (she gives her credit for fourteen in one place, before pointing out a temper tantrum more appropriate for a four year old) girl.[^200706-4] I am
 not sure I would go quite that far; I think that Hermione does grow some over
 the course of the series.
 
@@ -53,26 +48,26 @@ take on Hermione.[^241211-1] It is short enough to quote:
 
 I find this particularly insightful, but it is important to remember that the
 author, here, is writing from Hermione's perspective, not a perspective of
-objective fact. I doubt her parents are/were _actually_ disappointed in her.
+objective fact. I doubt her parents are/were *actually* disappointed in her.
 Hermione read that in their reactions, but she is essentially an incredibly
-insecure young girl who does not _actually_ understand people, their motives or
-their reactions _nearly_ as well as she thinks they do. She _deeply_ craves
-acceptance and approval. Children _are_ often very cruel, and so I do not doubt
-that Hermione _did_ experience a great deal of difficulty in school. This
-probably _did_ lead to a cycle where her academic excellence lead to teasing
+insecure young girl who does not *actually* understand people, their motives or
+their reactions *nearly* as well as she thinks they do. She *deeply* craves
+acceptance and approval. Children *are* often very cruel, and so I do not doubt
+that Hermione *did* experience a great deal of difficulty in school. This
+probably *did* lead to a cycle where her academic excellence lead to teasing
 which Hermione reacted badly to, which caused accidental magic, which caused
 further problems.
 
-Her parents may not have been disappointed in _her_, but they _were_ at a total
-loss at how to help her, and no doubt _were_ disappointed, or rather, upset with
+Her parents may not have been disappointed in *her*, but they *were* at a total
+loss at how to help her, and no doubt *were* disappointed, or rather, upset with
 each failure. If her parents tried to coach her in getting along better with her
-classmates, Hermione probably _did_ detect disappointment with each failure.
+classmates, Hermione probably *did* detect disappointment with each failure.
 This may or may not actually have been in any way actually directed or intended
-as disappointment _in her_ though. We lack data, and even if I were not building
+as disappointment *in her* though. We lack data, and even if I were not building
 off of fan fiction speculation, Hermione herself is an unreliable witness.
-Hermione _is_ very bright in some vectors of intelligence, but as Ms. Onim
-discusses, _not_ when it comes to interpersonal <!-- cspell: disable-line -->
-aspects.
+Hermione *is* very bright in some vectors of intelligence, but while I disagreed on the exact emotional age, I *do* essentially agree with the the [Quora.com] author that Hermione is *not* particularly gifted at interpersonal or emotional intelligence. 
+
+[Quora.com]: https://quora.com 
 
 Still, however her parents _actually intended_ in their reactions, it is
 entirely believable that Hermione _believes_ that her correct answers and the
@@ -84,14 +79,14 @@ historically bullied overworked school teachers into simply giving her the
 grades for her oversized papers rather than working with her to actually learn
 to write.
 
-<!-- cspell: disable-next-line -->
+<!-- cspell: disable -->
+
+[o1]: https://www.quora.com/profile/Vivian-Onim
 
 [^241211-1]:
     [Emmilyne]. _[Of Hearts and Heroes]_.
     "[Chapter 47: And It All Came Tumbling Down](https://archiveofourown.org/works/4670303/chapters/10814993)"
     Published: 2015-08-28. Completed: 2015-09-06.
-
-<!-- cspell: disable-next-line -->
 
 [^241211-2]:
     [Emmilyne]. _[Of Hearts and Heroes]_.
@@ -100,6 +95,8 @@ to write.
 
 [Of Hearts and Heroes]: https://archiveofourown.org/works/4670303/
 [Emmilyne]: https://archiveofourown.org/users/Emmilyne/pseuds/Emmilyne
+
+<!-- cspell: enable -->
 
 #### Hermione and Harry
 
@@ -291,15 +288,12 @@ to work in this case, [Harry] _does_ get jealous of [Dean], it is not a smart
 strategy.[^230208-2]
 
 [^230208-2]: Ms. Davia Sills. "[Inducing Jealousy to Get Your Mate's Attention]"
-
-    <!-- cspell: disable-line --> _[psychology Today]_ 2011-11-30. This is
-
-    essentially written at a lay-person, but it has the citations to back it up.
+    _[Psychology Today]_ 2011-11-30. This is essentially written at a lay-person, but it has the citations to back it up.
     From my perspective a more serious flaw is the secular approach, but for
     this purpose that might actually be better?
 
 [Inducing Jealousy to Get Your Mate's Attention]: https://www.psychologytoday.com/us/blog/loves-evolver/201111/inducing-jealousy-get-your-mates-attention
-[Psycology Today]: https://www.psychologytoday.com/
+[Psychology Today]: https://www.psychologytoday.com/
 [Dean]: /Harrypedia/people/Thomas/Dean/
 
 The jealousy angle aside though, having [Ginny] using dating to build confidence
@@ -502,7 +496,7 @@ is anyone's guess which specific event would be one too many.
 
 [^200706-4]:
     Ms. Vivian Onim.
-    "[Why is Hermione never portrayed as wrong in the Harry Potter books? Practically everything she does is praised, and her flaws seem to lessen with each book until she’s basically perfect by the end, why is this?](https://www.quora.com/Why-is-Hermione-never-portrayed-as-wrong-in-the-Harry-Potter-books-Practically-everything-she-does-is-praised-and-her-flaws-seem-to-lessen-with-each-book-until-she-s-basically-perfect-by-the-end-why-is-this)"
+    "[Why is Hermione never portrayed as wrong in the Harry Potter books? Practically everything she does is praised, and her flaws seem to lessen with each book until she’s basically perfect by the end, why is this?](https://qr.ae/pCzEJT)"
     [Quora](https://www.quora.com/) 2018-08-08. Last Viewed 2020-07-06.
 
 [^200706-3]:
