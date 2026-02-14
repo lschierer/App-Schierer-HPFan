@@ -4,6 +4,8 @@ use experimental qw(class);
 require App::Schierer::HPFan::Model::Gramps::Surname;
 require App::Schierer::HPFan::Model::CustomDate;
 
+# cspell: disable
+
 class App::Schierer::HPFan::Model::Gramps::Name :
   isa(App::Schierer::HPFan::Model::Base) {
   use Carp;

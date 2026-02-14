@@ -1,5 +1,7 @@
 package App::Schierer::HPFan::View::FamilyTree;
 
+# cspell: disable
+
 use strict;
 use warnings;
 use v5.42.0;
@@ -133,12 +135,12 @@ sub _add_person_node {
 
   my $primary_name = $person->primary_name;
   my $display_name = 'Unknown';
-  my $url          = '#';
+  my $url          = sprintf('/Harrypedia/people/%s', $person->name_as_link_path());
 
   if ($primary_name) {
-    my $given       = $primary_name->first_name // '';
+    my $given       = $primary_name->display// '';
     my $surname_obj = $primary_name->primary_surname;
-    my $surname     = $surname_obj ? $surname_obj->surname : '';
+    my $surname     = $surname_obj ? $surname_obj->display_name: '';
 
  # Build display name - use "Unknown (ID)" format when surname but no given name
     if ($surname && !$given) {
@@ -148,24 +150,6 @@ sub _add_person_node {
     }
     else {
       $display_name = join(' ', grep {$_} ($given, $surname)) || 'Unknown';
-    }
-
-    # Build URL to person's detail page
-    if ($surname) {
-      use URI::Escape qw(uri_escape_utf8);
-      my $surname_enc = uri_escape_utf8($surname);
-
-      if ($given) {
-        my $given_enc = uri_escape_utf8($given);
-        $url = "/Harrypedia/people/$surname_enc/$given_enc";
-      }
-      else {
-        # No given name - use gramps_id in URL
-        my $gramps_id = $person->gramps_id // '';
-        if ($gramps_id) {
-          $url = "/Harrypedia/people/$surname_enc/$gramps_id";
-        }
-      }
     }
   }
 

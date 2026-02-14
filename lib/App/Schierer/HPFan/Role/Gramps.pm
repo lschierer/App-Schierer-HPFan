@@ -1,4 +1,5 @@
 package App::Schierer::HPFan::Role::Gramps;
+# cspell: disable
 use Moo::Role;
 use v5.42.0;
 use utf8::all;
@@ -117,7 +118,7 @@ async sub get_all_surnames ($self) {
 
     my $surname_obj = $primary_name->primary_surname();
     if ($surname_obj && $surname_obj->surname) {
-      my $surname = $surname_obj->surname;
+      my $surname = $surname_obj->display_name;
       $surnames{$surname} = 1;
     }
   }
@@ -137,7 +138,7 @@ async sub get_people_by_surname ($self, $surname) {
     next unless $primary_name;
 
     my $surname_obj    = $primary_name->primary_surname();
-    my $person_surname = $surname_obj ? ($surname_obj->surname // '') : '';
+    my $person_surname = $surname_obj ? ($surname_obj->display_name // '') : '';
 
     if ($person_surname eq $surname) {
       push @family_members, $person;

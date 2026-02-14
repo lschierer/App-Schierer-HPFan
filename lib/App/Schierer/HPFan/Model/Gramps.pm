@@ -194,6 +194,15 @@ class App::Schierer::HPFan::Model::Gramps :
     return \@sorted_events;
   }
 
+  method find_events_for_family ($family) {
+    my @fe;
+    foreach my $cr ($family->event_ref_list->@*) {
+      my $event = $events->{ $cr->ref };
+      push @fe, $event if ($event);
+    }
+    return \@fe;
+  }
+
   method find_families_as_parent ($person) {
     my @pf;
     foreach my $fr (@{ $person->family_list() }) {

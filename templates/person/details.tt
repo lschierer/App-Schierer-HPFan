@@ -59,6 +59,9 @@
               [% ELSE -%]
                 Unknown
               [% END -%]
+            [% IF f.marriage_date -%]
+              (m. [% f.marriage_date %])
+            [% END -%]
           </li>
           [% IF f.children.size > 0 -%]
             <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">

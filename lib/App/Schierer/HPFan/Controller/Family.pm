@@ -18,19 +18,30 @@ sub build ($self) {
   $self->register_routes($self->router);
 }
 
-async sub register_routes ($self, $router) {
-  
-  my $surnames = await $self->get_all_surnames;
+sub register_routes ($self, $router) {
+  my $surnames = $self->get_all_surnames->get;
   $self->logger->debug(sprintf('retrieved %s surnames from Gramps role', scalar( @{ $surnames } ) ));
+  
   foreach my $surname ($surnames->@*) {
+    my $route = sprintf('/Harrypedia/people/%s', $surname);
+    
     $self->logger->debug(
       sprintf('Family Controller registering route for surname "%s"', $surname)
     );
-    $self->add_navigation_route(
-      sprintf('/Harrypedia/people/%s', $surname),
-      sprintf('%s Family',             $surname),
-      { order => 20 }
+    
+    # Register the router route
+    $router->add(
+      $route,
+      {
+        to => async sub ($self, $ctx, @args) {
+          return await $self->family_page($ctx, $surname);
+        },
+        action => 'http.*',
+      }
     );
+    
+    # Add to navigation
+    $self->add_navigation_route($route, sprintf('%s Family', $surname), { order => 20 });
   }
 }
 
@@ -46,8 +57,14 @@ async sub family_page ($self, $ctx, $surname) {
   else {
     $family_members = await $self->get_people_by_surname($surname);
   }
-
-  return 'Family not found' unless @$family_members;
+  
+  if(@$family_members){
+    $self->logger->debug(sprintf('family with surname "%s" has %s members.', $surname, scalar(@$family_members)));
+  }
+  else {
+    $self->logger->warn(sprintf('family with surname "%s" has no members.', $surname));
+    return;
+  }
 
   # Build family tree
   my $family_tree = $self->build_family_tree($family_members);

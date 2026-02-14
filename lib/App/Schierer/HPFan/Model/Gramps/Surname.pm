@@ -1,6 +1,7 @@
 use v5.42;
 use utf8::all;
 use experimental qw(class);
+# cspell: disable
 
 class App::Schierer::HPFan::Model::Gramps::Surname :
   isa(App::Schierer::HPFan::Model::Base) {

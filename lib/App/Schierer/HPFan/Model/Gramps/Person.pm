@@ -4,6 +4,8 @@ use experimental qw(class);
 require App::Schierer::HPFan::Model::Gramps::Event::Reference;
 require App::Schierer::HPFan::Model::Gramps::Name;
 
+# cspell: disable
+
 class App::Schierer::HPFan::Model::Gramps::Person :
   isa( App::Schierer::HPFan::Model::Base) {
   use Carp;
@@ -164,6 +166,7 @@ class App::Schierer::HPFan::Model::Gramps::Person :
     if ($first =~ /Unknown/) {
       $first = $gramps_id;
     }
+
     my $formatted = sprintf('%s %s/%s %s',
       $last->prefix  ? $last->prefix  : '',
       $last->surname ? $last->surname : 'Unknown',

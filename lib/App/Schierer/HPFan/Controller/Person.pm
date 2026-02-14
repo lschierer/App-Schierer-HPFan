@@ -27,7 +27,7 @@ sub build ($self) {
   $self->register_routes($self->router);
 }
 
-async sub register_routes ($self, $router) {
+sub register_routes ($self, $router) {
   # Register specific routes for each person in Gramps
   my $people = $self->gramps->people;
   
@@ -117,6 +117,16 @@ sub prepare_family_as_parent ($self, $family, $person) {
     }
     : undef;
 
+  # Find marriage event
+  my $marriage_date;
+  my $events = $self->gramps->find_events_for_family($family);
+  for my $event (@$events) {
+    if ($event->type && $event->type eq 'Marriage' && $event->date) {
+      $marriage_date = $event->date->to_string;
+      last;
+    }
+  }
+
   my @children;
   for my $child_ref (@{ $family->child_ref_list // [] }) {
     my $child_obj = $self->gramps->find_person_by_handle($child_ref->ref);
@@ -130,9 +140,10 @@ sub prepare_family_as_parent ($self, $family, $person) {
   }
 
   return {
-    spouse   => $spouse,
-    children => \@children,
-    type     => $family->type // 'Unknown',
+    spouse        => $spouse,
+    marriage_date => $marriage_date,
+    children      => \@children,
+    type          => $family->type // 'Unknown',
   };
 }
 
