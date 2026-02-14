@@ -14,6 +14,7 @@ Charm
 
 ## Found in
 
-Primary Cannon : citation needed.
-
-Secondary Cannon : citation needed.
+Primary Cannon 
+: citation needed.
+Secondary Cannon 
+: citation needed.

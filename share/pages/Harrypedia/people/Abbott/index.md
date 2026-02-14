@@ -15,7 +15,7 @@ directly.[^211004-13] We then hear that she is pulled from school because her
 mother is killed in an attack by either [Riddle] or his Death
 Eaters.[^211004-14] Lastly, we know she fought in the last battle.[^211004-15]
 
-[Hannah]: ./Hannah
+[Hannah]: ./Abbott/Hannah
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
 [Class_and_Blood]: /Harrypedia/culture/Class_and_Blood
 [Harry]: </Harrypedia/people/Potter/Harry James>

@@ -15,7 +15,7 @@ _that student's_. The trophy case did not contain the various medals the guys on
 my wrestling team won at tournaments, nor did it contain the ones I got at
 science fairs.
 
-[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>/
+[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
 
 [^20210520-1]:
     FMPtrumpets.

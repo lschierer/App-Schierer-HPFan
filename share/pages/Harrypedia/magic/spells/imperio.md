@@ -37,14 +37,16 @@ term, and the various descriptions of fighting off the curse.
 
 ## Found in
 
-Primary Cannon : Mrs. J. K. Rowling.
-_[Harry Potter and the Goblet of Fire](https://www.librarything.com/work/113/book/203684953)_
-Kindle Location 3217. Pottermore Limited. American Kindle Edition.
+Primary Cannon 
+: Mrs. J. K. Rowling.
+  _[Harry Potter and the Goblet of Fire](https://www.librarything.com/work/113/book/203684953)_
+  Kindle Location 3217. Pottermore Limited. American Kindle Edition.
 
-Secondary Cannon : Old Crow.
-_[An Inconvenient Truth](https://www.fanfiction.net/s/5084287)_
-[Chapter 8](https://www.fanfiction.net/s/5084287/8/An-Inconvenient-Truth)
-Updated 2016-06-22. Published: 2009-05-24.
+Fan Fiction
+: Old Crow.
+  _[An Inconvenient Truth](https://www.fanfiction.net/s/5084287)_
+  [Chapter 8](https://www.fanfiction.net/s/5084287/8/An-Inconvenient-Truth)
+  Updated 2016-06-22. Published: 2009-05-24.
 
 [^220924-1]:
     Old Crow. _[An Inconvenient Truth](https://www.fanfiction.net/s/5084287)_

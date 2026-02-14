@@ -41,7 +41,7 @@ it looks fairly harsh, as noted in _[Discovering the Truth]_, it possible that [
     _[Discovering the Truth]_
     Last Updated: 2019-05-22. Last Viewed: 2021-05-13.
 
-[Discovering the Truth]: <https://www.wattpad.com/story/51615824-discovering-the-truth-harry-potter>    
+[Discovering the Truth]: https://www.wattpad.com/story/51615824-discovering-the-truth-harry-potter    
 
 [^20210513-1]:
     Mrs. J. K. Rowling.

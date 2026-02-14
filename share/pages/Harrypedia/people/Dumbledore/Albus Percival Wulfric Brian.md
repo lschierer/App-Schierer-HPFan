@@ -448,28 +448,25 @@ The quotes attributed to the Oracle of Delphi in
 _[The Greater Will](https://archiveofourown.org/works/16234799)_ put it
 well:[^200720-1]
 
+<!-- cspell: disable -->
+
 > “Power is always useless when it is just possessed, merely collected like a
 > bauble. The honors were meant for a protector. One must wonder
->
-> <!-- cspell: disable-line --> how you ended up with them.”[^200720-6]
+> how you ended up with them.”[^200720-6]
 
 > “Mimicry may be the highest form of flattery,” she replied pointedly, “but
 > mockery is just an insult. Goodness is not served by denying innocents their
 > rightful protections in order to advance your own agenda. Goodness is not
 > served by denying justice to those who have been wronged in order to purchase
-> personal favors to be named at a later <!-- cspell: disable-line --> date.
-> Goodness is not served when knowledge is hidden and innovation stifled in
-> order to preserve the oppression which allows you to keep ahold
+> personal favors to be named at a later date. Goodness is not served when knowledge is hidden and innovation stifled in
+> order to preserve the oppression which allows you to keep a hold
+> of all your worthless titles and stolen honors.
 >
-> <!-- cspell: disable-line --> of all your worthless titles and stolen honors.
->
-> You are not a good man, <!-- cspell: disable-line --> Albus, warlock of
-> Britannia.”[^200720-7]
+> You are not a good man, Albus, warlock of Britannia.”[^200720-7]
 
 > “Warlock fits you better than you know,” she stated in echoing tones. “The
 > wizards of Britannia claimed it as a martial title for honoring feats of
-> battle, but it has a far older meaning to Mother <!-- cspell: disable-line -->
-> Magic, as a title for those who had forsaken their oaths of fidelity and
+> battle, but it has a far older meaning to Mother Magic, as a title for those who had forsaken their oaths of fidelity and
 > protection, just as you have done.” She sliced her hands through the air as he
 > opened his mouth to refute that accusation. “You will not attempt to spin your
 > inaction as anything but a betrayal. A false show of humility is not a valid
@@ -478,6 +475,8 @@ well:[^200720-1]
 > personal desires. If you truly did not believe you could be trusted with the
 > power imbued in the roles, you should have passed them to another who
 > could.”[^200720-8]
+
+<!-- cspell: enable -->
 
 Interestingly, Wikipedia confirms that "Warlock" does in fact imply both male
 magic user and betrayer.[^200720-2] This contrasts interestingly with
@@ -751,6 +750,6 @@ his public face at all related to his private goals?
 <!-- cspell: enable -->
 
 [ADdwr]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/Dealing with Riddle>
-[ADtoh]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/treatment_of_harry>
-[ADmm]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/manipulator>
-[ADi]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/inaction>
+[ADtoh]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/treatment_of_Harry>
+[ADmm]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/Manipulator>
+[ADi]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/Inaction>

@@ -73,18 +73,18 @@ its own accord.[^200806-5] Naturally eleven year old [Riddle] knows nothing of
 wand lore and so is not deciding this, yet still, the wand must sense something
 of the wizard it is bonding with…
 
-[Harry]: </Harrypedia/people/Potter/Harry James/>/
-[Fleur]: </Harrypedia/people/Delacour/Fleur Isabelle/>/
-[James Potter]: /Harrypedia/people/Potter/James/
-[Umbridge]: </Harrypedia/people/Umbridge/Dolores Jane/>
-[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>/
-[ww]: <https://www.wizardingworld.com> "WizardingWorld Potter wiki article on Wand Wood"
-[size and flexibility]: <https://www.rowlingindex.org/work/wlfpm/> "WizardingWorld article on Wand length"
-[the article on cores]: <https://www.rowlingindex.org/work/wcpm> "WizardingWorld article on Wand Cores"
+[Harry]: </Harrypedia/people/Potter/Harry James>
+[Fleur]: </Harrypedia/people/Delacour/Fleur Isabelle>
+[James Potter]: /Harrypedia/people/Potter/James
+[Umbridge]: </Harrypedia/people/Umbridge/Dolores Jane>
+[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
+[ww]: https://www.wizardingworld.com "WizardingWorld Potter wiki article on Wand Wood"
+[size and flexibility]: https://www.rowlingindex.org/work/wlfpm/ "WizardingWorld article on Wand length"
+[the article on cores]: https://www.rowlingindex.org/work/wcpm "WizardingWorld article on Wand Cores"
 [20210511-9]: https://harrypotter.fandom.com/wiki/Wand_wood
-[Wand Woods]: <https://www.rowlingindex.org/work/wwpm/> "Harry Potter wiki article on Wand Wood"
-[Wand Lengths & Flexibility]: <https://www.rowlingindex.org/work/wlfpm/>  "WizardingWorld article on Wand length"
-[Wand Cores]: <https://www.rowlingindex.org/work/wcpm/>  "WizardingWorld article on Wand length"
+[Wand Woods]: https://www.rowlingindex.org/work/wwpm/ "Harry Potter wiki article on Wand Wood"
+[Wand Lengths & Flexibility]: https://www.rowlingindex.org/work/wlfpm/  "WizardingWorld article on Wand length"
+[Wand Cores]: https://www.rowlingindex.org/work/wcpm/  "WizardingWorld article on Wand length"
 
 [^210512-1]:
     Mrs. J. K. Rowling. _Harry Potter and the Sorcerer's Stone_ p. 82.

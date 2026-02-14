@@ -198,7 +198,7 @@ Each trait has:
     _[Miranda Goshawk's Book of Spells](https://archive.org/details/0_20211019/)_ 2013.
     Page 66.
 
-[Raczidian]: /Harrypedia/people/Raczidian
+[Raczidian]: /Harrypedia/people/Unknown/Raczidian
 [source works]: </Fan Fiction/Harry_Potter_-_Nephilim/Introduction>
 [Many Waters]: https://wikipedia.org/wiki/Many_Waters
 [AA]: <./Points of Divergence>

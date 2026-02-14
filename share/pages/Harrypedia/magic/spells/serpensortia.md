@@ -46,15 +46,15 @@ truly addresses Mr. Hycrest's objections above.
 
 ## Found in
 
-Primary Cannon : citation needed.
+Primary Cannon 
+: citation needed.
 
-Secondary Cannon : [magicscrapbook](https://magicscrapbook.tumblr.com/)
+Secondary Cannon 
+: [magicscrapbook](https://magicscrapbook.tumblr.com/)
+  "[‘Book of Spells’ transcript](https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript)"
+  Last Viewed 2021-09-30.
 
-<!-- cspell: disable-line -->
-
-"[‘Book of Spells’ transcript](https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript)"
-Last Viewed 2021-09-30.
-
-Fan Fiction : Ian Hycrest.
-_[Harry Potter and the Hands of Justice](https://www.fanfiction.net/s/13374289)_
-Published: 2019-08-27. Updated: 2020-01-14. Last Viewed: 2021-06-29.
+Fan Fiction 
+: Ian Hycrest.
+  _[Harry Potter and the Hands of Justice](https://www.fanfiction.net/s/13374289)_
+  Published: 2019-08-27. Updated: 2020-01-14. Last Viewed: 2021-06-29.

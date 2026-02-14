@@ -15,7 +15,7 @@ and because she does not put the children in birth order on any given line, but
 if you work your way through it, once [Phineus Nigellus] inherited, then the his
 son [Sirius II] was heir. [Sirius III], [Harry]'s Godfather, descends from that
 line. Assume that a godson cannot inherit - reasonable. Next in line would be
-[Arcturus I](Arcturus), who had no male children, but decedents of [Harfang
+[Arcturus I], who had no male children, but decedents of [Harfang
 Longbottom][Harfang] are unlisted, that might include [Neville]. Secondly, since
 we know that [Sirius III] was not properly disinherited because he _does_
 inherit [Grimmauld Place], it is reasonable to suspect that [Cedrella] Black
@@ -48,17 +48,12 @@ gender. The dates for this line of speculation are in the [History] timeline.
 [Sirius II]: </Harrypedia/people/Black/Sirius II>
 [Weasley]: /Harrypedia/people/Weasley
 [Weasleys]: /Harrypedia/people/Weasley
+[Arcturus I]: ./Black/Arcturus
 
 On a side note, while it flies in the face of some of what I've written above,
-Tigerman has an interesting theory in his work [RuneMaster][RMff1]. He suggests
-
-<!-- cspell: disable-line --> that it is very odd that the portrait of Walburga
-
-Black should be so hard to curtain and cover the way it is, and that more magic
-must be at work than just the sticking charm.[^210527-1] While his sense of
+Tigerman has an interesting theory in his work [RuneMaster][RMff1]. He suggests that it is very odd that the portrait of Walburga Black should be so hard to curtain and cover the way it is, and that more magic must be at work than just the sticking charm.[^210527-1] While his sense of
 story timeline is bizarre, I do like this theory. [CmptrWz][CW1], in _[For Want
-of an Outfit][FWO1]_ used a <!-- cspell: disable-line --> different but equally
-magical mechanism to the same end in [Chapter 28][FWOC28-1].[^220627-1]
+of an Outfit][FWO1]_ used a different but equally magical mechanism to the same end in [Chapter 28][FWOC28-1].[^220627-1]
 
 [CW1]: https://archiveofourown.org/users/CmptrWz/pseuds/CmptrWz
 [FWO1]: https://archiveofourown.org/works/28507302/
@@ -71,9 +66,6 @@ magical mechanism to the same end in [Chapter 28][FWOC28-1].[^220627-1]
     Published: 2021-01-02. Updated: 2022-06-20. Last Viewed: 2022-06-27.
 
 [^210527-1]: Tigerman. _[RuneMaster](https://www.fanfiction.net/s/5077573)_
-
-    <!-- cspell: disable-line -->
-
     [Chapter 4](https://www.fanfiction.net/s/5077573/4/RuneMaster) Published:
     2009-05-29. Updated: 2009-12-30. Last Viewed: 2021-05-27.
 

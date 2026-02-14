@@ -38,17 +38,15 @@ vow).[^220726-8]
 
 ## Found in
 
-<dl>
+Primary Cannon
+: Mrs. J. K. Rowling.
+  _[Harry Potter and the Half-Blood Prince](https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince)_
+  Pages 31,271.
+  © 2005 Pottermore Publishing. American Kindle Edition.
 
-<dt>Primary Cannon</dt>
-<dd>Mrs. J. K. Rowling.
-    _[Harry Potter and the Half-Blood Prince](https://www.goodreads.com/book/show/1.Harry_Potter_and_the_Half_Blood_Prince)_
-    Pages 31,271.
-    © 2005 Pottermore Publishing. American Kindle Edition.</dd>
+Secondary Cannon
+: [Harry Potter Wiki](https://harrypotter.fandom.com/)
+  "[Unbreakable Vow](https://harrypotter.fandom.com/wiki/Unbreakable_Vow)"
+  Last Edited: 2022-04-10. Last Viewed: 2022-07-26.
 
-    <dt>Secondary Cannon</dt>
 
-<dd>[Harry Potter Wiki](https://harrypotter.fandom.com/)
-    "[Unbreakable Vow](https://harrypotter.fandom.com/wiki/Unbreakable_Vow)"
-    Last Edited: 2022-04-10. Last Viewed: 2022-07-26.</dd>
-</dl>

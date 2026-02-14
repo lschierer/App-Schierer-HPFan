@@ -16,4 +16,4 @@ baptism would be nearly unopposed, because these beings have so little
 ability to freely choose to do anything, and even less ability to understand
 something is gravely wrong.
 
-[records]: ../backstory/Giants
+[records]: ../../backstory/Giants

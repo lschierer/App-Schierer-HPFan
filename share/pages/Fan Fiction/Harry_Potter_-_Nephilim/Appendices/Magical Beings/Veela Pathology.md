@@ -177,7 +177,7 @@ hormone levels to that lack of mental maturity would imply). This is why
 [Fleur]'s classmates dislike her so much - people tend to expect someone who
 appears older to behave older. They remember the brat.
 
-[Nephilim Inheritance]: ./Inheritance
+[Nephilim Inheritance]: ../Inheritance
 
 ### Magical Abilities
 
@@ -222,15 +222,15 @@ parent was.
 
 The "half-veela" is more complicated to assess, as she may have inherited some degree of magical ability from her nephil father, and these abilities are *not* restricted by the pathology inherited from her mother.  The "half-veela" will in herself, and in her descendants, effectively have two magical inheritances each of which has a unique probability of being inherited by any daughter. 
 
-[Appendix A]: <./Points of Divergence>
-[Rules of Magic]: <./Rules of Magic>
-[Magical Beings]: <./Magical Beings>
-[Relative Power Levels]: <./Relative Power Levels>
-[Life Expectancy]: <./Life Expectancy>
-[Appendix G]: ./Appendix_G
-[Appendix H]: ./Appendix_H
+[Appendix A]: <../Points of Divergence>
+[Rules of Magic]: <../Rules of Magic>
+[Magical Beings]: <../Magical Beings>
+[Relative Power Levels]: <../Relative Power Levels>
+[Life Expectancy]: <../Life Expectancy>
+[Appendix G]: ../Appendix_G
+[Appendix H]: ../Appendix_H
 [Appendix I]: <./Veela Pathology>
-[the backstory]: ../backstory/The_Veela
+[the backstory]: ../../backstory/The_Veela
 
 [^210916-1]: Like in _[Maskirovat][knffnm]_. <!-- cspell: disable-line -->
 

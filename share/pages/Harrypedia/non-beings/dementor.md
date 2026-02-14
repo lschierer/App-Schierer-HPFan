@@ -13,7 +13,7 @@ following orders to some degree.[^211021-2]
 
 [Fudge]: </Harrypedia/people/Fudge/Cornelius Oswald/>
 
-[Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/>/
+[Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
 
 ### Inconsistencies
 

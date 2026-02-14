@@ -131,9 +131,9 @@ that [Hermione] would inevitably do in such a situation would _certainly_
 uncover that there was no escape for not just [Harry] and [Hermione], but also
 for [Ginny].
 
-[Ginny]: </Harrypedia/people/Weasley/Ginevra Molly/>/
-[Hermione]: </Harrypedia/people/Granger/Hermione Jean/>/
-[Harry]: </Harrypedia/people/Potter/Harry James/>/
+[Ginny]: </Harrypedia/people/Weasley/Ginevra Molly>
+[Hermione]: </Harrypedia/people/Granger/Hermione Jean>
+[Harry]: </Harrypedia/people/Potter/Harry James>
 [Umbridge]: </Harrypedia/people/Umbridge/Dolores Jane/>
 [Malfoy]: /Harrypedia/people/Malfoy/
 [Molly]: /Harrypedia/people/Prewett/Molly/

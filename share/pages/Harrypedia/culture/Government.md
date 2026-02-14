@@ -86,7 +86,7 @@ it contradicts the origin stories).
 [Mr. Malfoy]: </Harrypedia/people/Malfoy/Lucius Abraxas/>
 
 [Harry]: </Harrypedia/people/Potter/Harry James/>
-[Henry]: /Harrypedia/people/Potter/henry/
+[Henry]: /Harrypedia/people/Potter/Henry/
 [Sirius]: </Harrypedia/people/Black/Sirius III/>
 [Arthur]: /Harrypedia/people/Weasley/Arthur/
 [Linfred]: /Harrypedia/people/Potter/

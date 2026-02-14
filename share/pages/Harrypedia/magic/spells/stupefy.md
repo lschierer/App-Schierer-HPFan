@@ -16,7 +16,8 @@ Knock out spell, for both animals and people.
 
 ## Found in
 
-Primary Cannon : citation needed.
+Primary Cannon 
+: citation needed.
 
 Secondary Cannon : [magicscrapbook](https://magicscrapbook.tumblr.com/)
 

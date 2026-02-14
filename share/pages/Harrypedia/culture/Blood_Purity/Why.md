@@ -67,4 +67,4 @@ Stories like this include, but are not limited to:
   [Chapter 5](https://www.fanfiction.net/s/4257626/5/First-Steps).
 
 [Immigration]: /Harrypedia/culture/Immigration/
-[Condescension]: /Harrypedia/culture/Condissention/
+[Condescension]: /Harrypedia/culture/Condescension/

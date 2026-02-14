@@ -14,7 +14,7 @@ reflect that, generally female, author's personal idea of what is attractive in
 a male. Many of these are fairly unrealistic, especially when they place
 [Harry][] at something over six feet tall somewhere in his teens.
 
-[Harry]: </Harrypedia/people/Potter/Harry James/>/
+[Harry]: </Harrypedia/people/Potter/Harry James>
 
 Eventually this bugged me enough that I wanted to document the unrealistic
 nature of these descriptions, so I looked up a "growth chart."[^220622-1] This

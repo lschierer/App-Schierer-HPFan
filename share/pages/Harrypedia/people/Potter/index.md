@@ -6,7 +6,7 @@ author: Luke Schierer
 
 - The Potter family had [wealth][].
 
-[wealth]: ./wealth
+[wealth]: ./Potter/wealth
 
 ### speculation
 
@@ -27,9 +27,9 @@ author: Luke Schierer
     lighter coloured line, as we do between the two of them, indicates that more
     than one generation is passing between the names shown.
 
-[Harry]: </Harrypedia/people/Potter/Harry James/>
-[Ignotus]: /Harrypedia/people/Peverell/ignotus/
-[Iolanthe]: /Harrypedia/people/Peverell/Iolanthe/
+[Harry]: </Harrypedia/people/Potter/Harry James>
+[Ignotus]: /Harrypedia/people/Peverell/Ignotus
+[Iolanthe]: /Harrypedia/people/Peverell/Iolanthe
 
 [^241222-1]:
     I cannot find the original, not even in the [Internet Archive] but

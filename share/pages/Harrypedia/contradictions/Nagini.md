@@ -49,8 +49,8 @@ ultimately self-destruct due to its limited lifespan.
 [Animagus]: /Harrypedia/magic/
 [horcrux]: /Harrypedia/magic/dark/Horcruxes/
 
-[Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/>/
-[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>/
+[Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
+[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
 
 [^240326-2]:
     [Callie Ahlgrim](https://www.businessinsider.com/author/callie-ahlgrim)

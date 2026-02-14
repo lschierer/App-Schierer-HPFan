@@ -1,6 +1,7 @@
 ---
 collection: Harrypedia
-title: Reactions to Philosopher's Stone Chapter 2
+title: >-
+  Reactions to Philosopher's Stone Chapter 2
 author: Luke Schierer
 ---
 
@@ -42,9 +43,10 @@ author: Luke Schierer
 [Dursley]: /Harrypedia/people/Dursley/Vernon
 
 [^240424-2]:
-    see
-    [Comparing how old students are in UK and US](/Harrypedia/Hogwarts/comparative_class_ages)
+    see [Comparing how old students are in UK and US]
 
+
+[Comparing how old students are in UK and US]: </Harrypedia/Hogwarts/comparitive_class_ages>
 [Dudley]: /Harrypedia/people/Dursley/Dudley
 [Dursley]: /Harrypedia/people/Dursley
 [Petunia]: /Harrypedia/people/Evans/Petunia

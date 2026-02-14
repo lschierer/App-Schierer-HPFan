@@ -10,15 +10,17 @@ despite coming from a family with enough influence that her Aunt is head of the
 [Amelia][] a traditionalist even if she also believes in justice?[^210701-2] Or
 is [Amelia][] fairly broad minded?[^210701-3]
 
-[Susan]: susan/
-[Riddle]: <Riddle/Tom Marvolo/>
-[Amelia]: amelia_susan/
-[ClassLists]: /Harrypedia/Hogwarts/class_lists/
-[Culture]: ../culture/
+[Susan]: ./Bones/Susan
+[Riddle]: <./Riddle/Tom Marvolo>
+[Amelia]: <./Bones/Amelia Susan>
+[ClassLists]: </Harrypedia/Hogwarts/Class Lists>
+[Culture]: /Harrypedia/culture
+
+<!-- cspell: disable -->
 
 [^210701-3]:
     This view of [Amelia] is shown in Fibinaci's
-    _[Padfoot, Docteur <!-- cspell: disable-line --> D'amour](https://www.fanfiction.net/s/4510080)_.
+    _[Padfoot, Docteur D'amour](https://www.fanfiction.net/s/4510080)_.
 
 [^210701-2]:
     This idea puts [Susan] at odds with her [aunt][Amelia] in VonPelt's
@@ -33,10 +35,11 @@ is [Amelia][] fairly broad minded?[^210701-3]
     Mrs. J. K. Rowling. _Harry Potter and the Order of the Phoenix_ Locations
     0075-0076. Pottermore Limited © 2005. American Kindle Edition.
 
-<!-- cspell: disable-next-line -->
-
 [^210301-1]:
     Mrs. J. K. Rowling. "Barnes and Noble & Yahoo! chat with J.K. Rowling,
     barnesandnoble.com, 20 October, 2000"
     http://www.accio-quote.org/articles/2000/1000-livechat-barnesnoble.html Last
     Viewed 2021-03-01.
+
+<!-- cspell: enable -->
+

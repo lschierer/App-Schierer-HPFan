@@ -21,10 +21,13 @@ insert description
 
 ## Found in
 
-Primary Cannon : citation needed.
+Primary Cannon 
+: citation needed.
 
-Secondary Cannon : citation needed.
+Secondary Cannon 
+: citation needed.
 
-Tertiary Cannon : [Harry Potter Wiki](https://harrypotter.fandom.com/)
-"[Pimple Jinx](https://harrypotter.fandom.com/wiki/Pimple_Jinx)" Last Edited:
-2022-01-28.
+Tertiary Cannon 
+: [Harry Potter Wiki](https://harrypotter.fandom.com/)
+  "[Pimple Jinx](https://harrypotter.fandom.com/wiki/Pimple_Jinx)" Last Edited:
+  2022-01-28.

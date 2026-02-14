@@ -14,8 +14,8 @@ substantiated by the canonical works.
 
 [Lucius Malfoy]: </Harrypedia/people/Malfoy/Lucius Abraxas/>
 
-[Draco Malfoy]: </Harrypedia/people/Malfoy/Draco Lucius/>/
-[DLM1]: </Harrypedia/people/Malfoy/Draco Lucius/>/
+[Draco Malfoy]: </Harrypedia/people/Malfoy/Draco Lucius>
+[DLM1]: </Harrypedia/people/Malfoy/Draco Lucius>
 
 [^220719-1]:
     This may be a movie thing, and may not be supported by the written works.

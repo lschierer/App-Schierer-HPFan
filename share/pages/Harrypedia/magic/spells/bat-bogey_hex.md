@@ -15,13 +15,12 @@ more than just fly away.
 
 ## Found in
 
-Primary Cannon. : Mrs. J. K. Rowling.
-_[Harry Potter and the Goblet of Fire](https://www.goodreads.com/book/show/6.Harry_Potter_and_the_Goblet_of_Fire)_
-Kindle Location 4204. © 2003 Pottermore Limited. American Kindle Edition.
+Primary Cannon. 
+: Mrs. J. K. Rowling.
+  _[Harry Potter and the Goblet of Fire](https://www.goodreads.com/book/show/6.Harry_Potter_and_the_Goblet_of_Fire)_
+  Kindle Location 4204. © 2003 Pottermore Limited. American Kindle Edition.
 
-Secondary Cannon. : [magicscrapbook](https://magicscrapbook.tumblr.com/).
-
-<!-- cspell: disable-line -->
-
-"[‘Book of Spells’ transcript](https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript)"
-Last Viewed 2022-07-25
+Secondary Cannon
+: [magicscrapbook](https://magicscrapbook.tumblr.com/)
+  "[‘Book of Spells’ transcript](https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript)"
+  Last Viewed 2021-09-30.

@@ -16,6 +16,8 @@ torture the person
 
 ## Found in
 
-Primary Cannon : citation needed.
+Primary Cannon 
+: citation needed.
 
-Secondary Cannon : citation needed.
+Secondary Cannon 
+: citation needed.

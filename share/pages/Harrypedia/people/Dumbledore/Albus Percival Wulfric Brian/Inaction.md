@@ -55,7 +55,7 @@ Some fanfiction works that have built on this team:
 > teachers also neglected to think of how these events might have scarred
 > us.[^211102-1]
 
-[Dealing_with_Riddle]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/dealing_with_riddle>
+[Dealing_with_Riddle]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/Dealing with Riddle>
 [Grindelwald]: /Harrypedia/people/Grindelwald/Gellert
 [TMR1]: </Harrypedia/people/Riddle/Tom Marvolo>
 [HJP1]: </Harrypedia/people/Potter/Harry James>

@@ -268,4 +268,4 @@ level upon him? Much of this hinges on the [effects of Azkaban][].
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
 [SWM]: /Harrypedia/people/Snape/Severus/swm
 [Snape]: /Harrypedia/people/Snape/Severus
-[Walburga]: /Harrypedia/people/Black/Walburgax
+[Walburga]: /Harrypedia/people/Black/Walburga

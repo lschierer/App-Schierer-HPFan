@@ -12,7 +12,7 @@ the way into the common room.[^230210-1] Alternately, you can try to make the
 members of [Slytherin] less evil, less the villain of the story.[^230210-2] This
 varies from they are actually the good guys and everyone else is actually the
 bad guys, with hand-wavy explanations for how they ended up following
-[Riddle],[^230210-2] to stories where _the parents_ remain just as evil as
+[Riddle],[^230210-5] to stories where _the parents_ remain just as evil as
 cannon,[^230210-3] but the _children_ are not yet corrupted, and everything in
 between.
 
@@ -89,8 +89,6 @@ that quarter. [Riddle] would have no need of a revolution.
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean>
 [Goyle]: /Harrypedia/people/Goyle/Gregory
 
-[^230210-3]: I remember reading at least one example of this, but not where.
-
 [^230210-4]:
     Mrs. J. K. Rowling. Quoted at "[SORTING HAT SONGS]" on [MuggleNet]. Last
     Viewed: 2023-02-10.
@@ -106,3 +104,12 @@ that quarter. [Riddle] would have no need of a revolution.
 [^230210-2]:
     I have seen this done, but I don't have the particular works on hand as I
     write this.
+
+[^230210-3]:
+    I have seen this done, but I don't have the particular works on hand as I
+    write this.
+
+[^230210-5]:
+    I have seen this done, but I don't have the particular works on hand as I
+    write this.
+

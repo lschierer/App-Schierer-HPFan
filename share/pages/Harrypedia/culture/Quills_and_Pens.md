@@ -72,7 +72,7 @@ this line of thought; it is pure speculation.
 [parchment]: Parchment_and_Paper/
 [McGonagall]: /Harrypedia/people/McGonagall/Minerva/
 [Dip pen]: https://en.wikipedia.org/wiki/Dip_pen
-[Harry]: </Harrypedia/people/Potter/Harry James/>/
+[Harry]: </Harrypedia/people/Potter/Harry James>
 [Wikipedia]: https://en.wikipedia.org/
 [^231004-3]: See [wands]
 
