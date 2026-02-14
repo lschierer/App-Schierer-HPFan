@@ -9,6 +9,7 @@ use utf8::all;
 use Mooish::Base -standard;
 with 'WebFramework::Role::Logger';
 use GraphViz2;
+use URI::Escape qw(uri_escape_utf8);
 
 has gramps => (
   is       => 'ro',
@@ -34,6 +35,7 @@ sub generate_svg {
     },
     graph => {
       rankdir => 'BT',    # Bottom to Top - root person at bottom
+      charset => 'UTF-8',
     },
     node => {
       shape    => 'box',
@@ -56,6 +58,10 @@ sub generate_svg {
   # Generate SVG
   my $svg = '';
   $graph->run(driver => 'dot', format => 'svg', output_file => \$svg);
+
+  # GraphViz2 reads dot's output with :raw binmode, so $svg contains
+  # UTF-8 bytes that Perl doesn't recognise as characters yet.
+  utf8::decode($svg);
 
   # Post-process to remove GraphViz color formatting and add CSS classes
   $svg = $self->_clean_svg($svg);
@@ -135,7 +141,8 @@ sub _add_person_node {
 
   my $primary_name = $person->primary_name;
   my $display_name = 'Unknown';
-  my $url          = sprintf('/Harrypedia/people/%s', $person->name_as_link_path());
+  my $link_path = join('/', map { uri_escape_utf8($_) } split('/', $person->name_as_link_path()));
+  my $url       = sprintf('/Harrypedia/people/%s', $link_path);
 
   if ($primary_name) {
     my $given       = $primary_name->display// '';

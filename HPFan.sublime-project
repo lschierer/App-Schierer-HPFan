@@ -7,6 +7,16 @@
     ],
 
     "settings" : {
+        "syntax_override": {
+            "\\.md$": {
+                "syntax": "Packages/Markdown/Markdown.sublime-syntax",
+                "settings": {
+                    "tab_size": 2,
+                    "translate_tabs_to_spaces": true,
+                    "draw_white_space": "all"
+                }
+            },
+        },
         "linters": {
             "htmltidy": {
               "selector": "text.html"

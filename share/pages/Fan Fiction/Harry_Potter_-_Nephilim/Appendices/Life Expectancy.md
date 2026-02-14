@@ -117,5 +117,5 @@ This gives our central characters life expectancies as follows:
 
 \* Fleur is quarter-veela, see [The Veela Curse].
 
-[The Veela Curse]: <./Veela Pathology>
+[The Veela Curse]: <./Magical Beings/Veela Pathology>
 [Life Tables for the United States Social Security Area 1900-2100]: https://www.ssa.gov/oact/NOTES/pdf_studies/study120.pdf

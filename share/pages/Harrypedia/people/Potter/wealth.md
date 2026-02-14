@@ -91,7 +91,7 @@ forethought.[^210322-1]
 [Harry]: </Harrypedia/people/Potter/Harry James>
 [James]: /Harrypedia/people/Potter/James
 [Lestranges]: /Harrypedia/people/Lestrange
-[Linfred]: /Harrypedia/people/Stinchcombe/Linfred
+[Linfred]: </Harrypedia/people/of Stinchcombe/Linfred>
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
 [Sirius]: </Harrypedia/people/Black/Sirius III>
 

@@ -46,8 +46,8 @@ author: Luke Schierer
 - The description of the birthday presents. The [Dursleys] give [Harry] "gifts"
   just to drive home that he is not worthy of _actual_ presents.
 
-[chapter two]: <Chapter 02>
-[first chapter]: <Chapter 01>
+[chapter two]: <./Chapter 02>
+[first chapter]: <./Chapter 01>
 [Dursley]: /Harrypedia/people/Dursley/Vernon
 [Dudley]: /Harrypedia/people/Dursley/Dudley
 [Dursleys]: /Harrypedia/people/Dursley

@@ -138,4 +138,4 @@ state.
 [^241120-9]: this is normal for nephil, see [The Nephilim]
 
 [The Nephilim]: ../Appendices/Appendix_H
-[Appendix I]: <../Appendices/Veela Pathology>
+[Appendix I]: <../Appendices/Magical Beings/Veela Pathology>
