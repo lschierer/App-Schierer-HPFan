@@ -1,6 +1,6 @@
 # PAGI WebServer Framework Configuration
 
-# Stage: production, staging, production
+# Stage: localDev, staging, production
 stage: production
 
 modules:
@@ -28,8 +28,10 @@ typescript_dir: src/ts
 markdown_dir: share/pages
 # relative to the public directory
 
-# Pandoc modules to load
-pandoc_modules: []
 
 log_base: Schierer-HPFan
 site_url: hp-fan.schierer.org
+log_config:
+  default: INFO
+  'App::Schierer::HP-Fan': INFO
+  'WebFramework': WARN
