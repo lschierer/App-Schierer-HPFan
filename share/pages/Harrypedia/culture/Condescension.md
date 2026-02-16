@@ -19,7 +19,6 @@ is, in other ways it is not. There might be reasons for some of the traditions
 they have clung to, but like any people, some traditions are traditional simply
 because they _want to be different._[^220630-4]
 
-<!-- cspell: disable-next-line -->
 
 As an example of this, phoenixgirl26 in _[Observation][pgO1]_ has [Harry] adopt
 this attitude of superiority without question.[^220630-5] He then proceeds to
