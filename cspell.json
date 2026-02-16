@@ -4,7 +4,7 @@
   "language": "en-GB",
   "caseSensitive": true,
   "dictionaries": ["en-gb", "project-words", "user-words"],
-  "enabledLanguageIds": ["markdown", "plaintext"],
+  "enabledLanguageIds": ["markdown", "plaintext", "yaml"],
   "dictionaryDefinitions": [
     {
       "name": "project-words",
@@ -35,6 +35,12 @@
     }
   ],
   "overrides": [
+    {
+      "filename": "**/Bookmarks/**/*.yaml",
+      "ignoreRegExpList": [
+        "/^\\s*name:\\s*.*/gm"
+      ]
+    },
     {
       "filename": "**/Fan Fiction/Hope/**/*.md",
       "language": "en-GB,fr",
