@@ -12,7 +12,7 @@ relationship that the [Malfoy]s and [Crouch]es have with their respective elves.
 On the other hand, the relationship that [Harry] eventually forms with
 [Kreacher] shows a very different view of the situation. While it is easy to, as
 [Hermione] does, dismiss the [Hogwarts] elves as brainwashed victims who know no
-better, we come to know [Kreacher] more deaply. He _could_ still be a victim of
+better, we come to know [Kreacher] more deeply. He _could_ still be a victim of
 his own upbringing, of the many centuries he has lived as a slave, but his love
 for [Regulus], and the concern he comes to feel for [Harry] is certainly
 genuine.
@@ -28,7 +28,7 @@ explanations.
 One is that they are descendants of wild [Brownies] who are routinely tricked
 into magical contracts because wizarding law sees them as 1) wild manifestations
 of magic and not beings at all and 2) intruders into a wizard's home, and thus
-the contract a form of self defense.[^240219-3]
+the contract a form of self defence.[^240219-3]
 
 A second is that the elves get _something_ from the magic that enslaves
 them.[^240220-1] Perhaps it is nourishment, perhaps it is lifespan, perhaps it
@@ -42,7 +42,7 @@ undone. That we can mitigate the effects by treating the elves well, but that,
 due to the enchantment they are under, we cannot make the majority of them
 desire anything other than slavery. _They will seek slavery out_ not because
 they are brainwashed (that could be cured), but because they are magically
-compelled to do so. Just as the ability to inately throw off an [Imperius] curse
+compelled to do so. Just as the ability to innately throw off an [Imperius] curse
 is rare, so to is the ability for an elf to resist this compulsion. Here the
 solution to the situation is not societal, but _magical_, a counter-curse must
 be researched, developed, tested, and used. This is made harder because the

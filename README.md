@@ -23,6 +23,20 @@ everything necessary between the ```mise install``` and the
 * You will need [graphviz], which is used to generate some of the svg files.
 * You will need libxml2, which is used to parse the Gramps export.
 
+### Sublime Text Setup
+
+If using Sublime Text, symlink the project-specific plugin to enable YAML comment wrapping:
+
+```bash
+mkdir -p ~/Library/Application\ Support/Sublime\ Text/Packages/HPFan
+ln -sf "$(pwd)/.sublime/wrap_yaml_comment.py" ~/Library/Application\ Support/Sublime\ Text/Packages/HPFan/wrap_yaml_comment.py
+```
+
+Add to your Sublime keybindings:
+```json
+{ "keys": ["alt+q"], "command": "wrap_yaml_comment" }
+```
+
 ## COPYRIGHT AND LICENCE
 
 Copyright (C) 2003-2025 by Luke Schierer

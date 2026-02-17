@@ -1,4 +1,5 @@
 use v5.42.0;
+# cspell: disable
 use utf8::all;
 use lib 'lib';
 use lib '../PAGI-WebServer/lib';

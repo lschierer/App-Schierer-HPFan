@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// cspell: disable
 import * as cdk from "aws-cdk-lib/core";
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import path from 'path';
@@ -34,19 +35,16 @@ const mode = !process.env.MODE?.localeCompare("prod") ? "prod" : "dev";
 const region = process.env.REGION ?? "us-east-2";
 
 type EnvConfig = {
-  CidrRange: string;
   subdomain: string;
   instanceSize: ec2.InstanceSize;
 };
 
 const envConfigs: Record<string, EnvConfig> = {
   dev: {
-    CidrRange: '10.234.0.0/27',
     subdomain: 'dev',
     instanceSize: ec2.InstanceSize.MEDIUM,
   },
   prod: {
-    CidrRange: '10.235.0.0/27',
     subdomain: 'www',
     instanceSize: ec2.InstanceSize.MEDIUM,
   },
@@ -60,7 +58,6 @@ const props: ApplicationStackProps = {
     region,
   },
   mode,
-  CidrRange: config.CidrRange,
   prefix: "HPFan",
   appSubdomain: config.subdomain,
   domainName: "hp-fan.schierer.org",
