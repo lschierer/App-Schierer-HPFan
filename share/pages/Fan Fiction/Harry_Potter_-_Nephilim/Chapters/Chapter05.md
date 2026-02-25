@@ -4,13 +4,16 @@ author: Luke Schierer
 collection: Nephilim
 ---
 
+<!--- cSpell:ignore obliv-somethings -->
+<!--- cSpell:ignore obliv-something -->
+
 At first the changes were subtle, and because Harry and Dudley were in different
 classes for the first time, Harry at first thought that Dudley's absence was
 responsible for the changes at school. In prior years, the teacher would
 frequently notice something was off about that Potter child. The oversized
 clothing, the odd high pitched whisper of a voice, the way he flinched if anyone
 came too close would all normally attract a conscientious educator's attention.
-In that respect, this year started _almost_ the same way - during morning
+In that respect, this year started *almost* the same way - during morning
 attendance,[^210528-1] the teacher frowned and gave him an odd look, the kind
 that frequently meant a conversation after class, but then seamed to forget
 about him even faster than his other teachers had. She seamed never to notice
@@ -42,7 +45,7 @@ a good meal at school, because he was getting less and less at home as Vernon
 took out his anger by locking him up more and more.
 
 While Dudley was happy to pick on students from his own class during the day,
-the way home from school it was a different story. _Something_ about heading
+the way home from school it was a different story. *Something* about heading
 home inevitably reminded Dudley that he had not pounded on the Freak in a while.
 This lead to Harry Hunting. Since this had been one of Dudley's more consistent
 "games" for the past two years, Harry was already fairly familiar with the
@@ -61,12 +64,12 @@ Life thus settled into a pattern. Harry found that he could avoid Uncle Vernon
 more easily than he remembered being able to do even a few months ago, and Mrs.
 Figg seemed to have all but forgotten him entirely. Whatever was happening did
 not work nearly so well on Aunt Petunia or Dudley. It was clear that Aunt
-Petunia could not _see_ him unless he made a noise, but both she and Dudley
-_remembered_ him far more than Vernon or his teachers ever did. This was both
+Petunia could not *see* him unless he made a noise, but both she and Dudley
+*remembered* him far more than Vernon or his teachers ever did. This was both
 good and bad. On the plus side, Aunt Petunia usually remembered to unlock the
 cupboard in the mornings. On the down side, she remembered to give him chores,
 and follow up to see that they were completed. Harry was not lazy, it was not
-the _work_ he minded, but rather the results. She gave him so much to do that it
+the *work* he minded, but rather the results. She gave him so much to do that it
 was hard to find time to do his homework. Worse, if he did not get everything
 done, she would get upset, and her complaints were the one thing that would
 reliably cause Uncle Vernon to notice him. Overall, it was best when she didn't
@@ -84,17 +87,17 @@ weekly report to the man with the beard, Harry noticed that her reports were
 starting to resemble the fantasy stories that she told the other guy, the one
 with the girl's hair and too many teeth. He heard the man mention that the
 "obliv-somethings" would be making "their monthly visit because someone had
-complained about Harry's disgraceful clothing again." He wondered what an "obliv-something" was and figured that it (they?)
-had something to do with the way nothing had happened the one time he had tried
-making an anonymous call to the local ACPCs.[^210902-9] On one hand it was nice
-to know that someone had thought to complain about the way he was treated. On
-the other, it angered him that the bearded man was apparently not letting those
-complaints come to anything. Still, Harry figured it was better to know more
-than not; already habitually silent, he was now getting used to being invisible
-as well.
+complained about Harry's disgraceful clothing again." He wondered what an 
+"obliv-something" was and figured that it (they?) had something to do with the 
+way nothing had happened the one time he had tried making an anonymous call to 
+the local ACPCs.[^210902-9] On one hand it was nice to know that someone had 
+thought to complain about the way he was treated. On the other, it angered him 
+that the bearded man was apparently not letting those complaints come to 
+anything. Still, Harry figured it was better to know more than not; already 
+habitually silent, he was now getting used to being invisible as well.
 
 If only being invisible worked on Dudley. Unlike everyone else, (even Aunt
-Petunia) Dudley _consistently_ noticed when Harry was around.[^211219-3] Worse,
+Petunia) Dudley *consistently* noticed when Harry was around.[^211219-3] Worse,
 it was as if he had a sixth sense that helped him find Harry. The other boys in
 the gang were easy to avoid, the slightest excuse for a hiding space was enough
 for them to walk right past him. Dudley, however, would consistently focus on
@@ -102,13 +105,13 @@ the right route home, no matter how random Harry tried to be. Dudley seemed to
 know when Harry was home, versus when he stayed late at school. It was endlessly
 annoying that the one person who could consistently remember him hated him. With
 a great deal of very painful (when he did get caught) trial and error, Harry
-learned that while Dudley would _not_ forget about him, there _were_ limits to
+learned that while Dudley would *not* forget about him, there *were* limits to
 Dudley's inexplicable ability to find Harry.
 
 If Dudley knew where Harry was, and Harry stayed there, then Dudley could always
 find him. If Harry went somewhere Dudley expected Harry to go, Dudley could
 always find him. If, however, Harry went to a place that blocked Dudley's
-ability to see Harry, _and_ was not somewhere Dudley expected Harry to be, then
+ability to see Harry, *and* was not somewhere Dudley expected Harry to be, then
 and only then could Harry remain un-found. So hiding in the bushes in a park
 would work, but not if Harry did it frequently enough that Dudley started to
 expect Harry to go to the park. Ducking into stores would work, but not if
@@ -117,7 +120,7 @@ Dursley's home almost never worked, because Dudley knew that Harry did not dare
 arrive back after Vernon did, and so expected Harry to show up there eventually.
 Staying at school also almost never worked, because Dudley knew that Harry
 started out at school. Harry might not be in Dudley's line of sight on a
-particular pavement, but Dudley expected Harry to be on the way home _somewhere_
+particular pavement, but Dudley expected Harry to be on the way home *somewhere*
 and all pavements seemed to be sufficiently similar to count for
 Dudley-finding-Harry purposes. It became very important not just to use
 different places to hide each day, but to be sufficiently random about it that

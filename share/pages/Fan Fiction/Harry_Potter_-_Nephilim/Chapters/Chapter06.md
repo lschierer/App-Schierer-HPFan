@@ -17,7 +17,7 @@ October.
 
 The Dursleys were not a church going family, and even if they had been, they
 would not have brought "that Potter boy" with them (never mind that Vernon, as
-the consummate British bigot, would never have gone to a _Catholic_ church), so
+the consummate British bigot, would never have gone to a *Catholic* church), so
 Harry was not really familiar with churches. He quickly decided the outer room,
 separated from the outside world only by glass doors and entirely devoid of
 furniture, was entirely too open for his purposes, but there was a large inner
@@ -31,17 +31,17 @@ empty church open, and the small boy slip in. There was something odd about the
 boy, so odd that Fr. Patrick, normally a very observant man, wouldn't notice the
 oversized rags the boy was wearing that day at all. Whatever it was drew his eye
 to the boy, as his mind struggled to comprehend what it was he was seeing. Or
-not _seeing_ really, but that was the only word he could come up with.
-Definitely _perceiving_ at least. It was almost as if he were seeing the boy
+not *seeing* really, but that was the only word he could come up with.
+Definitely *perceiving* at least. It was almost as if he were seeing the boy
 through a pane of antique glass, or maybe as if the boy were under water… but
 neither of those was really the right description. Whatever it was, it was
-_distracting_, so much so that this first time that Harry hid in the Church Fr.
+*distracting*, so much so that this first time that Harry hid in the Church Fr.
 Patrick spent so much time puzzling over what it was he was or was not seeing
 that it only occurred to him that he ought to have gone up to the boy and
 actually investigated the matter much latter that night long after Harry had
 left. Thus it was that Harry never knew that he had not, in fact, successfully
 hidden that day, and that someone, for the first time in almost three months,
-had spontaneously _seen him._
+had spontaneously *seen him.*
 
 ---
 
@@ -55,6 +55,36 @@ free to do his homework for one of the first times ever. He was almost afraid to
 question it, almost superstitious that if he poked at it too deeply that the
 mysterious protection would evaporate and the Church would become just another
 building.
+
+Father Patrick was not consistently available any given afternoon - the life of a
+parish priest is a full and demanding one.  Still, the priest did habitually merge his
+daytime prayers[^260224-1] with quiet contemplation before the tabernacle in the often
+empty church.  His schedule was such that these daytime prayers were not always during 
+the after-school-before-dinner hours that Harry frequented the building. Still, it was often
+enough the distraction he experienced when Harry was around became a problem, and once
+he identified it that way, he found that there was even more to disturb him.  There was
+a child clearly hiding in his church; the child was dressed in ill-fitting cast-off clothing
+equally clearly intended for a much larger child.  Why was the child hiding? If the child
+was getting clothing from one of the local charities, why had none of the social workers
+helped get him more appropriately sized clothing?  If the clothing was provided by family,
+how was it that clothing from an apparently massively overweight child was available when a
+second (third? forth?) child was very very *not* massively overweight? Families, in his
+experience, rarely had such different builds in same-gendered children -- especially 
+coupled with that pinched, hungry look the child had.  He didn't want to spook the child,
+if he really is hiding, spooking him might mean he doesn't come back, and that might
+endanger the child.  But he was concerned.  So he started quietly making a few calls, 
+he did after all, know most of the locally charities and council social programs; in some
+cases he even knew the workers personally.  
+
+Several weeks later, Father Patrick found himself sitting in the church, his prayers again
+disturbed, not because the child had made any noise, for he never did, but for that same
+undefinable *something* that he *simply could not identify*.  Sitting there, unable to focus,
+Father Patrick knew that the time had come to try to talk to the mysterious boy. 
+
+
+[^260224-1]: Priests are obligated to participate in the [Divine Office], this is one of the 'hours'.
+
+[Divine Office]: <https://www.usccb.org/prayer-and-worship/liturgy-of-the-hours>
 
 [^220818-1]: I intentionally changing things here. See [FSSP][] for details.
 

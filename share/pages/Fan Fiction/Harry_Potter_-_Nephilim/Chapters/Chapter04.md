@@ -25,7 +25,7 @@ people whose memories he could _see_ were Aunt Petunia's, Dudley's, Mrs. Figg's
 and the random strange people who seemed to know him and disappear, like the
 tiny man in the violet top hat who had bowed to him once.[^210412-3] If he could
 only see memories from a handful of people, only three of whom he saw more than
-once, it made sense that he could not make memories … more memorable for most
+once, it made sense that he could not make memories … memorable for most
 people.
 
 Next he tried making the problem seem more memorable other ways. He tried making
@@ -96,9 +96,12 @@ achieve results that a trained legilimens might do in seconds. With practice
 Harry got better, faster, more adept, but in a real, though unseen, sense it was
 already too late.
 
-The nephilim are an unstable hybrid, and the abuse of their powers, no matter
-that Harry had no ill intent, comes at the cost of destabilising the very nature
-of their being. In times past, this destabilisation has taken many forms.
+The powers the nephilim inherit from the fallen angels that made them are inherently
+unstable, and, worse, have a destabilising effect on the very nature of the nephilim
+as a whole.  This is not uniformly nor universally true, but rather varies with both
+the type of magic and the intent of the magic in ways the nephilim refuse to acknowledge
+at all, and those few human researchers aware of them (primarily Church officials)
+have at best partial understanding of.  In times past, this destabilisation has taken many forms.
 Sometimes it has mutated the abusers physically, leading to the existence of
 centaurs and dwarfs. Other times changes that the abusers hoped to be temporary
 were made into permanent hereditary changes, such as what happened with the
