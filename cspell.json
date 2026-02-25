@@ -20,6 +20,11 @@
       "name": "hope-ignored-words",
       "path": "./share/pages/Fan Fiction/Hope/.cspell/ignored-words.txt",
       "addWords": true
+    },
+    {
+      "name": "family-inseparable-ignored-words",
+      "path": "./share/pages/Fan Fiction/Family Inseparable/.cspell/ignored-words.txt",
+      "addWords": true
     }
   ],  
   "ignorePaths": [
