@@ -167,7 +167,7 @@ Her feelings had not settled in the least when the old woman from around
 the corner who was normally willing to watch over the brat, good riddance,
 showed up at her door, asking about the whelp. Carry her groceries, she
 wanted. And then, when she was told Harry wasn't there any more, she had
-the gall to suggest her precious Duddikins help her out, like the freak
+the gall to suggest her precious Duddykins help her out, like the freak
 had done before. Well, Petunia would have none of that. Her precious had
 better things to do than help some pensioner to the store. This was his
 time to rest from school, the weekends. She wouldn't have her son taxed
