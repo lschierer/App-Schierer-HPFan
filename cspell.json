@@ -25,6 +25,11 @@
       "name": "family-inseparable-ignored-words",
       "path": "./share/pages/Fan Fiction/Family Inseparable/.cspell/ignored-words.txt",
       "addWords": true
+    },
+    {
+      "name": "not-normal-ignored-words",
+      "path": "./share/pages/Fan Fiction/Not Normal/.cspell/ignored-words.txt",
+      "addWords": true
     }
   ],  
   "ignorePaths": [
@@ -50,7 +55,17 @@
       "filename": "**/Fan Fiction/Hope/**/*.md",
       "language": "en-GB,fr",
       "dictionaries": ["en-gb", "fr-fr", "project-words", "user-words", "hope-ignored-words"]
-    }
+    },
+    {
+      "filename": "**/Fan Fiction/Family Inseparable/**/*.md",
+      "language": "en-GB,fr",
+      "dictionaries": ["en-gb", "project-words", "user-words", "family-inseparable-ignored-words"]
+    },
+    {
+      "filename": "**/Fan Fiction/Not Normal/**/*.md",
+      "language": "en-GB,fr",
+      "dictionaries": ["en-gb", "project-words", "user-words", "not-normal-ignored-words"]
+    },
   ],
   "import": ["@cspell/dict-fr-fr/cspell-ext.json"]
 }
