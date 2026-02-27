@@ -3,14 +3,6 @@ title: "History's Future"
 author: Radaslab
 ---
 
-# History's Future
-
-DISCLAIMER: That part of this world and those characters you've seen before belong to their Creator: JKR. The rest is mine - although I cannot quit my day job as I make no $$$
-
-A/N: This posting is two for the price of one. This is partly because this chapter ends in the middle of something and also because I'm now twenty chapters ahead.
-
-CHAPTER TWENTY-TWO: HISTORY'S FUTURE
-
 Saturday, June 26, 1993
 
 During the Time Compression Harry was able to spend time with the various families getting to know them as well. He did not spend all that much time with the Grangers seeing as he was about to spend a month or so with them in France. He was willing to, but Hermione and her parents suggested he used this time to get to know the others.
@@ -25,7 +17,7 @@ From Ginny, he also learned more about the Weasleys. Prior to Ginny joining them
 
 Harry and Ginny were walking hand in hand through the Fruit Gardens the final morning of Time Compression. Since the first day, the mornings had become family time for the other girls and in a way Harry did not mind. True, Hermione would be spending the next month or so with her parents, but so would all the others so this was their true Granger time. While the other three would see more of their families than would be the case during school, they would be spending far more time this summer away from them so this was their time as well. From Harry's perspective this time was good for two reasons.
 
-First, he knew Ginny needed to be with someone she trusted. This had become apparent her first night when the nighmares had driven her from her bed and her Elf had suggested joining the others. She spent very little time alone and even less if one did not count her morning shower and using the loo. She was not exactly clingy, but it was clear that the events of her First Year had seriously unnerved her and she needed to be with others. She needed acceptance. She needed to learn to be herself again. Harry and the others picked up on this (actually they did and told him) and as she was part of this family which meant they were going to help her sort through this as best they could.
+First, he knew Ginny needed to be with someone she trusted. This had become apparent her first night when the nightmares had driven her from her bed and her Elf had suggested joining the others. She spent very little time alone and even less if one did not count her morning shower and using the loo. She was not exactly clingy, but it was clear that the events of her First Year had seriously unnerved her and she needed to be with others. She needed acceptance. She needed to learn to be herself again. Harry and the others picked up on this (actually they did and told him) and as she was part of this family which meant they were going to help her sort through this as best they could.
 
 The other reason Harry had grown to like the mornings over the past few days was because Daphne's three younger sisters would not leave him alone. The youngest, Michelle, was too young to understand such things as boyfriends, but she clearly thought he was fascinating for some reason. Jenna and Cynthia seemed to think he was some kind of fairytale type and had turned their big sister into a princess and seemed to hope that magic would somehow rub off on them. Only Astoria seemed comparatively disinterested. Then again, this was only because she seemed tongue tied compared to her three younger sisters who would talk his ears off if they were allowed.
 
@@ -111,7 +103,7 @@ Harry nodded. "Earlier, you thanked me for being here," he began.
 
 "It would've been more difficult, but not impossible to get around or out of that contract," Harry said calmly. "The easiest way would've been to flee this country and hide until I was twenty-one and therefore untouchable that way. But that would be easier said than done. Where would I go, for example? I suppose with this trunk I could live okay, but I'd need someplace for it. Guess I could also hide out here until then. But what about the others? Can't trust Dumbledore not to have tried something unless they were here as well and if they're here what about their families? What about their educations? I can't take that away from them even if it's in my interests to do so. It' not right. We talked about that option and as tempting as it was, it's not right by them at all.
 
-"The other options would be the Honor Debt. Knowingly or not, your parents did attempt Line Theft and that can create a magical debt that would've allowed me to bind you to me as a concubine in payment of that debt. But, also that's easier said than done. If they both conceded the debt - which we couldn't count on before I talked with them - then I could call it in. If they did not, I'd have to get the Wizengamot to declare them as Line Thieves. With Dumbledore as Chief Warlock that would've been very, very difficult but not absolutely impossible. The problem is not so much that Dumbledore could prevent it, but that he could delay it and delay it giving him time to… well…"
+"The other options would be the Honour Debt. Knowingly or not, your parents did attempt Line Theft and that can create a magical debt that would've allowed me to bind you to me as a concubine in payment of that debt. But, also that's easier said than done. If they both conceded the debt - which we couldn't count on before I talked with them - then I could call it in. If they did not, I'd have to get the Wizengamot to declare them as Line Thieves. With Dumbledore as Chief Warlock that would've been very, very difficult but not absolutely impossible. The problem is not so much that Dumbledore could prevent it, but that he could delay it and delay it giving him time to… well…"
 
 "Have us potioned-up, shagging like bunnies, getting preggers and hitched before you could fix things?"
 
@@ -135,7 +127,7 @@ That afternoon, Harry gathered everyone in the main room or Great Hall of the Ma
 
 "What this occamacy?" Rose Granger asked.
 
-"It's occlumancy," Mary Tennyson said gently, "derived from the verb occlude. It is a technique that occludes or shields the mind from magical intrusion."
+"It's occlumency," Mary Tennyson said gently, "derived from the verb occlude. It is a technique that occludes or shields the mind from magical intrusion."
 
 "It is also a difficult art to master," George continued after a more in depth description. "Yet even the novice and those who for whatever reason cannot master it to its fullest extent can gain benefits from it - such as a better memory and greater ease in learning. But after talking with Harry and Luna, Mary and I now think that while you should continue with such studies, certain of the things you have learned and will learned cannot wait for you to - hopefully - master the art. There is certain information that has been revealed to you three," he said indicating Harry, Hermione and Luna, "that you know cannot become known to certain individuals…"
 

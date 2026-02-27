@@ -3,17 +3,9 @@ title: "Past Becomes Present"
 author: Radaslab
 ---
 
-# Past Becomes Present
-
-DISCLAIMER: That part of this world and those characters you've seen before belong to their Creator: JKR. The rest is mine - although I cannot quit my day job as I make no $$$
-
-A/N: Seems time flies so to get through this next bit, another two for the price of one…
-
-CHAPTER TWENTY-FIVE: PAST BECOMES PRESENT
-
 Saturday, July 31  st  1993
 
-If his life could become any less normal, Harry could not see how. He was standing in a bedroom in a cottage in the mountain valley that had been his parents' trunk. The Head Elf of these trunks had led them here as soon as the introductions were in order telling Harry that he was needed for there was something that needed to be done and he was the only person alive who could do it. What he saw could not be possible. Given what he had heard about his father both from Albert down at the farm and at Hogwarts, he thought this was a prank. But if it was, it was the cruelest prank ever and if it was not, well it had to be because the other possibilities were impossible.
+If his life could become any less normal, Harry could not see how. He was standing in a bedroom in a cottage in the mountain valley that had been his parents' trunk. The Head Elf of these trunks had led them here as soon as the introductions were in order telling Harry that he was needed for there was something that needed to be done and he was the only person alive who could do it. What he saw could not be possible. Given what he had heard about his father both from Albert down at the farm and at Hogwarts, he thought this was a prank. But if it was, it was the cruellest prank ever and if it was not, well it had to be because the other possibilities were impossible.
 
 The cottage was located high in the valley as far down the valley as one could go by road. It was in a meadow in the forest, for much of the valley and the mountain sides themselves were forest. There were meadows here and there from the lake down below to where the cottage was located. At the lake, there had been a four story building that Dobby explained was a guest house. It had thirty guest rooms on the upper three floors and lounges and a large dining room on the ground floor. There had been some small docks with boats - obviously for boating - and across the road from the lake was the Quidditch Pitch and what looked like a golf course at the edge of the Valley forest. From that guest house, the road followed the river up the valley. They would learn that this river dropped some two hundred and fifty meters in the seven miles from the head of the valley to the lake so it was mostly rapids and waterfalls. What everyone did agree upon was that the valley was very pretty and the river gave it a wilderness feel.
 
@@ -33,9 +25,9 @@ It was just Harry and the younger Albert. Albert had asked his ladies to remain 
 
 "Are they dead? They're not breathing…"
 
-"Not dead," Albert said. "Not alive either. They're in stasis. We were able to check them over. We found some… some things. But otherwise they don't seem to be injured in any way. Still, nothing we've done can revive them. We don't know why. And there's one other thing which we think is important," Albert added pointing to the nightstand nearest the young woman. "We can't touch it for some reason."
+"Not dead," Albert said. "Not alive either. They're in stasis. We were able to check them over. We found some… some things. But otherwise they don't seem to be injured in any way. Still, nothing we've done can revive them. We don't know why. And there's one other thing which we think is important," Albert added pointing to the night-stand nearest the young woman. "We can't touch it for some reason."
 
-Harry walked over cautiously. He was too stunned to truly react or even think about this. On the nightstand was an envelope and upon it was written:  Padfoot and/or Mooney. Harry picked it up.
+Harry walked over cautiously. He was too stunned to truly react or even think about this. On the night-stand was an envelope and upon it was written:  Padfoot and/or Mooney. Harry picked it up.
 
 "Interesting," Albert said. Harry turned and looked at the elf. "All these years… we all wondered what she had written. Perhaps it explains. But we could not touch it for some reason. Odd that you can, Sir. Perhaps the magic allows that? But as you can see, it is not addressed to you…"
 
@@ -203,7 +195,7 @@ Harry snorted. "Hagrid's idea of a good pet are a normal person's idea of a nigh
 
 "Well, mostly. We figured if anyone knew who the Heir of Slytherin was it'd be Malfoy. Also figured he'd never tell us a thing. But he'd tell a Slytherin. Ron and I changed into Crabbe and Goyle and Hermione was supposed to change into Bulstrode but…"
 
-"It was a cat hair," Hermione said. "Took if off her robes when there was that dueling club and we went at each other like… how was it put… common muggles. Already had the idea about tricking Malfoy, but it was a cat hair."
+"It was a cat hair," Hermione said. "Took if off her robes when there was that duelling club and we went at each other like… how was it put… common muggles. Already had the idea about tricking Malfoy, but it was a cat hair."
 
 "What happened?" Ginny asked.
 
@@ -287,7 +279,7 @@ The woman slumped. "Twelve years? But… but how?"
 
 "I think a proper introduction is in order before we get to involved in figuring out just what is going on," James Potter said.
 
-"Sorry," Harry said. "Still getting used to this polite stuff. It wasn't as if I had a proper upbringing," he added getting some chuckles from the girls. "I am Harry James Potter, born July 31st 1980 and supposedly orphaned October 31st, 1981. This is my bondmate and wife, the former Miss Hermione Granger. My other bondmate and wife, the former Miss Luna Lovegood. My other wife, the former Miss Daphne Greengrass. My wife and consort, Lady Hannah Abbott and last but not least, my betrothed Ginny, formerly Ginevra Weasley and now Virginia Potter."
+"Sorry," Harry said. "Still getting used to this polite stuff. It wasn't as if I had a proper upbringing," he added getting some chuckles from the girls. "I am Harry James Potter, born July 31st 1980 and supposedly orphaned October 31st, 1981. This is my bond-mate and wife, the former Miss Hermione Granger. My other bond-mate and wife, the former Miss Luna Lovegood. My other wife, the former Miss Daphne Greengrass. My wife and consort, Lady Hannah Abbott and last but not least, my betrothed Ginny, formerly Ginevra Weasley and now Virginia Potter."
 
 "Well, at least one thing went as hoped seeing as you were raised with Luna and Hermione," Lily began.
 
@@ -367,7 +359,7 @@ Over the course of dinner and into the evening, Harry and the others told the ol
 
 "Dumbledore gained a lot of political power when he defeated Grindelwald. He might have become Headmaster of Hogwarts in any event, but all he was politically was a leader in a minor fringe faction. He would never have been considered for the position of Chief Warlock or Supreme Mugwump of the I.C.W. had he not defeated Grindelwald. But that's yesterday's news and it's not like there're any other shining stars in his Liberal faction."
 
-"A cabal of kooks, my Daddy says," Luna added. "Then again, Daddy favors the Moderates."
+"A cabal of kooks, my Daddy says," Luna added. "Then again, Daddy favours the Moderates."
 
 "So, we have this One of the Prophecy seemingly destined to defeat Voldemort," Daphne continued. "Assuming there's any validity to it, only the One can do so. And Dumbledore knew all too well what kind of political capital that would have and both of the boys who best fit what he knew were from staunch Moderate families. So, maybe he thought that by controlling or even preventing the rise of the One, he could prevent loss of prestige to a rival faction. He might one day say that even though it was the One who struck the blow, without his guidance it would have been for naught. That's just a guess, but it makes more sense than planning for his own political demise."
 
@@ -525,9 +517,9 @@ This confused Luna for she certainly had. "What?"
 
 "And that's only because you and Sirius figured out how to copy your memories and play it over and over and over in a pensieve! It's my fault. I admit it. I showed these… boys… the wonders of the cinema, but could not for the life of me teach them taste."
 
-"In my defense, we only did that 'cause we had to go back to Hogwarts…"
+"In my defence, we only did that 'cause we had to go back to Hogwarts…"
 
-"And they were practically distraught the next summer when it was no longer in theaters! Didn't understand why Muggles would want to watch anything else."
+"And they were practically distraught the next summer when it was no longer in theatres! Didn't understand why Muggles would want to watch anything else."
 
 Hermione snorted.
 
@@ -537,7 +529,7 @@ Hermione snorted.
 
 "Um… what's that?" Lily and others asked.
 
-"A machine that lets you play pictures like that on the telly over and over again. I never saw that film in a theater. I've seen it goodness knows how many times. I admit it is funny in parts, clever in others. But I don't understand the need to see it several times a year, which my Dad insists is necessary. Then again, there was one bit he always sent me out of the room for. I finally saw it last summer."
+"A machine that lets you play pictures like that on the telly over and over again. I never saw that film in a theatre. I've seen it goodness knows how many times. I admit it is funny in parts, clever in others. But I don't understand the need to see it several times a year, which my Dad insists is necessary. Then again, there was one bit he always sent me out of the room for. I finally saw it last summer."
 
 "Which part was that?" James asked.
 

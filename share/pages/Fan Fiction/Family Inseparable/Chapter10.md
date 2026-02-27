@@ -1,6 +1,6 @@
 ---
 author:
-	- Luke Schierer
+  - Luke Schierer
 title: Chapter 10
 ---
 

@@ -1,7 +1,7 @@
 ---
 author:
-	- Musings of Apathy  
-	- Luke Schierer
+  - Musings of Apathy  
+  - Luke Schierer
 title: Chapter 9
 ---
 
