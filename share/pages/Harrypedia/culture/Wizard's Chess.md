@@ -1,6 +1,6 @@
 ---
 title: >-
-	Wizard's Chess
+  Wizard's Chess
 author: Luke Schierer
 collection: Harrypedia
 ---
