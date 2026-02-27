@@ -1,19 +1,17 @@
-/* cspell: disable */
 {
     "folders" : [
         { "path" : "." },
         { "path" : "./share/pages", "name" : "Pages" }
 
     ],
-
     "settings" : {
+        "draw_white_space": "all",
+                    "translate_tabs_to_spaces": true,
         "syntax_override": {
             "\\.md$": {
                 "syntax": "Packages/Markdown/Markdown.sublime-syntax",
                 "settings": {
                     "tab_size": 2,
-                    "translate_tabs_to_spaces": true,
-                    "draw_white_space": "all"
                 }
             },
         },
