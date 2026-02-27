@@ -7,7 +7,6 @@ use Mooish::Base -standard;
 extends 'WebFramework::Controller::Base';
 with 'App::Schierer::HPFan::Role::Gramps';
 
-
 use Future::AsyncAwait;
 use Path::Tiny;
 use Encode      qw(encode_utf8);
@@ -20,8 +19,6 @@ has template_file => (
   default => 'person/details.tt'
 );
 
-
-
 sub build ($self) {
   $self->ensure_ready();
   $self->register_routes($self->router);
@@ -30,15 +27,15 @@ sub build ($self) {
 sub register_routes ($self, $router) {
   # Register specific routes for each person in Gramps
   my $people = $self->gramps->people;
-  
+
   foreach my $person (values %$people) {
     my $route = sprintf('/Harrypedia/people/%s', $person->name_as_link_path);
-    
+
     $self->logger->debug(sprintf(
       'Person Controller registering route for "%s" at %s',
       $person->display_name, $route
     ));
-    
+
     # Register the route
     $router->add(
       $route,
@@ -49,7 +46,7 @@ sub register_routes ($self, $router) {
         action => 'http.*',
       }
     );
-    
+
     # Add to navigation
     $self->add_navigation_route($route, $person->display_name, { order => 21 });
   }
@@ -57,51 +54,51 @@ sub register_routes ($self, $router) {
 
 async sub person_page ($self, $ctx, $person) {
   my $path = $ctx->req->path;
-  
+
   $self->logger->info(sprintf(
     'Controller::Person rendering "%s" for request "%s"',
     $person->display_name, $path
   ));
-  
+
   # Check for static markdown content for this person
   my $static_content = '';
-  my $surname_obj = $person->primary_name->primary_surname;
-  my $surname = $surname_obj ? $surname_obj->surname : 'Unknown';
-  my $given_name = $person->primary_name->first_name // 'Unknown';
-  
+  my $surname_obj    = $person->primary_name->primary_surname;
+  my $surname        = $surname_obj ? $surname_obj->surname : 'Unknown';
+  my $given_name     = $person->primary_name->first_name // 'Unknown';
+
   # Build list of possible markdown filenames to try
   my @name_variants = ($given_name);
-  
+
   # If person has a suffix, also try given_name with suffix
   if ($person->primary_name && $person->primary_name->suffix) {
     my $person_suffix = $person->primary_name->suffix;
     push @name_variants, "$given_name $person_suffix";
   }
-  
+
   # Try all name variants for markdown file
   for my $name_variant (@name_variants) {
     next unless $name_variant;
-    my $person_md = $self->pages_dir->child(
-      "Harrypedia", "people", $surname, "$name_variant.md"
-    );
+    my $person_md = $self->pages_dir->child("Harrypedia", "people", $surname,
+      "$name_variant.md");
     if ($person_md->exists) {
       $static_content = $self->retrieve_rendered_markdown($person_md);
       last;
     }
   }
-  
+
   my $html;
   eval {
-    $html = $self->render_person_page_from_object($person, $static_content, $path);
+    $html =
+      $self->render_person_page_from_object($person, $static_content, $path);
   };
-  
+
   if ($@) {
     $self->logger->error("Error rendering person page: $@");
     return $self->render_error(500, "Internal Server Error: $@");
   }
-  
+
   return $html if $html;
-  
+
   # Shouldn't reach here, but just in case
   return $self->render_error(404, 'Person Not Found');
 }
@@ -259,8 +256,7 @@ sub render_person_page_from_object ($self, $person, $static_content,
     site_logo    => $self->site_logo(),
   };
 
-  $self->logger->debug(
-        "Rendering template with "
+  $self->logger->debug("Rendering template with "
       . scalar(@families)
       . " families and "
       . scalar(@childof)

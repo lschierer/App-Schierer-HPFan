@@ -17,7 +17,10 @@ sub build ($self) {
 
   # Load modules first
   $self->load_module('^App::Schierer::HPFan::Module::ClassLists');
-  say sprintf('logo file is "%s"', $self->app->config->{config}->{modules}->{"^WebFramework::Module::SiteLogo"}->{site_logo}) if $self->env eq 'development';
+  say sprintf('logo file is "%s"',
+    $self->app->config->{config}->{modules}
+      ->{"^WebFramework::Module::SiteLogo"}->{site_logo})
+    if $self->env eq 'development';
 
   # it appears that the top one wins?
   $self->load_controller('Family');
@@ -28,7 +31,7 @@ sub build ($self) {
   $self->load_controller('Root');
   $self->load_module(
     'Middleware' => {
-      Static => { root => 'public', pass_through => 1 },
+      Static          => { root  => 'public',       pass_through => 1 },
       GoogleAnalytics => { ga_id => 'G-9KF1R3YFTZ', env => $self->env },
     }
   );

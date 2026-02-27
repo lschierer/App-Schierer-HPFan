@@ -187,8 +187,8 @@ sub process_xhtml_file ($self, $file) {
   my $dom;
   my $ok = eval {
     $dom = XML::LibXML->load_html(
-      location => $file->stringify,
-      recover  => 1,
+      location        => $file->stringify,
+      recover         => 1,
       suppress_errors => 1,
     );
     1;

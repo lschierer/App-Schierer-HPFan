@@ -7,6 +7,7 @@ use Mooish::Base -standard;
 with 'App::Schierer::HPFan::Role::Gramps';
 with 'WebFramework::Role::Markdown';
 with 'App::Schierer::HPFan::Role::YAMLTables';
+with 'App::Schierer::HPFan::Role::CannonQuote';
 extends 'Thunderhorse::Controller';
 
 use Future::AsyncAwait;
@@ -31,7 +32,7 @@ has base_dir => (
 
 sub build ($self) {
   my $build_start = sprintf('build method for "%s"', __PACKAGE__);
-  $self->logger->info( $build_start);
+  $self->logger->info($build_start);
   my $tree   = $self->_build_Root_Tree;
   my @routes = sort keys %$tree;
 
@@ -46,23 +47,23 @@ sub build ($self) {
     elsif (defined($entry->{order})) {
       $self->add_navigation_route($route, $entry->{title},
         { order => $entry->{order} });
-      }
-      else {
-        $self->add_navigation_route($route, $entry->{title}, { order => 50 });
-      }
-
-      $self->router->add(
-        $route,
-        {
-          to => async sub ($c, $ctx) {
-            return await $self->page_handler($ctx, $route, $entry);
-          },
-          action => 'http.*',
-        }
-      );
+    }
+    else {
+      $self->add_navigation_route($route, $entry->{title}, { order => 50 });
     }
 
-    $self->logger->info("Registered " . scalar(@routes) . " static Root routes");
+    $self->router->add(
+      $route,
+      {
+        to => async sub ($c, $ctx) {
+          return await $self->page_handler($ctx, $route, $entry);
+        },
+        action => 'http.*',
+      }
+    );
+  }
+
+  $self->logger->info("Registered " . scalar(@routes) . " static Root routes");
 
   # Add catch-all route for directory gaps (AutoIndex)
   $self->router->add(
@@ -77,8 +78,10 @@ sub build ($self) {
 }
 
 async sub page_handler ($self, $ctx, $route, $entry) {
-  my $fm    = $self->parse_markdown_frontmatter($entry->{path});
-  my $title = $fm->{title};
+  my $fm       = $self->parse_markdown_frontmatter($entry->{path});
+  my $title    = $fm->{title};
+  my $template = $fm->{template} // 'markdown.tt';
+
   if (!$title) {
     my $path_for_title = $entry->{route};
     $path_for_title =~ s|^/||;
@@ -92,12 +95,35 @@ async sub page_handler ($self, $ctx, $route, $entry) {
   my $sidebar      = $fm->{layout} // 1;
   $sidebar = 0 if ($sidebar =~ /splash/);
 
-  if (Path::Tiny::path($entry->{path})->slurp_utf8 =~ /classlisttable/i)
-  {
+  my $raw_content      = Path::Tiny::path($entry->{path})->slurp_utf8;
+  my $has_classlist    = $raw_content =~ /classlisttable/i;
+  my $has_yamltable    = $raw_content =~ /yamltable/i;
+  my $has_cannon_quote = $raw_content =~ /cannon-quote/i;
+
+  my $vars = {};
+  $template =
+      exists $fm->{template}          ? $fm->{template}
+    : exists $fm->{template_override} ? $fm->{template_override}
+    :                                   $template;
+  $vars->{template_override} = $template;
+
+  if (exists $fm->{autoindex} && !!$fm->{autoindex}) {
+    my $autoindex =
+        $entry->{path}->is_dir
+      ? $self->generate_directory_index($entry->{path})
+      : $self->generate_directory_index($entry->{path}->parent);
+
+    push @{ $vars->{css_files} }, '/css/directory-list.css';
+    $vars->{entries} = $autoindex;
+  }
+
+  if ($has_classlist) {
     my $html = $self->retrieve_rendered_markdown($entry->{path});
     $html = await $self->render_classlist_tables($html);
+    $html = $self->process_cannon_quotes($html) if $has_cannon_quote;
 
-    my $vars = {
+    $vars = {
+      $vars->%*,
       content      => $html,
       title        => $title,
       current_year => $current_year,
@@ -106,38 +132,55 @@ async sub page_handler ($self, $ctx, $route, $entry) {
       nav_html     => $self->render_navigation($entry->{route}),
     };
 
-    return $self->template('markdown.tt', $vars);
+    return $self->template($template, $vars);
   }
 
-  if (Path::Tiny::path($entry->{path})->slurp_utf8 =~ /yamltable/i)
-  {
+  if ($has_yamltable) {
     my $html = $self->retrieve_rendered_markdown($entry->{path});
     $html = await $self->render_yaml_tables($html, $entry);
+    $html = $self->process_cannon_quotes($html) if $has_cannon_quote;
 
-    my $vars = {
+    $vars = {
+      $vars->%*,
       content      => $html,
       title        => $title,
       current_year => $current_year,
-      css_files    => ['/css/navigation.css','/css/yamltable.css'],
+      css_files    => ['/css/navigation.css', '/css/yamltable.css'],
       sidebar      => $sidebar,
       nav_html     => $self->render_navigation($entry->{route}),
     };
 
-    return $self->template('markdown.tt', $vars);
+    return $self->template($template, $vars);
   }
-  else {
 
-    return $self->render_markdown_page(
-      $entry->{path},
-      $entry->{route},
-      {
-        site_logo => $self->site_logo(),
-        title     => $title,
-        sidebar   => $sidebar,
-        nav_html  => $self->render_navigation($entry->{route}),
-      }
-    );
+  if ($has_cannon_quote) {
+    my $html = $self->retrieve_rendered_markdown($entry->{path});
+    $html = $self->process_cannon_quotes($html);
+
+    $vars = {
+      $vars->%*,
+      content      => $html,
+      title        => $title,
+      current_year => $current_year,
+      css_files    => ['/css/navigation.css', '/css/cannon-quote.css'],
+      sidebar      => $sidebar,
+      nav_html     => $self->render_navigation($entry->{route}),
+    };
+
+    return $self->template($template, $vars);
   }
+
+  return $self->render_markdown_page(
+    $entry->{path},
+    $entry->{route},
+    {
+      $vars->%*,
+      site_logo => $self->site_logo(),
+      title     => $title,
+      sidebar   => $sidebar,
+      nav_html  => $self->render_navigation($entry->{route}),
+    }
+  );
 
 }
 
@@ -151,7 +194,7 @@ sub handle_directory_gap ($self, $ctx) {
   if ( $dir_path->is_dir
     && $dir_path->children
     && !$dir_path->child('index.md')->exists) {
-      my $entries = $self->generate_directory_index($dir_path);
+    my $entries = $self->generate_directory_index($dir_path);
 
     # Generate title from path
     my $title = $path || 'Home';
@@ -166,7 +209,7 @@ sub handle_directory_gap ($self, $ctx) {
       entries      => $entries,
       title        => $title,
       current_year => $current_year,
-      css_files    => ['/css/navigation.css', '/css/directory-list.css', ],
+      css_files    => ['/css/navigation.css', '/css/directory-list.css',],
       sidebar      => 1,
       nav_html     => $navigation_html,
       site_logo    => $self->site_logo(),
@@ -191,28 +234,28 @@ sub _build_Root_Tree ($self) {
   my %tree;
 
   $self->logger->debug(sprintf('about to iterate over "%s"', $self->base_dir));
-    my $rule = Path::Iterator::Rule->new;
-    my $next = $rule->file->nonempty->name(qr/\.md/)->iter(
-      $self->base_dir,
-      {
-        depthfirst      => -1,
-        follow_symlinks =>  0,
-        report_symlinks =>  0,
-        sorted          =>  1,
-      }
-    );
-    while (defined(my $file = $next->())) {
-      $file = Path::Tiny::path($file);
-      $self->logger->debug( "Root Controller iterating over '$file'");
+  my $rule = Path::Iterator::Rule->new;
+  my $next = $rule->file->nonempty->name(qr/\.md/)->iter(
+    $self->base_dir,
+    {
+      depthfirst      => -1,
+      follow_symlinks =>  0,
+      report_symlinks =>  0,
+      sorted          =>  1,
+    }
+  );
+  while (defined(my $file = $next->())) {
+    $file = Path::Tiny::path($file);
+    $self->logger->debug("Root Controller iterating over '$file'");
 
     # Fast frontmatter parsing - only read first 20 lines
     my $fm = $self->parse_markdown_frontmatter($file->absolute);
     unless ($fm) {
-      $self->logger->warn( "No frontmatter available for '$file'");
+      $self->logger->warn("No frontmatter available for '$file'");
       next;
     }
     unless (ref($fm) eq 'HASH' && keys %$fm) {
-      $self->logger->warn( "Empty frontmatter for '$file'");
+      $self->logger->warn("Empty frontmatter for '$file'");
       next;
     }
     my $title = $fm->{title} // $file->basename(qr/.md/);
@@ -236,20 +279,27 @@ sub _build_Root_Tree ($self) {
       $route =~ s/\/index$//;
     }
 
-    if (exists $fm->{sidebar} && ref($fm->{sidebar}) && exists $fm->{sidebar}->{order}) {
-      $order = $fm->{sidebar}->{order};
-    }
-
     $tree{$route} = {
       title => $title,
       path  => $file,
       route => $route,
-      order => $order,
     };
-    $self->logger->debug(sprintf('Registering route "%s" for file "%s"', $route, $file));
-    }
-    return \%tree;
-  }
 
-  1;
+    if (ref($fm->{sidebar})) {
+      if (exists $fm->{sidebar}->{order}) {
+        $self->logger->debug(sprintf(
+          'found order %s for file "%s"',
+          $fm->{sidebar}->{order}, $file
+        ));
+        $tree{$route}->{order} = $fm->{sidebar}->{order};
+      }
+    }
+
+    $self->logger->debug(
+      sprintf('Registering route "%s" for file "%s"', $route, $file));
+  }
+  return \%tree;
+}
+
+1;
   __END__

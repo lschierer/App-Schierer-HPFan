@@ -36,7 +36,7 @@ has timeline_cache => (
 sub build ($self) {
   $self->ensure_ready();
   $self->register_routes($self->router);
-  
+
   # Start background timeline builder
   $self->start_timeline_builder();
 }
@@ -44,25 +44,28 @@ sub build ($self) {
 sub start_timeline_builder ($self) {
   # Fork a background process to build the timeline
   my $pid = fork();
-  
+
   if (!defined $pid) {
     $self->log(error => 'Failed to fork timeline builder');
     return;
   }
-  
+
   if ($pid == 0) {
     # Child process - build timeline and cache rendered output
     eval {
       $self->log(info => 'Background timeline builder started');
       my $events = $self->build_timeline_sync();
-      
+
       # Render the timeline
-      my $timeline_view = App::Schierer::HPFan::View::Timeline->new(events => $events);
-      my $svg = $timeline_view->create();
+      my $timeline_view =
+        App::Schierer::HPFan::View::Timeline->new(events => $events);
+      my $svg       = $timeline_view->create();
       my $footnotes = $timeline_view->footnotes();
-      
+
       # Cache the rendered output
-      $self->timeline_cache->set('rendered', { svg => $svg, footnotes => $footnotes }, '1 day');
+      $self->timeline_cache->set('rendered',
+        { svg => $svg, footnotes => $footnotes },
+        '1 day');
       $self->log(info => 'Timeline cache built successfully');
     };
     if ($@) {
@@ -70,7 +73,7 @@ sub start_timeline_builder ($self) {
     }
     exit(0);
   }
-  
+
   # Parent process continues
   $self->log(info => "Started timeline builder in background (PID: $pid)");
 }
@@ -93,29 +96,30 @@ sub register_routes ($self, $router) {
 }
 
 async sub timeline_page ($self, $ctx) {
-  my $current_path = $ctx->req->path;
+  my $current_path    = $ctx->req->path;
   my $navigation_html = $self->render_navigation($current_path);
-  my $current_year = (localtime)[5] + 1900;
-  
+  my $current_year    = (localtime)[5] + 1900;
+
   # Try to get cached rendered timeline first
   my $cached = $self->timeline_cache->get('rendered');
-  
+
   my ($svg, $footnotes, $timeline);
   if ($cached) {
     $self->log(debug => 'Cache hit - using cached rendered timeline');
-    $svg = $cached->{svg};
+    $svg       = $cached->{svg};
     $footnotes = $cached->{footnotes};
-    $timeline = [];  # Empty for template
-  } else {
+    $timeline  = [];                     # Empty for template
+  }
+  else {
     $self->log(info => 'Cache miss - building timeline on demand');
     $timeline = await $self->build_timeline();
-    $self->log(debug =>
-      sprintf('timeline_page retrieved %s events', scalar @$timeline));
+    $self->log(
+      debug => sprintf('timeline_page retrieved %s events', scalar @$timeline));
 
     # Create Timeline view
     my $timeline_view =
       App::Schierer::HPFan::View::Timeline->new(events => $timeline);
-    $svg = $timeline_view->create();
+    $svg       = $timeline_view->create();
     $footnotes = $timeline_view->footnotes();
   }
 
@@ -156,8 +160,8 @@ async sub build_timeline ($self) {
   $self->log(info => sprintf('Received %s events from Gramps', scalar @$ge));
   push @all_events, @$ge;
 
-  $self->log(info =>
-    sprintf('History timeline built: %d items', scalar @all_events));
+  $self->log(
+    info => sprintf('History timeline built: %d items', scalar @all_events));
 
   return \@all_events;
 }
@@ -183,8 +187,8 @@ sub build_timeline_sync ($self) {
   $self->log(info => sprintf('Received %s events from Gramps', scalar @$ge));
   push @all_events, @$ge;
 
-  $self->log(info =>
-    sprintf('History timeline built: %d items', scalar @all_events));
+  $self->log(
+    info => sprintf('History timeline built: %d items', scalar @all_events));
 
   return \@all_events;
 }

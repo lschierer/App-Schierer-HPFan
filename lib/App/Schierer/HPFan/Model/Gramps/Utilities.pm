@@ -13,7 +13,6 @@ package App::Schierer::HPFan::Model::Gramps::Utilities {
   our @EXPORT      = qw( event_role event_type );
   our %EXPORT_TAGS = (all_funcs => [@EXPORT]);
 
-
   sub event_role ($self, $roleNumber) {
     Readonly::Hash my %ROLE_MAP => (
       1  => 'Primary',

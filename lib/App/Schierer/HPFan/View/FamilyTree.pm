@@ -34,7 +34,7 @@ sub generate_svg {
       directed => 1,
     },
     graph => {
-      rankdir => 'BT',    # Bottom to Top - root person at bottom
+      rankdir => 'BT',      # Bottom to Top - root person at bottom
       charset => 'UTF-8',
     },
     node => {
@@ -141,13 +141,14 @@ sub _add_person_node {
 
   my $primary_name = $person->primary_name;
   my $display_name = 'Unknown';
-  my $link_path = join('/', map { uri_escape_utf8($_) } split('/', $person->name_as_link_path()));
-  my $url       = sprintf('/Harrypedia/people/%s', $link_path);
+  my $link_path    = join('/',
+    map { uri_escape_utf8($_) } split('/', $person->name_as_link_path()));
+  my $url = sprintf('/Harrypedia/people/%s', $link_path);
 
   if ($primary_name) {
-    my $given       = $primary_name->display// '';
+    my $given       = $primary_name->display // '';
     my $surname_obj = $primary_name->primary_surname;
-    my $surname     = $surname_obj ? $surname_obj->display_name: '';
+    my $surname     = $surname_obj ? $surname_obj->display_name : '';
 
  # Build display name - use "Unknown (ID)" format when surname but no given name
     if ($surname && !$given) {

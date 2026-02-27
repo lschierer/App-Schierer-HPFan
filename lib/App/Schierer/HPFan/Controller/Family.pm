@@ -20,15 +20,16 @@ sub build ($self) {
 
 sub register_routes ($self, $router) {
   my $surnames = $self->get_all_surnames->get;
-  $self->logger->debug(sprintf('retrieved %s surnames from Gramps role', scalar( @{ $surnames } ) ));
-  
+  $self->logger->debug(
+    sprintf('retrieved %s surnames from Gramps role', scalar(@{$surnames})));
+
   foreach my $surname ($surnames->@*) {
     my $route = sprintf('/Harrypedia/people/%s', $surname);
-    
+
     $self->logger->debug(
       sprintf('Family Controller registering route for surname "%s"', $surname)
     );
-    
+
     # Register the router route
     $router->add(
       $route,
@@ -39,9 +40,13 @@ sub register_routes ($self, $router) {
         action => 'http.*',
       }
     );
-    
+
     # Add to navigation
-    $self->add_navigation_route($route, sprintf('%s Family', $surname), { order => 20 });
+    $self->add_navigation_route(
+      $route,
+      sprintf('%s Family', $surname),
+      { order => 20 }
+    );
   }
 }
 
@@ -57,12 +62,16 @@ async sub family_page ($self, $ctx, $surname) {
   else {
     $family_members = await $self->get_people_by_surname($surname);
   }
-  
-  if(@$family_members){
-    $self->logger->debug(sprintf('family with surname "%s" has %s members.', $surname, scalar(@$family_members)));
+
+  if (@$family_members) {
+    $self->logger->debug(sprintf(
+      'family with surname "%s" has %s members.',
+      $surname, scalar(@$family_members)
+    ));
   }
   else {
-    $self->logger->warn(sprintf('family with surname "%s" has no members.', $surname));
+    $self->logger->warn(
+      sprintf('family with surname "%s" has no members.', $surname));
     return;
   }
 
@@ -77,12 +86,15 @@ async sub family_page ($self, $ctx, $surname) {
 
   # Check for static markdown content for this family
   my $static_content = '';
-  my $family_md = $self->pages_dir->child('Harrypedia', 'people', $surname, "index.md");
-  $family_md //= $self->pages_dir->child('Harrypedia', 'people', "${surname}.md");
+  my $family_md =
+    $self->pages_dir->child('Harrypedia', 'people', $surname, "index.md");
+  $family_md //=
+    $self->pages_dir->child('Harrypedia', 'people', "${surname}.md");
   if ($family_md->exists) {
     $self->logger->debug("found static content at '$family_md'");
     $static_content = $self->retrieve_rendered_markdown($family_md);
-  }else {
+  }
+  else {
     $self->logger->debug("no static content at '$family_md'");
   }
 

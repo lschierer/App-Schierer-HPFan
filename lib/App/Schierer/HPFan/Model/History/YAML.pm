@@ -105,7 +105,7 @@ class App::Schierer::HPFan::Model::History::YAML :
       if (++$count % 5 == 0) {
         await Future->done;
       }
-      
+
       # work around for UTF8 filenames not importing correctly by default.
       $file = Path::Tiny::path(Encode::decode('utf8', $file));
       $self->logger->debug(sprintf('%s importing %s', ref($self), $file));

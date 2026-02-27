@@ -49,7 +49,8 @@ sub _build_bookmarks_tree ($self) {
   }
 
   my @keys = sort keys %tree;
-  $self->log(debug => "Built bookmarks tree with " . scalar(@keys) . " entries");
+  $self->log(
+    debug => "Built bookmarks tree with " . scalar(@keys) . " entries");
 
   return \%tree;
 }
@@ -180,7 +181,8 @@ sub bookmark_index ($self, $ctx, $entry, $all_routes) {
 
     # This is a direct child
     my $entry_data = $tree->{$route};
-    my $type = $entry_data->{path}->basename eq 'index.yaml'
+    my $type =
+      $entry_data->{path}->basename eq 'index.yaml'
       ? 'directory'
       : 'file';
     push @child_entries,
