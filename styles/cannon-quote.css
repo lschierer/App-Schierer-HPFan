@@ -1,0 +1,20 @@
+/* Cannon Quote - "book within a book" styling inspired by The Princess Bride */
+
+.cannon-quote {
+  color: var(--spectrum-magenta-1100);
+  padding: 0.25rem 1rem;
+  margin: 0.25rem 0;
+}
+
+.cannon-quote p {
+  color: var(--spectrum-magenta-1100);
+}
+
+.cannon-quote em {
+  font-style: italic;
+}
+
+.cannon-quote strong {
+  font-weight: bold;
+  color: var(--spectrum-magenta-1200);
+}

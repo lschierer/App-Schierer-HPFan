@@ -1,0 +1,11 @@
+[% WRAPPER "Fan Fiction/req4help/layout.tt" %]
+   
+  <h2 class="spectrum-Heading spectrum-Heading--sizeXL" id="Harry-Potter-and-the-Request-for-Help">
+    [% title %]
+  </h2>
+  <p class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">By [% content.author || 'Luke Schierer' %]</p>
+  <hr class="spectrum-Divider spectrum-Divider--sizeM">
+  [% content %]
+
+  
+[% END %]

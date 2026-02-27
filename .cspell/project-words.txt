@@ -257,6 +257,8 @@ Krabbe
 Kreacher
 Kwick
 L'Engle
+year-olds
+Finch-Fletchley
 legilimency
 legilimens
 Lestrange
@@ -527,3 +529,5 @@ Mafalda
 Cleansweep
 floos
 obliviations
+Diggle
+Dedalus
