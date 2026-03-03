@@ -13,6 +13,8 @@ extends 'WebFramework::Controller::Base';
 use Future::AsyncAwait;
 require Path::Tiny;
 require Path::Iterator::Rule;
+require PAGI::App::File;
+
 
 has app_config => (
   is      => 'ro',
@@ -63,7 +65,43 @@ sub build ($self) {
     );
   }
 
-  $self->logger->info("Registered " . scalar(@routes) . " static Root routes");
+  my $static_count = 0;
+  my $extensions = qr/\.(?:pdf|epub|azw3)$/;
+  my $sarule = Path::Iterator::Rule->new->file->name( $extensions );
+  my $saiter = $sarule->iter( $self->base_dir);
+
+  my %mime_types = (
+    pdf  => 'application/pdf',
+    epub => 'application/epub+zip',
+    azw3 => 'application/vnd.amazon.ebook',
+  );
+
+  while ( defined( my $file = $saiter->() )) {
+    $file = Path::Tiny::path($file);
+    $static_count++;
+    my $path = $file->relative($self->base_dir);
+    my $route = sprintf('/%s', $path );
+    $route =~ s{//}{/};
+    my ($ext) = $file->basename =~ /\.([^.]+)$/;
+    my $mime = $mime_types{$ext} // 'application/octet-stream';
+    $self->logger->info("mime type for $file is $mime");
+    
+    my $no_sitemap = ($ext ne 'pdf');
+    $self->add_navigation_route($route, $path->basename( $extensions ), { order => 50, no_sitemap => $no_sitemap });
+    $self->router->add($route, 
+      {
+        to => sub ($c, $ctx) {
+          $ctx->res->content_type($mime);
+          $ctx->res->send_raw($file->slurp_raw);
+          return $ctx->res;
+        },
+        action => 'http.get',
+      }
+    );
+  }
+
+
+  $self->logger->info("Registered " . (scalar(@routes) + $static_count) . " Root routes");
 
   # Add catch-all route for directory gaps (AutoIndex)
   $self->router->add(
