@@ -8,7 +8,7 @@ with 'App::Schierer::HPFan::Role::Gramps';
 with 'WebFramework::Role::Markdown';
 with 'App::Schierer::HPFan::Role::YAMLTables';
 with 'App::Schierer::HPFan::Role::CannonQuote';
-extends 'Thunderhorse::Controller';
+extends 'WebFramework::Controller::Base';
 
 use Future::AsyncAwait;
 require Path::Tiny;
