@@ -6,8 +6,11 @@ author: Luke Schierer
 
 Mrs. Rowling insists that wizards wear robes.[^200723-4] The problem is that she
 claims that this is because Wizarding fashion is intentionally frozen in the
-17th century. This is a problem because while academics, clerics, and scholars
-wore robes in the 17th century, male fashion varied considerably for those in
+17th century. While academics, clerics, and scholars
+wore robes in the 17th century, these gowns were already quite varied, and rarely intended to be the sum total of one's clothing.  While many of these robes have their origins in the clerical dress, since students at a university would typically be admitted to *at least* [minor orders], some do date back further, and there are widespread traditions of wizards (like [Merlin]) wearing robes that clearly are *not* clerical in origin.  These wizarding robes, do not, however, *really* fit in with her explanation.  She specifically mentions that robes are prevalent because fashion froze *in the 17th century*, and **not** because [Merlin] (or any other historical figure) wore them.  The problem is, as I was alluding to, that the gowns seen in 17th-century British universities might have replaced a jacket, they certainly weren’t the entirety of a student’s uniform, despite what the supply list in the first book implies. One definitely wouldn't wear a robe as their sole item of clothing —- bar underpants —- as suggested by the [Snape’s Worst Memory] encounter [Harry] witnesses in the pensieve.  Worse, this is not just a problem of academic dress, apparently wizards wear robes *all the time,* -- again supposedly because of 17th century fashion.  
+
+
+Even if we dismiss the problems of robes as an academic fashion choice, 17th century male fashion varied considerably for those in
 other occupations. This is very much part of the era of doublets and
 hose.[^200723-5] Sometimes guys wore "over-gowns" other decades they did not.
 Sometimes the doublets were more or less "skirted." Some decades codpieces were
@@ -15,7 +18,7 @@ in evidence. For the [Hogwarts] uniform to be robe based is one thing, but
 wizards seem to come from every strata of society. It is highly unlikely that
 they all view themselves as court scholars; surely some of them would have
 preferred a more lordly self-image, others a more martial self-image. The styles
-of the century she cites allow for both.
+of the century she cites allow for both.  Some may well have wanted to deliberately invoke that [Merlin] image, but some may have wanted to mask their status as a witch or wizard, and have used magic in more covert ways. 
 
 Mrs. Rowling then contradicts her earlier insistence on robes, saying that "Day
 to day, however, even those who detest Muggles wear a version of Muggle
@@ -27,7 +30,7 @@ wears robes with little or nothing under them to do such classic Wizarding
 things like flying a broom ([Quidditch] robes‽) or duelling?
 
 The real question then is how the girls dress. She says that "Women's dresses
-tend to be long,"[^220630-1] but do they always wear either robes or dresses?
+tend to be long,"[^220630-1] but do they always wear either robes or dresses?  For that matter, do they wear robes, dresses, or more historically accurate open robes *over* their dresses? 
 Magic allows for greater gender equality, and the society described in the books
 _mostly_ supports that, though it hints that there may be some severe social
 limitations on married witches, and what is "proper" versus what is "allowed."
@@ -43,12 +46,12 @@ books do, it is one line that just says it happens. It is almost as if they just
 pull on their robes over their clothing in the fourth and fifth book, except
 that you would not use the word "change" for that. It would also contradict the
 scene from [Snape's] memory where after being flipped upside down, [James]
-threatens to remove his underwear.[^210525-11] In book six, [Harry] does _not_
+threatens to remove his underpants.[^210525-11] In book six, [Harry] does _not_
 change, and loses points for his "muggle" clothing,[^210525-12] again refuting
 the movies and the many fan fictions with school uniforms that are essentially
 standard non-magical school uniforms with an open robe.
 
-This is not, however, just a simple matter of [Hogwarts] using a version of
+Again note this is not just a simple matter of [Hogwarts] using a version of
 traditional academic dress. Every description of Mr. and Mrs. Weasley's clothing
 across the books has them wearing robes except when attempting to appear
 deliberately non-magical (which it says [Mr. Weasley] does badly). If "standard"
@@ -58,8 +61,11 @@ to work. Why though do we not hear about [Mrs. Weasley] in the "long dresses"
 that Mrs. Rowling says that women tend to wear? She does not work, and one would
 think that academic dress, being synonymous with formal wear, would be more
 expensive than the essentially non-magical clothing that she says magical folk
-tend to wear "day to day."[^220630-2]
+tend to wear "day to day."[^220630-2] 
 
+[Snape’s Worst Memory]: /Harrypedia/people/Snape/Severus/swm
+[Merlin]: /Harrypedia/people/Unknown/Merlin
+[minor orders]: https://en.wikipedia.org/wiki/Minor_orders
 [Mrs. Weasley]: /Harrypedia/people/Prewett/Molly
 [Ron]: </Harrypedia/people/Weasley/Ronald Bilius>
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean>
