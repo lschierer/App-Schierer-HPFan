@@ -32,7 +32,7 @@ markdown_dir: share/pages
 log_base: Schierer-HPFan
 site_url: https://dev.hp-fan.schierer.org
 log_config:
-  default: INFO
+  default: DEBUG
   'App::Schierer::HP-Fan': INFO
-  'App::Schierer::HPFan::Role::CannonQuote': DEBUG
-  'WebFramework': DEBUG
+  'App::Schierer::HPFan::Controller::Root': DEBUG
+  'WebFramework': INFO
