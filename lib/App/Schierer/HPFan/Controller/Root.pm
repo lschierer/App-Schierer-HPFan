@@ -313,8 +313,10 @@ sub _build_Root_Tree ($self) {
     }
     else {
       $route = $file->relative($self->base_dir)->stringify;
+      $route = "/$route";
       $route =~ s/(.+)\.md$/\/$1/;
       $route =~ s/\/index$//;
+      $route =~ s{//}{/};
     }
 
     $tree{$route} = {
