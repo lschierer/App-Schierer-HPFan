@@ -36,3 +36,4 @@ log_config:
   'App::Schierer::HP-Fan': INFO
   'App::Schierer::HPFan::Controller::Root': DEBUG
   'WebFramework': INFO
+  'WebFramework::Module::Navigation': DEBUG
