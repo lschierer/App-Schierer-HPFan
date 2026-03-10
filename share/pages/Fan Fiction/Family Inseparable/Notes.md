@@ -3,6 +3,7 @@ author:
   - Luke Schierer
 title: Notes
 ---
+<!-- cspell:ignore Richa -->
 
 ## Family Inseparable
 
@@ -60,7 +61,6 @@ and
 
 Against this collection of problems is Dumbledore's friendship with Fawkes.  How intelligent are phoenixes?  Does the phoenix bond with its partner (popular in fanfiction), or is it more of a friendship thing?  A phoenix in the HP world is a highly loyal creature.  Would this loyalty persist if Dumbledore started to believe his own legend and allow power to corrupt him? We do not, to my knowledge, have good answers to any of these questions. 
 
-<!-- cspell:ignore Richa -->
 Some authors of fan fiction have focused in on Dumbledore's talk of "the greater good" in his relationship with Gellert Grindelwald.  To what extent did Dumbledore actually turn away from this view of morality, that so long as you act for the greater good, you can cause suffering to individuals? Ms. Richa Venkatraman wrote a defence of Dumbledore on MuggleNet[&20190301-1] in which she seems to express well the view that Harry himself has in the book, that Dumbledore is ultimately a good, if flawed, person.  I have trouble with this, it is way too close to "the ends justify the means," and I am far from convinced that it differs in any important detail.  Yes you should act to promote the greatest good to the greatest number of people, but you may not do so using means that encompass actual harm to individuals.  The ends (the greater good) do not justify the means (cooperating with (in a moral sense) the abuse Harry suffers).  I suspect however, that Ms. Venkatraman is right, that Dumbledore suffers in his conscience from the pain he causes, and he does _intend_ good.  For my purposes, Fawkes recognizes this good intent, but is not intelligent enough (a phoenix is an animal, not a being) to understand the flaws in Dumbledore's execution.  
 
 #### The Wards around Privet Drive

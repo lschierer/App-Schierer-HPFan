@@ -91,7 +91,7 @@ are mutually exclusive.[^211101-7]
     Harry Potter and the Half-Blood Prince
     p. 537. Pottermore Publishing. American Kindle Edition.
 
-[^211101-2]: I complain bitterly about this in my [Notes](Harry_Potter/Notes)
+[^211101-2]: I complain bitterly about this in my [Notes](/Harrypedia)
     on the series.
 
 [211101-1]: Mrs. J. K. Rowling.

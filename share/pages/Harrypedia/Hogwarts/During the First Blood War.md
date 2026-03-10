@@ -75,7 +75,7 @@ If the students *are* aware that these situations are happening, then I *do* thi
 [Lupin]: </Harrypedia/people/Lupin/Remus John>
 [Pettigrew]: </Harrypedia/people/Pettigrew/Peter>
 [Lily]: </Harrypedia/people/Evans/Lily J>
-[Mulciber]: </Harrypedia/people/Mulciber/Unknown>
+[Mulciber]: </Harrypedia/people/Mulciber/I0138>
 [Harry]: </Harrypedia/people/Potter/Harry James>
 [Express]: </Harrypedia/Hogwarts/Hogwarts Express>
 [Ron]: </Harrypedia/people/Weasley/Ronald Bilius>
@@ -86,6 +86,6 @@ If the students *are* aware that these situations are happening, then I *do* thi
 [Longbottoms]: /Harrypedia/people/Longbottom
 [Potters]: /Harrypedia/people/Potter
 [Slytherins]: /Harrypedia/Hogwarts/Slytherin
-[Slytherin]: /Harrypedia/Hogwarts/Slytherin]
-[Ravenclaw]: /Harrypedia/Hogwarts/Ravenclaw]
-[Gryffindor]: /Harrypedia/Hogwarts/Gryffindor]
+[Slytherin]: /Harrypedia/Hogwarts/Slytherin
+[Ravenclaw]: /Harrypedia/Hogwarts/Ravenclaw
+[Gryffindor]: /Harrypedia/Hogwarts/Gryffindor
