@@ -143,6 +143,12 @@ async sub page_handler ($self, $ctx, $route, $entry) {
       exists $fm->{template}          ? $fm->{template}
     : exists $fm->{template_override} ? $fm->{template_override}
     :                                   $template;
+
+  # Apply collection prefix consistently (matching render_markdown_page behavior)
+  if (exists $fm->{collection} && !!$fm->{collection} && exists $fm->{template} && !!$fm->{template}) {
+    $template = sprintf('%s/%s', $fm->{collection}, $fm->{template});
+  }
+
   $vars->{template_override} = $template;
 
   if (exists $fm->{autoindex} && !!$fm->{autoindex}) {

@@ -4,7 +4,7 @@ author: Luke Schierer
 sidebar: 
   order: 500
 collection: Nephilim
-template: Nephilim/appendix
+template: appendix
 ---
 
 > [!IMPORTANT] For the purposes of this story, veela are "dark"

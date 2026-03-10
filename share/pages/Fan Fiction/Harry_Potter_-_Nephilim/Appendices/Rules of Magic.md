@@ -4,11 +4,8 @@ title: >-
 author: Luke Schierer
 sidebar:
   order: 2
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 4
 collection: Nephilim
-template: Nephilim/appendix
+template: appendix
 imports:
   - /components./PowerLevelTable.ts type="module"
 ---

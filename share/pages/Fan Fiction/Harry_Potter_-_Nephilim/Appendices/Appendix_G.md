@@ -3,7 +3,7 @@ title: >-
   Soteriology, Misology and Ecclesiology
 author: Luke Schierer
 collection: Nephilim
-template: Nephilim/appendix
+template: appendix
 sidebar:
   order: 100
 ---

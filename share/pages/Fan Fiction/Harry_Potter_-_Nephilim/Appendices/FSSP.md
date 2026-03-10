@@ -4,7 +4,7 @@ sidebar:
   order: 250
 author: Luke Schierer
 collection: Nephilim
-template: Nephilim/appendix
+template: appendix
 ---
 
 > [!CAUTION] This Appendix is atypical in that it is written from the Author's perspective, not from a

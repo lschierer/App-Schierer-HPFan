@@ -8,7 +8,7 @@ tableOfContents:
   minHeadingLevel: 2
   maxHeadingLevel: 4
 collection: Nephilim
-template: Nephilim/appendix
+template: appendix
 
 ---
 
