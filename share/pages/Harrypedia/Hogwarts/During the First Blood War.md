@@ -4,7 +4,7 @@ author: Luke Schierer
 collection: Harrypedia
 ---
 
-> [!NOTE] I'm referring to to the two periods when [Tom Riddle] was active as the First and Second Blood War.  I believe that [Gridelwald] was fundamentally about magic/not-magic and not purity of blood. 
+> [!NOTE] I'm referring to to the two periods when [Tom Riddle] was active as the First and Second Blood War.  I believe that [Grindelwald] was fundamentally about magic/not-magic and not purity of blood. 
 
 > [!NOTE] Much of this overlaps with my discussion of [Snape's Worst Memory], but here I want to consider the undocumented plot hole of culture/environment that allowed that memory to occur in the first place. 
 
@@ -57,9 +57,9 @@ If the students *are* aware that these situations are happening, then I *do* thi
 [death eaters]: /Harrypedia/culture/Allowing_Riddle
 [Slughorn]: </Harrypedia/people/Slughorn/Horace Eugene Flaccus>
 [Fudge]: </Harrypedia/people/Fudge/Cornelius Oswald>
-[Umbridge]: </Harrypedia/people/Umbridge/Delores Jane>
+[Umbridge]: </Harrypedia/people/Umbridge/Dolores Jane>
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
-[Gridelwald]: /Harrypedia/people/Gridelwald/Gellert
+[Grindelwald]: /Harrypedia/people/Grindelwald/Gellert
 [Tom Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
 [Snape's Worst Memory]: </Harrypedia/people/Snape/Severus/swm>
