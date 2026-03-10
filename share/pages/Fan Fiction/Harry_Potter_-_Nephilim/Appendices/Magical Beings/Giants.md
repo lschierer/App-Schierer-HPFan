@@ -3,7 +3,7 @@ title: Giants
 author: Luke Schierer
 sidebar: 1
 collection: Nephilim
-template: appendix
+template: Nephilim/appendix
 ---
 
 

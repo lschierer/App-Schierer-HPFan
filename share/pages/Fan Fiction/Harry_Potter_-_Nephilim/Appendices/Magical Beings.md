@@ -5,7 +5,7 @@ author: Luke Schierer
 sidebar:
   order: 100
 collection: Nephilim
-template: appendix
+template: Nephilim/appendix
 ---
 
 ### **From:** &lt;redacted&gt; of the Archivio Apostolico Vaticano <!-- cspell: disable-line -->

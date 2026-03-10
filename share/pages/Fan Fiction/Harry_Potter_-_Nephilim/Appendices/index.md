@@ -3,7 +3,7 @@ title: Index of Appendices
 author: Luke Schierer
 autoindex: 1
 collection: Nephilim
-template: appendix
+template: Nephilim/appendix
 ---
 
 A lot of authors will try to do almost all their world building within the

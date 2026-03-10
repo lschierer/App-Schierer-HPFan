@@ -3,7 +3,7 @@ title: >-
   Magical Contracts
 author: Luke Schierer
 collection: Nephilim
-template: appendix
+template: Nephilim/appendix
 sidebar:
   order: 102
 ---

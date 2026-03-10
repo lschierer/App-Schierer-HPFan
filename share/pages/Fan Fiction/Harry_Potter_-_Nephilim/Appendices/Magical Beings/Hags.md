@@ -3,7 +3,7 @@ title: Hags
 author: Luke Schierer
 sidebar: 1
 collection: Nephilim
-template: appendix
+template: Nephilim/appendix
 ---
 
 A people who are consumed by envy and lust. They have particularly strong

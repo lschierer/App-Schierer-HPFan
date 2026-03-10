@@ -3,7 +3,7 @@ title: Centaurs
 author: Luke Schierer
 sidebar: 1
 collection: Nephilim
-template: appendix
+template: Nephilim/appendix
 ---
 
 A nearly primordial people (inheriting from both the the Seraphim

@@ -8,6 +8,8 @@ tableOfContents:
   minHeadingLevel: 2
   maxHeadingLevel: 4
 collection: Nephilim
+template: Nephilim/appendix
+
 ---
 
 > [!NOTE] For things like a [hippogriff] to exist, I need non-Mendelian for at

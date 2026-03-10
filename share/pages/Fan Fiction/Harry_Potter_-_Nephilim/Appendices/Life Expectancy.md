@@ -6,7 +6,7 @@ collection: Nephilim
 sidebar:
   order: 5
 collection: Nephilim
-template: appendix
+template: Nephilim/appendix
 ---
 > [!CAUTION] This Appendix is atypical in that it is written from the Author's perspective, not from a
 > researcher's perspective.

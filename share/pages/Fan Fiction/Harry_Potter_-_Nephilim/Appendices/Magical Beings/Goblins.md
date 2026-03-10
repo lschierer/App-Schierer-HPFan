@@ -3,7 +3,7 @@ title: Goblins
 author: Luke Schierer
 sidebar: 1
 collection: Nephilim
-template: appendix
+template: Nephilim/appendix
 ---
 
 People, descendant from the [dwarfs], who are highly susceptible to

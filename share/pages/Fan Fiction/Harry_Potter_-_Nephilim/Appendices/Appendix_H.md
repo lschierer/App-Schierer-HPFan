@@ -3,7 +3,7 @@ title: >-
   What are the Nephilim
 author: Luke Schierer
 collection: Nephilim
-template: appendix
+template: Nephilim/appendix
 sidebar:
   order: 4
 ---

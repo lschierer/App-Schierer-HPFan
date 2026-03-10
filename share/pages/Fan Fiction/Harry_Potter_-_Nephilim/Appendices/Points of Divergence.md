@@ -6,7 +6,7 @@ tableOfContents:
   minHeadingLevel: 2
   maxHeadingLevel: 5
 collection: Nephilim
-template: appendix
+template: Nephilim/appendix
 sidebar:
   order: 2
 ---

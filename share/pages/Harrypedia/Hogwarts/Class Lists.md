@@ -2,7 +2,6 @@
 collection: Harrypedia
 title: Class Lists by Year
 author: Luke Schierer
-template: harrypedia/classlists
 ---
 
 I started out being incredibly strict, accepting only names from the listing of
