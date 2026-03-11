@@ -7,7 +7,7 @@ use warnings;
 use Moo;
 use experimental 'signatures';
 with 'App::Schierer::HPFan::Role::Gramps';
-extends 'Thunderhorse::Controller';
+extends 'WebFramework::Controller::Base';
 
 use Future::AsyncAwait;
 use Path::Tiny;

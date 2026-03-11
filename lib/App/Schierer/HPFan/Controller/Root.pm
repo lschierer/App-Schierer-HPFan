@@ -5,7 +5,6 @@ use v5.42.0;
 use utf8::all;
 use Mooish::Base -standard;
 with 'App::Schierer::HPFan::Role::Gramps';
-with 'WebFramework::Role::Markdown';
 with 'App::Schierer::HPFan::Role::YAMLTables';
 with 'App::Schierer::HPFan::Role::CannonQuote';
 extends 'WebFramework::Controller::Base';

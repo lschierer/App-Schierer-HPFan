@@ -2,7 +2,7 @@ package App::Schierer::HPFan::Controller::Bookmarks;
 
 use v5.42.0;
 use Mooish::Base -standard;
-extends 'Thunderhorse::Controller';
+extends 'WebFramework::Controller::Base';
 
 with 'WebFramework::Role::Markdown';
 

@@ -6,7 +6,7 @@ use lib '../PAGI-WebServer/lib';
 
 package App::Schierer::HPFan;
 use Mooish::Base -standard;
-with 'WebFramework::Role::Logger';
+#with 'WebFramework::Role::Logger';
 extends 'WebFramework::App';
 
 our $VERSION = 'v0.03.0';

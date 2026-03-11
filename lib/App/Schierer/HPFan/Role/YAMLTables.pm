@@ -4,8 +4,6 @@ package App::Schierer::HPFan::Role::YAMLTables;
 use v5.42.0;
 use utf8::all;
 use Mooish::Base -role;
-with 'WebFramework::Role::Logger';
-with 'WebFramework::Role::Markdown';
 use Future::AsyncAwait;
 
 use Mojo::DOM58;

@@ -3,8 +3,7 @@ package App::Schierer::HPFan::Controller::HPNOFP;
 use v5.42.0;
 use utf8::all;
 use Mooish::Base -standard;
-extends 'Thunderhorse::Controller';
-with 'WebFramework::Role::Markdown';
+extends 'WebFramework::Controller::Base';
 
 use Path::Tiny;
 use Path::Iterator::Rule;

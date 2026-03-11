@@ -3,8 +3,11 @@ jq = "latest"
 just = "latest"
 node = "24"
 pandoc = "latest"
-perl = "latest"
+perl = "5.42.1"
 pnpm = "10"
 podman = "latest"
 watchexec = "latest"
 yq = "latest"
+
+[env]
+MOOISH_BASE_EXTRA_MODULES = "MooX::TypeTiny;MooX::XSConstructor"
