@@ -46,6 +46,19 @@ This is the backdrop the students are growing up in.  With students like [Bellat
 
 If the students *are* aware that these situations are happening, then I *do* think that the staff we see in the seven books would be entirely ineffective at curbing the behavior.  I believe that the *students* would *know* that the staff is ineffective at curbing this behavior.  From these two premises, I believe it in line with [Gryffindor] house values to decide that *someone* should make the rival house pay for their crimes.  The whole series is replete with examples of "unreliable narrator"; despite this we can still achieve sufficient clarity to realize that while [death eaters] come from all houses, the *notorious* ones, the ones who were *effectively* public (if not officially so), were all from [Slytherin].  More, it is equally believable that [Lily], clinging to her friendship with [Snape], is for a *very* long time wilfully bind to events that she would later realize her friends have been calling attention to for years. 
 
+
+I absolutely love the way it is described in _[Faerie Godmother]_,
+
+> Like I said, the divide between the houses was bad and being in Slytherin was, well it enough to put a target on your back. I know I said no one can predict how someone will turn out from age ten, but the students only knew Slytherin house as a funnel to You-Know-Who. Lily thought that was stupid and didn’t let it affect her friendship with Severus, and it made her stand out in a negative way. Severus’ own dorm mates targeted her. It started small—they’d steal her things from her desk, spill ink on her classwork, or trip her in the halls. As we got older it got worse. She had to check her chair and desk before she sat down, she’d get scratched and pinched by unseen things when teacher’s backs were turned. The purebloods spread rumors about all the muggle born students, but what they said about her was especially nasty. Lily had a cat, and in our fourth year…well, a Prefect managed to stop a bunch of budding Death Eaters from carrying it off. Lily wasn’t the only one with a pet we had to make sure never left the tower.”
+> 
+> Harry feels nauseous. He can’t imagine his mother dealing with that.
+> 
+> “It wasn’t just Gryffindors who had to watch their backs, there were muggle born students in Ravenclaw and Hufflepuff who got it bad, too. The other houses weren’t going to sit back and watch that happen to their friends and classmates, they gave as good as they got. It was bullying on all sides, it was unacceptable but good luck stopping it when, it sounds cheap, but everyone else was doing it. For years Lily defended Severus when she could, always said James and Sirius got what they deserved when he fought back. Things started to change in our fifth year, and again I can’t speak to what Lily felt in her heart, but I was her classmate, and we all saw an uptick in the attacks. She had a friend, an older Gryffindor girl named Mary, and there was a boy called Mulciber who put her under the Imperius curse and had her start taking her robes off in the Great Hall during dinner. It was stopped before…before she had been exposed, but you can’t imagine, I can’t imagine how the poor girl felt. Severus tried to keep Lily out of it, but only her. That, I think, was the worst part in Lily’s mind; that he was okay with it as long as it wasn’t her.”
+> 
+> It just keeps getting worse! Harry has to breathe deeply and keep his mouth clamped shut so he won’t vomit.
+> 
+> “Harry, we were already fighting the war in the hallways of Hogwarts. James, Sirius, and Severus got off on the wrong foot and they never forgot it. I’m a biased narrator, maybe James and Sirius did target Severus excessively, but the animosity had been building for years. Severus watched the four of us like a hawk, he followed us everywhere, was determined to catch us in a compromising position.[^260312-1]
+
 [^260309-2]: See <https://comparewords.com/cunning/wit> 
 
 [^260309-1]: book 1 citation needed.
@@ -89,3 +102,11 @@ If the students *are* aware that these situations are happening, then I *do* thi
 [Slytherin]: /Harrypedia/Hogwarts/Slytherin
 [Ravenclaw]: /Harrypedia/Hogwarts/Ravenclaw
 [Gryffindor]: /Harrypedia/Hogwarts/Gryffindor
+
+<!-- cspell: ignore 0bviousLeigh --> 
+
+[^260312-1]: [0bviousLeigh](https://archiveofourown.org/users/0bviousLeigh/pseuds/0bviousLeigh. _[Faerie Godmother]_. 
+    "[Three Fundamental Truths at the Exact Same Time](https://archiveofourown.org/works/75421281/chapters/201618631)" 
+    Published: 2025-12-08. Completed: 2026-02-21. 
+
+[Faerie Godmother]: https://archiveofourown.org/works/75421281
