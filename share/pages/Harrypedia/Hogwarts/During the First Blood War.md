@@ -49,6 +49,8 @@ If the students *are* aware that these situations are happening, then I *do* thi
 
 I absolutely love the way it is described in _[Faerie Godmother]_,
 
+<!-- cspell: disable -->
+
 > Like I said, the divide between the houses was bad and being in Slytherin was, well it enough to put a target on your back. I know I said no one can predict how someone will turn out from age ten, but the students only knew Slytherin house as a funnel to You-Know-Who. Lily thought that was stupid and didn’t let it affect her friendship with Severus, and it made her stand out in a negative way. Severus’ own dorm mates targeted her. It started small—they’d steal her things from her desk, spill ink on her classwork, or trip her in the halls. As we got older it got worse. She had to check her chair and desk before she sat down, she’d get scratched and pinched by unseen things when teacher’s backs were turned. The purebloods spread rumors about all the muggle born students, but what they said about her was especially nasty. Lily had a cat, and in our fourth year…well, a Prefect managed to stop a bunch of budding Death Eaters from carrying it off. Lily wasn’t the only one with a pet we had to make sure never left the tower.”
 > 
 > Harry feels nauseous. He can’t imagine his mother dealing with that.
@@ -58,6 +60,8 @@ I absolutely love the way it is described in _[Faerie Godmother]_,
 > It just keeps getting worse! Harry has to breathe deeply and keep his mouth clamped shut so he won’t vomit.
 > 
 > “Harry, we were already fighting the war in the hallways of Hogwarts. James, Sirius, and Severus got off on the wrong foot and they never forgot it. I’m a biased narrator, maybe James and Sirius did target Severus excessively, but the animosity had been building for years. Severus watched the four of us like a hawk, he followed us everywhere, was determined to catch us in a compromising position.[^260312-1]
+
+<!-- cspell: enable -->
 
 [^260309-2]: See <https://comparewords.com/cunning/wit> 
 
