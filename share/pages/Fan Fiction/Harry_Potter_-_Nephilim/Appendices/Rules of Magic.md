@@ -554,6 +554,50 @@ compulsions to a nephil, and they are vulnerable to each other (and to others
 who can use similar powers) in ways that humans are not. See the notes on
 [contracts].
 
+### Wands
+
+To avoid a deviation from the canonical Harry Potter universe, we do need to 
+explain how wands fit in with these rules of magic.  For now I am assuming
+that the in-world researchers *do not* know how to reconcile the fact that 
+the nephilim themselves, particularly in communities that are strongly influenced by western civilization, appear to depend on wands,
+while the Church dominated formal research into them and their abilities indicates
+that there should be no difference between these nephilim and those from other
+areas of the world, like that served by the [Uagadou] School in Africa, or some of the Native American tribes that are only nominally under the authority of the magical government of the United States.[^260312-1]  
+
+Nephilim wand makers are fond of the saying "The wand choses the wizard," implying that wands are at least semi-sentient in and of themselves.
+They will talk of the wand in mystic terms, and will suggest that the wand and nephilim "learn together," and, occasionally, that a wand can even store knowledge that a second (or nth) owner can somehow learn from.  Like all things mythological there is a tiny core of truth to this that has been (in this case unintentionally) so distorted and twisted that the story now serves to in fact hide the truth rather than to inform. 
+
+Wands are objects, and as such have no intelligence, no capacity to remember, teach, or chose.  There is however a very fundamental compatibility between the nephil and a wand that they *describe* as having "chosen" them.  This compatibility can be understood, by way of analogy, in terms of electrical conductance.  We know with electricity that some materials will conduct electricity more perfectly than others.  Each material has a 'resistance', which when greater means that more energy is lost when conducting across or along that material.  In the case of the nephilim, it is as if the 'resistance' must be determined uniquely for each nephil rather than following rules universal to all nephilim.  Successful wand makers, have a rough understanding of the principles that determine this level of 'resistance':
+
+* Wand length
+* the material out of which the body or shaft of the wand is composed
+* the material out of which the core of the wand is composed
+* the degree of flexibility that the wand possesses. 
+* the thickness of the wand at its base
+* the thickness of the wand at its tip
+
+More, some wand makers have discovered that, for at least some nephilim, wand function may be enhanced by the inclusion of certain gem stones.  Some wand makers insist these must be uncut, natural gems, others that the gems must be cut. There are naturally arguments about gem placement and count as well.  
+
+The truth of the matter is that *all* sides of the many arguments are correct, because the results are in fact highly individualized.  There are some patterns that will persist for random numbers of generations across family lines.  Family X may find themselves more compatible with rubies, while family y is more compatible with sapphires.  Clan A may do better with uncut gems and Clan B may do better with many-faceted stones.  These patterns are examples of essentially random traits that are following magical rules of inheritance, but have no true underlying meaning.  
+
+Because magical inheritance of these random traits *is* entirely random, wand makers are correct that nephil will almost always get best results with a wand that is personally matched for them.  Because magical inheritance patterns are fairly common and persistent, so called 'family wands' will frequently work "well enough" that even reasonably prosperous families will sometimes chose to go that route for a variety of cultural reasons. 
+
+Because the wand makers are not scientific about their work, they will tend to describe flexibility in vague terms like "swishy" and "bendy" as different things, knowing what *they* mean by these terms that have no objective, measurable difference.  They will similarly have noticed that 
+wand making is in fact an art, and that wands are not simply hollow dowels that have some core substance inserted in them, but must be carved and decorated.  Few will *consciously* realize that in so decorating the wand they have caused the wand thickness to vary across the length of the shaft. 
+
+Wands are popular across the bulk of the world because they serve, at once, as a combination of memory aid, power amplifier (when reasonably matched), and civil control.  Each of these is independent, distinct, and *not universally known*.  The one *best* (but still not universally) known is that a well matched wand acts as a power amplifier.  Using a perfect match, a nephil's magical power is amplified by as much as 10x over his or her base abilities.  Thus effects that would otherwise be reasonably rare become reasonably common place, and some that are otherwise impossible are obtainable by the powerful. Using the 'partial match' of a so called 'family wand', a nephil will still often see 5x to 7x power amplification, still quite a considerable boost.
+
+The wand acts a memory aid in that the memorized wand motions help focus the mind to trigger the inborn power, enhance belief that the power can and will work (which is critical for success of nephilim magic), and in one further subtle sense that has lead to the belief that wands are semi-sentient.  A well used wand will be changed by its association with its nephil, by the constant flow of magic through it.  This change typically takes two forms.  
+1.  Again, working by way of analogy, it is as if a well used wand has less 'resistance' than a new wand, but, oddly, only for frequently used 'spells.'  This is what leads the nephilim to think that wands will "teach" a second (or nth) user new magic.  What's actually happening is that certain 'spells' are simply unusually easy with this inherited wand, and that the nephil in question will effectively accidentally cast spells that are 'easy' intending things that are 'hard', eventually realize what's 'easy', and start to intend those 'spells.'
+1.  Many wands undergo abrupt shifts in their 'resistance profile' when they are used in life or death situations.  This is especially true when two nephilim fight with wands.  When this occurs, it is not uncommon for the wand of the defeated nephil to take on aspects of the 'resistance profile' of the victor's wand.  These shifts happen because wands are *designed* to react to nephil, but because they are *not* in fact sentient at all, do not properly react to only their proper owner.  They react to the *winning nephil.*  Because the life or death nature of the struggle engages the nephil in question to a higher degree, they force the patterning behaviors described just above to an unusual degree that not just lowers existing resistances, but, mixing metaphors, forges new channels through which the 'river' of magic will flow from thence forth.  This is a messy and uncertain process that depends a great deal on the emotional state of the individual nephil, the 'rigidity' of the 'resistance profile' of the wands in question, and a degree of randomness.  So wand makers will conclude things like "a defeated wand *may* take on a new owner."
+
+[^260312-1]: I consider [MACUSA] an abomination and refuse to continence it. 
+
+[Uagadou]: /Harrypedia/Uagadou
+
+[MACUSA]: /Harrypedia/MACUSA
+
+
 [contracts]: <./Magical Contracts>
 [AA]: <./Points of Divergence>
 [AB]: <./Rules of Magic>
