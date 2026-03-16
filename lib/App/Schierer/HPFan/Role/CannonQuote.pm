@@ -4,7 +4,6 @@ package App::Schierer::HPFan::Role::CannonQuote;
 use v5.42.0;
 use utf8::all;
 use Mooish::Base -role;
-with 'WebFramework::Role::Logger';
 
 use Mojo::DOM58;
 

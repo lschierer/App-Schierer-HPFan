@@ -14,7 +14,6 @@ require Path::Tiny;
 require Path::Iterator::Rule;
 require PAGI::App::File;
 
-
 has app_config => (
   is      => 'ro',
   default => sub {
@@ -65,9 +64,9 @@ sub build ($self) {
   }
 
   my $static_count = 0;
-  my $extensions = qr/\.(?:pdf|epub|azw3)$/;
-  my $sarule = Path::Iterator::Rule->new->file->name( $extensions );
-  my $saiter = $sarule->iter( $self->base_dir);
+  my $extensions   = qr/\.(?:pdf|epub|azw3)$/;
+  my $sarule       = Path::Iterator::Rule->new->file->name($extensions);
+  my $saiter       = $sarule->iter($self->base_dir);
 
   my %mime_types = (
     pdf  => 'application/pdf',
@@ -75,19 +74,24 @@ sub build ($self) {
     azw3 => 'application/vnd.amazon.ebook',
   );
 
-  while ( defined( my $file = $saiter->() )) {
+  while (defined(my $file = $saiter->())) {
     $file = Path::Tiny::path($file);
     $static_count++;
-    my $path = $file->relative($self->base_dir);
-    my $route = sprintf('/%s', $path );
+    my $path  = $file->relative($self->base_dir);
+    my $route = sprintf('/%s', $path);
     $route =~ s{//}{/};
     my ($ext) = $file->basename =~ /\.([^.]+)$/;
-    my $mime = $mime_types{$ext} // 'application/octet-stream';
+    my $mime  = $mime_types{$ext} // 'application/octet-stream';
     $self->logger->info("mime type for $file is $mime");
-    
+
     my $no_sitemap = ($ext ne 'pdf');
-    $self->add_navigation_route($route, $path->basename( $extensions ), { order => 50, no_sitemap => $no_sitemap });
-    $self->router->add($route, 
+    $self->add_navigation_route(
+      $route,
+      $path->basename($extensions),
+      { order => 50, no_sitemap => $no_sitemap }
+    );
+    $self->router->add(
+      $route,
       {
         to => sub ($c, $ctx) {
           $ctx->res->content_type($mime);
@@ -99,8 +103,8 @@ sub build ($self) {
     );
   }
 
-
-  $self->logger->info("Registered " . (scalar(@routes) + $static_count) . " Root routes");
+  $self->logger->info(
+    "Registered " . (scalar(@routes) + $static_count) . " Root routes");
 
   # Add catch-all route for directory gaps (AutoIndex)
   $self->router->add(
@@ -143,8 +147,11 @@ async sub page_handler ($self, $ctx, $route, $entry) {
     : exists $fm->{template_override} ? $fm->{template_override}
     :                                   $template;
 
-  # Apply collection prefix consistently (matching render_markdown_page behavior)
-  if (exists $fm->{collection} && !!$fm->{collection} && exists $fm->{template} && !!$fm->{template}) {
+ # Apply collection prefix consistently (matching render_markdown_page behavior)
+  if ( exists $fm->{collection}
+    && !!$fm->{collection}
+    && exists $fm->{template}
+    && !!$fm->{template}) {
     $template = sprintf('%s/%s', $fm->{collection}, $fm->{template});
   }
 
