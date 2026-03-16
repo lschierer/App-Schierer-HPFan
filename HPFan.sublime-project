@@ -1,8 +1,8 @@
 {
     "folders" : [
         { "path" : "." },
-        { "path" : "./share/pages", "name" : "Pages" }
-
+        { "path" : "./share/pages", "name" : "Pages" },
+        { "path": "./share/Bookmarks", "name": "Bookmarks"},
     ],
     "settings" : {
         "draw_white_space": "all",
