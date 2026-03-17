@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define paths
-DB_PATH="./share/grampsdb/sqlite.db"
+DB_PATH="./share/gramps/grampsdb/potter_universe/sqlite.db"
 BACKUP_DIR="./share/backups"
 BACKUP_FILE="database_backup_$(date +%Y%m%d%H%M%S).sqlite" # Unique filename with timestamp
 

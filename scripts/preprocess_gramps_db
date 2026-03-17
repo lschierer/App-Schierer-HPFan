@@ -10,7 +10,7 @@ require App::Schierer::HPFan::Data;
 
 my $debug = 0;
 my $help = 0;
-my $dbfile = './share/grampsdb/sqlite.db';
+my $dbfile = './share/gramps/grampsdb/potter_universe/sqlite.db';
 my $output = './share/data/gramps';
 
 GetOptions(
