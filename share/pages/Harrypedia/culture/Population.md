@@ -16,10 +16,32 @@ council of perhaps a dozen people. There would certainly be no lords and ladies
 of noble houses, they would comprise a ridiculously high percentage of the
 population.[^240319-5]
 
+Commentator [Red Hen] spent some time looking at the numbers in [a fair amount of detail],
+and with a closer attention to maths than I tend to be capable of.  Despite some impressive
+analysis, some of her numbers are a bit suspect.  For example, as best I can tell, [Fleamont Potter]
+would have been at least 87 when he died, not 57.  The bigger issue however is that she is failing
+to consider the full implications of the partial family trees that I have tried to piece together here.
+
+A few examples:
+
+* [Arthur]'s father is [Septimus Weasley]. One does not name one's child 'Septimus' without a reason.  There
+must be a significant seven associated with him.  Most likely [Septimus] is a seventh child or seventh son. 
+Possibly, but less likely, he's named in honour of a seventh generation of something, maybe of firstborn males? 
+It is _possible_ but even more unlikely that he's named in honour of an ancestor who *was* the seventh son, despite himself not being associated with a seven.  I consider this last the least likely, but [Red Hen]'s numbers depend on it.
+* [Arthur] has two brothers, and [Weasleys], we are told in book one, are known for having large families.  While [Draco] is an unreliable source,
+prejudice does general have *some* kernel of truth associated with it.  It is unlikely that [Arthur] is the *only* large [Weasley] family.  However,
+if his is *not*, then **where are all the [Weasley] cousins**?  They get mentioned as existing at [Bill]'s wedding, but we do not see them even there.  At least some of the cousins should either be at [Hogwarts], or should themselves have children who are, *at least* by book six. 
+* [Neville] also has a fairly extensive family full of holes and implied aunts, uncles, great aunts, and great uncles.  How is it that [Neville] exists in this odd generational gap where he's the only [Longbottom] at [Hogwarts]? 
+* [Susan Bones] is in fact quite the exception in that a very careful reading accounts for all of her aunts and uncles, and explains the lack of cousins.  The only possible hole there is that she *might* have siblings. 
+* In short, despite the clear cultural importance of preserving family lines, there seems to be a *remarkable* acceptance of single female heirs, a frankly improbable collection of heirs in a single year, and no explanation for this. 
+* On top of this, there are statements that there *should* be a fair greater percentage of half-bloods (and by inference first generation students) than we actually see in the school's distribution.[^260317-1]
+
+All of this adds up to a picture where [Red Hen]'s projections from the 40 student class list start to fall down.  We are getting pushed back towards the versions of the numbers, some of which are in that essay, where there simply have to be missing dorms, missing teachers, in short, where [Harry] is simply oblivious to the bulk of the student body who don't *directly* impact his daily experience (except as being part *of* "the masses"). 
+
 On the other hand, it is possible that what we see here is the result of a
 series of rather radical population drops. [WolfgangNH] explains how this might
 as part of the backstory for his work exploring [magical marriage laws], _[The
-Ancient Proliferation Covenent]_.
+Ancient Proliferation Covenant]_.
 
 > "Head Parkinson, how many witches and wizards are there? I don't ever remember
 > those numbers being discussed," Lady Exeter said.
@@ -86,20 +108,49 @@ handle the idea of [Riddle]'s return.
 Of course, I cannot be sure that this is what happened. It makes it hard to give
 them full benefit of the doubt as I analyse what goes on across the books.
 
-[Grindelwald]: /Harrypedia/people/Grindelwald/Gellert/
+
+[Susan Bones]: /Harrypedia/people/Bones/Susan
+[Longbottom]: /Harrypedia/people/Longbottom
+[Neville]: /Harrypedia/people/Longbottom/Neville
+[Hogwarts]: /Harrypedia/Hogwarts
+[Bill]: <[Weasleys]: /Harrypedia/people/Weasley/William Arthur>
+[Draco]: </Harrypedia/people/Malfoy/Draco Lucius>
+[Weasleys]: /Harrypedia/people/Weasley
+[Weasley]: /Harrypedia/people/Weasley
+
+[Septimus]: /Harrypedia/people/Weasley/Septimus
+
+[Arthur]: /Harrypedia/people/Weasley/Arthur
+
+[Septimus Weasley]: /Harrypedia/people/Weasley/Septimus
+
+[Fleamont Potter]: /Harrypedia/people/Potter/Fleamont
+
+[a fair amount of detail]: https://redhen-publications.com/numbers.html
+
+[Red Hen]: https://redhen-publications.com/
+
+[Grindelwald]: /Harrypedia/people/Grindelwald/Gellert
 
 [^240319-6]:
-    [WolfgangNH]. _[The Ancient Proliferation Covenent]_
+    [WolfgangNH]. _[The Ancient Proliferation Covenant]_
     "[Chapter 10: Ginny Starts to Heal](https://archiveofourown.org/works/38270980/chapters/96581148)"
     Published: 2022-04-09. Updated: 2023-03-05.
 
-[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo> [The Ancient Proliferation
-Covenent]: https://archiveofourown.org/works/38270980 [magical marriage laws]:
-/Harrypedia/magic/contracts// [WolfgangNH]:
-https://archiveofourown.org/users/WolfgangNH/pseuds/WolfgangNH [CaHS]:
-/Harrypedia/Hogwarts/class_and_house_structure/ [Hogwarts]:
-/Harrypedia/Hogwarts/
+[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo> 
+
+[The Ancient Proliferation Covenant]: https://archiveofourown.org/works/38270980 
+
+[magical marriage laws]: /Harrypedia/magic/contracts 
+
+[WolfgangNH]: https://archiveofourown.org/users/WolfgangNH/pseuds/WolfgangNH 
+
+[CaHS]: /Harrypedia/Hogwarts/class_and_house_structure/ 
+
+[Hogwarts]: /Harrypedia/Hogwarts
 
 [^240319-5]:
     I am not the first to make any of these points, but I honestly cannot recall
     where I first read any of these ideas.
+
+[^260317-1]: Find the citation where we're told by either Arthur or Ron that most people are half-bloods, either in book 2 or book 5. 
