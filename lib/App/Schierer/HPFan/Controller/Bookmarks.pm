@@ -22,11 +22,6 @@ sub build ($self) {
   $self->register_routes($self->router);
 }
 
-has site_logo => (
-  is      => 'ro',
-  default => '',
-);
-
 has bookmarks_dir => (
   is      => 'ro',
   default => sub { Path::Tiny::path('share/Bookmarks') },
