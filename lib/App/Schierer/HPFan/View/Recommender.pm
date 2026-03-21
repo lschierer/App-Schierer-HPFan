@@ -76,18 +76,33 @@ sub configure ($self, %opts) {
       $self->bkmrkr_limit(50);
       $self->kdsr_limit(20);
       $self->bkmrk_pages(10);
+      $self->tag_page_limit(20);
     }
     elsif ($wait eq 'long') {
       $self->bkmrkr_limit(35);
       $self->kdsr_limit(15);
       $self->bkmrk_pages(4);
+      $self->tag_page_limit(10);
     }
-    else {
+    elsif ($wait eq 'medium') {
       $self->bkmrkr_limit(20);
       $self->kdsr_limit(10);
       $self->bkmrk_pages(2);
+      $self->tag_page_limit(5);
+    }
+    else {  # short
+      $self->bkmrkr_limit(10);
+      $self->kdsr_limit(5);
+      $self->bkmrk_pages(1);
+      $self->tag_page_limit(3);
     }
   }
+
+  # Advanced overrides (take precedence over preset)
+  $self->bkmrkr_limit(0 + $opts{bkmrkr_limit})     if $opts{bkmrkr_limit};
+  $self->kdsr_limit(0 + $opts{kdsr_limit})           if $opts{kdsr_limit};
+  $self->bkmrk_pages(0 + $opts{bkmrk_pages})         if $opts{bkmrk_pages};
+  $self->tag_page_limit(0 + $opts{tag_page_limit})   if $opts{tag_page_limit};
 
   if (my $bl = $opts{blacklist}) {
     my @tags = map {s/^\s+|\s+$//gr} grep {length} split /,/, lc($bl);

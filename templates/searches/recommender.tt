@@ -27,10 +27,11 @@
 
     <div class="spectrum-Form-item">
       <label for="wait_level" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">
-        How long to search (more = better results, but slower)
+        Search depth
       </label>
       <select id="wait_level" name="wait_level" class="spectrum-Picker">
-        <option value="some" [% IF form_wait == 'some' %]selected[% END %]>Some (~5 min)</option>
+        <option value="short" [% IF form_wait == 'short' %]selected[% END %]>Short (~3 min)</option>
+        <option value="medium" [% IF form_wait == 'medium' %]selected[% END %]>Medium (~5 min)</option>
         <option value="long" [% IF !form_wait || form_wait == 'long' %]selected[% END %]>Long (~10 min)</option>
         <option value="very long" [% IF form_wait == 'very long' %]selected[% END %]>Very Long (~20+ min)</option>
       </select>
@@ -71,6 +72,60 @@
         instead of hiding works that lack them.
       </p>
     </div>
+
+    <details class="advanced-section">
+      <summary class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Advanced settings</summary>
+      <p class="spectrum-Body spectrum-Body--sizeXS" style="margin-bottom: 0.5em;">
+        These override the search depth preset above.
+        Leave blank to use the preset defaults.
+      </p>
+
+      <div class="advanced-grid">
+        <div class="spectrum-Form-item">
+          <label for="bkmrkr_limit" class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">
+            Bookmarker limit
+          </label>
+          <input type="number" id="bkmrkr_limit" name="bkmrkr_limit" min="1" max="100"
+            class="spectrum-Textfield spectrum-Textfield--sizeS"
+            placeholder="e.g. 35"
+            value="[% form_bkmrkr_limit | html %]" />
+          <p class="spectrum-Body spectrum-Body--sizeXS">Max bookmarkers to crawl per input work</p>
+        </div>
+
+        <div class="spectrum-Form-item">
+          <label for="kdsr_limit" class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">
+            Kudoser limit
+          </label>
+          <input type="number" id="kdsr_limit" name="kdsr_limit" min="1" max="100"
+            class="spectrum-Textfield spectrum-Textfield--sizeS"
+            placeholder="e.g. 15"
+            value="[% form_kdsr_limit | html %]" />
+          <p class="spectrum-Body spectrum-Body--sizeXS">Max kudosers to crawl per input work</p>
+        </div>
+
+        <div class="spectrum-Form-item">
+          <label for="bkmrk_pages" class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">
+            Bookmark pages
+          </label>
+          <input type="number" id="bkmrk_pages" name="bkmrk_pages" min="1" max="20"
+            class="spectrum-Textfield spectrum-Textfield--sizeS"
+            placeholder="e.g. 4"
+            value="[% form_bkmrk_pages | html %]" />
+          <p class="spectrum-Body spectrum-Body--sizeXS">Max pages of bookmarks per user</p>
+        </div>
+
+        <div class="spectrum-Form-item">
+          <label for="tag_page_limit" class="spectrum-FieldLabel spectrum-FieldLabel--sizeS">
+            Tag page limit
+          </label>
+          <input type="number" id="tag_page_limit" name="tag_page_limit" min="1" max="50"
+            class="spectrum-Textfield spectrum-Textfield--sizeS"
+            placeholder="e.g. 10"
+            value="[% form_tag_page_limit | html %]" />
+          <p class="spectrum-Body spectrum-Body--sizeXS">Max tag pages to search</p>
+        </div>
+      </div>
+    </details>
 
     <button type="submit" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeM">
       <span class="spectrum-Button-label">Find Recommendations</span>

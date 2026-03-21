@@ -129,6 +129,12 @@ async sub recommender_submit ($self, $ctx) {
   my $enforce    = $body->{enforce_tags}   // '';
   my $soft       = exists $body->{soft_enforcement} ? 1 : 0;
 
+  # Advanced overrides (empty string = use preset default)
+  my $bkmrkr_limit  = $body->{bkmrkr_limit}  // '';
+  my $kdsr_limit    = $body->{kdsr_limit}     // '';
+  my $bkmrk_pages   = $body->{bkmrk_pages}   // '';
+  my $tag_page_limit = $body->{tag_page_limit} // '';
+
   my @urls = grep {length}
     map {s/^\s+|\s+$//gr}
     map {s{/\z}{}r}
@@ -154,6 +160,10 @@ async sub recommender_submit ($self, $ctx) {
     "blacklist=" . uri_escape_utf8($blacklist),
     "enforce=" . uri_escape_utf8($enforce),
     "soft=" . ($soft ? '1' : '0'),
+    (length $bkmrkr_limit   ? ("bkmrkr_limit=$bkmrkr_limit")     : ()),
+    (length $kdsr_limit      ? ("kdsr_limit=$kdsr_limit")         : ()),
+    (length $bkmrk_pages     ? ("bkmrk_pages=$bkmrk_pages")      : ()),
+    (length $tag_page_limit  ? ("tag_page_limit=$tag_page_limit") : ()),
   );
 
   my $current_year    = (localtime)[5] + 1900;
@@ -175,6 +185,10 @@ async sub recommender_submit ($self, $ctx) {
       form_blacklist => $blacklist,
       form_enforce   => $enforce,
       form_soft      => $soft,
+      form_bkmrkr_limit  => $bkmrkr_limit,
+      form_kdsr_limit    => $kdsr_limit,
+      form_bkmrk_pages   => $bkmrk_pages,
+      form_tag_page_limit => $tag_page_limit,
     }
   );
 }
@@ -207,6 +221,10 @@ async sub recommender_stream ($self, $ctx) {
     blacklist        => $blacklist,
     enforce          => $enforce,
     soft_enforcement => ($soft eq '1' ? 1 : 0),
+    bkmrkr_limit     => $ctx->req->query_param('bkmrkr_limit'),
+    kdsr_limit       => $ctx->req->query_param('kdsr_limit'),
+    bkmrk_pages      => $ctx->req->query_param('bkmrk_pages'),
+    tag_page_limit   => $ctx->req->query_param('tag_page_limit'),
   );
 
   # Wire up progress callback
