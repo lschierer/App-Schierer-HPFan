@@ -105,6 +105,8 @@ sub recommender_form ($self, $ctx) {
   my $current_year    = (localtime)[5] + 1900;
   my $navigation_html = $self->render_navigation('/Searches/Recommender');
 
+  my $q = sub { $ctx->req->query_param($_[0]) // '' };
+
   return $self->template(
     'searches/recommender.tt',
     {
@@ -114,6 +116,15 @@ sub recommender_form ($self, $ctx) {
       sidebar      => 1,
       nav_html     => $navigation_html,
       site_logo    => $self->site_logo,
+      form_urls           => $q->('fic_urls'),
+      form_wait           => $q->('wait_level'),
+      form_blacklist      => $q->('blacklist_tags'),
+      form_enforce        => $q->('enforce_tags'),
+      form_soft           => $q->('soft_enforcement'),
+      form_bkmrkr_limit   => $q->('bkmrkr_limit'),
+      form_kdsr_limit     => $q->('kdsr_limit'),
+      form_bkmrk_pages    => $q->('bkmrk_pages'),
+      form_tag_page_limit => $q->('tag_page_limit'),
     }
   );
 }

@@ -1,5 +1,20 @@
 [% WRAPPER layouts/default.tt %]
 <article class="recommender">
+  <form method="GET" action="/Searches/Recommender" class="recommender-back">
+    <input type="hidden" name="fic_urls" value="[% form_urls | html %]" />
+    <input type="hidden" name="wait_level" value="[% form_wait | html %]" />
+    <input type="hidden" name="blacklist_tags" value="[% form_blacklist | html %]" />
+    <input type="hidden" name="enforce_tags" value="[% form_enforce | html %]" />
+    [% IF form_soft %]<input type="hidden" name="soft_enforcement" value="1" />[% END %]
+    [% IF form_bkmrkr_limit %]<input type="hidden" name="bkmrkr_limit" value="[% form_bkmrkr_limit | html %]" />[% END %]
+    [% IF form_kdsr_limit %]<input type="hidden" name="kdsr_limit" value="[% form_kdsr_limit | html %]" />[% END %]
+    [% IF form_bkmrk_pages %]<input type="hidden" name="bkmrk_pages" value="[% form_bkmrk_pages | html %]" />[% END %]
+    [% IF form_tag_page_limit %]<input type="hidden" name="tag_page_limit" value="[% form_tag_page_limit | html %]" />[% END %]
+    <button type="submit" class="spectrum-Button spectrum-Button--secondary spectrum-Button--sizeS">
+      <span class="spectrum-Button-label">← Edit search</span>
+    </button>
+  </form>
+
   <recommender-table></recommender-table>
 
   <script>

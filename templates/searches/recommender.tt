@@ -64,7 +64,7 @@
     <div class="spectrum-Form-item">
       <label class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">
         <input type="checkbox" name="soft_enforcement"
-          [% IF !form_soft.defined || form_soft %]checked[% END %] />
+          [% IF form_soft || (!form_urls && !form_soft) %]checked[% END %] />
         Soft enforcement (boost score instead of hard filter)
       </label>
       <p class="spectrum-Body spectrum-Body--sizeXS">
