@@ -3,3 +3,7 @@ declare module "*.css" {
   const stylesheet: CSSStyleSheet;
   export default stylesheet;
 }
+
+interface Window {
+  __recommenderStreamQS?: string;
+}

@@ -81,6 +81,9 @@
     "@spectrum-css/tokens": "^16.0.2",
     "@spectrum-css/treeview": "^12.2.0",
     "@spectrum-css/typography": "^8.2.0",
-    "iconify-icon": "^3.0.2"
+    "@tanstack/lit-table": "^8.21.3",
+    "@tanstack/table-core": "^8.21.3",
+    "iconify-icon": "^3.0.2",
+    "lit": "^3.3.2"
   }
 }

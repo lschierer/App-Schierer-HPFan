@@ -1,0 +1,9 @@
+[% WRAPPER layouts/default.tt %]
+<article class="recommender">
+  <recommender-table></recommender-table>
+
+  <script>
+    window.__recommenderStreamQS = "[% stream_qs %]";
+  </script>
+</article>
+[% END %]

@@ -74,9 +74,18 @@ importers:
       '@spectrum-css/typography':
         specifier: ^8.2.0
         version: 8.2.0(@spectrum-css/tokens@16.0.2)
+      '@tanstack/lit-table':
+        specifier: ^8.21.3
+        version: 8.21.3(lit@3.3.2)
+      '@tanstack/table-core':
+        specifier: ^8.21.3
+        version: 8.21.3
       iconify-icon:
         specifier: ^3.0.2
         version: 3.0.2
+      lit:
+        specifier: ^3.3.2
+        version: 3.3.2
     devDependencies:
       '@adobe/spectrum-design-data-mcp':
         specifier: ^1.1.1
@@ -143,7 +152,7 @@ importers:
         version: 0.27.3
       esbuild-plugin-lit-css:
         specifier: ^4.1.1
-        version: 4.1.1(esbuild@0.27.3)(lit@3.3.1)(postcss@8.5.8)
+        version: 4.1.1(esbuild@0.27.3)(lit@3.3.2)(postcss@8.5.8)
       eslint:
         specifier: ^10.0.3
         version: 10.0.3(jiti@2.6.1)
@@ -1651,6 +1660,16 @@ packages:
     peerDependenciesMeta:
       '@spectrum-css/tokens':
         optional: true
+
+  '@tanstack/lit-table@8.21.3':
+    resolution: {integrity: sha512-NXe/No6HRGN+OZMJ1pKmoejiFS1QfjirWYOiahBWMojSsLIB5SqYb45L/jlswpKhEAaMWCdps8c93z8HfMG9Kg==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      lit: ^3.1.3
+
+  '@tanstack/table-core@8.21.3':
+    resolution: {integrity: sha512-ldZXEhOBb8Is7xLs01fR3YEc3DERiz5silj8tnGkFZytt1abEvl/GhUmCE0PMLaMPTa3Jk4HbKmRlHmu+gCftg==}
+    engines: {node: '>=12'}
 
   '@tsconfig/node10@1.0.12':
     resolution: {integrity: sha512-UCYBaeFvM11aU2y3YPZ//O5Rhj+xKyzy7mvcIoAjASbigy8mHMryP5cK7dgjlz2hWxh1g5pLw084E0a/wlUSFQ==}
@@ -3412,8 +3431,8 @@ packages:
   lit-html@3.3.2:
     resolution: {integrity: sha512-Qy9hU88zcmaxBXcc10ZpdK7cOLXvXpRoBxERdtqV9QOrfpMZZ6pSYP91LhpPtap3sFMUiL7Tw2RImbe0Al2/kw==}
 
-  lit@3.3.1:
-    resolution: {integrity: sha512-Ksr/8L3PTapbdXJCk+EJVB78jDodUMaP54gD24W186zGRARvwrsPfS60wae/SSCTCNZVPd1chXqio1qHQmu4NA==}
+  lit@3.3.2:
+    resolution: {integrity: sha512-NF9zbsP79l4ao2SNrH3NkfmFgN/hBYSQo90saIVI1o5GpjAdCPVstVzO1MrLOakHoEhYkrtRjPK6Ob521aoYWQ==}
 
   locate-path@5.0.0:
     resolution: {integrity: sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==}
@@ -6149,6 +6168,13 @@ snapshots:
     optionalDependencies:
       '@spectrum-css/tokens': 16.0.2
 
+  '@tanstack/lit-table@8.21.3(lit@3.3.2)':
+    dependencies:
+      '@tanstack/table-core': 8.21.3
+      lit: 3.3.2
+
+  '@tanstack/table-core@8.21.3': {}
+
   '@tsconfig/node10@1.0.12': {}
 
   '@tsconfig/node12@1.0.11': {}
@@ -7168,12 +7194,12 @@ snapshots:
       is-date-object: 1.1.0
       is-symbol: 1.1.1
 
-  esbuild-plugin-lit-css@4.1.1(esbuild@0.27.3)(lit@3.3.1)(postcss@8.5.8):
+  esbuild-plugin-lit-css@4.1.1(esbuild@0.27.3)(lit@3.3.2)(postcss@8.5.8):
     dependencies:
       '@pwrs/lit-css': 4.1.0(postcss@8.5.8)
       es-module-lexer: 1.7.0
       esbuild: 0.27.3
-      lit: 3.3.1
+      lit: 3.3.2
     transitivePeerDependencies:
       - postcss
 
@@ -8273,7 +8299,7 @@ snapshots:
     dependencies:
       '@types/trusted-types': 2.0.7
 
-  lit@3.3.1:
+  lit@3.3.2:
     dependencies:
       '@lit/reactive-element': 2.1.2
       lit-element: 4.2.2

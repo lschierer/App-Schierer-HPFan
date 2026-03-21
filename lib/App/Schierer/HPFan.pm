@@ -27,6 +27,7 @@ sub build ($self) {
   $self->load_controller('Person');
   $self->load_controller('History');
   $self->load_controller('Bookmarks');
+  $self->load_controller('Searches');
   $self->load_controller('HPNOFP');
   $self->load_controller('Root');
   $self->load_module(

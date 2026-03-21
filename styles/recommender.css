@@ -1,0 +1,41 @@
+.recommender-form {
+  max-width: 700px;
+  margin-bottom: 2em;
+}
+
+.recommender-form .spectrum-Form-item {
+  margin-bottom: 1.5em;
+}
+
+.recommender-form textarea,
+.recommender-form input[type="text"] {
+  width: 100%;
+  padding: 0.5em;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.recommender-form select {
+  padding: 0.4em;
+}
+
+.recommender-errors {
+  background: var(--spectrum-negative-background-color-default, #fee);
+  border: 1px solid var(--spectrum-negative-color-900, #c00);
+  border-radius: 4px;
+  padding: 1em;
+  margin-bottom: 1.5em;
+}
+
+.recommender-results {
+  width: 100%;
+  margin-top: 1em;
+}
+
+.recommender-results details summary {
+  cursor: pointer;
+}
+
+.recommender-results td {
+  vertical-align: top;
+}

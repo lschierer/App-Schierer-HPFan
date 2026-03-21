@@ -42,6 +42,12 @@ async function main() {
     format: "esm",
     target: "es2020",
     sourcemap: true,
+    tsconfigRaw: {
+      compilerOptions: {
+        experimentalDecorators: true,
+        useDefineForClassFields: false,
+      },
+    },
     outExtension: { ".js": ".js" },
     plugins: [litCssPlugin()],
   });
