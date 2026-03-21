@@ -17,8 +17,10 @@ has 'gramps_export' => (
 
 has 'gramps_db' => (
   is      => 'lazy',
-  default =>
-    sub { path($FindBin::Bin)->parent->child('share/gramps/grampsdb/potter_universe/sqlite.db') }
+  default => sub {
+    path($FindBin::Bin)
+      ->parent->child('share/gramps/grampsdb/potter_universe/sqlite.db');
+  }
 );
 
 my $g;
