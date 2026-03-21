@@ -1,3 +1,20 @@
+.advanced-section summary {
+  cursor: pointer;
+}
+
+.advanced-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  margin-top: 0.75em;
+}
+
+.advanced-grid input[type="number"] {
+  width: 6em;
+  padding: 0.4em;
+  font-family: inherit;
+}
+
 .recommender-form {
   margin-bottom: 2em;
   max-width: 700px;
@@ -46,22 +63,7 @@
   padding: 0.75em;
 }
 
-.advanced-section summary {
-  cursor: pointer;
-}
 
-.advanced-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1em;
-  margin-top: 0.75em;
-}
-
-.advanced-grid input[type="number"] {
-  width: 6em;
-  padding: 0.4em;
-  font-family: inherit;
-}
 
 .recommender-back {
   margin-bottom: 1em;
