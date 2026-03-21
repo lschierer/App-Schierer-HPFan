@@ -8,3 +8,5 @@ This school, located in Africa, is known for two things.
 
 1. Its students do not use wands.
 1. Its unusual approach to the animagus transformation. 
+
+Everything known about it comes from tertiary and quaternary sources. 
