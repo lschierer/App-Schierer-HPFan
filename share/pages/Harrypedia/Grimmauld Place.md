@@ -15,6 +15,12 @@ family][Black]. This is curious in a couple of respects.
   normal for magical homes, but the idea that [Walburga][]'s portrait can open
   curtains, resist those curtains being closed, and refuse commands from the
   house's owner seems like more than would be tolerated.[^211020-3]
+- We are told that 
+  > My father put every security measure known to Wizard-kind on it when he lived here. It’s Unplottable, so Muggles could never come and call -- as if they’d have wanted to and now Dumbledore’s added his protection, you’d be hard put to find a safer house anywhere.[^260323-1] 
+
+  What all does this amount to?  What does being [unplottable] do to a building? Is it that, or the [fidelius] charm that makes it appear from between the neighbouring houses the way it does? What other protections are present? We are told "protections" plural *before* [Dumbledore] added more *again plural* protections. But only two are listed, one from before ([unplottable]), and one from [Dumbledore] ([fidelius]).  Both plurals require additional layers of defence.  Further, since [Sirius]'s parents are deceased, there's a strong implication that both the layers added by the [Blacks] and those added by [Dumbledore] would persist after the deaths of the respective casters.  So even after the [fidelius] is pierced, there are other protections on the house that should *at least* delay penetration by an adversary.  This highlights the foolishness of [Hermione] and [Harry] when they leave for the camping trip after [Yaxley] clings to them following the raid on the [Ministry]. 
+
+[^260323-1]: Mrs. J. K. Rowling. _[Harry Potter and the Order of the Phoenix]_. American Kindle Edition. 
 
 Lots of fan fiction authors have either insisted that [James Potter][James]'s
 mother must be [Dorea Black][Dorea], or similarly placed in the [family
@@ -36,14 +42,16 @@ natural.
 
 [^211020-3]:
     Mrs. J. K. Rowling.
-    _[Harry Potter and the Order of the Phoenix](https://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix)_
+    _[Harry Potter and the Order of the Phoenix]_
     Kindle Locations 1209,1214-1215,1219-1220. © 2005 Pottermore Limited.
     American Kindle Edition.
 
 [^211020-2]:
     Mrs. J. K. Rowling.
-    _[Harry Potter and the Order of the Phoenix](https://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix)_
+    _[Harry Potter and the Order of the Phoenix]_
     Kindle Location 1705. © 2005 Pottermore Limited. American Kindle Edition.
+
+[Harry Potter and the Order of the Phoenix]: https://www.librarything.com/work/115/129058796
 
 [^211020-1]:
     Ms. Amy Holland and Mr. Steve VanderArk.
@@ -79,10 +87,17 @@ Portrait in some way, given it cannot be moved?
 
 [wEE1]: http://en.wikipedia.org/wiki/Fee_tail
 [Black]: /Harrypedia/people/Black
+[Blacks]: /Harrypedia/people/Black
 [Sirius]: </Harrypedia/people/Black/Sirius III>
+[Hermione]: </Harrypedia/people/Granger/Hermione Jean>
+[Yaxley]: </Harrypedia/people/Yaxley/I0297> 
 [James]: /Harrypedia/people/Potter/James
 [Walburga]: /Harrypedia/people/Black/Walburga
 [Harry]: </Harrypedia/people/Potter/Harry James>
 [Dorea]: /Harrypedia/people/Black/Dorea
 [Harry Potter Wiki]: https://harrypotter.fandom.com/wiki
 [horcrux]: /Harrypedia/magic/dark/Horcruxes
+[Ministry]: /Harrypedia/culture/Government
+[Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
+[unplottable]: /Harrypedia/magic/spells/unplottable
+[fidelius]: /Harrypedia/magic/spells/fidelius
