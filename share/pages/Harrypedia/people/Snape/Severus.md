@@ -215,6 +215,57 @@ unprofessional. I suspect, however, that it would be _legal_ in, say, 1800s
 England, and as the wizarding world seems to have frozen at least a century ago,
 Severus is probably not doing anything punishable, just something reprehensible.
 
+An absolutely critical consideration is to look at why Severus particularly focuses
+in on [Neville]'s mistakes to the point that he becomes [Neville]'s [boggart], eclipsing 
+things like being pushed off a pier to drown, or dropped from an upper level window.
+Why, out of the entire class does [Neville] get particular attention?  Is it the 
+bully's intuition that [Neville] is vulnerable, the easy target?  There may be an
+element of truth to that, but I do not think it the whole truth. I think, though
+there is no *certain* evidence for this, that the real answer lies again in Severus' obsession with [Lily]. 
+
+[Harry] and [Neville] in a unique way, though differently, *both of them* remind
+Severus of her death; of his failure to protect her.  [Harry] reminds him of her
+because he is her son, and every time [Harry] looks up, Severus sees [Lily]'s eyes.
+[Neville], though, *also* plays a unique role in [Lily]'s death, because when Severus
+heard the prophesy, when he informed [Riddle] of those first few phrases, Severus
+did not expect [Riddle] to target the [Potters].  Why not? because while two boys were
+born at the end of the seventh month, Severus had spent *years* immersed in pure-blood ideology.
+Not just the two or three years since graduation, but the seven years of being a student
+in [Slytherin] House, Severus has lived surrounded with the idea that pure-bloods are better,
+more important, more powerful, *more of a threat*.  So of course Severus *expected*
+that [Riddle] would target the pure-blood child, not the half-blood.  Then [Lily],
+the object of his obsession, dies, and [Neville], the child who Severus expected to die, instead lives.
+In Severus' mind, it is [Harry]'s fault that [Lily] died.  But in a twisted way, it is *also* [Neville]'s
+fault, *for failing to be a sufficient threat*.  If [Neville] had been a greater threat, [Riddle]
+would have targeted the [Longbottoms] instead of the [Potters].  Every time [Neville] makes a mistake,
+it is one more reminder that he failed to scare [Riddle], and thus "caused" [Lily] to die.
+
+In Severus' mind, [Neville] *must* be punished for this failure to, *as a toddler*, threaten [Riddle],
+and thus save [Lily].  Never mind that, as I said, [Neville] *was a toddler.* Never mind that
+he *has* been punished, growing up with parents that do not know him.  Never mind that the whole
+situation happened because of Severus and [Riddle], and not because of anything *either* child did. 
+This is not the actions of a well adjusted, healthy person.  The only way to make a "good" person
+out of this behavior is to accept that Severus is severely mentally damaged. His behavior is 
+emotionally abusive towards both boys.  Yes, in ways that society *probably* did not recognize
+in the even 1990s time period the books take place in, and *certainly* did not recognize in the
+Dickensian version of Great Britain that the magical world appears to exist in, but never the less
+clearly unacceptable.  
+
+While I have, in the preceding sections explored that Severus' backstory with
+[James] is ambiguous, but allows that [James] crossed lines and deserved punishment, *none of that
+back story matters.*  Severus accepted a job as teacher, not just in some random school, but in the
+school that he knew would remind him of these events.  The onus was on *him* as, as both the adult in
+in the situation, and as the person with massively imbalanced authority, to put the past in the past.
+If he could not do this, then whatever unknown oath he made to do better, to protect, to fight the evils
+that he had been, demanded, in spirit if not in the letter of the wording, that he resist the appointment.
+That he not *become* the problem he was supposed to *combat*; that he break the cycle of abuse.  That he failed to do so speaks loudly. 
+
+[Potters]: /Harrypedia/people/Potter
+[Neville]: </Harrypedia/people/Longbottom/Neville>
+[Longbottoms]: /Harrypedia/people/Longbottom
+[Slytherin]: /Harrypedia/Hogwarts/Slytherin
+
+
 His behaviour as Head of House is another issue. Again, it is not something that
 the DMLE could take exception to, except in that if he had had a trial, and if
 he were on probation, this would probably violate, or at least call into
