@@ -29,6 +29,7 @@ sub build ($self) {
   $self->load_controller('Bookmarks');
   $self->load_controller('Searches');
   $self->load_controller('HPNOFP');
+  $self->load_controller('MagicGlossary');
   $self->load_controller('Root');
   $self->load_module(
     'Middleware' => {
