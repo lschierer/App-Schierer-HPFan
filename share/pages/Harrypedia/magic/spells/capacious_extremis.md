@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: charm
 title: Capacious Extremis
 spells: 'Capacious Extremis'
 author: Luke Schierer

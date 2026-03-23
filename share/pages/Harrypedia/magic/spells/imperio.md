@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: curse
 title: Imperio
 spells: 'Imperio'
 author: Luke Schierer

@@ -1,13 +1,11 @@
 ---
 title: The Patronus Charm
+type: charm
+collection: Harrypedia
+# cspell: ignore patronem
+spells: expecto patronem
 ---
 
-## Found in
+See [Expecto Patronum]
 
-Primary Cannon
-: citation needed.
-
-Secondary Cannon
-: [magicscrapbook](https://magicscrapbook.tumblr.com/)
-  "[‘Book of Spells’ transcript](https://magicscrapbook.tumblr.com/post/162085200042/book-of-spells-transcript)"
-  Last Viewed 2021-09-30.
+[Expecto Patronum]: <./Expecto Patronum>

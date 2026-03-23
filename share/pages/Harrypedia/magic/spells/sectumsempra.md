@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: curse
 title: Sectumsempra
 spells: 'Sectumsempra'
 author: Luke Schierer

@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: charm
 title: Expecto Patronum
 spells: 'Expecto Patronum'
 author:

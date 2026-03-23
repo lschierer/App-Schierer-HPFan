@@ -1,10 +1,16 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: jinx
 title: Taboo
 spells: 'Taboo'
 author: Luke Schierer
 ---
+
+## Classification
+
+This is described as a jinx despite being powerful enough to break most if not all known defensive enchantments. 
+
+## Description 
 
 This appears to be a _class_ of magic rather than a specific spell, as we are
 told that "the name has been jinxed," with "a Taboo"[^240212-1] rather than with
@@ -25,6 +31,11 @@ possible, and not "why do you not know this" to it.
 
 If is well known but restricted in some way, what does the restricting? _Why_
 (for example) must one control the Ministry to set a Taboo?
+
+## Found in
+
+Primary Cannon 
+: citation needed.
 
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>
 [Harry]: </Harrypedia/people/Potter/Harry James/>

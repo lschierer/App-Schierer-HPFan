@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: curse
 spells: 'Avada Kedavra'
 title: Avada Kedavra
 author: Luke Schierer

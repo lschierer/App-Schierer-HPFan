@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: charm
 title: Levitation Charm
 spells: 'Levitation Charm'
 author:

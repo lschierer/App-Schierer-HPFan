@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: hex
 title: Bat-Bogey
 spells: 'Bat-Bogey'
 author: Luke Schierer

@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: charm
 title: Anti-Alohomora
 spells: 'Anti-Alohomora'
 author: Luke Schierer

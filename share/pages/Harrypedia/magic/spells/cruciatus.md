@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: curse
 title: Cruciatus
 spells: 'Cruciatus'
 author: Luke Schierer

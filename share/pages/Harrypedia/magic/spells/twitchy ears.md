@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: hex
 title: Twitchy Ears
 spells: 'Twitchy Ears'
 author: Luke Schierer

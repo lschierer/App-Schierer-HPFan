@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: jinx
 title: Jelly Legs Jinx
 spells: 'Jelly Legs'
 author: Luke Schierer

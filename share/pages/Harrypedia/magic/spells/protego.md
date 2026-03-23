@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: charm
 title: Protego
 spells: 'Protego'
 author: Luke Schierer

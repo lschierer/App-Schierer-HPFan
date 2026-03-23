@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: charm
 title: Flame Freezing
 spells: 'Flame Freezing'
 author:

@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: charm
 title: Mending Charm
 spells: 'Mending Charm'
 author:

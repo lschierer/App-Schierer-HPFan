@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: charm
 title: Aparecium
 spells: 'Aparecium'
 author: Luke Schierer

@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: charm
 title: Aguamenti
 spells: 'Aguamenti'
 author: Luke Schierer

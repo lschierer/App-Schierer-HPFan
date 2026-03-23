@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: charm
 title: Reducio
 spells: 'Reducio'
 author: Luke Schierer

@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: curse
 spells: 'FiendFire'
 title: FiendFire
 author: Luke Schierer

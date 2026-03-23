@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: spell
 title: Avis
 spells: 'Avis'
 author: Luke Schierer

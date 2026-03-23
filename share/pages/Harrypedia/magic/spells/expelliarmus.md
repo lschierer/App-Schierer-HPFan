@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: charm
 title: Expelliarmus
 spells: 'Expelliarmus'
 author: Luke Schierer

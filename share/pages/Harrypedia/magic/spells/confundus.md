@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: spell
 title: Confundus
 spells: 'Confundus'
 author: Luke Schierer

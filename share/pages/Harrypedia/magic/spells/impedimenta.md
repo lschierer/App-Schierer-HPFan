@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: jinx
 title: Impedimenta
 spells: 'Impedimenta'
 author: Luke Schierer

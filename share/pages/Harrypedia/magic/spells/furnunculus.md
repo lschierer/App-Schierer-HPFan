@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: charm
 title: Furnunculus
 spells: Furnunculus
 author: Luke Schierer
@@ -8,11 +8,7 @@ author: Luke Schierer
 
 ## Classification
 
-Charm
-
-## Description
-
-Documented as [Dark Magic], this causes a person to break out in boils/pimples
+Charm, despite classification as [Dark Magic]. This causes a person to break out in boils/pimples
 when it came in contact with their skin.
 
 [Dark Magic]: ../dark/

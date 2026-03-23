@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: curse
 title: Reducto
 spells: 'Reducto'
 author: Luke Schierer

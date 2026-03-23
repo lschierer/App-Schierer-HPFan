@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: charm
 title: Wingardium Leviosa
 spells: 'Wingardium Leviosa'
 author: Luke Schierer

@@ -1,6 +1,6 @@
 ---
 collection: Harrypedia
-type: 'spell'
+type: transfiguration
 title: Serpensortia
 spells: 'Serpensortia'
 author: Luke Schierer
