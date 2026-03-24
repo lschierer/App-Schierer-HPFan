@@ -50,7 +50,7 @@ _really feels like_ [George] lacked any significant degree of gumption.
 This is a problem. I am not saying that it is impossible that one of the two
 _was_ in fact more out going and _did_ in fact take more of the lead, but in the
 little we do see of them, they very much appear to be _partners_. I think there
-_are_ differences between them that Mrs. Rowling more hints at than fleshes out,
+_are_ differences between them that Mrs. Rowling more hints at then fleshes out,
 but that by and large they were _both_ fully engaged with life, both larger than
 life in some ways, and both contributed meaningfully to the success of their
 mutual endeavours.
