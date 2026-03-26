@@ -21,7 +21,6 @@
     "noEmit": true,
     "composite": true,
     "rootDir": ".",
-    "baseUrl": "./",
     "outDir": "./public/types",
     "declarationDir": "./public/types",
   },
