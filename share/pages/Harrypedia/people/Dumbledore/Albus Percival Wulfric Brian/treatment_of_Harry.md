@@ -8,7 +8,7 @@ In explaining his decisions to [Harry], [Dumbledore] says:
 
 > Five years ago you arrived at Hogwarts, Harry, safe and whole, as I had
 > planned and intended. Well not quite whole. You had suffered. I knew you would
-> when I left you on your aunt and uncle’s doorstep. I knew I was condemning you
+> when I left you on your aunt and uncle's doorstep. I knew I was condemning you
 > to ten dark and difficult years.[^210912-2]
 
 > You arrived at Hogwarts, neither as happy nor as well nourished as I would
@@ -27,11 +27,13 @@ He justifies this saying:
 > he returned, but I was sure he would do so, and I was sure too, knowing him as
 > I have done, that he would not rest until he killed you.[^210912-4]
 
+### The Prophecy as Catalyst
+
 There are two problems with this, and they are connected.
 
 First is the prophecy. From her website FAQ,
 
-> The prophecy Harry hears in Dumbledore’s office suggests to me that both he
+> The prophecy Harry hears in Dumbledore's office suggests to me that both he
 > and Voldemort will have to die, is that true?
 >
 > Both Madam Trelawney and I worded the prophecy extremely carefully and that is
@@ -45,13 +47,8 @@ with [Riddle] at the end. She says that in her opinion this prophecy is like
 that in [Macbeth][WSM1], it is a catalyst a series of events, but that the
 characters retain free will.[^210912-6] I think that [Harry]'s suffering, not
 just his death experience in the forest in book seven, are one of the things it
-triggered. For all the prophesy does not name [Dumbledore], it shapes his
+triggered. For all the prophecy does not name [Dumbledore], it shapes his
 actions much as the one that Macbeth hears shapes his actions.
-
-[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>
-[Harry]: </Harrypedia/people/Potter/Harry James/>
-[Harry's]: </Harrypedia/people/Potter/Harry James/>
-[Dumbledore]: ./
 
 In the fan fiction work _[The Sound of Silence][BW95TSS1]_ [Dumbledore] states:
 
@@ -77,36 +74,62 @@ consider the following quote, this one from _[Whatever Happened to the Likely La
 > he knows, left untreated it'll just become more ingrained as a part of
 > me."[^221006-1]
 
-Here the author has [Harry] succinctly put forward the theory that the soul fragment that sought to attach itself to [Harry] is only irrevocably attached to him *because [Dumbledore] delayed treatment.* Had medical help been sought promptly, [Harry] need not have faced that soul
-crushing walk into the forest at the end of book seven, there would already have
-been one fewer soul fragments to handle. Is the _very limited_ protection that
-[Harry's] attempt at sacrifice provides worth that suffering? Even if it is, is
-it _morally permissible_ to _inflict_ that on a child?
+Here the author has [Harry] succinctly put forward the theory that the soul
+fragment that sought to attach itself to [Harry] is only irrevocably attached to
+him *because [Dumbledore] delayed treatment.* Had medical help been sought
+promptly, [Harry] need not have faced that soul crushing walk into the forest at
+the end of book seven, there would already have been one fewer soul fragments to
+handle. Is the _very limited_ protection that [Harry's] attempt at sacrifice
+provides worth that suffering? Even if it is, is it _morally permissible_ to
+_inflict_ that on a child?
 
-In the fan fiction work _[After Destiny][CAD1]_, another author presents a view of [Harry], [Ginny], and the other student fighters that is overly influenced by modern secular morality, but shows them struggling
-with the traumas they have faced in a way that I _do_ find very realistic. The
-following is part of an exchange between [Harry] and [Ginny].
+### The Dursley Placement
 
-> "Training, Harry." She really wanted to smack him again, but settled for doing
-> her best Hermione, instead. "Do you know how long Charlie had to train before
-> they would even let him near a dragon?" He shook his head. "Four months. Four
-> months, five days a week, eight hours a day. And that was after getting the
-> highest N.E.W.T. score in Care of Magical Creatures since Grindelwald's War."
-> Ginny leaned closer, until they were almost nose to nose. "Remind me, Harry,
-> how much training did you get for this job?"
+Dumbledore placed Mrs. Figg to watch [Harry]. She knows she has to be
+unpleasant to him to retain access to him and thus fulfil her mission. Surely
+this was reported to Dumbledore over the years. He presumably did not believe
+her, possibly because she is a squib, and he has some of the pure-blood's
+unconscious prejudices against them. Alternately, while he does believe her,
+he risks both [Harry] turning evil and [Harry]'s health, because he views the
+odds that [Harry] will be killed by a Death Eater and/or a returned
+[Riddle] that probable. There _must_ have been some middle ground.
+Between Dumbledore's civil authority on the Wizengamot, and his experience
+with and control over magic, he could have done _something_ to intervene in
+[Harry]'s treatment.
+
+The one thing I keep coming back to is echoed in at least one fan fiction I have
+read:
+
+> No, he could not admit he knew anything about the abuse. He could not admit
+> that he had actually planned for it, to keep young Harry humble and meek; that
+> he was now trying to duplicate it through Severus' good offices.
 >
-> Harry blinked a few times and then looked down. "A few evenings with
-> Dumbledore."[^210912-1]
+> The world did not need another Voldemort: a powerful magical user working at
+> the top of his skill level, with curiosity and drive and ambition. And with
+> enough hatred to doom the entire world.
+>
+> The world also did not need a Harry Potter raised by Sirius Black amid
+> privilege and wealth and freedom. That wouldn't do.
+>
+> No, the world needed this Harry, shy, polite, an indifferent student, and
+> utterly incurious, save for what he could learn about his parents.[^200721-1]
 
-As I stated on the main [Dumbledore][AD1] page, I believe that Dumbledore, at
-heart, embraces some version of [utilitarianism]. Rightly or wrongly, he
-believed that the [horcrux] in [Harry] required that [Harry] be destroyed, or in
-other words, he would have to die.[^210912-9] Under utilitarian theory, while
-[Harry]'s death might be tragic, it is outweighed by the salvation it would
-bring to the rest of society when [Riddle] is vanquished. Thus [Harry] must be
-programmed towards self-sacrifice.
+While that fan fiction's depiction of [Harry] is somewhat out of character, it
+is close enough that the depiction of Dumbledore's thoughts, here quoted, is
+disturbingly believable. Dumbledore had some power in the [Wizengamot][HPwc],
+though we do not know how much; we do know that on his word alone [Snape][SS1]
+is kept out of Azkaban.[^220916-2] Despite this, Dumbledore claims to be totally
+unable to assist [Sirius][SB3] in exonerating himself. Is this just a convenient
+excuse to prevent [Sirius][SB3] from being able to adopt [Harry]?
 
-[utilitarianism]: https://www.schierer.org/~luke/log/Society/utilitarianism/
+### Shaping Harry Toward Self-Sacrifice
+
+I believe that Dumbledore, at heart, embraces some version of
+[utilitarianism][ADphil]. Rightly or wrongly, he believed that the [horcrux] in
+[Harry] required that [Harry] be destroyed, or in other words, he would have to
+die.[^210912-9] Under utilitarian theory, while [Harry]'s death might be tragic,
+it is outweighed by the salvation it would bring to the rest of society when
+[Riddle] is vanquished. Thus [Harry] must be programmed towards self-sacrifice.
 
 Again, Mrs. Rowling never allows her version of [Dumbledore] to admit that he
 has intentionally worked towards this end. Her version of [Dumbledore] claims
@@ -128,21 +151,36 @@ talking about the Hallows, when you consider that [Hermione] also slowed down
 the hunt for the [horcruxes] (see her page for details), I feel safe including
 this in my indictment.
 
-[horcrux]: /Harrypedia/magic/dark/Horcruxes/
-[horcruxes]: /Harrypedia/magic/dark/Horcruxes/
+In the fan fiction work _[After Destiny][CAD1]_, another author presents a view
+of [Harry], [Ginny], and the other student fighters that is overly influenced by
+modern secular morality, but shows them struggling with the traumas they have
+faced in a way that I _do_ find very realistic. The following is part of an
+exchange between [Harry] and [Ginny].
+
+> "Training, Harry." She really wanted to smack him again, but settled for doing
+> her best Hermione, instead. "Do you know how long Charlie had to train before
+> they would even let him near a dragon?" He shook his head. "Four months. Four
+> months, five days a week, eight hours a day. And that was after getting the
+> highest N.E.W.T. score in Care of Magical Creatures since Grindelwald's War."
+> Ginny leaned closer, until they were almost nose to nose. "Remind me, Harry,
+> how much training did you get for this job?"
+>
+> Harry blinked a few times and then looked down. "A few evenings with
+> Dumbledore."[^210912-1]
+
+### The Moral Problem
 
 When you consider the potential cost if [Riddle] had not been stopped, and
 further consider the fact _that it worked_, it is very hard to argue with
 [Dumbledore]. The fact that [Harry] not only does not blame him, but feels great
 affection for him makes it even harder. There is just one problem.
-[Utilitarianism] is wrong.
+[Utilitarianism][ADphil] is wrong.
 
-The second problem is closely related to the first. Suppose for a moment that
-[Dumbledore] was truly concerned with keeping [Harry] alive, not because he
-needed him to die at the right time or in the right way, but because it was the
-right thing to do. This supposes a few things:
+Suppose for a moment that [Dumbledore] was truly concerned with keeping [Harry]
+alive, not because he needed him to die at the right time or in the right way,
+but because it was the right thing to do. This supposes a few things:
 
-- [Harry] was a risk of death. Above I referenced a version of [Dumbledore] who
+- [Harry] was at risk of death. Above I referenced a version of [Dumbledore] who
   states that only [Riddle] could kill [Harry]. In placing [Harry] with the
   [Dursleys], [Dumbledore] is admitting that is probably not true.
 - Some have speculated that placing [Harry] with the [Dursleys] was done to
@@ -151,9 +189,13 @@ right thing to do. This supposes a few things:
   has refuted this.[^221129-3] As things currently stand, our knowledge of the
   [Black] and [Potter] family trees excluded any sufficiently direct and close
   linkage that would give [Narcissa Malfoy] any particularly strong claim to
-  young [Harry].
-- The [Wizengamot] would be prepared to back a non-magical claim to custody over
-  a magical one. We have no information either way on this.
+  young [Harry].  It is possible that some *entirely unnamed and unknown* family
+  has an equivalent claim to that provided by [Dorea Black] and would be equally
+  objectionable.  It is possible in the sense that *anything* is possible. It is 
+  equally likely, given how interconnected the magical world is, that the [Bones]
+  or [Weasleys] would have taken him in. 
+- The [Wizengamot][HPwc] would be prepared to back a non-magical claim to
+  custody over a magical one. We have no information either way on this.
 
 Given the above implications, [Harry] was in fact at risk of death _from the
 [Dursleys]_. Despite my use of it above, the fan fiction work _[The Sound of
@@ -163,8 +205,9 @@ starving. When Petunia aims a frying pan at his head, the head injury could have
 been quite serious.[^221129-4] This in turn means that [Dumbledore]'s actions,
 or inactions, in leaving [Harry] with the [Dursleys] despite at least some
 knowledge of the "dark and difficult"[^221129-5] nature of this time, is moral
-complicity in the emotional neglect and physical abuse. Again (because it bares
-repeating), [Utilitarianism] is wrong.
+complicity in the emotional neglect and physical abuse. For a fuller discussion
+of the moral framework I am applying here, see [Dumbledore's
+Philosophy][ADphil].
 
 [Dumbledore] is frequently portrayed as tricky, and interestingly, the first
 problem would be largely avoidable if the second were not true, and the second
@@ -174,48 +217,33 @@ objects that [Harry] must go to the [Dursleys] because he will be safest there.
 Safest from what/who? [Dumbledore] can now start to use the complicated nature
 of the thorny problem to confuse the listener.
 
-[Wizengamot]: /Harrypedia/culture/Government/
+[Bones]: </Harrypedia/people/Bones>
+[Weasleys]: </Harrypedia/people/Weasley>
+[ADphil]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/Philosophy>
+[Dumbledore]: ./
+[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>
+[Harry]: </Harrypedia/people/Potter/Harry James/>
+[Harry's]: </Harrypedia/people/Potter/Harry James/>
+[Ginny]: </Harrypedia/people/Weasley/Ginevra Molly/>
+[Hermione]: </Harrypedia/people/Granger/Hermione Jean/>
+[SS1]: /Harrypedia/people/Snape/Severus/
+[SB3]: </Harrypedia/people/Black/Sirius III/>
+[HPwc]: /Harrypedia/culture/Government/
+[Dursleys]: /Harrypedia/people/Dursley/
+[abusive environment]: /Harrypedia/people/Dursley/
+[Malfoys]: /Harrypedia/people/Malfoy/
 [Black]: /Harrypedia/people/Black/
 [Potter]: /Harrypedia/people/Potter/
 [Narcissa Malfoy]: /Harrypedia/people/Black/Narcissa/
 [Dorea Black]: /Harrypedia/people/Black/Dorea/
 [James]: /Harrypedia/people/Potter/James/
-[Malfoys]: /Harrypedia/people/Malfoy/
-[Dursleys]: /Harrypedia/people/Dursley/
-[abusive environment]: /Harrypedia/people/Dursley/
-[AD1]: ./
-[Ginny]: </Harrypedia/people/Weasley/Ginevra Molly/>
-[Hermione]: </Harrypedia/people/Granger/Hermione Jean/>
-[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>
-[SS1]: /Harrypedia/people/Snape/Severus/
+[horcrux]: /Harrypedia/magic/dark/Horcruxes/
+[horcruxes]: /Harrypedia/magic/dark/Horcruxes/
 [CAD1]: https://fanfictalk.com/archive/viewstory.php?sid=721
 [BW95TSS1]: https://www.fanfiction.net/s/12175260
 [WSM1]: https://www.gutenberg.org/cache/epub/1533/pg1533-images.html.utf8.gzip
-
-[^221129-4]: a cursory search:
-
-    - [CDC](https://www.cdc.gov/).
-      "[Get the Facts About TBI](https://www.cdc.gov/traumaticbraininjury/get_the_facts.html)"
-      2022-03-21.
-    - P M Sharples, A Storey, A Aynsley-Green, J A Eyre.
-      "[Avoidable factors contributing to death of children with head injury](https://pubmed.ncbi.nlm.nih.gov/2105782/)"
-      Abstract from [PubMed](https://pubmed.ncbi.nlm.nih.gov/). [BMJ]. 1990 Jan
-      13;300(6717):87-91. doi: 10.1136/bmj.300.6717.87.
-
-[BMJ]: http://www.bmj.com/thebmj
-
-[^221129-3]:
-    Mrs. J. K. Rowling.
-    "[The Potter Family](https://www.rowlingindex.org/work/pmpfam/)"
-    [The J.K. Rowling Index](https://www.rowlingindex.org). 2015-09-22.
-
-[^221129-2]:
-    Several fan fiction works have used this, but I cannot recall them right
-    now.
-
-[^20210913-1]:
-    Mrs. J. K. Rowling. _[Harry Potter and the Deathly Hallows]_ Page 298. ©
-    2007 Pottermore Publishing. American Kindle Edition.
+[Whatever Happened to the Likely Lad?]: https://www.fanfiction.net/s/7395979/1/Whatever-Happened-to-the-Likely-Lad
+[Saving the Saviour]: https://www.fanfiction.net/s/11833745/14/Saving-the-Saviour
 
 [Harry Potter and the Deathly Hallows]: https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows
 [Harry Potter and the Sorcerer's Stone]: https://www.goodreads.com/book/show/3.Harry_Potter_and_the_Sorcerer_s_Stone
@@ -223,42 +251,9 @@ of the thorny problem to confuse the listener.
 [Harry Potter and the Goblet of Fire]: https://www.goodreads.com/book/show/6.Harry_Potter_and_the_Goblet_of_Fire
 [Harry Potter and the Order of the Phoenix]: https://www.goodreads.com/book/show/2.Harry_Potter_and_the_Order_of_the_Phoenix
 
-<!-- cspell: disable --> 
+[BMJ]: http://www.bmj.com/thebmj
 
-[^210912-13]:
-    Mrs. J. K. Rowling. _[Harry Potter and the Order of the Phoenix]_ Locations
-    3683-3685. © 2005 Pottermore Limited. American Kindle Edition.
-
-[^210912-12]:
-    Mrs. J. K. Rowling. _[Harry Potter and the Goblet of Fire]_ Locations
-    4792-4793. © 2003 Pottermore Limited. American Kindle Edition.
-
-[^210912-11]:
-    Mrs. J. K. Rowling. _[Harry Potter and the Chamber of Secrets]_ Kindle
-    Location 2509. © 1999 Pottermore Limited. American Kindle Edition.
-
-[^210912-10]:
-    Mrs. J. K. Rowling. _[Harry Potter and the Sorcerer's Stone]_ Pages 244-245.
-    © 1998 Pottermore Limited. American Kindle Edition.
-
-[^210912-9]:
-    Mrs. J. K. Rowling.
-    "[PotterCast Interviews J.K. Rowling, part one.](http://www.accio-quote.org/articles/2007/1217-pottercast-anelli.html)"
-    2007-12-17. [Accio Quote](http://www.accio-quote.org). I have chosen to
-    quote Mrs. Rowling to substantiate this rather than something she's had
-    Dumbledore say because I feel this puts it even more beyond doubt than
-    anything else I could do. I am essentially saying that Dumbledore's
-    deductions, intuitions, whatever you chose to attribute it to, would end up
-    agreeing with the author's own opinion on the subject.
-
-[^210912-1]:
-    cambangst. 
-    _[After Destiny](https://fanfictalk.com/archive/viewstory.php?sid=721)_
-    Published: 2017-03-13. Updated: 2021-07-17.
-
-[^221129-5]:
-    Mrs. J. K. Rowling. _[Harry Potter and the Order of the Phoenix]_ Kindle
-    Location 12222-12223. Pottermore Limited © 2005. American Kindle Edition.
+<!-- cspell: disable -->
 
 [^210912-2]:
     Mrs. J. K. Rowling. _[Harry Potter and the Order of the Phoenix]_ Kindle
@@ -286,8 +281,75 @@ of the thorny problem to confuse the listener.
     birdwoman95. 
     _[The Sound Of Silence](https://www.fanfiction.net/s/12175260)_ 2016-10-03.
 
-[Whatever Happened to the Likely Lad?]: https://www.fanfiction.net/s/7395979/1/Whatever-Happened-to-the-Likely-Lad
-
 [^221006-1]: nonjon. _[Whatever Happened to the Likely Lad?]_. Published 2011-09-19.
+
+[^200721-1]:
+    DisobedienceWriter.
+    _[Harry Potter's Life Lessons](https://www.fanfiction.net/s/3750393)_.
+    [FanFiction](https://www.fanfiction.net/) Published 2007-08-27. Last Viewed
+    2020-07-21.
+
+[^220916-2]:
+    Mrs. J. K. Rowling.
+    _[Harry Potter and the Goblet of Fire](https://www.librarything.com/work/113)_
+    © 2003 Pottermore Publishing American Kindle Edition. Locations 8831-8833.
+
+[^210912-9]:
+    Mrs. J. K. Rowling.
+    "[PotterCast Interviews J.K. Rowling, part one.](http://www.accio-quote.org/articles/2007/1217-pottercast-anelli.html)"
+    2007-12-17. [Accio Quote](http://www.accio-quote.org). I have chosen to
+    quote Mrs. Rowling to substantiate this rather than something she's had
+    Dumbledore say because I feel this puts it even more beyond doubt than
+    anything else I could do. I am essentially saying that Dumbledore's
+    deductions, intuitions, whatever you chose to attribute it to, would end up
+    agreeing with the author's own opinion on the subject.
+
+[^210912-10]:
+    Mrs. J. K. Rowling. _[Harry Potter and the Sorcerer's Stone]_ Pages 244-245.
+    © 1998 Pottermore Limited. American Kindle Edition.
+
+[^210912-11]:
+    Mrs. J. K. Rowling. _[Harry Potter and the Chamber of Secrets]_ Kindle
+    Location 2509. © 1999 Pottermore Limited. American Kindle Edition.
+
+[^210912-12]:
+    Mrs. J. K. Rowling. _[Harry Potter and the Goblet of Fire]_ Locations
+    4792-4793. © 2003 Pottermore Limited. American Kindle Edition.
+
+[^210912-13]:
+    Mrs. J. K. Rowling. _[Harry Potter and the Order of the Phoenix]_ Locations
+    3683-3685. © 2005 Pottermore Limited. American Kindle Edition.
+
+[^20210913-1]:
+    Mrs. J. K. Rowling. _[Harry Potter and the Deathly Hallows]_ Page 298. ©
+    2007 Pottermore Publishing. American Kindle Edition.
+
+[^210912-1]:
+    cambangst. 
+    _[After Destiny](https://fanfictalk.com/archive/viewstory.php?sid=721)_
+    Published: 2017-03-13. Updated: 2021-07-17.
+
+[^221129-2]:
+    Several fan fiction works have used this, but I cannot recall them right
+    now.
+
+[^221129-3]:
+    Mrs. J. K. Rowling.
+    "[The Potter Family](https://www.rowlingindex.org/work/pmpfam/)"
+    [The J.K. Rowling Index](https://www.rowlingindex.org). 2015-09-22.
+
+[^221129-4]: a cursory search:
+
+    - [CDC](https://www.cdc.gov/).
+      "[Get the Facts About TBI](https://www.cdc.gov/traumaticbraininjury/get_the_facts.html)"
+      2022-03-21.
+    - P M Sharples, A Storey, A Aynsley-Green, J A Eyre.
+      "[Avoidable factors contributing to death of children with head injury](https://pubmed.ncbi.nlm.nih.gov/2105782/)"
+      Abstract from [PubMed](https://pubmed.ncbi.nlm.nih.gov/). [BMJ]. 1990 Jan
+      13;300(6717):87-91. doi: 10.1136/bmj.300.6717.87.
+
+[^221129-5]:
+    Mrs. J. K. Rowling. _[Harry Potter and the Order of the Phoenix]_ Kindle
+    Location 12222-12223. Pottermore Limited © 2005. American Kindle Edition.
 
 <!-- cspell: enable -->

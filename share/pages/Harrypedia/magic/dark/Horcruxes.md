@@ -2,6 +2,7 @@
 collection: Harrypedia
 title: Horcruxes
 author: Luke Schierer
+# cspell: ignore DisobedianceWriter Itsme66
 ---
 
 First of all, I'm not going to even start about what the proper plural is. I do
@@ -33,7 +34,7 @@ posits. He suggests that the Egyptian priest class delved deep into runic magic
 and soul magic, including Horcruxes and "the ancestor of the modern Killing
 Curse."[^210323-14] In my mind both the killing curse and horcruxes are evil,
 the first requiring hatred, the second requiring the remorseless killing of an
-innocent. DisobedianceWriter<!-- cspell: disable-line --> suggests that one
+innocent. DisobedianceWriter suggests that one
 could be created with any killing, I think Rowling's interview comments require
 something more gruesome.[^210323-15] Of particular note, the Valley of the Kings
 was in use from the 16th to the 11th century BC.[^210323-13] For my purposes the
@@ -41,7 +42,7 @@ overlap is actually useful.
 
 Despite the parts I dislike, I _do_ like the idea that the Egyptian priests
 played the ruling class, developed horcruxes, and that, unlike
-Itsme66's<!-- cspell: disable-line --> theory, horcruxes do work. It keeps me
+Itsme66's theory, horcruxes do work. It keeps me
 more in line with cannon, but gets rid of the over convenient root of all evil
 version of Herpo. To mesh back in with cannon, it is my thought that, since
 Ancient Greece and Egypt had at least some contact, Herpo stole the magic theory
@@ -211,7 +212,7 @@ I first read this in [The Thorny Rose 2][TTR213]:
 
 However I now know that this theory is more or less exactly what Mrs. Rowling
 intended:[^200731-2] a horcrux has to be intentional, the bit of soul in
-[Harry]'s scar is not, therefore he is not a true horcrux. Because he is not a
+[Harry]'s scar is not, therefore he is not a true horcrux.[^260325-1] Because he is not a
 true horcrux, it cannot take him over the way a real one would. The pain is the
 bit of soul trying to rejoin the rest of [Riddle]; and the few times we see it
 actually influencing [Harry] it is because he is, independently, emotionally
@@ -238,6 +239,9 @@ _[Harry]_ and not something embedded in his scar.[^210330-46] It is very clear
 that Mrs. Rowling intends precisely that; works with something in the scar
 really fall into the "nonsense" section below.
 
+[^260325-1]: In addition to _[The Thorny Rose 2]_, already mentioned, this theory appears in at least a few other works, including
+    * [HG4EVER69](https://www.fanfiction.net/u/5832284/HG4EVER69). _[Harry Potter After the War](https://www.fanfiction.net/s/14528017_)_. Published: 2025-12-01. Updated: 2026-03-25.
+
 [TTR213]: http://www.siye.co.uk/viewstory.php?sid=129781&textsize=1&chapter=13
 
 [^210330-46]:
@@ -246,9 +250,11 @@ really fall into the "nonsense" section below.
     [FanFiction](https://www.fanfiction.net) Originally Published: 2012-12-01.
     Updated: 2013-10-27. Last Viewed: 2021-03-30.
 
+[The Thorny Rose 2]: https://www.siye.co.uk/viewstory.php?sid=129781
+
 [^210311-1]:
     Brennus.
-    _[The Thorny Rose 2](https://www.siye.co.uk/viewstory.php?sid=129781)_
+    _[The Thorny Rose 2]_
     [Chapter 13](https://www.siye.co.uk/viewstory.php?sid=129781&textsize=1&chapter=13)
     Published: 2013-12-29. Updated: 2014-02-23. Last Viewed: 2021-03-11.
 

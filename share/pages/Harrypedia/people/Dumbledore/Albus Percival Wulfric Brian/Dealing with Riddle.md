@@ -116,7 +116,7 @@ would return, Dumbledore does _nothing_ to investigate how or why [Riddle][TMR1]
 avoided death. Why, learning about the [horcruxes] in [Harry]'s second year,
 Dumbledore waits until the summer after [Harry]'s _fifth_ year to hunt them
 down. Why, knowing that he will die, he entrusts the knowledge to [Harry] and
-gives him no adult to confide in. Why he allows him to confide in [Hermione] and
+gives him no adult to confide in. Why he allows [Harry] to confide in [Hermione] and
 [Ron] who can help little, but not in [Lupin], [Kingsley], or [Moody] who might
 have truly helped.
 
