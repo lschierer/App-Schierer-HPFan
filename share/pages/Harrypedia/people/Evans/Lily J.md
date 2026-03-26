@@ -4,7 +4,7 @@ source. See my thoughts on the [pensieve].
 
 [pensieve]: /Harrypedia/magic/time/pensieve/
 [Snape]: /Harrypedia/people/Snape/Severus/
-[Worst Memory]: /Harrypedia/people/Snape/Severus/swm/
+[Worst Memory]: </Harrypedia/reactions/fan fiction/Snapes Worst Memory>
 
 - She had an antagonistic relationship with [James] minimally through their
   fifth year.

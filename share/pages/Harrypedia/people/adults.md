@@ -5,6 +5,25 @@ sidebar:
   order: 888
 ---
 
+## Are These Children's Books?
+
+One of Mrs. Rowling's great themes across the Harry Potter series is the
+redeeming power of love. She is absolutely right to consider love one of the
+most powerful forces in existence, and one of the most magical. As she is
+writing for children, I cannot fault her wanting to make the world more nearly
+black and white, with good guys and bad guys.
+
+The books are, however, not _really_ children's books at all. I disagree with
+classifying the latter books as such, and am restricting my own children's
+reading of them, keeping them at one book a year starting from when they turn
+eight. The first few books are fine; while there are some troubling things in
+them, it will largely go over a child's head with little risk of influence or
+damage. However, as one advances through the books, there is more that requires
+mature judgement, because more and more, the characters are making decisions,
+and, in the case of the adults, revealing past decisions, that require the reader
+to recognise that good people can make bad choices, and, yes, bad people can
+make good choices.
+
 ## On Adults in General
 
 One of the challenges I have noticed across children's and young adult's
@@ -38,6 +57,10 @@ entirely unbelievable. [Dumbledore] does, or more often fails to do, a great
 many things that make him an incredibly ambiguous figure. It is not a great leap
 to paint him as the Dark Lord of the prophecy, who has marked [Harry], not
 physically, but metaphorically, as the one who could be his equal.[^210521-8]
+While that was not, I think, fundamentally the direction that Mrs. Rowling 
+*intended*, it is a reasonable interpretation of even the canonical series in
+some very real ways.  That is, ultimately, simply yet another reason that this
+is *not* a children's series (at least in its totality). 
 
 [Molly]: ./Prewett/Molly
 [Harry]: </Harrypedia/people/Potter/Harry James>

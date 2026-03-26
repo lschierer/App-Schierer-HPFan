@@ -43,7 +43,7 @@ rather than [James], who endured years of being publicly rejected.
 
 [Harry]: </Harrypedia/people/Potter/Harry James>
 [Snape]: </Harrypedia/people/Snape/Severus>
-[Worst Memory]: </Harrypedia/people/Snape/Severus/swm>
+[Worst Memory]: </Harrypedia/reactions/fan fiction/Snapes Worst Memory>
 [James]: </Harrypedia/people/Potter/James>
 [Sirius]: </Harrypedia/people/Black/Sirius III>
 [overall school situation in the 1970s]: </Harrypedia/Hogwarts/During the First Blood War>

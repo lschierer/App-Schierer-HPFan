@@ -14,61 +14,25 @@
 
 ### Sending [Snape][] to the Shack
 
-I cannot count nor even begin to compile a list of references to the many places
-I have read that one or another character justified distrust of Sirius on the
-fact that Sirius sent [Snape][] to his death down the tunnel between the
-Whomping Willow and the Shrieking Shack. Everyone acts as if [Snape][] was
-tricked into a life or death situation. If that were true, then Sirius certainly
-bears heavy responsibility. _But is that credible?_
-
 As I discuss in my extended look at [Snape's Worst Memory][SWM], I do not
-believe that it _is_ credible. [Lupin][] admits that [Snape][] had been
-investigating the trips out out of the castle for some time. [Lily][] states
-that she "knows [his] theories" connecting [Lupin][] and the full moon _despite_
-knowing only rumours of [Snape][] having met a life threatening situation in the
-tunnel. Given this is all happening in the space of a few days, we have one of
-two options.
+believe the standard narrative that Sirius maliciously tricked [Snape][] into a
+life-threatening situation. The most likely scenario is that [Snape][] had been
+developing theories about [Lupin][]'s lycanthropy for some time, was goading
+Sirius about it, and Sirius made a reckless comment along the lines of "if you
+want to meet one, go down and ..." The question is: if [Snape][] believed his
+own theories, _why did he go down the tunnel on the night of a full moon?_ Why
+would you take advice from an enemy about meeting a dangerous creature?
 
-1. Despite being constrained to keep secret about [Lupin][]'s status, [Snape][]
-   has gone on at such length that in one or two days [Lily][] is already sick
-   and tired of hearing his _theories_ **_plural_** about his "supposed" status
-   as a werewolf. Note, she distinctly said "theories" not "theory" in the book.
-   [Snape][] has developed _multiple_ theories connecting [Lupin][] to a full
-   moon. and [Lily][] is tired of hearing about it.
-2. [Snape][] has been developing these _multiple_ theories **for some time**.
-   Presenting them to [Lily][] has gained some urgency in the last few days now
-   that at least one of them has been proven right, but this is not a new topic.
-   [Lily][] is still tired of hearing about it.
-
-I find the second of these far more likely, though admittedly, both fit the
-canonical facts. So the most likely scenario is something like this:
-
-[Snape][] started insinuating that he already knows what is going on. He is
-goading Sirius precisely the way we see happen during Order of the Phoenix
-meetings.[^230206-1] Sirius made a comment along the lines of "if you want to
-meet one, go down and ..." giving directions to access the tunnel. The thing is,
-if [Snape][] believed his own theories, _why did he go?_ Why would you take
-advice from an enemy about meeting a dangerous creature? Conversely from Sirius'
-perspective, who would think that [Snape][] _would_ actually go down the tunnel
-the night of a full moon?
-
-Sure, I can believe that Sirius was probably not very _upset_ that [Snape][]
-almost died, but that would be in part because of his own dark upbringing, and
-in part because Sirius would _blame [Snape][]_ for the situation. More, Sirius
-would _resent_ being blamed, when he, rightly, would question who in their right
-mind, having made comments similar to those [Snape][] had been making, would
-have ever gone down the tunnel!
-
-[^230206-1]:
-    For one example, see Kindle Location 7647, Mrs. J. K. Rowling. _[Harry
-    Potter and the Order of the Phoenix][]_ Bloomsbury UK (2003)
-
-[Harry Potter and the Order of the Phoenix]: https://www.librarything.com/work/115/book/225886709
+I can believe that Sirius was probably not very _upset_ that [Snape][] almost
+died, but that would be in part because of his own dark upbringing, and in part
+because Sirius would _blame [Snape][]_ for the situation. More, Sirius would
+_resent_ being blamed, when he, rightly, would question who in their right mind
+would have actually gone down the tunnel.
 
 ### Effects of Azkaban
 
 Sirius spent twelve years in Azkaban. We are told that most prisoners go mad
-within weeks, and to drain a wizard of his/her powers.[^210630-1] What effects
+within weeks, and drained of his/her powers.[^210630-1] What effects
 did this experience have on Sirius? He believes that he never lost his mind
 because the thought of his own innocence was not a happy thought, and keeping
 that thought kept him sane,[^210630-2] and that later, hearing about [Peter][]
@@ -266,6 +230,8 @@ level upon him? Much of this hinges on the [effects of Azkaban][].
 [Pollux]: /Harrypedia/people/Black/Pollux
 [Regulus]: </Harrypedia/people/Black/Regulus Arcturus>
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
-[SWM]: /Harrypedia/people/Snape/Severus/swm
 [Snape]: /Harrypedia/people/Snape/Severus
 [Walburga]: /Harrypedia/people/Black/Walburga
+
+<!-- cspell: disable next line -->
+[SWM]: </Harrypedia/reactions/fan fiction/Snapes Worst Memory>

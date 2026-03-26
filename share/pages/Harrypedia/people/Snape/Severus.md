@@ -1,68 +1,45 @@
-One of Mrs. Rowling great themes across the Harry Potter series is the redeeming
-power of love. She is absolutely right to consider love one of the most powerful
-forces in existence, and one of the most magical. As she is writing for
-children, I cannot fault her wanting to make the world more nearly black and
-white, with good guys and bad guys. In such a world, Severus, being one of the
-good guys, must be redeemed. [Harry], being even more clearly one of the good
-guys, must not only be part of his redemption, but must recognise and champion
-it. This gives us the epilogue, with a child of [Harry]'s named Albus Severus,
-the two characters that Mrs. Rowling most wants the reader to forgive.
+Severus Snape is a very grey character. As I discuss in my notes on [adults][]
+in the series, Mrs. Rowling's world requires that good people make bad choices
+and bad people make good choices. Severus embodies this more than anyone.
 
-[Harry]: </Harrypedia/people/Potter/Harry James>
+[adults]: /Harrypedia/people/adults
 
-The books are, however, not _really_ children's books at all. I disagree with
-classifying the latter books as such, and am restricting my own children's
-reading of them, keeping them at one book a year starting from when they turn
-eight. The first few books are fine; while there are some troubling things in
-them, it will largely go over a child's head with little risk of influence or
-damage. However, as one advances through the books, there is more that requires
-mature judgement, because more and more, the characters are making decisions,
-and in the case of the adults, revealing past decisions, that require the reader
-to recognise that good people can make bad choices, and, yes, bad people can
-make good choices.
-
-Severus Snape is a very grey character. He, like most children, starts out
-fallen, but essentially unformed. He comes from an abusive back-
-ground,[^200806-1] and apparently has very little of [Harry]'s extraordinary
-resilience. As such, he is damaged. He is given no help to recover from this
-damage. We have no true picture of what [Hogwarts] looked like while the
-Marauders, [Lily] and Severus were there, but that much we can be fairly certain
-of. We know that some of the Slytherins students are either openly Death Eaters,
-or are openly vying to become Death Eaters.[^200806-2] We know that at least one
-female student was assaulted in an unknown way by [dark magic], that Severus
-calls it funny, and [Lily] calls it evidence of Mulciber being
+He, like most children, starts out fallen, but essentially unformed. He comes
+from an abusive background,[^200806-1] and apparently has very little of
+[Harry]'s extraordinary resilience. As such, he is damaged. He is given no help
+to recover from this damage. We have no true picture of what [Hogwarts] looked
+like while the Marauders, [Lily] and Severus were there, but that much we can be
+fairly certain of. We know that some of the Slytherin students are either openly
+Death Eaters, or are openly vying to become Death Eaters.[^200806-2] We know
+that at least one female student was assaulted in an unknown way by [dark magic],
+that Severus calls it funny, and [Lily] calls it evidence of Mulciber being
 "creepy."[^200806-3] When it comes to Severus, [Sirius] is hardly unbiased, but
 I think we _can_ trust him when he says that Severus's interest in the [Dark
-Arts] was well known.[^210601-1] I could go on, but you can see that, already,
-[McGonagall] and [Dumbledore] are allowing not just pranks, but actual evil to
-go unpunished. In such an environment, the needs of victims are not going to be
-addressed.
+Arts] was well known.[^210601-1]
 
 [Dark Arts]: /Harrypedia/magic/dark/
 [Dark Magic]: /Harrypedia/magic/dark/
 [dark]: /Harrypedia/magic/dark/
+[dark magic]: /Harrypedia/magic/dark/
 [Lily]: </Harrypedia/people/Evans/Lily J>
 [Sirius]: </Harrypedia/people/Black/Sirius III>
 [McGonagall]: /Harrypedia/people/McGonagall/Minerva/
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
 
-As I said, we know little of Severus at school, but his memories from _the
-Deathly Hallows_ have a few things that are possibly suggestive. In one scene
-[Lily] reacts strongly when Severus uses the phrase "I won't let you" in
-reference to her understanding of, or possibly her relationship (or lack there
-of) with [James].[^210106-1] A scene later we have the incident where he calls
-her a mudblood and she ends their friendship. Next we see her refusal to forgive
-him, apparently because she does not believe his protestations. Unlike
-[Dumbledore], [Lily] wants repentance to be accompanied by evidence of reform.
-Alternately, some writers have speculated that [Lily] was seeing parallels
-between Severus' behaviour and his father's.[^210106-2] The whole fifth year
-thing is really complicated, and ultimately worth a [deeper look][swm]. Either
-way, if you accept statements made in interviews, we know that Severus did not
-_really_ understand the depth of the disagreement. He refused to believe
-[Lily]'s aversion to the [Dark Arts] was real or well founded, and believed that
-she would find membership in the Death Eaters _impressive_.[^221206-1]
+### Fifth Year and the Break with Lily
 
-[swm]: /Harrypedia/people/Snape/Severus/swm/
+The events of Severus's fifth year — the incident by the lake, the break with
+[Lily], and the surrounding context — are complicated enough to warrant a
+[deeper look][swm]. The whole fifth year thing is really the pivot point for
+understanding Severus, [Lily], [James], and [Sirius] alike.
+
+The key takeaway: if you accept statements made in interviews, we know that
+Severus did not _really_ understand the depth of the disagreement with [Lily].
+He refused to believe her aversion to the [Dark Arts] was real or well founded,
+and believed that she would find membership in the Death Eaters
+_impressive_.[^221206-1]
+
+[swm]: </Harrypedia/reactions/fan fiction/Snapes Worst Memory>
 [James]: /Harrypedia/people/Potter/James/
 
 <!-- cspell: disable -->
@@ -101,10 +78,12 @@ bullying behaviour (which is deplorable), but _Severus_ returned fire with
     Mrs. J. K. Rowling. _[Harry Potter and the Half-Blood Prince]_ Pottermore
     Limited. American Kindle Edition. page 431.
 
+### Death Eater and Spy
+
 Coming out of [Hogwarts], Severus joins the Death Eaters, while continuing his
 studies in potions. We do not know what the balance of his time is; we do not
 know what (if any) atrocities he participated in. We do know that he gets the
-dark mark, we do not know if he had it prior to hearing the prophesy fragment or
+dark mark, we do not know if he had it prior to hearing the prophecy fragment or
 not. Was it a reward, or did he earn the mark in some other way? That answer
 could significantly change your view of how much evil Severus has done by
 commission versus omission during this phase of his life.
@@ -112,7 +91,7 @@ commission versus omission during this phase of his life.
 [Hogwarts]: /Harrypedia/Hogwarts/
 
 [Dumbledore]'s view is that becoming a spy balances the scales. Severus needs no
-punishment for his actions prior to hearing the prophesy.[^221014-1] I cannot
+punishment for his actions prior to hearing the prophecy.[^221014-1] I cannot
 agree. He may have earned some clemency, but not full clemency, and not without
 a true trial. [Dumbledore] is not God.
 
@@ -120,6 +99,8 @@ a true trial. [Dumbledore] is not God.
     It is possible that I overstate Dumbledore's opinion, he may simply believe
     that Severus is too useful out of prison, and thus that it must be _as if_
     the scales are balanced.
+
+### "He thinks it means Lily Evans!"
 
 Returning to the memories that Severus would show [Harry],[^210106-3] Severus
 says "he thinks it means Lily Evans!" - a curious statement considering that
@@ -161,14 +142,14 @@ Requirement.
 I do not expect Severus to be a saint, to risk his life for [James], who he
 hates. But note that isn't precisely what [Dumbledore] asked. He asked about
 _[Lily]'s husband who happens to be [James]_. In other words, would you save
-[James] for her sake. Even put in those terms, Severus can barely bring himself
+[James] *for her sake.* Even put in those terms, Severus can barely bring himself
 to say "them" and not just "her." I again remind you that he cannot bring
 himself to think of her as _actually married._ Rather, she is a prize to be won,
 some*thing* that [James] has taken from him. That is the sense in which he wants
 her life to be saved.
 
 [Riddle] might well have been willing to go along with that, but it is not just
-a quirk of cannon that [Lily] was not. We know that [Tobias] Snape was abusive,
+a quirk of canon that [Lily] was not. We know that [Tobias] Snape was abusive,
 and that [Eileen] Snape failed to protect Severus, but I know of no evidence
 that [Eileen] did not love her son. Some abused women fail to protect their
 children because they are unable to, not because they are unwilling to do so; we
@@ -184,9 +165,11 @@ with their extreme poverty.
 Regardless, Severus is now, supposedly, a spy for [Dumbledore]. How much does he
 know? Does he know that Pettigrew is a Death Eater? Does he know this before
 [Riddle] goes to Godric's Hallow? What precisely does Severus report to
-[Dumbledore] during the 19 months or so between the prophesy stating that
+[Dumbledore] during the 19 months or so between the prophecy stating that
 [Harry] _will_ be born, and Halloween of 1981? The answers to these questions
 also play a critical part in assessing Severus Snape, and yet are unanswered.
+
+### Severus as Teacher
 
 Severus becomes a teacher in the fall of 1982, replacing [Slughorn].[^210523-1]
 It is really really hard to form an objective understanding of Severus as a
@@ -209,62 +192,78 @@ horrible teachers is part of teaching his students about life.[^210412-6]
 
 [Slughorn]: </Harrypedia/people/Slughorn/Horace Eugene Flaccus>
 
-Irregardless of if he does ever actually teach, his behaviour during these "lab"
-classes is unacceptable. The labs are unsafe, and his treatment of the students
-unprofessional. I suspect, however, that it would be _legal_ in, say, 1800s
-England, and as the wizarding world seems to have frozen at least a century ago,
-Severus is probably not doing anything punishable, just something reprehensible.
+Regardless of whether he does ever actually teach, his behaviour during these
+"lab" classes is unacceptable. The labs are unsafe, and his treatment of the
+students unprofessional. I suspect, however, that it would be _legal_ in, say,
+1800s England, and as the wizarding world seems to have frozen at least a
+century ago, Severus is probably not doing anything punishable, just something
+reprehensible.
 
-An absolutely critical consideration is to look at why Severus particularly focuses
-in on [Neville]'s mistakes to the point that he becomes [Neville]'s [boggart], eclipsing 
-things like being pushed off a pier to drown, or dropped from an upper level window.
-Why, out of the entire class does [Neville] get particular attention?  Is it the 
-bully's intuition that [Neville] is vulnerable, the easy target?  There may be an
-element of truth to that, but I do not think it the whole truth. I think, though
-there is no *certain* evidence for this, that the real answer lies again in Severus' obsession with [Lily]. 
+### Why Neville
+
+An absolutely critical consideration is to look at why Severus particularly
+focuses in on [Neville]'s mistakes to the point that he becomes [Neville]'s
+[boggart], eclipsing things like being pushed off a pier to drown, or dropped
+from an upper level window. Why, out of the entire class does [Neville] get
+particular attention? Is it the bully's intuition that [Neville] is vulnerable,
+the easy target? There may be an element of truth to that, but I do not think it
+the whole truth. I think, though there is no *certain* evidence for this, that
+the real answer lies again in Severus' obsession with [Lily].
 
 [Harry] and [Neville] in a unique way, though differently, *both of them* remind
-Severus of her death; of his failure to protect her.  [Harry] reminds him of her
-because he is her son, and every time [Harry] looks up, Severus sees [Lily]'s eyes.
-[Neville], though, *also* plays a unique role in [Lily]'s death, because when Severus
-heard the prophesy, when he informed [Riddle] of those first few phrases, Severus
-did not expect [Riddle] to target the [Potters].  Why not? because while two boys were
-born at the end of the seventh month, Severus had spent *years* immersed in pure-blood ideology.
-Not just the two or three years since graduation, but the seven years of being a student
-in [Slytherin] House, Severus has lived surrounded with the idea that pure-bloods are better,
-more important, more powerful, *more of a threat*.  So of course Severus *expected*
-that [Riddle] would target the pure-blood child, not the half-blood.  Then [Lily],
-the object of his obsession, dies, and [Neville], the child who Severus expected to die, instead lives.
-In Severus' mind, it is [Harry]'s fault that [Lily] died.  But in a twisted way, it is *also* [Neville]'s
-fault, *for failing to be a sufficient threat*.  If [Neville] had been a greater threat, [Riddle]
-would have targeted the [Longbottoms] instead of the [Potters].  Every time [Neville] makes a mistake,
-it is one more reminder that he failed to scare [Riddle], and thus "caused" [Lily] to die.
+Severus of her death; of his failure to protect her. [Harry] reminds him of her
+because he is her son, and every time [Harry] looks up, Severus sees [Lily]'s
+eyes. [Neville], though, *also* plays a unique role in [Lily]'s death, because
+when Severus heard the prophecy, when he informed [Riddle] of those first few
+phrases, Severus did not expect [Riddle] to target the [Potters]. Why not?
+Because while two boys were born at the end of the seventh month, Severus had
+spent *years* immersed in pure-blood ideology. Not just the two or three years
+since graduation, but the seven years of being a student in [Slytherin] House,
+Severus has lived surrounded with the idea that pure-bloods are better, more
+important, more powerful, *more of a threat*. So of course Severus *expected*
+that [Riddle] would target the pure-blood child, not the half-blood. Then
+[Lily], the object of his obsession, dies, and [Neville], the child who Severus
+expected to die, instead lives. In Severus' mind, it is [Harry]'s fault that
+[Lily] died. But in a twisted way, it is *also* [Neville]'s fault, *for failing
+to be a sufficient threat*. If [Neville] had been a greater threat, [Riddle]
+would have targeted the [Longbottoms] instead of the [Potters]. Every time
+[Neville] makes a mistake, it is one more reminder that he failed to scare
+[Riddle], and thus "caused" [Lily] to die.
 
-In Severus' mind, [Neville] *must* be punished for this failure to, *as a toddler*, threaten [Riddle],
-and thus save [Lily].  Never mind that, as I said, [Neville] *was a toddler.* Never mind that
-he *has* been punished, growing up with parents that do not know him.  Never mind that the whole
-situation happened because of Severus and [Riddle], and not because of anything *either* child did. 
-This is not the actions of a well adjusted, healthy person.  The only way to make a "good" person
-out of this behavior is to accept that Severus is severely mentally damaged. His behavior is 
-emotionally abusive towards both boys.  Yes, in ways that society *probably* did not recognize
-in the even 1990s time period the books take place in, and *certainly* did not recognize in the
-Dickensian version of Great Britain that the magical world appears to exist in, but never the less
-clearly unacceptable.  
-
-While I have, in the preceding sections explored that Severus' backstory with
-[James] is ambiguous, but allows that [James] crossed lines and deserved punishment, *none of that
-back story matters.*  Severus accepted a job as teacher, not just in some random school, but in the
-school that he knew would remind him of these events.  The onus was on *him* as, as both the adult in
-in the situation, and as the person with massively imbalanced authority, to put the past in the past.
-If he could not do this, then whatever unknown oath he made to do better, to protect, to fight the evils
-that he had been, demanded, in spirit if not in the letter of the wording, that he resist the appointment.
-That he not *become* the problem he was supposed to *combat*; that he break the cycle of abuse.  That he failed to do so speaks loudly. 
+In Severus' mind, [Neville] *must* be punished for this failure to, *as a
+toddler*, threaten [Riddle], and thus save [Lily]. Never mind that, as I said,
+[Neville] *was a toddler.* Never mind that he *has* been punished, growing up
+with parents that do not know him. Never mind that the whole situation happened
+because of Severus and [Riddle], and not because of anything *either* child did.
+This is not the actions of a well adjusted, healthy person. The only way to make
+a "good" person out of this behaviour is to accept that Severus is severely
+mentally damaged. His behaviour is emotionally abusive towards both boys. Yes,
+in ways that society *probably* did not recognize in even the 1990s time period
+the books take place in, and *certainly* did not recognize in the Dickensian
+version of Great Britain that the magical world appears to exist in, but
+nevertheless clearly unacceptable.
 
 [Potters]: /Harrypedia/people/Potter
 [Neville]: </Harrypedia/people/Longbottom/Neville>
 [Longbottoms]: /Harrypedia/people/Longbottom
 [Slytherin]: /Harrypedia/Hogwarts/Slytherin
+[boggart]: /Harrypedia/magic/creatures/boggart/
 
+### The Onus Was on Him
+
+While I have, in the preceding sections, explored that Severus' backstory with
+[James] is ambiguous, but allows that [James] crossed lines and deserved
+punishment, *none of that backstory matters.* Severus accepted a job as teacher,
+not just in some random school, but in the school that he knew would remind him
+of these events. The onus was on *him*, as both the adult in the situation, and
+as the person with massively imbalanced authority, to put the past in the past.
+If he could not do this, then whatever unknown oath he made to do better, to
+protect, to fight the evils that he had been, demanded, in spirit if not in the
+letter of the wording, that he resist the appointment. That he not *become* the
+problem he was supposed to *combat*; that he break the cycle of abuse. That he
+failed to do so speaks loudly.
+
+### Head of House
 
 His behaviour as Head of House is another issue. Again, it is not something that
 the DMLE could take exception to, except in that if he had had a trial, and if
@@ -288,6 +287,8 @@ failure to punish them is neglect. His covering for them is teaching them to
 disregard moral standards. His behaviour implicitly and sometimes explicitly
 rewards bad behaviour. This is a problem.
 
+### The Shrieking Shack
+
 Severus's behaviour during [Harry]'s third year, and particularly during the
 confrontation in the Shrieking Shack, is enlightening. He enters the scene "full
 of suppressed triumph"[^210510-3], proceeds to look fanatical[^210510-4], and
@@ -305,6 +306,8 @@ insight into Snape's character.[^210523-2]
 
 [Lupin]: </Harrypedia/people/Lupin/Remus John>
 
+### The Return of Riddle
+
 As [Riddle] returns, what does Snape know about his activities? What could he
 have told [Dumbledore] but chooses to hold back? What does he tell [Dumbledore]
 publicly (at least in front of other Order members) versus what he shares in
@@ -316,6 +319,8 @@ knowing these answers is also important to assess _[Dumbledore]_ - for while he
 faced the classic problem of when to act on knowledge gained from a spy, his
 inaction cannot be wholly excused.
 
+### Headmaster
+
 Severus becomes Headmaster during what would have been [Harry]'s seventh year.
 We get only a few glimpses of his tenure. We know that he catches [Ginny]
 attempting to steal the sword for [Harry]; he must have had access to her
@@ -323,15 +328,18 @@ unprotected mind, but he assigns her detention with _Hagrid._ [Harry] is right,
 [Ron] is wrong; that was not intended as a serious detention. How much worse
 would [Hogwarts] have been had a different Death Eater been Headmaster? How much
 could Severus have done to curb problems that he did not do? We cannot know. We
-know he helped some at least.
+know he helped some at least.  Just as we've clearly identified some problems,
+this period is equally clearly an indication in his favour. 
 
 [Ron]: </Harrypedia/people/Weasley/Ronald Bilius>
 [Ginny]: </Harrypedia/people/Weasley/Ginevra Molly>
 
+### The Final Memories
+
 Severus is trying to reach [Harry] when [Riddle] decides [Harry] must die. He
-(Severus) uses his the last of his strength to give [Harry] memories necessary
-for [Harry] to finally have a true understanding of the situation. At least some
-of this is because Severus is committed to following [Dumbledore]'s plans. The
+(Severus) uses the last of his strength to give [Harry] memories necessary for
+[Harry] to finally have a true understanding of the situation. At least some of
+this is because Severus is committed to following [Dumbledore]'s plans. The
 extra memories of Severus's life are, in my opinion, necessary if [Harry] is to
 believe the final, critical memories of Severus's interactions with
 [Dumbledore]. The extra memories are not, I think, _entirely_ altruistic
@@ -345,6 +353,8 @@ more important to Severus, _except,_ perhaps, that [James]'s son might suffer
 more. These memories can achieve both. If [Lily]'s son must die, then Severus
 was going to get everything he could out of it. I think his motivation was thus
 complex.
+
+### Summation
 
 For Severus _is_ a complex character. He was not irredeemable, and even though
 he is fictional, there are enough questions about his life that I cannot judge
@@ -366,6 +376,7 @@ Oracle][ffnvo2]_.[^210603-1]
 [ffnvo1]: https://www.fanfiction.net/s/4627044/4/Veritas-Oracle
 [ffnvo2]: https://www.fanfiction.net/s/4627044/
 [lc1]: http://www.the-leaky-cauldron.org/features/essays/issue18/snapeandmalfoys/
+[Harry]: </Harrypedia/people/Potter/Harry James>
 
 [^210603-1]:
     BajaB. _[Veritas Oracle](https://www.fanfiction.net/s/4627044/)_
@@ -439,13 +450,6 @@ Oracle][ffnvo2]_.[^210603-1]
     Mrs. J. K. Rowling. _Harry Potter and the Deathly Hallows_. Chapter 33.
     Pottermore. American Kindle Edition.
     https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows
-
-[^210106-1]:
-    Mrs. J. K. Rowling. _Harry Potter and the Deathly Hallows_. Chapter 33.
-    Pottermore. American Kindle Edition.
-    https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows
-
-[^210106-2]: citation needed.
 
 [^210106-3]:
     Mrs. J. K. Rowling. _Harry Potter and the Deathly Hallows_. Chapter 33.

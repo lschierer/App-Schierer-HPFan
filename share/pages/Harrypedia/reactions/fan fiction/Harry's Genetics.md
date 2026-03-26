@@ -57,7 +57,7 @@ wrongs (or more) wrongs do not make a right.
 [Lily]: </Harrypedia/people/Evans/Lily J/>
 [Snape]: /Harrypedia/people/Snape/Severus/
 [Harry]: </Harrypedia/people/Potter/Harry James/>
-[Snape's Worst Memory]: /Harrypedia/people/Snape/Severus/swm/
+[Snape's Worst Memory]: </Harrypedia/reactions/fan fiction/Snapes Worst Memory>
 [James]: /Harrypedia/people/Potter/James/
 [Sirius]: </Harrypedia/people/Black/Sirius III/>
 
