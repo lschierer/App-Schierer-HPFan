@@ -60,6 +60,7 @@ sub searches_index ($self, $ctx) {
       sidebar      => 1,
       nav_html     => $navigation_html,
       site_logo    => $self->site_logo,
+      content      => '',
     }
   );
 }

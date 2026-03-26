@@ -1,0 +1,6 @@
+[%# cspell: ignore kudosed %]
+[% WRAPPER layouts/default.tt %]
+<article>
+ [% content %] 
+</article>
+[% END %]
