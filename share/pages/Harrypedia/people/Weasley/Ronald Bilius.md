@@ -1,5 +1,12 @@
 When you first read the [Harry] Potter books for the first time, you cannot help
-but like Ron. In retrospect, the fact that when [Harry] tells Ron something of
+but like Ron. When you start to read either fan fiction or commentary on the series,
+you will almost immediately encounter examples of "Ron Bashing."  While I believe
+that the common perception of Ron is [unjustified], he is, as many of the characters
+in the series are, a morally gray figure who deserves careful consideration. 
+
+[unjustified]: </Harrypedia/people/Weasley/Ronald Bilius/In fan Fiction>
+
+In retrospect, the fact that when [Harry] tells Ron something of
 the Dursleys, "This seemed to cheer Ron up"[^20200728-2] is a bit of
 foreshadowing. Still, the boy was eleven; he was embarrassed by his own
 (perceived) poverty, that much is normal and understandable in anyone. If
@@ -122,7 +129,7 @@ things Ron does, in which [Harry] is not driven by the same things Ron is. Thus
 [Harry] must want the attention just as much as Ron does. Harry's protests about
 disliking his fame are taken as face saving, meaningless protestations, because
 who wouldn't like being famous? [Harry]'s money is such an issue because Ron
-focuses on his own desires for money, but really cannot picture [Harry]'s lack
+focuses on his own desires for money, but really cannot picture the lack
 of support structure that gives [Harry] that money. Similarly [Harry] must be
 interested in [Hermione] _that way_[^20210504-1] because Ron is interested in
 her _that way,_ and [Harry] cannot _really_ be interested in [Ginny] _that way_
@@ -139,56 +146,6 @@ is now ready to face true hardship, with far fewer self delusions about his own
 capabilities. His growth may have been forced on him, but he has, at least in
 part, risen to the challenge.
 
-### Ron in Fan Fiction
-
-It would be very very easy to bash Ron in any fan fiction, and very very hard
-write a fan fiction in which he actually deserves the prefect's badge he gets,
-or the happy ending of the cannon epilogue. Despite my own positive words about
-him as he returns to [Harry] and [Hermione] in the forest, I think the side
-comment about confounding the driving examiner shows that Ron still has a ways
-to go. Thus, I would, if they were real people, worry about his and [Hermione]'s
-marriage. Ron has shown solid signs of growth over the latter half of the
-seventh book, but his anger issues are major red flags, and it is hard to feel
-confident that he has really matured past the jealousies that have up through
-the seventh book been a core part of his character.
-
-For all my criticism of Ron, there are places where I feel many authors go too
-far, one way or the other. On one hand, Ron is good at chess, therefore he is a
-master strategist who, with just a little extra reading (or maybe even with no
-extra study at all), is a master of military strategy, small unit tactics, and
-sometimes even related fields. On the other hand, because Hermione berates him
-for his study habits, Ron is an ignoramus, a buffoon, and at times a poltroon.
-
-Both of these are over simplified caricatures of Ron's true character. Ron gets
-the same seven owls that Harry gets, albeit with lower grades.[^20210618-5] That
-being said, his grades could not be _that_ much lower. [Professor
-McGonagall][MM1] does not accept students with "Acceptable" into her N.E.W.T.
-class,[^20210618-6] and we have no reason to think that [Professor
-Flitwick][FF1] has a differing policy. This means that Ron's grades differ from
-[Harry]'s by one letter in one class, not counting history, in which Ron might
-well have done _better_ than [Harry].
-
-The problem is that the chess master version of Ron should do better, and the
-jock version of Ron should not be able to do this much. Military academies
-_teach_ strategy, analysis of enemy patterns, tactics, and so on. None of these
-are fields Ron can realistically pick up almost overnight. If he could, then he
-would be one of those incredibly annoying students, of whom I have run into more
-than one, who simply do not need to study to effortlessly get top marks. On the
-other hand, if he is an idiot, no amount of copying [Hermione]'s homework would
-allow him to get seven O.W.L.s with at least five Exceeds Expectations with a
-practical portion for many (all?) of the ones he did (relatively) well in. Sure,
-Ron does not get top marks, but he is expected to be able to at least pass the
-advanced N.E.W.T classes.
-
-The other place that fan fiction authors do Ron an injustice is his supposed
-intolerant attitude towards all things [Slytherin]. In an admittedly cursory
-review of the first book to review my own impressions, I can find only one
-biased remark from Ron on the topic, when he discusses his upcoming sorting with
-[Harry] while still on the train. He states that he cannot imagine what would
-become of him if sorted into [Slytherin], but he is hardly happier with the
-thought of [Ravenclaw].[^221213-1]. Other than that, Ron's comments seem to
-largely stem from a fairly black and white view of the world and [Malfoy]'s over
-the top behaviour.
 
 [Slytherin]: /Harrypedia/Hogwarts/Slytherin/
 [Ravenclaw]: /Harrypedia/Hogwarts/Ravenclaw/

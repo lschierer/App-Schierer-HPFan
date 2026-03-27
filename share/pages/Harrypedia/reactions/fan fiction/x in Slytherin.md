@@ -113,3 +113,70 @@ that quarter. [Riddle] would have no need of a revolution.
     I have seen this done, but I don't have the particular works on hand as I
     write this.
 
+
+#### Harry's Sorting in Particular
+
+The sorting is increasingly a sore point for me. A huge body of fan fiction
+authors want to put Harry in Slytherin. I know why - they are listening to the
+Sorting Hat:
+
+> "Hmm," said a small voice in his ear. "Difficult. Very difficult. Plenty of
+> courage, I see. Not a bad mind either. There's talent, oh my goodness, yes and
+> a nice thirst to prove yourself, now that's interesting. . . . So where shall
+> I put you?"
+>
+> Harry gripped the edges of the stool and thought, _Not Slytherin, not
+> Slytherin._
+>
+> "Not Slytherin, eh?" said the small voice. "Are you sure? You could be great,
+> you know, it's all here in your head, and Slytherin will help you on the way
+> to greatness, no doubt about that no? Well, if you're sure better be
+> GRYFFINDOR!"[^200602-1]
+
+However, are cunning or ambition really defining traits for Harry? He might have
+liked his scar in the first chapters, but do not let the movies fool you, that
+does not last long. Even in that first Leaky Cauldron scene the books describe a
+very different Harry, one who is overwhelmed, not pleased by his fame. Once at
+Hogwarts, Harry finds the attention annoying pretty much right from the start,
+and will spend the next 7 years _hating_ his fame. This dislike of attention
+will grow so strong that Harry will have trouble accepting praise not only for
+being the Boy Who Lived (understandable, he does not remember doing anything to
+earn that) but even for his skills on a broom, the fight with the basilisk, and
+the Tri-Wizard Tournament. He keeps switching between being annoyed when he's
+babied (by Mrs. Weasley or other adults), and crediting everything to luck
+precisely because he _does not_ seek fame.
+
+This does not mesh well with the ambition that [Slytherin] is known for to me.
+Indeed, Harry's loyalty to his friends, his willingness to forgive them with
+very little in the way of a real apology, and readiness to risk everything for
+them speaks more strongly of Hufflepuff than any of his actual actions do of
+[Slytherin].
+
+Originally I thought that Rowling tried too hard to force the parallel between
+Harry and [Riddle], playing up that Harry could have been in [Slytherin] but for
+his choices. A different theory was presented in an interview.[^200731-3] The
+Sorting Hat accidentally attempted to sort _[Riddle]_ and not _Harry_ in
+attempting the placement in [Slytherin]. The Sorting Hat was not intended to sort
+a person with a bit of someone else's soul in them. This confused the hat, and
+as a result it wasn't sure which person's traits to sort based on. The hat, not
+being truly alive, is not really able to reconsider or learn, so it stands by
+its opinions. It will do so until/unless it were to be placed on Harry's head
+after the bit of Riddle's soul is removed.
+
+In short, perhaps the boy that Harry _could_ have been - abused as he was in
+reality (see [more here]) - should have shown more [Slytherin] tendencies, but the actual Harry
+that we see in the books would make a _really really poor_ Slytherin, a fairly
+good Hufflepuff, and an uncertain [Ravenclaw] (depending on how much he would
+have been willing to use that "not a bad mind" mentioned above away from [Ron]'s
+influence).
+
+[more here]: /Harrypedia/child_abuse_in_fiction
+
+[^200731-3]:
+    Mrs. J. K. Rowling et al.
+    "[Anelli, Melissa, John Noe and Sue Upton.<!-- cspell: disable-line --> "PotterCast Interviews J.K. Rowling, part one." PotterCast #130, 17 December 2007.](http://www.accio-quote.org/articles/2007/1217-pottercast-anelli.html)"
+    [Accio-Quote](http://www.accio-quote.org/) Last viewed 2020-07-31.
+
+[^200602-1]:
+    Mrs. J. K. Rowling. _Harry Potter and the Philosopher's Stone_ Location 1527
+    of 3996.

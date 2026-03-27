@@ -9,8 +9,19 @@ _Speculation, Analysis and Reference Material for the Harry Potter Universe_
 
 ## Introduction to this Reference
 
-I probably still need to revisit the main page and move some of its content
-here.
+While others, like the [Harry Potter Lexicon][HPL] have a
+more extensive collection of facts that I have unabashedly mined as tertiary or quaternary
+sources for my own notes, I find them ultimately dissatisfying. This is primarily because of the questions surrounding canonicity. The [Harry
+Potter Wiki][HPW] is incredibly liberal in accepting sources, and is not always
+incredibly great about having accurate footnotes. The [Lexicon][HPL2] is much
+more conservative about sources, though even worse about documenting _which_
+source a particular fact comes from. However even at their most conservative,
+both of them include things that I am reluctant to include in my personal list
+of "canonical" sources.[^1]
+
+I have, in writing this, tried very hard to indicate where I am providing strictly reference material, versus any sort of speculation or analysis
+based off of that reference material.  As you read through the material on this site, I believe the analysis sections will begin to form
+a reasonably coherent narrative about a series that is not *really* children's literature at all. 
 
 ## My Own Sources
 
@@ -54,3 +65,16 @@ Reasonable Inference based on the above such as, but not limited to
 
 - [Secrets of the Classlist](https://www.goodreads.com/book/show/25464490-secrets-of-the-classlist)
 - [Harry Potter: A Journey Through A History of Magic](https://www.goodreads.com/book/show/36068753-harry-potter)
+- Video games are used only as sources for spell names, and only where I can find a supporting source that the authors worked with Mrs. Rowling and not entirely independently. 
+
+[Fantastic Beasts]: https://wikipedia.org/wiki/Fantastic_Beasts
+[HPL3]: https://www.hp-lexicon.org/
+[RUT]: https://www.schierer.org/~luke/log
+[HPL]: https://www.hp-lexicon.org/
+[HPW]: https://harrypotter.fandom.com/wiki/Main_Page
+[HPL2]: https://www.hp-lexicon.org/
+
+[^1]:
+    The [Lexicon][HPL3] for example makes inconsistent use of the [Fantastic
+    Beasts] movies per its [statement](https://www.hp-lexicon.org/canon/) on the
+    topic.
