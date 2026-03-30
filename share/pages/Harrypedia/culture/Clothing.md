@@ -63,7 +63,7 @@ think that academic dress, being synonymous with formal wear, would be more
 expensive than the essentially non-magical clothing that she says magical folk
 tend to wear "day to day."[^220630-2] 
 
-[Snape’s Worst Memory]: </Harrypedia/reactions/fan fiction/Snapes Worst Memory>
+[Snape’s Worst Memory]: </Harrypedia/reactions/Snape's Worst Memory>
 [Merlin]: /Harrypedia/people/Unknown/Merlin
 [minor orders]: https://en.wikipedia.org/wiki/Minor_orders
 [Mrs. Weasley]: /Harrypedia/people/Prewett/Molly

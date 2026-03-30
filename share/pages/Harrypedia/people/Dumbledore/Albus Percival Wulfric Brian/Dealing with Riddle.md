@@ -176,8 +176,8 @@ have truly helped.
 [Culture]: /Harrypedia/culture/
 [ICW]: /Harrypedia/culture/
 [History]: /Harrypedia/History/
-[horcruxes]: /Harrypedia/magic/dark/Horcruxes/
-[Horcruxes]: /Harrypedia/magic/dark/Horcruxes/
+[horcruxes]: /Harrypedia/magic/dark/Horcrux/
+[Horcruxes]: /Harrypedia/magic/dark/Horcrux/
 [Lupin]: </Harrypedia/people/Lupin/Remus John/>
 [Kingsley]: /Harrypedia/people/Shacklebolt/Kingsley/
 [Moody]: /Harrypedia/people/Moody/Alastor/

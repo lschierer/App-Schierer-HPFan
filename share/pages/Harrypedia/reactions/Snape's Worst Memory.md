@@ -4,6 +4,7 @@ title: >-
 author: Luke Schierer
 sidebar:
   order: 99
+# cspell: ignore WitandAmbition
 ---
 Any attempt to understand [Sirius], [Lily], [James], [Snape], the relationships
 (both positive and negative) between them, and yes, even to some extent even
@@ -289,7 +290,6 @@ do _not_ relax around them. [Snape] would have picked _anywhere_ else on the
 grounds. He would have _stayed inside_ rather than willingly putting himself at
 risk that way.
 
-<!-- cspell: disable-next-line -->
 On a side note, in his work _[Toxic]_, WitandAmbition makes very similar points, but focuses more on [Lily] and [Snape] starting further back in time to paint much the same picture.
 
 [Toxic]: https://www.fanfiction.net/s/12795425/2/Toxic
@@ -343,7 +343,7 @@ This would draw [Snape] deeper and deeper into [Riddle]'s atrocities and soul
 corrupting influence. You simply cannot be around such people without their evil
 rubbing off on you.
 
-[Riddle]: <../../Riddle/Tom Marvolo>
+[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
 
 People criticising [Lily] are essentially pushing her towards missionary dating.
 It is not _precisely_ the same situation, but it is close enough. Sure you can

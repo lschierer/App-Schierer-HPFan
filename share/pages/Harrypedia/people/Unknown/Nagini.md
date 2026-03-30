@@ -20,5 +20,5 @@ are left with an information gap - who, precisely, was she before she became
 [HPWMaledictus]: https://harrypotter.fandom.com/wiki/Maledictus?action=history
 [maledictus]: /Harrypedia/magic/dark/Maledictus
 [tertiary sources]: /Harrypedia#teriary-sources
-[horcrux]: /Harrypedia/magic/dark/Horcruxes
+[horcrux]: /Harrypedia/magic/dark/Horcrux
 [Riddle]: <../Riddle/Tom Marvolo>

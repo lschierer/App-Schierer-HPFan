@@ -42,7 +42,7 @@ For a detailed analysis of the key fifth-year events that shape our perception
 of James — the lakeside incident, the question of memory tampering, and the
 break between [Lily] and [Snape] — see [Snape's Worst Memory][SWM].
 
-[SWM]: </Harrypedia/reactions/fan fiction/Snapes Worst Memory>
+[SWM]: </Harrypedia/reactions/Snape's Worst Memory>
 
 ### James and Lily
 

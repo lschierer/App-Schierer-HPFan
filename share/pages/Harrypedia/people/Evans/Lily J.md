@@ -2,9 +2,9 @@ Almost all of our facts about Lily come from [Snape]'s [Worst Memory], or his
 dying memory dump. I do not regard either as a wholly reliable and unbiased
 source. See my thoughts on the [pensieve].
 
-[pensieve]: /Harrypedia/magic/time/pensieve/
-[Snape]: /Harrypedia/people/Snape/Severus/
-[Worst Memory]: </Harrypedia/reactions/fan fiction/Snapes Worst Memory>
+[pensieve]: /Harrypedia/magic/time/pensieve
+[Snape]: /Harrypedia/people/Snape/Severus
+[Worst Memory]: </Harrypedia/reactions/Snape's Worst Memory>
 
 - She had an antagonistic relationship with [James] minimally through their
   fifth year.
@@ -25,6 +25,34 @@ source. See my thoughts on the [pensieve].
     Last Edited: 2021-09-21. Last Viewed: 2021-09-27.
 
 ### Speculation
+
+#### Academic Prowess 
+
+The popular opinion is that Lily was the top student of her year, easily exceeding [James]' ability in not just [Charms] and [Potions], but also
+[Ancient Runes], [Arithmancy], and sometimes even [Transfiguration].  We have no indication at all what electives either of them took. We have no 
+clue what the relative standings of either of them were in the electives they may or may not have taken.  It seems *likely* that to do exceptionally well in [Potions]
+requires a fair degree of proficiency at [Arithmancy], but we do not *know* that.
+
+My personal guess, based on the fact that [McGonagall] states that [James] and [Sirius] excelled at their studies,[^260330-1] is that she *would* have needed
+to compete with [James] and [Sirius] for the top place in the more prestigious electives, that while both may have been rebels to differing extents, they did
+not allow that to significantly harm their grades.  In fact, I suspect this was an additional source of frustration for the young Ms. Evans.  A generation later, [Hermione]
+would be able to tell the twins [Fred] and [George] off for neglecting their class work while focusing on pranks.  Lily could not do that - her nemesis did *both* well. 
+
+In fact, I suspect she had a rivalry thing going on.  She *wanted* to show them up, but had to work at it, and probably only sometimes succeeded.  That probably angered her a great deal. 
+
+That doesn't mean she *wasn't* brilliant.  It just means that they were even more so (before [Azkaban] damaged [Sirius]).
+
+[Ancient Runes]: /Harrypedia/magic
+[Arithmancy]: /Harrypedia/magic/arithmancy
+[Potions]: /Harrypedia/magic/potions
+[Transfiguration]: /Harrypedia/magic/transfiguration
+[Charms]: /Harrypedia/magic
+[Hermione]: </Harrypedia/people/Granger/Hermione Jean>
+[Fred]: </Harrypedia/people/Weasley/Fred>
+[George]: </Harrypedia/people/Weasley/George>
+[Azkaban]: /Harrypedia/Azkaban
+[Sirius]: </Harrypedia/people/Black/Sirius III>
+[McGonagall]: /Harrypedia/people/McGonagall/Minerva
 
 #### Personality
 
@@ -48,7 +76,7 @@ which I am inclined to dismiss as the movie's overall tendency to lionise the
 females in the series at the expense of the males.[^20210927-2]
 
 [GAFRIW]: https://www.fanfiction.net/s/6126906
-[James]: /Harrypedia/people/Potter/James/
+[James]: /Harrypedia/people/Potter/James
 
 [Harry]: </Harrypedia/people/Potter/Harry James> 
 [Lupin]: </Harrypedia/people/Lupin/Remus John>
@@ -64,3 +92,5 @@ females in the series at the expense of the males.[^20210927-2]
     [MuggleNet](https://www.mugglenet.com/) from 2015-09-07, does a reasonable
     job introducing this topic, even if she only covers some of the possible
     instances.
+
+[^260330-1]: Mrs. J. K. Rowling. _[Harry Potter and the Prisoner of Azkaban]_. American Kindle Edition. 

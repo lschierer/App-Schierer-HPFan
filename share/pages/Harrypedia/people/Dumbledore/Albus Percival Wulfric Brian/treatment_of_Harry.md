@@ -237,8 +237,8 @@ of the thorny problem to confuse the listener.
 [Narcissa Malfoy]: /Harrypedia/people/Black/Narcissa/
 [Dorea Black]: /Harrypedia/people/Black/Dorea/
 [James]: /Harrypedia/people/Potter/James/
-[horcrux]: /Harrypedia/magic/dark/Horcruxes/
-[horcruxes]: /Harrypedia/magic/dark/Horcruxes/
+[horcrux]: /Harrypedia/magic/dark/Horcrux/
+[horcruxes]: /Harrypedia/magic/dark/Horcrux/
 [CAD1]: https://fanfictalk.com/archive/viewstory.php?sid=721
 [BW95TSS1]: https://www.fanfiction.net/s/12175260
 [WSM1]: https://www.gutenberg.org/cache/epub/1533/pg1533-images.html.utf8.gzip

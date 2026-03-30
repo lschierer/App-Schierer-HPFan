@@ -39,7 +39,7 @@ described.
 
 [James]: /Harrypedia/people/Potter/James/
 [Hagrid]: /Harrypedia/people/Hagrid/Rubeus/
-[Flitwick]: /Harrypedia/people/Flitwick/Filus/
+[Flitwick]: /Harrypedia/people/Flitwick/Filius/
 
 Interestingly, I have noted a similar issue with girls in at least one fan
 fiction.[^220726-8] The key consideration is that girls' growth drastically

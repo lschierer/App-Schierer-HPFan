@@ -5,7 +5,7 @@ title: Raczidian
 Person who died in a particularly grotesque way upon performing the [Patronus]
 charm.[^241222-1]
 
-[Patronus]: /Harrypedia/magic/spells/patronus/
+[Patronus]: </Harrypedia/magic/spells/patronus charm>
 
 [^241222-1]:
     Mrs. J. K. Rowling (as [Miranda Goshawk]). _[Book of Spells]_

@@ -157,7 +157,7 @@ they had more backbone, I have to believe they have the connections to have made
 their opinions known.
 
 [Sprout]: /Harrypedia/people/Sprout/Pomona/
-[Flitwick]: /Harrypedia/people/Flitwick/Filus/
+[Flitwick]: /Harrypedia/people/Flitwick/Filius/
 [Fudge]: </Harrypedia/people/Fudge/Cornelius Oswald/>
 
 With this history of either following [Dumbledore][AD1]'s lead as blindly and

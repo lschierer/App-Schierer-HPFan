@@ -69,7 +69,7 @@ about this distinction ourselves.
 [Google Search]:
   https://www.google.com/search?sca_esv=bf58db3f14c3f703&rlz=1C5GCEM_en&q=Cooperation+with+Evil+classification+Material+Media+Remote+Cooperation&source=lnms&fbs=ABzOT_CWdhQLP1FcmU5B0fn3xuWpA-dk4wpBWOGsoR7DG5zJBtqPJOgc7yJ5Xg-RjMdZnmk4RrI5w0MKoJUbQ5FjI-XxWYgrLPY6u5O9KihENz-HG5jzV9g8XZ9W_0Y4xalx2A26PKJluZFNRwbz5oOYS6wPr18DVKNSci5f5w4jqYWZkIoXnrcu-W1mc-L1sHPFcN07dcYubBDMWECRRoEprovL6-AnXSmIwMXD60YvNOBnVUCwvuk&sa=X&ved=2ahUKEwj3yY3K_ZSNAxXXEFkFHSylCwUQ0pQJegQIDxAB&biw=1353&bih=1249&dpr=2
 [Lupin]: </Harrypedia/people/Lupin/Remus John/>
-[horcrux]: /Harrypedia/magic/dark/Horcruxes/
+[horcrux]: /Harrypedia/magic/dark/Horcrux/
 [inferi]: /Harrypedia/magic/dark/Inferius/
 [werewolf]: /Harrypedia/beings/werewolves/
 [Archdiocese of Philadelphia]: https://archphila.org/

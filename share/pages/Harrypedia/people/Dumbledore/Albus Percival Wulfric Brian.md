@@ -157,7 +157,7 @@ praise, or giving him what little credit is due.
 [HS]: </Harrypedia/people/Slughorn/Horace Eugene Flaccus/>
 [Hogwarts]: /Harrypedia/Hogwarts/
 [Harry]: </Harrypedia/people/Potter/Harry James/>
-[DMH1]: /Harrypedia/magic/dark/Horcruxes/
+[DMH1]: /Harrypedia/magic/dark/Horcrux/
 
 [ADphil]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/Philosophy>
 [ADtoh]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/treatment_of_Harry>

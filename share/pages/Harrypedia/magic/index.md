@@ -262,7 +262,7 @@ concept of "evil" is unclear, and is further discussed [on it's own page][dark].
 
 These are a huge topic, and need their own [page][Horcruxes] as well.
 
-[Horcruxes]: /Harrypedia/magic/dark/Horcruxes/
+[Horcruxes]: /Harrypedia/magic/dark/Horcrux/
 
 #### Unforgivables
 

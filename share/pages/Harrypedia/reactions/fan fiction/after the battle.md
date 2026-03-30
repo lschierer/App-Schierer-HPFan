@@ -68,7 +68,7 @@ pet peeves I have where I think authors frequently go wrong.
   - The inverse is equally weird. [Ginny] _is_ fiercely independent, but equally
     fiercely loves her family.
 
-[horcrux]: /Harrypedia/magic/dark/Horcruxes
+[horcrux]: /Harrypedia/magic/dark/Horcrux
 
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
 [Harry]: </Harrypedia/people/Potter/Harry James>

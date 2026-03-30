@@ -7,13 +7,13 @@ title: Teachers
 
 - [Albus Dumbledore][Dumbledore]
 - [Cuthbert Binns][Binns]
-- [Filus Flitwick][Flitwick]
+- [Filius Flitwick][Flitwick]
 - [Minerva McGonagall][McGonagall]
 - [Severus Snape][Snape]
 
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
 [Binns]: /Harrypedia/people/Binns/Cuthbert
-[Flitwick]: /Harrypedia/people/Flitwick/Filus
+[Flitwick]: /Harrypedia/people/Flitwick/Filius
 [McGonagall]: /Harrypedia/people/McGonagall/Minerva
 [snape]: /Harrypedia/people/Snape/Severus
 

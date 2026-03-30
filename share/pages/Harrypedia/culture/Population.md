@@ -141,12 +141,11 @@ them full benefit of the doubt as I analyse what goes on across the books.
 
 [The Ancient Proliferation Covenant]: https://archiveofourown.org/works/38270980 
 
-[magical marriage laws]: /Harrypedia/magic/contracts 
+[magical marriage laws]: /Harrypedia/magic/Contracts 
 
 [WolfgangNH]: https://archiveofourown.org/users/WolfgangNH/pseuds/WolfgangNH 
 
-[CaHS]: /Harrypedia/Hogwarts/class_and_house_structure/ 
-
+[CaHS]: </Harrypedia/Hogwarts/Class and House Structure>
 [Hogwarts]: /Harrypedia/Hogwarts
 
 [^240319-5]:

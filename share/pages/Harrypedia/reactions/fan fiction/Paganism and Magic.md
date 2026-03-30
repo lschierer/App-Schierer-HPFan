@@ -44,6 +44,6 @@ they are not exposed to the idea, that the magic they so casually use across
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
 [Egyptian]: /Harrypedia/Egypt
 [Osiris]: https://wikipedia.org/wiki/Osiris
-[horcruxes]: /Harrypedia/magic/dark/Horcruxes
+[horcruxes]: /Harrypedia/magic/dark/Horcrux
 [immmigration]: /Harrypedia/culture/Immigration
 [Hogwarts]: /Harrypedia/Hogwarts

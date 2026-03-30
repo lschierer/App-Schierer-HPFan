@@ -131,7 +131,7 @@ his public face at all related to his private goals?
 [RBW]: </Harrypedia/people/Weasley/Ronald Bilius/>
 [MM]: /Harrypedia/people/McGonagall/Minerva/
 [PS]: /Harrypedia/people/Sprout/Pomona/
-[FF]: /Harrypedia/people/Flitwick/Filus/
+[FF]: /Harrypedia/people/Flitwick/Filius/
 
 <!-- cspell: disable -->
 

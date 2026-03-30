@@ -79,8 +79,8 @@ I absolutely love the way it is described in _[Faerie Godmother]_,
 [Grindelwald]: /Harrypedia/people/Grindelwald/Gellert
 [Tom Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
-[Snape's Worst Memory]: </Harrypedia/reactions/fan fiction/Snapes Worst Memory>
-[worst memory]: </Harrypedia/reactions/fan fiction/Snapes Worst Memory>
+[Snape's Worst Memory]: </Harrypedia/reactions/Snape's Worst Memory>
+[worst memory]: </Harrypedia/reactions/Snape's Worst Memory>
 [Hogwarts]: /Harrypedia/Hogwarts
 [Black Family Tree]: https://www.rowlingindex.org/work/blacktree
 [James]: /Harrypedia/people/Potter/James

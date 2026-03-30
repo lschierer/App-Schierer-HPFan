@@ -96,7 +96,7 @@ Portrait in some way, given it cannot be moved?
 [Harry]: </Harrypedia/people/Potter/Harry James>
 [Dorea]: /Harrypedia/people/Black/Dorea
 [Harry Potter Wiki]: https://harrypotter.fandom.com/wiki
-[horcrux]: /Harrypedia/magic/dark/Horcruxes
+[horcrux]: /Harrypedia/magic/dark/Horcrux
 [Ministry]: /Harrypedia/culture/Government
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
 [unplottable]: /Harrypedia/magic/spells/unplottable

@@ -113,10 +113,10 @@ It is reasonable to accept that [Lupin][] both believed him guilty and would
 have been unable to demand a trial. Why, however, did none of [Dumbledore][],
 [Andromeda][] Black, or his own blood family demand a trial?
 
-[Harry]: </Harrypedia/people/Potter/Harry James/>
-[Lupin]: </Harrypedia/people/Lupin/Remus John/>
-[Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/>
-[Andromeda]: /Harrypedia/people/Black/Andromeda/
+[Harry]: </Harrypedia/people/Potter/Harry James>
+[Lupin]: </Harrypedia/people/Lupin/Remus John>
+[Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
+[Andromeda]: /Harrypedia/people/Black/Andromeda
 
 Lets start with the easy ones: [Arcturus][], [Pollux][], and [Walburga][] Black.
 We know that [Walburga][] hated her son, enough to want him disowned. We further
@@ -233,5 +233,4 @@ level upon him? Much of this hinges on the [effects of Azkaban][].
 [Snape]: /Harrypedia/people/Snape/Severus
 [Walburga]: /Harrypedia/people/Black/Walburga
 
-<!-- cspell: disable next line -->
-[SWM]: </Harrypedia/reactions/fan fiction/Snapes Worst Memory>
+[SWM]: </Harrypedia/reactions/Snape's Worst Memory>

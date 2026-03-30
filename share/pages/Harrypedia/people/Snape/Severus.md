@@ -17,13 +17,13 @@ that Severus calls it funny, and [Lily] calls it evidence of Mulciber being
 I think we _can_ trust him when he says that Severus's interest in the [Dark
 Arts] was well known.[^210601-1]
 
-[Dark Arts]: /Harrypedia/magic/dark/
-[Dark Magic]: /Harrypedia/magic/dark/
-[dark]: /Harrypedia/magic/dark/
-[dark magic]: /Harrypedia/magic/dark/
+[Dark Arts]: /Harrypedia/magic/dark
+[Dark Magic]: /Harrypedia/magic/dark
+[dark]: /Harrypedia/magic/dark
+[dark magic]: /Harrypedia/magic/dark
 [Lily]: </Harrypedia/people/Evans/Lily J>
 [Sirius]: </Harrypedia/people/Black/Sirius III>
-[McGonagall]: /Harrypedia/people/McGonagall/Minerva/
+[McGonagall]: /Harrypedia/people/McGonagall/Minerva
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
 
 ### Fifth Year and the Break with Lily
@@ -39,17 +39,14 @@ He refused to believe her aversion to the [Dark Arts] was real or well founded,
 and believed that she would find membership in the Death Eaters
 _impressive_.[^221206-1]
 
-[swm]: </Harrypedia/reactions/fan fiction/Snapes Worst Memory>
-[James]: /Harrypedia/people/Potter/James/
-
-<!-- cspell: disable -->
+[swm]: </Harrypedia/reactions/Snape's Worst Memory>
+[James]: /Harrypedia/people/Potter/James
 
 [^221206-1]:
     Ms. Melissa Anelli and Mrs. J. K. Rowling. 
     "[J.K. Rowling Web Chat Transcript][LCRWC]"
     [The Leaky Cauldron](http://www.the-leaky-cauldron.org) 2007-07-30
 
-<!-- cspell: enable -->
 
 [LCRWC]: http://www.the-leaky-cauldron.org/2007/07/30/j-k-rowling-web-chat-transcript/
 
@@ -68,7 +65,7 @@ superior numbers, and his pranks may certainly have crossed the line into
 bullying behaviour (which is deplorable), but _Severus_ returned fire with
 [dark] magic, whenever [Lily] was not around.
 
-[sectumsempra]: /Harrypedia/magic/spells/sectumsempra/
+[sectumsempra]: /Harrypedia/magic/spells/sectumsempra
 
 [^221220-4]:
     Mrs. J. K. Rowling. _[Harry Potter and the Order of the Phoenix]_ Pottermore
@@ -247,7 +244,7 @@ nevertheless clearly unacceptable.
 [Neville]: </Harrypedia/people/Longbottom/Neville>
 [Longbottoms]: /Harrypedia/people/Longbottom
 [Slytherin]: /Harrypedia/Hogwarts/Slytherin
-[boggart]: /Harrypedia/magic/creatures/boggart/
+[boggart]: /Harrypedia/non-beings/boggart
 
 ### The Onus Was on Him
 

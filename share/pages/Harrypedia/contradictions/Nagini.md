@@ -47,7 +47,7 @@ ultimately self-destruct due to its limited lifespan.
 [dementia]:
   https://web.archive.org/web/20240226212437/https://www.cdc.gov/aging/dementia/
 [Animagus]: /Harrypedia/magic/
-[horcrux]: /Harrypedia/magic/dark/Horcruxes/
+[horcrux]: /Harrypedia/magic/dark/Horcrux/
 
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>

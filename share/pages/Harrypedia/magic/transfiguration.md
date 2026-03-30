@@ -49,7 +49,7 @@ logical soundness?
 [Bill]: </Harrypedia/people/Weasley/William Arthur/>
 [magic]: /Harrypedia/magic/
 [Harry]: </Harrypedia/people/Potter/Harry James/>
-[Flitwick]: /Harrypedia/people/Flitwick/Filus/
+[Flitwick]: /Harrypedia/people/Flitwick/Filius/
 [Snape]: /Harrypedia/people/Snape/Severus/
 [Slughorn]: </Harrypedia/people/Slughorn/Horace Eugene Flaccus/>
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/>

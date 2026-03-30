@@ -4,7 +4,7 @@ you will almost immediately encounter examples of "Ron Bashing."  While I believ
 that the common perception of Ron is [unjustified], he is, as many of the characters
 in the series are, a morally gray figure who deserves careful consideration. 
 
-[unjustified]: </Harrypedia/people/Weasley/Ronald Bilius/In fan Fiction>
+[unjustified]: </Harrypedia/people/Weasley/Ronald Bilius/In Fan Fiction>
 
 In retrospect, the fact that when [Harry] tells Ron something of
 the Dursleys, "This seemed to cheer Ron up"[^20200728-2] is a bit of

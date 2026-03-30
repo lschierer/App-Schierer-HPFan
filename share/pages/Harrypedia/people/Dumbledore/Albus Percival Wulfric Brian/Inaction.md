@@ -161,7 +161,7 @@ couple and [Crouch Jr.]).  If so, that *may* explain *some* of the inaction.
 [AD1]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
 [Bill Weasley]: </Harrypedia/people/Weasley/William Arthur>
 [Hogwarts]: /Harrypedia/Hogwarts
-[Horcruxes]: /Harrypedia/magic/dark/Horcruxes/
+[Horcruxes]: /Harrypedia/magic/dark/Horcrux/
 [Malfoy]: /Harrypedia/people/Malfoy/
 
 [^210915-1]: I am not the first to note this. find citations.
