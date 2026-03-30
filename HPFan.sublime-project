@@ -3,6 +3,7 @@
         { "path" : "." },
         { "path" : "./share/pages", "name" : "Pages" },
         { "path": "./share/Bookmarks", "name": "Bookmarks"},
+        { "path": "./share/magic_glossary", "name": "Magic Glossary"},
     ],
     "settings" : {
         "draw_white_space": "all",
@@ -23,6 +24,14 @@
       "LSP" : {
         "LSP-eslint" : {
             "enabled" : true, "settings" : { "useFlatConfig" : true, }
+        },
+        "LSP-yaml" : {
+            "enabled" : true,
+            "settings" : {
+                "yaml.schemas" : {
+                    "./share/magic_glossary/schema.json": "share/magic_glossary/*.yaml"
+                }
+            }
         },
         "LSP-cspell" : {
             "selector": "text.html.markdown | source.yaml",
@@ -45,6 +54,7 @@
     "LSP",
     "LSP-eslint",
     "LSP-json",
+    "LSP-yaml",
     "LSP-typescript",
     "LSP-cspell",
     "Markdown Extended",

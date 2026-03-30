@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Magic Glossary",
+  "description": "Schema for spell and potion YAML entries in the HP Fan site",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["category", "title", "type", "content"],
+    "additionalProperties": false,
+    "properties": {
+      "category": {
+        "type": "string",
+        "enum": ["spell", "potion"],
+        "description": "Determines the URL base path: /Harrypedia/magic/spells/ or /Harrypedia/magic/potions/"
+      },
+      "title": {
+        "type": "string",
+        "description": "Primary route name. For spells this is typically the incantation (e.g. 'Expecto Patronum'). For potions this is the potion name."
+      },
+      "name": {
+        "type": "string",
+        "description": "Alternate name that gets its own route pointing to the same entry. For spells this is typically the common name (e.g. 'Patronus Charm'). Omit if the same as title."
+      },
+      "type": {
+        "type": "string",
+        "description": "Sub-classification (e.g. 'charm', 'curse', 'hex', 'jinx', 'transfiguration', 'potion')"
+      },
+      "content": {
+        "type": "string",
+        "description": "Markdown body rendered as the page content. Typically includes ## Description and ## Found in sections."
+      }
+    }
+  }
+}
