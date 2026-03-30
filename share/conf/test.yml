@@ -33,3 +33,11 @@ pandoc_modules: []
 
 log_base: Schierer-HPFan
 site_url: https://dev.hp-fan.schierer.org
+
+log_config:
+  default: DEBUG
+  'App::Schierer::HP-Fan': INFO
+  'App::Schierer::HPFan::Controller::Root': DEBUG
+  'WebFramework': INFO
+  'WebFramework::Module::Navigation': DEBUG
+  'WebFramework::Role::Markdown': INFO
