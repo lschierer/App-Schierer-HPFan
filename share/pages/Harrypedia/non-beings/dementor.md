@@ -44,7 +44,7 @@ which is the _embodiment_ of those emotions, repels them? The explanation that
 it is because the [Patronus][] cannot feel despair fails to satisfactorily
 explain.
 
-[Patronus]: /Harrypedia/magic/spells/patronus/
+[Patronus]: </Harrypedia/magic/spells/patronus charm>
 
 [^211021-9]:
     [Harry Potter Wiki](https://harrypotter.fandom.com/wiki)
