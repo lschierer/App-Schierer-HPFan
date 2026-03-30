@@ -535,3 +535,5 @@ Gridelwald
 posesses
 Ottaline
 knockback
+thestral
+thestrals
