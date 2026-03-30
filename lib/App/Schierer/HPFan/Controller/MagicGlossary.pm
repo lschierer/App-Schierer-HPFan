@@ -57,13 +57,21 @@ sub build ($self) {
         { title => $entry->{title}, path => $title_route, type => 'file' };
     }
 
-    # Route for the common name if different from title
+    # Route for the common name if different from title (no nav entry)
     if ($entry->{name}) {
       my $name_slug  = $self->_slug($entry->{name});
       my $name_route = "$base/$name_slug";
 
       unless ($seen{$name_route}++) {
-        $self->_register_entry_route($name_route, $entry);
+        $self->router->add(
+          $name_route,
+          {
+            to => sub ($c, $ctx) {
+              return $self->render_entry($ctx, $entry);
+            },
+            action => 'http.*',
+          }
+        );
       }
     }
   }
