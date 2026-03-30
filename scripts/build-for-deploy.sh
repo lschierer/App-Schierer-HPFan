@@ -13,7 +13,7 @@ pnpm install
 pnpm build
 
 # Preprocess gramps database
-scripts/preprocess_gramps_db
+./scripts/preprocess_gramps_db
 
 # Copy ebook images to public directory
 mkdir -p public/images/HPNOFP
