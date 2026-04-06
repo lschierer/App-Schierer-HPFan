@@ -37,10 +37,8 @@ become so disconnected from his family as _[Cursed Child]_ makes out.
     Mrs. J. K. Rowling. "[J.K.Rowling Official Site]" "[Wizard of the Month
     Archive]" Date unknown.
 
-[J.K.Rowling Official Site]:
-  https://www.therowlinglibrary.com/jkrowling.com/textonly/en
-[Wizard of the Month Archive]:
-  https://www.therowlinglibrary.com/jkrowling.com/textonly/en/wotm.html
+[J.K.Rowling Official Site]: https://www.therowlinglibrary.com/jkrowling.com/textonly/en
+[Wizard of the Month Archive]: https://www.therowlinglibrary.com/jkrowling.com/textonly/en/wotm.html
 
 [^GWJob]: We need two citations:
 
@@ -48,8 +46,6 @@ become so disconnected from his family as _[Cursed Child]_ makes out.
       Screenshot of a Daily Prophet edition: https://imgur.com/a/AXutv and
       [Leaky Cauldron interview]
 
-[Leaky Cauldron interview]:
-  http://www.the-leaky-cauldron.org/2007/07/30/j-k-rowling-web-chat-transcript/
+[Leaky Cauldron interview]: http://www.the-leaky-cauldron.org/2007/07/30/j-k-rowling-web-chat-transcript/
 
-[Harry Potter and the Deathly Hallows]:
-  https://www.librarything.com/work/3577382
+[Harry Potter and the Deathly Hallows]: https://www.librarything.com/work/3577382
