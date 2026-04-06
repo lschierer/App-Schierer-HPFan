@@ -30,10 +30,9 @@
 
 The overall impression I get is that Remus is _familiar_ with the non-magical
 world, but that the movie over-emphasises the extent to which the magical
-world's fashion has kept up with the times. I talk more about that though in the
-[Culture] section.
+world's fashion has kept up with the times. I talk more about that though [here][Clothing].
 
-[Culture]: /Harrypedia/culture/
+[Clothing]: /Harrypedia/culture/Clothing
 
 Of more concern here, I think the movie did much to cement the impression of
 Lupin as not just a bookworm, but as the brains of his group of
@@ -69,9 +68,9 @@ Because of a change that occurs a few nights a year, he holds himself aloof from
 all relationships.[^211202-3] Because he cannot face that disease, he
 (temporarily) abandons his wife. He shows his [Gryffindor] attributes in going
 back to her when his face is sufficiently rubbed in the shame, yes. He deserves
-some credit for that, I maintain however, that the above quote is indeed a fair
+some credit for that. I maintain however, that the above quote is indeed a fair
 summation of the man. I believe he would have, given time and stress, again
-lapsed. He was his fundamental nature to let people down.
+lapsed. His fundamental nature was to let people down.
 
 Worse, it was not just his wife he abandoned. His rationale is both pathetic and
 absurd. He states that because he is a werewolf, his child will probably be a
@@ -79,14 +78,43 @@ werewolf, and will therefore be better off without his/her werewolf father. It
 would, apparently, be better that the child face the disease without the help
 from someone who can empathise with the pain of both the disease and the
 resulting social ostracism. As a werewolf himself, he apparently has nothing of
-value to offer his child on coping with the affliction. As a being, he is
-allowing those nights to define the totality of his contribution to the child's
-life. Like many before him, he has internalised the prejudice against himself,
-and become his own worst enemy.
+value to offer his child on coping with the affliction. He is allowing the 
+*supposed* fact that he infected the child to define the totality of all possible 
+relationship. Like many before him, he has internalised the prejudice against himself,
+and become his own worst enemy. He says acceptance by his friends at [Hogwarts] meant
+everything to him, what would his child have felt, abandoned by his father because
+that child was infected?  And what other interpretation could that child have 
+arrived at?  "I knew you'd be infected, so I didn't want anything to do with you."
+***Not*** "I knew you would ***not*** be infected, and I wanted to avoid risk" but
+"The worst thing possible, that you become a werewolf, ***already has***, so I need
+to stay away from you ***after*** it has."  Nor even "In my monstrous lack of
+self control, I might kill you," but again "you might ***already*** be infected, so 
+*after* I have ruined your life, ***then***, instead of trying to make any amends,
+***then*** I will avoid you."
 
+I ***despise*** Remus Lupin.  
+
+But lest this example of his behavior with [Tonks] be dismissed as an isolated aberation,
+*there is more* -- this is not the first time Lupin has done this "I will abandon you
+because of maybe and might be." No, depending on how you count it, it is the *fourth*
+time. 
+
+- First he does this to [Harry] for many years between knowing him as an infant and
+todler, and meeting him again in [Harry]'s third year.  
+- Second, he abandons [Harry] in his failure to reach out in any meaningful way *during* that third year. 
+  - "I was best friends with your father, knew your mother well, but I will admit that only reluctantly."  That is not a quote, but it *is* a fairly accurate paraphrase of what Lupin does that year.
+  - He knows his best friend's son is in severe need of extra tutalage in an abscure defense spell, but because I don't feel well for a week every month, I need to put off helping you for three months. Never mind this is a recurring condition, so however behind I am now because of that week of illness, I'll be just as behind then. 
+- Third, he abandons [Harry] when he fails to reach out even by letter between third year and the summer after fourth.  
+- I am giving Lupin a pass for the failure to write [Harry] during the school year *durring* fifth and sixth year.  While [Harry] was not aware of it, Lupin presumably knew from the meetings
+  that [Harry] was excluded from that [Harry] was under intense surreptitious surveillance.  That is, afterall, why [Sirius] uses [McGonagall] as a mail courier.  
+
+[Tonks]: </Harrypedia/people/Tonks/Nymphadora>
+[McGonagall]: </Harrypedia/people/McGonagall/Minerva>
+[Sirius]: </Harrypedia/people/Black/Sirius III>
+[Harry]: </Harrypedia/people/Potter/Harry James>
+[Hogwarts]: /Harrypedia/Hogwarts
 [Gryffindor]: /Harrypedia/Hogwarts/Gryffindor/
 
-<!-- cspell: disable -->
 
 [^211202-3]: Any number of works have Harry call him out on this.
 
@@ -94,7 +122,6 @@ and become his own worst enemy.
       _[Massacre in the Dungeons](https://www.fanfiction.net/s/12065437)_
       Published: 2016-07-23. Updated: 2017-07-04. Last Viewed: 2021-12-02.
 
-<!-- cspell: enable -->
 
 [^20210519-12]:
     Ian Hycrest.
