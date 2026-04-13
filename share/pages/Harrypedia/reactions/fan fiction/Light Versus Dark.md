@@ -47,7 +47,7 @@ werewolf, but of _attacking someone_ **while transformed**.
 
 To make the distinction clear, if you take the _average_ case of a full moon,
 [Lupin] transforms, but no one is attacked. No evil act occurs, and there is no
-act to evaluation [Lupin]'s cooperation with against. Thus while he transformed
+act to evaluate [Lupin]'s cooperation with against.[^260413-1] Thus while he transformed
 in both cases, he is guilty of an evil act only in the one. This must be
 contrasted with the official view of [werewolves]. Rather than judging the
 _attacks by [werewolves]_ "dark", the official view is that _they themselves_
@@ -60,19 +60,27 @@ Despite this, there is a truth to the insistence, and [Lupin]'s case highlights
 this.
 
 In short, there is, properly understood, _no_ distinction between "good" and
-"light", conversely "evil" and "dark" but there _are_ **very really\*
-distinctions between what people \_**claim\*\*\_ to be "light" and "dark" and
+"light", conversely "evil" and "dark". There _are_, however, **very real**
+distinctions between what people _**claim**_ to be "light" and "dark" and
 what really are. We need the courage to say, plainly, that someone, even some
 entire cultures, are quite simply wrong, or we lose the ability to speak clearly
 about this distinction ourselves.
 
-[Google Search]:
-  https://www.google.com/search?sca_esv=bf58db3f14c3f703&rlz=1C5GCEM_en&q=Cooperation+with+Evil+classification+Material+Media+Remote+Cooperation&source=lnms&fbs=ABzOT_CWdhQLP1FcmU5B0fn3xuWpA-dk4wpBWOGsoR7DG5zJBtqPJOgc7yJ5Xg-RjMdZnmk4RrI5w0MKoJUbQ5FjI-XxWYgrLPY6u5O9KihENz-HG5jzV9g8XZ9W_0Y4xalx2A26PKJluZFNRwbz5oOYS6wPr18DVKNSci5f5w4jqYWZkIoXnrcu-W1mc-L1sHPFcN07dcYubBDMWECRRoEprovL6-AnXSmIwMXD60YvNOBnVUCwvuk&sa=X&ved=2ahUKEwj3yY3K_ZSNAxXXEFkFHSylCwUQ0pQJegQIDxAB&biw=1353&bih=1249&dpr=2
+[^260413-1]: There is a third alternative I am not discussing, some transformations may include a degree of negligence.  That is, an attack may not *happened* to have occurred, but a reasonable person would have concluded that this was luck, not planning.  If reasonable precautions to prevent an attack are not taken, for example if [Lupin] does not confine himself in a space that he knows the werewolf cannot escape unaided, then he may be judged negligent in some jurisdictions even if no actual attack happens.  There is some validity to this, such laws around negligence may or may not be in line with the dictates of [natural law][^260413-2], but since we do not, in fact, know the details of precisely what these laws are at any point in the books, we cannot assess them reliably enough to either support *or contradict* my thesis about proximate causes, intent, and the moral content of magic. 
+
+[natural law]: https://iep.utm.edu/natlaw/ 
+
+[^260413-2]: Here I am referring to what the [Internet Encyclopedia of Philosophy] would define as a "Classical Natural Law Theory" following the "Overlap Theory" in its strongest form in the tradition of Aquinas.  Except that I'm extending these concepts to apply to fictional situations like werewolves, since if they *did* exist, they would have a nature (or rather the human would have a human nature and the disease lycanthropy would have a definable nature that has predictable effects on that human nature). 
+
+[Internet Encyclopedia of Philosophy]: https://iep.utm.edu/
+
+[Google Search]: https://www.google.com/search?sca_esv=bf58db3f14c3f703&rlz=1C5GCEM_en&q=Cooperation+with+Evil+classification+Material+Media+Remote+Cooperation&source=lnms&fbs=ABzOT_CWdhQLP1FcmU5B0fn3xuWpA-dk4wpBWOGsoR7DG5zJBtqPJOgc7yJ5Xg-RjMdZnmk4RrI5w0MKoJUbQ5FjI-XxWYgrLPY6u5O9KihENz-HG5jzV9g8XZ9W_0Y4xalx2A26PKJluZFNRwbz5oOYS6wPr18DVKNSci5f5w4jqYWZkIoXnrcu-W1mc-L1sHPFcN07dcYubBDMWECRRoEprovL6-AnXSmIwMXD60YvNOBnVUCwvuk&sa=X&ved=2ahUKEwj3yY3K_ZSNAxXXEFkFHSylCwUQ0pQJegQIDxAB&biw=1353&bih=1249&dpr=2
+
 [Lupin]: </Harrypedia/people/Lupin/Remus John/>
 [horcrux]: /Harrypedia/magic/dark/Horcrux/
 [inferi]: /Harrypedia/magic/dark/Inferius/
-[werewolf]: /Harrypedia/beings/werewolves/
+[werewolf]: /Harrypedia/beings/werewolves
+[werewolves]: /Harrypedia/beings/werewolves
 [Archdiocese of Philadelphia]: https://archphila.org/
 [Internet Archive]: https://archive.org
-[a chart]:
-  https://web.archive.org/web/20170705025125/http://archphila.org/HHS/pdf/CoopEvilChart.pdf
+[a chart]: https://web.archive.org/web/20170705025125/http://archphila.org/HHS/pdf/CoopEvilChart.pdf
