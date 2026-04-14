@@ -47,7 +47,7 @@ books show us what _Harry_ considers significant, and Harry's sense of what
 matters is warped by his history. See my overview on [Shipping] for how this
 affects our ability to evaluate his relationships.
 
-[Shipping]: /Harrypedia/Shipping/
+[Shipping]: </Harrypedia/Relationships and Shipping/Shipping>
 
 [^221130-2]:
     Mrs. J. K. Rowling.
