@@ -14,7 +14,7 @@ Despite my defence of the [Greengrass] family, Mrs. Rowling's statement is
 hardly a glowing one. We can say that their relationship with the older
 generation was probably unhappy, and given that [Draco] was apparently unable or
 unwilling to give up the [Malfoy] ways, I suspect their own relationship had
-some of the same tension. Which parent had more influence on young [Scorpius]? I
+some of the same tension. Which parent had more influence on young Scorpius? I
 suspect even that would add to the problems here. Either way, the depiction
 _certainly_ destroys anyone attempting to use _[Cursed Child]_ to create one big
 happy Weasley-Potter-Malfoy family.
@@ -23,7 +23,6 @@ happy Weasley-Potter-Malfoy family.
 [Astoria]: /Harrypedia/people/Greengrass/Astoria
 [Greengrass]: /Harrypedia/people/Greengrass
 [Malfoy]: /Harrypedia/people/Malfoy
-[Scorpius]: /Harrypedia/people/Malfoy/Scorpius
 [dark arts]: /Harrypedia/magic/dark
 [Cursed Child]: https://www.librarything.com/work/23409259
 

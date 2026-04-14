@@ -4,7 +4,7 @@ title: Shipping in Fan Fiction
 author: Luke Schierer
 ---
 
-Where the [Canon](../Canon/) section looks at what Mrs. Rowling established,
+Where the [Canon](./Canon/) section looks at what Mrs. Rowling established,
 here I look at how fan fiction authors have handled relationships. This is not
 only fiction, but fan fiction. 
 
@@ -20,15 +20,15 @@ a particular story not out of [wish fulfilment], but because that particular
 story *needs* a relationship shaped a particular way, and not every set of characters available can fit
 without distorting one or both. 
 
-- [Common Pairings](./Common Pairings) — the recurring ships and the
-  motivations behind them
-- [Representations of Lily and James](./Representations of Lily and James) —
-  how fan fiction distorts Harry's parents
-- [My Approach](./My Approach) — my own philosophy for writing relationships in
-  fan fiction
+- [Common Pairings] — the recurring ships and the motivations behind them
+- [Representations of Lily and James] — how fan fiction distorts Harry's parents
+- [My Approach] — my own philosophy for writing relationships in fan fiction
 
 [contracts]: /Harrypedia/magic/Contracts
 [veela]: /Harrypedia/beings/veela
 [life debts]: /Harrypedia/magic/Contracts
 [trace]: /Harrypedia/magic/time/The_Trace
-[wish fulfilment]: <../Themes/Wish Fulfilment>
+[wish fulfilment]: <./Themes/Wish Fulfilment>
+[Common Pairings]: <./Shipping/Common Pairings>
+[Representations of Lily and James]: <./Shipping/Lily and James>
+[My Approach]: <./Shipping/My Approach>

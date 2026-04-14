@@ -11,16 +11,16 @@ sources. While this may be less than satisfying, it is what it is.
 
 Mrs. Rowling has established the following pairings:
 
-- [Harry] married [Ginny](./Harry and Ginny)
-- [Ron] married [Hermione](./Ron and Hermione)
-- [Neville] married [Hannah](./Neville and Hannah)
-- [Draco] married [Astoria](./Draco and Astoria)
-- [Luna], [Percy], and others made [less documented matches](./Minor Pairings)
+- [Harry][] [married][m1] [Ginny]
+- [Ron][] [married][m2] [Hermione]
+- [Neville][] [married][m3] [Hannah]
+- [Draco][] [married][m4] [Astoria]
+- [Luna], [Percy], and others made [less documented matches][m5]
 
 The situation presented is fairly bleak. Some of these hold up reasonably well;
 others raise serious questions about long-term viability.
 
-[Shipping]: /Harrypedia/Relationships and Shipping/Shipping
+[Shipping]: </Harrypedia/Relationships and Shipping/Shipping>
 [Harry]: </Harrypedia/people/Potter/Harry James>
 [Ginny]: </Harrypedia/people/Weasley/Ginevra Molly>
 [Ron]: </Harrypedia/people/Weasley/Ronald Bilius>
@@ -31,3 +31,8 @@ others raise serious questions about long-term viability.
 [Astoria]: /Harrypedia/people/Greengrass/Astoria
 [Luna]: /Harrypedia/people/Lovegood/Luna
 [Percy]: </Harrypedia/people/Weasley/Percy Ignatius>
+[m1]: <./Canon/Harry and Ginny>
+[m2]: <./Canon/Ron and Hermione>
+[m3]: <./Canon/Neville and Hannah>
+[m4]: <./Canon/Draco and Astoria>
+[m5]: <./Canon/Minor Pairings>
