@@ -400,4 +400,4 @@ to act on that attraction by agreeing to go out with him.
 
 [Occlumens]: </Harrypedia/magic/The Mind Arts/Occlumency>
 [Harry]: </Harrypedia/people/Potter/Harry James>
-[Hogwarts]: /Harrypedia/Hogwarts
+[Hogwarts]: /Harrypedia/places/Hogwarts

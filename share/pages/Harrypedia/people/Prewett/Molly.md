@@ -218,8 +218,8 @@ influenced by the various depictions I have read.
 [Weasleys]: /Harrypedia/people/Weasley/
 [Fleur]: </Harrypedia/people/Delacour/Fleur Isabelle/>
 [Snape]: /Harrypedia/people/Snape/Severus/
-[Quidditch]: /Harrypedia/Quidditch/
-[Gringotts]: /Harrypedia/Gringotts/
+[Quidditch]: /Harrypedia/culture/Quidditch/
+[Gringotts]: /Harrypedia/places/Gringotts/
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>
 
 [^210818-4]: See my [History] notes.

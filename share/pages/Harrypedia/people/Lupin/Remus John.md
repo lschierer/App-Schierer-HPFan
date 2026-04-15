@@ -112,8 +112,8 @@ todler, and meeting him again in [Harry]'s third year.
 [McGonagall]: </Harrypedia/people/McGonagall/Minerva>
 [Sirius]: </Harrypedia/people/Black/Sirius III>
 [Harry]: </Harrypedia/people/Potter/Harry James>
-[Hogwarts]: /Harrypedia/Hogwarts
-[Gryffindor]: /Harrypedia/Hogwarts/Gryffindor/
+[Hogwarts]: /Harrypedia/places/Hogwarts
+[Gryffindor]: /Harrypedia/places/Hogwarts/Gryffindor/
 
 
 [^211202-3]: Any number of works have Harry call him out on this.

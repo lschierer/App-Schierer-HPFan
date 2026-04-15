@@ -46,7 +46,7 @@ author: Luke Schierer
     see [Comparing how old students are in UK and US]
 
 
-[Comparing how old students are in UK and US]: </Harrypedia/Hogwarts/comparitive_class_ages>
+[Comparing how old students are in UK and US]: </Harrypedia/places/Hogwarts/comparitive_class_ages>
 [Dudley]: /Harrypedia/people/Dursley/Dudley
 [Dursley]: /Harrypedia/people/Dursley
 [Petunia]: /Harrypedia/people/Evans/Petunia

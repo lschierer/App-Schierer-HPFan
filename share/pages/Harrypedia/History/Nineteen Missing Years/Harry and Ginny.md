@@ -56,7 +56,7 @@ are mutually exclusive.[^211101-7]
 [Molly]: </Harrypedia/people/Prewett/Molly>
 [Harry]: </Harrypedia/people/Potter/Harry James>
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
-[Quidditch]: </Harrypedia/Quidditch>
+[Quidditch]: </Harrypedia/culture/Quidditch>
 
 [dB2P1]: https://www.fanfiction.net/s/13766417
 

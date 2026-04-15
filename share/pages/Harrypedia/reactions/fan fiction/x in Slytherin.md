@@ -48,7 +48,7 @@ cunning, again, admittedly without a ton of intelligence to back it up, that
 gets [Harry] and [Ron] in trouble over and over. [Draco] consistently tricks
 them, pushes their buttons, just out of sight of the teachers that might
 actually punish him, and sure enough they rush into it every time. It is no
-wonder the fannon idea is that [Gryffindor] students lack brains. And keep in
+wonder the fanon idea is that [Gryffindor] students lack brains. And keep in
 mind that intelligence is a [Ravenclaw] feature; _cunning_ is not at all the
 same thing. Far too many authors conflate the two traits.
 
@@ -71,11 +71,11 @@ that quarter. [Riddle] would have no need of a revolution.
 [Black]: /Harrypedia/people/Black
 [Prewett]: /Harrypedia/people/Prewett
 [Weasley]: /Harrypedia/people/Weasley
-[Lucius]: </Harrypedia/people/Malfoy/Lucius Abraxas>
-[Ravenclaw]: /Harrypedia/Hogwarts/Ravenclaw
-[Gryffindor]: /Harrypedia/Hogwarts/Gryffindor
-[Sorting Hat]: </Harrypedia/Hogwarts/Sorting Hat>
-[Hat]: </Harrypedia/Hogwarts/Sorting Hat>
+[Lucius]: </Harrypedia/people/Malfoy/Lucius>
+[Ravenclaw]: /Harrypedia/places/Hogwarts/Ravenclaw
+[Gryffindor]: /Harrypedia/places/Hogwarts/Gryffindor
+[Sorting Hat]: </Harrypedia/places/Hogwarts/Sorting Hat>
+[Hat]: </Harrypedia/places/Hogwarts/Sorting Hat>
 [Draco]: </Harrypedia/people/Malfoy/Draco Lucius>
 [Fred]: /Harrypedia/people/Weasley/Fred
 [George]: /Harrypedia/people/Weasley/George
@@ -83,7 +83,7 @@ that quarter. [Riddle] would have no need of a revolution.
 [Neville]: /Harrypedia/people/Longbottom/Neville
 [Ginny]: </Harrypedia/people/Weasley/Ginevra Molly>
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
-[Slytherin]: /Harrypedia/Hogwarts/Slytherin
+[Slytherin]: /Harrypedia/places/Hogwarts/Slytherin
 [Harry]: </Harrypedia/people/Potter/Harry James>
 [Ron]: </Harrypedia/people/Weasley/Ronald Bilius>
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean>
@@ -170,7 +170,7 @@ good Hufflepuff, and an uncertain [Ravenclaw] (depending on how much he would
 have been willing to use that "not a bad mind" mentioned above away from [Ron]'s
 influence).
 
-[more here]: /Harrypedia/child_abuse_in_fiction
+[more here]: /Harrypedia/reactions/child_abuse_in_fiction
 
 [^200731-3]:
     Mrs. J. K. Rowling et al.

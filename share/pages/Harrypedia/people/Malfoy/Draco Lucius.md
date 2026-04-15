@@ -45,7 +45,7 @@ back.
 
 [Ginny]: </Harrypedia/people/Weasley/Ginevra Molly/>
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>
-[Slytherin]: /Harrypedia/Hogwarts/Slytherin/
+[Slytherin]: /Harrypedia/places/Hogwarts/Slytherin/
 [Harry]: </Harrypedia/people/Potter/Harry James/>
 [Ron]: </Harrypedia/people/Weasley/Ronald Bilius/>
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean/>

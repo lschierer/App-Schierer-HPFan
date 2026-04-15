@@ -85,8 +85,8 @@ forethought.[^210322-1]
 [Blacks]: /Harrypedia/people/Black
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
 [Fleamont]: /Harrypedia/people/Potter/Fleamont
-[Grimmauld Place]: </Harrypedia/Grimmauld Place>
-[Gringotts]: /Harrypedia/Gringotts/
+[Grimmauld Place]: </Harrypedia/places/Grimmauld Place>
+[Gringotts]: /Harrypedia/places/Gringotts/
 [Harry Potter and the Deathly Hallows]: https://www.goodreads.com/book/show/136251.Harry_Potter_and_the_Deathly_Hallows
 [Harry]: </Harrypedia/people/Potter/Harry James>
 [James]: /Harrypedia/people/Potter/James

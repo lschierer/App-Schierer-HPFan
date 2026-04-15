@@ -45,7 +45,7 @@ logical soundness?
     Updated: 2007-04-02. <!-- cspell: disable-line -->
 
 [Meaning of One, Part One]: https://www.siye.co.uk/siye/series.php?seriesid=54
-[Egyptians]: /Harrypedia/Egypt/
+[Egyptians]: /Harrypedia/places/Egypt/
 [Bill]: </Harrypedia/people/Weasley/William Arthur/>
 [magic]: /Harrypedia/magic/
 [Harry]: </Harrypedia/people/Potter/Harry James/>

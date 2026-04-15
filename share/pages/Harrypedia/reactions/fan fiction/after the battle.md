@@ -73,7 +73,7 @@ pet peeves I have where I think authors frequently go wrong.
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
 [Harry]: </Harrypedia/people/Potter/Harry James>
 [Ginny]: </Harrypedia/people/Weasley/Ginevra Molly> 
-[Hogwarts]: /Harrypedia/Hogwarts
+[Hogwarts]: /Harrypedia/places/Hogwarts
 [Neville]: /Harrypedia/people/Longbottom/Neville
 
 [^240424-4]:

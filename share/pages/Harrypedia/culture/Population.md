@@ -112,7 +112,7 @@ them full benefit of the doubt as I analyse what goes on across the books.
 [Susan Bones]: /Harrypedia/people/Bones/Susan
 [Longbottom]: /Harrypedia/people/Longbottom
 [Neville]: /Harrypedia/people/Longbottom/Neville
-[Hogwarts]: /Harrypedia/Hogwarts
+[Hogwarts]: /Harrypedia/places/Hogwarts
 [Bill]: <[Weasleys]: /Harrypedia/people/Weasley/William Arthur>
 [Draco]: </Harrypedia/people/Malfoy/Draco Lucius>
 [Weasleys]: /Harrypedia/people/Weasley
@@ -145,8 +145,8 @@ them full benefit of the doubt as I analyse what goes on across the books.
 
 [WolfgangNH]: https://archiveofourown.org/users/WolfgangNH/pseuds/WolfgangNH 
 
-[CaHS]: </Harrypedia/Hogwarts/Class and House Structure>
-[Hogwarts]: /Harrypedia/Hogwarts
+[CaHS]: </Harrypedia/places/Hogwarts/Class and House Structure>
+[Hogwarts]: /Harrypedia/places/Hogwarts
 
 [^240319-5]:
     I am not the first to make any of these points, but I honestly cannot recall

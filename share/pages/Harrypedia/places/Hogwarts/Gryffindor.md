@@ -26,7 +26,7 @@ author: Luke Schierer
     the context of the overall list, and contrasted with [Hufflepuff], it is
     clear that loyalty is not the defining factor of this house.
 
-[Hufflepuff]: /Harrypedia/Hogwarts/Hufflepuff
+[Hufflepuff]: /Harrypedia/places/Hogwarts/Hufflepuff
 
 [^221221-2]: works include, but not limited to:
 

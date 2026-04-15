@@ -72,9 +72,9 @@ tend to wear "day to day."[^220630-2]
 [Harry]: </Harrypedia/people/Potter/Harry James>
 [Snape's]: /Harrypedia/people/Snape/Severus
 [James]: /Harrypedia/people/Potter/James
-[Hogwarts]: /Harrypedia/Hogwarts
+[Hogwarts]: /Harrypedia/places/Hogwarts
 [Mr. Weasley]: /Harrypedia/people/Weasley/Arthur
-[Quidditch]: ../Quidditch
+[Quidditch]: ./Quidditch
 
 [^210525-8]:
     Mrs. J. K. Rowling. _Harry Potter and the Sorcerer's Stone_ Better citation

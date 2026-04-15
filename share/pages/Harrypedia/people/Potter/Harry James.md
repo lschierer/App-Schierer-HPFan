@@ -10,7 +10,7 @@ for how we read the books. Harry is not an objective observer — he is an
 [abused child][abuse] who has learned to hide his reactions, who associates
 attention with pain, and who filters everything we see through that lens.
 
-[abuse]: /Harrypedia/child_abuse_in_fiction/
+[abuse]: /Harrypedia/reactions/child_abuse_in_fiction/
 
 Consider what the narration skips. The books jump over weeks and occasionally
 months where nothing "significant" happens. We never see Harry attending the

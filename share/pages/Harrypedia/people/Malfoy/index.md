@@ -35,7 +35,7 @@ This overlap is probably the reason why some authors have chosen to state that
 having fostered it.
 
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo/>
-[Lucius]: <./Malfoy/Lucius Abraxas>
+[Lucius]: <./Malfoy/Lucius>
 [History]: /Harrypedia/History
 
 [^210816-3]: I cannot exactly document a negative for this one.

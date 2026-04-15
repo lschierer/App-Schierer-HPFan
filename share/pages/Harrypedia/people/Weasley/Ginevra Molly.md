@@ -52,7 +52,7 @@ it looks fairly harsh, as noted in _[Discovering the Truth]_, it possible that [
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
 [Ron]: </Harrypedia/people/Weasley/Ronald Bilius>
 [Harry]: </Harrypedia/people/Potter/Harry James>
-[Hogwarts]: /Harrypedia/Hogwarts
+[Hogwarts]: /Harrypedia/places/Hogwarts
 [Arthur]: </Harrypedia/people/Weasley/Arthur>
 
 [^260324-1]: Mrs. J. K. Rowling. _[Harry Potter and the Chamber of Secrets]_. American Kindle Edition. Chapter 18.

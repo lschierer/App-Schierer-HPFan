@@ -50,7 +50,7 @@ That doesn't mean she *wasn't* brilliant.  It just means that they were even mor
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean>
 [Fred]: </Harrypedia/people/Weasley/Fred>
 [George]: </Harrypedia/people/Weasley/George>
-[Azkaban]: /Harrypedia/Azkaban
+[Azkaban]: /Harrypedia/places/Azkaban
 [Sirius]: </Harrypedia/people/Black/Sirius III>
 [McGonagall]: /Harrypedia/people/McGonagall/Minerva
 

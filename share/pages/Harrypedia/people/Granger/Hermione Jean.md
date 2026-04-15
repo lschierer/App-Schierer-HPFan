@@ -327,7 +327,7 @@ is anyone's guess which specific event would be one too many.
 [Lavender]: /Harrypedia/people/Brown/Lavender/
 [McLaggen]: /Harrypedia/people/McLaggen/Cormac/
 [TSWoHA]: https://www.fanfiction.net/s/5858832
-[Hogwarts]: /Harrypedia/Hogwarts/
+[Hogwarts]: /Harrypedia/places/Hogwarts/
 [Confundus]: /Harrypedia/magic/spells/confundus/
 
 [^200707-1]:

@@ -46,5 +46,5 @@ rather than [James], who endured years of being publicly rejected.
 [Worst Memory]: </Harrypedia/reactions/Snape's Worst Memory>
 [James]: </Harrypedia/people/Potter/James>
 [Sirius]: </Harrypedia/people/Black/Sirius III>
-[overall school situation in the 1970s]: </Harrypedia/Hogwarts/During the First Blood War>
+[overall school situation in the 1970s]: </Harrypedia/places/Hogwarts/During the First Blood War>
 [Lily]: </Harrypedia/people/Evans/Lily J>

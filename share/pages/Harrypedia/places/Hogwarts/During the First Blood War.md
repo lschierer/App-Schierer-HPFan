@@ -69,7 +69,7 @@ I absolutely love the way it is described in _[Faerie Godmother]_,
 
 [Mary MacDonald]: /Harrypedia/people/MacDonald/Mary
 [Mary]: /Harrypedia/people/MacDonald/Mary
-[Quidditch]: /Harrypedia/Quidditch
+[Quidditch]: /Harrypedia/culture/Quidditch
 [Snape]: </Harrypedia/people/Snape/Severus>
 [death eaters]: /Harrypedia/culture/Allowing_Riddle
 [Slughorn]: </Harrypedia/people/Slughorn/Horace Eugene Flaccus>
@@ -81,20 +81,20 @@ I absolutely love the way it is described in _[Faerie Godmother]_,
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
 [Snape's Worst Memory]: </Harrypedia/reactions/Snape's Worst Memory>
 [worst memory]: </Harrypedia/reactions/Snape's Worst Memory>
-[Hogwarts]: /Harrypedia/Hogwarts
+[Hogwarts]: /Harrypedia/places/Hogwarts
 [Black Family Tree]: https://www.rowlingindex.org/work/blacktree
 [James]: /Harrypedia/people/Potter/James
 [Bellatrix]: /Harrypedia/people/Black/Bellatrix
 [Regulus]: </Harrypedia/people/Black/Regulus Arcturus>
 [Sirius]: </Harrypedia/people/Black/Sirius III>
 [Narcissa]: </Harrypedia/people/Black/Narcissa>
-[Lucius]: </Harrypedia/people/Malfoy/Lucius Abraxas>
+[Lucius]: </Harrypedia/people/Malfoy/Lucius>
 [Lupin]: </Harrypedia/people/Lupin/Remus John>
 [Pettigrew]: </Harrypedia/people/Pettigrew/Peter>
 [Lily]: </Harrypedia/people/Evans/Lily J>
 [Mulciber]: </Harrypedia/people/Mulciber/I0138>
 [Harry]: </Harrypedia/people/Potter/Harry James>
-[Express]: </Harrypedia/Hogwarts/Hogwarts Express>
+[Express]: </Harrypedia/places/Hogwarts/Hogwarts Express>
 [Ron]: </Harrypedia/people/Weasley/Ronald Bilius>
 [Hagrid]: </Harrypedia/people/Hagrid/Rubeus>
 [Black Family]: /Harrypedia/people/Black
@@ -102,10 +102,10 @@ I absolutely love the way it is described in _[Faerie Godmother]_,
 [Crouches]: /Harrypedia/people/Crouch
 [Longbottoms]: /Harrypedia/people/Longbottom
 [Potters]: /Harrypedia/people/Potter
-[Slytherins]: /Harrypedia/Hogwarts/Slytherin
-[Slytherin]: /Harrypedia/Hogwarts/Slytherin
-[Ravenclaw]: /Harrypedia/Hogwarts/Ravenclaw
-[Gryffindor]: /Harrypedia/Hogwarts/Gryffindor
+[Slytherins]: /Harrypedia/places/Hogwarts/Slytherin
+[Slytherin]: /Harrypedia/places/Hogwarts/Slytherin
+[Ravenclaw]: /Harrypedia/places/Hogwarts/Ravenclaw
+[Gryffindor]: /Harrypedia/places/Hogwarts/Gryffindor
 
 <!-- cspell: ignore 0bviousLeigh --> 
 

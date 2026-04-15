@@ -26,8 +26,8 @@ become so disconnected from his family as _[Cursed Child]_ makes out.
 
 [Harry]: </Harrypedia/people/Potter/Harry James>
 [Ginny]: </Harrypedia/people/Weasley/Ginevra Molly>
-[Holyhead Harpies]: /Harrypedia/Quidditch
-[Quidditch]: /Harrypedia/Quidditch
+[Holyhead Harpies]: /Harrypedia/culture/Quidditch
+[Quidditch]: /Harrypedia/culture/Quidditch
 [Cursed Child]: https://www.librarything.com/work/23409259
 
 [^HPGW]:

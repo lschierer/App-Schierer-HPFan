@@ -28,7 +28,7 @@ healthy way. It just seems, as I said, odd.
 [Neville]: /Harrypedia/people/Longbottom/Neville
 [Hannah Abbott]: /Harrypedia/people/Abbott/Hannah
 [Hannah]: /Harrypedia/people/Abbott/Hannah
-[Hogwarts]: /Harrypedia/Hogwarts
+[Hogwarts]: /Harrypedia/places/Hogwarts
 [Rita Skeeter]: /Harrypedia/people/Skeeter/Rita
 [Rita]: /Harrypedia/people/Skeeter/Rita
 

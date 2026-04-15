@@ -41,8 +41,8 @@ per year both. The extra prefects are both incredibly absent in doing anything
 noticeable, represent an easily filled glaring hole in the student body.
 
 [Harry]: </Harrypedia/people/Potter/Harry James/>
-[Hogwarts]: /Harrypedia/Hogwarts/
+[Hogwarts]: /Harrypedia/places/Hogwarts/
 [Percy]: </Harrypedia/people/Weasley/Percy Ignatius/>
-[Gryffindor]: /Harrypedia/Hogwarts/Gryffindor/
+[Gryffindor]: /Harrypedia/places/Hogwarts/Gryffindor/
 [Ron]: </Harrypedia/people/Weasley/Ronald Bilius/>
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean/>

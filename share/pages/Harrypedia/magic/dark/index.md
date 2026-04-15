@@ -74,7 +74,7 @@ understand the difference.
 [^221122-6]: mymovingfingerwrites. _[A Study of Resonance][]_
     Published: 2022-03-29. Updated: 20222-11-17.
 
-[Amelia]: </Harrypedia/people/Bones/Amelia Susan/>
+[Amelia]: </Harrypedia/people/Bones/Amelia/>
 
 [^221122-3]: including but not limited to
 

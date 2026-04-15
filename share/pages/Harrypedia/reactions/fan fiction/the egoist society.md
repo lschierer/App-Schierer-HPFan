@@ -120,15 +120,15 @@ question is, for lack of a better word, massively egoist.
     the language, or indeed, the thought structures that made that way of
     speaking common when it was.
 
-[Gryffindor]: /Harrypedia/Hogwarts/Gryffindor
+[Gryffindor]: /Harrypedia/places/Hogwarts/Gryffindor
 [McGonagall]: /Harrypedia/people/McGonagall/Minerva
 [Snape]: /Harrypedia/people/Snape/Severus
 [Grindelwald]: /Harrypedia/people/Grindelwald/Gellert
-[Slytherin]: /Harrypedia/Hogwarts/Slytherin
+[Slytherin]: /Harrypedia/places/Hogwarts/Slytherin
 [Malfoy]: </Harrypedia/people/Malfoy/Draco Lucius>
 [International Confederation of Wizards]:
   </Harrypedia/culture/International Confederation of Wizards>
-[Hogwarts]: /Harrypedia/Hogwarts
+[Hogwarts]: /Harrypedia/places/Hogwarts
 [Statute of Secrecy]: </Harrypedia/culture/International Statute of Secrecy>
 [Harry]: </Harrypedia/people/Potter/Harry James>
 

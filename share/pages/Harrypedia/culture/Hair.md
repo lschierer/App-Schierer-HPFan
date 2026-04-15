@@ -12,7 +12,7 @@ length and societal status in Europe.[^220719-3] Thus if true, this would be
 something unique to the magical world, and more over, a uniqueness not
 substantiated by the canonical works.
 
-[Lucius Malfoy]: </Harrypedia/people/Malfoy/Lucius Abraxas/>
+[Lucius Malfoy]: </Harrypedia/people/Malfoy/Lucius>
 
 [Draco Malfoy]: </Harrypedia/people/Malfoy/Draco Lucius>
 [DLM1]: </Harrypedia/people/Malfoy/Draco Lucius>

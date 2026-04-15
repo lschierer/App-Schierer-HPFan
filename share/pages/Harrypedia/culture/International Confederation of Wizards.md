@@ -25,4 +25,4 @@ lack of functioning government.[^241014-3]
 
 [Molly]: /Harrypedia/people/Prewett/Molly
 [Fudge]: </Harrypedia/people/Fudge/Cornelius Oswald>
-[Quidditch]: /Harrypedia/Quidditch
+[Quidditch]: /Harrypedia/culture/Quidditch

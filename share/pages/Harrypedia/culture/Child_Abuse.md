@@ -70,7 +70,7 @@ insane, and an exception even for her own society.[^240228-3]
 
 [Walburga]: /Harrypedia/people/Black/Walburga
 [obscurial]: /Harrypedia/beings/Obscurus
-[Hogwarts]: /Harrypedia/Hogwarts
+[Hogwarts]: /Harrypedia/places/Hogwarts
 [Sirius]: </Harrypedia/people/Black/Sirius III>
 [house elves]: </Harrypedia/beings/elves/house elf>
 [MACUSA]: /Harrypedia/MACUSA

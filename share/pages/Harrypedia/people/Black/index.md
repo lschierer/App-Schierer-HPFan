@@ -34,7 +34,7 @@ gender. The dates for this line of speculation are in the [History] timeline.
 [Cedrella]: /Harrypedia/people/Black/Cedrella
 [Cygnus I]: /Harrypedia/people/Black/Cygnus
 [Draco]: </Harrypedia/people/Malfoy/Draco Lucius>
-[Grimmauld Place]: </Harrypedia/Grimmauld Place>
+[Grimmauld Place]: </Harrypedia/places/Grimmauld Place>
 [Harfang]: /Harrypedia/people/Longbottom/Harfang
 [Harry]: </Harrypedia/people/Potter/Harry James>
 [History]: /Harrypedia/History

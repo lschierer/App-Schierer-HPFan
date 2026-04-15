@@ -120,7 +120,7 @@ belong to the person(s) who created that situation (by placing me there without
 my knowledge, or otherwise causing me to believe I lived somewhere else).
 
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean>
-[Hogwarts]: /Harrypedia/Hogwarts
+[Hogwarts]: /Harrypedia/places/Hogwarts
 
 The students might not have been kidnapped, in that they can go home for a few
 weeks at Christmas, and two months or so each summer, but they will quickly find

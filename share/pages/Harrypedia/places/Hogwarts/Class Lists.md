@@ -65,7 +65,7 @@ symmetry. Given my [argument about how students would be
 sorted][Class_and_Blood], I think he mutated to a Hufflepuff girl. Based on the
 same logic, Rivers is almost certainly a pure-blood, but might be a half-blood.
 
-[Class_and_Blood]: ../culture/Class_and_Blood
+[Class_and_Blood]: /Harrypedia/culture/Class_and_Blood
 
 The [same argument][Class_and_Blood] suggests the ambiguity of the
 [Weasley](/Harrypedia/people/Weasley) social class.

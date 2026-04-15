@@ -47,7 +47,7 @@ any given nephilim.
 > [!NOTE] Author's Note. Estimates of some key figures of in the history related
 > in this archive are available [here][AD].
 
-[AD]: <./Relative Power Levels/>
+[AD]: <./Relative Power Levels>
 [abt]: #abilities-by-type
 
 [^221216-2]:
@@ -180,10 +180,11 @@ Nearly all nephilim communities categorise magic as follows:
 
 [^220718-1]:
     [Harry Potter Wiki][HPW1].
-    "[Gamp's Law of Elemental Transfiguration](https://harrypotter.fandom.com/wiki/Gamp%27s_Law_of_Elemental_Transfiguration)"
+    "[Gamp's Law of Elemental Transfiguration]"
     Last Edited: 2022-07-03. Last Viewed: 2022-07-18.
 
 [HPW1]: https://harrypotter.fandom.com/wiki
+[Gamp's Law of Elemental Transfiguration]: https://harrypotter.fandom.com/wiki/Gamp%27s_Law_of_Elemental_Transfiguration
 
 ### Defence
 
@@ -593,7 +594,7 @@ The wand acts a memory aid in that the memorized wand motions help focus the min
 
 [^260312-1]: I consider [MACUSA] an abomination and refuse to continence it. 
 
-[Uagadou]: /Harrypedia/Uagadou
+[Uagadou]: /Harrypedia/places/Uagadou
 
 [MACUSA]: /Harrypedia/MACUSA
 

@@ -58,6 +58,6 @@ the top behaviour.
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean>
 [MM1]: </Harrypedia/people/McGonagall/Minerva>
 [FF1]: </Harrypedia/people/Flitwick/Filius>
-[Slytherin]: </Harrypedia/Hogwarts/Slytherin>
-[Ravenclaw]: </Harrypedia/Hogwarts/Ravenclaw>
+[Slytherin]: </Harrypedia/places/Hogwarts/Slytherin>
+[Ravenclaw]: </Harrypedia/places/Hogwarts/Ravenclaw>
 [Malfoy]: </Harrypedia/people/Malfoy/Draco Lucius>

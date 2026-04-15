@@ -83,7 +83,7 @@ Lastly, it does not solve the problem of voting inheritance between the [Black]
 and [Potter] families (though this might be considered part of my statement that
 it contradicts the origin stories).
 
-[Mr. Malfoy]: </Harrypedia/people/Malfoy/Lucius Abraxas/>
+[Mr. Malfoy]: </Harrypedia/people/Malfoy/Lucius>
 
 [Harry]: </Harrypedia/people/Potter/Harry James/>
 [Henry]: /Harrypedia/people/Potter/Henry/

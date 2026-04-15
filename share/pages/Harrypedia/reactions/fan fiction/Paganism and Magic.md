@@ -42,8 +42,8 @@ they are not exposed to the idea, that the magic they so casually use across
 [Hogwarts] is in fact a sentient force, almost a being.
 
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
-[Egyptian]: /Harrypedia/Egypt
+[Egyptian]: /Harrypedia/places/Egypt
 [Osiris]: https://wikipedia.org/wiki/Osiris
 [horcruxes]: /Harrypedia/magic/dark/Horcrux
 [immmigration]: /Harrypedia/culture/Immigration
-[Hogwarts]: /Harrypedia/Hogwarts
+[Hogwarts]: /Harrypedia/places/Hogwarts

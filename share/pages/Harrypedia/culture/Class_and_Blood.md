@@ -158,17 +158,17 @@ any profitable patent-able discoveries…
 [Draco]: </Harrypedia/people/Malfoy/Draco Lucius>
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
 [GG]: /Harrypedia/people/Gryffindor/Godric
-[Gryffindor]: /Harrypedia/Hogwarts/Gryffindor
+[Gryffindor]: /Harrypedia/places/Hogwarts/Gryffindor
 [HH]: /Harrypedia/people/Hufflepuff/Helga
 [Hannah]: /Harrypedia/people/Abbott/Hannah
 [Harry]: </Harrypedia/people/Potter/Harry James>
-[Hogwarts]: /Harrypedia/Hogwarts/
-[Hufflepuff]: /Harrypedia/Hogwarts/Hufflepuff
+[Hogwarts]: /Harrypedia/places/Hogwarts/
+[Hufflepuff]: /Harrypedia/places/Hogwarts/Hufflepuff
 [Luna]: /Harrypedia/people/Lovegood/Luna
-[Ravenclaw]: /Harrypedia/Hogwarts/Ravenclaw
+[Ravenclaw]: /Harrypedia/places/Hogwarts/Ravenclaw
 [Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
 [SS]: /Harrypedia/people/Slytherin/Salazar
-[Slytherin]: /Harrypedia/Hogwarts/Slytherin
+[Slytherin]: /Harrypedia/places/Hogwarts/Slytherin
 [Smith]: /Harrypedia/people/Smith
 [Susan]: /Harrypedia/people/Bones/
 [Tonks]: /Harrypedia/people/Tonks

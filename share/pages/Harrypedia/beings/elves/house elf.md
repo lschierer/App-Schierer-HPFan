@@ -84,4 +84,4 @@ _curse_ in question is lost and unrecorded by history.[^240219-4]
 [Regulus]: </Harrypedia/people/Black/Regulus Arcturus>
 [Brownies]: https://en.wikipedia.org/wiki/Brownie_(folklore)
 [Imperius]: /Harrypedia/magic/spells/imperio
-[Hogwarts]: /Harrypedia/Hogwarts
+[Hogwarts]: /Harrypedia/places/Hogwarts

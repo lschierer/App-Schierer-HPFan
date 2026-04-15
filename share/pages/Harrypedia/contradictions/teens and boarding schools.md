@@ -145,17 +145,17 @@ They do make for interesting speculation though.
 
 [Cho]: /Harrypedia/people/Chang/Cho/
 [Ginny]: </Harrypedia/people/Weasley/Ginevra Molly/>
-[Gryffindor]: /Harrypedia/Hogwarts/Gryffindor/
+[Gryffindor]: /Harrypedia/places/Hogwarts/Gryffindor/
 [Harry]: </Harrypedia/people/Potter/Harry James/>
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean/>
-[Hogwarts]: /Harrypedia/Hogwarts/
+[Hogwarts]: /Harrypedia/places/Hogwarts/
 [Lockhart]: /Harrypedia/people/Lockhart/Gilderoy/
 [Luna]: /Harrypedia/people/Lovegood/Luna/
 [Moody]: /Harrypedia/people/Moody/Alastor/
 [Mrs. Weasley]: /Harrypedia/people/Prewett/Molly/
 [Oliver Wood]: /Harrypedia/people/Wood/Oliver/
 [Oliver]: /Harrypedia/people/Wood/Oliver/
-[Quidditch]: /Harrypedia/Quidditch/
-[Ravenclaw]: /Harrypedia/Hogwarts/Ravenclaw/
+[Quidditch]: /Harrypedia/culture/Quidditch/
+[Ravenclaw]: /Harrypedia/places/Hogwarts/Ravenclaw/
 [Ron]: </Harrypedia/people/Weasley/Ronald Bilius/>
 [Weasley]: /Harrypedia/people/Weasley/

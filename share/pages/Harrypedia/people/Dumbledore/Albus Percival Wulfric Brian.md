@@ -155,7 +155,7 @@ praise, or giving him what little credit is due.
 [H1]: /Harrypedia/History
 [GG]: /Harrypedia/people/Grindelwald/Gellert/
 [HS]: </Harrypedia/people/Slughorn/Horace Eugene Flaccus/>
-[Hogwarts]: /Harrypedia/Hogwarts/
+[Hogwarts]: /Harrypedia/places/Hogwarts/
 [Harry]: </Harrypedia/people/Potter/Harry James/>
 [DMH1]: /Harrypedia/magic/dark/Horcrux/
 

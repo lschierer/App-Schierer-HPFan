@@ -111,7 +111,7 @@ let anyone know that such a possession is possible, then **functionally** he
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/>
 [Harry]: </Harrypedia/people/Potter/Harry James/>
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean/>
-[Hogwarts]: /Harrypedia/Hogwarts/
+[Hogwarts]: /Harrypedia/places/Hogwarts/
 [Kingsley]: /Harrypedia/people/Shacklebolt/Kingsley/
 [Lupin]: </Harrypedia/people/Lupin/Remus John/>
 [Malfoy]: </Harrypedia/people/Malfoy/Draco Lucius/>

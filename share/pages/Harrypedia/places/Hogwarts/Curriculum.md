@@ -2,6 +2,7 @@
 collection: Harrypedia
 title: Hogwarts Curriculum
 author: Luke Schierer
+# cspell: ignore Auralon
 ---
 
 Has Hogwarts always had the same classes we see during Harry's time as a
@@ -25,7 +26,7 @@ these questions, the overall impossibility of the [class
 schedule][Class_Schedule_Rant] comes more and more into play.
 
 [Class_Schedule_Rant]: ./Class_Schedule_Rant
-[Trelawney]: /Harrypedia/people/Trelawney/Sybill
+[Trelawney]: </Harrypedia/people/Trelawney/Sybill Patricia>
 
 As I stated in my [rant][Class_Schedule_Rant], a few authors have attempted to
 make sense of [Hogwarts][]' class scheduling, class offerings, and related
@@ -47,7 +48,7 @@ actually know if there are (or in the case of the above fan fiction, ever have
 been) _any_ other British schools.
 
 [Hogwarts]: ./
-[History]: ../History
+[History]: ../../History
 
 [^20210929-4]:
     Mrs. J. K. Rowling.

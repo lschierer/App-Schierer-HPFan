@@ -85,7 +85,7 @@ not. Was it a reward, or did he earn the mark in some other way? That answer
 could significantly change your view of how much evil Severus has done by
 commission versus omission during this phase of his life.
 
-[Hogwarts]: /Harrypedia/Hogwarts/
+[Hogwarts]: /Harrypedia/places/Hogwarts/
 
 [Dumbledore]'s view is that becoming a spy balances the scales. Severus needs no
 punishment for his actions prior to hearing the prophecy.[^221014-1] I cannot
@@ -243,7 +243,7 @@ nevertheless clearly unacceptable.
 [Potters]: /Harrypedia/people/Potter
 [Neville]: </Harrypedia/people/Longbottom/Neville>
 [Longbottoms]: /Harrypedia/people/Longbottom
-[Slytherin]: /Harrypedia/Hogwarts/Slytherin
+[Slytherin]: /Harrypedia/places/Hogwarts/Slytherin
 [boggart]: /Harrypedia/non-beings/boggart
 
 ### The Onus Was on Him

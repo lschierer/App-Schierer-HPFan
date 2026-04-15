@@ -32,6 +32,6 @@ marriage and commitment.
 [Themes]: <./Relationships and Shipping/Themes>
 
 [Cursed Child]: https://www.librarything.com/work/23409259
-[Nineteen Missing Years]: </Harrypedia/Nineteen Missing Years>
+[Nineteen Missing Years]: </Harrypedia/History/Nineteen Missing Years>
 [Lily]: </Harrypedia/people/Evans/Lily J>
 [James]: /Harrypedia/people/Potter/James

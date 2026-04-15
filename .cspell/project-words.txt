@@ -537,3 +537,10 @@ Ottaline
 knockback
 thestral
 thestrals
+
+Bartemius
+snakewood
+Toltecs
+augurey
+ashwinder
+jarvey

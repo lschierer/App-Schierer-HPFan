@@ -191,7 +191,7 @@ incorporating non-magical classes no matter how needed or useful they might be.
 
 [RBW1]: </Harrypedia/people/Weasley/Ronald Bilius/> 
 [AD1]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian> 
-[Hogwarts]: /Harrypedia/Hogwarts 
+[Hogwarts]: /Harrypedia/places/Hogwarts 
 
 [OCUC1]: https://www.fanfiction.net/s/13903544 
 [CTB2]: https://archiveofourown.org/works/156533 

@@ -147,8 +147,8 @@ capabilities. His growth may have been forced on him, but he has, at least in
 part, risen to the challenge.
 
 
-[Slytherin]: /Harrypedia/Hogwarts/Slytherin/
-[Ravenclaw]: /Harrypedia/Hogwarts/Ravenclaw/
+[Slytherin]: /Harrypedia/places/Hogwarts/Slytherin/
+[Ravenclaw]: /Harrypedia/places/Hogwarts/Ravenclaw/
 [Malfoy]: </Harrypedia/people/Malfoy/Draco Lucius/>
 [MM1]: /Harrypedia/people/McGonagall/Minerva/
 [FF1]: /Harrypedia/people/Flitwick/Filus/

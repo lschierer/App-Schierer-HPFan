@@ -10,7 +10,7 @@ next to nothing about her.[^250808-1] Even the fact that she is a classmate of
 
 [Katie]: ../Bell/Katie
 [Katie Bell]: ../Bell/Katie
-[Hogwarts]: /Harrypedia/Hogwarts
+[Hogwarts]: /Harrypedia/places/Hogwarts
 
 [^250808-1]:
     Mrs. J. K. Rowling. _[Harry Potter and the Half-Blood Prince]_. Page 207 of

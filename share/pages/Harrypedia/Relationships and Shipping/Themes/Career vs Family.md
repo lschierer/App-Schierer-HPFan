@@ -37,6 +37,6 @@ children without ever addressing how they manage both.
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean>
 [Ron]: </Harrypedia/people/Weasley/Ronald Bilius>
 [Ministry]: /Harrypedia/culture/Government
-[Hogwarts]: /Harrypedia/Hogwarts
-[Quidditch]: /Harrypedia/Quidditch
+[Hogwarts]: /Harrypedia/places/Hogwarts
+[Quidditch]: /Harrypedia/culture/Quidditch
 [Rita Skeeter]: /Harrypedia/people/Skeeter/Rita

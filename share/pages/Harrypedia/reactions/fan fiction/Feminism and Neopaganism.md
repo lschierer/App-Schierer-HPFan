@@ -38,6 +38,6 @@ To be fair, Mrs. Rowling tells us that as the [Statute of Secrecy] was passed, m
 [Sir Nicholas]: </Harrypedia/people/Mimsy-Porpington/Nicholas>
 [Malfoy]: </Harrypedia/people/Malfoy>
 [Statute of Secrecy]: http://127.0.1.1:3001/Harrypedia/History#fo-div-17th-1
-[Hogwarts]: /Harrypedia/Hogwarts
+[Hogwarts]: /Harrypedia/places/Hogwarts
 ["good" and "evil" debate]: <./Light Versus Dark>
 [Harry]: </Harrypedia/people/Potter/Harry James>

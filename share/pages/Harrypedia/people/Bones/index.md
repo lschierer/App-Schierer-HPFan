@@ -12,8 +12,8 @@ is [Amelia][] fairly broad minded?[^210701-3]
 
 [Susan]: ./Bones/Susan
 [Riddle]: <./Riddle/Tom Marvolo>
-[Amelia]: <./Bones/Amelia Susan>
-[ClassLists]: </Harrypedia/Hogwarts/Class Lists>
+[Amelia]: <./Bones/Amelia>
+[ClassLists]: </Harrypedia/places/Hogwarts/Class Lists>
 [Culture]: /Harrypedia/culture
 
 <!-- cspell: disable -->

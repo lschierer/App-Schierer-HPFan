@@ -58,4 +58,4 @@ probably do much to reform the relationships between the houses.
 
 [McGonagall]: </Harrypedia/people/McGonagall/Minerva>
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
-[Hogwarts]: </Harrypedia/Hogwarts>
+[Hogwarts]: </Harrypedia/places/Hogwarts>

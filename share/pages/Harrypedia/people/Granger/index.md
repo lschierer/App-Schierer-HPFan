@@ -44,7 +44,7 @@ the magical world that many fan fiction authors portray.
 [Ron]: </Harrypedia/people/Weasley/Ronald Bilius>
 [Weasleys]: /Harrypedia/people/Weasley
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean>
-[Gringotts]: /Harrypedia/Gringotts
+[Gringotts]: /Harrypedia/places/Gringotts
 
 [^221201-1]:
     Mrs. J. K. Rowling.

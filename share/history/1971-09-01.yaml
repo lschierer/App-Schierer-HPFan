@@ -16,7 +16,7 @@ events:
 
       [Snape]: </Harrypedia/people/Snape/Severus>
     source: |
-      This date is infered/computed from others.
+      This date is inferred/computed from others.
   - type: magical
     blurb: Lucius Malfoy as prefect
     description: |
@@ -26,7 +26,7 @@ events:
 
       [Snape]: </Harrypedia/people/Snape/Severus>
 
-      [Slytherin]: </Harrypedia/Hogwarts/Slytherin>
+      [Slytherin]: </Harrypedia/places/Hogwarts/Slytherin>
     source: |
       Mrs. J. K. Rowling. _[Harry Potter and the Deathly Hallows]_
       American Kindle edition approx location 8539 of 9604, approx page 278. Pottermore Publishing.

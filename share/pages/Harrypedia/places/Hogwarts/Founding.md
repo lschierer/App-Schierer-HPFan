@@ -1,6 +1,7 @@
 ---
 collection: Harrypedia
 title: Founding Hogwarts School of Witchcraft and Wizardry
+# cspell: ignore FMPtrumpets
 ---
 
 ### Founders
@@ -16,7 +17,7 @@ Godric is from Old English, also dying out after the Norman Conquest.[^210422-5]
 I am told, and the baby names etymology site seems to concur, that "Old English"
 essentially means "Anglo-Saxon."[^210422-6] He is supposedly from a village
 later renamed after him, in the West Country.[^210422-8] This more or less
-works, the vikings might well have pushed the Anglo-Saxon west enough by the
+works, the Vikings might well have pushed the Anglo-Saxon west enough by the
 time Godric was born.[^210422-9]
 
 #### Helga Hufflepuff
@@ -80,7 +81,7 @@ non-magical population than Godric's in the south.
 
 [^210422-12]: See [History]
 
-[History]: ../History
+[History]: ../../History
 
 [^210422-11]: various, including
 
@@ -229,7 +230,7 @@ non-magical population than Godric's in the south.
 
 [^200819-3]:
     It certainly does not mention nearly enough people coming through the
-    portrait tunnel, and pretty much his entire class, plus both Creevy boys
+    portrait tunnel, and pretty much his entire class, plus both Creevey boys
     seem to be there. Get a citation for this.
 
 [^200819-4]: Several works have this idea, among them:

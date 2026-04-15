@@ -28,8 +28,8 @@ grown up with enough stories, for example Mr. Stephen Lawhead's
 version,[^240327-3] where Arthur _does_ live further back in time, closer to the
 (probable) historical king. The resulting dissonance leaves me dissatisfied.
 
-[Hogwarts]: /Harrypedia/Hogwarts/
-[Slytherin]: /Harrypedia/Hogwarts/Slytherin/
+[Hogwarts]: /Harrypedia/places/Hogwarts/
+[Slytherin]: /Harrypedia/places/Hogwarts/Slytherin/
 
 [^230327-1]:
     [Britannica], The Editors of Encyclopaedia.
