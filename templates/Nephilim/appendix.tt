@@ -48,7 +48,7 @@
 	<section>
 		[% content %]	
 	</section>
-	[% IF entries.size > 0 %]
+	[% IF entries AND entries.size > 0 %]
 	  <hr role="separator" class="spectrum-Divider spectrum-Divider--sizeM" />
 	  <div class="directory-index">
 	    [% INCLUDE partials/autoindex_list.tt entries=entries %]
