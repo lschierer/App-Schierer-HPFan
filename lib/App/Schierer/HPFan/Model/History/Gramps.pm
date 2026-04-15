@@ -141,9 +141,18 @@ class App::Schierer::HPFan::Model::History::Gramps :
         if (defined $e->date->modifiers
         && length($e->date->modifiers));
 
-      # set up description
-      push @description, $e->description
-        if (defined($e->description) && length($e->description));
+      # if the event has a description, use it as the blurb title;
+      # otherwise fall back to the people list
+      my $event_desc = (defined($e->description) && length($e->description))
+        ? $e->description
+        : undef;
+      my $people_str = join(', ', map { $_->display_name() } @$people);
+      my $blurb =
+          $event_desc                ? $event_desc
+        : length($people_str)       ? "Property Grant to $people_str"
+        :                             'Property Grant';
+
+      # set up description (notes only; event description is now in blurb)
       my $note_text = $self->_notes_for_event($e);
       push @description, $note_text->@* if (scalar @$note_text);
 
@@ -151,8 +160,7 @@ class App::Schierer::HPFan::Model::History::Gramps :
       $events->{ $e->gramps_id } =
         App::Schierer::HPFan::Model::History::Event->new(
         id    => $e->gramps_id,
-        blurb => sprintf('Property Grant to %s',
-          join(', ', map { $_->display_name() } @$people)),
+        blurb => $blurb,
         description => $mv->format_string(
           join('\n', @description),
           {
