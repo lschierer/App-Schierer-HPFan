@@ -44,12 +44,14 @@ test:
 clean:
     ./Build clean
     pnpm run clean
+    rm -rf /tmp/hpfan_cache
 
 # Development server
-dev: build build-data
+dev: clean build build-data
     perl bin/server.pl
 
 quickdev:
+    rm -rf /tmp/hpfan_cache
     watchexec -w bin -w lib -w ../PAGI-WebServer/lib -w templates -w public/css -w public/js -w share/pages -w share/Bookmarks -w share/history -w share/HPNOFP -r ./bin/server.pl
 
 # Production server

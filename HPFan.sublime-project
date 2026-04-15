@@ -3,6 +3,7 @@
         { "path" : "." },
         { "path" : "./share/pages", "name" : "Pages" },
         { "path": "./share/Bookmarks", "name": "Bookmarks"},
+        { "path": "./share/history", "name": "History"},
         { "path": "./share/magic_glossary", "name": "Magic Glossary"},
     ],
     "settings" : {
