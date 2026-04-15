@@ -43,9 +43,12 @@ sub build ($self) {
 
   for my $entry (@$entries) {
     my $category = $entry->{category} // 'spell';
-    my $base     = $category eq 'potion'
-      ? '/Harrypedia/magic/potions'
-      : '/Harrypedia/magic/spells';
+    my %base_for = (
+      potion     => '/Harrypedia/magic/potions',
+      animal     => '/Harrypedia/animals',
+      vegetation => '/Harrypedia/magic/vegetation',
+    );
+    my $base = $base_for{$category} // '/Harrypedia/magic/spells';
 
     # Route for the title (incantation or primary name)
     my $title_slug  = $self->_slug($entry->{title});
@@ -100,7 +103,12 @@ sub _register_entry_route ($self, $route, $entry) {
 }
 
 sub _register_index_route ($self, $route, $entries) {
-  my $title = $route =~ /potions/ ? 'Potions' : 'Spells';
+  my %title_for = (
+    '/Harrypedia/magic/potions'     => 'Potions',
+    '/Harrypedia/animals'           => 'Animals',
+    '/Harrypedia/magic/vegetation'  => 'Vegetation',
+  );
+  my $title = $title_for{$route} // 'Spells';
   $self->add_navigation_route($route, $title, { order => 50 });
 
   $self->router->add(

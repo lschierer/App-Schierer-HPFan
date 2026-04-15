@@ -5,12 +5,13 @@
   "type": "array",
   "items": {
     "type": "object",
-    "required": ["category", "title", "type", "content"],
+    "required": ["category", "title", "content"],
     "additionalProperties": false,
     "properties": {
       "category": {
         "type": "string",
-        "enum": ["spell", "potion"],
+        "_comment": "if you add an entry to this enum, you will need to add corresponding mappings to the MagicGlossary for routes and titles.",
+        "enum": ["spell", "potion","vegetation", "animal"],
         "description": "Determines the URL base path: /Harrypedia/magic/spells/ or /Harrypedia/magic/potions/"
       },
       "title": {
