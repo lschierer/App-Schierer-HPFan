@@ -2,6 +2,13 @@
 
 nav.navigation-tree ul.spectrum-TreeView {
   --mod-treeview-indicator-padding-block: 0.01em;
+
+  /* should match div#nav in global.css */
+  max-inline-size: max(250px, 20vw);
+
+  /* Remove any gap/margin from nested lists to prevent extra spacing */
+  gap: 0;
+  margin-block: 0;
 }
 
 nav.navigation-tree .spectrum-TreeView iconify-icon {
@@ -16,14 +23,6 @@ nav.navigation-tree .spectrum-TreeView-item.nav-hidden {
 /* Hide collapsed child groups */
 nav.navigation-tree .spectrum-TreeView.nav-collapsed {
   display: none !important;
-}
-
-nav.navigation-tree  div#nav ul.spectrum-TreeView {
-  /* should match div#nav in global.css */
-  max-inline-size: max(250px, 20vw);
-
-  /* Remove any gap property from the list itself */
-  gap: 0;
 }
 
 nav.navigation-tree span.spectrum-TreeView-itemLabel iconify-icon {

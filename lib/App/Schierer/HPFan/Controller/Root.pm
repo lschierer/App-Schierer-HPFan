@@ -163,7 +163,7 @@ async sub page_handler ($self, $ctx, $route, $entry) {
       ? $self->generate_directory_index($entry->{path})
       : $self->generate_directory_index($entry->{path}->parent);
 
-    push @{ $vars->{css_files} }, '/css/directory-list.css';
+    push @{ $vars->{css_files} }, '/css/navigation.css', '/css/directory-list.css';
     $vars->{entries} = $autoindex;
   }
 
