@@ -5,9 +5,9 @@ use v5.42.0;
 use Mooish::Base -standard;
 extends 'WebFramework::Controller::Base';
 
-with 'WebFramework::Role::Markdown';
 
 use YAML::XS ();
+use List::Util 'first';
 require Path::Tiny;
 
 has glossary_dir => (
@@ -16,6 +16,29 @@ has glossary_dir => (
 );
 
 has entries => (is => 'lazy');
+
+has categories => (
+  is => 'ro',
+  default => sub {
+  return {
+      spell     => {
+        route   => '/Harrypedia/magic/spells',
+        order   => 4,
+      },
+      potion     => {
+        route   => '/Harrypedia/magic/potions',
+        order   => 5,
+      },
+      animal     => {
+        route  => '/Harrypedia/animals',
+        order   => 4,
+      },
+      vegetation => {
+        route  => '/Harrypedia/vegetation',
+        order   => 5,
+      },
+    };
+  });
 
 sub _build_entries ($self) {
   my @all;
@@ -43,12 +66,8 @@ sub build ($self) {
 
   for my $entry (@$entries) {
     my $category = $entry->{category} // 'spell';
-    my %base_for = (
-      potion     => '/Harrypedia/magic/potions',
-      animal     => '/Harrypedia/animals',
-      vegetation => '/Harrypedia/magic/vegetation',
-    );
-    my $base = $base_for{$category} // '/Harrypedia/magic/spells';
+
+    my $base = $self->categories->{$category}->{route} // '/Harrypedia/magic/spells';
 
     # Route for the title (incantation or primary name)
     my $title_slug  = $self->_slug($entry->{title});
@@ -89,7 +108,7 @@ sub build ($self) {
 }
 
 sub _register_entry_route ($self, $route, $entry) {
-  $self->add_navigation_route($route, $entry->{title}, { order => 50 });
+  $self->add_navigation_route($route, $entry->{title});
 
   $self->router->add(
     $route,
@@ -105,11 +124,14 @@ sub _register_entry_route ($self, $route, $entry) {
 sub _register_index_route ($self, $route, $entries) {
   my %title_for = (
     '/Harrypedia/magic/potions'     => 'Potions',
-    '/Harrypedia/animals'           => 'Animals',
-    '/Harrypedia/magic/vegetation'  => 'Vegetation',
+    '/Harrypedia/animals'           => 'Magical Animals',
+    '/Harrypedia/vegetation'        => 'Magical Vegetation',
   );
   my $title = $title_for{$route} // 'Spells';
-  $self->add_navigation_route($route, $title, { order => 50 });
+  my $cat = first { $self->categories->{$_}{route} eq $route } keys %{ $self->categories };
+  my $navOrder = $cat ? ($self->categories->{$cat}{order} // 50) : 50;
+
+  $self->add_navigation_route($route, $title, { order => $navOrder });
 
   $self->router->add(
     $route,
