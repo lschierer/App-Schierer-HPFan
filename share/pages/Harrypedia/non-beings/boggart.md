@@ -33,7 +33,7 @@ a frighteningly over-powered creature.
 [Dementors]: /Harrypedia/non-beings/dementor/
 [Dementor]: /Harrypedia/non-beings/dementor/
 [non-beings]: /Harrypedia/non-beings/
-[balance of power]: /Harrypedia/balance/
+[balance of power]: /Harrypedia/reactions/balance/
 [^211021-11]:
     Mrs. J. K. Rowling. "[Boggart](https://www.rowlingindex.org/work/pmbog/)"
     Publication Date: 2012-12-20. Last Viewed: 2021-10-21.

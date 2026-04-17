@@ -300,7 +300,7 @@ volcano[^240506-3] would work just fine.
     analogy.
 
 [Lord of the Rings]: https://wikipedia.org/wiki/The_Lord_of_the_Rings
-[balance]: /Harrypedia/balance/
+[balance]: /Harrypedia/reactions/balance/
 [basilisk]: /Harrypedia/animals/basilisk/
 [fiendfire]: </Harrypedia/magic/spells/fiend fire/>
 [the killing curse]: </Harrypedia/magic/spells/avada kedavra>

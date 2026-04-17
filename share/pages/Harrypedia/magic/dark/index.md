@@ -17,7 +17,7 @@ citations for this.
 Also note that there seems to be more "dark" magic than "light" magic, see my
 mini-rant on the [balance of power][].
 
-[balance of power]: /Harrypedia/balance/
+[balance of power]: /Harrypedia/reactions/balance/
 
 ### Analysis
 

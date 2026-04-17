@@ -2,12 +2,14 @@
 collection: Harrypedia
 title: Wizarding World Culture
 author: Luke Schierer
+sidebar:
+  order: 10
 ---
 
 This is the place where Rowling's excuse for world building falls down most.
 From my perspective, she cannot seem to decide if she wants to actually build a
 hidden society living in parallel with the non-magical one, or if she is making
-magical families different simply as an excuse for humor. If the former, then
+magical families different simply as an excuse for humour. If the former, then
 some of the more ludicrous elements she has introduced are flaws in the design.
 If the latter, then the massive amount of backstory that she _has_ provided in
 her various website articles is superfluous, unnecessary, and frankly a waste of

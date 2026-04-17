@@ -24,7 +24,7 @@ and unkillable because, so the theory goes, being "alive" requires having a
 physical body. Since these things have never been "alive" they cannot be killed,
 only driven away.
 
-[balance of power]: /Harrypedia/balance/
+[balance of power]: /Harrypedia/reactions/balance/
 
 There are two basic problems. The first is that they disrupt the overall
 [balance of power] in the world Mrs. Rowling has created. The other problem is
