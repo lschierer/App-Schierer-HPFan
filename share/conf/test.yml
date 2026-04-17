@@ -5,7 +5,6 @@ stage: staging
 
 modules:
   "^WebFramework::Module::AutoIndex": {}
-  "^WebFramework::Module::Navigation": {}
   "^WebFramework::Module::SiteLogo":
     site_logo: public/images/LukeHPSite.svg
   Template:
