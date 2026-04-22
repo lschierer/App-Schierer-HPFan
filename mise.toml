@@ -1,6 +1,5 @@
 [tools]
 jq = "latest"
-just = "latest"
 node = "24"
 pandoc = "latest"
 perl = "5.42.1"
@@ -11,3 +10,100 @@ yq = "latest"
 
 [env]
 MOOISH_BASE_EXTRA_MODULES = "MooX::TypeTiny;MooX::XSConstructor"
+
+[tasks.install]
+description = "Install dependencies"
+run = """
+mise install
+pnpm install
+perl Build.PL
+./Build installdeps
+"""
+
+[tasks.build-data]
+description = "Preprocess Gramps database"
+run = "./scripts/preprocess_gramps_db"
+
+[tasks.css]
+description = "Build CSS"
+run = "pnpm build:css"
+
+[tasks.typescript]
+description = "Build TypeScript"
+run = "pnpm build:ts"
+
+[tasks.build]
+description = "Build the project"
+depends = ["install"]
+run = """
+./Build
+pnpm build:css
+pnpm build:ts
+mkdir -p public/images/HPNOFP
+find share/HPNOFP/src/OEBPS/ \\( -name '*.jpg' -o -name '*.gif' \\) -exec cp "{}" public/images/HPNOFP/ \\;
+"""
+
+[tasks.tidy]
+description = "Format Perl code"
+run = """
+find lib -name '*.pm' -exec perltidy -b -pro=.perltidyrc {} \\;
+find t -name '*.t' -exec perltidy -b -pro=.perltidyrc {} \\;
+perltidy -b -pro=.perltidyrc Build.PL
+perltidy -b -pro=.perltidyrc bin/server.pl
+find . -name '*.bak' -delete
+"""
+
+[tasks.spelling]
+description = "Fix spelling and run cspell"
+run = """
+pnpm tsx scripts/fix-spelling.ts
+pnpm cspell share/pages
+"""
+
+[tasks.test]
+description = "Run tests"
+run = """
+./Build test
+pnpm test
+"""
+
+[tasks.clean]
+description = "Clean build artifacts"
+run = """
+./Build clean
+pnpm run clean
+rm -rf /tmp/hpfan_cache
+"""
+
+[tasks.dev]
+description = "Development server"
+depends = ["clean", "build", "build-data"]
+run = "perl bin/server.pl"
+
+[tasks.quickdev]
+description = "Quick dev server with file watching"
+run = """
+rm -rf /tmp/hpfan_cache
+watchexec -w bin -w lib -w ../PAGI-WebServer/lib -w templates -w public/css -w public/js -w share/pages -w share/Bookmarks -w share/history -w share/HPNOFP -r ./bin/server.pl
+"""
+
+[tasks.prod]
+description = "Production server"
+depends = ["build", "build-data"]
+run = "./Build && perl bin/server.pl --mode production"
+
+[tasks.deploy-dev]
+description = "Deploy to dev environment"
+depends = ["install", "build-data", "build"]
+run = """
+pnpm cdk --profile personal acknowledge 34892
+MODE='dev' pnpm cdk --profile personal deploy
+"""
+
+[tasks.deploy-prod]
+description = "Deploy to production"
+depends = ["install", "build-data", "build"]
+run = """
+pnpm cdk --profile personal acknowledge 34892
+MODE='prod' pnpm cdk --profile personal deploy
+"""
