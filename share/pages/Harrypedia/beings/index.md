@@ -8,7 +8,7 @@ sidebar:
 
 The British Ministry of Magic classifies things as "Beings", "[Non-Beings],"
 "[Animals]" (magical and non-magical), and "[Vegetation]" (magical and
-non-magical).[^211111-2] This last is really an implicet category, as most
+non-magical).[^211111-2] This last is really an implicit category, as most
 wizards think the difference between vegetation and non-vegetation much more
 clear than a non-magical scientist would.[^211111-1]
 
