@@ -168,6 +168,9 @@ exchange between [Harry] and [Ginny].
 > Harry blinked a few times and then looked down. "A few evenings with
 > Dumbledore."[^210912-1]
 
+Here I have used a fair amount of fan fiction speculation to flesh out my thinking, but the fact remains that the key piece of data is, in fact, in the text of book five itself.  Note that quote above.  Dumbledore is talking *to [Harry]*, not to [Snape] or any other adult, but feels it necessary to state that the key measure of the success of his plan, at the moment [Harry] first arrives at 
+[Hogwarts], was that [Harry] *was not a pampered prince*.  That was more important than that [Harry] was as healthy as could be desired -- Dumbledore admits that [Harry] *was not* well nourished.  He even admits that [Harry] was, in essence, *abnormal* when he says "under the circumstances" instead of a simple unqualified statement.  Why is this something he says to [Harry], think about this as a fifteen year old being told that your humility is more important than your happiness, your lack of hunger (and think how urgent hunger is to a teenage boy).  No, as long as you could *technically* qualify as minimally healthy, its more important that you be humble.  Dumbledore was *deeply* concerned that his plan hinged on [Harry] approaching the wizarding world with a certain mindset of self-sacrifice, *and his plans were threatened if [Harry] has a normal home life.* 
+
 ### The Moral Problem
 
 When you consider the potential cost if [Riddle] had not been stopped, and
@@ -217,6 +220,7 @@ objects that [Harry] must go to the [Dursleys] because he will be safest there.
 Safest from what/who? [Dumbledore] can now start to use the complicated nature
 of the thorny problem to confuse the listener.
 
+[Hogwarts]: </Harrypedia/places/Hogwarts>
 [Bones]: </Harrypedia/people/Bones>
 [Weasleys]: </Harrypedia/people/Weasley>
 [ADphil]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian/Philosophy>

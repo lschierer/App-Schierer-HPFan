@@ -67,15 +67,15 @@ interview for the DADA position. Dumbledore intimates that he knows much of what
 Dumbledore has in the [Wizengamot][Culture] or the [International Confederation
 of Wizards][ICW], but we do know that he has been nominated for Minister of
 Magic three times. His official power may be unknown, his _unofficial_ stature
-is already quite great; in British society, the latter may actually be more
+is already quite great; in British society the latter may actually be more
 important. This is particularly relevant because Dumbledore will stand up the
-Order of the Phoenix and act outside the law. If he is willing to do so, then he
+Order of the Phoenix and act outside the law. If he is willing to do so, he
 can be held accountable for failing to do so soon enough or effectively enough.
 If you are going to break the law, and worse lead others to do so, make it mean
 something. That is not perfect morality, but being a vigilante _and failing_
 seems to me worse than saying that you were forced to take the law into your own
 hands because the government was too corrupt, too penetrated by the Death
-Eaters, to be effective.
+Eaters, to be effective.  Standing up a vigilante movement and failing to then do what it takes to win strikes me as a careless disregard for the lives you put at risk by going outside the law. 
 
 ### The Prophecy
 
@@ -118,7 +118,7 @@ Dumbledore waits until the summer after [Harry]'s _fifth_ year to hunt them
 down. Why, knowing that he will die, he entrusts the knowledge to [Harry] and
 gives him no adult to confide in. Why he allows [Harry] to confide in [Hermione] and
 [Ron] who can help little, but not in [Lupin], [Kingsley], or [Moody] who might
-have truly helped.
+have truly helped.  Again, per Dumbledore, the prophesy is irrelevant; *any of these adults **could** have helped.* 
 
 [^20210927-14]:
     Mrs. J. K. Rowling.
