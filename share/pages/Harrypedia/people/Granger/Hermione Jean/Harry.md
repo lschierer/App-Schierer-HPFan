@@ -66,6 +66,31 @@ disagree?
   [Harry] was right on this one. Certainly Hermione's _reasoning_ was wrong even
   if her conclusion was partially correct.
 
+  Consider: college campus book stores sell used textbooks as a matter of
+  course, and give a _discount_ when the book is visibly annotated with a
+  previous student's notes. They would do neither if reading those notes
+  constituted cheating. The reason is straightforward: **the purpose of
+  education is demonstrated mastery of the material, not uniformity of the
+  preparation path.** A previous student's marginalia are a study aid — no
+  different in kind from a tutor, a study group, or asking the professor a
+  question during office hours.
+
+  Harry still brews the potion himself, in class, under observation. The graded
+  output — the potion — is his own work. The Prince's notes tell him _what to
+  do_, but he still has to _do it_. From a knowledge perspective, he still must
+  learn the material himself for his eventual NEWTs (were he a normal student
+  who did not drop out to save the world). The notes are a shortcut in lab
+  prep, not a substitute for competence.
+
+  Hermione's error is conflating preparation shortcuts with cheating. Her
+  implicit position — that the _only_ legitimate way to learn is unaided
+  struggle with the assigned text — would, if applied consistently, also
+  condemn study groups, supplementary reading, and asking older students for
+  advice. _Hermione_ thinks the process of school work is inherently valuable.
+  _The school_ cares that Harry learns. These are not the same standard, and
+  the school's is the one that matters for determining whether something is
+  cheating.
+
 [Professor McGonagall]: /Harrypedia/people/McGonagall/Minerva
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
 [Malfoy]: </Harrypedia/people/Malfoy/Draco Lucius>
