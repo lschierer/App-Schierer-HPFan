@@ -54,6 +54,18 @@ thought of [Ravenclaw].[^221213-1]. Other than that, Ron's comments seem to
 largely stem from a fairly black and white view of the world and [Malfoy]'s over
 the top behaviour.
 
+Fan fiction's depiction of Ron's eating habits is another place that something
+rings untrue.  We *do* hear several complaints from [Hermione] in several books
+about Ron talking with food in his mouth, on the other hand, [Lavender] expresses
+a fair amount of apparently sincere attraction to him across a significant portion of
+their sixth year.  Were he in fact a disgusting slob at the meal table, that ought to
+repel her.  I have no strong evidence on this one, just a gut intuition, but I believe
+that two things are happening.  
+
+1. Ron does *occasionally* talk with food in his mouth. 
+1. [Hermione] is more than willing to use any stick available to to win an argument no matter if it is an exaggeration of how badly he may be violating good manners. 
+
+[Lavender]: /Harrypedia/people/Brown/Lavender
 [Harry]: </Harrypedia/people/Potter/Harry James>
 [Hermione]: </Harrypedia/people/Granger/Hermione Jean>
 [MM1]: </Harrypedia/people/McGonagall/Minerva>
