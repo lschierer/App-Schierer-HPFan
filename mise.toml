@@ -3,7 +3,7 @@ jq = "latest"
 node = "24"
 pandoc = "latest"
 perl = "5.42.1"
-pnpm = "10"
+pnpm = "11"
 podman = "latest"
 watchexec = "latest"
 yq = "latest"
@@ -97,7 +97,7 @@ description = "Deploy to dev environment"
 depends = ["install", "build-data", "build"]
 run = """
 pnpm cdk --profile personal acknowledge 34892
-MODE='dev' pnpm cdk --profile personal deploy
+MODE='dev' pnpm cdk --profile personal deploy --require-approval=never
 """
 
 [tasks.deploy-prod]
