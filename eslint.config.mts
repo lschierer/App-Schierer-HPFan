@@ -8,7 +8,7 @@ import globals from 'globals';
 
 export default defineConfig(
   {
-    ignores: ['build/**','blib/**','**/public/**', '**/cdk.out/**'],
+    ignores: ['build/**','blib/**','**/public/**', '**/cdk.out/**', 'share/gramps/**/*.js'],
   },
   {
     ignores: ["**/*.md"],
