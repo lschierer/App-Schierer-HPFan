@@ -1,6 +1,7 @@
 ---
 author: Luke Schierer
 title: Nineteen Missing Years
+# cspell: ignore: HUFFPOST
 ---
 
 
@@ -22,18 +23,16 @@ characters I was unwilling to go, and thus I have never finished it.  Despite
 the fact that Mrs. Rowling is listed as an author, I have seen it compared to a
 work of fan fiction,[^211028-1] a view that from what I know of the book/play I
 have a great deal of sympathy with.  So much so, that I almost entirely ignore
-its existence when I speculate about the universe in my
-[[Notes|Harry_Potter/Notes]].  
+its existence when I speculate about the universe in [these pages].
+
 
 That aside, what *did* happen in the missing nineteen years?  Since I accept
 everything out there as a *secondary* source *at best*, this entire section
 represents my opinions and speculations.  It is something less than a fan
-fiction, but more open to me filling in the gaps than I am in the
-[[Notes|Harry_Potter/Notes]].  
+fiction, but more open to me filling in the gaps than I am in the rest of [this site].
 
-[[!inline pages="fiction/Harry_Potter/Nineteen_Missing_Years/* and !
-fiction/Harry_Potter/Nineteen_Missing_Years/*/*/*" archive=yes feeds=no quick=no
-limit=0 sort=title_natural]]
+[this site]: /Harrypedia
+[these pages]: /Harrypedia
 
 [HPCC]: https://www.goodreads.com/book/show/29056083-harry-potter-and-the-cursed-child
 

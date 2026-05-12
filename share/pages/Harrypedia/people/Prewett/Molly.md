@@ -1,3 +1,6 @@
+---
+# cspell: ignore: RoseLilian
+---
 ### Overview
 
 Mrs. Rowling has not given us a ton of information on Molly, especially
@@ -14,7 +17,7 @@ example, or to put her in [Arthur]'s year, [Bill] in 1970, or both, and allow
 her to finish normally.
 
 Molly is overprotective, overbearing, controlling, incredibly generous,
-incredibly caring, and undoubtedly a tries, as best she understands it, to be a
+incredibly caring, and undoubtedly tries, as best she understands it, to be a
 good person. That is not to say, as the above list of adjectives shows, to say
 she always succeeds, but unlike [Dumbledore] I truly believe that Molly's heart
 is firmly in the right place. While she does have the classic red head's temper,
@@ -41,7 +44,7 @@ I think my biggest objections to Molly are as follows:
   thing to do, and must be even harder in a time of war, _but it must be done_
   **for their own good**.
 - I dislike the way she handled [Bill] and [Fleur]'s engagement. I believe that
-  she, like most of the women in the series, is irrational about [Fleur].
+  she is irrational about [Fleur] ( as are most of the women in the series).
 
 On the other hand, it is easy to be over sensitive.
 
@@ -64,7 +67,7 @@ On the other hand, it is easy to be over sensitive.
   Rowling chose to consider plot relevant, I will assert that they are reading
   more of their _own_ past into this than what is actually in the text.
   Certainly our first meeting [Luna] is not a shining moment for [Ginny], but as
-  per above, there are a number of possible explanations.
+  per above, there are a number of possible explanations.  Without more proof that it is in fact true, that discussion is more about [Ginny] than Molly. 
 - There is evidence that Ron and the twins (and perhaps Percy?) are
   male-chauvinists. It seems more likely they learned this from their mother
   than their father.[^221202-2] I had noted [Ron]'s attitude myself, and once
@@ -122,14 +125,11 @@ point of fact, [Ginny], at ten, is still young enough that, in her excitement,
 she doesn't pick up on Molly's activity. I think Molly shushes [Ginny] in the
 next line, despite having just asked the question [Ginny] answers, because
 [Ginny], unlike Molly, _wasn't_ quiet, and thus _did_ risk drawing attention
-from bystanders.
+from bystanders. In other words, this scene is precisely as innocent as it appears to most eleven
+year old readers encountering it for the first time. 
 
-In other words, this scene is precisely as innocent as it appears to most eleven
-year old readers encountering it for the first time. That being said, I have
-encountered one reasonably amusing alternative explanation. [This author] writes
-in one of her works that the [Ministry] arranges for a family to arrive towards the end of the boarding
-
-period, and to be purposefully noisy while actually being under charms to avoid
+That being said, I have encountered one reasonably amusing alternative explanation. [RoseLilian] writes
+in one of her works that the [Ministry] arranges for a family to arrive towards the end of the boarding period, and to be purposefully noisy while actually being under charms to avoid
 attracting muggle attention. A magical child afraid or unsure of how to deal
 with the barrier will thus have a clear, friendly family to approach for help,
 being unaffected by spells that only target those without magic.[^240202-1] That
@@ -146,7 +146,7 @@ notice. It is also believable that as [Harry] starts to be in more danger, the
     [Chapter 5](https://www.fanfiction.net/s/13049901/5/The-difference-a-good-solicitor-makes)
     Published: 2018-08-29. Updated: 2021-04-20
 
-[This author]: https://www.fanfiction.net/u/8209039/RoseLilian
+[RoseLilian]: https://www.fanfiction.net/u/8209039/RoseLilian
 [RoseLilian]: https://www.fanfiction.net/u/8209039/RoseLilian
 
 [The difference a good solicitor makes]: https://www.fanfiction.net/s/13049901/

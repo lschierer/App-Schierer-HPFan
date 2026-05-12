@@ -1,6 +1,7 @@
 ---
 author: Luke Schierer
 title: Harry and Ginny Between the Battle and the Epilogue
+# cspell: ignore: Direwolf51
 ---
 
 
@@ -74,6 +75,8 @@ are mutually exclusive.[^211101-7]
 
 [bmhh1]: https://bobmin.fanficauthors.net/Healing_Harry
 
+[lcmni]: http://www.accio-quote.org/articles/2005/0705-tlc_mugglenet-anelli-2.htm
+
 [^211101-7]: Direwolf51.
     _[Bone(s) to Pick](https://www.fanfiction.net/s/13766417)_
     "[Epilogue](https://www.fanfiction.net/s/13766417/12/Bone-s-to-Pick)"
@@ -94,8 +97,6 @@ are mutually exclusive.[^211101-7]
 [^211101-2]: I complain bitterly about this in my [Notes](/Harrypedia)
     on the series.
 
-[211101-1]: Mrs. J. K. Rowling.
-    "[The Leaky Cauldron and MuggleNet interview Joanne Kathleen Rowling: Part
-    Two](http://www.accio-quote.org/articles/2005/0705-tlc_mugglenet-anelli-2.htm)"
+[^211101-1]: Mrs. J. K. Rowling. 
+    "[The Leaky Cauldron and MuggleNet interview Joanne Kathleen Rowling: Part Two][lcmni]"
     [Accio-Quote](http://www.accio-quote.org) 2005-07-16.
-
