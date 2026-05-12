@@ -1,3 +1,4 @@
+# cspell: disable
 [tools]
 jq = "latest"
 node = "24"
@@ -31,6 +32,13 @@ run = "pnpm build:css"
 [tasks.typescript]
 description = "Build TypeScript"
 run = "pnpm build:ts"
+
+[tasks.clean]
+description = "Clean build artifacts"
+run = """
+./Build clean
+rm -rf /tmp/hpfan_cache
+"""
 
 [tasks.build]
 description = "Build the project"
@@ -67,13 +75,6 @@ run = """
 pnpm test
 """
 
-[tasks.clean]
-description = "Clean build artifacts"
-run = """
-./Build clean
-pnpm run clean
-rm -rf /tmp/hpfan_cache
-"""
 
 [tasks.dev]
 description = "Development server"
