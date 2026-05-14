@@ -3,7 +3,7 @@
 jq = "latest"
 node = "24"
 pandoc = "latest"
-perl = "5.42.1"
+perl = "5.42.2"
 pnpm = "11"
 podman = "latest"
 watchexec = "latest"
