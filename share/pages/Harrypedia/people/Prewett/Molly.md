@@ -27,6 +27,7 @@ well."[^210818-7] Some of these thoughts are similar to those of the author of
 
 I think my biggest objections to Molly are as follows:
 
+- I dislike her use of [love potions]. Strongly so. 
 - I dislike the way she believes the press even when they write about people she
   knows.[^211104-1]
 - I dislike the way she treats [Sirius] when living in his house.
@@ -78,6 +79,7 @@ On the other hand, it is easy to be over sensitive.
   gender and gender roles. See my own objection about her reliance on public
   perception, this really fits in with that.
 
+[love potions]: </Harrypedia/magic/potions/love potions>
 [Ron]: </Harrypedia/people/Weasley/Ronald Bilius/>
 [Lovegoods]: /Harrypedia/people/Lovegood/
 [Weasleys]: /Harrypedia/people/Weasley/
@@ -136,7 +138,7 @@ being unaffected by spells that only target those without magic.[^240202-1] That
 we do not see such charms being cast is not really an objection, because, as
 previously noted, the book is from [Harry]'s point of view, and _he_ did not
 notice. It is also believable that as [Harry] starts to be in more danger, the
-[Ministry] would assign the task to someone else.
+[Ministry] would assign the task to someone else (since he is generally with the Weasleys).
 
 [Ministry]: /Harrypedia/culture/Government/
 
@@ -263,22 +265,6 @@ influenced by the various depictions I have read.
     At least, I am fairly sure that is real and not just fanfiction. Citation
     needed.
 
-## Criticizing Other Authors
-
-It is extremely common for more conspiracy minded authors to state that Molly
-held onto [Harry]'s [Gringotts] key for most of his school career. This
-contradicts the facts. [Harry] visited [Gringotts] on his own in his time in the
-alley before third year[^221213-6], and while we do not know who paid for his
-supplies fifth year, it was [Bill], not Molly, who retrieved [Harry]'s gold
-before sixth year. Moreover, he did so as employee of the bank, not as the
-holder of [Harry]'s key. It is only in the summer before fourth year that she
-seems to have his key, when she asks him to leave his school list out and then
-leaves a bag of his gold on his bed for him.
-
-[^221213-6]:
-    Mrs. J. K. Rowling.
-    _[Harry Potter and the Prisoner of Azkaban](https://www.librarything.com/work/2742161/book/225886376)_
-    Bloomsbury UK (2004). page 50.
 
 [^240401-5]:
     As I note discussing the [Weasley] family, this may be due to the use of

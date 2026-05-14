@@ -4,7 +4,7 @@ title: Remus Lupin, Brains of the Marauders
 author: Luke Schierer
 ---
 
-One of the more common fannon ideas is that [Remus Lupin] was the most
+One of the more common fanon ideas is that [Remus Lupin] was the most
 intelligent of the Marauders. This is sometimes stated explicitly, other times
 it is done by stating that "[Hermione] is [the younger generation's] [Remus]" or
 that "[Hermione] is a female [Remus]." Either way, there is a strong implication

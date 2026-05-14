@@ -2,6 +2,7 @@
 collection: Harrypedia
 title: House Elves
 author: Luke Schierer
+# cspell: ignore: Spookie mjimeyg
 ---
 
 House Elves are one of the more disturbing elements of the series. As others
@@ -47,6 +48,79 @@ is rare, so to is the ability for an elf to resist this compulsion. Here the
 solution to the situation is not societal, but _magical_, a counter-curse must
 be researched, developed, tested, and used. This is made harder because the
 _curse_ in question is lost and unrecorded by history.[^240219-4]
+
+## Speech Patterns
+
+House-elf speech in the series is not uniform — individual elves show distinct
+linguistic patterns, suggesting these are sociolinguistic habits rather than a
+biological constraint of the species.
+
+### Illeism (Third-Person Self-Reference)
+
+The most distinctive feature of house-elf speech is [illeism] — referring to
+oneself by name rather than using "I." Dobby and Kreacher both exhibit this
+consistently:
+
+- Dobby: "So long has Dobby wanted to meet you, sir"
+- Dobby: "Dobby is a free elf"
+- Kreacher: "Kreacher did not see young master"
+
+This appears to function as a servitude/politeness marker, analogous to humble
+pronouns in languages like Korean or Japanese. Notably, elves *do* use other
+pronouns normally — "you," "he," "us" — the avoidance is specific to first
+person singular.
+
+### Variation Between Individuals
+
+Not all house-elves use illeism. Winky freely uses "I" in most contexts:
+
+- "I knows Dobby too, sir!"
+- "I says to Dobby, I says, go find yourself a nice family"
+
+However, Winky switches *to* illeism when in Dobby's presence:
+
+- "Winky is a disgraced elf, but Winky is not yet getting paid!"
+
+This suggests illeism is a social register — a norm that can be adopted or
+dropped depending on context and peer pressure — rather than a fixed
+grammatical rule of the species.
+
+### Subject-Verb Disagreement
+
+Winky (and to a lesser extent other elves) shows consistent non-standard
+subject-verb agreement:
+
+- "you *is* surely Harry Potter"
+- "you *goes* racketing around"
+- "I *says* to Dobby, I *says*"
+
+Dobby's grammar is notably more standard aside from the illeism, suggesting
+this is individual variation rather than a species-wide trait.
+
+### Illeism as Passive Aggression
+
+Kreacher demonstrates that illeism can be maintained even while being openly
+hostile, creating an ironic tension between the form of servility and
+contemptuous content:
+
+- "Kreacher did not see young master" followed immediately by "Nasty little
+  brat of a blood traitor it is."
+
+### Excessive Honorifics
+
+All house-elves shown in the series use frequent honorifics ("sir," "miss,"
+"master," "mistress") regardless of their personal feelings toward the
+addressee.
+
+### Summary
+
+| Elf | Illeism | Grammar | Honorifics |
+|-----|---------|---------|------------|
+| Dobby | Consistent | Mostly standard | Excessive |
+| Kreacher | Consistent | Mostly standard | Maintained even when hostile |
+| Winky | Context-dependent | Non-standard verb agreement | Excessive |
+
+[illeism]: https://en.wikipedia.org/wiki/Illeism
 
 [^HEaS]: some works pointing this out include, but are not limited to:
 
