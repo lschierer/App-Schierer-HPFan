@@ -51,6 +51,27 @@ modified, it corresponds to _no_ actual history, so when the pensieve seeks in
 time for details to fill in, there _aren't any_. Anything that he himself does
 not provide is simply not present.
 
+This brings us to the real tension. [Snape] is, by [Dumbledore]'s own
+assessment, one of the most accomplished Occlumens alive — skilled enough to
+routinely deceive [Riddle], whose ability to perceive truth and falsehood is
+among his most keenly honed skills. Granted, [Riddle] uses Legilimency rather
+than a pensieve, but the underlying craft — constructing a false memory
+convincing enough to pass scrutiny — is the same. If [Slughorn]'s attempt is
+"crude," then a memory modified by [Snape] would presumably be anything but. It
+would be _elegant_. And that creates an uncomfortable question: is the "Worst
+Memory" scene genuine, or is it a modification so masterfully done that even the
+pensieve's time-magic fill-in cannot distinguish it from reality?
+
+If it is genuine, then the pensieve's time-magic explains the impossible details
+(the "L. E." on [James]'s paper, events behind [Snape]'s line of sight) and all
+is well. But if [Snape] placed that memory in the pensieve _specifically because
+[Harry] was about to be in the room for Occlumency lessons_, one must at least
+entertain the possibility that [Snape] — who had every reason to shape [Harry]'s
+perception of [James] — curated what [Harry] would see. We have no way to know.
+The text treats it as genuine, and I think we are meant to take it as such, but
+the _mechanism_ that makes it work (time-magic fill-in) is the same mechanism
+that a sufficiently skilled practitioner could exploit.
+
 However, I suspect that a _truly_ skilled practitioner of the [mind magics]
 would not only know this, but would be able to work around it. This would
 explain why [Dumbledore] says that [Slughorn]'s attempt is "crudely done."
@@ -68,7 +89,7 @@ his comments to [Harry] probably poses more risks to the practitioner's actual
 ability to recollect the unmodified event.[^221202-13] It is important to note
 that if this is either known to be true or speculated to be possible in world,
 then memories would not be considered admissible evidence in a responsible
-court.
+court.  It remains an exercise for the imagination to determine to what extent, if ever, magical courts do in fact *responsibly* exercise power. 
 
 [mind magics]: </Harrypedia/magic/The Mind Arts>
 [Slughorn]: </Harrypedia/people/Slughorn/Horace Eugene Flaccus>
@@ -77,6 +98,7 @@ court.
 [Sirius]: </Harrypedia/people/Black/Sirius III>
 [Harry]: </Harrypedia/people/Potter/Harry James>
 [Dumbledore]: </Harrypedia/people/Dumbledore/Albus Percival Wulfric Brian>
+[Riddle]: </Harrypedia/people/Riddle/Tom Marvolo>
 
 [^221202-10]:
     The idea that the pensieve can be used to invoke time was first suggested to
