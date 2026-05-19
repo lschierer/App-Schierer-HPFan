@@ -25,6 +25,8 @@ desire to read these stories unless exceptionally well done.  Occasionally one
 of these is really good at exploring something interesting, more usually I
 find it distorts [Harry]'s character too much.
 
+A fair number of these stories seem to have really really strong biases against [Molly], [Ron], and [Ginny].  For whatever reason the rest of the [Weasleys] frequently get represented fairly evenly, but there's a real hatred for these characters.  On one hand, there certainly is plenty to dislike about [Molly] and [Ron], readers here will certainly see a fair amount of criticism for each.  While I like [Ginny], I also admit she is not a perfect character, and I have discussed her flaws as well.  These stories however, go well beyond that.  There is real irrational *hatred* for them.  The kind where the author feels compelled to distort these characters to *create* new ways to criticise them.  And so we'll see these stories frequently populated by versions of [Ron] that fails out of school (canon [Ron] had mostly 'Exceeds' scores), with no social skills or anger management ability.  We will see versions of [Ginny] where she is outright delusional, unable to perceive the difference between the story books she grew up with and the reality she experiences, and hostile when confronted about it.  She'll be materialistic, greedy, and heartless; she honestly doesn't care about her actions in second year except that [Harry] might think badly of her.  [Molly] will enable the worst traits in both of these half-baked caricatures, along with frequently being portrayed as dosing everyone with [love potions] left, right, and center. 
+
 ### Slash Pairings
 
 There are people who write [Harry]/[Draco] or similar stories. Some of these are
@@ -102,6 +104,11 @@ the same.  The harem results *from* magical contracts, whether it is *about* the
 [Nymphadora]: /Harrypedia/people/Tonks/Nymphadora
 [Sirius]: </Harrypedia/people/Black/Sirius III>
 [Remus]: </Harrypedia/people/Lupin/Remus John>
+[Molly]: /Harrypedia/people/Prewett/Molly
+[Ron]: </Harrypedia/people/Weasley/Ronald Bilius>
+[Ginny]: </Harrypedia/people/Weasley/Ginevra Molly>
+[love potions]: </Harrypedia/magic/potions/love potions>
+[Weasleys]: /Harrypedia/people/Weasley
 [reductio ad absurdum]: https://en.wikipedia.org/wiki/Reductio_ad_absurdum
 
 [^240415-1]:
