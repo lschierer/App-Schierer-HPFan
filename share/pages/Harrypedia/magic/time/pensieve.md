@@ -70,12 +70,12 @@ entertain the possibility that [Snape] — who had every reason to shape [Harry]
 perception of [James] — curated what [Harry] would see. We have no way to know.
 The text treats it as genuine, and I think we are meant to take it as such, but
 the _mechanism_ that makes it work (time-magic fill-in) is the same mechanism
-that a sufficiently skilled practitioner could exploit.
+that a sufficiently skilled practitioner could exploit.  We are, essentially, asking if the narrator is in fact reliable in a crucial, but utterly unverifiable, instance.  
 
-However, I suspect that a _truly_ skilled practitioner of the [mind magics]
-would not only know this, but would be able to work around it. This would
+I suspect that a _truly_ skilled practitioner of the [mind magics]
+would not only know something of the limits (to what extent a memory can be modified before it lacks verisimilitude), but would be able to work around it. This would
 explain why [Dumbledore] says that [Slughorn]'s attempt is "crudely done."
-[^240422-2] Instead of trying to replace the memory with totally false imagined
+[^240422-2] Instead of trying to replace the memory with a totally false imagined
 scene, he or she might, for example, splice two memories. Or perhaps judiciously
 change a single word here or there to subtly influence the perception that the
 viewer has of the memory, without preventing the pensieve from finding enough in
