@@ -43,7 +43,6 @@ my $build = Module::Build->new(
     'SVG'                         => '0',
     'Scalar::Util'                => '0',
     'URI::Escape'                 => '0',
-    'UUID'                        => '0',
     'Unicode::Normalize'          => '0',
     'Util::Any'                   => '0',
     'X500::DN'                    => '0',
