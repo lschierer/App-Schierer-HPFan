@@ -98,6 +98,7 @@ description = "Deploy to dev environment"
 depends = ["install", "build-data", "build"]
 run = """
 pnpm cdk --profile personal acknowledge 34892
+pnpm cdk --profile personal acknowledge 37949
 MODE='dev' pnpm cdk --profile personal deploy --require-approval=never
 """
 
@@ -106,5 +107,6 @@ description = "Deploy to production"
 depends = ["install", "build-data", "build"]
 run = """
 pnpm cdk --profile personal acknowledge 34892
-MODE='prod' pnpm cdk --profile personal deploy
+pnpm cdk --profile personal acknowledge 37949
+MODE='prod' pnpm cdk --profile personal deploy --require-approval=never
 """
