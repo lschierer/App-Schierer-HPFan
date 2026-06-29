@@ -1,6 +1,8 @@
 Build
 MYMETA.*
 
+pnpm-lock.yaml
+
 _build
 node_modules
 public/css
