@@ -3,11 +3,18 @@ import { html, css, LitElement, type CSSResultGroup, nothing } from 'lit';
 import { repeat } from 'lit/directives/repeat.js';
 
 import {
-  getCoreRowModel,
-  getSortedRowModel,
-  getExpandedRowModel,
   TableController,
   flexRender,
+  tableFeatures,
+  createCoreRowModel,
+  createSortedRowModel,
+  createExpandedRowModel,
+  rowSortingFeature,
+  rowExpandingFeature,
+  columnVisibilityFeature,
+  sortFn_alphanumeric,
+  sortFn_text,
+  sortFn_basic,
   type ColumnDef,
   type SortingState,
   type ExpandedState,
@@ -15,6 +22,26 @@ import {
 } from '@tanstack/lit-table';
 
 import SpectrumTokensCSS from '@spectrum-css/tokens/dist/index.css' with { type: 'css' };
+
+// TanStack Table v9 uses a modular feature architecture: the features you use,
+// their row-model factories, and the sorting functions needed for name
+// resolution (v9 no longer bundles them implicitly) are all declared statically
+// via `tableFeatures()` and passed to the table through the `features` option.
+const tableFeaturesConfig = tableFeatures({
+  rowSortingFeature,
+  rowExpandingFeature,
+  columnVisibilityFeature,
+  coreRowModel: createCoreRowModel(),
+  sortedRowModel: createSortedRowModel(),
+  expandedRowModel: createExpandedRowModel(),
+  sortFns: {
+    alphanumeric: sortFn_alphanumeric,
+    text: sortFn_text,
+    basic: sortFn_basic,
+  },
+});
+
+type TableFeaturesConfig = typeof tableFeaturesConfig;
 
 export interface RecRow {
   id: string;
@@ -43,7 +70,9 @@ export class RecommenderTable extends LitElement {
   @state() isComplete = false;
   @state() errors: string[] = [];
 
-  private tableController = new TableController<RecRow>(this);
+  private tableController = new TableController<TableFeaturesConfig, RecRow>(
+    this,
+  );
   private rowMap = new Map<string, RecRow>();
 
   static styles: CSSResultGroup = [
@@ -127,7 +156,7 @@ export class RecommenderTable extends LitElement {
     `,
   ];
 
-  private columns: ColumnDef<RecRow>[] = [
+  private columns: ColumnDef<TableFeaturesConfig, RecRow>[] = [
     {
       id: 'expander',
       enableSorting: false,
@@ -144,7 +173,7 @@ export class RecommenderTable extends LitElement {
       accessorFn: (row) => row.score,
       enableSorting: true,
       sortDescFirst: true,
-      header: (info: HeaderContext<RecRow, unknown>) =>
+      header: (info: HeaderContext<TableFeaturesConfig, RecRow>) =>
         this._renderHeader(info, 'Score'),
     },
     {
@@ -152,7 +181,7 @@ export class RecommenderTable extends LitElement {
       accessorFn: (row) => row.title,
       enableSorting: true,
       sortDescFirst: false,
-      header: (info: HeaderContext<RecRow, unknown>) =>
+      header: (info: HeaderContext<TableFeaturesConfig, RecRow>) =>
         this._renderHeader(info, 'Title'),
       cell: (info) => {
         const row = info.row.original;
@@ -164,7 +193,7 @@ export class RecommenderTable extends LitElement {
       accessorFn: (row) => Number(row.word_count) || 0,
       enableSorting: true,
       sortDescFirst: true,
-      header: (info: HeaderContext<RecRow, unknown>) =>
+      header: (info: HeaderContext<TableFeaturesConfig, RecRow>) =>
         this._renderHeader(info, 'Words'),
       cell: (info) => info.row.original.word_count || '',
     },
@@ -173,7 +202,7 @@ export class RecommenderTable extends LitElement {
       accessorFn: (row) => row.chapters,
       enableSorting: true,
       sortDescFirst: true,
-      header: (info: HeaderContext<RecRow, unknown>) =>
+      header: (info: HeaderContext<TableFeaturesConfig, RecRow>) =>
         this._renderHeader(info, 'Chapters'),
     },
     {
@@ -181,7 +210,7 @@ export class RecommenderTable extends LitElement {
       accessorFn: (row) => Number(row.hits) || 0,
       enableSorting: true,
       sortDescFirst: true,
-      header: (info: HeaderContext<RecRow, unknown>) =>
+      header: (info: HeaderContext<TableFeaturesConfig, RecRow>) =>
         this._renderHeader(info, 'Hits'),
       cell: (info) => info.row.original.hits || '',
     },
@@ -190,13 +219,16 @@ export class RecommenderTable extends LitElement {
       accessorFn: (row) => Number(row.kudos) || 0,
       enableSorting: true,
       sortDescFirst: true,
-      header: (info: HeaderContext<RecRow, unknown>) =>
+      header: (info: HeaderContext<TableFeaturesConfig, RecRow>) =>
         this._renderHeader(info, 'Kudos'),
       cell: (info) => info.row.original.kudos || '',
     },
   ];
 
-  private _renderHeader(info: HeaderContext<RecRow, unknown>, label: string) {
+  private _renderHeader(
+    info: HeaderContext<TableFeaturesConfig, RecRow>,
+    label: string,
+  ) {
     const direction = info.column.getIsSorted();
     const arrow = direction === 'asc' ? '🔼' : direction === 'desc' ? '🔽' : '';
     return html`
@@ -247,6 +279,7 @@ export class RecommenderTable extends LitElement {
 
   override render() {
     const table = this.tableController.table({
+      features: tableFeaturesConfig,
       columns: this.columns,
       data: this._data,
       state: { sorting: this._sorting, expanded: this._expanded },
@@ -263,9 +296,6 @@ export class RecommenderTable extends LitElement {
             : updaterOrValue;
       },
       getRowCanExpand: () => true,
-      getExpandedRowModel: getExpandedRowModel(),
-      getSortedRowModel: getSortedRowModel(),
-      getCoreRowModel: getCoreRowModel(),
     });
 
     const colSpan = table.getAllColumns().length;
