@@ -9,7 +9,7 @@ import { fileURLToPath } from 'url';
 import {
   ApplicationStack,
   type ApplicationStackProps,
-} from '../../PAGI-WebServer/lib/Infrastructure/index.ts';
+} from '@pagi/infrastructure/index';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -65,6 +65,7 @@ const props: ApplicationStackProps = {
   zoneName: 'schierer.org',
   instanceSize: config.instanceSize,
   appPort: 3001,
+  pagiBranch: 'consolidate-css-build',
   mainPerlDistro: 'App-Schierer-HPFan',
   appCodePath: path.join(__dirname, '..'),
   appCodeExcludes: [

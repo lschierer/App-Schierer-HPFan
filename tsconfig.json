@@ -17,13 +17,33 @@
     "useDefineForClassFields": true,
     "isolatedModules": false,
     "forceConsistentCasingInFileNames": true,
-    "types": ["node", "./types/myGlobals.d.ts", "./types/postcss-extend.d.ts"],
+    "types": ["node", "./types/myGlobals.d.ts" ],
     "noEmit": true,
     "composite": true,
     "rootDir": ".",
     "outDir": "./public/types",
     "declarationDir": "./public/types",
+    "paths": {
+      "@pagi/infrastructure/*": ["../PAGI-WebServer/lib/Infrastructure/*"] 
+    }
   },
   "exclude": ["**/node_modules/**", "**/cdk.out/**"],
-  "include": ["./lib/**/*.ts", "./scripts/*.ts", "./infrastructure/**/*.ts","./types/**/*.ts"],
+  "include": [
+    "./lib/**/*.ts", 
+    "./scripts/*.ts", 
+    "./infrastructure/**/*.ts",
+    "./types/**/*.ts"
+  ],
+ // Retargeted from ../PAGI-WebServer/lib/Infrastructure, which has no tsconfig.json
+ // of its own - so the reference was dead (TS6053) and the @pagi alias fell through to
+ // framework SOURCE, which a composite project may not have as an unlisted input
+ // (TS6307). The parent's root tsconfig IS a valid composite project, so pointing here
+ // makes TypeScript redirect the import to its built declarations instead.
+ //
+ // Requires the framework's dist/: run `pnpm build` in ../PAGI-WebServer once after
+ // cloning, since dist/ is gitignored there. Command-line builds do not care -
+ // tsconfig.build.json omits scripts/ and needs no dist.
+ "references": [
+    {"path": "../PAGI-WebServer"}
+  ] 
 }
