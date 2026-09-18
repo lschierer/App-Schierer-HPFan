@@ -1,5 +1,7 @@
 use v5.42.0;
 use experimental qw(class);
+#cspell: disable
+
 use utf8::all;
 use Future::AsyncAwait;
 require App::Schierer::HPFan::Model::History::Event;

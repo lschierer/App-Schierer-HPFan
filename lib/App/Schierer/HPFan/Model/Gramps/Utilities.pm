@@ -1,4 +1,4 @@
-
+#cspell: disable
 package App::Schierer::HPFan::Model::Gramps::Utilities {
   use v5.42;
   use utf8::all;

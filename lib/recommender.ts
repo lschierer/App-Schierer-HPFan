@@ -43,7 +43,7 @@ async function init(): Promise<void> {
   es.addEventListener('complete', (e: MessageEvent) => {
     const data = JSON.parse(e.data as string) as { total: number };
     tableEl.isComplete = true;
-    void data;
+    data;
     es.close();
   });
 

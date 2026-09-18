@@ -1,5 +1,7 @@
 package App::Schierer::HPFan::Module::ClassLists;
 
+#cspell: disable
+
 use v5.42.0;
 use utf8::all;
 use Mooish::Base -standard;

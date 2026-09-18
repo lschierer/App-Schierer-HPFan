@@ -1,6 +1,8 @@
 use v5.42.0;
 use experimental qw(class);
 use utf8::all;
+#cspell: disable
+
 require Path::Tiny;
 require Path::Iterator::Rule;
 require XML::LibXML;

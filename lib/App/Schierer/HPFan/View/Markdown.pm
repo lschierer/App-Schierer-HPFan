@@ -1,6 +1,8 @@
 use v5.42;
 use utf8::all;
 use experimental qw(class);
+#cspell: disable
+
 #require App::Schierer::HPFan::Model::History::Event;
 require Scalar::Util;
 require Pandoc;
