@@ -65,7 +65,6 @@ const props: ApplicationStackProps = {
   zoneName: 'schierer.org',
   instanceSize: config.instanceSize,
   appPort: 3001,
-  pagiBranch: 'consolidate-css-build',
   mainPerlDistro: 'App-Schierer-HPFan',
   appCodePath: path.join(__dirname, '..'),
   appCodeExcludes: [
