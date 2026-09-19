@@ -7,13 +7,15 @@
   --mod-heading-margin-start: 0px;
 }
 
+/* These three referenced --spectrum-Body--sizeM / --spectrum-Body--sizeS, which are
+   CSS CLASS names (.spectrum-Body--sizeM), not custom properties. Nothing defined them,
+   so each var() resolved to nothing and all three --mod-* values were inert. The token
+   names below are the real ones; note that line-height is size-independent in the
+   current token system, hence a single --spectrum-body-line-height. */
 div.family-tree li {
-  /* stylelint-disable-next-line custom-property-pattern */
-  --mod-treeview-font-size: var(--spectrum-Body--sizeM);
-  /* stylelint-disable-next-line custom-property-pattern */
-  --mod-treeview-line-height: var(--spectrum-Body--sizeM);
-  /* stylelint-disable-next-line custom-property-pattern */
-  --mod-icon-inline-size: var(--spectrum-Body--sizeS);
+  --mod-treeview-font-size: var(--spectrum-body-size-m);
+  --mod-treeview-line-height: var(--spectrum-body-line-height);
+  --mod-icon-inline-size: var(--spectrum-body-size-s);
 }
 
 .color-female {
@@ -42,10 +44,15 @@ iconify-icon {
   box-sizing: border-box;
 }
 
-/* Gender-specific link styling for family trees */
-.spectrum-Link--secondary {
-  color: var(--spectrum-gray-800);
-}
+/* REMOVED: an unscoped `.spectrum-Link--secondary { color: var(--spectrum-gray-800) }`
+   sat here under the comment "Gender-specific link styling for family trees".
+   It never did that. .family-tree is a class on the generated <svg> (see
+   View/FamilyTree.pm) and nothing inside that SVG emits a secondary link. The only
+   producers of spectrum-Link--secondary are the navigation tree
+   (WebFramework::Role::Navigation), the header site-title links, and
+   templates/Nephilim/appendix.tt - so unscoped, on every page that loaded this sheet,
+   the rule pinned the NAVIGATION's link colour and suppressed the current-page
+   highlight. Scoping it to .family-tree would merely have made it dead, so it is gone. */
 
 .family-tree-person .spectrum-Link {
   text-decoration: none;

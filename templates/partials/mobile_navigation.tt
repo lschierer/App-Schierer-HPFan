@@ -1,0 +1,47 @@
+[%# The mobile drawer's contents.
+
+    WHY THIS EXISTS. global_header.tt has always had a drawer and a hamburger button,
+    but its body was `[% IF mobile_navigation %][% mobile_navigation %][% END %]` and no
+    controller ever set `mobile_navigation`, so the drawer was permanently empty. This
+    partial is that missing half, INCLUDEd rather than passed in as a variable: the
+    drawer's contents are a presentation concern and no controller needs to know about it.
+
+    WHAT IT CARRIES. The top-level sections, which global_header.css hides below 768px -
+    without these the four sections are unreachable on a phone.
+
+    WHAT IT DOES NOT CARRY, DELIBERATELY. The contextual tree is NOT rendered here. The
+    obvious implementation - emitting `nav_html` a second time - costs about 875KB of
+    markup on this site, because that tree is 1310 items: it took content pages from
+    910KB to 1.8MB and the splash page, which shows no sidebar at all, from 46KB to
+    920KB. So `#mobile-nav-tree` below is an empty socket, and lib/navigation.ts MOVES the
+    single rendered tree out of the desktop sidebar into it below 768px, returning it
+    above. One copy in the document, no duplicated ids, no added page weight, and the
+    expand/collapse handlers travel with the element because they are bound to it.
+
+    The section list is deliberately NOT .spectrum-SideNav: @spectrum-css/sidenav is not
+    a dependency of this site. It reuses the .nav-item + spectrum-Link + spectrum-Heading
+    combination the desktop header already uses, so the two navigations stay visually
+    consistent without pulling in a package for one list.
+-%]
+[% mobile_sections = ['Harrypedia', 'Fan Fiction', 'Searches', 'Bookmarks'] -%]
+<ul class="mobile-nav-sections">
+  [% FOREACH section IN mobile_sections -%]
+    <li class="nav-item">
+      [%# "Fan Fiction" contains a space and is emitted raw, matching the desktop header
+          in global_header.tt. Browsers encode it on the way out and this has never
+          caused trouble, so the readable form wins over a literal %20 in the output. -%]
+      <a href="/[% section %]" class="spectrum-Link spectrum-Link--primary spectrum-Link--quiet">
+        <span class="spectrum-Heading spectrum-Heading--serif spectrum-Heading--sizeXS">
+          [% section %]
+        </span>
+      </a>
+    </li>
+  [% END -%]
+</ul>
+
+[%# Hidden until navigation.ts moves a tree in, so pages without a sidebar show no
+    stray separator. -%]
+<div class="mobile-nav-tree-section" id="mobile-nav-tree-section" hidden>
+  <hr role="separator" class="spectrum-Divider spectrum-Divider--sizeM" />
+  <div class="mobile-nav-tree" id="mobile-nav-tree"></div>
+</div>

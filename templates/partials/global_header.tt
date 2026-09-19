@@ -1,8 +1,9 @@
 <link rel="stylesheet" href="/css/global_header.css" />
 <header class="header">
   <!-- Mobile menu button (hidden on desktop) -->
-  <button class="mobile-menu-button" id="mobile-menu-toggle">
-    <span class="hamburger-icon">☰</span>
+  <button class="mobile-menu-button" id="mobile-menu-toggle" type="button"
+          aria-label="Open navigation" aria-controls="mobile-menu" aria-expanded="false">
+    <span class="hamburger-icon" aria-hidden="true">☰</span>
   </button>
 
   <!-- Logo/Title section -->
@@ -44,18 +45,54 @@
   </div>
 </header>
 
-<!-- Mobile menu overlay (shown when button is clicked) -->
-<div class="mobile-menu" id="mobile-menu">
-  <nav>
-    [% IF mobile_navigation -%]
-      [% mobile_navigation %]
-    [% END -%]
+<!-- Mobile menu drawer (shown when the hamburger is clicked) -->
+<!-- The backdrop is a real element, not the ::before it used to be: a pseudo-element
+     cannot carry a click handler, so tapping outside the drawer could not close it. -->
+<div class="mobile-menu-backdrop" id="mobile-menu-backdrop" hidden></div>
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <nav aria-label="Site navigation">
+    <button class="mobile-menu-close" id="mobile-menu-close" type="button"
+            aria-label="Close navigation">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    [% INCLUDE partials/mobile_navigation.tt %]
   </nav>
 </div>
 
 <script type="module">
-document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+  const toggle = document.getElementById('mobile-menu-toggle');
   const menu = document.getElementById('mobile-menu');
-  menu.classList.toggle('active');
-});
+  const backdrop = document.getElementById('mobile-menu-backdrop');
+  const close = document.getElementById('mobile-menu-close');
+
+  // aria-hidden and the backdrop's `hidden` are driven from the same place as the class
+  // so the three cannot drift out of step.
+  const setOpen = (open) => {
+    menu.classList.toggle('active', open);
+    backdrop.hidden = !open;
+    menu.setAttribute('aria-hidden', String(!open));
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    // Focus follows the drawer, so a keyboard user's next Tab lands inside it rather
+    // than continuing through the page behind.
+    if (open) {
+      close.focus();
+    } else {
+      toggle.focus();
+    }
+  };
+
+  toggle.addEventListener('click', () => setOpen(!menu.classList.contains('active')));
+  close.addEventListener('click', () => setOpen(false));
+  backdrop.addEventListener('click', () => setOpen(false));
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menu.classList.contains('active')) setOpen(false);
+  });
+
+  // Following a link leaves the drawer open behind the new page in browsers that
+  // restore the back/forward cache, so close it on the way out.
+  menu.addEventListener('click', (event) => {
+    if (event.target.closest('a')) setOpen(false);
+  });
 </script>

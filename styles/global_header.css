@@ -53,7 +53,7 @@ span.site-title.spectrum-Heading {
 
   span.site-title.spectrum-Heading {
     font-size: var(--spectrum-heading-size-xl);
-    line-height: var(--spectrum-heading-line-height-xl);
+    line-height: var(--spectrum-heading-line-height);
     text-align: center;
   }
 }
@@ -76,7 +76,7 @@ span.site-title.spectrum-Heading {
 
   span.site-title.spectrum-Heading {
     font-size: var(--spectrum-heading-size-m);
-    line-height: var(--spectrum-heading-line-height-m);
+    line-height: var(--spectrum-heading-line-height);
     text-align: center; /* Change from right to center for better wrapping */
   }
 }
@@ -110,7 +110,7 @@ span.site-title.spectrum-Heading {
 
   span.site-title.spectrum-Heading {
     font-size: var(--spectrum-heading-size-l);
-    line-height: var(--spectrum-heading-line-height-l);
+    line-height: var(--spectrum-heading-line-height);
     text-align: center;
   }
 }
@@ -133,7 +133,7 @@ span.site-title.spectrum-Heading {
 
   span.site-title.spectrum-Heading {
     font-size: var(--spectrum-heading-size-l);
-    line-height: var(--spectrum-heading-line-height-l);
+    line-height: var(--spectrum-heading-line-height);
     text-align: center;
   }
 }
@@ -156,7 +156,7 @@ span.site-title.spectrum-Heading {
 
   span.site-title.spectrum-Heading {
     font-size: var(--spectrum-heading-size-l);
-    line-height: var(--spectrum-heading-line-height-l);
+    line-height: var(--spectrum-heading-line-height);
     text-align: center;
   }
 }
@@ -168,7 +168,7 @@ span.site-title.spectrum-Heading {
 
   span.site-title.spectrum-Heading {
     font-size: var(--spectrum-heading-size-xl);
-    line-height: var(--spectrum-heading-line-height-xl);
+    line-height: var(--spectrum-heading-line-height);
   }
 }
 
@@ -179,7 +179,7 @@ span.site-title.spectrum-Heading {
 
   span.site-title.spectrum-Heading {
     font-size: var(--spectrum-heading-size-xxl);
-    line-height: var(--spectrum-heading-line-height-xxl);
+    line-height: var(--spectrum-heading-line-height);
   }
 }
 
@@ -249,13 +249,20 @@ iconify-icon#github {
     display: none;
   }
 
-  .mobile-menu {
+  .mobile-menu,
+  .mobile-menu-backdrop {
     display: none;
   }
 }
 
-/* Mobile layout: menu-button | logo | social */
-@media (width <= 767px) {
+/* Mobile layout: menu-button | logo | social
+
+   `width < 768px`, not `width <= 767px`. The two are the same for whole pixels but not
+   for the fractional widths a zoomed or scaled viewport reports: at 767.5px the
+   grid-template-areas above (which use `width < 768px`) applied while these rules did
+   not, so the hamburger lost its grid area and the desktop nav stayed visible inside a
+   mobile grid. Both blocks now use the same comparison. */
+@media (width < 768px) {
   .site-title-section {
     grid-area: logo;
   }
@@ -280,24 +287,62 @@ iconify-icon#github {
   left: -100%;
   width: 80%;
   height: 100vh;
-  background: white;
-  z-index: 1000;
+
+  /* Was `background: white`, which made the drawer the one surface on the site that
+     ignored the colour scheme. This is Spectrum's elevated-surface token, so the drawer
+     follows .spectrum--light / .spectrum--dark like everything else. */
+  background: var(--spectrum-background-layer-2-color);
+  color: var(--spectrum-body-color);
+  z-index: 1001;
   transition: left 0.3s ease;
   overflow-y: auto;
-  padding: 2rem 1rem;
+  padding: var(--spectrum-spacing-400) var(--spectrum-spacing-300);
+  box-sizing: border-box;
 }
 
 .mobile-menu.active {
   left: 0;
 }
 
-/* Overlay backdrop */
-.mobile-menu.active::before {
-  content: "";
+/* Full-viewport backdrop, sitting under the drawer rather than beside it. The previous
+   ::before covered only the 20% strip the drawer did not, which both looked like a bug
+   and left the rest of the page apparently interactive while the drawer was open. */
+.mobile-menu-backdrop {
   position: fixed;
-  top: 0;
-  left: 80%;
-  width: 20%;
-  height: 100vh;
+  inset: 0;
   background: rgb(0 0 0 / 50%);
+  z-index: 1000;
+}
+
+.mobile-menu-close {
+  display: block;
+  margin-inline-start: auto;
+  border: none;
+  background: none;
+  color: inherit;
+  font-size: var(--spectrum-heading-size-l);
+  line-height: 1;
+  padding: var(--spectrum-spacing-100);
+  cursor: pointer;
+}
+
+.mobile-nav-sections {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--spectrum-spacing-200);
+}
+
+/* The drawer gives the tree the whole width; the sidebar's 250px cap does not apply.
+   Scoped to the socket, so the cap still holds while the same element sits in the
+   sidebar. */
+.mobile-nav-tree .spectrum-TreeView {
+  max-inline-size: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu {
+    transition: none;
+  }
 }

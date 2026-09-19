@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "spectrum-design-data": {
+      "command": "npx",
+      "args": ["-y", "@adobe/design-data-mcp@latest"]
+    },
+    "s2-docs": {
+      "command": "node",
+      "args": [
+        "../../adobe/spectrum-design-data/tools/s2-docs-mcp/src/cli.js"
+      ]
+    }
+  }
+}

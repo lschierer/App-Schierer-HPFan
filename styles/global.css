@@ -1,7 +1,7 @@
 /* cspell: disable */
 
 /* the props */
-@import url("@spectrum-css/tokens/dist/css/index.css");
+@import url("generated/spectrum-tokens.css");
 @import url("@spectrum-css/alertbanner");
 @import url("@spectrum-css/typography");
 @import url("@spectrum-css/icon");
@@ -119,8 +119,27 @@ body {
   color: var(--text-1);
   background-color: var(--spectrum-background-base-color);
   display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 100vh;
+
+  /* This was `grid-template-columns: 100vh` - a viewport HEIGHT used as a width. The
+     single column was therefore sized to the window's height, which broke two ways:
+
+       - Desktop: the column, and so .title-section, was as wide as the window was tall
+         (813px in a 1400x900 window) while the header, footer and SplitView were the full
+         1400px. The page title has never lined up with the rest of the page.
+       - Mobile: the window is taller than it is wide, so the column became WIDER than the
+         viewport (713px in a 500px one), the document overflowed horizontally, and the
+         browser zoomed out to fit - shrinking the entire page rather than clipping the
+         title the way it does on desktop.
+
+     minmax(0, 1fr) rather than 1fr or 100vw: the 0 minimum is what stops a wide child from
+     pushing the column past the viewport again. The h1's max-content is ~699px at its
+     45px size, and with a bare `1fr` the automatic minimum would let it win. */
+  grid-template-columns: minmax(0, 1fr);
+
+  /* Was `column`. Every child assigns its own grid-row, so this measured as having no
+     effect either way - but with a single column, a future child WITHOUT an explicit row
+     would be flowed into a new implicit column and reintroduce the overflow above. */
+  grid-auto-flow: row;
   grid-template-rows: var(--header-height) 1fr var(--footer-height);
   height: 100vh;
   width: 100vw;
@@ -199,7 +218,16 @@ div#main {
 /* 4. Sidebar */
 div#nav {
   grid-area: content;
-  max-width: max(250px, 20vw);
+
+  /* Resizable by dragging the SplitView splitter; lib/splitview.ts sets --nav-width on
+     <html> and persists it. The fallback is the width this used to be fixed at, so with
+     JS off or before first drag nothing changes.
+
+     inline-size rather than max-width, with flex: 0 0 auto, because the pane is a flex
+     item: as a max-width it was only a ceiling on a 100vw basis, which cannot be driven
+     upward by a custom property. */
+  flex: 0 0 auto;
+  inline-size: var(--nav-width, max(250px, 20vw));
   max-height: var(--main-height);
   height: min-content;
   overflow-y: auto;
@@ -207,8 +235,62 @@ div#nav {
   margin: 0;
 }
 
+/* The splitter is the drag handle. It carried tabindex="0" in the templates but no
+   behaviour at all, so it was focusable and inert; the cursor now advertises what
+   lib/splitview.ts makes it do. */
+div.spectrum-SplitView-splitter {
+  flex: 0 0 auto;
+  cursor: col-resize;
+  touch-action: none;
+}
+
+/* Widen the GRAB AREA without widening the line.
+   --spectrum-splitview-handle-width is border-width-200, i.e. 2px, so the visible splitter
+   is a 2px pointer target - far under the 24px WCAG 2.5.8 asks for, and the reason the
+   drag point was so hard to land on. This transparent pseudo-element extends the hit
+   testing to 24px while the rendered line stays 2px. It does overlay ~11px of each
+   neighbouring pane, but that strip is the tree's right margin on one side and main's
+   1rem padding on the other, so nothing clickable is covered. */
+div.spectrum-SplitView-splitter::after {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  inset-inline: -11px;
+}
+
+/* It is focusable, so it needs a visible focus ring - the package only colours the handle
+   itself, which is too subtle at 2px to see. */
+div.spectrum-SplitView-splitter:focus-visible {
+  outline: var(--spectrum-focus-indicator-thickness) solid
+    var(--spectrum-focus-indicator-color);
+  outline-offset: 2px;
+}
+
+@media (width < 768px) {
+  /* The tree lives in the mobile drawer below this width, so there is nothing to size. */
+  div#nav {
+    inline-size: auto;
+  }
+}
+
 nav {
   margin: 0;
+}
+
+/* Below 768px the contextual tree moves into the mobile drawer (see
+   partials/mobile_navigation.tt), so the sidebar pane and its splitter come out of the
+   flow. Previously they stayed, spending max(250px, 20vw) of a phone's width on a tree
+   that the drawer is there to present, and leaving main badly cramped. The breakpoint
+   matches global_header.css, where .navigation is hidden and the hamburger appears. */
+@media (width < 768px) {
+  div#nav,
+  div.spectrum-SplitView-splitter {
+    display: none;
+  }
+
+  div#main {
+    width: 100vw;
+  }
 }
 
 /* 5. SplitView pane (used in legacy layout maybe?) */

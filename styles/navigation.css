@@ -3,12 +3,50 @@
 nav.navigation-tree ul.spectrum-TreeView {
   --mod-treeview-indicator-padding-block: 0.01em;
 
-  /* should match div#nav in global.css */
-  max-inline-size: max(250px, 20vw);
-
   /* Remove any gap/margin from nested lists to prevent extra spacing */
   gap: 0;
   margin-block: 0;
+}
+
+/* NO width cap on the tree. It follows div#nav, which is the element that owns the
+ * sidebar's width (global.css, --nav-width, resizable via the splitter).
+ *
+ * This used to be `max-inline-size: max(250px, 20vw)`, duplicating what div#nav already
+ * enforced. That was harmless while the sidebar was a fixed width, but once the splitter
+ * made div#nav resizable it became the bug where dragging the sidebar WIDER did nothing:
+ * the pane grew, the tree stopped at the old cap, and the space gained was left blank with
+ * the labels still truncated. Dragging narrower appeared to work only because shrinking
+ * the pane squeezed the tree from outside the cap. One element owns the width. */
+nav.navigation-tree > ul.spectrum-TreeView {
+  max-inline-size: 100%;
+}
+
+/* NO truncation rules here, deliberately. @spectrum-css/treeview already handles it:
+ * .spectrum-TreeView-itemLink is `display: flex; white-space: nowrap; overflow: hidden`
+ * and .spectrum-TreeView-itemLabel is `overflow: hidden; text-overflow: ellipsis`. An
+ * earlier version of this file added `min-inline-size: 0` to the label and made the anchor
+ * `display: block` - both redundant, and together they collapsed every label to the width
+ * of its icon (14px measured, at every depth, not just deep ones) because the label is a
+ * flex item and min-inline-size let it shrink past its content. Leave the component's own
+ * flex sizing alone. */
+
+/* The chevron is a <button> so it can be reached by keyboard; strip the button chrome so
+ * it still looks like the bare icon Spectrum styles. */
+nav.navigation-tree button.spectrum-TreeView-itemIndicator {
+  appearance: none;
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* Childless items get an empty indicator so their label lines up with a sibling folder's.
+ * The indicator is content-box with a negative inline-start margin, so the placeholder
+ * needs the chevron glyph's own width - workflow-icon-size-100 is that width, and it
+ * tracks the scale (20px desktop, 24px mobile) as the real icon does. */
+nav.navigation-tree .spectrum-TreeView-itemIndicator--empty {
+  inline-size: var(--spectrum-workflow-icon-size-100);
 }
 
 nav.navigation-tree .spectrum-TreeView iconify-icon {
@@ -53,4 +91,49 @@ nav.navigation-tree .spectrum-TreeView-item {
   line-height: 1;
   margin: 0 !important;
   padding: 0 !important;
+}
+
+/* Current-page indication.
+ *
+ * Spectrum sets the selected text colour on .spectrum-TreeView-itemLink and expects the
+ * label to inherit it. Our label is an <a class="spectrum-Link--secondary">, which sets
+ * its own colour through --mod-link-text-color, so the inherited value never reached the
+ * text: the only surviving cue was the item's background wash. Rather than fight the
+ * link, feed the same colour into the hooks --secondary actually reads.
+ *
+ * The colour is accent rather than the component default. That default is gray-900
+ * against a gray-800 unselected link - a difference of one step on the grey ramp, which
+ * is why selection was hard to see even where it did apply. Accent is for emphasis, and
+ * aria-current="page" in WebFramework::Role::Navigation carries the meaning for anything
+ * that is not looking at colour.
+ */
+nav.navigation-tree
+  .spectrum-TreeView-item.is-selected
+  > .spectrum-TreeView-itemLink {
+  --mod-treeview-item-text-color-selected: var(
+    --spectrum-accent-content-color-default
+  );
+  --mod-link-text-color-secondary-default: var(
+    --spectrum-accent-content-color-default
+  );
+  --mod-link-text-color-secondary-hover: var(
+    --spectrum-accent-content-color-hover
+  );
+  --mod-link-text-color-secondary-active: var(
+    --spectrum-accent-content-color-down
+  );
+}
+
+/* The default wash is a 10% tint, tuned for a dense file tree where a whole row reads as
+ * one object. In a sidebar of links it is nearly invisible, so it is doubled.
+ *
+ * color-mix rather than rgb(var(--…-rgb) / 20%): the -rgb companion for an aliased colour
+ * is emitted once, globally, from its light-scheme value, so it would be wrong in dark
+ * mode. color-mix works off the resolved colour and so follows the scheme. */
+nav.navigation-tree .spectrum-TreeView-item.is-selected {
+  --mod-treeview-item-background-color-selected: color-mix(
+    in srgb,
+    var(--spectrum-accent-content-color-default) 20%,
+    transparent
+  );
 }

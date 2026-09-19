@@ -6,6 +6,9 @@ pnpm-lock.yaml
 _build
 node_modules
 public/css
+# Regenerated from @adobe/spectrum-tokens on every `pnpm build:css`; the token version
+# in package.json is the thing under review, not its five thousand expanded properties.
+styles/generated
 blib
 public/tsconfig.build.tsbuildinfo
 public/types

@@ -62,8 +62,13 @@
         <script type="module" src="[% js_file %]"></script>
       [% END -%]
     [% END -%]
+    [%# Unconditional: the mobile drawer carries a copy of the tree on every page, so
+        gating this on `sidebar` left the drawer's chevrons dead on any page that renders
+        a tree without a sidebar. The script no-ops when no .navigation-tree exists. -%]
+    <script type="module" src="/js/lib/navigation.js"></script>
     [% IF sidebar -%]
-      <script type="module" src="/js/lib/navigation.js"></script>
+      [%# Only where a SplitView is actually rendered; no-ops otherwise anyway. -%]
+      <script type="module" src="/js/lib/splitview.js"></script>
     [% END -%]
     [% INCLUDE partials/global_footer.tt %]
   </body>

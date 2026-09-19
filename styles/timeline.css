@@ -1,5 +1,5 @@
 /* stylelint-disable property-no-unknown */
-@import url("@spectrum-css/tokens");
+@import url("generated/spectrum-tokens.css");
 @import url("@spectrum-css/page");
 @import url("@spectrum-css/typography");
 @import url("@spectrum-css/alertbanner");
@@ -71,17 +71,22 @@ div.spectrum-Body li.spectrum-Body {
   margin-block: 0;
 }
 
-/* type-based colors (fallbacks) */
+/* Type-based colors. The hard-coded hex fallbacks these carried were reached in
+   practice, because the tokens named beside them (--spectrum-semantic-*-color-default,
+   --spectrum-global-color-blue-600) belong to the retired Spectrum 1 token system and
+   are defined nowhere. The current names below are theme-aware, so no fallback: a
+   future rename should show up as a missing colour, not as a value frozen in light
+   mode. */
 .birth {
-  color: var(--spectrum-semantic-positive-color-default, #0a0);
+  color: var(--spectrum-positive-color-900);
 }
 
 .death {
-  color: var(--spectrum-semantic-negative-color-default, #b00);
+  color: var(--spectrum-negative-color-900);
 }
 
 .other {
-  color: var(--spectrum-global-color-blue-600, #06c);
+  color: var(--spectrum-blue-900);
 }
 
 /* qualifiers */
