@@ -1,53 +1,100 @@
-@import url("@spectrum-css/typography");
-@import url("@spectrum-css/card");
-
 :root {
-  --color-male: var(--spectrum-green-900);
-  --color-female: var(--spectrum-purple-900);
+  /* One step darker than the 900s these used to be: green-900 and purple-900 are 3.4:1 on
+     the page background, and 1100 (5.7:1) clears the 4.5:1 AA needs for the names. */
+  --color-male: var(--swc-green-1100);
+  --color-female: var(--swc-purple-1100);
   --timeline-height: 47vh;
-  --mod-heading-margin-start: 0px;
+  --site-heading-margin-start: 0px;
 }
 
 div.basic-info {
   max-height: 10vh;
 }
 
-div.spectrum-Card-preview {
-  background-color: var(--spectrum-gray-300);
+/* The person page's "Basic Information" card (templates/person/details.tt): an icon panel
+   beside a house-coloured body. Replaces @spectrum-css/card's horizontal card, which this
+   was the only user of; gen2's swc-card is vertical only. The numbers are the old card's,
+   measured on the running site: a 1px gray-100 border, 4px corners, a 70px icon in a 12px
+   panel, and 16px of side padding in the body. */
+.site-profile-card {
+  display: inline-flex;
+  flex-direction: row;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 100px;
+  border: 1px solid var(--swc-gray-100);
+  border-radius: 4px;
+  background-color: var(--swc-background-layer-2-color);
 }
 
-div.spectrum-Card-content ul {
+.site-profile-card-preview {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  width: 70px;
+  padding: 12px;
+  overflow: hidden;
+  border-radius: 3px 0 0 3px;
+  background-color: var(--swc-gray-100);
+}
+
+.site-profile-card-body {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 16px;
+
+  /* The title and body text colours; a house overrides both below. */
+  --site-profile-card-text: var(--swc-gray-900);
+}
+
+.site-profile-card-title {
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.3;
+  color: var(--site-profile-card-text);
+}
+
+.site-profile-card-content {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+}
+
+.site-profile-card-content ul {
   columns: 2;
   column-gap: 2em;
   max-width: 50vw;
 }
 
-div.spectrum-Card-body.gryffindor {
-  background-color: var(--spectrum-red-900);
+/* The four houses. Each is a Spectrum colour with the text step that clears AA on it. */
+.site-profile-card-body.gryffindor {
+  background-color: var(--swc-red-900);
 
-  --mod-body-font-color: var(--spectrum-gray-200);
-  --spectrum-card-title-font-color: var(--spectrum-gray-200);
+  --swc-body-font-color: var(--swc-gray-200);
+  --site-profile-card-text: var(--swc-gray-200);
 }
 
-div.spectrum-Card-body.hufflepuff {
-  background-color: var(--spectrum-yellow-300);
+.site-profile-card-body.hufflepuff {
+  background-color: var(--swc-yellow-300);
 
-  --mod-body-font-color: var(--spectrum-gray-900);
-  --spectrum-card-title-font-color: var(--spectrum-gray-900);
+  --swc-body-font-color: var(--swc-gray-900);
 }
 
-div.spectrum-Card-body.ravenclaw {
-  background-color: var(--spectrum-blue-1000);
+.site-profile-card-body.ravenclaw {
+  background-color: var(--swc-blue-1000);
 
-  --mod-body-font-color: var(--spectrum-gray-200);
-  --spectrum-card-title-font-color: var(--spectrum-gray-200);
+  --swc-body-font-color: var(--swc-gray-200);
+  --site-profile-card-text: var(--swc-gray-200);
 }
 
-div.spectrum-Card-body.slytherin {
-  background-color: var(--spectrum-chartreuse-800);
+.site-profile-card-body.slytherin {
+  background-color: var(--swc-chartreuse-800);
 
-  --mod-body-font-color: var(--spectrum-gray-900);
-  --spectrum-card-title-font-color: var(--spectrum-gray-900);
+  --swc-body-font-color: var(--swc-gray-900);
 }
 
 iconify-icon.color-female {
@@ -68,7 +115,7 @@ iconify-icon {
 ul.bio {
   padding-left: 2em;
 
-  --mod-body-margin-end: 1px;
+  --site-body-margin-end: 1px;
 }
 
 .timeline-card {
@@ -78,7 +125,7 @@ ul.bio {
   max-width: 100%;
   height: calc(var(--timeline-height) + 2em);
   border-style: solid;
-  border-color: var(--spectrum-blue-400);
+  border-color: var(--swc-blue-400);
   border-radius: 4px;
   z-index: 1;
   box-sizing: border-box;
@@ -102,7 +149,86 @@ svg .color-female {
 }
 
 svg .family-node.junction {
-  color: var(--spectrum-blue-400);
-  stroke: var(--spectrum-blue-400);
+  color: var(--swc-blue-400);
+  stroke: var(--swc-blue-400);
   fill-opacity: 0;
+}
+
+/* The family tree (templates/family/details.tt). The tree itself - rows, indent, chevron -
+   is the shared disclosure tree in navigation.css; this is what is particular to people.
+   Rows are 32px here against the navigation's 24px: they carry a larger icon and two
+   styles of text. */
+.family-tree-container {
+  margin: 2em 0;
+}
+
+.family-tree-container .site-tree-row {
+  block-size: 32px;
+}
+
+/* Leaves align with branches here. In the navigation a leaf sits 6px further in; with
+   people, whose names are the whole point, that read as a mistake. */
+.family-tree-container .site-tree-leaf {
+  flex-basis: 36px;
+  inline-size: 36px;
+}
+
+.family-person {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  gap: 0.5em;
+  min-inline-size: 0;
+}
+
+/* The unscoped `iconify-icon` rule above makes icons block-level and 5em wide, for the
+   timeline cards; a person's gender icon is a one-em glyph in a line of text. */
+.family-person iconify-icon {
+  display: inline-block;
+  flex: none;
+  inline-size: 1em;
+  block-size: 1em;
+}
+
+.family-person-link {
+  min-inline-size: 0;
+  text-decoration: none;
+  color: var(--text-1);
+}
+
+a.family-person-link:hover {
+  text-decoration: underline;
+}
+
+a.family-person-link:focus-visible {
+  outline: 2px solid var(--swc-link-focus-indicator-color);
+  outline-offset: 2px;
+}
+
+.family-person .person-name {
+  font-weight: 500;
+}
+
+.family-person.is-male .person-name {
+  color: var(--color-male);
+}
+
+.family-person.is-female .person-name {
+  color: var(--color-female);
+}
+
+.family-person .person-dates {
+  margin-inline-start: 0.5em;
+  font-size: 0.9em;
+  font-style: italic;
+  color: var(--swc-gray-700);
+}
+
+/* The summary card at the head of a family page (an <swc-card>). Its default maximum width
+   is 280px, which wraps the "genealogical gaps" explanation onto many lines. */
+.family-summary {
+  display: block;
+  margin-block-end: 1rem;
+
+  --swc-card-base-max-inline-size: 32rem;
 }

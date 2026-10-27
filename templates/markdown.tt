@@ -1,0 +1,15 @@
+[%# Site override of the framework's markdown.tt.
+    The template path searches this site's templates/ before ../PAGI-WebServer/templates, so
+    this copy wins here and the framework's version, still @spectrum-css, is left alone for
+    the sites that have not moved to gen2 yet. Delete this file when they have. -%]
+[% WRAPPER layouts/default.tt %]
+  <div class="markdown-content">
+      [% content %]
+  </div>
+  [% IF entries %]
+    <swc-divider size="m"></swc-divider>
+    <div class="directory-index">
+      [% INCLUDE partials/autoindex_list.tt entries=entries %]
+    </div>
+  [% END %]
+[% END %]

@@ -406,14 +406,14 @@ class App::Schierer::HPFan::View::Timeline {
     );
 
     $div->tag('div',
-      class => 'spectrum-Heading spectrum-Heading--sizeM '
-        . 'spectrum-Heading--serif spectrum-Heading--strong')
+      class => 'swc-Heading swc-Heading--sizeM '
+        . 'swc-Heading--serif')
       ->cdata($event->date->to_string);
 
     if (defined($event->blurb) && length($event->blurb)) {
       $div->tag('div',
         class =>
-          'spectrum-Heading spectrum-Heading--sizeS spectrum-Heading--serif')
+          'swc-Heading swc-Heading--sizeS swc-Heading--serif')
         ->cdata($event->blurb);
     }
 
@@ -425,7 +425,7 @@ class App::Schierer::HPFan::View::Timeline {
 
       my $cc = $div->tag('div',
         class =>
-          'description spectrum-Body spectrum-Body--sizeS spectrum-Body--serif'
+          'description swc-Body swc-Body--sizeS swc-Body--serif'
       );
       $cc->cdata_noxmlesc($event->description);
     }
@@ -434,11 +434,11 @@ class App::Schierer::HPFan::View::Timeline {
       $div->tag(
         'div',
         class =>
-          'sources spectrum-Body spectrum-Body--sizeS spectrum-Body--serif',
+          'sources swc-Body swc-Body--sizeS swc-Body--serif',
 
       )->cdata_noxmlesc(sprintf(
         '<a  href="#footnotes-%s" class="%s">Sources and References</a>',
-        $event->id, 'spectrum-Link spectrum-Link--quiet spectrum-Link--primary',
+        $event->id, 'swc-Link swc-Link--quiet swc-Link--standalone',
       ));
     }
 
@@ -455,7 +455,7 @@ class App::Schierer::HPFan::View::Timeline {
     $svg =~ s/<svg /<svg viewBox="$viewbox"/;
 
     $svg =~
-s/<text ([^>]+) font-family="[^"]+" font-size="[^"]+">/<text $1 class="spectrum-Heading spectrum-Heading--size-M spectrum-Heading--serif">/g;
+s/<text ([^>]+) font-family="[^"]+" font-size="[^"]+">/<text $1 class="swc-Heading swc-Heading--serif">/g;
 
     return $svg;
   }

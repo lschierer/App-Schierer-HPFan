@@ -243,7 +243,7 @@ sub bookmark_page ($self, $ctx, $entry) {
     comments     => $comments_html,
     title        => $entry->{title},
     current_year => $current_year,
-    css_files    => ['/css/navigation.css', '/css/bookmarks.css'],
+    css_files    => ['/css/navigation.css'],
     sidebar      => 1,
     nav_html     => $navigation_html,
     site_logo    => $self->site_logo,

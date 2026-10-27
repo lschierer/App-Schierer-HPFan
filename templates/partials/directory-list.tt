@@ -1,8 +1,8 @@
 <div class="directory-list">
   <ul class="directory-list">
     [% FOREACH entry IN entries %]
-      <li class="spectrum-Body spectrum-Body--sizeM spectrum-Body--serif">
-        <a class="spectrum-Link spectrum-Link--primary" href="[% entry.path %]">
+      <li class="swc-Body swc-Body--sizeM swc-Body--serif">
+        <a class="swc-Link" href="[% entry.path %]">
           [% entry.title %]
         </a>
       </li>

@@ -92,9 +92,9 @@ sub _build_table_from_yaml ($self, $data) {
 
   # Build table header
   my $thead_cells = join '',
-    map {qq{<th class="spectrum-Table-headCell">$_</th>}} @columns;
+    map {qq{<th>$_</th>}} @columns;
   my $thead =
-    qq{<thead class="spectrum-Table-head"><tr>$thead_cells</tr></thead>};
+    qq{<thead><tr>$thead_cells</tr></thead>};
 
   # Build table rows
   my @row_html;
@@ -103,22 +103,22 @@ sub _build_table_from_yaml ($self, $data) {
       my $value = $row->{$_} // '';
       # Convert markdown in cell values to HTML
       my $html_value = $self->markdown_string_to_html($value);
-      qq{<td class="spectrum-Table-cell">$html_value</td>}
+      qq{<td>$html_value</td>}
     } @columns;
 
     push @row_html,
-        qq{<tr class="spectrum-Table-row spectrum-Table-cell--divider">}
+        qq{<tr>}
       . join('', @cells)
       . qq{</tr>};
   }
 
   my $tbody =
-      qq{<tbody class="spectrum-Table-body">}
+      qq{<tbody>}
     . join('', @row_html)
     . qq{</tbody>};
 
   return qq{
-    <table class="spectrum-Table spectrum-Table--sizeM spectrum-Table--emphasized">
+    <table class="site-table site-table-divided">
       $thead
       $tbody
     </table>

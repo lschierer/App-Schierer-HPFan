@@ -10,10 +10,10 @@ export default {
       },
     ],
     'selector-class-pattern': [
-      '^([a-z][a-z0-9]*)(-[a-z0-9]+)*$|^spectrum(-[A-Za-z0-9]+)*(-{1,2}[a-zA-Z0-9]+)*$',
+      '^([a-z][a-z0-9]*)(-[a-z0-9]+)*$|^(spectrum|swc)(-[A-Za-z0-9]+)*(-{1,2}[a-zA-Z0-9]+)*$',
       {
         message:
-          'Class selectors should use kebab case or match Spectrum CSS patterns',
+          'Class selectors should use kebab case or match Spectrum CSS (spectrum-*) or Spectrum Web Components (swc-*) patterns',
       },
     ],
     'selector-pseudo-class-no-unknown': true,

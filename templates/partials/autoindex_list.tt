@@ -1,0 +1,23 @@
+[%# Site override of the framework's partials/autoindex_list.tt.
+    The template path searches this site's templates/ before ../PAGI-WebServer/templates, so
+    this copy wins here and the framework's version, still @spectrum-css, is left alone for
+    the sites that have not moved to gen2 yet. Delete this file when they have. -%]
+[%# wrap this partial in <div class="directory-index"></div> %]
+[% IF entries.size > 0 %]
+  <ul class="grid-index">
+    [% FOREACH entry IN entries %]
+      <li>
+        <a href="[% entry.path %]" class="swc-Link">
+          [% IF entry.type == 'directory' %]
+            <iconify-icon icon="ion:folder-open-outline"></iconify-icon>
+          [% ELSE %]
+            <iconify-icon icon="ion:document-text-outline"></iconify-icon>
+          [% END %]
+          [% entry.title %]
+        </a>
+      </li>
+    [% END %]
+  </ul>
+[% ELSE %]
+  <p class="swc-Body swc-Body--sizeM">This directory is empty.</p>
+[% END %]

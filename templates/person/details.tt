@@ -17,43 +17,42 @@
   [% END -%]
 [% END -%]
 
-<div class="basic-info spectrum-Card spectrum-Card--horizontal" id="[% person.gramps_id %]" role="figure">
-  <div class="spectrum-Card-preview">
+[%# The "Basic Information" card: an icon panel beside a house-coloured body. Gen2's
+    swc-card is vertical only, so this is a small piece of CSS (styles/gramps.css) rather
+    than an element. -%]
+<div class="basic-info site-profile-card" id="[% person.gramps_id %]" role="figure">
+  <div class="site-profile-card-preview">
     <iconify-icon icon="[% iconName %]" class="[% iconClass %]" width="none"></iconify-icon>
   </div>
-  <div class="spectrum-Card-body [% house.lower %]">
-    <div class="spectrum-Card-header">
-      <div class="spectrum-Card-title">
-        Basic Information
-      </div>
+  <div class="site-profile-card-body [% house.lower %]">
+    <div class="site-profile-card-title">
+      Basic Information
     </div>
-    <div class="spectrum-Card-content">
-      <div class="spectrum-Card-description">
-        <ul class="bio">
-          <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeS">
-            <strong>ID</strong>: [% person.gramps_id %]
+    <div class="site-profile-card-content">
+      <ul class="bio">
+        <li class="swc-Body swc-Body--serif swc-Body--sizeS">
+          <strong>ID</strong>: [% person.gramps_id %]
+        </li>
+        [% FOREACH event IN events -%]
+          <li class="swc-Body swc-Body--serif swc-Body--sizeS">
+          <strong>[% event.type %]</strong>: [% IF event.date; event.date.year == 9999 ? 'Unknown' : event.date.to_string; ELSE; 'Unknown'; END %]
           </li>
-          [% FOREACH event IN events -%]
-            <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeS">
-            <strong>[% event.type %]</strong>: [% IF event.date; event.date.year == 9999 ? 'Unknown' : event.date.to_string; ELSE; 'Unknown'; END %]
-            </li>
-          [% END -%]
-        </ul>
-      </div>
+        [% END -%]
+      </ul>
     </div>
   </div>
 </div>
 [% IF families.size > 0 OR childof.size > 0 -%]
-    <h2 class="spectrum-Heading spectrum-Heading--serif spectrum-Heading--heavy spectrum-Heading--sizeXL">Families</h2>
+    <h2 class="swc-Heading swc-Heading--serif swc-Heading--heavy swc-Heading--sizeXL">Families</h2>
     [% IF families.size > 0 -%]
-        <h3 class="spectrum-Heading spectrum-Heading--serif spectrum-Heading--heavy spectrum-Heading--sizeL">Married</h3>
+        <h3 class="swc-Heading swc-Heading--serif swc-Heading--heavy swc-Heading--sizeL">Married</h3>
         <ul>
         [% FOREACH f IN families -%]
-          <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
+          <li class="swc-Body swc-Body--serif swc-Body--sizeM">
             [% spouse = f.spouse -%]
             <strong>Spouse</strong>:
               [% IF spouse -%]
-                <a href="[% spouse.link %]" class="spectrum-Link spectrum-Link--primary">
+                <a href="[% spouse.link %]" class="swc-Link">
                   [% spouse.display_name %]
                 </a>
               [% ELSE -%]
@@ -64,13 +63,13 @@
             [% END -%]
           </li>
           [% IF f.children.size > 0 -%]
-            <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
+            <li class="swc-Body swc-Body--serif swc-Body--sizeM">
               <strong>Children</strong>:
               <ul>
               [% FOREACH child IN f.children -%]
                   [% IF child -%]
-                    <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
-                      <a href="[% child.link %]" class="spectrum-Link spectrum-Link--primary">
+                    <li class="swc-Body swc-Body--serif swc-Body--sizeM">
+                      <a href="[% child.link %]" class="swc-Link">
                         [% child.display_name %]
                       </a>
                     </li>
@@ -83,28 +82,28 @@
         </ul>
     [% END -%]
     [% IF childof.size > 0 -%]
-        <h3 class="spectrum-Heading spectrum-Heading--serif spectrum-Heading--heavy spectrum-Heading--sizeL">Parents</h3>
+        <h3 class="swc-Heading swc-Heading--serif swc-Heading--heavy swc-Heading--sizeL">Parents</h3>
         <ul>
           [% FOREACH f IN childof -%]
-            <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
+            <li class="swc-Body swc-Body--serif swc-Body--sizeM">
               <strong>Family</strong>: [% f.type || 'Unknown' %]
               <ul>
-                <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
+                <li class="swc-Body swc-Body--serif swc-Body--sizeM">
                   [% father = f.father -%]
                   <strong>[% f.frel ? f.frel _ ' ' : '' %]Father</strong>:
                   [% IF father -%]
-                    <a href="[% father.link %]" class="spectrum-Link spectrum-Link--primary">
+                    <a href="[% father.link %]" class="swc-Link">
                       [% father.display_name %]
                     </a>
                   [% ELSE -%]
                     Unknown
                   [% END -%]
                 </li>
-                <li class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeM">
+                <li class="swc-Body swc-Body--serif swc-Body--sizeM">
                   [% mother = f.mother -%]
                   <strong>[% f.mrel ? f.mrel _ ' ' : '' %]Mother</strong>:
                   [% IF mother -%]
-                    <a href="[% mother.link %]" class="spectrum-Link spectrum-Link--primary">
+                    <a href="[% mother.link %]" class="swc-Link">
                       [% mother.display_name %]
                     </a>
                   [% ELSE -%]
@@ -118,14 +117,14 @@
     [% END -%]
 [% END -%]
 [% IF family_tree -%]
-<h2 class="spectrum-Heading spectrum-Heading--serif spectrum-Heading--heavy spectrum-Heading--sizeXL">Ancestors</h2>
+<h2 class="swc-Heading swc-Heading--serif swc-Heading--heavy swc-Heading--sizeXL">Ancestors</h2>
 <div class="family-tree-card">
   [% family_tree %]
 </div>
 [% END -%]
-<hr role="separator" class="spectrum-Divider spectrum-Divider--sizeM" />
+<swc-divider size="m"></swc-divider>
 [% IF static_content -%]
-  <h2 class="spectrum-Heading spectrum-Heading--serif spectrum-Heading--heavy spectrum-Heading--sizeXL">Analysis</h2>
+  <h2 class="swc-Heading swc-Heading--serif swc-Heading--heavy swc-Heading--sizeXL">Analysis</h2>
   [% static_content %]
 [% END -%]
 [% END %]

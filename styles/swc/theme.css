@@ -1,0 +1,57 @@
+/* cspell: disable */
+
+/* Spectrum Web Components (gen2) theme setup.
+
+   WHY THIS IS HERE AND NOT AN @import. Gen2's dist/tokens.css cannot work alone. Its scale
+   tokens are written as
+
+     --swc-font-size-100: var(--swc-theme--sizeM, 14px) var(--swc-theme--sizeL, 17px);
+
+   which only collapses to a single value when the --swc-theme--sizeM/L pair below exists.
+   That pair lives in @adobe/spectrum-wc's dist/swc.css, the "app setup" file. Without it
+   the value above is the two-value list "14px 17px", which is invalid wherever a length
+   is expected.
+
+   We cannot import swc.css itself, because the same file also sets, on :root,
+   font-family, font-size (14px) and background-color. This site sizes with rem, so a
+   :root font-size of 14px would silently rescale every rem value on every page. Only the
+   scaling and colour-scheme blocks are carried over.
+
+   SOURCE. Copied verbatim from node_modules/@adobe/spectrum-wc/dist/swc.css at
+   2.0.0-beta.6, "Theme scaling setup" and "Theme colors setup". The package is pinned to
+   an exact version for this reason. When bumping it, diff those two blocks against this
+   file.
+
+   LOCATION. A subdirectory of styles/ on purpose, like generated/: build-css.ts neither
+   lints nor emits sheets below the top level, so this reaches the browser only where a
+   sheet @imports it. */
+
+/* Theme scaling setup. The three declarations reference each other, which makes them a
+   cycle and so "guaranteed-invalid": that is what lets var(--swc-theme--sizeM, 14px) take
+   its fallback. .swc-theme--sizeL breaks the cycle on the L side to select the other
+   value. The site runs at the default (medium) scale. */
+:root,
+.swc-theme,
+.swc-theme--sizeM {
+  --swc-theme-size: var(--swc-theme--sizeM,);
+  --swc-theme--sizeM: var(--swc-theme-size,);
+  --swc-theme--sizeL: var(--swc-theme-size,);
+}
+
+.swc-theme--sizeL {
+  --swc-theme-size: var(--swc-theme--sizeL);
+}
+
+/* Theme colors setup. light-dark() in the token layer resolves against color-scheme. */
+:root,
+.swc-theme--light {
+  color-scheme: light;
+}
+
+.swc-theme--dark {
+  color-scheme: dark;
+}
+
+.swc-theme--adaptive {
+  color-scheme: light dark;
+}

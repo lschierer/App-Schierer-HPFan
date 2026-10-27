@@ -1,139 +1,193 @@
-/* Navigation Tree Visibility Rules */
+/* cspell: disable */
 
-nav.navigation-tree ul.spectrum-TreeView {
-  --mod-treeview-indicator-padding-block: 0.01em;
+/* The navigation tree, and any other disclosure tree on the site (the family tree).
 
-  /* Remove any gap/margin from nested lists to prevent extra spacing */
-  gap: 0;
-  margin-block: 0;
+   REPLACES @spectrum-css/treeview. Gen2 has no tree view. Markup is nested lists:
+
+     <site-tree>
+       <nav class="navigation-tree">
+         <ul class="site-tree-list">
+           <li>
+             <div class="site-tree-row [is-current]">
+               <button class="site-tree-toggle" aria-expanded aria-controls>   (a branch)
+               <span class="site-tree-toggle site-tree-leaf" aria-hidden>      (or a leaf)
+               <span class="site-tree-label site-tree-folder|site-tree-doc"><a href>...</a></span>
+             </div>
+             <ul class="site-tree-list" id hidden>...</ul>
+
+   WHAT IT IS NOT: an ARIA tree. See WebFramework::Role::Navigation. It is disclosure
+   navigation: a button per branch whose aria-expanded says whether its list shows.
+   <site-tree> (lib/components/site-tree.ts) does the toggling.
+
+   MEASUREMENTS below are the previous tree's, taken from the running site, so the swap is
+   visually a no-op: 24px rows, 16px of indent per level, a 36px toggle area (42px for a leaf,
+   which therefore sits 6px right of a sibling folder, as it always did), a 20px icon and an
+   8.8px gap before the text. */
+
+:root {
+  /* The three icons, drawn once here as masks instead of inlined as SVG into every node:
+     the old markup carried two <svg> per node, about 700KB of every page. A mask takes its
+     colour from background-color, so these follow currentColor as the SVGs did. */
+  --site-tree-icon-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M0 0h512v512H0z' fill='none' /%3E%3Cpath fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='56' d='m184 112l144 144l-144 144' /%3E%3C/svg%3E");
+  --site-tree-icon-folder: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M0 0h512v512H0z' fill='none' /%3E%3Cpath fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='32' d='M64 192v-72a40 40 0 0 1 40-40h75.89a40 40 0 0 1 22.19 6.72l27.84 18.56a40 40 0 0 0 22.19 6.72H408a40 40 0 0 1 40 40v40' /%3E%3Cpath fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='32' d='M479.9 226.55L463.68 392a40 40 0 0 1-39.93 40H88.25a40 40 0 0 1-39.93-40L32.1 226.55A32 32 0 0 1 64 192h384.1a32 32 0 0 1 31.8 34.55' /%3E%3C/svg%3E");
+  --site-tree-icon-doc: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M0 0h512v512H0z' fill='none' /%3E%3Cpath fill='none' stroke='currentColor' stroke-linejoin='round' stroke-width='32' d='M416 221.25V416a48 48 0 0 1-48 48H144a48 48 0 0 1-48-48V96a48 48 0 0 1 48-48h98.75a32 32 0 0 1 22.62 9.37l141.26 141.26a32 32 0 0 1 9.37 22.62Z' /%3E%3Cpath fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='32' d='M256 56v120a32 32 0 0 0 32 32h120m-232 80h160m-160 80h160' /%3E%3C/svg%3E");
 }
 
-/* NO width cap on the tree. It follows div#nav, which is the element that owns the
- * sidebar's width (global.css, --nav-width, resizable via the splitter).
- *
- * This used to be `max-inline-size: max(250px, 20vw)`, duplicating what div#nav already
- * enforced. That was harmless while the sidebar was a fixed width, but once the splitter
- * made div#nav resizable it became the bug where dragging the sidebar WIDER did nothing:
- * the pane grew, the tree stopped at the old cap, and the space gained was left blank with
- * the labels still truncated. Dragging narrower appeared to work only because shrinking
- * the pane squeezed the tree from outside the cap. One element owns the width. */
-nav.navigation-tree > ul.spectrum-TreeView {
-  max-inline-size: 100%;
+.site-tree-list {
+  /* Depth, counted by nesting, so the markup need not say how deep a node is. The root list
+     is 0; a list inside an item is its parent's depth plus one. (An item republishes its
+     list's depth under another name because a custom property cannot refer to itself.) */
+  --site-tree-depth: 0;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-/* NO truncation rules here, deliberately. @spectrum-css/treeview already handles it:
- * .spectrum-TreeView-itemLink is `display: flex; white-space: nowrap; overflow: hidden`
- * and .spectrum-TreeView-itemLabel is `overflow: hidden; text-overflow: ellipsis`. An
- * earlier version of this file added `min-inline-size: 0` to the label and made the anchor
- * `display: block` - both redundant, and together they collapsed every label to the width
- * of its icon (14px measured, at every depth, not just deep ones) because the label is a
- * flex item and min-inline-size let it shrink past its content. Leave the component's own
- * flex sizing alone. */
-
-/* The chevron is a <button> so it can be reached by keyboard; strip the button chrome so
- * it still looks like the bare icon Spectrum styles. */
-nav.navigation-tree button.spectrum-TreeView-itemIndicator {
-  appearance: none;
-  border: none;
-  background: none;
-  color: inherit;
-  cursor: pointer;
-  font: inherit;
+.site-tree-list .site-tree-list {
+  --site-tree-depth: calc(var(--site-tree-parent-depth) + 1);
 }
 
-/* Childless items get an empty indicator so their label lines up with a sibling folder's.
- * The indicator is content-box with a negative inline-start margin, so the placeholder
- * needs the chevron glyph's own width - workflow-icon-size-100 is that width, and it
- * tracks the scale (20px desktop, 24px mobile) as the real icon does. */
-nav.navigation-tree .spectrum-TreeView-itemIndicator--empty {
-  inline-size: var(--spectrum-workflow-icon-size-100);
+.site-tree-list > li {
+  --site-tree-parent-depth: var(--site-tree-depth);
 }
 
-nav.navigation-tree .spectrum-TreeView iconify-icon {
-  font-size: inherit;
-}
-
-/* Hide items that shouldn't be visible in current context */
-nav.navigation-tree .spectrum-TreeView-item.nav-hidden {
+.site-tree-list[hidden],
+.site-tree-list > li[hidden] {
   display: none;
 }
 
-/* Hide collapsed child groups */
-nav.navigation-tree .spectrum-TreeView.nav-collapsed {
-  display: none !important;
-}
-
-nav.navigation-tree span.spectrum-TreeView-itemLabel iconify-icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.25em;
-}
-
-/* Constrain the chevron icon height to prevent it from expanding the list item */
-nav.navigation-tree .spectrum-TreeView-itemIndicator {
-  height: 0.75em !important;
-  display: inline-block;
-}
-
-/* Reduce spacing between tree items using Spectrum CSS custom properties */
-nav.navigation-tree .spectrum-TreeView--sizeM {
-  --mod-treeview-item-min-block-size: 24px;
-}
-
-/* Ensure line-height doesn't add extra space */
-nav.navigation-tree .spectrum-TreeView-itemLink {
+/* A row spans the whole width, whatever its depth, so the hover and selected tints reach
+   the pane edge. Indent is padding. */
+.site-tree-row {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  block-size: 24px;
+  padding-inline: calc(var(--site-tree-depth) * 16px) 12px;
   line-height: 1.2;
 }
 
-/* Remove any extra spacing from list items - this eliminates the gap between items */
-nav.navigation-tree .spectrum-TreeView-item {
-  line-height: 1;
-  margin: 0 !important;
-  padding: 0 !important;
+.site-tree-row:hover {
+  background-color: var(--swc-gray-100);
 }
 
-/* Current-page indication.
- *
- * Spectrum sets the selected text colour on .spectrum-TreeView-itemLink and expects the
- * label to inherit it. Our label is an <a class="spectrum-Link--secondary">, which sets
- * its own colour through --mod-link-text-color, so the inherited value never reached the
- * text: the only surviving cue was the item's background wash. Rather than fight the
- * link, feed the same colour into the hooks --secondary actually reads.
- *
- * The colour is accent rather than the component default. That default is gray-900
- * against a gray-800 unselected link - a difference of one step on the grey ramp, which
- * is why selection was hard to see even where it did apply. Accent is for emphasis, and
- * aria-current="page" in WebFramework::Role::Navigation carries the meaning for anything
- * that is not looking at colour.
- */
-nav.navigation-tree
-  .spectrum-TreeView-item.is-selected
-  > .spectrum-TreeView-itemLink {
-  --mod-treeview-item-text-color-selected: var(
-    --spectrum-accent-content-color-default
-  );
-  --mod-link-text-color-secondary-default: var(
-    --spectrum-accent-content-color-default
-  );
-  --mod-link-text-color-secondary-hover: var(
-    --spectrum-accent-content-color-hover
-  );
-  --mod-link-text-color-secondary-active: var(
-    --spectrum-accent-content-color-down
-  );
-}
-
-/* The default wash is a 10% tint, tuned for a dense file tree where a whole row reads as
- * one object. In a sidebar of links it is nearly invisible, so it is doubled.
- *
- * color-mix rather than rgb(var(--…-rgb) / 20%): the -rgb companion for an aliased colour
- * is emitted once, globally, from its light-scheme value, so it would be wrong in dark
- * mode. color-mix works off the resolved colour and so follows the scheme. */
-nav.navigation-tree .spectrum-TreeView-item.is-selected {
-  --mod-treeview-item-background-color-selected: color-mix(
+/* 20% of the accent over the page, as it was. color-mix, not rgb(var(--*-rgb) / 20%): the
+   -rgb companions are emitted once from the light value and would be wrong in dark mode. */
+.site-tree-row.is-current {
+  background-color: color-mix(
     in srgb,
-    var(--spectrum-accent-content-color-default) 20%,
+    var(--swc-accent-content-color-default) 20%,
     transparent
   );
+}
+
+/* The toggle's box is the row high and 36px wide (a comfortable target, and 24px is the
+   WCAG 2.5.8 minimum). Only the chevron inside it is drawn. */
+.site-tree-toggle {
+  flex: 0 0 36px;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+  inline-size: 36px;
+  block-size: 24px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--text-1);
+  background: none;
+  cursor: pointer;
+  appearance: none;
+}
+
+button.site-tree-toggle::before {
+  content: "";
+  inline-size: 14px;
+  block-size: 14px;
+  background-color: currentcolor;
+  mask: var(--site-tree-icon-chevron) center / contain no-repeat;
+  transition: transform 130ms ease-in-out;
+}
+
+button.site-tree-toggle[aria-expanded="true"]::before {
+  transform: rotate(90deg);
+}
+
+button.site-tree-toggle:focus-visible {
+  outline: 2px solid var(--swc-link-focus-indicator-color);
+  outline-offset: -2px;
+}
+
+/* A leaf reserves a little more than a toggle, to match the previous tree. */
+.site-tree-leaf {
+  flex: 0 0 42px;
+  inline-size: 42px;
+  cursor: default;
+}
+
+.site-tree-label {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  gap: 8.8px;
+  min-inline-size: 0;
+  block-size: 20px;
+  overflow: hidden;
+}
+
+.site-tree-folder::before,
+.site-tree-doc::before {
+  content: "";
+  flex: none;
+  inline-size: 20px;
+  block-size: 20px;
+  background-color: var(--swc-neutral-subdued-content-color-default);
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
+.site-tree-folder::before {
+  mask-image: var(--site-tree-icon-folder);
+}
+
+.site-tree-doc::before {
+  mask-image: var(--site-tree-icon-doc);
+}
+
+/* Long titles are cut with an ellipsis; the full title is on the link's title attribute. */
+.site-tree-label a {
+  min-inline-size: 0;
+  overflow: hidden;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--swc-neutral-content-color-default);
+}
+
+.site-tree-label a:hover {
+  text-decoration: underline;
+  color: var(--swc-neutral-content-color-hover);
+}
+
+.site-tree-label a:focus-visible {
+  outline: 2px solid var(--swc-link-focus-indicator-color);
+  outline-offset: 2px;
+}
+
+/* The current page. blue-1100, not the raw accent: the accent is 3.4:1 on this page's
+   background and the AA minimum for text is 4.5:1 (see global.css). aria-current="page" in
+   the markup is what carries the meaning for anything not looking at colour. */
+.site-tree-label a[aria-current] {
+  color: var(--swc-link-text-color-default);
+}
+
+.site-tree-label a[aria-current]:hover {
+  color: var(--swc-link-text-color-hover);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button.site-tree-toggle::before {
+    transition: none;
+  }
 }

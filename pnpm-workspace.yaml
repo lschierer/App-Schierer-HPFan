@@ -2,3 +2,6 @@ allowBuilds:
   '@parcel/watcher': true
   esbuild: true
   unrs-resolver: true
+minimumReleaseAgeExclude:
+  - '@adobe/spectrum-wc-core@2.0.0-beta.6'
+  - '@adobe/spectrum-wc@2.0.0-beta.6'

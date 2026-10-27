@@ -3,6 +3,11 @@
 # Stage: localDev, staging, production
 stage: localDev
 
+# Which design-system class vocabulary the framework's generated HTML uses:
+# 'spectrum-css' (the framework default) or 'swc' (Spectrum Web Components gen2).
+# See WebFramework::UI.
+ui_profile: swc
+
 modules:
   "^WebFramework::Module::AutoIndex": {}
   "^WebFramework::Module::SiteLogo":

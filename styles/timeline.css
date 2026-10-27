@@ -1,10 +1,22 @@
 /* stylelint-disable property-no-unknown */
-@import url("generated/spectrum-tokens.css");
-@import url("@spectrum-css/page");
-@import url("@spectrum-css/typography");
-@import url("@spectrum-css/alertbanner");
-@import url("@spectrum-css/button");
-@import url("@spectrum-css/divider");
+
+/* The note above the timeline: icon, then text, on one line, as the old alert banner's
+   body laid it out. The box itself is <site-callout>. */
+.banner .callout-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  /* The old banner body started 16px in from the left padding. */
+  margin-inline-start: var(--swc-spacing-300);
+}
+
+/* The old banner's text paragraph had its own margins (18px above, 20px below, 16px at the end), not the
+   browser's 1em. */
+.banner .callout-row p {
+  margin-block: 18px 20px;
+  margin-inline-end: var(--swc-spacing-300);
+}
 
 .timeline-card iconify-icon {
   margin-right: 1.5rem;
@@ -19,55 +31,61 @@
   height: auto;
   font-optical-sizing: auto;
 
-  --mod-heading-margin-end: 0;
-  --mod-heading-margin-start: 0;
-  --mod-heading-serif-font-family: "EB Garamond", serif;
-  --gb: var(--spectrum-indigo-900);
-  --ireland: var(--spectrum-green-600);
-  --magical: var(--spectrum-fuchsia-600);
-  --religious: var(--spectrum-orange-600);
-  --scotland: var(--spectrum-cyan-600);
-  --england: var(--spectrum-red-900);
-  --generic: var(--spectrum-brown-800);
+  --site-heading-margin-end: 0;
+  --site-heading-margin-start: 0;
+  --gb: var(--swc-indigo-900);
+  --ireland: var(--swc-green-600);
+  --magical: var(--swc-fuchsia-600);
+  --religious: var(--swc-orange-600);
+  --scotland: var(--swc-cyan-600);
+  --england: var(--swc-red-900);
+  --generic: var(--swc-brown-800);
 }
 
-div.timeline-card svg .spectrum-Heading--sizeM,
-div.timeline-card svg .spectrum-Body--sizeM,
-div.timeline-card svg .spectrum-Detail--sizeM {
-  --mod-heading-font-size: 12px;
-  --mod-body-font-size: 12px;
-  --mod-detail-font-size: 12px;
+/* Was --mod-heading-serif-font-family on the card. Gen2's .swc-Heading--serif sets its font
+   on the heading element, where an inherited value cannot override it, so the family is
+   set on the headings themselves. */
+div.timeline-card .swc-Heading--serif {
+  --swc-heading-font-family: "EB Garamond", serif;
 }
 
-div.timeline-card svg .spectrum-Heading--sizeS,
-div.timeline-card svg .spectrum-Body--sizeS,
-div.timeline-card svg .spectrum-Detail--sizeS {
-  --mod-heading-font-size: 10px;
-  --mod-body-font-size: 10px;
-  --mod-detail-font-size: 10px;
+div.timeline-card svg .swc-Heading--sizeM,
+div.timeline-card svg .swc-Body--sizeM,
+div.timeline-card svg .swc-Detail--sizeM {
+  --swc-heading-font-size: 12px;
+  --swc-body-font-size: 12px;
+  --swc-detail-font-size: 12px;
 }
 
-foreignObject div.spectrum-Body {
-  --mod-body-margin-end: 0;
+div.timeline-card svg .swc-Heading--sizeS,
+div.timeline-card svg .swc-Body--sizeS,
+div.timeline-card svg .swc-Detail--sizeS {
+  --swc-heading-font-size: 10px;
+  --swc-body-font-size: 10px;
+  --swc-detail-font-size: 10px;
 }
 
-foreignObject div.spectrum-Body.description,
-foreignObject div.spectrum-Body.sources {
+foreignObject div.swc-Body {
+  --site-body-margin-end: 0;
+}
+
+foreignObject div.swc-Body.description,
+foreignObject div.swc-Body.sources {
   text-align: left;
 }
 
-foreignObject div.spectrum-Body.description blockquote {
+foreignObject div.swc-Body.description blockquote {
   margin-inline: 2em 0;
   margin-block: 1px;
 }
 
-div.spectrum-Body ul {
+div.swc-Body ul {
   margin-block: 0;
   padding-inline: 2em 0;
   text-align: left;
 }
 
-div.spectrum-Body li.spectrum-Body {
+div.swc-Body li.swc-Body {
   margin-block: 0;
 }
 
@@ -78,15 +96,15 @@ div.spectrum-Body li.spectrum-Body {
    future rename should show up as a missing colour, not as a value frozen in light
    mode. */
 .birth {
-  color: var(--spectrum-positive-color-900);
+  color: var(--swc-positive-color-900);
 }
 
 .death {
-  color: var(--spectrum-negative-color-900);
+  color: var(--swc-negative-color-900);
 }
 
 .other {
-  color: var(--spectrum-blue-900);
+  color: var(--swc-blue-900);
 }
 
 /* qualifiers */

@@ -16,7 +16,11 @@ use HTML::Escape qw(escape_html);
 has class_lists => (is => 'lazy');
 
 sub _build_class_lists ($self) {
-  my @events = values %{ $self->gramps->events };
+  # `values` on a hash returns its entries in an order Perl randomizes for every process,
+  # so a fixed order is imposed here. It matters twice below: which event wins when two
+  # share a date (see the merge), and the order students appear in.
+  my @events = sort { $a->handle cmp $b->handle }
+    values %{ $self->gramps->events };
   $self->logger->debug(
     sprintf('buildClassList found %s events to filter.', scalar @events));
 
@@ -34,7 +38,15 @@ sub _build_class_lists ($self) {
   $self->logger->debug(
     sprintf('buildClassList found %s sorting events.', scalar @SortingEvents));
 
-  # Build class lists by date
+  # Build class lists by date.
+  #
+  # Two sorting events can carry the same date: the data has an event dated 1989-09-01 with
+  # nobody attached next to another with nine students. This used to assign
+  # `$ClassLists{$eventDate} = \@matches`, so whichever event happened to be processed LAST
+  # replaced the other, and with a randomized event order the 1989 class list was
+  # sometimes "No sorting records found" and sometimes nine students, from one server start
+  # to the next. The events for a date are now merged.
+  my %seen;    # "date handle" => 1, so a person on two events of one date is listed once
   foreach my $event (@SortingEvents) {
     my @matches;
     my $eventDate = $event->date->to_string;
@@ -47,6 +59,7 @@ sub _build_class_lists ($self) {
     foreach
       my $person (@{ $self->gramps->people_by_event->{ $event->handle } // [] })
     {
+      next if $seen{ $eventDate . ' ' . $person->handle }++;
       push @matches, $person;
     }
 
@@ -55,7 +68,19 @@ sub _build_class_lists ($self) {
       scalar @matches,
       $eventDate, join(', ', map { $_->display_name } @matches)
     ));
-    $ClassLists{$eventDate} = \@matches;
+    push @{ $ClassLists{$eventDate} }, @matches;
+  }
+
+  # A stable, readable order for each class list: by name, then by Gramps id so two people
+  # with the same name keep a fixed order. (people_by_event is itself built from a hash,
+  # so without this the rows came out in a different order on every server start.)
+  foreach my $date (keys %ClassLists) {
+    $ClassLists{$date} = [
+      sort {
+             fc($a->display_name // '') cmp fc($b->display_name // '')
+          || ($a->gramps_id // '') cmp ($b->gramps_id // '')
+      } @{ $ClassLists{$date} }
+    ];
   }
 
   return \%ClassLists;
@@ -100,12 +125,12 @@ async sub _render_classlist_tables ($self, $html) {
     my $replacement;
     if (scalar @$matches) {
       my $thead = sprintf(
-        '<thead class="spectrum-Table-head"><tr> %s %s %s %s %s</tr></thead>',
-        '<th class="spectrum-Table-headCell">Name</th>',
-        '<th class="spectrum-Table-headCell">Gender</th>',
-        '<th class="spectrum-Table-headCell">House</th>',
-        '<th class="spectrum-Table-headCell">Blood Status</th>',
-        '<th class="spectrum-Table-headCell">Economic Status</th>',
+        '<thead><tr> %s %s %s %s %s</tr></thead>',
+        '<th>Name</th>',
+        '<th>Gender</th>',
+        '<th>House</th>',
+        '<th>Blood Status</th>',
+        '<th>Economic Status</th>',
       );
 
       # Process each person asynchronously to get their data
@@ -117,20 +142,20 @@ async sub _render_classlist_tables ($self, $html) {
         my $blood  = escape_html(await $self->person_blood_status($person));
         my $econ   = escape_html(await $self->person_economic_status($person));
 
-        push @rows, qq{<tr class="spectrum-Table-row">
-                    <td class="spectrum-Table-cell">$name</td>
-                    <td class="spectrum-Table-cell">$gender</td>
-                    <td class="spectrum-Table-cell">$house</td>
-                    <td class="spectrum-Table-cell">$blood</td>
-                    <td class="spectrum-Table-cell">$econ</td>
+        push @rows, qq{<tr>
+                    <td>$name</td>
+                    <td>$gender</td>
+                    <td>$house</td>
+                    <td>$blood</td>
+                    <td>$econ</td>
                   </tr>};
       }
       my $tbody = join '', @rows;
 
       $replacement = qq{
-              <table id="$year" class="spectrum-Table spectrum-Table--sizeM spectrum-Table--compact spectrum-Table--quiet">
+              <table id="$year" class="site-table">
                 $thead
-                <tbody class="spectrum-Table-body">$tbody</tbody>
+                <tbody>$tbody</tbody>
               </table>
             };
     }

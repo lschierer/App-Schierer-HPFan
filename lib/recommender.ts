@@ -40,10 +40,8 @@ async function init(): Promise<void> {
     tableEl.setFinalResults(results);
   });
 
-  es.addEventListener('complete', (e: MessageEvent) => {
-    const data = JSON.parse(e.data as string) as { total: number };
+  es.addEventListener('complete', () => {
     tableEl.isComplete = true;
-    data;
     es.close();
   });
 

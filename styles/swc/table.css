@@ -1,0 +1,115 @@
+/* cspell: disable */
+
+/* Data tables: Markdown tables, YAML tables and the Hogwarts class lists.
+
+   WHY THIS EXISTS. Spectrum Web Components gen2 has no table, and @spectrum-css/table was
+   the only thing styling these. That package was never loaded on ordinary pages (only
+   classlist.css and yamltable.css imported it), so Markdown tables rendered as unstyled
+   browser defaults while carrying spectrum-Table-* classes. This sheet gives all three the
+   one look, built from gen2 tokens and the site palette (--text-*, --surface-*, defined in
+   global.css), and is loaded by global.css on every page.
+
+   ONE CLASS ON THE <table>, nothing on the cells. Rules select th/td/tr beneath it, so the
+   generators emit `<table class="site-table">` and plain markup inside, instead of a class
+   on every row and cell, and the same sheet works inside a shadow root (the recommender
+   table adopts it) where a global per-cell class would not.
+
+     .site-table          header band, compact rows, no row lines (the class lists;
+                          Markdown tables)
+     .site-table-divided  roomier rows with a line between them (the YAML tables)
+
+   The measurements below are the old tables', taken from the running site, so the swap is
+   visually a no-op for the two that were styled.
+
+   DELIBERATELY DROPPED: the old rows had `cursor: pointer`, a @spectrum-css default for
+   selectable tables. These rows are not interactive, so it promised a click that does
+   nothing. */
+
+.site-table {
+  --_site-table-edge: var(--swc-spacing-300);
+  --_site-table-line: var(--swc-table-border-divider-width);
+  --_site-table-head-bg: var(--text-1);
+  --_site-table-head-fg: var(--text-2);
+  --_site-table-row-bg: var(--surface-1);
+  --_site-table-row-fg: var(--text-1);
+  --_site-table-row-hover-bg: var(--surface-3);
+  --_site-table-line-color: var(--_site-table-row-bg);
+
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: var(--swc-sans-font-family-stack);
+  font-size: var(--swc-font-size-100);
+  font-weight: var(--swc-regular-font-weight);
+  line-height: 1.3;
+}
+
+.site-table th {
+  box-sizing: border-box;
+  padding-block: 6px 8px;
+  padding-inline: var(--_site-table-edge);
+  text-align: start;
+  vertical-align: middle;
+  font-weight: var(--swc-bold-font-weight);
+  color: var(--_site-table-head-fg);
+  background-color: var(--_site-table-head-bg);
+}
+
+/* The top border is always there and, unless the table is --divided, the same colour as
+   the row, so it takes up the pixel the dividers need without drawing anything. */
+.site-table td {
+  box-sizing: border-box;
+  padding-block: 5px 9px;
+  padding-inline: var(--_site-table-edge);
+  vertical-align: top;
+  color: var(--_site-table-row-fg);
+  background-color: var(--_site-table-row-bg);
+  border-block-start: var(--_site-table-line) solid var(--_site-table-line-color);
+}
+
+.site-table-divided {
+  --_site-table-line-color: var(--text-1);
+}
+
+/* The last row closes the table with a 1px edge in the row colour. Invisible, but the old
+   table had it and it is 1px of height. */
+.site-table tbody tr:last-child td {
+  border-block-end: var(--_site-table-line) solid var(--_site-table-row-bg);
+}
+
+/* No line above the first row: the header band is already there. */
+.site-table-divided tbody tr:first-child td {
+  border-block-start-color: var(--_site-table-row-bg);
+}
+
+.site-table-divided td {
+  padding-block: 9px 13px;
+
+  /* One edge pixel is given to the table's (invisible) outer border. */
+  padding-inline: calc(var(--_site-table-edge) - var(--_site-table-line));
+}
+
+.site-table-divided td:first-child {
+  border-inline-start: var(--_site-table-line) solid var(--_site-table-row-bg);
+}
+
+.site-table-divided td:last-child {
+  border-inline-end: var(--_site-table-line) solid var(--_site-table-row-bg);
+}
+
+/* A link in a header cell (the footnote marker) sits on the dark header band, where the
+   page's link blue is 2.1:1. It takes the header text colour, underlined, in every state
+   (:is() so the hover and focus rules of .swc-Link, which assign colour directly, lose). */
+.site-table th {
+  --swc-link-focus-indicator-color: var(--swc-static-white-focus-indicator-color);
+}
+
+.site-table th a.swc-Link:is(:any-link, :hover, :active, :focus-visible) {
+  color: inherit;
+  text-decoration: underline;
+}
+
+@media (hover: hover) {
+  .site-table tbody tr:hover td {
+    background-color: var(--_site-table-row-hover-bg);
+  }
+}

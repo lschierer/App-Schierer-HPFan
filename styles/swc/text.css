@@ -1,0 +1,138 @@
+/* cspell: disable */
+
+/* Where this site deliberately differs from, or fills in for, gen2's typography.css and
+   link.css. Every rule here exists because the old @spectrum-css behaviour was relied on
+   and gen2 did not carry it over. Imported by global.css after both gen2 sheets, so
+   equal-specificity rules here win.
+
+   Not a place for new styling. If a rule is not restoring something @spectrum-css did,
+   it belongs in the stylesheet of the thing it styles. */
+
+/* 1. THE BASE FONT.
+   <body class="spectrum-Typography"> set font-family, font-style and font-size for
+   everything beneath it. Gen2 removed that wrapper class, and its swc.css does the
+   equivalent on :root with font-size: 14px, which this site cannot adopt because it sizes
+   in rem (see swc/theme.css). Setting it on <body> instead keeps rem at the browser's 16px
+   while giving all unclassed text the same 14px sans base it always had. */
+body {
+  font-family: var(--swc-font-family);
+  font-size: var(--swc-font-size);
+  font-style: var(--swc-font-style);
+}
+
+/* 2. DEFAULT MARGINS.
+   The same wrapper also gave every .spectrum-Heading/Body/Detail its margins, scaled to
+   its own font size. Gen2 makes margins opt-in per element (--margins) or per container
+   (--prose), and derives them ON the element, so a rule on an ancestor cannot adjust them.
+   Neither opt-in fits a site that sets these classes on hundreds of generated elements, so
+   the old default is restored here from gen2's own multiplier tokens.
+
+   Heading and Detail take a top and a bottom margin; Body takes ONLY a bottom one, as
+   before. Taking top margins on Body too, which is what --margins does, changes the
+   spacing after every heading and at the start of every list.
+
+   The --site-* hooks replace the old --mod-*-margin-* overrides. Set one on an ancestor to
+   change the margin of every such element beneath it; e.g. --site-heading-margin-start: 0
+   in the header. The fallback font sizes are gen2's own defaults for an element with no
+   size modifier (typography.css, the `var(--swc-*-font-size, <default>)` in --margins). */
+.swc-Heading {
+  --swc-heading-margin-top: var(
+    --site-heading-margin-start,
+    calc(
+      var(--swc-heading-margin-top-multiplier) *
+        var(--swc-heading-font-size, var(--swc-font-size-500))
+    )
+  );
+  --swc-heading-margin-bottom: var(
+    --site-heading-margin-end,
+    calc(
+      var(--swc-heading-margin-bottom-multiplier) *
+        var(--swc-heading-font-size, var(--swc-font-size-500))
+    )
+  );
+}
+
+.swc-Body {
+  --swc-body-margin-bottom: var(
+    --site-body-margin-end,
+    calc(
+      var(--swc-body-margin-multiplier) *
+        var(--swc-body-font-size, var(--swc-font-size-200))
+    )
+  );
+}
+
+.swc-Detail {
+  --swc-detail-margin-top: var(
+    --site-detail-margin-start,
+    calc(
+      var(--swc-detail-margin-top-multiplier) *
+        var(--swc-detail-font-size, var(--swc-font-size-100))
+    )
+  );
+  --swc-detail-margin-bottom: var(
+    --site-detail-margin-end,
+    calc(
+      var(--swc-detail-margin-bottom-multiplier) *
+        var(--swc-detail-font-size, var(--swc-font-size-100))
+    )
+  );
+}
+
+/* 3. LINKS TAKE THE SURROUNDING FONT.
+   .spectrum-Link set no font properties, so a link in serif body copy was serif body copy.
+   Gen2's .swc-Link sets family, size, weight and line-height itself, because it models a
+   standalone link; --standalone then adds weight 500. Left alone, every link in this
+   site's running text would render as 14px sans-serif. `font: inherit` puts it back, and
+   also cancels the --standalone weight, which here exists only to make --quiet work. */
+.swc-Link {
+  font: inherit;
+}
+
+/* 4. DIVIDERS BEFORE THEIR SCRIPT HAS RUN.
+   <swc-divider> draws nothing until its module is defined, and an undefined custom element
+   is a zero-height inline box, so every divider would pop in and push the page down. This
+   reserves the same line, from the same tokens the element uses, until it upgrades.
+   Matches the element's own default and its size="s" form; the site uses no other. */
+swc-divider:not(:defined) {
+  display: block;
+  inline-size: 100%;
+  block-size: var(--swc-divider-thickness-medium);
+  border-radius: var(--swc-divider-thickness-medium);
+  background-color: var(--swc-divider-background-color, var(--swc-gray-200));
+}
+
+swc-divider[size="s"]:not(:defined) {
+  block-size: var(--swc-divider-thickness-small);
+  border-radius: var(--swc-divider-thickness-small);
+}
+
+/* 5. LEADING (a deliberate departure from Spectrum 2).
+   Spectrum 2 tightened line-height: a 16px Body line went from 24px to 20px, and headings
+   from 1.3 to about 1.14. For the long-form reading this site is mostly made of, that is
+   noticeably denser, and 1.5 for running text is also what WCAG 1.4.12 (Text Spacing)
+   assumes. So the previous ratios are kept. (Decision: keep, to meet the WCAG guidance.)
+
+   Unitless on purpose, not a token: it scales with whatever font-size the element ends up
+   with. That matters in the timeline, where the SVG overrides sizes to 12px and 10px; the
+   gen2 per-size line-height tokens are fixed lengths and overflowed those boxes.
+
+   To adopt Spectrum 2's leading, delete this block. */
+.swc-Body {
+  line-height: 1.5;
+}
+
+.swc-Heading,
+.swc-Detail {
+  line-height: 1.3;
+}
+
+/* 6. DETAIL STAYS UPPERCASE.
+   .spectrum-Detail uppercased with 0.06em tracking, and the site relies on it for the
+   footer and for citation labels. Gen2 dropped both; its migration guide says to add
+   text-transform back where wanted, and the tracking goes with it, since tracked lowercase
+   reads wrong. To adopt Spectrum 2's Detail, delete this block. */
+.swc-Detail {
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
