@@ -46,7 +46,7 @@ fighting over her, or perhaps she was even secretly somewhat flattered by that.
 Because of this she blamed [James] for being immature (which was somewhat true),
 particularly when he would not admit _why_ he was attacking [Snape].[^230804-2]
 
-[Dark Magic]: /Harrypedia/magic/dark/
+[Dark Magic]: /Harrypedia/magic/dark
 
 [^230804-2]:
     In \_[Breaking Assumptions], the author presents an alternative theory,
@@ -72,18 +72,17 @@ particularly when he would not admit _why_ he was attacking [Snape].[^230804-2]
     _[Harry Potter and the Order of the Phoenix](https://www.librarything.com/work/115/book/225886709)_
     Kindle Locations 9396-9398. Pottermore Limited. American Kindle Edition.
 
-[James]: /Harrypedia/people/Potter/James/
+[James]: /Harrypedia/people/Potter/James
 [lily]: </Harrypedia/people/Evans/Lily J>
 [Snape]: /Harrypedia/people/Snape/Severus
 [Draco]: </Harrypedia/people/Malfoy/Draco Lucius>
 
 [^221206-2]:
-    Anelli, Melissa and Emerson Spartz. <!-- cspell: disable-line --> "[The
+    Anelli, Melissa and Emerson Spartz. "[The
     Leaky Cauldron and MuggleNet interview Joanne Kathleen Rowling: Part
     Two][LCMIp2]" [Accio Quote](http://www.accio-quote.org/), 2005-07-16
 
-[LCMIp2]:
-  http://www.accio-quote.org/articles/2005/0705-tlc_mugglenet-anelli-2.htm
+[LCMIp2]: http://www.accio-quote.org/articles/2005/0705-tlc_mugglenet-anelli-2.htm
 
 [^221206-3]:
     See the many fan fictions where [James] is presented as an utter idiot, and
