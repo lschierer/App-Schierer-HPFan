@@ -1,0 +1,101 @@
+/* <site-split-view>. Replaces @spectrum-css/splitview.
+
+   ONE STYLESHEET, TWO CONTEXTS (as site-callout.css): this file is the element's shadow-root
+   styles (`:host`, `::slotted()`) and is imported into the page by styles/global.css, where
+   the same rules are written against `site-split-view` and its light-DOM children. That is
+   what makes the layout identical before the element's script has run. `:host` matches
+   nothing in the page and `site-split-view` matches nothing in the shadow root, so each
+   copy is inert in the other context. Keep every rule paired.
+
+   Plain CSS, no nesting: the shadow-root copy is not run through PostCSS.
+
+   The dimensions and colours are the old splitter's, read off the running site: a 2px line
+   in gray-200 (gray-400 on hover, gray-800 pressed, the focus colour when focused) with a
+   4x16px grip drawn in the middle. */
+
+:host,
+site-split-view {
+  display: flex;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+::slotted([slot="splitter"]),
+site-split-view > [slot="splitter"] {
+  --_site-split-handle: var(--swc-gray-200);
+
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  inline-size: var(--swc-border-width-200);
+  block-size: 100%;
+  background-color: var(--_site-split-handle);
+  user-select: none;
+  touch-action: none;
+}
+
+/* The grip. A hollow rounded box centred on the line, coloured with the line. */
+::slotted([slot="splitter"])::before,
+site-split-view > [slot="splitter"]::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: -4px;
+  box-sizing: content-box;
+  inline-size: 4px;
+  block-size: 16px;
+  border: solid var(--_site-split-handle);
+  border-width: 4px 3px;
+  border-radius: 2px;
+  transform: translateY(-50%);
+}
+
+/* The hit area. The line is 2px wide, far under the 24px WCAG 2.5.8 asks of a pointer
+   target, so a transparent strip extends the area that responds. It overlays about 11px of
+   each neighbouring pane: the sidebar's right margin on one side and the main pane's 1rem
+   padding on the other, so nothing clickable is covered. */
+::slotted([slot="splitter"])::after,
+site-split-view > [slot="splitter"]::after {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  inset-inline: -11px;
+}
+
+/* Only an upgraded splitter is a control (the element adds .is-draggable). */
+::slotted([slot="splitter"].is-draggable),
+site-split-view > [slot="splitter"].is-draggable {
+  cursor: col-resize;
+}
+
+@media (hover: hover) {
+  ::slotted([slot="splitter"].is-draggable:hover),
+  site-split-view > [slot="splitter"].is-draggable:hover {
+    --_site-split-handle: var(--swc-gray-400);
+  }
+}
+
+::slotted([slot="splitter"].is-draggable:active),
+site-split-view > [slot="splitter"].is-draggable:active {
+  --_site-split-handle: var(--swc-gray-800);
+}
+
+/* Focus. The line and grip take the focus colour and an outline is added: at 2px the line
+   alone is too subtle to see. The colour is the site's darkened focus ring (global.css),
+   falling back to gen2's. */
+::slotted([slot="splitter"].is-draggable:focus-visible),
+site-split-view > [slot="splitter"].is-draggable:focus-visible {
+  --_site-split-handle: var(
+    --swc-link-focus-indicator-color,
+    var(--swc-focus-indicator-color)
+  );
+
+  outline: 2px solid var(--_site-split-handle);
+  outline-offset: 2px;
+}
+
+::slotted([slot="splitter"].is-draggable:focus-visible)::before,
+site-split-view > [slot="splitter"].is-draggable:focus-visible::before {
+  box-shadow: 0 0 0 1px var(--_site-split-handle);
+}

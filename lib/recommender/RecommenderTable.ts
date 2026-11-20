@@ -1,6 +1,11 @@
-import { customElement, state } from 'lit/decorators.js';
-import { html, css, LitElement, type CSSResultGroup, nothing } from 'lit';
+import { state } from 'lit/decorators.js';
+import { html, css, type CSSResultGroup, nothing } from 'lit';
 import { repeat } from 'lit/directives/repeat.js';
+
+import {
+  SpectrumElement,
+  defineElement,
+} from '@adobe/spectrum-wc-core/element/index.js';
 
 import {
   TableController,
@@ -21,7 +26,11 @@ import {
   type HeaderContext,
 } from '@tanstack/lit-table';
 
-import SpectrumTokensCSS from '@spectrum-css/tokens/dist/index.css' with { type: 'css' };
+// The site's data-table look (header band, compact rows), shared with the Markdown, YAML and
+// class-list tables. It styles `<table class="site-table">` and plain th/td beneath it, which
+// is what lets it work inside this shadow root. The colour and spacing tokens it reads are
+// custom properties on :root, which inherit through the shadow boundary.
+import tableStyles from '../../styles/swc/table.css';
 
 // TanStack Table v9 uses a modular feature architecture: the features you use,
 // their row-model factories, and the sorting functions needed for name
@@ -43,6 +52,13 @@ const tableFeaturesConfig = tableFeatures({
 
 type TableFeaturesConfig = typeof tableFeaturesConfig;
 
+/** `aria-sort` for a header cell, given a column's sort state. */
+function ariaSort(direction: false | 'asc' | 'desc'): 'ascending' | 'descending' | 'none' {
+  if (direction === 'asc') return 'ascending';
+  if (direction === 'desc') return 'descending';
+  return 'none';
+}
+
 export interface RecRow {
   id: string;
   url: string;
@@ -61,8 +77,13 @@ export interface RecRow {
   soft_enforced: boolean;
 }
 
-@customElement('recommender-table')
-export class RecommenderTable extends LitElement {
+/**
+ * The AO3 recommender's results table: rows arrive over a server-sent-events stream (see
+ * lib/recommender.ts), sort by clicking a header, and expand to show the summary and tags.
+ *
+ * @element recommender-table
+ */
+export class RecommenderTable extends SpectrumElement {
   @state() private _sorting: SortingState = [{ id: 'score', desc: true }];
   @state() private _expanded: ExpandedState = {};
   @state() _data: RecRow[] = [];
@@ -75,15 +96,17 @@ export class RecommenderTable extends LitElement {
   );
   private rowMap = new Map<string, RecRow>();
 
-  static styles: CSSResultGroup = [
-    SpectrumTokensCSS,
+  static override styles: CSSResultGroup = [
+    tableStyles,
     css`
-      :host { display: block; }
+      :host {
+        display: block;
+      }
 
       .recommender-progress {
         margin-bottom: 1em;
         padding: 0.5em;
-        background: var(--spectrum-gray-100);
+        background: var(--swc-gray-100);
         border-radius: 4px;
       }
 
@@ -93,66 +116,86 @@ export class RecommenderTable extends LitElement {
       }
 
       .recommender-errors li {
-        color: var(--spectrum-negative-color-900, #c00);
+        color: var(--swc-negative-color-900);
         margin-bottom: 0.25em;
       }
 
       table {
         width: 100%;
-        border-collapse: collapse;
       }
 
-      th {
+      /* The sort control is a real button, so a header can be operated from the keyboard;
+         it looks like the header text it replaces. */
+      .sort-button {
+        padding: 0;
+        border: 0;
+        font: inherit;
+        color: inherit;
+        background: none;
         cursor: pointer;
-        user-select: none;
-        text-align: left;
-        padding: 8px;
-        border-bottom: 2px solid var(--spectrum-gray-300);
         white-space: nowrap;
       }
 
-      td {
-        padding: 8px;
-        border-bottom: 1px solid var(--spectrum-gray-200);
-        vertical-align: top;
+      .sort-button:focus-visible,
+      .expand-btn:focus-visible {
+        outline: 2px solid var(--swc-link-focus-indicator-color);
+        outline-offset: 2px;
       }
 
-      .sort-indicator { margin-left: 4px; }
+      th .sort-button:focus-visible {
+        outline-color: var(--swc-static-white-focus-indicator-color);
+      }
+
+      .sort-indicator {
+        margin-inline-start: 4px;
+      }
 
       .expand-btn {
-        cursor: pointer;
-        background: none;
+        padding: 2px 6px;
         border: none;
         font-size: 1em;
-        padding: 2px 6px;
+        color: inherit;
+        background: none;
+        cursor: pointer;
       }
 
       .detail-row td {
         padding: 8px 8px 16px 32px;
-        background: var(--spectrum-gray-75, #fafafa);
-        border-bottom: 1px solid var(--spectrum-gray-200);
+        background: var(--swc-gray-75);
+        border-block-end: 1px solid var(--swc-gray-200);
       }
 
       .detail-summary {
         margin-bottom: 0.5em;
       }
 
+      /* gray-700, not the lighter steps these used: it is 5.8:1 on this page's background,
+         where gray-600 is 3.5:1 and fails AA for text this small. */
       .detail-score {
         font-size: 0.85em;
-        color: var(--spectrum-gray-600, #888);
+        color: var(--swc-gray-700);
         margin-bottom: 0.5em;
       }
 
       .detail-tags {
-        color: var(--spectrum-gray-700, #666);
+        color: var(--swc-gray-700);
         font-size: 0.9em;
       }
 
       a {
-        color: var(--spectrum-accent-color-900);
+        color: var(--swc-link-text-color-default);
         text-decoration: none;
       }
-      a:hover { text-decoration: underline; }
+
+      a:hover {
+        color: var(--swc-link-text-color-hover);
+        text-decoration: underline;
+      }
+
+      a:focus-visible {
+        outline: 2px solid var(--swc-link-focus-indicator-color);
+        outline-offset: 2px;
+      }
     `,
   ];
 
@@ -162,9 +205,11 @@ export class RecommenderTable extends LitElement {
       enableSorting: false,
       header: () => nothing,
       cell: (info) => html`
-        <button class="expand-btn"
+        <button class="expand-btn" type="button"
+          aria-expanded=${String(info.row.getIsExpanded())}
+          aria-label="Details for ${info.row.original.title}"
           @click=${info.row.getToggleExpandedHandler()}>
-          ${info.row.getIsExpanded() ? '▼' : '▶'}
+          <span aria-hidden="true">${info.row.getIsExpanded() ? '▼' : '▶'}</span>
         </button>
       `,
     },
@@ -232,17 +277,18 @@ export class RecommenderTable extends LitElement {
     const direction = info.column.getIsSorted();
     const arrow = direction === 'asc' ? '🔼' : direction === 'desc' ? '🔽' : '';
     return html`
-      <div @click=${info.column.getToggleSortingHandler()}>
+      <button class="sort-button" type="button"
+        @click=${info.column.getToggleSortingHandler()}>
         ${label}${arrow
-          ? html`<span class="sort-indicator">${arrow}</span>`
+          ? html`<span class="sort-indicator" aria-hidden="true">${arrow}</span>`
           : ''}
-      </div>
+      </button>
     `;
   }
 
   private _renderDetailRow(row: RecRow, colSpan: number) {
-    const summary = row.summary?.trim();
-    const tags = row.tags?.trim();
+    const summary = row.summary.trim();
+    const tags = row.tags.trim();
     return html`
       <tr class="detail-row">
         <td colspan="${colSpan}">
@@ -261,14 +307,14 @@ export class RecommenderTable extends LitElement {
   // --- Public API for the SSE driver ---
 
   upsertRow(rec: RecRow): void {
-    this.rowMap.set(String(rec.id), rec);
+    this.rowMap.set(rec.id, rec);
     this._data = [...this.rowMap.values()];
   }
 
   setFinalResults(results: RecRow[]): void {
     this.rowMap.clear();
     for (const r of results) {
-      this.rowMap.set(String(r.id), r);
+      this.rowMap.set(r.id, r);
     }
     this._data = results;
   }
@@ -317,7 +363,7 @@ export class RecommenderTable extends LitElement {
 
       <p>${this._data.length} recommendations</p>
 
-      <table>
+      <table class="site-table">
         <thead>
           ${repeat(
             table.getHeaderGroups(),
@@ -328,7 +374,7 @@ export class RecommenderTable extends LitElement {
                   hg.headers,
                   (h) => h.id,
                   (h) => html`
-                    <th @click=${h.column.getToggleSortingHandler()}>
+                    <th aria-sort=${ariaSort(h.column.getIsSorted())}>
                       ${h.isPlaceholder
                         ? null
                         : flexRender(h.column.columnDef.header, h.getContext())}
@@ -365,3 +411,11 @@ export class RecommenderTable extends LitElement {
     `;
   }
 }
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'recommender-table': RecommenderTable;
+  }
+}
+
+defineElement('recommender-table', RecommenderTable);

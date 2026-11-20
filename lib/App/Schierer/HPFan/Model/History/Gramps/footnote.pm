@@ -60,13 +60,13 @@ class App::Schierer::HPFan::Model::History::Gramps::footnote
 
       $title = sprintf(
         '<dt class="%s">%s</dd>',
-        'spectrum-Heading spectrum-Heading--sizeXS spectrum-Heading-emphasized',
+        'swc-Heading swc-Heading--sizeXS',
         $title
       );
 
       my $author = sprintf(
         '<dd class="%s">%s</dd>',
-        'spectrum-Detail spectrum-Detail--serif spectrum-Detail--sizeS',
+        'swc-Detail swc-Detail--serif swc-Detail--sizeS',
         $source->author // 'Unknown'
       );
 
@@ -74,7 +74,7 @@ class App::Schierer::HPFan::Model::History::Gramps::footnote
         defined($cite->page) && length($cite->page)
         ? sprintf(
         '<dd class="%s">Page: %s</dd>',
-        'spectrum-Body spectrum-Body--serif spectrum-Detail--sizeS',
+        'swc-Body swc-Body--serif swc-Detail--sizeS',
         $cite->page
         )
         : '';
@@ -83,7 +83,7 @@ class App::Schierer::HPFan::Model::History::Gramps::footnote
         defined($cite->date) && $cite->date->year != 9999
         ? sprintf(
         '<dd class="%s">%s</dd>',
-        'spectrum-Body spectrum-Body--serif spectrum-Body--sizeS',
+        'swc-Body swc-Body--serif swc-Body--sizeS',
         $cite->date
         )
         : '';

@@ -1,0 +1,108 @@
+/* <site-drawer>'s shadow-root styles. Plain CSS, no nesting (not run through PostCSS).
+
+   The page-level rules for the element, written against `site-drawer` in the document, are
+   in styles/global_header.css: they hide the panel's content until this element has
+   upgraded, and place the opener. */
+
+:host {
+  /* The host draws nothing itself. Its opener child takes part in the header's layout as if
+     the host were not there; the panel is in the top layer. */
+  display: contents;
+}
+
+/* The <dialog> is stretched over the whole viewport, transparent, with the visible panel as
+   its child: that is what lets a click on the dialog element itself mean "the backdrop"
+   (see handleDialogClick). The UA gives a modal dialog a margin, border, padding, a
+   Canvas background and max sizes; all of that is cleared here. */
+dialog {
+  box-sizing: border-box;
+  inline-size: 100%;
+  block-size: 100%;
+  max-inline-size: none;
+  max-block-size: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  color: inherit;
+  background: transparent;
+
+  /* Without these the dialog is display:none the instant it closes and the panel never gets
+     to slide back out. */
+  transition:
+    display 0.3s allow-discrete,
+    overlay 0.3s allow-discrete;
+}
+
+dialog::backdrop {
+  background: rgb(0 0 0 / 50%);
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    display 0.3s allow-discrete,
+    overlay 0.3s allow-discrete;
+}
+
+dialog[open]::backdrop {
+  opacity: 1;
+}
+
+@starting-style {
+  dialog[open]::backdrop {
+    opacity: 0;
+  }
+}
+
+.panel {
+  box-sizing: border-box;
+  inline-size: 80%;
+  block-size: 100%;
+  overflow-y: auto;
+
+  /* Was `background: white`, which made the drawer the one surface on the site that
+     ignored the colour scheme. Spectrum's elevated-surface token follows it. */
+  background: var(--swc-background-layer-2-color);
+  color: var(--swc-body-color);
+  padding: var(--swc-spacing-400) var(--swc-spacing-300);
+  translate: -100% 0;
+  transition: translate 0.3s ease;
+}
+
+dialog[open] .panel {
+  translate: 0 0;
+}
+
+@starting-style {
+  dialog[open] .panel {
+    translate: -100% 0;
+  }
+}
+
+/* The panel is at the start edge, so in a right-to-left page it comes from the right. */
+:host(:dir(rtl)) .panel {
+  translate: 100% 0;
+  margin-inline-start: auto;
+}
+
+:host(:dir(rtl)) dialog[open] .panel {
+  translate: 0 0;
+}
+
+@starting-style {
+  :host(:dir(rtl)) dialog[open] .panel {
+    translate: 100% 0;
+  }
+}
+
+.bar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  dialog,
+  dialog::backdrop,
+  .panel {
+    transition: none;
+  }
+}

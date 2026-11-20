@@ -36,8 +36,8 @@
 }
 
 .recommender-errors {
-  background: var(--spectrum-negative-background-color-default, #fee);
-  border: 1px solid var(--spectrum-negative-color-900, #c00);
+  background: var(--swc-negative-background-color-default, #fee);
+  border: 1px solid var(--swc-negative-color-900, #c00);
   border-radius: 4px;
   margin-bottom: 1.5em;
   padding: 1em;
@@ -58,7 +58,7 @@
 
 .advanced-section {
   margin-bottom: 1.5em;
-  border: 1px solid var(--spectrum-gray-300, #ddd);
+  border: 1px solid var(--swc-gray-300, #ddd);
   border-radius: 4px;
   padding: 0.75em;
 }

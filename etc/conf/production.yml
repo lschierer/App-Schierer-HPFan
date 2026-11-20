@@ -3,6 +3,11 @@
 # Stage: localDev, staging, production
 stage: production
 
+# Which design-system class vocabulary the framework's generated HTML uses:
+# 'spectrum-css' (the framework default) or 'swc' (Spectrum Web Components gen2).
+# See WebFramework::UI.
+ui_profile: swc
+
 modules:
   "^WebFramework::Module::AutoIndex": {}
   "^WebFramework::Module::SiteLogo":
@@ -17,7 +22,13 @@ modules:
       EVAL_PERL: 1
 # Server configuration
 server:
-  host: 0.0.0.0
+  # Loopback only, and 127.0.1.1 specifically, not 127.0.0.1: nginx proxies to
+  # `server 127.0.1.1:3001` (deploy/nginx-site.conf) and the instance's /etc/hosts maps
+  # its hostname to 127.0.1.1 (Infrastructure/userdata.ts). Binding 127.0.0.1 would leave
+  # nginx unable to connect. This matches development.yml, which the dev instance already
+  # runs. It was 0.0.0.0; the security group only opens 22/80/443, so it was not reachable
+  # from outside, but nothing needs the app on a public interface.
+  host: 127.0.1.1
   port: 3001
   worker_threads: 4
 

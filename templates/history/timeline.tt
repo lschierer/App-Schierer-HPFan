@@ -1,15 +1,13 @@
 [% WRAPPER layouts/default.tt %]
-<div class="banner spectrum-AlertBanner is-open spectrum-AlertBanner--info">
-  <div class="spectrum-AlertBanner-body">
+<site-callout class="banner" variant="info" role="note">
+  <div class="callout-row">
     <iconify-icon icon="octicon:info-16"></iconify-icon>
-    <div class="spectrum-AlertBanner-content">
-      <p class="spectrum-AlertBanner-text">
-        Note that the tool creating this timeline fills in unknown fields
-        in dates. Dates that have had fields filled in are marked as '(Estimated)'.
-      </p>
-    </div>
+    <p>
+      Note that the tool creating this timeline fills in unknown fields
+      in dates. Dates that have had fields filled in are marked as '(Estimated)'.
+    </p>
   </div>
-</div>
+</site-callout>
 
 <section class="timeline">
   [% IF loading %]
@@ -38,8 +36,8 @@
           [% END %]
           <a
             href="#return-[% key %]"
-            class="spectrum-Link spectrum-Link--quiet spectrum-Link--primary" >
-            <span class="spectrum-Body spectrum-Body--sizeS">
+            class="swc-Link" >
+            <span class="swc-Body swc-Body--sizeS">
               Return to Timeline
               <iconify-icon icon="icon-park-outline:return" class="return" width="none"></iconify-icon>
             </span>

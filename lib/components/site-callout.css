@@ -1,0 +1,93 @@
+/* <site-callout>: an inline aside with a coloured background.
+
+   ONE STYLESHEET, TWO CONTEXTS. This file is imported twice:
+     - by site-callout.ts, as the element's shadow-root styles, where `:host` is the element;
+     - by styles/global.css, into the page, where `site-callout:not(:defined)` is the same
+       element BEFORE its script has run.
+   Every rule names both selectors, so the box is identical before and after the element
+   upgrades and nothing shifts when the script loads. `:host` matches nothing in the page and
+   `site-callout:not(:defined)` matches nothing inside the shadow root, so neither copy
+   interferes with the other. Keep that pairing when adding rules.
+
+   Plain CSS, no nesting: the shadow-root copy is not run through PostCSS. */
+
+:host,
+site-callout:not(:defined) {
+  /* The variant's background. Defaults to `note`.
+
+     COLOURS. Each variant is the 900 step of its Spectrum hue: the lightest step at which
+     white text clears WCAG AA (4.5:1) on every hue. The 800 steps this used to use measure
+     3.95-3.97:1 and fail. Contrast of white on each background:
+       blue-900 4.81, green-900 4.81, orange-900 4.79, red-900 4.81, purple-900 4.80.
+     `note` and `info` are therefore the same blue. Those figures are for the light
+     scheme, which is all this site renders; the dark-scheme values of these tokens are
+     different and would need re-checking before a dark mode. */
+  --_site-callout-bg: var(--swc-blue-900);
+
+  /* flow-root rather than block: the slotted paragraphs carry their own vertical margins,
+     which must stay inside the coloured box and not collapse out through it. */
+  display: flow-root;
+  box-sizing: border-box;
+  margin: 1rem 5rem;
+  padding: 0 1.5rem;
+
+  /* The old banner never got shorter than this, even for a single line of text. */
+  min-block-size: var(--swc-alert-banner-minimum-height);
+  font-size: var(--swc-font-size-100);
+  color: var(--swc-static-white-text-color);
+  background-color: var(--_site-callout-bg);
+
+  /* Links in a callout are white. This used to be cyan-300 on two variants and the default
+     accent blue on the rest; cyan-300 is 3.6:1 on the new backgrounds, and any pale colour
+     that does pass is within about 1.1:1 of the white text, so colour cannot be what marks
+     a link here. The underline below is. Inherited into the slotted links. */
+  --swc-link-text-color-default: var(--swc-static-white-text-color);
+  --swc-link-text-color-hover: var(--swc-static-white-text-color);
+  --swc-link-text-color-down: var(--swc-static-white-text-color);
+  --swc-link-text-color-focus: var(--swc-static-white-text-color);
+  --swc-link-focus-indicator-color: var(--swc-static-white-focus-indicator-color);
+}
+
+:host([variant="info"]),
+site-callout[variant="info"]:not(:defined) {
+  --_site-callout-bg: var(--swc-blue-900);
+}
+
+:host([variant="tip"]),
+site-callout[variant="tip"]:not(:defined) {
+  --_site-callout-bg: var(--swc-green-900);
+}
+
+:host([variant="warning"]),
+site-callout[variant="warning"]:not(:defined) {
+  --_site-callout-bg: var(--swc-orange-900);
+}
+
+:host([variant="caution"]),
+site-callout[variant="caution"]:not(:defined) {
+  --_site-callout-bg: var(--swc-red-900);
+}
+
+:host([variant="important"]),
+site-callout[variant="important"]:not(:defined) {
+  --_site-callout-bg: var(--swc-purple-900);
+}
+
+/* LINKS INSIDE A CALLOUT: the rules below style the slotted light-DOM links, so they only do
+   anything in the page; inside the shadow root they match nothing.
+
+   Underline always (WCAG 1.4.1: colour alone must not be the only cue, and white on white
+   text has no colour difference). gen2's quiet link is `text-decoration: none` at (0,2,0),
+   so the class is repeated to out-rank it. */
+site-callout a.swc-Link.swc-Link {
+  text-decoration: underline;
+}
+
+/* A --secondary link assigns its own (dark grey) colours on the anchor, which an inherited
+   value cannot override, and dark grey is 3.7:1 on purple and blue. */
+site-callout a.swc-Link--secondary {
+  --swc-link-text-color-default: var(--swc-static-white-text-color);
+  --swc-link-text-color-hover: var(--swc-static-white-text-color);
+  --swc-link-text-color-down: var(--swc-static-white-text-color);
+  --swc-link-text-color-focus: var(--swc-static-white-text-color);
+}

@@ -1,9 +1,14 @@
 .header {
   display: grid;
+
+  /* One row exactly as tall as the header (7vh). Without this the row is auto-sized to
+     its tallest item, which on a short window is taller than the header itself, and
+     align-items: center then centres the nav below the blue band. */
+  grid-template-rows: minmax(0, 1fr);
   align-items: center;
   padding: 0 1rem;
   gap: 1rem;
-  background-color: var(--mod-heading-font-color);
+  background-color: var(--swc-heading-font-color);
   color: var(--text-2);
 }
 
@@ -26,13 +31,17 @@ div.title-container {
   max-height: var(--header-height);
 }
 
-span.site-title.spectrum-Heading {
-  background-color: var(--mod-heading-font-color);
+span.site-title.swc-Heading {
+  background-color: var(--swc-heading-font-color);
   color: var(--text-2);
   box-sizing: border-box;
 
-  --mod-heading-margin-start: 0px;
-  --mod-heading-margin-end: 0px;
+  /* The header is 7vh tall (about 47px in a 670px window), so the title's line box has to
+     fit inside it: line-height is 1.1 below, and the xl/xxl sizes are capped at three
+     quarters of the header height. */
+  --site-title-max-size: calc(var(--header-height) * 0.75);
+  --site-heading-margin-start: 0px;
+  --site-heading-margin-end: 0px;
 }
 
 @media (width <768px) {
@@ -51,9 +60,15 @@ span.site-title.spectrum-Heading {
     white-space: nowrap;
   }
 
-  span.site-title.spectrum-Heading {
-    font-size: var(--spectrum-heading-size-xl);
-    line-height: var(--spectrum-heading-line-height);
+  span.site-title.swc-Heading {
+    /* 6vw: on a phone the title's column is only ~45% of the width, and at the full xl
+       size "Luke's HP Site" (about 244px) overflowed it on both sides. */
+    font-size: min(
+      var(--swc-heading-size-xl),
+      var(--site-title-max-size),
+      6vw
+    );
+    line-height: 1.1;
     text-align: center;
   }
 }
@@ -74,9 +89,9 @@ span.site-title.spectrum-Heading {
     white-space: normal; /* Change from break-spaces */
   }
 
-  span.site-title.spectrum-Heading {
-    font-size: var(--spectrum-heading-size-m);
-    line-height: var(--spectrum-heading-line-height);
+  span.site-title.swc-Heading {
+    font-size: var(--swc-heading-size-m);
+    line-height: 1.1;
     text-align: center; /* Change from right to center for better wrapping */
   }
 }
@@ -108,9 +123,9 @@ span.site-title.spectrum-Heading {
     white-space: nowrap;
   }
 
-  span.site-title.spectrum-Heading {
-    font-size: var(--spectrum-heading-size-l);
-    line-height: var(--spectrum-heading-line-height);
+  span.site-title.swc-Heading {
+    font-size: var(--swc-heading-size-l);
+    line-height: 1.1;
     text-align: center;
   }
 }
@@ -131,9 +146,9 @@ span.site-title.spectrum-Heading {
     white-space: nowrap;
   }
 
-  span.site-title.spectrum-Heading {
-    font-size: var(--spectrum-heading-size-l);
-    line-height: var(--spectrum-heading-line-height);
+  span.site-title.swc-Heading {
+    font-size: var(--swc-heading-size-l);
+    line-height: 1.1;
     text-align: center;
   }
 }
@@ -154,9 +169,9 @@ span.site-title.spectrum-Heading {
     white-space: nowrap;
   }
 
-  span.site-title.spectrum-Heading {
-    font-size: var(--spectrum-heading-size-l);
-    line-height: var(--spectrum-heading-line-height);
+  span.site-title.swc-Heading {
+    font-size: var(--swc-heading-size-l);
+    line-height: 1.1;
     text-align: center;
   }
 }
@@ -166,9 +181,9 @@ span.site-title.spectrum-Heading {
     grid-template-columns: 2fr 5fr;
   }
 
-  span.site-title.spectrum-Heading {
-    font-size: var(--spectrum-heading-size-xl);
-    line-height: var(--spectrum-heading-line-height);
+  span.site-title.swc-Heading {
+    font-size: min(var(--swc-heading-size-xl), var(--site-title-max-size));
+    line-height: 1.1;
   }
 }
 
@@ -177,9 +192,9 @@ span.site-title.spectrum-Heading {
     grid-template-columns: 1fr 6fr;
   }
 
-  span.site-title.spectrum-Heading {
-    font-size: var(--spectrum-heading-size-xxl);
-    line-height: var(--spectrum-heading-line-height);
+  span.site-title.swc-Heading {
+    font-size: min(var(--swc-heading-size-xxl), var(--site-title-max-size));
+    line-height: 1.1;
   }
 }
 
@@ -200,14 +215,17 @@ svg.site-logo {
 }
 
 a.site-title {
-  --mod-link-text-color: var(--text-2);
-  --mod-link-text-color-secondary-hover: var(--text-2);
-  --mod-link-text-color-secondary-focus: var(--text-2);
+  /* On the anchor itself: gen2's .swc-Link--secondary sets these four on the element, so a
+     value inherited from an ancestor would lose. This rule's higher specificity wins. The
+     pressed state is left to --secondary, as it was before. */
+  --swc-link-text-color-default: var(--text-2);
+  --swc-link-text-color-hover: var(--text-2);
+  --swc-link-text-color-focus: var(--text-2);
 }
 
 .social {
   --social-icon-size: var(--size-7);
-  --mod-heading-font-color: var(--text-2);
+  --swc-heading-font-color: var(--text-2);
 }
 
 iconify-icon.social-icons.nav-item {
@@ -229,7 +247,7 @@ iconify-icon#github {
     gap: 1rem;
     align-items: center;
 
-    --mod-heading-font-color: var(--text-2);
+    --swc-heading-font-color: var(--text-2);
   }
 
   .social {
@@ -238,7 +256,9 @@ iconify-icon#github {
     align-items: center;
     display: grid;
     grid-auto-columns: 1fr;
-    margin: 2em;
+
+    /* Inline only: a vertical margin made the header's row taller than the header. */
+    margin: 0 2em;
   }
 
   .social-icon {
@@ -246,11 +266,6 @@ iconify-icon#github {
   }
 
   .mobile-menu-button {
-    display: none;
-  }
-
-  .mobile-menu,
-  .mobile-menu-backdrop {
     display: none;
   }
 }
@@ -269,6 +284,18 @@ iconify-icon#github {
 
   .mobile-menu-button {
     grid-area: menu-button;
+
+    /* A grid item stretches to its cell, and the cell is a 1fr column; an icon button
+       should be as wide as its icon. */
+    justify-self: start;
+
+    /* The header is dark; the button's default icon colour is dark and vanished into it
+       (the previous hamburger was an unstyled grey UA button, which did not). */
+    --swc-action-button-content-color-default: var(--text-2);
+    --swc-action-button-content-color-hover: var(--text-2);
+    --swc-action-button-content-color-focus: var(--text-2);
+    --swc-action-button-content-color-down: var(--text-2);
+    --swc-action-button-focus-indicator-color: var(--text-2);
   }
 
   .social {
@@ -281,49 +308,21 @@ iconify-icon#github {
   }
 }
 
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 80%;
-  height: 100vh;
+/* The drawer is <site-drawer> (lib/components/site-drawer.ts); its panel, backdrop and close
+   button are styled in the element's own stylesheet. What is here is what the page has to
+   say about it from outside.
 
-  /* Was `background: white`, which made the drawer the one surface on the site that
-     ignored the colour scheme. This is Spectrum's elevated-surface token, so the drawer
-     follows .spectrum--light / .spectrum--dark like everything else. */
-  background: var(--spectrum-background-layer-2-color);
-  color: var(--spectrum-body-color);
-  z-index: 1001;
-  transition: left 0.3s ease;
-  overflow-y: auto;
-  padding: var(--spectrum-spacing-400) var(--spectrum-spacing-300);
-  box-sizing: border-box;
+   Until the element has upgraded it is an unknown inline element, and its panel content (the
+   section list, the tree socket) would print into the header's grid. Hide everything but the
+   opener until then. */
+site-drawer:not(:defined) > :not([slot="toggle"]) {
+  display: none;
 }
 
-.mobile-menu.active {
-  left: 0;
-}
-
-/* Full-viewport backdrop, sitting under the drawer rather than beside it. The previous
-   ::before covered only the 20% strip the drawer did not, which both looked like a bug
-   and left the rest of the page apparently interactive while the drawer was open. */
-.mobile-menu-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgb(0 0 0 / 50%);
-  z-index: 1000;
-}
-
-.mobile-menu-close {
-  display: block;
-  margin-inline-start: auto;
-  border: none;
-  background: none;
-  color: inherit;
-  font-size: var(--spectrum-heading-size-l);
-  line-height: 1;
-  padding: var(--spectrum-spacing-100);
-  cursor: pointer;
+/* Likewise an un-upgraded <swc-icon> shows its SVG at the browser default of 300x150. */
+swc-icon:not(:defined) > svg {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
 }
 
 .mobile-nav-sections {
@@ -331,18 +330,12 @@ iconify-icon#github {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: var(--spectrum-spacing-200);
+  gap: var(--swc-spacing-200);
 }
 
-/* The drawer gives the tree the whole width; the sidebar's 250px cap does not apply.
-   Scoped to the socket, so the cap still holds while the same element sits in the
-   sidebar. */
-.mobile-nav-tree .spectrum-TreeView {
-  max-inline-size: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .mobile-menu {
-    transition: none;
-  }
+/* No tree has been moved in on pages without a sidebar, so the section, with its divider,
+   would be an orphaned separator. The socket is kept literally empty to make this work
+   (see partials/mobile_navigation.tt). */
+.mobile-nav-tree-section:has(.mobile-nav-tree:empty) {
+  display: none;
 }

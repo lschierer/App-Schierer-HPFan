@@ -1,164 +1,87 @@
 [% WRAPPER layouts/default.tt %]
 [% IF is_unknown -%]
-<div class="spectrum-Card">
-  <div class="spectrum-Card-body">
-    <div class="spectrum-Card-header">
-      <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeL">
-        Genealogical Gaps
-      </div>
-    </div>
-    <div class="spectrum-Card-content">
-      <p class="spectrum-Body spectrum-Body--sizeM">
-        This page lists [% member_count %] people with unknown or missing surname information.
-        These individuals need additional research to complete their genealogical records.
-      </p>
-    </div>
-  </div>
-</div>
+<swc-card class="family-summary">
+  <span slot="title">Genealogical Gaps</span>
+  <span slot="description">
+    This page lists [% member_count %] people with unknown or missing surname information.
+    These individuals need additional research to complete their genealogical records.
+  </span>
+</swc-card>
 [% ELSE -%]
-<div class="spectrum-Card">
-  <div class="spectrum-Card-body">
-    <div class="spectrum-Card-header">
-      <div class="spectrum-Card-title spectrum-Heading spectrum-Heading--sizeL">
-        [% surname %] Family
-      </div>
-    </div>
-    <div class="spectrum-Card-content">
-      <p class="spectrum-Body spectrum-Body--sizeM">
-        [% member_count %] [% member_count == 1 ? 'person' : 'people' %] with the surname [% surname %].
-      </p>
-    </div>
-  </div>
-</div>
+<swc-card class="family-summary">
+  <span slot="title">[% surname %] Family</span>
+  <span slot="description">
+    [% member_count %] [% member_count == 1 ? 'person' : 'people' %] with the surname [% surname %].
+  </span>
+</swc-card>
 [% END -%]
 
-<h2 class="spectrum-Heading spectrum-Heading--serif spectrum-Heading--heavy spectrum-Heading--sizeXL">Family Members</h2>
+<h2 class="swc-Heading swc-Heading--serif swc-Heading--heavy swc-Heading--sizeXL">Family Members</h2>
 
+[%# The family tree: the same disclosure-tree markup as the sidebar navigation (see
+    styles/navigation.css and lib/components/site-tree.ts), with a gender icon and the life
+    dates on each row. Everyone starts expanded.
+
+    `path` is what makes the ids unique: a person can appear more than once in the tree
+    (as a descendant on each side of a marriage), so an id from the person would repeat. -%]
 [% BLOCK render_person_node -%]
-  <li class="spectrum-TreeView-item [% children.size > 0 ? 'is-open' : '' %]">
-    [% IF person.link -%]
-      <a href="[% person.link %]" class="spectrum-TreeView-itemLink">
-        [% IF children.size > 0 -%]
-          <iconify-icon icon="spectrum:chevron-down" 
-                        class="spectrum-Icon spectrum-Icon--sizeS spectrum-TreeView-itemIndicator tree-toggle"
-                        onclick="toggleTreeNode(event)"></iconify-icon>
+  [% has_children = children.size > 0 -%]
+  [% gender_class = person.gender == 'M' ? 'is-male' : person.gender == 'F' ? 'is-female' : '' -%]
+  [% icon_class = person.gender == 'M' ? 'color-male' : person.gender == 'F' ? 'color-female' : 'icon1' -%]
+  [% icon_name = person.gender == 'M' ? 'ion-male' : person.gender == 'F' ? 'ion-female' : 'tdesign:user-unknown' -%]
+  <li>
+    <div class="site-tree-row">
+      [% IF has_children -%]
+        <button type="button" class="site-tree-toggle" aria-expanded="true"
+                aria-controls="family-[% path %]-children"
+                aria-label="Toggle descendants of [% person.display_name | html %]"></button>
+      [% ELSE -%]
+        <span class="site-tree-toggle site-tree-leaf" aria-hidden="true"></span>
+      [% END -%]
+      <span class="family-person [% gender_class %]">
+        <iconify-icon icon="[% icon_name %]" class="[% icon_class %]" width="1em" height="1em"></iconify-icon>
+        [% IF person.link -%]
+          <a href="[% person.link %]" class="family-person-link">
+        [% ELSE -%]
+          <span class="family-person-link">
         [% END -%]
-        [% iconClass = person.gender == 'M' ? 'color-male' : person.gender == 'F' ? 'color-female' : 'icon1' -%]
-        [% iconName = person.gender == 'M' ? 'ion-male' : person.gender == 'F' ? 'ion-female' : 'tdesign:user-unknown' -%]
-        <iconify-icon icon="[% iconName %]" class="[% iconClass %]" width="1em" height="1em"></iconify-icon>
-        <span class="spectrum-TreeView-itemLabel">
           <span class="person-name">[% person.display_name %]</span>
           [% IF person.birth_date || person.death_date -%]
             <span class="person-dates">
               ( [% person.birth_date || 'Unknown' %] — [% person.death_date || 'Unknown' %] )
             </span>
           [% END -%]
-        </span>
-      </a>
-    [% ELSE -%]
-      <span class="spectrum-TreeView-itemLink">
-        [% IF children.size > 0 -%]
-          <iconify-icon icon="spectrum:chevron-down" 
-                        class="spectrum-Icon spectrum-Icon--sizeS spectrum-TreeView-itemIndicator tree-toggle"
-                        onclick="toggleTreeNode(event)"></iconify-icon>
-        [% END -%]
-        <iconify-icon icon="tdesign:user-unknown" class="icon1" width="1em" height="1em"></iconify-icon>
-        <span class="spectrum-TreeView-itemLabel">
-          <span class="person-name">[% person.display_name %]</span>
-          [% IF person.birth_date || person.death_date -%]
-            <span class="person-dates">
-              ( [% person.birth_date || 'Unknown' %] — [% person.death_date || 'Unknown' %] )
-            </span>
-          [% END -%]
-        </span>
+        [% IF person.link %]</a>[% ELSE %]</span>[% END %]
       </span>
-    [% END -%]
-
-    [% IF children.size > 0 -%]
-      <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
+    </div>
+    [% IF has_children -%]
+      <ul class="site-tree-list" id="family-[% path %]-children">
         [% FOREACH child IN children -%]
-          [% INCLUDE render_person_node person=child.person children=child.children -%]
+          [% INCLUDE render_person_node person=child.person children=child.children path="$path-$loop.index" -%]
         [% END -%]
       </ul>
     [% END -%]
   </li>
 [% END -%]
 
-<div class="family-tree-container">
-  [% IF family_tree.size > 0 -%]
-    <ul class="spectrum-TreeView spectrum-TreeView--sizeM">
-      [% FOREACH root IN family_tree -%]
-        [% INCLUDE render_person_node person=root.person children=root.children -%]
-      [% END -%]
-    </ul>
-  [% ELSE -%]
-    <p class="spectrum-Body spectrum-Body--sizeM">No family members found.</p>
-  [% END -%]
-</div>
+<site-tree>
+  <div class="family-tree-container">
+    [% IF family_tree.size > 0 -%]
+      <ul class="site-tree-list">
+        [% FOREACH root IN family_tree -%]
+          [% INCLUDE render_person_node person=root.person children=root.children path="r$loop.index" -%]
+        [% END -%]
+      </ul>
+    [% ELSE -%]
+      <p class="swc-Body swc-Body--sizeM">No family members found.</p>
+    [% END -%]
+  </div>
+</site-tree>
 
 [% IF static_content -%]
-  <hr role="separator" class="spectrum-Divider spectrum-Divider--sizeM" />
-  <h2 class="spectrum-Heading spectrum-Heading--serif spectrum-Heading--heavy spectrum-Heading--sizeXL">Additional Information</h2>
+  <swc-divider size="m"></swc-divider>
+  <h2 class="swc-Heading swc-Heading--serif swc-Heading--heavy swc-Heading--sizeXL">Additional Information</h2>
   [% static_content %]
 [% END -%]
 
-<style>
-.family-tree-container {
-  margin: 2em 0;
-}
-
-/* Gender-specific styling for family tree */
-.spectrum-TreeView-itemLabel .person-name {
-  font-weight: 500;
-}
-
-.spectrum-TreeView-itemLabel .person-dates {
-  font-size: 0.9em;
-  color: var(--spectrum-gray-700);
-  font-style: italic;
-  margin-left: 0.5em;
-}
-
-/* Gender colors for icons and names */
-.spectrum-TreeView-itemLink iconify-icon.color-male + .spectrum-TreeView-itemLabel .person-name {
-  color: var(--color-male);
-}
-
-.spectrum-TreeView-itemLink iconify-icon.color-female + .spectrum-TreeView-itemLabel .person-name {
-  color: var(--color-female);
-}
-
-/* Ensure proper spacing */
-.spectrum-TreeView-itemLink {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  text-decoration: none;
-}
-
-.spectrum-TreeView-itemLink:hover {
-  text-decoration: underline;
-}
-</style>
-
-<script>
-function toggleTreeNode(event) {
-  event.preventDefault();
-  event.stopPropagation();
-  
-  const indicator = event.target;
-  const item = indicator.closest('.spectrum-TreeView-item');
-  const childList = item.querySelector(':scope > .spectrum-TreeView');
-  
-  if (childList) {
-    if (item.classList.contains('is-open')) {
-      item.classList.remove('is-open');
-      indicator.setAttribute('icon', 'spectrum:chevron-right');
-    } else {
-      item.classList.add('is-open');
-      indicator.setAttribute('icon', 'spectrum:chevron-down');
-    }
-  }
-}
-</script>
 [% END %]

@@ -7,9 +7,9 @@
   [% IF items.size > 0 %]
     <dl class="bookmark-items">
       [% FOREACH item IN items %]
-        <dt class="spectrum-Heading spectrum-Heading--sizeM">
+        <dt class="swc-Heading swc-Heading--sizeM">
           [% IF item.title.link %]
-            <a class="spectrum-Link spectrum-Link--primary spectrum-Link--quiet" href="[% item.title.link %]">
+            <a class="swc-Link swc-Link--quiet swc-Link--standalone" href="[% item.title.link %]">
           [% END %]
             <cite>
               [% item.title.name %]
@@ -19,11 +19,11 @@
           [% END %]
         </dt>
         <dd>
-          <span class="spectrum-Detail spectrum-Detail--sizeM spectrum-Detail-strong">Author: </span>
+          <span class="swc-Detail swc-Detail--sizeM">Author: </span>
           [% IF item.author.link %]
-            <a class="spectrum-Link spectrum-Link--primary spectrum-Link--quiet" href="[% item.author.link %]">
+            <a class="swc-Link" href="[% item.author.link %]">
           [% END %]
-            <span class="spectrum-Body spectrum-Body--serif spectrum-Body--sizeXS">
+            <span class="swc-Body swc-Body--serif swc-Body--sizeXS">
               [% item.author.name %]
             </span>
           [% IF item.author.link %]
@@ -37,20 +37,20 @@
               updated      => 'Updated',
               completed    => 'Completed'
           } %]
-          <span class="spectrum-Detail spectrum-Detail--sizeM spectrum-Detail-strong">Date(s): </span><br/>
+          <span class="swc-Detail swc-Detail--sizeM">Date(s): </span><br/>
           <ul class="dateList">
             [% FOREACH date_type IN ['series_start', 'published', 'updated', 'completed'] %]
               [% IF item.dates.$date_type %]
-                <li class="spectrum-Detail spectrum-Detail--sizeM">
-                  <span class="spectrum-Detail-strong">[% date_labels.$date_type %]:</span>
-                  <span class="spectrum-Detail--light">[% item.dates.$date_type || 'N/A' %]</span>
+                <li class="swc-Detail swc-Detail--sizeM">
+                  <strong>[% date_labels.$date_type %]:</strong>
+                  <span>[% item.dates.$date_type || 'N/A' %]</span>
                 </li>
               [% END %]
             [% END %]
           </ul>
         </dd>
         <dd>
-          <span class="spectrum-Detail spectrum-Detail--sizeM spectrum-Detail-strong">Comments: </span>
+          <span class="swc-Detail swc-Detail--sizeM">Comments: </span>
           [% item.comments_html %]
         </dd>
       [% END %]

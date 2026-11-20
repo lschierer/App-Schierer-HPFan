@@ -1,13 +1,12 @@
 [% #cspell: disable %]
 <!DOCTYPE html>
-<html lang="en" class="spectrum spectrum--medium spectrum--light light-theme light">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
     <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/spectrum-overrides.css" />
 
     [% IF css_files -%]
       [% FOREACH css_file IN css_files -%]
@@ -18,23 +17,28 @@
     <title>[% title || "Luke\'s HP Site" %]</title>
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/iconify-icon@3.0.0/dist/iconify-icon.min.js"></script>
+    [%# Registers the gen2 and site custom elements; see lib/swc.ts. -%]
+    <script type="module" src="/js/lib/swc.js"></script>
     <!-- Google tag (gtag.js) -->
     
 
   </head>
   [% sidebar = sidebar.defined ? sidebar : 1 -%]
-  [% classes = sidebar ? 'spectrum spectrum--medium spectrum--light spectrum-Typography light-theme light with-sidebar' : 'spectrum spectrum--medium spectrum--light spectrum-Typography light-theme light' -%]
-  <body class="[% classes %]">
+  <body[% IF sidebar %] class="with-sidebar"[% END %]>
     [% INCLUDE partials/global_header.tt %]
     [% IF sidebar -%]
       <div class="title-section">
-        <h1 class="spectrum-Heading spectrum-Heading--sizeXXL">
-          [% title %]
+        <h1 class="swc-Heading swc-Heading--sizeXXL">
+          [% heading || title %]
         </h1>
       </div>
-      <div class="spectrum-SplitView spectrum-SplitView--horizontal">
-        <div id="nav" class="spectrum-SplitView-pane">
-          <div class="spectrum-Site-sideBar">
+      [%# The start pane holds the contextual tree, the end pane the page. <site-tree> moves
+          the tree into the mobile drawer below 768px (partials/mobile_navigation.tt);
+          <site-split-view> makes the splitter draggable. Both are plain boxes until
+          /js/lib/swc.js has run. -%]
+      <site-split-view storage-key="pagi:nav-width" label="Resize navigation sidebar">
+        <div id="nav" slot="start">
+          <site-tree mobile-socket="mobile-nav-tree">
             <nav class="navigation-tree">
               [% IF nav_html -%]
                 [% nav_html %]
@@ -42,10 +46,10 @@
                 <!-- No navigation configured -->
               [% END -%]
             </nav>
-          </div>
+          </site-tree>
         </div>
-        <div tabindex="0" class="spectrum-SplitView-splitter"></div>
-        <div id="main" class="spectrum-SplitView-pane">
+        <div slot="splitter" aria-hidden="true"></div>
+        <div id="main" slot="end">
     [% END -%]
 
     <main class="[% sidebar ? 'with-sidebar' : 'no-sidebar' %]">
@@ -53,22 +57,14 @@
     </main>
 
     [% IF sidebar -%]
-        </div> <!-- close the Right spectrum-SplitView-pane -->
-      </div> <!-- close the spectrum-SplitView spectrum-SplitView--horizontal -->
+        </div> <!-- close #main -->
+      </site-split-view>
     [% END -%]
 
     [% IF js_files -%]
       [% FOREACH js_file IN js_files -%]
         <script type="module" src="[% js_file %]"></script>
       [% END -%]
-    [% END -%]
-    [%# Unconditional: the mobile drawer carries a copy of the tree on every page, so
-        gating this on `sidebar` left the drawer's chevrons dead on any page that renders
-        a tree without a sidebar. The script no-ops when no .navigation-tree exists. -%]
-    <script type="module" src="/js/lib/navigation.js"></script>
-    [% IF sidebar -%]
-      [%# Only where a SplitView is actually rendered; no-ops otherwise anyway. -%]
-      <script type="module" src="/js/lib/splitview.js"></script>
     [% END -%]
     [% INCLUDE partials/global_footer.tt %]
   </body>

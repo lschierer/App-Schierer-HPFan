@@ -49,6 +49,15 @@ async function main() {
       },
     },
     outExtension: { ".js": ".js" },
+    // @adobe/spectrum-wc-core guards its development warnings with a bare
+    // `process.env.NODE_ENV`, and a browser has no `process`: without this the module throws
+    // on load and no gen2 element ever registers. 'production' also lets esbuild drop those
+    // warning blocks. Set NODE_ENV=development to keep them while debugging.
+    define: {
+      "process.env.NODE_ENV": JSON.stringify(
+        process.env.NODE_ENV ?? "production",
+      ),
+    },
     plugins: [litCssPlugin()],
   });
 

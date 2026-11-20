@@ -1,24 +1,34 @@
 /* cspell: disable */
 
-/* the props */
-@import url("generated/spectrum-tokens.css");
-@import url("@spectrum-css/alertbanner");
-@import url("@spectrum-css/typography");
-@import url("@spectrum-css/icon");
-@import url("@spectrum-css/link");
-@import url("@spectrum-css/treeview");
-@import url("@spectrum-css/splitview");
-@import url("@spectrum-css/divider");
+/* Spectrum Web Components (gen2) token layer. The dist/ path is explicit because
+   postcss-import resolves with `resolve`, which ignores the package's `exports` map. */
+@import url("swc/theme.css");
+@import url("@adobe/spectrum-wc/dist/tokens.css");
+
+/* Gen2 text styling, replacing @spectrum-css/typography, /link and /divider (the divider is
+   now an element; see lib/swc.ts). text.css restores the parts of the old behaviour that
+   gen2 dropped, and must come after the two gen2 sheets. */
+@import url("@adobe/spectrum-wc/dist/typography.css");
+@import url("@adobe/spectrum-wc/dist/link.css");
+@import url("swc/text.css");
+
+/* Components this site builds itself because gen2 has no equivalent. table.css is plain
+   CSS for tables; site-callout.css and site-split-view.css are the elements' own
+   stylesheets, imported here too so the boxes look right before the elements' scripts have
+   run (see those files). The tree (navigation.css) is per-page, loaded by the controllers. */
+@import url("swc/table.css");
+@import url("../lib/components/site-callout.css");
+@import url("../lib/components/site-split-view.css");
 
 :root {
-  --brand: var(--spectrum-cyan-800);
-  --text-1: var(--spectrum-cyan-1200);
-  --text-2: var(--spectrum-cyan-400);
-  --text-3: var(--spectrum-cyan-800);
-  --surface-1: var(--spectrum-gray-300);
-  --surface-2: var(--spectrum-gray-500);
-  --surface-3: var(--spectrum-gray-700);
-  --surface-4: var(--spectrum-gray-900);
+  --brand: var(--swc-cyan-800);
+  --text-1: var(--swc-cyan-1200);
+  --text-2: var(--swc-cyan-400);
+  --text-3: var(--swc-cyan-800);
+  --surface-1: var(--swc-gray-300);
+  --surface-2: var(--swc-gray-500);
+  --surface-3: var(--swc-gray-700);
+  --surface-4: var(--swc-gray-900);
   --github-green: #08872b;
 
   /* Spectrum normally uses fixed pixel based sizing.  This lets me use relative sizing */
@@ -41,69 +51,41 @@
   --size-13: 15rem;
   --size-14: 20rem;
   --size-15: 30rem;
-  --header-height: 7vh;
+
+  /* 7vh, but never less than 3.5rem (56px). The header and the page-title row hold text
+     of a fixed size, so a purely vh height let them shrink below their content whenever
+     the window got shorter (a resize, or docking the dev tools at the bottom). */
+  --header-height: max(7vh, 3.5rem);
   --footer-height: max(2vh, 2em);
   --main-height: calc(
     100vh - calc(calc(2 * var(--header-height)) + var(--footer-height))
   );
   --logo-vertical-margin: 2px;
 
+  /* gen2 link and Detail colours, one or more steps darker than its defaults, so text
+     meets WCAG AA (4.5:1) on this page's background (rgb 218,218,218):
+       links      blue-900 3.44:1 -> blue-1100 5.69:1 (hover and press blue-1200 7.18:1)
+       Detail     gray-600 3.49:1 -> gray-700  5.77:1
+     These are read from :root by every .swc-Link and .swc-Detail. Anything on a different
+     background sets its own: the footer and table header below, the callouts, the header. */
+  --swc-link-text-color-default: var(--swc-blue-1100);
+  --swc-link-text-color-hover: var(--swc-blue-1200);
+  --swc-link-text-color-down: var(--swc-blue-1200);
+  --swc-link-text-color-focus: var(--swc-blue-1200);
+  --swc-detail-font-color: var(--swc-gray-700);
+
+  /* The focus ring was blue-800, 2.8:1 on this background (WCAG 1.4.11 wants 3:1). */
+  --swc-link-focus-indicator-color: var(--swc-blue-1100);
+
   /* customize the spectrum-css tokens */
 
    --mod-button-background-color-default: var(--text-1);
    --mod-button-content-color-default: var(--text-3);
-  --mod-divider-background-color: var(--text-1);
-  --mod-body-font-color: var(--text-1);
-  --mod-splitview-content-color: var(--text-1);
-  --mod-heading-font-color: var(--text-1);
-  --mod-splitview-background-color: var(--surface-1);
-  --mod-table-header-background-color-scrollable: var(--text-1);
-  --mod-table-header-background-color: var(--text-1); 
-  /* stylelint-disable-next-line custom-property-pattern */
-  --mod-table-header-background-color--quiet: var(--text-1);
-  --mod-table-header-text-color: var(--text-2);
-  /* stylelint-disable-next-line custom-property-pattern */
-  --mod-table-row-background-color--quiet: var(--surface-1);
-  --mod-table-row-background-color-hover: var(--surface-3);
-  --mod-table-row-background-color: var(--surface-1);
-  --mod-table-row-text-color: var(--text-1);
+  --swc-divider-background-color: var(--text-1);
+  --swc-body-font-color: var(--text-1);
+  --swc-heading-font-color: var(--text-1);
   --mod-button-border-color-default: var(--surface-2);
-  --mod-treeview-heading-color: var(--text-1);
-  --mod-treeview-item-text-color: var(--text-1);
-  --mod-treeview-item-text-color-focus: var(--text-1);
-  --mod-treeview-item-text-color-hover: var(--text-1);
-  --mod-treeview-item-text-color-selected: var(--text-1);
 }
-
-div.spectrum-AlertBanner {
-  padding: 0 1.5rem;
-  margin: 1rem 5rem;
-}
-
-div.spectrum-AlertBanner.spectrum-AlertBanner--caution {
-  background-color: var(--spectrum-red-800);
-}
-
-div.spectrum-AlertBanner.spectrum-AlertBanner--warning {
-  background-color: var(--spectrum-orange-800);
-}
-
-div.spectrum-AlertBanner.spectrum-AlertBanner--important {
-  background-color: var(--spectrum-purple-800);
-
-  --mod-link-text-color: var(--spectrum-cyan-300);
-}
-
-div.spectrum-AlertBanner.spectrum-AlertBanner--tip {
-  background-color: var(--spectrum-green-800);
-}
-
-div.spectrum-AlertBanner.spectrum-AlertBanner--note {
-  background-color: var(--spectrum-blue-800);
-
-  --mod-link-text-color: var(--spectrum-cyan-300);
-}
-
 
 html {
   width: 100vw;
@@ -117,7 +99,7 @@ body {
   overflow: hidden;
   margin: 0;
   color: var(--text-1);
-  background-color: var(--spectrum-background-base-color);
+  background-color: var(--surface-1);
   display: grid;
 
   /* This was `grid-template-columns: 100vh` - a viewport HEIGHT used as a width. The
@@ -167,13 +149,21 @@ div.title-section {
   grid-row: 2/3;
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   box-sizing: border-box;
 
+  /* The h1 is sizeXXL (45px; 58px tall at the default line-height), taller than this
+     row on most windows, and the content row below painted over the overflow. Cap it,
+     as the site title in the header is, at three quarters of the row's height. */
   & h1 {
-    margin: clamp(0.25vh, 1vh, var(--size-5));
+    margin: 0 clamp(0.25vh, 1vh, var(--size-5));
     box-sizing: border-box;
     max-height: 100%;
+    font-size: min(
+      var(--swc-heading-size-xxl),
+      calc(var(--header-height) * 0.75)
+    );
+    line-height: 1.1;
   }
 }
 
@@ -183,10 +173,10 @@ footer {
   width: 100vw;
 }
 
-div.spectrum-SplitView.spectrum-SplitView--horizontal {
-  box-sizing: border-box;
+/* The sidebar/main pair. <site-split-view> (lib/components/site-split-view.ts) lays out
+   its own children as a flex row; see site-split-view.css for the splitter. */
+site-split-view {
   grid-row-end: span 1;
-  flex-shrink: 1;
   height: var(--main-height);
   width: 100vw;
 }
@@ -219,15 +209,14 @@ div#main {
 div#nav {
   grid-area: content;
 
-  /* Resizable by dragging the SplitView splitter; lib/splitview.ts sets --nav-width on
-     <html> and persists it. The fallback is the width this used to be fixed at, so with
-     JS off or before first drag nothing changes.
+  /* Resizable by dragging the splitter; <site-split-view> publishes the chosen width as
+     --site-split-start on itself and persists it. The fallback is the width this used to be
+     fixed at, so with JS off or before the first drag nothing changes.
 
-     inline-size rather than max-width, with flex: 0 0 auto, because the pane is a flex
-     item: as a max-width it was only a ceiling on a 100vw basis, which cannot be driven
-     upward by a custom property. */
+     inline-size, with flex: 0 0 auto, because the pane is a flex item. */
   flex: 0 0 auto;
-  inline-size: var(--nav-width, max(250px, 20vw));
+  inline-size: var(--site-split-start, max(250px, 20vw));
+  box-sizing: border-box;
   max-height: var(--main-height);
   height: min-content;
   overflow-y: auto;
@@ -235,46 +224,20 @@ div#nav {
   margin: 0;
 }
 
-/* The splitter is the drag handle. It carried tabindex="0" in the templates but no
-   behaviour at all, so it was focusable and inert; the cursor now advertises what
-   lib/splitview.ts makes it do. */
-div.spectrum-SplitView-splitter {
-  flex: 0 0 auto;
-  cursor: col-resize;
-  touch-action: none;
-}
-
-/* Widen the GRAB AREA without widening the line.
-   --spectrum-splitview-handle-width is border-width-200, i.e. 2px, so the visible splitter
-   is a 2px pointer target - far under the 24px WCAG 2.5.8 asks for, and the reason the
-   drag point was so hard to land on. This transparent pseudo-element extends the hit
-   testing to 24px while the rendered line stays 2px. It does overlay ~11px of each
-   neighbouring pane, but that strip is the tree's right margin on one side and main's
-   1rem padding on the other, so nothing clickable is covered. */
-div.spectrum-SplitView-splitter::after {
-  content: "";
-  position: absolute;
-  inset-block: 0;
-  inset-inline: -11px;
-}
-
-/* It is focusable, so it needs a visible focus ring - the package only colours the handle
-   itself, which is too subtle at 2px to see. */
-div.spectrum-SplitView-splitter:focus-visible {
-  outline: var(--spectrum-focus-indicator-thickness) solid
-    var(--spectrum-focus-indicator-color);
-  outline-offset: 2px;
-}
-
-@media (width < 768px) {
-  /* The tree lives in the mobile drawer below this width, so there is nothing to size. */
-  div#nav {
-    inline-size: auto;
-  }
+/* Both panes take the text and surface colours the Spectrum SplitView pane used to apply. */
+div#nav,
+div#main {
+  color: var(--text-1);
+  background-color: var(--surface-1);
 }
 
 nav {
   margin: 0;
+}
+
+/* The tree element wraps the markup and must not collapse to inline. */
+site-tree {
+  display: block;
 }
 
 /* Below 768px the contextual tree moves into the mobile drawer (see
@@ -284,20 +247,13 @@ nav {
    matches global_header.css, where .navigation is hidden and the hamburger appears. */
 @media (width < 768px) {
   div#nav,
-  div.spectrum-SplitView-splitter {
+  site-split-view > [slot="splitter"] {
     display: none;
   }
 
   div#main {
     width: 100vw;
   }
-}
-
-/* 5. SplitView pane (used in legacy layout maybe?) */
-div.spectrum-SplitView-pane {
-  width: 100vw;
-  height: var(--main-height);
-  box-sizing: border-box;
 }
 
 /* 6. Article content */
@@ -317,23 +273,23 @@ dd {
 div.note {
   padding: 0 3rem;
 
-  --mod-body-font-color: var(--spectrum-green-800);
+  --swc-body-font-color: var(--swc-green-800);
 }
 
 div.warning {
   padding: 0 3rem;
 
-  --mod-body-font-color: var(--spectrum-red-800);
+  --swc-body-font-color: var(--swc-red-800);
 }
 
 div.important {
   padding: 0 3rem;
 
-  --mod-body-font-color: var(--spectrum-purple-800);
+  --swc-body-font-color: var(--swc-purple-800);
 }
 
 div.tip {
   padding: 0 3rem;
 
-  --mod-body-font-color: var(--spectrum-cyan-800);
+  --swc-body-font-color: var(--swc-cyan-800);
 }

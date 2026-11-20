@@ -21,3 +21,20 @@ main .directory-index a {
   overflow-wrap: break-word;
   hyphens: auto;
 }
+
+/* The links in this grid take the surrounding text colour in every state. Under
+   @spectrum-css that was automatic: a link's hover/press colours were only variables that
+   the base rule above out-ranked, so they never showed. Gen2's .swc-Link:hover assigns
+   `color` directly at a higher specificity, so the states have to be pinned explicitly. */
+main .directory-index a:hover,
+main .directory-index a:active,
+main .directory-index a:focus-visible {
+  color: inherit;
+}
+
+/* The folder / document icon beside each entry: 16px, which is what the old
+   spectrum-Icon--sizeS class made it. Iconify's own default is 1em (14px here). */
+main .directory-index iconify-icon {
+  inline-size: 16px;
+  block-size: 16px;
+}

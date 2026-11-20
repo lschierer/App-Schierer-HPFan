@@ -1,7 +1,12 @@
 # PAGI WebServer Framework Configuration
 
-# Stage: staging, staging, production
-stage: staging
+# Stage: localDev, staging, production
+stage: localDev
+
+# Which design-system class vocabulary the framework's generated HTML uses:
+# 'spectrum-css' (the framework default) or 'swc' (Spectrum Web Components gen2).
+# See WebFramework::UI.
+ui_profile: swc
 
 modules:
   "^WebFramework::Module::AutoIndex": {}
@@ -17,7 +22,7 @@ modules:
       EVAL_PERL: 1
 # Server configuration
 server:
-  host: 0.0.0.0
+  host: 127.0.1.1
   port: 3001
   worker_threads: 4
 
@@ -27,16 +32,12 @@ typescript_dir: src/ts
 markdown_dir: share/pages
 # relative to the public directory
 
-# Pandoc modules to load
-pandoc_modules: []
 
 log_base: Schierer-HPFan
 site_url: https://dev.hp-fan.schierer.org
-
 log_config:
   default: DEBUG
   'App::Schierer::HP-Fan': INFO
   'App::Schierer::HPFan::Controller::Root': DEBUG
   'WebFramework': INFO
-  'WebFramework::Module::Navigation': DEBUG
-  'WebFramework::Role::Markdown': INFO
+  'WebFramework::Controller::Base': DEBUG

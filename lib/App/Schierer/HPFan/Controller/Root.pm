@@ -177,7 +177,7 @@ async sub page_handler ($self, $ctx, $route, $entry) {
       content      => $html,
       title        => $title,
       current_year => $current_year,
-      css_files    => ['/css/navigation.css', '/css/classlist.css'],
+      css_files    => ['/css/navigation.css'],
       sidebar      => $sidebar,
       nav_html     => $self->render_navigation($entry->{route}),
     };
@@ -195,7 +195,7 @@ async sub page_handler ($self, $ctx, $route, $entry) {
       content      => $html,
       title        => $title,
       current_year => $current_year,
-      css_files    => ['/css/navigation.css', '/css/yamltable.css'],
+      css_files    => ['/css/navigation.css'],
       sidebar      => $sidebar,
       nav_html     => $self->render_navigation($entry->{route}),
     };

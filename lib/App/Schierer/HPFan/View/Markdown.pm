@@ -63,39 +63,39 @@ class App::Schierer::HPFan::View::Markdown {
 
     my $spectrum_h = {
       default => {
-        h1 => "spectrum-Heading spectrum-Heading--sizeXXL",
-        h2 => "spectrum-Heading spectrum-Heading--sizeXL",
-        h3 => "spectrum-Heading spectrum-Heading--sizeL",
-        h4 => "spectrum-Heading spectrum-Heading--sizeM",
-        h5 => "spectrum-Heading spectrum-Heading--sizeS",
-        h6 => "spectrum-Heading spectrum-Heading--sizeXS",
+        h1 => "swc-Heading swc-Heading--sizeXXL",
+        h2 => "swc-Heading swc-Heading--sizeXL",
+        h3 => "swc-Heading swc-Heading--sizeL",
+        h4 => "swc-Heading swc-Heading--sizeM",
+        h5 => "swc-Heading swc-Heading--sizeS",
+        h6 => "swc-Heading swc-Heading--sizeXS",
       },
       timeline => {
-        h1 => "spectrum-Heading spectrum-Heading--sizeL",
-        h2 => "spectrum-Heading spectrum-Heading--sizeL",
-        h3 => "spectrum-Heading spectrum-Heading--sizeM",
-        h4 => "spectrum-Heading spectrum-Heading--sizeM",
-        h5 => "spectrum-Heading spectrum-Heading--sizeS",
-        h6 => "spectrum-Heading spectrum-Heading--sizeXS",
+        h1 => "swc-Heading swc-Heading--sizeL",
+        h2 => "swc-Heading swc-Heading--sizeL",
+        h3 => "swc-Heading swc-Heading--sizeM",
+        h4 => "swc-Heading swc-Heading--sizeM",
+        h5 => "swc-Heading swc-Heading--sizeS",
+        h6 => "swc-Heading swc-Heading--sizeXS",
       }
     };
 
     my $spectrum_tags = {
       default => {
-        p  => 'spectrum-Body spectrum-Body--serif spectrum-Body--sizeM',
-        dt => 'spectrum-Detail spectrum-Detail--serif spectrum-Detail--sizeM'
-        ,    # spectrum-Detail for citation labels
-        dd => 'spectrum-Body spectrum-Body--serif spectrum-Body--sizeM',
-        hr => 'spectrum-Divider spectrum-Divider--sizeM',
-        li => 'spectrum-Body spectrum-Body--serif spectrum-Body--sizeM',
+        p  => 'swc-Body swc-Body--serif swc-Body--sizeM',
+        dt => 'swc-Detail swc-Detail--serif swc-Detail--sizeM'
+        ,    # swc-Detail for citation labels
+        dd => 'swc-Body swc-Body--serif swc-Body--sizeM',
+        hr => 'm',
+        li => 'swc-Body swc-Body--serif swc-Body--sizeM',
       },
       timeline => {
-        p  => 'spectrum-Body spectrum-Body--serif spectrum-Body--sizeS',
-        dt => 'spectrum-Detail spectrum-Detail--serif spectrum-Detail--sizeS'
-        ,    # spectrum-Detail for citation labels
-        dd => 'spectrum-Body spectrum-Body--serif spectrum-Body--sizeS',
-        hr => 'spectrum-Divider spectrum-Divider--sizeS',
-        li => 'spectrum-Body spectrum-Body--serif spectrum-Body--sizeS',
+        p  => 'swc-Body swc-Body--serif swc-Body--sizeS',
+        dt => 'swc-Detail swc-Detail--serif swc-Detail--sizeS'
+        ,    # swc-Detail for citation labels
+        dd => 'swc-Body swc-Body--serif swc-Body--sizeS',
+        hr => 's',
+        li => 'swc-Body swc-Body--serif swc-Body--sizeS',
       },
     };
 
@@ -118,46 +118,23 @@ class App::Schierer::HPFan::View::Markdown {
     # Add link classes
     $dom->find('a')->each(sub {
       $_->attr(
-        class => "spectrum-Link spectrum-Link--primary spectrum-Link--quiet");
+        class => "swc-Link");
     });
 
-    # Add emphasis class
-    $dom->find('em')->each(sub {
-      $_->attr(class => "spectrum-Body-emphasized");
-    });
+    # No emphasis/strong classes: gen2 dropped Body-emphasized and Body-strong in favour
+    # of the native <em> and <strong>, which this output already contains.
 
-    # Add strong class
-    $dom->find('strong')->each(sub {
-      $_->attr(class => "spectrum-Body-strong");
-    });
-
+    # Gen2's divider is a custom element, not a class on <hr>. The size comes from the
+    # same per-template table the classes used to.
     $dom->find('hr')->each(sub {
-      $_->attr(class => $spectrum_tags->{$sizeTemplate}->{'hr'});
+      $_->replace($dom->new_tag(
+        'swc-divider', size => $spectrum_tags->{$sizeTemplate}->{'hr'}));
     });
 
-    # Add table classes
+    # One class on the <table>; styles/swc/table.css styles th/td/tr beneath it, so none
+    # of the cells carries a class of its own.
     $dom->find('table')->each(sub {
-      $_->attr(class => 'spectrum-Table spectrum-Table--sizeM');
-    });
-
-    $dom->find('thead')->each(sub {
-      $_->attr(class => 'spectrum-Table-head');
-    });
-
-    $dom->find('tbody')->each(sub {
-      $_->attr(class => 'spectrum-Table-body');
-    });
-
-    $dom->find('th')->each(sub {
-      $_->attr(class => 'spectrum-Table-headCell');
-    });
-
-    $dom->find('td')->each(sub {
-      $_->attr(class => 'spectrum-Table-cell');
-    });
-
-    $dom->find('tr')->each(sub {
-      $_->attr(class => 'spectrum-Table-row');
+      $_->attr(class => 'site-table');
     });
 
     # Convert back to HTML string

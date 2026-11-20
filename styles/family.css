@@ -1,21 +1,9 @@
-@import url("@spectrum-css/typography");
-@import url("@spectrum-css/card");
-
 :root {
-  --color-male: var(--spectrum-green-900);
-  --color-female: var(--spectrum-purple-900);
-  --mod-heading-margin-start: 0px;
-}
-
-/* These three referenced --spectrum-Body--sizeM / --spectrum-Body--sizeS, which are
-   CSS CLASS names (.spectrum-Body--sizeM), not custom properties. Nothing defined them,
-   so each var() resolved to nothing and all three --mod-* values were inert. The token
-   names below are the real ones; note that line-height is size-independent in the
-   current token system, hence a single --spectrum-body-line-height. */
-div.family-tree li {
-  --mod-treeview-font-size: var(--spectrum-body-size-m);
-  --mod-treeview-line-height: var(--spectrum-body-line-height);
-  --mod-icon-inline-size: var(--spectrum-body-size-s);
+  /* One step darker than the 900s these used to be: green-900 and purple-900 are 3.4:1 on
+     the page background, and 1100 (5.7:1) clears the 4.5:1 AA needs for the names. */
+  --color-male: var(--swc-green-1100);
+  --color-female: var(--swc-purple-1100);
+  --site-heading-margin-start: 0px;
 }
 
 .color-female {
@@ -34,10 +22,6 @@ iconify-icon.color-male {
   color: var(--color-male);
 }
 
-iconify-icon.spectrum-Icon.tree-toggle {
-  padding-block: 0;
-}
-
 iconify-icon {
   display: inline-block;
   height: var(--mod-icon-inline-size);
@@ -54,19 +38,19 @@ iconify-icon {
    the rule pinned the NAVIGATION's link colour and suppressed the current-page
    highlight. Scoping it to .family-tree would merely have made it dead, so it is gone. */
 
-.family-tree-person .spectrum-Link {
+.family-tree-person .swc-Link {
   text-decoration: none;
 }
 
-.family-tree-person .spectrum-Link:hover {
+.family-tree-person .swc-Link:hover {
   text-decoration: underline;
 }
 
 /* Apply gender colors to links in family tree */
-.family-tree-person .spectrum-Link iconify-icon.color-male + .person-info .person-name {
+.family-tree-person .swc-Link iconify-icon.color-male + .person-info .person-name {
   color: var(--color-male);
 }
 
-.family-tree-person .spectrum-Link iconify-icon.color-female + .person-info .person-name {
+.family-tree-person .swc-Link iconify-icon.color-female + .person-info .person-name {
   color: var(--color-female);
 }
