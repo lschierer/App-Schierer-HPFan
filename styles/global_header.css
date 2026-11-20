@@ -1,5 +1,10 @@
 .header {
   display: grid;
+
+  /* One row exactly as tall as the header (7vh). Without this the row is auto-sized to
+     its tallest item, which on a short window is taller than the header itself, and
+     align-items: center then centres the nav below the blue band. */
+  grid-template-rows: minmax(0, 1fr);
   align-items: center;
   padding: 0 1rem;
   gap: 1rem;
@@ -31,6 +36,10 @@ span.site-title.swc-Heading {
   color: var(--text-2);
   box-sizing: border-box;
 
+  /* The header is 7vh tall (about 47px in a 670px window), so the title's line box has to
+     fit inside it: line-height is 1.1 below, and the xl/xxl sizes are capped at three
+     quarters of the header height. */
+  --site-title-max-size: calc(var(--header-height) * 0.75);
   --site-heading-margin-start: 0px;
   --site-heading-margin-end: 0px;
 }
@@ -52,8 +61,14 @@ span.site-title.swc-Heading {
   }
 
   span.site-title.swc-Heading {
-    font-size: var(--swc-heading-size-xl);
-    line-height: var(--swc-heading-line-height);
+    /* 6vw: on a phone the title's column is only ~45% of the width, and at the full xl
+       size "Luke's HP Site" (about 244px) overflowed it on both sides. */
+    font-size: min(
+      var(--swc-heading-size-xl),
+      var(--site-title-max-size),
+      6vw
+    );
+    line-height: 1.1;
     text-align: center;
   }
 }
@@ -76,7 +91,7 @@ span.site-title.swc-Heading {
 
   span.site-title.swc-Heading {
     font-size: var(--swc-heading-size-m);
-    line-height: var(--swc-heading-line-height);
+    line-height: 1.1;
     text-align: center; /* Change from right to center for better wrapping */
   }
 }
@@ -110,7 +125,7 @@ span.site-title.swc-Heading {
 
   span.site-title.swc-Heading {
     font-size: var(--swc-heading-size-l);
-    line-height: var(--swc-heading-line-height);
+    line-height: 1.1;
     text-align: center;
   }
 }
@@ -133,7 +148,7 @@ span.site-title.swc-Heading {
 
   span.site-title.swc-Heading {
     font-size: var(--swc-heading-size-l);
-    line-height: var(--swc-heading-line-height);
+    line-height: 1.1;
     text-align: center;
   }
 }
@@ -156,7 +171,7 @@ span.site-title.swc-Heading {
 
   span.site-title.swc-Heading {
     font-size: var(--swc-heading-size-l);
-    line-height: var(--swc-heading-line-height);
+    line-height: 1.1;
     text-align: center;
   }
 }
@@ -167,8 +182,8 @@ span.site-title.swc-Heading {
   }
 
   span.site-title.swc-Heading {
-    font-size: var(--swc-heading-size-xl);
-    line-height: var(--swc-heading-line-height);
+    font-size: min(var(--swc-heading-size-xl), var(--site-title-max-size));
+    line-height: 1.1;
   }
 }
 
@@ -178,8 +193,8 @@ span.site-title.swc-Heading {
   }
 
   span.site-title.swc-Heading {
-    font-size: var(--swc-heading-size-xxl);
-    line-height: var(--swc-heading-line-height);
+    font-size: min(var(--swc-heading-size-xxl), var(--site-title-max-size));
+    line-height: 1.1;
   }
 }
 
@@ -241,7 +256,9 @@ iconify-icon#github {
     align-items: center;
     display: grid;
     grid-auto-columns: 1fr;
-    margin: 2em;
+
+    /* Inline only: a vertical margin made the header's row taller than the header. */
+    margin: 0 2em;
   }
 
   .social-icon {

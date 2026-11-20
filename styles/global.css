@@ -51,7 +51,11 @@
   --size-13: 15rem;
   --size-14: 20rem;
   --size-15: 30rem;
-  --header-height: 7vh;
+
+  /* 7vh, but never less than 3.5rem (56px). The header and the page-title row hold text
+     of a fixed size, so a purely vh height let them shrink below their content whenever
+     the window got shorter (a resize, or docking the dev tools at the bottom). */
+  --header-height: max(7vh, 3.5rem);
   --footer-height: max(2vh, 2em);
   --main-height: calc(
     100vh - calc(calc(2 * var(--header-height)) + var(--footer-height))
@@ -145,13 +149,21 @@ div.title-section {
   grid-row: 2/3;
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   box-sizing: border-box;
 
+  /* The h1 is sizeXXL (45px; 58px tall at the default line-height), taller than this
+     row on most windows, and the content row below painted over the overflow. Cap it,
+     as the site title in the header is, at three quarters of the row's height. */
   & h1 {
-    margin: clamp(0.25vh, 1vh, var(--size-5));
+    margin: 0 clamp(0.25vh, 1vh, var(--size-5));
     box-sizing: border-box;
     max-height: 100%;
+    font-size: min(
+      var(--swc-heading-size-xxl),
+      calc(var(--header-height) * 0.75)
+    );
+    line-height: 1.1;
   }
 }
 
